@@ -1,0 +1,39 @@
+# Maestro workspace config — place at project root or inside .maestro/
+# Reference: reference/flow-control.md
+
+# Which files are part of the suite (glob). `**` = recursive, `!` excludes (Maestro 2.9+).
+# Exclude subflows so they only run through runFlow, never as standalone tests.
+flows:
+  - "flows/**"
+  - "!flows/subflows/**"
+
+# Tag filters (CLI flags override these)
+includeTags:
+  - smoke
+excludeTags:
+  - wip
+
+# Optional deterministic ordering
+# executionOrder:
+#   continueOnFailure: false      # default true
+#   flowsOrder:
+#     - login
+#     - checkout
+
+# Where screenshots / logs / hierarchy go
+testOutputDir: ./maestro-output
+
+# --- Maestro Cloud only ---
+# baselineBranch: main
+# notifications:
+#   email:
+#     enabled: true
+#     recipients: [qa@example.com]
+
+# --- Platform tuning (disableAnimations is Cloud-only) ---
+platform:
+  ios:
+    snapshotKeyHonorModalViews: false
+    disableAnimations: true
+  android:
+    disableAnimations: true

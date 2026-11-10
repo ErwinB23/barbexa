@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility-review": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/accessibility-review/SKILL.md",
+      "computedHash": "80af1f666ac32630ecdfe223370b9006d4459f5459846c208872f9169600aa0d",
+      "installMode": "copy"
+    },
+    "create-architectural-decision-record": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/create-architectural-decision-record/SKILL.md",
+      "computedHash": "5c99e32293271aef0270c279c2af8b62301e29257bf85f2ebf7e810c740b4404",
+      "installMode": "copy"
+    },
+    "design-critique": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/design-critique/SKILL.md",
+      "computedHash": "ef158c069ebac6747cfb9cefabdd3daaedbffd1cff1c359c46bcf303358cbb1e",
+      "installMode": "copy"
+    },
+    "design-handoff": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/design-handoff/SKILL.md",
+      "computedHash": "5a35acb79a946b2b6ab2b01784f8eeef8f72827fcfc8fd23f2a0377a585f5801",
+      "installMode": "copy"
+    },
+    "design-system": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/design-system/SKILL.md",
+      "computedHash": "12497053dd5456ed6a80e51826d17c584d422584a1d2f653b4038170e4a3348f",
+      "installMode": "copy"
+    },
+    "draw-io-diagram-generator": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/draw-io-diagram-generator/SKILL.md",
+      "computedHash": "62482a37dd45bfd414b285c1876e2028c5de62d43bb0af8a35fc488cafdb04b8",
+      "installMode": "copy"
+    },
+    "eas-app-stores": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-app-stores/SKILL.md",
+      "computedHash": "414548d8c0dafc2e468d4785cef4528477e8078315acd5ecd36a4bbe7b058311",
+      "installMode": "copy"
+    },
+    "eas-hosting": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-hosting/SKILL.md",
+      "computedHash": "5699a6de9257bebb9b13368aba6b74f5e5be665a9819deb0fcadf2867a74c7c4",
+      "installMode": "copy"
+    },
+    "eas-observe": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-observe/SKILL.md",
+      "computedHash": "a701cee154cb977d73f2185333801a6812a5f18b4a7c6ac79aa032c1fa6db11d",
+      "installMode": "copy"
+    },
+    "eas-update": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-update/SKILL.md",
+      "computedHash": "9854dc72af451fffa36dcd5948398850a2747f60f8f9c6043a9f56eb0114462a",
+      "installMode": "copy"
+    },
+    "eas-workflows": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/eas-workflows/SKILL.md",
+      "computedHash": "f45831433a602e4f2dcaa35c326bc12bc1997da8dd6865bb6525fb79253b0042",
+      "installMode": "copy"
+    },
+    "email-best-practices": {
+      "source": "resend/resend-skills",
+      "sourceType": "github",
+      "skillPath": "skills/email-best-practices/SKILL.md",
+      "computedHash": "6a73e98be9b3618405de0d0457f59eea77e5c5fa89377e6f0d76d51c192221bd",
+      "installMode": "copy"
+    },
+    "expo-animation": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-animation/SKILL.md",
+      "computedHash": "b2d30c14da8348ab13f7323b9969fb283f0a5d372133f512390f35a517ecd073",
+      "installMode": "copy"
+    },
+    "expo-data-fetching": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-data-fetching/SKILL.md",
+      "computedHash": "f15d3a166f39cad970f57fd51e2126a084190dc76e3326bf171b153024facddf",
+      "installMode": "copy"
+    },
+    "expo-design-system": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-design-system/SKILL.md",
+      "computedHash": "c6d7e9d13b5239ed3d46054c42d771e032bef857dddfee88690a1ce2fbd46dc6",
+      "installMode": "copy"
+    },
+    "expo-dev-client": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-dev-client/SKILL.md",
+      "computedHash": "08bf029b2c8b22a49742d3801b7e382f7666c47aa9635470eadd26391f2bcee5",
+      "installMode": "copy"
+    },
+    "expo-examples": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-examples/SKILL.md",
+      "computedHash": "3f0bd5cb7f9f7b73ff0583cfc8f58617d93fec8ea018fd77890c726c028107e1",
+      "installMode": "copy"
+    },
+    "expo-native-ui": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-native-ui/SKILL.md",
+      "computedHash": "3e66ba8d791219f78c8adcb0cdce84f49a61e9869983762598d7e4122a4e43ae",
+      "installMode": "copy"
+    },
+    "expo-overview": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-overview/SKILL.md",
+      "computedHash": "5480f4fc757154e94fcbc3a20f39929bd854304b9687cffb66b26ef0a60b81e6",
+      "installMode": "copy"
+    },
+    "expo-project-structure": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-project-structure/SKILL.md",
+      "computedHash": "a9a94e702229aa28ec2e80b17ed7b847454c83d330ebad4dd210d48f7b41cd34",
+      "installMode": "copy"
+    },
+    "expo-router": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-router/SKILL.md",
+      "computedHash": "586318180c0d846948d3189250dd7cb5c225d4fa48eee5b57dc964aa5cade10e",
+      "installMode": "copy"
+    },
+    "expo-ui": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-ui/SKILL.md",
+      "computedHash": "2e3c35de1205749cdefb65bde7f6142ebb47f5793aa95313a08e55cc6376ac3b",
+      "installMode": "copy"
+    },
+    "expo-upgrade": {
+      "source": "expo/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/expo/skills/expo-upgrade/SKILL.md",
+      "computedHash": "c6f268da02e53f9b220e00ef90b6fc85aea7d42aed4e875255db73713091594c",
+      "installMode": "copy"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "106acf230014cbb43ca34e6410371321b56ca742f9ee0442e8ec05bf02eb0384",
+      "installMode": "copy"
+    },
+    "frontend-design-review": {
+      "source": "microsoft/skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": ".github/skills/frontend-design-review/SKILL.md",
+      "computedHash": "ab7eeeef16d3583172fe0a91a42b85c79cd5e29f79e027dbaa886fce5087e055",
+      "installMode": "copy"
+    },
+    "github-actions-hardening": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/github-actions-hardening/SKILL.md",
+      "computedHash": "10e35ff70fcf42e09295ffad0ac3203e4d6b6f74557cc3fa1654112b89e0eea2",
+      "installMode": "copy"
+    },
+    "k6": {
+      "source": "grafana/skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/grafana-k6/k6/SKILL.md",
+      "computedHash": "5733ebf047ef4c03abe77f5c9614653106e5fa4965b427f70ff620c7253b3584",
+      "installMode": "copy"
+    },
+    "maestro-mobile-testing": {
+      "source": "foreztgump/maestro-mobile-testing-skill",
+      "sourceType": "github",
+      "skillPath": "skills/maestro-mobile-testing/SKILL.md",
+      "computedHash": "cc5ca78e24b5282ca878a9a9899f3b1254b4727eb05946214a6081a6978cc362",
+      "installMode": "copy"
+    },
+    "oo-component-documentation": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/oo-component-documentation/SKILL.md",
+      "computedHash": "5d92d232f6cd4bab9177811da0b7b8ee5bc3fa92d707f943835541d9959d7e78",
+      "installMode": "copy"
+    },
+    "opentelemetry": {
+      "source": "grafana/skills",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "skills/grafana-core/opentelemetry/SKILL.md",
+      "computedHash": "772a52faf409e5ed3a353bde694aaa1df017d87d63f1fb6489c7c9c2ab3b22ee",
+      "installMode": "copy"
+    },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "computedHash": "8d460625e43545410c8d4bcc77a090664362b163c41da743b22f41b127a7fa5a",
+      "installMode": "copy"
+    },
+    "poka-yoke": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/poka-yoke/SKILL.md",
+      "computedHash": "7a7d65dd85a0c46b9d145612077f087f91cb611459be516594ccd7acef292b74",
+      "installMode": "copy"
+    },
+    "research-synthesis": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/research-synthesis/SKILL.md",
+      "computedHash": "85bbb7e21bc42e9d5fa05f25d27c5b7d50095f100f1eeef271fc23c81a61fd8d",
+      "installMode": "copy"
+    },
+    "resend": {
+      "source": "resend/resend-skills",
+      "sourceType": "github",
+      "skillPath": "skills/resend/SKILL.md",
+      "computedHash": "d51b7cd3f3ab0e49b894f46e50066eecd2d0cec3b03e90e20e431ded325c86fb",
+      "installMode": "copy"
+    },
+    "security-review": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "skillPath": "skills/security-review/SKILL.md",
+      "computedHash": "9b1791054c648b84ca424fc1342dede2e04759dc73436bb91d21675d5a4c13ea",
+      "installMode": "copy"
+    },
+    "supabase": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/supabase/SKILL.md",
+      "computedHash": "af1844ade632808fc0c15cf2db87daf3b2431c5262dc8a0c3ea7d70880fadf91",
+      "installMode": "copy"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/supabase-postgres-best-practices/SKILL.md",
+      "computedHash": "128fac78002d916c8ca908245d398e634f540d8bcf20915b2b2359aeb18eba59",
+      "installMode": "copy"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "b7b6e98c3bffe371893bdb69845ec61124a65b6a96313dc8d6a2bce4437b13eb",
+      "installMode": "copy"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "computedHash": "3cfe4ebb6fa7288f668d87880d279c8e48f7a92b63415e296857060f5ce22e05",
+      "installMode": "copy"
+    },
+    "user-research": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/user-research/SKILL.md",
+      "computedHash": "b7ff89f9fd30167870997f6cba8f0486142fc1b910ef0f5e9365916c55bf3b44",
+      "installMode": "copy"
+    },
+    "ux-copy": {
+      "source": "anthropics/knowledge-work-plugins",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "design/skills/ux-copy/SKILL.md",
+      "computedHash": "be952a0ebb04d72c59716a5fc9325c30c88eea0aa2a3075c35fb6a6fa28a07e9",
+      "installMode": "copy"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "computedHash": "f98931159fa9c7fed043bcd18a891a46dcf89ababa38df13a4c5b7b30dc0ce07",
+      "installMode": "copy"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "3219a1944e404ffc14d1d9d6aef6dd2e3855b81387ee0a044ccbfe14d34c2357",
+      "installMode": "copy"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-native-skills/SKILL.md",
+      "computedHash": "2e9088a7333666d8c2833b8ff58bd51b955501c42b4c7244f72b4cbf22dafcc4",
+      "installMode": "copy"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "b529822bdac4b197b180fe12225cff86b930b65910435103c10622df7f041651",
+      "installMode": "copy"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a",
+      "installMode": "copy"
+    }
+  }
+}
