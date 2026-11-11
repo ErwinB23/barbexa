@@ -1,0 +1,4 @@
+﻿Command: node node_modules/prettier/bin/prettier.cjs --ignore-path .gitignore --check tests/unit
+Checking formatting...
+All matched files use Prettier code style!
+exit=0

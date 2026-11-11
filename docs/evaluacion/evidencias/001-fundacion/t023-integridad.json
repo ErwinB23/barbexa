@@ -1,0 +1,3438 @@
+﻿{
+    "date":  "2026-11-11T08:47:52.9467936-05:00",
+    "head":  "904ff3de1a612ddb849a3f9a3a957df2e5d0b3c3",
+    "branch":  "main",
+    "priorFiles":  683,
+    "priorWorkPreserved":  true,
+    "authorizedExistingChanges":  [
+                                      "specs/001-fundacion-expo-clean/tasks.md",
+                                      "docs/evaluacion/evidencias/001-fundacion/informe.md",
+                                      "tests/unit/doubles/app-information-gateway.ts",
+                                      "tests/unit/local-app-information-adapter.test.ts"
+                                  ],
+    "unitTests":  50,
+    "architectureTests":  38,
+    "coverage":  {
+                     "scope":  "domain/application executable code",
+                     "lines":  100,
+                     "branches":  100,
+                     "functions":  100
+                 },
+    "files":  [
+                  {
+                      "path":  ".agents/skills/accessibility-review/SKILL.md",
+                      "sha256":  "DA7A990F50E101B5978E0B069B1374F18B14F2BA4795324D78049F53A54F2B8D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/banner-design/references/banner-sizes-and-styles.md",
+                      "sha256":  "C8906FB1073A576EE8C680D9BC8586249CBC4ED36690DA960D65A1C9C37143B7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/banner-design/SKILL.md",
+                      "sha256":  "913D9C4B2A3B405D638D50131E0DD3FE2787C839423D79287B7858AC29255ACC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/approval-checklist.md",
+                      "sha256":  "4BF8549687F53A7B9684005B4B87DE93C26F018E00609B4C506A5812ABD13D20",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/asset-organization.md",
+                      "sha256":  "DE98123417E9C5A1CC71A78131BBA979C4C8ED2E5289E6C7A7F166576E488101",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/brand-guideline-template.md",
+                      "sha256":  "392DB8CF10FEF492221C15A86E68590074BF5716DE1F2982F41C01FBE30567CC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/color-palette-management.md",
+                      "sha256":  "C429298FFE3955EDB8B22C9F51426FEF75E83D02848CD4300E89C0D3FC34B44A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/consistency-checklist.md",
+                      "sha256":  "56D8B2D4852CDA11E600ADEC4B9DD68FC89A1B8265382359953BEC5C5E5E2C36",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/logo-usage-rules.md",
+                      "sha256":  "044C5DDF30CFE0EEA047451CFCE6EA654939198FFDD8968A19161C97066A5A26",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/messaging-framework.md",
+                      "sha256":  "24B2500A72867B55DD10F4BF359178B0EB347FDDD852659CE47B69D9F597D4E6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/typography-specifications.md",
+                      "sha256":  "921C3D9E6DDFDE2677B9A3E32EEE94C7922F54F22C1F380C5ED2EB25A7D5BFA9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/update.md",
+                      "sha256":  "537CB55EBE260E1DE127BD6288B19D8D7B15B6C893545442A58B739CBD342B37",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/visual-identity.md",
+                      "sha256":  "63F0CFC5D95403D8E12ACA4D839CC28471515574D9A431334BFBB96C15407C31",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/references/voice-framework.md",
+                      "sha256":  "08C15AC79F81CD964C5EFBE593131B61A093C7E1B060D5DD28B17F3CC5B331FB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/scripts/extract-colors.cjs",
+                      "sha256":  "36D21F3905E5762CFC8054B3F3B7276F6BC656884FE57C6BFA539526044778ED",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/scripts/inject-brand-context.cjs",
+                      "sha256":  "5B98ABDEB5C636F247102CD235F1D3421DB7A4DE53FD853360FEAA0C471B5C96",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/scripts/sync-brand-to-tokens.cjs",
+                      "sha256":  "390A760570FDBA6D6ECFDFD8907FC802B64659B6178F8920349B0C6A2C822106",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/scripts/tests/test_sync_brand_to_tokens.py",
+                      "sha256":  "0ACE0CF7C6A8C12C0B9154F317E847B1084EB00B065B6F22431E37B7C7E948D6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/scripts/validate-asset.cjs",
+                      "sha256":  "4546C9109FB0F4F767426508CB29E60D02B301F8897CF16D8E378B7CE9D997FC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/SKILL.md",
+                      "sha256":  "6A450EE1A83A403D47CEC2EDE9030FEB60A67A81FC425D2406E975339313BD44",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/brand/templates/brand-guidelines-starter.md",
+                      "sha256":  "D157A57B15F0B458C79636D11DE42F3C89F03D8C0BBEA1BDD3CF1C3542B2140D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/create-architectural-decision-record/SKILL.md",
+                      "sha256":  "C11AF0C34FA034E36E622AD97F1194824C3CBBE675A8B17CDC0BEDC91B188A72",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/cip/deliverables.csv",
+                      "sha256":  "229912F35C2F5A790508DDD62270CC7A92A84694027025EA5A30F1FB5BA84B70",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/cip/industries.csv",
+                      "sha256":  "729B1DEA6D6F39B0BC22A1E659584E7CA5CEAD75841146D599C9F8DC00D4DA46",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/cip/mockup-contexts.csv",
+                      "sha256":  "15D61CEF16E6746D5AA665976F4DE8074FEDB64BFC5C7313A40EEC1112A1D499",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/cip/styles.csv",
+                      "sha256":  "4E7F9E209BC90B60DF62FD9843A1A73B365E54161DBD820B82817A8E512AF4C4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/icon/styles.csv",
+                      "sha256":  "A4AA7D326FFE1E50961EB70E25A6351F45C0247CD245461FA1A27CDC72F903B4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/logo/colors.csv",
+                      "sha256":  "D60218F0705BB0F0B892A10468A5C8D9A44EEF3D0262EF8DF8970BA3FBAB567A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/logo/industries.csv",
+                      "sha256":  "E58DDA4B9D28851F70914F82C1D2A2CFF626A991CA41076F64122F33CC8A6525",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/data/logo/styles.csv",
+                      "sha256":  "EA08BDFB7AA557F08D1B6299222423F948700F8E4029321ACB58C8F83197BDF2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/banner-sizes-and-styles.md",
+                      "sha256":  "C8906FB1073A576EE8C680D9BC8586249CBC4ED36690DA960D65A1C9C37143B7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/cip-deliverable-guide.md",
+                      "sha256":  "1424E120B967288E2334F24FCFA5CDC7F238420326A7444F4C5597EFECFABC41",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/cip-design.md",
+                      "sha256":  "47A3B2E445BC07185EDD0CD24BA8A417229BAF86717DCDFF7C4E403ADBCEB3F1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/cip-prompt-engineering.md",
+                      "sha256":  "4BF3A0C858F38C230E43E872857B72D9EB692E066E8DE5920DA75AAC733E753C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/cip-style-guide.md",
+                      "sha256":  "F3E15408CD981E93804440C1159C12E02D001BC37A3945F455B3FC13729ED4E1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/design-routing.md",
+                      "sha256":  "32914A913F4F20D4CB1E497E5A87CFC04B71AF4E6D75DB72ECF50E4F060201C8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/icon-design.md",
+                      "sha256":  "39281931D070918B4E51ECD71054DA99493CABE06A07DFA8F1F682E48637C83F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/logo-color-psychology.md",
+                      "sha256":  "3FD0E93E24C3B2EA7F3BE778E8F2D03B1C62C7C6EAB3ADE478C8FCA332BFF287",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/logo-design.md",
+                      "sha256":  "2E845FE165C845FD9582C1D74204FA31DE607380982A6EA0B5F8DB4E293AFA3A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/logo-prompt-engineering.md",
+                      "sha256":  "E50F55BF323263EB27B4CD4C5172383A787FB894581D5D2BEFB3F6E0180B253E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/logo-style-guide.md",
+                      "sha256":  "611BAA841EEDAB101F45C113C6BFBD4D7E16E859C9D6EBD2CF941827A6E8DD15",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides.md",
+                      "sha256":  "5630D5DAEC947FF58AB1AC97C7A1EE77A21CF6F5DCE5155535B65D291691979F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides-copywriting-formulas.md",
+                      "sha256":  "03733D5916AB771834745550045B736DEEB94A08226F2B200F7953009C35B219",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides-create.md",
+                      "sha256":  "792D647A5D4F87D765CF417F7AC54DD0B2FC4D229CC23EA9DF56282D4C1EE086",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides-html-template.md",
+                      "sha256":  "FD5B051A37365FC6059C75BB388EC6F64DAF1BD9AE938B287B6D762DC83C0C35",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides-layout-patterns.md",
+                      "sha256":  "0A967CA3BD829D3234E6F1802BADE6C76447FABBADDBC8117C41ADBAE7DFB6DF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/slides-strategies.md",
+                      "sha256":  "27EE3E53FFA0EA679EC83EBEACB0BCFBCE498DF57277E99F574B9C139DC44286",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/references/social-photos-design.md",
+                      "sha256":  "2544C143FF3A4471A775E2271797A3871480F94DE91B267178DA92E8952192A0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/cip/core.py",
+                      "sha256":  "78A78A51F12D2382B2854414DF395DC62B68532626EF724DDD5DE713507911E4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/cip/generate.py",
+                      "sha256":  "2745040C9B534CF4113D2F7F4D7A52BC96A9FBFA12204C4F8460BE4E15449069",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/cip/render-html.py",
+                      "sha256":  "A49A89A017EA4A2C492438055F05DFBA3DFB4F91563F5F913359939BEEAECCAB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/cip/search.py",
+                      "sha256":  "6619FBBE71983003A858C5EB79BC59C607B342610A1178B6976C687C2932161B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/icon/generate.py",
+                      "sha256":  "1A6BE99DC233F6D9F8B558C26148203418BE5B47C677CD83E48E41E78E38780C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/logo/core.py",
+                      "sha256":  "4F8B36FFE538E5995D0E0B740053A0899A1ADF445FFDF484BD47F94E71ADE8D0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/logo/generate.py",
+                      "sha256":  "6E4358F21CD85FEC51C8D01B03E3696D6DB180815309D7E10A19C623D4D4462C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/scripts/logo/search.py",
+                      "sha256":  "693B3A1824831F120D4C60ED72477847604DA1F6B654343381F8E9D3800A28F2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design/SKILL.md",
+                      "sha256":  "413F4AB913D07F7FD92ACBADC25D71AAD63443BE0C40D11234944AEA688603B6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design-critique/SKILL.md",
+                      "sha256":  "4B51DE88442CD8A0B7CA5C8C7583B28C65277C09466DF2AB23457D57BF03AA23",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design-handoff/SKILL.md",
+                      "sha256":  "12DC4EED6B52BCD31D7B164D54E4292E5C93FAEEFAA4BD823B621404F11C0363",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/design-system/SKILL.md",
+                      "sha256":  "87E9759397BC5B1C1C4A2E84E1A884D13EA2A445EB6C17722F47F9C10F6AD2F2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/assets/templates/architecture.drawio",
+                      "sha256":  "B75427C47B381887650D60C9BE74269B305E68BC418C349535E0B9C8311583ED",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/assets/templates/er-diagram.drawio",
+                      "sha256":  "87916374E712C64BCE81187EC58EF990A8F55E7F656614DEBF3E375089159575",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/assets/templates/flowchart.drawio",
+                      "sha256":  "A00283E5805CB869DE9F1966E4EB9A573AB93ACDE90599E2387F4AFD55BA324E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/assets/templates/sequence.drawio",
+                      "sha256":  "612FEA7621632BA547F5895DB68D1F4E4C0E1A151075C182FA17FB74A687DF11",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/assets/templates/uml-class.drawio",
+                      "sha256":  "699A57FC74BF31A7E8EE9E9A235287704A1ECB336AA4CC0B1BF90A80CBC766DE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/references/drawio-xml-schema.md",
+                      "sha256":  "58972B7B420BC0825E5C27DF1D9820629E9572F242CC6C5B3AAF0DDF3285ADA6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/references/shape-libraries.md",
+                      "sha256":  "8C7AF0E6B0F51A90F6CC596FEBBF5F5A37451AEBA039C8801BB2F460AB8B615F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/references/style-reference.md",
+                      "sha256":  "284445DB390C99E4B753884A168C2D61F7A960E2C96177205FE0FB98155EE5BE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/scripts/.gitignore",
+                      "sha256":  "E46E17A5808F62786C2C800D6E7E9186873DCE392C04F5E0929D69F7339B8733",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/scripts/add-shape.py",
+                      "sha256":  "7B841276A0801FA3016E2058C1FB03CD57126F7675FC617F6B931DE34B9BD8B0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/scripts/README.md",
+                      "sha256":  "790781B7C18FFFDCE93A43469485B6E94EABC3443FF97866D3C7B87C8C34FD47",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/scripts/validate-drawio.py",
+                      "sha256":  "797CFFE7564935A15889B278F8CAB7E1A242A8AF68CB029C65599260962804E9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/draw-io-diagram-generator/SKILL.md",
+                      "sha256":  "0D5D86C1FE7DC596F9BB7058291469CF5671AB55FCFEABCE8451EB513A705868",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/agents/openai.yaml",
+                      "sha256":  "2F026573F78B181090A60599933D2C0260D67FC26721E39F0EFC115DF31CA4B1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/app-store-metadata.md",
+                      "sha256":  "70FC1321830171CA30EB252A708454C77A73C80C1301B266F997143480C6CE76",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/ios-app-store.md",
+                      "sha256":  "94BB9A4D1309A4E321138F2A1105666B3A9A658B0821B6F48CC98C39D4B584E2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/native-ios.md",
+                      "sha256":  "1F61DF60802A1C7E99AE09E0A055B31A1412A68D1C431F0FABC16DDBB69AC213",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/play-store.md",
+                      "sha256":  "C518F82E948B7606341E852A4B4F86F9F0351C6DA3E88B4B9004B57AA9E76083",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/testflight.md",
+                      "sha256":  "5204003519C79905AA8DEBB35F907E766C61815850E77E7902FC7794EEF5D703",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/references/workflows.md",
+                      "sha256":  "18BDF360D63127524857A50017E5400EB924D0D8C287DA3B6C9EEBA1796BB237",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-app-stores/SKILL.md",
+                      "sha256":  "8819F0A86476AED33A6C8BAEB42216083287B599001482F732E23E27EF86F357",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-hosting/agents/openai.yaml",
+                      "sha256":  "34CD0823347CC5BF068740C69C82976F3C5B8974979266BA0B5D96D97D5732BE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-hosting/SKILL.md",
+                      "sha256":  "36F6BC03FB475B173D975C45487A225E8306B6B3DBDDB6884270ADD26441C348",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/agents/openai.yaml",
+                      "sha256":  "80819C9623A87CDEDC1D3E5E66A346822572012B3E82AF10589902CD37F71868",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/references/library-integrations.md",
+                      "sha256":  "C62DC9D75B0B121D63DE551DD7833430CBD96D99E41BFA9082162A86E06E7D20",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/references/metrics.md",
+                      "sha256":  "9663078691E88EA0A94B3CB050FD8191256FD776DBFB00DFE74B5FC8C0ED49C0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/references/queries.md",
+                      "sha256":  "C2FBC16BAC86DFBB69DDAC2C1CF40F01270AEB6370C97DD1A821CC4ED973E6F0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/references/setup.md",
+                      "sha256":  "4C47823D22B47E6A70E7A47E0B516F5F48AE851F36884F13DD9DBBAFF5591D9D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/references/third-party.md",
+                      "sha256":  "29FBAF539AA4C4DE7896681727DBDD7C9B99B4960ED3EABC8624251BBFBC0CB6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-observe/SKILL.md",
+                      "sha256":  "05555988D814F2ADAEF2407E0B4AE5A43DF050FEC6479FAB27365EB3FBDF0AC2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-update/agents/openai.yaml",
+                      "sha256":  "297FEDB0086D79492931A4083079F7ED67D31B28B4A6899F5DEB42BB1F1A108E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-update/SKILL.md",
+                      "sha256":  "50C72E651ABC225A5BC6BFA6600B31D7526C2633F8385DC31AB2B3285B091BB5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-workflows/agents/openai.yaml",
+                      "sha256":  "F8B464F78780B2B5BE08A49D14BC205EEA99D49E0E58E901B7243338A6A789C7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-workflows/scripts/fetch.js",
+                      "sha256":  "B2414CB0973707BEEF936D812B80390836EAE616395162FCBAFBB5D259583DD1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-workflows/scripts/package.json",
+                      "sha256":  "DC547DD3FECB86D0C1B8BC0FE8682A670A18390319CE30CEB9C56C3B2FF3C3E3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/eas-workflows/SKILL.md",
+                      "sha256":  "04241F18694AE43A005F841DCFE545EDE83D9373A849741A99538CFE82CBCE04",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/accessibility.md",
+                      "sha256":  "157E17252E1D52A21CC10D609213D94EE5F026A7D1D534F477712A54BD1D6025",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/compliance.md",
+                      "sha256":  "E8C9FA7FA08E4E17679B9FACDCF4E9BA4A13BCF3C3D507480E70F50DE24D1F6A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/deliverability.md",
+                      "sha256":  "4081840FD2EBFB4D52B1E22E62658F66327E55E5F00EF67C43552CC6A597110C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/email-capture.md",
+                      "sha256":  "9A44B8BDD1F7AF8D1995A9809DA51C9652E197F37955BD52273FF7E9C76253B2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/email-types.md",
+                      "sha256":  "AF6758965D3A8AA6CEA0AD8C61633B7CEF84AC0B58512462F7192CD75FBC8D67",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/list-management.md",
+                      "sha256":  "07600719AC773F647CB25F054B430E981F9B1B0DE3FF3AB464692372E680907C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/marketing-emails.md",
+                      "sha256":  "B59440DE9F1DD64250F17BE661A2E8063BEE26582ED5D9CA3A1AF3BF9646A78B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/sending-reliability.md",
+                      "sha256":  "3F6847EB95D61DD3B867733496981D07A097D5741CFDD6ED027E80038C5C5191",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/transactional-email-catalog.md",
+                      "sha256":  "59D73DA28EA08EB62C69B54B7454FC7250F14C1D802FC51217DB9A9EF644BB55",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/transactional-emails.md",
+                      "sha256":  "03E66DD224997EF13D4F894E436FC5558CFCEC59DBAB4F8ECEF7817B69D4704A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/references/webhooks-events.md",
+                      "sha256":  "72D2F98BB328A65EBD132557A0F13067DB00D39602D5C3714383DBC536886F0E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/email-best-practices/SKILL.md",
+                      "sha256":  "DE14D134B1B65CC53A926EA251A77F74F6DC639C122E321448C71443A78E45B2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-animation/agents/openai.yaml",
+                      "sha256":  "32105877FED5E87C6661FEE73F52CFE0819131A7B3211CCCD3B1EA2B6F7AEB13",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-animation/LICENSE",
+                      "sha256":  "D24DA413CCCBC3D844929A1CC08E5BA79385139C0C47C9D5BD0DD2DF24FFE15C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-animation/RECIPES.md",
+                      "sha256":  "187A163E030FC1159EFB3CCAFCDD105657A3CCB5898F807772C74A0AB9D41502",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-animation/SKILL.md",
+                      "sha256":  "24575736846FB6C1501414855FD3DA52F231EDDFEDBCBD54C3F3F4BB435F11EF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-data-fetching/agents/openai.yaml",
+                      "sha256":  "A17910DBD49A651278449E612D6AF573A1165870CBDFA86B82F32EF537CDDD88",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-data-fetching/references/expo-router-loaders.md",
+                      "sha256":  "4FB443D7BF0F9586B277E152C7532B995D10027FEF1CAE44BF87C085230B0911",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-data-fetching/references/offline-and-cancellation.md",
+                      "sha256":  "BDEF8684B76A203CE9FFB7F4DE5936EECBA5483D2E75A2DCD452E5B35BF7830D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-data-fetching/SKILL.md",
+                      "sha256":  "07EDC98E90518B5E7C7A069D54012CFF58F437500D5684331E5EA45CBFFC4DFB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-design-system/agents/openai.yaml",
+                      "sha256":  "3E3B789C5AC82DABA3F80F76EDB2530816D6C3A936D490BA38FC269F758DE231",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-design-system/references/audit.md",
+                      "sha256":  "7ABA9CA4D0DABF872CCD54E56D25907DE6ADA8FA50E0170A653C04799F81304C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-design-system/references/native-slop.md",
+                      "sha256":  "3217B8E57D5A0E807A68632F3D6CC862AC9083B2BD031B8E01546A20B83C5EC8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-design-system/SKILL.md",
+                      "sha256":  "10182F288264887E35F051634A15553974A8167BE14DA4918853D2CCF97C8B20",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-dev-client/agents/openai.yaml",
+                      "sha256":  "44C4C300636892B6B04EB4AF7E6D4C6B2B0DAEB487536E11B05C540DDCFD7E8F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-dev-client/SKILL.md",
+                      "sha256":  "A92A99ACE19EC154D5C319454B587A3B4301AF83954C7AF967FFC3E4126CBC56",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-examples/agents/openai.yaml",
+                      "sha256":  "6ED7C8C8F383311D637C4C0BBFF4808D59AF1E32447F4E82AE3523DBC9636459",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-examples/references/catalog.md",
+                      "sha256":  "D8A5DBBCA7A1A2900CBB0648651F933BB7EA998921B99890F7616657D956AB06",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-examples/SKILL.md",
+                      "sha256":  "9FB36584EE52FA3F9123D62342FE0CFC1B5EEF11B9549E39626112A7FC469359",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/agents/openai.yaml",
+                      "sha256":  "CD9FEADA71748C88ABC18AB6A3199F0CE7ED4C04D15A79A43F0EC9D8AC04B9B7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/controls.md",
+                      "sha256":  "360D74AE1A858D165B18081ACE900E89C0C915515EBEBCB2D7630084A26BEB5F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/gradients.md",
+                      "sha256":  "E401012D5255DD762FD936FD1A01F21A59032494A476C1DE4BDCF4E9E958803B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/icons.md",
+                      "sha256":  "3EFF4E17C069A48CC93FB43E2E7787BC48FCF4C3F508D6C2CBBC612A6460433C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/media.md",
+                      "sha256":  "2FC72080E5DDA7CCA1623E4B58E7DCB3136F8F4297378F9083F567AB4AC574D2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/storage.md",
+                      "sha256":  "62D6A91F458A7F59EB81CA5279D7D022407749A12E95D70E2046A217230E17C7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/visual-effects.md",
+                      "sha256":  "4F30237240288A3E939E4D9FC41195306F9A14ED37D00825D757F8026DFC0F82",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/references/webgpu-three.md",
+                      "sha256":  "4E8B7EAE87C9537EAB2B28D43C2A718027825EAD675A7477DDADACCD74DFEBF6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-native-ui/SKILL.md",
+                      "sha256":  "83903D7A0A9AA32E1130283456F97B3E71F4083B372ADFA7E025AA126F360A81",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-overview/agents/openai.yaml",
+                      "sha256":  "0A43927292898EF94B78132CB300EE96BED27FD0D07F9A2A77305DB0E4CC0EE2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-overview/references/launch-without-dev-menu.md",
+                      "sha256":  "4A6BDB973AFE14BADA7231CCCC6314A1DA09AD61BA9FEBE8549F262FB223C911",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-overview/SKILL.md",
+                      "sha256":  "EBAA64E533C568BCF8F3019819160390ADB413DC9E4A16219A8B41E6AA76FE40",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-project-structure/agents/openai.yaml",
+                      "sha256":  "864AAF5279B3BAA5982E1E19418C9CDBD836C1EB948C9095A6DF3CA80D549354",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-project-structure/SKILL.md",
+                      "sha256":  "E2DA115B37333BEE04750A50C2C832646E53F65C09777387568FA8EA76BCD3F3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/agents/openai.yaml",
+                      "sha256":  "4532DEEA0BD6AD9D00B252B50F6B921E06BA5FFC3599BCBB0857AD25A2BF6B09",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/form-sheet.md",
+                      "sha256":  "F9935982A9DC6F0C926602E30B8DEEF9E271D5D58DB2A8031CA18A690AFFCC90",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/route-structure.md",
+                      "sha256":  "80992EA08D16C0151DFFACD4F31CE1B1CD553E01F4F941BD36D991A978CE274C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/search.md",
+                      "sha256":  "45A4CCB6D5C2C0D11ED52FB7F9BD50E3E95DB33412DE655A98F34CE140A831E0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/tabs.md",
+                      "sha256":  "B0C249C2EEB8F271CBE61EBEA033699B0BEF625558111B63970FFE4847B0E679",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/toolbar-and-headers.md",
+                      "sha256":  "7BDD70B3F48B9A5B79C24EE1861BF3D078EC39E93F5DB7756E695FF92D244760",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/references/zoom-transitions.md",
+                      "sha256":  "4FDDEF8EE52E45E64C35F6CC45965D05678B135B26B5EDDB116EF1B1FE0527AC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-router/SKILL.md",
+                      "sha256":  "FB7F0F493081CC966EC3BD995CFD83E1FF09910DB313C533BE87AA219191D4C7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/agents/openai.yaml",
+                      "sha256":  "DB588822833DCE173EEED3C525CBF2FA3285C84E9304BE210A805BF839436986",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/references/drop-in-replacements.md",
+                      "sha256":  "EAE57574BB7302DA3F9B36718803BB83D01CC777680E6273B63B7D6C3497C855",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/references/jetpack-compose.md",
+                      "sha256":  "1783F09BC11D3DA90A9E917C1B9072947FA137223BC3B1E31A76F95B8F9947BD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/references/swift-ui.md",
+                      "sha256":  "B6EBBE14BF34AC97C7BC083365DCB053F2D08E3B8A68DCF83E458AA8404B75D9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/references/universal.md",
+                      "sha256":  "6ACA91A920F41E4D40797718597F9F637C4E3D1290B164E9990446D028AD2390",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/scripts/list-components.js",
+                      "sha256":  "FE06CF9E787ABB086DE0FF58A29158F112B93D4A0B07A45135F8840FA0D43CA1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-ui/SKILL.md",
+                      "sha256":  "48685F1284BA963F2EC959E62158528177CEC8983AD9B6DF467CDA64AB41337B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/agents/openai.yaml",
+                      "sha256":  "E8078CF1100F903BA48A05C0F81D8616F3F4A31E9D76C02015D2650CE4CD5017",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/expo-av-to-audio.md",
+                      "sha256":  "B455A85555E9AF9DEF3441177006584C01AD93CCED95D70A47A430537336F90C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/expo-av-to-video.md",
+                      "sha256":  "2FE6FFC6A7E8EE41643B0DB4CF5F547198E5CD99060D1986660CCCE052F6755D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/native-tabs.md",
+                      "sha256":  "BFF2B54150E2047173F0C69DA0FE9FD005D253B6C841A5EA9B6B393614346C27",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/new-architecture.md",
+                      "sha256":  "EBF4242393DD9FD83F77FAFEEFD0A942CD338AB2F341EC5D3A3DC2689B239DBD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/react-19.md",
+                      "sha256":  "17DF383DDB3D619022E18CF545BBFC6745F5D3BC1166E3C7C8C2057828694BBD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/react-compiler.md",
+                      "sha256":  "146EB76C8F0E1D83F062BA202E2F3859A394A616FAD1B20F234EF1C514776953",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/references/react-navigation-to-expo-router.md",
+                      "sha256":  "100202D9D487724910895696ACF83BA1E5F7F1155583C1DD0C126CF92A409409",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/expo-upgrade/SKILL.md",
+                      "sha256":  "1A8FE076AEBECE5936A59BCAABB6A560E1E5ACAFD8CA614B4A83D763CEEB99A1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design/LICENSE.txt",
+                      "sha256":  "EB3D7B5485466ACBD81F2B496F595AB637D2792E268206B27D99E793BDB67549",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design/SKILL.md",
+                      "sha256":  "B8009AE690DFA69EDC7F08BB8715F32DB8817112CFA4388741DBAF876C237DF8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design-review/references/pattern-examples.md",
+                      "sha256":  "51C7CB307C345FA0507B062D7C8E1A38E3683A0EEC6E11E00001F7A1E3CC06E6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design-review/references/quick-checklist.md",
+                      "sha256":  "3C451B0937499E7349073044825389B691F0788336D9C571F18E3BDE5928F8F3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design-review/references/review-output-format.md",
+                      "sha256":  "F195E24959C1CBD7526362132E389F0CAC3D0EFA123B8A7650679C64C65BDF8E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design-review/references/review-type-modifiers.md",
+                      "sha256":  "96A0AB621C262D5C29B7A5A9740F038A77C4782260507E437F1250EFCAAE8A66",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-design-review/SKILL.md",
+                      "sha256":  "A595FE62AD12448D6E3CA3B9B20DD210938E2F8F976A16AFF623D44D867C02D7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/references/injection.md",
+                      "sha256":  "EBD6EF8D39BA6F1CD3DC13051E6ED4163D1D2BA36518CF0F7393836A211E58FF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/references/permissions-and-tokens.md",
+                      "sha256":  "7272D00B20CF99C6FCBF34346F76730907C00701AEF44BB9CFB7AB3EECAC336B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/references/report-format.md",
+                      "sha256":  "3ECD2442E173BC001F858747873349BE7C6C77050470B87AE516647908B1E86E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/references/supply-chain.md",
+                      "sha256":  "F66F613DBD732CE87C1E76B88208EFDE8FEAE3FFE5A3AB405CDE4CE3DF66F605",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/references/triggers-and-privilege.md",
+                      "sha256":  "465F3F76517E9F5374A73E30F46CB47E1FE62CE9FD81F782808A3ABBB2DF2756",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/github-actions-hardening/SKILL.md",
+                      "sha256":  "31A8E7483D978E6267941EDEFEBBE42AAA946BB3D43C9095AA3DB343D4A8FF06",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/browser-best-practices.md",
+                      "sha256":  "87F231092C854C384A4D7806C35D7F45ED699DB89CFCEA72510F264E46FCD5D0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/docs-guidance.md",
+                      "sha256":  "0F9668AA476FA041EFE9AA86BDF826CE666DFBA3AD18C615B08CE54185BFF1AC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/browser.js",
+                      "sha256":  "9DDB8077F45073EBD4869D397F3930A16A73703DF163899E0E57ED438EEA9537",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/cloud.js",
+                      "sha256":  "9D468490285BFAFE49726BC9FAB5B203095140AD16A597A2D4FE9A3FF7CA7C56",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/crypto-encoding.js",
+                      "sha256":  "4055D882EAADD26933D5DB9CAA3E871EDB72AFFD9611FBCD248CC08D403CEB24",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/executors.js",
+                      "sha256":  "E5EA6B129A9E7440BE93E972601DE209A9F535B57C31C53B46F5E2E4B81BECF0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-crawler.js",
+                      "sha256":  "381702D464E2414E94B86F270397FCB96E5244957AC978E45352CB4DEA7A00EE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-dns.js",
+                      "sha256":  "38D2FB82FF11740388A6CEA0C0127096F96A2918002859767DF1A6A68A409F61",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-exec.js",
+                      "sha256":  "779A5EAAC2E5726F16D0554CE2FA9E908417B9838B0EB5C7CFC6D257A5D09EB6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-faker.js",
+                      "sha256":  "52B565614871B6EA5A62409DA150A0E376784E0349D9F205C6653A2D676AA508",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-redis.js",
+                      "sha256":  "FA3780DCFB62778A6A233BDEF1CA9682EAD3FE792A88B156AC84B43E81DA421B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-sql.js",
+                      "sha256":  "D31377CEE025C2F62E4E7FCA8BCDCDDCEC2D2329F65569968EAE5D3B389D9890",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-tcp.js",
+                      "sha256":  "BC94D1F5C8748BD064B5A5C7272ECD986EAA015EB4201BCF050E00690315BC75",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/ext-tls.js",
+                      "sha256":  "573B1BDAD8B90C29C292B38A937AF1669279999D066227FED2CC6104AEC62D6D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/functional.js",
+                      "sha256":  "4DE26F1FEA0665C6BF32CDB3BBAA7D26A6058F8E3E34F7A21538160CA0910B88",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/grpc.js",
+                      "sha256":  "8ACBCE2FC0D3051B7DBEC675B92A4AB6A73DC3D82DFD8B48E16372617D7AA89B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/html.js",
+                      "sha256":  "89C2F2F9C16F0201AA332341E853D8CF0FE985F8787D56E55B119B5DD256F832",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/http.js",
+                      "sha256":  "FAD0B05F7AAED72D507EC84D1CB0D74AC255B34383E9860177F177661DAAD6E9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/metrics.js",
+                      "sha256":  "E3F4465D3195D5EA17453D81722A36626BFF0E170C2DB4064ABF6036419EF727",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/examples/websocket.js",
+                      "sha256":  "1F76336C6A4AEA0575AC9D8FD3CCDEF863F98A1F536E9EC2F1CC269AAF5343EF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/SETUP.md",
+                      "sha256":  "376138CD42061104FAF9309F333AE300313D31B7A4D9BFB3078EC4ECE8E6D87F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/k6/SKILL.md",
+                      "sha256":  "0E0AA6D4B7038FB3FD019AF336311AB4F8648AC36D71CFA60B38EFF281385AC3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/auth-and-data.md",
+                      "sha256":  "C98D57B039717154C893F6D743C5179E9BACD933DA5A2649E1BFF3364625A816",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/ci-cd.md",
+                      "sha256":  "DC6417965148BE31CC771BA0052DE15F35E727F9B9CB57064574EEE8F79545B0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/commands.md",
+                      "sha256":  "6B7EEE1E13C531ADB8C5AB708771812B2A411877DFC338C675ECFFEC48207BDF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/flow-control.md",
+                      "sha256":  "3F70AD6996AB510AB5411F382EE0E9D080D54BE8701BD8C4AB8308447D297CD4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/javascript.md",
+                      "sha256":  "909AA2747E38C36FCAF87F3DDF4D32F8721983A806BF0F2C6A2026613075960D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/mcp.md",
+                      "sha256":  "9E9F0DF5CDFA15DBA3E5672080286BC46F12FA5B866E9490BB2727871FA8DA46",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/patterns.md",
+                      "sha256":  "E3082A96F6F15F30F599A70359A821AF159362A013B4F37F5281BC2A8FE749E2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/platforms.md",
+                      "sha256":  "3814C445AE0186DC2D7A116F8733E28E83823494E4BFAAD7D9445C2609A9A7F5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/reference/selectors.md",
+                      "sha256":  "E687BD0E47D2B9E965ADABA50C8CED8C9BF020AFA8EC53D8D1E4031631C46E38",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/SKILL.md",
+                      "sha256":  "8B381E736DAFAB70FBEF9A06495F6B89CD2DBC3C1FC1E64A060B61DECCA0851B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/auth-otp.yaml",
+                      "sha256":  "E8F8B053B17DF987E955D96376986F8DF4AAD725C0E7BE7A4140FEA41C767A34",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/config.yaml",
+                      "sha256":  "BF51D830AC13AA9E84EC406797D40D0777E075F5DBD002822A610E8233E2ACF7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/github-actions.yml",
+                      "sha256":  "428A80B377904DBCD2A995768A275AA506057EF2BDEDA03C54A774918439D987",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/scripts/clear-inbox.js",
+                      "sha256":  "AFB1D98B05377E50FA71640795E77E34915D809FA8A3BAD08F043971E3DD0731",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/scripts/fetch-otp.js",
+                      "sha256":  "83F0C0A5A8E2190A7D0B73F5EBCC731CE1673435DFC84D8ECF6B6BA315E4C1D6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/maestro-mobile-testing/templates/smoke.yaml",
+                      "sha256":  "0D15F2B5D88CB1EDE3CC98BA4BDC486947C9B4E5A22B109E66F32849FC1D044B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/oo-component-documentation/assets/documentation-template.md",
+                      "sha256":  "E0BB3E2724AC018C814644E963BD3253AF75ACAD64A1761229B83F1E0F74AB35",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/oo-component-documentation/references/create-mode.md",
+                      "sha256":  "F4CD087523EBBA889C1EAE4A7A4CB9B9CEF7EF6A5550940946A234A40F1CBCC0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/oo-component-documentation/references/update-mode.md",
+                      "sha256":  "06E226853FEF1C2D74A81C792691AB276A96D9BC07DB5BB196257AC5CC2B2360",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/oo-component-documentation/SKILL.md",
+                      "sha256":  "27716AA29EBC98E0B21C2F09E6694EECF1449896CC1070E2460FE5D4285357CC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/opentelemetry/references/collector-config.md",
+                      "sha256":  "482BFA00C885D3ECC8809D6910C45E7DC13C09C6B223F957D92C0C08E6D071F2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/opentelemetry/references/instrumentation.md",
+                      "sha256":  "AFFD493D0E773E4E3E98F8B9551E1277DEDE1E4C11216C55AF8175D2C1300EAF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/opentelemetry/SKILL.md",
+                      "sha256":  "788443BE854ECAB208F810DFB97E6589F3590DEF722D003A1E2A6E6E44D1DA01",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/element-attributes.md",
+                      "sha256":  "F9CCAF85F43B7FA522A48ECE60E3F18F10D43CB509EBD48A010EEFBD0CD4F47A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/playwright-tests.md",
+                      "sha256":  "8DA5C537CF6335C1E7590D5418B9A68C9007FD5851AA58331530E09F6EC06B78",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/pr-attachments.md",
+                      "sha256":  "3F3BE9D08E21125FF1B29F03FE6957D3BA8804DA650B13CDEEE1E5965F0999CE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/request-mocking.md",
+                      "sha256":  "F1F6E6360309394BD457E1A9F78A66B1ABD016A29D463A1E1215F168458A6FCD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/running-code.md",
+                      "sha256":  "096A293AF6B0E290B6CD2C08595A421DE30BBB99BACB28A454972D4EFD35458A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/session-management.md",
+                      "sha256":  "BE81D12B1113F0A0FA5523A61E6A9ADEC02400359137D09269DEEB6F90559622",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/storage-state.md",
+                      "sha256":  "9706044C7D10587C5018ABFC8A0A28C3B3A54EC0E9FA071B0D00C2D5C432FC31",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/test-generation.md",
+                      "sha256":  "867A83612AEC52143A826866727DC1F52E31227F7CD2CD479274376282B0395E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/tracing.md",
+                      "sha256":  "07CCB2AF8FB500D80214FAE9FA15D46B02A24805443637DBB7BB61446CB87089",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/references/video-recording.md",
+                      "sha256":  "89393670F4D54E2878F1C3ADCE2A3C91210302D2D957C73A177B15BBD812CA27",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/playwright-cli/SKILL.md",
+                      "sha256":  "E0AE73F2075661E612B9404044861C53590E846B6B3F19EBD247A5846DBA907A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/references/hazard-catalog.md",
+                      "sha256":  "E9C2F68A92646A9FDF1B2E8A557809D09B940D4C84C30B82DC1ED602099716D5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/references/lang-python.md",
+                      "sha256":  "329378E1263373EC2FC329F89C73714F31A8719758835F77429995F6858C9E98",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/references/lang-rust-go.md",
+                      "sha256":  "86EACC8CA0C56CC2630E20B0CF832F0A741719B918D4E9830FFE372F4B5CDA9B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/references/lang-typescript.md",
+                      "sha256":  "EADEDE5E2CD56820A792BE23C1E17EFB804CD9E5014381E9654035FEFB56AC15",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/scripts/detect_hazards.py",
+                      "sha256":  "94BB97BAFE72B9E37F93099ED114C8B28182BAA85C1B49B561700CA48156D508",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/poka-yoke/SKILL.md",
+                      "sha256":  "39BD4171C088862253310B91A5046F38BF9441DA8D3FA78B60A04577949839E4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/research-synthesis/SKILL.md",
+                      "sha256":  "442BF460C3844EA821493E72332C74AE248D17591FC23E159CEA2E5DFCC9552B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/api-keys.md",
+                      "sha256":  "B245D0D91A9ACAC8BA12871E33DD21D79DB17B727C6B7CEB9618F1821DB1FC71",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/automations.md",
+                      "sha256":  "3BC03DC101E6E0BC9361834676991D6577277382F52B4CC18DE5DF4C8797E2A2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/broadcasts.md",
+                      "sha256":  "2F524963B4591248E389CF9FAC48241B6B8635DDDEADF3149E458F4AF98F8E1B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/contact-properties.md",
+                      "sha256":  "5670E588F1704C76BD9F599EBF1AC15A682B7D3AEEA487061C0CBA79E4F69FB2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/contacts.md",
+                      "sha256":  "715E312E1F6FF622C36E9B4437C38ECE156753AAF83587CB404FFFD19FCBB4A7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/domains.md",
+                      "sha256":  "261AE02751275C693CBC99997BCE7C3C0A2F5F97CC39F5B4EFFB485115A89200",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/events.md",
+                      "sha256":  "FA7633104BF9E35DA7DEA88E5FD17C6D3D9BF8564093791A12E7C1CF5346A6A1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/fetch-all-templates.mjs",
+                      "sha256":  "A968E0901C44CD4DCB83B2026064A084DDC46F1081B992E50FB3F81DF46A0205",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/inboxes.md",
+                      "sha256":  "CE68E65244829B066D84F552759860DADEE7FA4DAB0FBD5E97C050969380BB63",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/installation.md",
+                      "sha256":  "FD78057F21C5AF896BBFF35731D1F89404DBE672E03907523DCE9355A2E3E818",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/logs.md",
+                      "sha256":  "11EE292477C405EE1704FF9D82A88739A22E5E01D3580F80DEC803589483DC8E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/receiving.md",
+                      "sha256":  "69454DCF3F192DC85CA234621E4F934039CE1B9E549814C36DFC6FB0B7B9005E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/segments.md",
+                      "sha256":  "179CAA7136CE41BB91BE9A2E3B9F393503BA9A60A5BC9A596D0F85F60C39B1A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/sending/batch-email-examples.md",
+                      "sha256":  "E17926DB3DE268BF9D10C38D8C00EFE53803740464510B2364AA6BF5766C83E2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/sending/best-practices.md",
+                      "sha256":  "0D4310A271CE656FB5962A654C606BAFF03242F7918B3D57AB55E54DA97E1145",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/sending/email-management.md",
+                      "sha256":  "9963F0C8A0C8F82F1A33A2E5F84897042A81CD46E02962F3E26702108DD32D6D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/sending/overview.md",
+                      "sha256":  "439B5D760CCAD2FD1B04AC569CA33005295DF4268A16FCD7AE40CEF8E2870881",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/sending/single-email-examples.md",
+                      "sha256":  "B2F54A6A1798213BB96C9A9A0F42D9F2338E54D158ECA618C33A1E687E67B859",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/templates.md",
+                      "sha256":  "AE37450BE42771D7EAFBBF613BFD374AB27DC7AC6F33CCB72B34BAD018335520",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/topics.md",
+                      "sha256":  "2218D80825B6F6A30E0A4266F66BD9066A67FD06E6B00CDE548D7BB402A96174",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/usage.md",
+                      "sha256":  "1CE2B1AD4AE11AA14089D84B0BE43D846A9A9C4A580DA11EE985FEFC6A90451E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/references/webhooks.md",
+                      "sha256":  "ADA8CCB925011DAF56968F541788E5EC5E5137145D1E34D0029F30F4B90B2EAC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/resend/SKILL.md",
+                      "sha256":  "B83C1282D2D4803C56131582965E06E9B3AEFAFECF4024C3DF739783FB9A43CC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/references/language-patterns.md",
+                      "sha256":  "DDFBCBB68B9D605789C85A168A274219F0AD86F5FC76B46B5332EB42F0C042B3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/references/report-format.md",
+                      "sha256":  "688EF9F2862303527314EB17A090A72D512B907A685F5D1F122D6EBD5AE66DB1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/references/secret-patterns.md",
+                      "sha256":  "38F84F60021490D785F33FC70F2CE784888D2A751781A881372E6862E7E11288",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/references/vuln-categories.md",
+                      "sha256":  "D06159479BD92B9DCF3A2842E09F7712F1FD297C0BC9792FE20BC3CB69188DF5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/references/vulnerable-packages.md",
+                      "sha256":  "8693A6A258BAD18A8A1D0925BC1EAE9C744071FF37A36B8F1DA83ADCA93608AF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/SKILL.md",
+                      "sha256":  "002392D88637B89E4CBC409A0531834970937F3B57C0B448A17E04B5CA6D356C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/references/copywriting-formulas.md",
+                      "sha256":  "03733D5916AB771834745550045B736DEEB94A08226F2B200F7953009C35B219",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/references/create.md",
+                      "sha256":  "792D647A5D4F87D765CF417F7AC54DD0B2FC4D229CC23EA9DF56282D4C1EE086",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/references/html-template.md",
+                      "sha256":  "FD5B051A37365FC6059C75BB388EC6F64DAF1BD9AE938B287B6D762DC83C0C35",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/references/layout-patterns.md",
+                      "sha256":  "0A967CA3BD829D3234E6F1802BADE6C76447FABBADDBC8117C41ADBAE7DFB6DF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/references/slide-strategies.md",
+                      "sha256":  "27EE3E53FFA0EA679EC83EBEACB0BCFBCE498DF57277E99F574B9C139DC44286",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/slides/SKILL.md",
+                      "sha256":  "2B90BDAF63F231919A01F4962F374ECD84AF101A7E7545F8D9C68E049025ACCB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-analyze/SKILL.md",
+                      "sha256":  "FAD1C37A451E017995B15FC3EEFE243274642FBB3FF7C8A5AB021908DF71AA93",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-checklist/SKILL.md",
+                      "sha256":  "5C1DCE9333A2B733422E2DC75DE7FC4D63BA91A460833D14EF3966A672328B9D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-clarify/SKILL.md",
+                      "sha256":  "1E9DE2B2A673C923F7CA650FC40E4D5F24654163C577E0F1CEB70EDFAA08114B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-constitution/SKILL.md",
+                      "sha256":  "FF6604C8424D4F4EDF80F19CCFDA1EDE1A1DC5091A397CC1F0078A0BC3B0A538",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-converge/SKILL.md",
+                      "sha256":  "369E168CBCC9F903D1B8F3F360A32D24A7EBF3D07066B8676032CFFCAFBEBD9E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-implement/SKILL.md",
+                      "sha256":  "4D58A80EDE8D837798D13A838B83A88FD4335104D0806D27F8018664A1EE0B85",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-plan/SKILL.md",
+                      "sha256":  "0834B2298C078B0A89EE64A3E47E140CC9B31C4049492BD504491199A0FE3E73",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-specify/SKILL.md",
+                      "sha256":  "A505028DE7F6489878696D6656C7D057F3A66119EBB8C0CC82D69FABB7B344FF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-tasks/SKILL.md",
+                      "sha256":  "1E1D18B34E39D62D6388297F035505905741B07973102E0D44AA8647D85AB093",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/speckit-taskstoissues/SKILL.md",
+                      "sha256":  "47D5A13F2A39F2E40D8915FEEF7FF08CD36E08B176C7F28D107758E9E983B4D2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase/assets/feedback-issue-template.md",
+                      "sha256":  "74B5DFA3A8F7D6584AF059A12BAE4CD6BB66D1F3205DC306BF31D4F4AE2A13B1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase/CHANGELOG.md",
+                      "sha256":  "653A274669FF4D84EB3004AD379050CB73DBF75740DF82CCB9768F29F0422190",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase/references/skill-feedback.md",
+                      "sha256":  "85E688B56623F9250D23B60EA950DEE740FD537980FC72178FE185EAB76742B7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase/SKILL.md",
+                      "sha256":  "44F4CFEFB57751ABF9288FB2920DE621C748964DE1301DB627DEA725E187BCCF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/CHANGELOG.md",
+                      "sha256":  "849D982843672C2C7796CF3488B20C29538CDD304C1D64A60AEC2500138059E9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/_contributing.md",
+                      "sha256":  "B851DE03355EA919862B637FDC14FEFAB648149CF1013B0194A17108B2D8AF4C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/_sections.md",
+                      "sha256":  "AD2D6F6B0938FF844F7F8971153AB6D08A03EF6511B02FB9CEE9336C7B209E93",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/_template.md",
+                      "sha256":  "39E9FCE3C6AE1AF110F689E018D4417F3547ED0417A7B6198B207285E60BF9B8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/advanced-full-text-search.md",
+                      "sha256":  "0682B713263C5B6B9638A31F810BAD07AA179BC4F79BBB787B92ED287E00FE76",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md",
+                      "sha256":  "9BCBF7DA33F6FE6FA9525680CA26D4E3412B534104CFFB5F8529596D76631E4F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/conn-idle-timeout.md",
+                      "sha256":  "CD4386D0B5A2BD6D0148975F0F379016B47C7CF139B9483C4F24619C6A89F5E3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/conn-limits.md",
+                      "sha256":  "9ED6E5E3A45458A52F2863A60324A05D80DA1D9F3E23BCB83B06F464F6A3CEE7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/conn-pooling.md",
+                      "sha256":  "60CD5F7942C44BDF6D8622A49A2E9F0F7FD01DAF8E62BD1BD66B195CD6942975",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+                      "sha256":  "5CE48FF1E426C9B90C75C5733817FC2DD8FEEA9E4DB3298EC9373B9CD0CF3BF8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/data-batch-inserts.md",
+                      "sha256":  "98251B608BB6CFEFD28828C9E5FFFC705A155F1212FA0CB82904C5BC2E417572",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/data-n-plus-one.md",
+                      "sha256":  "F5C60F85F208161CD7567BB7CFF0F559618814216A4426BB1351B51F75EC334D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/data-pagination.md",
+                      "sha256":  "C0BFFEB6880C1F5B961E7C2FF36FD16686EBB09E5E49ED17499654BEABEA3E60",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/data-upsert.md",
+                      "sha256":  "B366AA7DA1E7929FBA3011F99D949B2593967920D0C3C8572E07C0407C367054",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/lock-advisory.md",
+                      "sha256":  "6D6B50C5EC9F85EB7AEBBB1466E642E427C1732EFA558488A9CAE7EF9903FEBD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+                      "sha256":  "55F2074581D4DB4996FC3EA1D3C120295209A70115F773E2C54F6B312405B293",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+                      "sha256":  "2538A22231C0DFDE9967812B6BD5FB347287B671F72806495F89D0D0764E5FE6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/lock-skip-locked.md",
+                      "sha256":  "42C7492BA7F5D2C8EDE9A5AF072EA63DEACF71E5695E022CAE15B46B1CE4DF13",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+                      "sha256":  "94881B47194CB164B1D2A004E79F181370AF44EC830B9263E990E2710BD02B76",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md",
+                      "sha256":  "812BF181876BACAC5A2F914E7FFCF2A0A215B6D18DDA752E65E75D926CBBCEF4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md",
+                      "sha256":  "8D35221E676F13B122865D5DF947A008C41367BD180010E52FDE3C429E8552A9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+                      "sha256":  "7E75D1B4D4431CB874ECC28710E95B7D2D7364511DAA5D2C8E9D7DE7CE1D0054",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/query-covering-indexes.md",
+                      "sha256":  "028770393DE8C0BE6DCC7B9FB017F8209761D1854EBF433F036367E602F2D04D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/query-index-types.md",
+                      "sha256":  "5F054CE4F835091BB5FF89875DEB5F8ADE9E447E2EA62D1CA07382D104AF0F2D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+                      "sha256":  "15DDF120C86020612D2713225C850E0E4F022B38021F40F45E5BBE58F245DCC3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/query-partial-indexes.md",
+                      "sha256":  "106E2B88FF64115EFA0A6B5F448D31788681493EEEC05AD373F7C2CE6C8E0381",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-constraints.md",
+                      "sha256":  "D6E16D565C9832B70F8B1D472F7DC86DAFA1351A44E8DA72C88B48D337F73D7F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-data-types.md",
+                      "sha256":  "DF3197B3393F37B065396C2D3D2035D870D5D572CEAF6562E7C85559DCD11871",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-foreign-key-indexes.md",
+                      "sha256":  "B49A4E74DED6DD2A2BCF82D21FD22470C403B54CC526DC387F95C001C005C5D2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-lowercase-identifiers.md",
+                      "sha256":  "E7E3E073DF2FD787CC4E58DBFE1B7EB1F80439326042C5E73A69AE8A3B1DD734",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-partitioning.md",
+                      "sha256":  "D940EE09551E970F97C629E816502989C37F7DCEA1DF94B4B52F79F6EEFC9971",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/schema-primary-keys.md",
+                      "sha256":  "8E4350D0C4B0034FA843EF74716978729329543FF57FE9FAD1D22E31A86AE0C5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/security-privileges.md",
+                      "sha256":  "079B20ABA6CE8DBEA81678FAFDD95B4F9785440E91D07EB96029104597CB9693",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+                      "sha256":  "E1B419AE752D06F6180A0DD61FA21CFDC2B19E34902495BD2827D3E6E350DFE3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/references/security-rls-performance.md",
+                      "sha256":  "B9DEFA5E5815A5DADF792B7C9AD7941EEAA1034082B3B06C9CD56083184022AD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/supabase-postgres-best-practices/SKILL.md",
+                      "sha256":  "4D7D1BD60F2AD7FD0D510269279519059DCC630D832F4C241D90735244C70525",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/condition-based-waiting.md",
+                      "sha256":  "E89FEC8400D6CD50F43407CEC9FAB50976BA4D55D0EC2EB51C0BD68036B54C26",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+                      "sha256":  "40AE5EBE497FDF310200E43FE986552546D0A22837C0D39E855DB1CFD33EB88E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/defense-in-depth.md",
+                      "sha256":  "1E175FB86FC357E58C6AEBF5441E481E1B7868B4380C0456B63A17EEFBD18BA7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/find-polluter.sh",
+                      "sha256":  "DD7B8F13C4CC2A24B33FF87B18DA9248F3E1C80A085C3316224F69FF0FA5C43C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/root-cause-tracing.md",
+                      "sha256":  "75B933B6A8C40BDB2031B10F21654395B56EC6AB6BC7B018C18D3FE57AEB7FB8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/systematic-debugging/SKILL.md",
+                      "sha256":  "51C6435D98C83C42C96BA7C35725A0B2C376CD487FB1A4E6BD0DDBE7E33EF202",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/test-driven-development/SKILL.md",
+                      "sha256":  "64B03FCE4AEE5A97A93160CEA8111F3BA13A17B7C001DB4BD5836D67FD10705D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/test-driven-development/writing-good-tests.md",
+                      "sha256":  "51471C853306FF92CA8BB41DCAEA05F31C0E46B03651F8F3C99754B7172F4AE1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/LICENSE.txt",
+                      "sha256":  "58D1E17FFE5109A7AE296CAAFCADFDBE6A7D176F0BC4AB01E12A689B0499D8BD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/canvas-design-system.md",
+                      "sha256":  "F5DE85FF39D9F3A8275C4164B921BA72D5E1D34B8D7A9243D9EE34B3870A4F5F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/shadcn-accessibility.md",
+                      "sha256":  "A22CD4CCF82B635B2B2C4F12416A0C4F7EDCD825D219D6089450FA797A0D9511",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/shadcn-components.md",
+                      "sha256":  "79C4F91CBF68993A43FA3A95889C35DB73DE45BDD3DFD83A6830863C01AA598A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/shadcn-theming.md",
+                      "sha256":  "D17D641474221123FF0E0288043CA2F2DAB3AC96908A19EED28D82F9E58865ED",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/tailwind-customization.md",
+                      "sha256":  "4C5ADEED6263A274F74F6EB2C816CA420FD6EF4F35683582988BACD404799AFE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/tailwind-responsive.md",
+                      "sha256":  "8D00AE620DF26DAEA4623C7BF996D6E612E09D359305FCFA2B40CAB757ED840C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/references/tailwind-utilities.md",
+                      "sha256":  "ABA1C40EF84F43BEEA142AE310371E332541F39D973DF90A71F1854823EFFDA1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/requirements.txt",
+                      "sha256":  "09402D2D274248E18BB5FD0A0267FD7CBF99B7A2440E73E87F054AA8F259F9DA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/shadcn_add.py",
+                      "sha256":  "0C11D28CE9F12217DF2C3306F24AE1F73527D5116DB63707AB55CBE1A8BCF28C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/tailwind_config_gen.py",
+                      "sha256":  "2E264EC871499681AECD6111F60743FBA31B5CEB7E9CCB2B71B7346039285F89",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/tests/coverage-ui.json",
+                      "sha256":  "33BDC1F5998DB9A38CAC8E6128A82711F8F8B65FBB3DCB0C1680AE260441CBCE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/tests/requirements.txt",
+                      "sha256":  "80846C98EE02A7E9651EC4EEE6709F840B785646B469AAD5284AB7AB9B344F17",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/tests/test_shadcn_add.py",
+                      "sha256":  "35F60AC5D74C4A7F950854A0337883C3E8DD812C58FCF6C5153876E43A6EFFA2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/scripts/tests/test_tailwind_config_gen.py",
+                      "sha256":  "4EFA59FDBE318D55E6A452D85401DB5D1AA4504F93739878BB40D8BB504AF585",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-styling/SKILL.md",
+                      "sha256":  "F8B6C3832D2AF51F67B3932E3C4A79BCD8A8596CC61CE1547A686FC951E5C62D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/app-interface.csv",
+                      "sha256":  "331E7CF2C0B222D80C566C5F255C63CB339F65BFD02E471A720F28E4864A9F08",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/catalog-summary.json",
+                      "sha256":  "65FE0B64480A8A827738297D0A64CA55C627D4AFCB774FE4555C59CEA8DD6905",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/charts.csv",
+                      "sha256":  "4115CF1120680F2CEDEF0676CB648F30C7EF4699E2A947535D4113E71ED3B12A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/colors.csv",
+                      "sha256":  "8162429222BCE22DF62B564085946A30D07CC9722C58D0A3A494BD0D1D00841C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/data-provenance.json",
+                      "sha256":  "E82FB33ED49375A300E93D9C11CCD1C1493C999E84EE7EE295E527634786E2E0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/google-font-licenses.json",
+                      "sha256":  "35688523F2955795CAA1A47C53B83099E60C1708461476F9CC3A050CF3B0148A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/google-fonts.csv",
+                      "sha256":  "1C8C3B2EA1FAF6A1012DA463756DEF8B3889DB33F2226F0343BB4DAA80307D03",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/icons.csv",
+                      "sha256":  "50816C6012030178195A16EE481EBF58B47BD985D70E8EC58886CC83F6EDDAFC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/landing.csv",
+                      "sha256":  "9A2EDD3BB676C2A58F00ADE7A062E285222D4297BFD847C8D5B056F0DBBF52D0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/motion.csv",
+                      "sha256":  "381AFFE8DF8EA1F66FBBDA2598827F9F54299107BBE6A1B4E9B68F6B62091CEB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+                      "sha256":  "2399325233B277B5C97A80E6A5E8941154F5D057BEEE4E7613DB87C87D700236",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/products.csv",
+                      "sha256":  "42473F75E8DDE5987BDF89CE55D8C168091B80A356CAE691DD60247D80720B70",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/react-performance.csv",
+                      "sha256":  "3D925802539ABAC5AFEB63AE8AA1960B7229AD271B3A47CAED40AB2D97AD0734",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/angular.csv",
+                      "sha256":  "704BE83F2BAD30C7E6DE01AFB113FFA01E0C458762F48B7102F31BA2367B5553",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/astro.csv",
+                      "sha256":  "2C2F55FADAAFC05E04CC321C8194A1A28B656E6757FE2BA316F41B16428299C6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+                      "sha256":  "442FCA14675A020683473E7E49F08ABB27B9DF0765C80EFE54AEF61F1A4AC258",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+                      "sha256":  "64DBA0AC17349F28BCE517A0F5F48C54D9ED2E487EC0C0258303463B382F41A0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+                      "sha256":  "D05A581D20AF57B8CA0104A6D31D90A07C437D500662A96C3029FC2F9A4678EE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+                      "sha256":  "2E819B8D5ABDD23AD4DAE0991650FDB57AF497AABD68B37463AA9C442944C869",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+                      "sha256":  "699DE218B286948EAEC7D15767B6E1350EE299167E49BF476D82E3FF58724E0A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+                      "sha256":  "854EA4DAA5FC61292D22235AD33B49BA3FE22423C3DE8D3CB03758FFED3B59F9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+                      "sha256":  "ECD2C27B2EA0127D203AE726060EFCDD7335B5E83F96B99E4F3BEFBBFEEBD5A4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+                      "sha256":  "3D9B54ED2D151BD9C86E9E5609B8A6F88A00C4C52FA601A30AF96C49B2C4D176",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+                      "sha256":  "C36EE8470926B4A0748D241363C71664C9969C2EDBC62F7F72DE0DB73880FAC6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/react.csv",
+                      "sha256":  "2D2B9C198E875106A30F7EE68341A9EE0033CAD60A7E130CF23152783E08AEDA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+                      "sha256":  "BA31DD9C0C04DA6BC02A74448BF121F9C0728AE5BA3B4D47B487778B0A1135B5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+                      "sha256":  "E56CFDE5B74907836AC3582A4779D5B7F3D206A702AB81B8669A1B668C3EEB51",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+                      "sha256":  "F6E379BA802941BA26B01D4FFBE3CD39120F2587659A1D93851C707F66BC13DB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+                      "sha256":  "BDD9231FF3AD658F4E7C063E1EB49DF2FD09AC8D90631A86DF899B39833B9623",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+                      "sha256":  "97542E0BA34915A0FF7578BE20E1619495DF47C95C8C1C39B83E3785E1DE771F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/uno.csv",
+                      "sha256":  "A0474363E4225B5367214D5675FD3E075F137026F9500F0D04357882EF4F6D48",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+                      "sha256":  "C409F08C1FBBA1F1029F1ACAA554E7B4471CC85517A5751C9F2E62465BADCD5C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/vue.csv",
+                      "sha256":  "B655F1EBB9DFF2652D15981F31B1784C8A6D4759EFD2815A14F3088257569F95",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/winui.csv",
+                      "sha256":  "E676DC1C13EE6C205C40B0746F1335150A346C7A49A0616D2545BC3D2C930C85",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+                      "sha256":  "9781A9950B20333637B30A02E498B7EFCA21B618A3EEB8665836F3AC6E974DA7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/styles.csv",
+                      "sha256":  "A93A4D9D7025856575D7B7583BDA020BE9043013432C5AF7C58AF9DBDFB206B7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/typography.csv",
+                      "sha256":  "321FC446E89024488EBAE96DDA93EFC4D2307BD8BDDB240857AD51364F6782C8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+                      "sha256":  "F0774DD741CECDAD5EEC842034BD6D5E9EA50E9F220A1910069748DAA0BB8E9A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+                      "sha256":  "FF81EC613F70BA9FC3FCCE52DBE4AE35D44B2079DBE6DC066D2D6E38C28FACD5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/core.py",
+                      "sha256":  "E544826963EFEFCE3C59B65E18D83D92A5BAF571F05458025BF1FA9021ECED42",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/design_system.py",
+                      "sha256":  "6A94743C3362C9C7E6D1450B94F4014D9EA752E7B4E151F6F0BDB217E0544BF7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+                      "sha256":  "B8BAC1AF82AA280D3E06F00AABAEAC4337E632996B07FED874E2B6EE6E9C5913",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/search.py",
+                      "sha256":  "8373E2DD2D560D9853EC116140DE0E0D5BEE45A6ABE5E041173C84E1C36A7F87",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+                      "sha256":  "22D8DC81A7D6827B7E8B64B53E7D184210FB9759E8E294E0D5133C81CC460176",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+                      "sha256":  "C608AD5C4084EBC50A4BBBFB69EA2456C01FD5519C457E18410FFFD250AE948F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+                      "sha256":  "4E0761B839DC6B2187A370E82EDDC0AED8A7FF10C09E28DD814BB3656DAC595B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+                      "sha256":  "30BFFC29AE348416A2DE2F9C6C418E768E4578F136B0F4BAC5D2F70124F2E9BA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+                      "sha256":  "6243A48A4619986768C4628E2D0C98FF195BEBA71BA9BE5DF8F0C52FC6D90C0B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+                      "sha256":  "68362C9A700C13B96F000784A0198C1C7E117A7088A01C85744E44233038FE9D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+                      "sha256":  "AE4D0BB076240824E1B643C2270D1F8CC0952A69502EC1E622B7DEDD85B930BB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+                      "sha256":  "500588C757D6DE03E3D7E69B27A8B8B1F88CCF6BB0333E4C1E9B0D6A4F112475",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+                      "sha256":  "D79F2EE0AFDBC2F87776733E145DF3538A16A25D7C2FBA0056BB48295DAD0DED",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+                      "sha256":  "1C57A1D76BCC0CDD3632D4C18B9C0E79576B4591DF39831C9607E5D0EB4F2CEC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+                      "sha256":  "38398452985116E74E31BD6BCCCA0F4DECD1BBFE4EEBC1AC99F7A1836BAAF77F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+                      "sha256":  "E77D36EEBBF6DDC2860946A02CDB659351DA6C09F2688F1ED30939A418099646",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+                      "sha256":  "9D738E11C6B82FECC8D0946E7B38515518DED5ED3294A7EB19A021C4EDB5B57D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+                      "sha256":  "3E2CA5D12702318F641AE62D0C14F22A3BCC84D84E79B863C0E947D475604ADB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+                      "sha256":  "3527FE2F4B852F69F07C17DDC0D615D9A6E025C924E45A33985579A94A8D2118",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+                      "sha256":  "3FFC6B4905C9EA26D7AC4527AB154D153584231AEE71B2AE4BD017977FA09CC5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+                      "sha256":  "0360D6E10080C0BCA214F2B0BBAD582BA50702A542CE21013351ACA54938DF3A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+                      "sha256":  "517BA1BA6195C94811126D1162139C51AFF77FC68C3E320C7BB6C1E89E76BC9B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+                      "sha256":  "904F90BC6D364763673FA6067D98A4227D535760FA8B6D26ABE22208176997CA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+                      "sha256":  "2FE56A4D6FE5FFF15FF592274B0EEABA925146CEFEA6C0FA29D8F1B77C9ACA1F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+                      "sha256":  "CD14D0092E8A454D213AA104B53E4E70BA698491FA00FDE9FDEC5CA8A3D70011",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+                      "sha256":  "B51D32EE8A15505B87CB81957FB2D1B385E041E8BEB4463C311D236BFD29EBD4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+                      "sha256":  "BECC5FA40E7516613D4E9930F226AA483E3796090C17CB16542C93D1927E680D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/scripts/validate_data.py",
+                      "sha256":  "718AD4CBB227436015C9C2BC80FC583D6ED738B01C1A940EF85E350780D99F58",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ui-ux-pro-max/SKILL.md",
+                      "sha256":  "E5BAF9400D4347E5ED3EB1F6B99CD0B9BA545B8B0E507AABB2B87397BBF73EA1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/user-research/SKILL.md",
+                      "sha256":  "C72224F47474DE011E8523550843BA2A5E5FD1E008C78456B2D166567FA3FAC6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/ux-copy/SKILL.md",
+                      "sha256":  "2220C4AA2451F8EA5818DABB1DB804F248C2D038B3260427B9B5AAC310A6ED2B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/AGENTS.md",
+                      "sha256":  "89E3DDD58FCF99A53A50E25DFD21B8CDE1BE5F10B7DF6BACD3DFA6796932F516",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/metadata.json",
+                      "sha256":  "49262ED5CB4186F31EE980CF8D990BE0170C51EFED4908D0464A1CFF9905BD05",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/README.md",
+                      "sha256":  "85915A43A6F0B4EFE525E3CF6398DD866166DA2025837C4460468A24A940DA94",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/_sections.md",
+                      "sha256":  "A174213B87E6911E2B766995A2CBAF8D1534057076E82FB79FE3F0ECB38047DF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/_template.md",
+                      "sha256":  "587F7D16B0660EB61FEE4A4D3D7DF2B3077D6835DE170602C7D6E60BEE559131",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+                      "sha256":  "007555EBB020F4D552582A2C4DB194DB71A1FD33094012E5187BCFA4F8C392D5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
+                      "sha256":  "F246AF13DC269B521CF20EB8AD99A0CB645BEAC381C8C9B117262C34612C8457",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+                      "sha256":  "7C45A0D21B3C4126A32CBA916EE31ADEAE195386AD1DBBE6634AEDB7457AA0AD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
+                      "sha256":  "8C19E596E61807549D01CE8C6954C6358199F97A8511C0C02C625EC0EFDA8C0E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
+                      "sha256":  "881830ADB7534C4B2D70DB426556646AD9837F5478F744F35641F635ADA22227",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/state-context-interface.md",
+                      "sha256":  "09E73AFBF9285FA416679CC864A287B9E8B821D0969272AB784295386D8C9BC3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
+                      "sha256":  "76A8C1EB29A70D8996AB3F71260345AF2F7BC89DEAB815A421D6C87C6591A9C3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/rules/state-lift-state.md",
+                      "sha256":  "74C54038A6C554C748FE31CEC673B80861B5D920B7553CF78CDF10D18B4B759B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-composition-patterns/SKILL.md",
+                      "sha256":  "E38E0EAA609316B10423A9A138ED95E35099ACCD3F735585295C8A8F165C28A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/AGENTS.md",
+                      "sha256":  "FC93E7421177BBF869CCE892BC60A6C83A4517D974BC3BF65C4E2C1E58A6CCF6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/metadata.json",
+                      "sha256":  "C4E18BAC3290FBE1B471A605867D4DF68B03144EA26B8BEFDBE8F9D8FD124354",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/README.md",
+                      "sha256":  "9EAFB2123D3B8B2AEF41FBA0DB2648A3F4F49996F8C7C8BB2C86263BEFD8B48A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/_sections.md",
+                      "sha256":  "01C59969E4E867F0708C8F8EF9C6D87FAB9A07D0586244F429FF84013DB8A115",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/_template.md",
+                      "sha256":  "99DF2A3EA088C6C22DE2484DDC7E964D0E9923846F44C63380343ECC64455442",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
+                      "sha256":  "55ED8F9F27A1BFF803D6FA55828176207714B02123CBB97DDB8A90D88024A723",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+                      "sha256":  "A3097EDEECFB2FF6851CD66ED8CDF0617C3C88180504BEE824AA6E75A215BBBC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+                      "sha256":  "3E4DC22173EB0E2B6DCF583E3BABD862B8696328F8F59AEE7C4D746C5BC05F6C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+                      "sha256":  "8A3F64DFE5A77D1564248FAF17FE662AE75B55D497A243CB30B38EB07CCBBF9A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
+                      "sha256":  "523338540D73427DC14C0CBB19F2741EBCCDF8B105A7B2C1B33D2905CF237A42",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
+                      "sha256":  "03107C1F70A293CD58A8ABC5474C5548E20EA4EFDF01B6D45AAE7AD0AC1CB32C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
+                      "sha256":  "F3C142D090615ABDCC99D31C123BE37B31F0F1ED8D9EC9F7789A3BC6883AE0FB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
+                      "sha256":  "16EF469F877E30C6B8E1E1B4BC3E527312FA3C6318CB785A4ECA186EA236131A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-parallel.md",
+                      "sha256":  "6D2F841896279E976DFCDC1AC89E70771AC188BAADFD43C096B5706CB838B961",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+                      "sha256":  "DE05FEDAC2EB7AE563B887B5A424464EC3DFAF84E5B7797467EBE2A796AC8AFC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
+                      "sha256":  "62090B5C815FD71BF1133DCE754F51ABC16A9456D0CCD025FD627DE27726E92A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+                      "sha256":  "E648F6D54525F07A691357040CA5BFF6EA3424788A91FF63812ADB29622A671B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+                      "sha256":  "09C8259C3EFB04FC0ABB8E412CCBDA217C222AE8118516283E571C995FE3A7D4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+                      "sha256":  "3719FB47B191E8DB4FE22686EC88448AD5AF9E6838585425ABBE103D0B642E37",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+                      "sha256":  "401817A7369F315FC5A68A1095742FF7D53D0461906880DC9D64A41495EE1986",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
+                      "sha256":  "D1F7CC28DA7CD5AB249ACD287EDC5B761AFCFB194E9CB62CD44C5F3543DB2DE2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+                      "sha256":  "242A873349FEBC1CE685E85617994784DBAB92C2EAA68AED7FED5A83E7680E93",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+                      "sha256":  "0FB7CDF9DC93FDF22F87E3669F953FB9D4AC9B0BE42EEC4A29FE9A2560610B88",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+                      "sha256":  "1F35016F9053DE69E884EE9BE00654E37979C2CA85F5E57764DC2626FF7ACB4B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+                      "sha256":  "644652C39C6CC00DE8D1C77A7273612E868DC3F7EDDA30764164C12EC0F764A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+                      "sha256":  "480B891B9EAF96E929DC1E964274A4828E3A78009B7D00CCD965A0D425215959",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+                      "sha256":  "3DAAA11D24F4295CB6BE8BC6F407F2CE83CC7B5BD1F0E68891EA8AB835721DC7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+                      "sha256":  "73E47431E74878A927061BF0DDC7CD91A7556CB35D2573F3421E82300D9AE311",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+                      "sha256":  "11B826B0433898C1ECE2D3547010D8E77DB9FB240185748C45DB91493DE9B6CC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+                      "sha256":  "71ADD08AEEB43091D4FF4C0B2842CCE8B4BDEF8AD3E732CC034BB5A84827E746",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
+                      "sha256":  "925CE5CE87F3347186CA62212F29CC6BAA2B8C85A96D2720AD07C3D0ABF781C0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
+                      "sha256":  "9E5B166A41914D975BEF7635467F8FB32CD98B5C3126C0BC6F163490812FB5F0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+                      "sha256":  "F9E9AEF2F7C2307DD7310F283DF85DCADA45FC43E9BB941B0C3AA414DEC21EC4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
+                      "sha256":  "5DF1BDC2CFABB2C98ABD55D26762E5C18189535C2E686184F426082E62920391",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+                      "sha256":  "8B54A311C826B299272F29187FC58BC55772A04C4A72EEB29456EE96DC9FC624",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+                      "sha256":  "87DFB67E2F39DF6AD8BCFB5B78C5FB364D3C07554AD188A202408D99F3763421",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
+                      "sha256":  "EE08F83905B4011ABBC33D594033157D77561B5BBD9B36B04F0F409581FFEC32",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+                      "sha256":  "A7FD781A6BA9AD49065961B6F9A90EF486BF6B648390E1A08704025F98E1642B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+                      "sha256":  "D0A5E1B0FEC48A0A81397957E2F068E224329F7C42CB5FEEED8AAE6FA64025E8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
+                      "sha256":  "1E5E7EAF3555E61D6A2E900089C676527D26259501DB5594F59544B6C664F85A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+                      "sha256":  "9C6AE0CA7A51434E803887C64CDED760956579A1452CCB80A461A03F9C937C77",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+                      "sha256":  "2EC2FA23C4148285144687050C52369ADBA3DA2FBE3D486F8D3E0AAD8F06F2BC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+                      "sha256":  "64EEE6D5B916FE74DF33363994B27FC7F71BEA3BCEDC7EE04BDA23107CA3E6E4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+                      "sha256":  "93B229560FAE92005ED9A2A829064607B39B2E984E92D221D05B2D41DF2B7C0E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+                      "sha256":  "DC7AB358C67C177BCA6E6F360FBC935EBE4EFA928C0BA3EBD3F9F3D9E2000CA3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+                      "sha256":  "915BACB934E2927D84B37A3F3D225A47B309AC8F9E494ED2BCB66CE07C5676A2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
+                      "sha256":  "351B1095D641717B930F1B2253282B7120AF3023BC74E06C17675168D4286864",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
+                      "sha256":  "4CEA07B7875BA7FC2C7465FF23B63A2BB334F90AAF2D9293D38D67B05FDB32AB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+                      "sha256":  "ED468533F6E95F622859C884B122CF21F9F593ED6BB3D500A54DE4B9F9BCB9FB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+                      "sha256":  "3A1249C3F13026B6F54AB5712C388DF219D6AF01B12AA542749ACD99A46F4BC1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+                      "sha256":  "234050A77FAF50CB306BE10A9E15BD4421134AB5907E75F13E6D78E2BD262DC9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+                      "sha256":  "17EB5830956FB56486FD3CFC7431F5849D39751730C05AD9E77DD4F0C27169C5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+                      "sha256":  "1C326BB67B01FB084EB00C8911B0A7CFF54681C2315B629F88E49B64EAA6481D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+                      "sha256":  "CB11EC76F50AA7B6847269F02D79B120C889A30D9ECD2C1D578F75144419C77A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+                      "sha256":  "5E68DF6B2AE8058E67F476FF1AC67BDE159F5A9D18DF439E46EABCDEB7B52E58",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+                      "sha256":  "4AE844740F266FC8CBF050701230286624A2440EC5BE67B9A63D9EDC3C580573",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
+                      "sha256":  "1F258990C2F27FF6256B3CC5C43300631BB3F0D81F749AED08D07FCDCC131DD1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+                      "sha256":  "81C47476564AD8A79FC68FC442734255CA7D6829424359464503FDA0A9F9A0DD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+                      "sha256":  "ABC2CBF167BEE056743023351E96806A411D3398DA8802093620AECF0721F029",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
+                      "sha256":  "1CC32907A770272524BA682EEF9E7EFDD8AD4533B6F89B718A1FCD7D1D0EB6A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+                      "sha256":  "5BDCF2D1558BA5204E643C887B7B4060F89630969425651EB68E96427D97F800",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
+                      "sha256":  "6F45D703343484EF9ACEF9388397F3642966AE6A5A258899A0CF1F9977CFBF6C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+                      "sha256":  "60F4033909A62DF5E5B8C601494F9E50A562E2F8C1C2D81EAC24F38142265F1C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
+                      "sha256":  "8C3579576A61A949884167745DCFAF1D5426BA305CC61FD0A79602D70FDA4909",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+                      "sha256":  "F1A649AF9D1D0B5C762F6C9C4C1C70C90D7DF82AA10296EE87AADB78C1B76C54",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+                      "sha256":  "D0B8D24A3DB9F0F65F9E2BDDBF230B0E03A5F60E1229D93A4A18F5E7A991C7C2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+                      "sha256":  "A2CA8AA102839251C7971EC784560FAB943C20B36FE6F80365D4110C13260C23",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+                      "sha256":  "1924B64561841923B88A657085097A0AEBA3E0BA2D5470B9F5C15CC10D6AE70F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
+                      "sha256":  "FDDEEA6C870BB3DA4134B61D54B7D09B83D2603F929B7547CD3DC1DC269EDD5C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+                      "sha256":  "C2747424CDAC46BE62F835F245A0AA887B0090B416D28E2AC8676702645EEB37",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
+                      "sha256":  "5ABEA4DD882B13661BD5F7DFB93F9E547D5F08176C61C448ADE91B210ED5D49F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
+                      "sha256":  "4D869BF1CD2F1632E5CA4C0E64B1CF0E71C5F5A0F940BC8A22174D205E735ED7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+                      "sha256":  "569A2E9FC04F9606686CD75C5894EF8781B502786A7FFFE241396846C7733472",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
+                      "sha256":  "AD5D9656984D4A959997A2367BF59CC6632297B4634A1DD13A087939D83F30B3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/rules/server-serialization.md",
+                      "sha256":  "F4C7D68B29C82381BAAD059C4A7F09E868E71EC9C3115A26AD3AE7D24C0DFE1F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-best-practices/SKILL.md",
+                      "sha256":  "71ED7794962FA6E803EE83030517B5B93A9F70FBFEB431EC4535C5480A8D8355",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/AGENTS.md",
+                      "sha256":  "72996343B8260800FBEB9AF63DDAED91F14B65DC547E0922F9F8E9BD72076CBF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/metadata.json",
+                      "sha256":  "59EE2274CADBD95B2220727028F0DBC26D3E0251E7937226EDC9E7640756BA21",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/README.md",
+                      "sha256":  "D60D7623005A833B928BE6A109ED9D14DEA43D7217FB534E8F2E4DE5FC1F0DDF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/_sections.md",
+                      "sha256":  "21D7445E92BD7D393B420118C3FB9EBBF30AAF123A15143AFB6C0B1B562CFDFD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/_template.md",
+                      "sha256":  "99DF2A3EA088C6C22DE2484DDC7E964D0E9923846F44C63380343ECC64455442",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/animation-derived-value.md",
+                      "sha256":  "689228E9D59227934F296563963951AA9368BE0AFB2A188F650DE161203B1862",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/animation-gesture-detector-press.md",
+                      "sha256":  "69408D4BE669E74689D865C5F50A22FC3A802D521FE493371761ABD20526E58E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/animation-gpu-properties.md",
+                      "sha256":  "F885E4179445DA27CBC225E0A4AA3ED9016FC3507CA6F864392BA7A9D0BD7516",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/design-system-compound-components.md",
+                      "sha256":  "DCB10900A58FCF57CCA2E27C062D02DF2325A7949E08FB45E9E05CC2B132B1A6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/fonts-config-plugin.md",
+                      "sha256":  "B92568774064A604E7A479D4C8D7263AED5609740E9161D2F2764BFFF761905D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/imports-design-system-folder.md",
+                      "sha256":  "AA6337F7F2869A46A9141EC65E02C3DA5C3BF051023899B82E0F0AEF5BFF8423",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/js-hoist-intl.md",
+                      "sha256":  "B4B08622465FFCD5E5961878EB8C6D7359AA242D16C990B59941C9111962FE46",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-callbacks.md",
+                      "sha256":  "DB800E9DFE0080EB4954B96E2A362EE8344D08E08B1ED06BC8059450F3E6F0DD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-function-references.md",
+                      "sha256":  "B54470E41D578B207EE3223F6853EFB7FBF8E5F83D9AECF8DA16989072F99544",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-images.md",
+                      "sha256":  "E88F16AC113C29230D674B7AA2C66C31D5772A74B1EA378D48A97B1143FE6C19",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-inline-objects.md",
+                      "sha256":  "E2A80AAC0F29C6ABAF0163C1CC273D09CC8A0030EC077CA2022BBF5C309E4625",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-item-expensive.md",
+                      "sha256":  "A68CC8EC5DBA3C55761BD5DF9DFD3D98485F63076868D3E03AF15F1E58907CE3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-item-memo.md",
+                      "sha256":  "38EC1D149EE485434D11C2B9E2101DFC914AFADAE4A0738CA905F26B05F708C1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-item-types.md",
+                      "sha256":  "EED225F4E9E504BFA7DB01F5395D1402545CC47DE8ADF1829A9408CD5D158CF6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/list-performance-virtualize.md",
+                      "sha256":  "98CAD308118ACB4D6E8E975C0168CE56E2D48CA52ED47F23BC9A30667C066ADA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/monorepo-native-deps-in-app.md",
+                      "sha256":  "8368B109027FCEC1B8A81BFB99718AEF2B64EDABA77107F73D7C465CC5A14217",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/monorepo-single-dependency-versions.md",
+                      "sha256":  "61C01B9EAAB1E319BF078204231FB573BDFEA3C43A6EB99E7EF73EE95D474CCC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/navigation-native-navigators.md",
+                      "sha256":  "6642DEDB57E72F0B56DF5FBC3D5B8AAA91FC4456932C12712CFD076D393F32C6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/react-compiler-destructure-functions.md",
+                      "sha256":  "8048926A4FA3FBD28FC0ECF4BA4C383A2F0ED06C2FD7330DD4A15D7F4E548044",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/react-compiler-reanimated-shared-values.md",
+                      "sha256":  "3174303A72B6849FF0EDA5CD9F9650F26BAA5F31ED28D35A75076AF714FB2FFC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/react-state-dispatcher.md",
+                      "sha256":  "7EC5B653E3FF8D9CA97D8D66981CCE5590C0E49FA79AB708FD6324542B588870",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/react-state-fallback.md",
+                      "sha256":  "EB76E386D71680BFDFC0AB64DBA1221F4D3D0FDCB4980BB4A871381D58E9E58B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/react-state-minimize.md",
+                      "sha256":  "31B989DE61DEFDA1C61D8578C4700EFD64A427218C3F3DBB7062A1666E1CBE43",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/rendering-no-falsy-and.md",
+                      "sha256":  "7300FA45AC3A4968DB144727A21052421BC62DE9B5E9F6F59E28BD16D2FFF001",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/rendering-text-in-text-component.md",
+                      "sha256":  "FC67897B6126B6B5574F4D284A6C5B2282528FE89DE8EC08E6CFD2A86AB5B235",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/scroll-position-no-state.md",
+                      "sha256":  "70AA1EE679E755556D7B01B326431FE898D3C23DDBA40D0DA6BDAC23C87A1525",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/state-ground-truth.md",
+                      "sha256":  "9F3EFC73D2E66A5DEB3199C9774F42524CD6A0F69784AF38301946BE5D747CB5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-expo-image.md",
+                      "sha256":  "C3C13CCE3DD2CC7F8A9B4861E5743AF98F62E28F5699F72F492E79A335CFAE55",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-image-gallery.md",
+                      "sha256":  "B34D1BA03710ED9622187716541AE618968E7D03BC28895C2AC918D3CC5853F1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-measure-views.md",
+                      "sha256":  "170D058ABC4900EA9E851E54F5E8B437FFFFC2C9D3847AE35E30A515C8990C3D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-menus.md",
+                      "sha256":  "5964ADBECFE9AEB28D736A4EAACEC6469A1C4CA3F48779D243EB38B6D181CFE9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-native-modals.md",
+                      "sha256":  "D803493B3046AD31CBB2C189F1FFFB948FD0055050E3C322589BD548421E23A8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-pressable.md",
+                      "sha256":  "52CDBAD127D713D7D32C59EF74AB1BBD6DCA211EDC9B25993453F7F4545E79FA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-safe-area-scroll.md",
+                      "sha256":  "3DD776CAEF2344D73529010940B50042861D06D31A192122A4DF64BC06AED0E8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-scrollview-content-inset.md",
+                      "sha256":  "89E4BBE5E9A602660F4155E9D4C0DEE09DB1ADF21C73F47213CD67EC896E5A13",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/rules/ui-styling.md",
+                      "sha256":  "CDEF4D8B1A097B844E5992AB78E66A2DC604FAF1E90F8D325A0EB116E8EF6A7E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/vercel-react-native-skills/SKILL.md",
+                      "sha256":  "4012750A5CCBE064CA04AF3835D5D1B011979D2D09D9B6DF1C8128FAC58E0A66",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/verification-before-completion/SKILL.md",
+                      "sha256":  "2BEFE7FC55BCADAA3D97DD9E8EFEB633D2561C0EBE74C5A8B17C4D9E7E4520B3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".agents/skills/web-design-guidelines/SKILL.md",
+                      "sha256":  "F4647CA866A3ACCF763777F83E7682954F0187CD6BEA7EEA0399796652414E8F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "sha256":  "D7770F90CDDD8BD65B6D9AD83A41C46D04CEFCA28EC882F07182B50636BF15C7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".prettierignore",
+                      "sha256":  "FD112CB230B581C054DD683BB00BCA639338C4A95060B118C4469D80816DA55C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".prettierrc.json",
+                      "sha256":  "2A27FE84BB94E145D7580B118377A97C0E62657108A23B36912399B91CC1E36F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/.gitignore",
+                      "sha256":  "0A61C5378B0BB2E0F85BABFF99C8B166F2170A2C12378CD17D929AA19296EC88",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/init-options.json",
+                      "sha256":  "8C74963C75BEC05EE624F37208DBCFB9227E40C09C97CE21851E17219AF8965C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/integration.json",
+                      "sha256":  "8BACE24F46460E51826D86BC4A41010838CFED92EAB69C7081EE8FA9797E16A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/integrations/codex.manifest.json",
+                      "sha256":  "E884EB48C7B2424EEB3B15D66DFD2D6ECE257A438AA220A4BA9C97913BE286FF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/integrations/speckit.manifest.json",
+                      "sha256":  "3A239413CE51B2D8D43DE41C04C2F7B57B6299EA2F5C09439D2C18BE2CDA5373",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/memory/.constitution-template.json",
+                      "sha256":  "8FC4B39294BAE0C10D59547AD7D415B6F0E890D656CBF7171DD567F4E9054711",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/memory/constitution.md",
+                      "sha256":  "460AB2B8C66CF6D2A212FDE43191A02056E2CE0C2DC14A68F419F14DA0041159",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/check-prerequisites.ps1",
+                      "sha256":  "057404FFC15ACEA9AFEB169D9C3942DE4940C7EE6F889A1AE423A24133E15340",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/common.ps1",
+                      "sha256":  "8B188A9C3A2E979CFCB874ACC4452175C00E9095CB0CAEF18374EA0CFBC384C0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/create-new-feature.ps1",
+                      "sha256":  "481C7368541A816B1679E5ED65FA9E5AEA84B09F8BE3A02FF8A340E3B48DD58A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/resolve-template.ps1",
+                      "sha256":  "E49C565A09902E4EBD4B5A51C4E014D5067FDEE5B1592F15CB44EF31F430D745",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/setup-plan.ps1",
+                      "sha256":  "5939EF98418E8DC8CC722EF53BA359FC814F3D2A9FD7620F04E8D145A7041F1A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/scripts/powershell/setup-tasks.ps1",
+                      "sha256":  "578C19C7FA196327C1C6791E3179ACCFFAB049FE62851961139D67BD699F336E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/templates/checklist-template.md",
+                      "sha256":  "70BBC48E884FAB372FFB09E83E78FF983E28B69CAEBF8CD9964A02B6836683AC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/templates/constitution-template.md",
+                      "sha256":  "CE7549540FA45543CCA797A150201D868E64495FDFF39DC38246FB17BD4024B3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/templates/plan-template.md",
+                      "sha256":  "A828AD6206526574AB3FC99BE6D0154588CB1C9774C5919D71B81AB5B2DBFFA0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/templates/spec-template.md",
+                      "sha256":  "3945437FC35CD30A5B2BF7BEEA680337C3516826D3EFA5A6B92C4A7ECA1BA28E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/templates/tasks-template.md",
+                      "sha256":  "B0F527D41E546AF0C31903E04F9B20965B6B497B573792198F663A64CE128863",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/workflows/speckit/workflow.yml",
+                      "sha256":  "177761C5E7DF28126BEEA043B5CB45AEAF7958090C022DC11AC71399422FCFBC",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  ".specify/workflows/workflow-registry.json",
+                      "sha256":  "34249016BB4EE506B2F6BDCEA97858785514EEBF7A5A5FE7578141B0415E0E64",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "AGENTS.md",
+                      "sha256":  "BEA5DBFE63F1842AE8363D366F76291E5FF823CDB94FE5F71CD709B12F7DEF2A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "app.json",
+                      "sha256":  "8039B67A6154C8A7BA5124DEAFBFFE0D9EA8A1F38F4F2FCF5913407C730DE355",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "assets/images/icon.png",
+                      "sha256":  "7A667804BB80A6A424A5DAF18A2599C4F32237CF06FE78FC0DE45DBB09E0ECCF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/android-entorno.md",
+                      "sha256":  "A40A054586A17C01439237521F4F0E33E11F2C545C573931055638914E2EA339",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/android-navegacion.md",
+                      "sha256":  "38962E25D289FDC119841072E588365713DDF50E91D990F44A0FC1E980E11DCB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura.md",
+                      "sha256":  "B92BC98A0161D932528882E88F79320FE99DA7ED233D7BC854C64ADC6133742E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-calidad.log",
+                      "sha256":  "298CFD68CBE19A0CC06B13505BC094FD8F16A7EA4E55DB4B1CBCF54A5E048120",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-escapes-red.log",
+                      "sha256":  "F637F40A101432D8A24D4D892AB3F7FC573E7FC667E27CF17B0A60E474578CA3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-fixtures.log",
+                      "sha256":  "2F47F69BE5F4AFCF72DC70F5B6FCF8C43D95CC364B55B1AE8853CC58BE39AAF0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-integridad.json",
+                      "sha256":  "DCADAD030056FFE9444E5A30CA270222415669A242E30298A4D7F8A51D46C6C1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-proyecto-pendiente.log",
+                      "sha256":  "33FD53A3C037B68BFFC505FD52C2A5D583DD894F972552C8584A74299EF2AB24",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/arquitectura-red.log",
+                      "sha256":  "2B53A5FE28068C2F1B0C786738D7C4FE06DC5A964635A6F8A73B5AF04D465D69",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/capturas/android-base-tecnica.jpeg",
+                      "sha256":  "B64EAF55AD09F494B8052BAC9CB88E3720196F0967827447A544066DC0827AE7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/capturas/android-bienvenida.jpeg",
+                      "sha256":  "F8B3578314FFEB477E581D37FE7CF6162666ABBC29E5978659DD7647CCB6F0DF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas.md",
+                      "sha256":  "9115A3BDDA902EA8072692D44B8B3CDD162B6E3D541C0F776A7F77D4867977A3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas-config.log",
+                      "sha256":  "0776C04A84B4D480049F451C0EC4534A62881E1D08635A2D502E116EDBCE63E5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas-green.log",
+                      "sha256":  "A6FFDD1F4C792A40120B60409A59B5D759B04672AD55ABB3C8F583582A64DB67",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas-integridad.json",
+                      "sha256":  "267DC12E202118A2BAF660D8769CD0C7C213E912A7AB9AF919F42B0824954FCF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas-proyecto.log",
+                      "sha256":  "0411FCEAC433881391367C94B2F7DF9D300C96CCCBEDCBD17A3ACFF2A1DE13F5",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/herramientas-red.log",
+                      "sha256":  "D2B4D3EE9B5F0D444B136B359722BCA760D1000FA277FCE19C9C67ACFBB02909",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/informe.md",
+                      "sha256":  "8629475300628142405B5F8F6CD06E5D39071F4EADD241F761D9CC2FB082062F",
+                      "unchanged":  false
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-architecture-check.log",
+                      "sha256":  "BD37AD5BB78513A7FA5EC7E960B02C68F09055733B33212499E70C88D178DD3E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-check.log",
+                      "sha256":  "E9E0FCFD46381EBCD31BFB82A3413BF20C14D497380F40EFFA938225D31128D8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-format-check.log",
+                      "sha256":  "21E553A517FC1BB5A6B74F5DAFE6A663D1F0036A09BB2733197492B3C74696DB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-ignore.log",
+                      "sha256":  "5596E0DE535768D849D45C19717DFE39996AABEE9EC20DF24133D675B793089A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-integridad.json",
+                      "sha256":  "8962CDA8C3E7F4367E6D62F2F33581D7C209AAD9D2A6A24AB17BF1694CFDF970",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-lint.log",
+                      "sha256":  "C46E6E69C57BF8E230867D4000194F96DCEDABF2D5E286670A0FC7D4CA899ACE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-resultados.json",
+                      "sha256":  "B3B3CD602E1445E61D0B025D4AD772993263E89679BBB45AD9D6871C1E12C2E6",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-t013.md",
+                      "sha256":  "21B83A4B62943DFF012F8CE4C1902263054813FD4E8A65C0C360F60998EBA814",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-test.log",
+                      "sha256":  "0F7028C5436B0E4784DE3CD7BF2982E4553A76191A5E2F64BAE9AF2B14EE677B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t012-typecheck.log",
+                      "sha256":  "1A704656FED18C9651D9F93340FEFBBB282044FBFAFCC049BBC8263E20BDADB9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t013-contraste.log",
+                      "sha256":  "1911339B1DCB97E5EB4E41856A8F377933E9FED277D1EAE11258BB2C08427EC3",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t013-tipos.log",
+                      "sha256":  "0E700BDE5F13D59C24370879A36259B334F195616058F0F96A73A9C46CB5437F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-architecture-check.log",
+                      "sha256":  "69B9BBA201DFBE5B6C15095E1BF7A8E1BF9B968A26DBA5713163E5B1E0160651",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-format-check.log",
+                      "sha256":  "21E553A517FC1BB5A6B74F5DAFE6A663D1F0036A09BB2733197492B3C74696DB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-integridad.json",
+                      "sha256":  "8E7E9D9CA0421FD620421E2E4AB74E168374A2FFDB257D7E55943424E7DA15C2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-lint.log",
+                      "sha256":  "C46E6E69C57BF8E230867D4000194F96DCEDABF2D5E286670A0FC7D4CA899ACE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-rutas.log",
+                      "sha256":  "DAAB4CF4B5CF6B468ADDC6DC5B5DDD4DACA0FBBFC5550568854D72E44B212BAD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-t017.md",
+                      "sha256":  "FA7EC1950F19E616A0CDE7BFE4670459B568A182E0DD0AAEA3B0098713F48978",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-tipos.log",
+                      "sha256":  "BA03D414EF856436A9214126E8D9A7414C590B2C8B5DEB5FBAC4DC9F17D36298",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t014-typecheck-completo.log",
+                      "sha256":  "1A704656FED18C9651D9F93340FEFBBB282044FBFAFCC049BBC8263E20BDADB9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-app-types.log",
+                      "sha256":  "21A66239DE6DC0AEA4949D3775267BBB9B6D531667A24C2207F80D2A28FF224D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-comprobaciones.json",
+                      "sha256":  "EA2427EFE1F4F0AD23873ACD0735DF97A39C42F55180BF91A75EB7D634850E84",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-formato.log",
+                      "sha256":  "76C7077D417FB110E9F3105D858E9C799C279A20255838E50E3C920FA73D7CAE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-integridad.json",
+                      "sha256":  "27709B64F3F15E78F2AB0BD8C1923EE38C1671A990272F1ED4DD7B113CC61BE7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-json-equivalente.log",
+                      "sha256":  "531CCF727A9FDC5A9C24505D39ADFDB202CE6BEFA7A100F68A7F2F2471433C04",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-lint.log",
+                      "sha256":  "88F7E10376AA4EB97AE704DD362F3CED4444ACDFCBD61427849368CE0EC8EFEB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-rutas.log",
+                      "sha256":  "8778A7BD6B62FD0427DF96FEDB6FBD9D380AF3979A9774D439D18B531FBBDC91",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-cierre-tipos.log",
+                      "sha256":  "21A66239DE6DC0AEA4949D3775267BBB9B6D531667A24C2207F80D2A28FF224D",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-comprobaciones.json",
+                      "sha256":  "F5437F0C2DFAED3F53DF5B2FC59E458F668B925BF1A15954C6550BE285A3387A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-format.log",
+                      "sha256":  "92D236BC582C0DC1AC105689912AE77F9F71EC8813390D81124D258850A8EDD8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-herramientas-android.json",
+                      "sha256":  "FEB4DCD7524DF41A2B5B17CC706D8300F78AD39EB3C136180BD8637D03AE49BB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-integridad.json",
+                      "sha256":  "4E538266C2FDC60D494A41A9B04911569D0F6C236F436F57B46D2403DF216DBB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-lint.log",
+                      "sha256":  "88F7E10376AA4EB97AE704DD362F3CED4444ACDFCBD61427849368CE0EC8EFEB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t018-routes.log",
+                      "sha256":  "8778A7BD6B62FD0427DF96FEDB6FBD9D380AF3979A9774D439D18B531FBBDC91",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-architecture-check.log",
+                      "sha256":  "7E429C8A68B97649189197B092AC0963FD837ADC43DE0339896D9730630BF40A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-format-check.log",
+                      "sha256":  "21E553A517FC1BB5A6B74F5DAFE6A663D1F0036A09BB2733197492B3C74696DB",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-formato-tests.log",
+                      "sha256":  "F20510A9DA4717C51C4CFFEE6D0DD88D6C9A723D0A83711D01216F5B48961283",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-lint.log",
+                      "sha256":  "C46E6E69C57BF8E230867D4000194F96DCEDABF2D5E286670A0FC7D4CA899ACE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-lint-tests.log",
+                      "sha256":  "CF0FCB12E5BAB150E7515F2E84B9FE39EC2A3BCD2D08883F5DCD70C24E9AF550",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-resultados.json",
+                      "sha256":  "D48F528EC92A46B079CB9BCE89527A2F3E33EC8F19420CCF8EC6F8DE6D577FE9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-rojo-inicial.log",
+                      "sha256":  "1D6322C27A7DD33022B7EBCC3D30171078F552FDAEAFBC2DC6CADAA62AF575DE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-t022.md",
+                      "sha256":  "62EFD37A0B1D2D2EC2866CC5AFDD54AD04A1A2020D59E1EC9CDE61EAF22C434F",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-test.log",
+                      "sha256":  "C862E972AE90D61B5764B1C74B551173F78DA373CDB9B51F2D6019CF1EE8F95C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t020-typecheck.log",
+                      "sha256":  "45B7452D1CBE09A3691EB5B4CC8BBC92E36A473D5CDE31D3E7A0B6B070C9A2EA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t022-compilacion.log",
+                      "sha256":  "8903C5F42B7BBFF92DC508644EA256A61E16E60C63CF88267BA524EA79980DC8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t022-compilacion-intento-inicial.log",
+                      "sha256":  "2ACA6E97DF20568A3ECDD4C85C18EF3022DD6AD833C64EFCE5D723EA24846276",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/t022-pruebas.log",
+                      "sha256":  "AC0E256413C85DE40A32BB6F00BF10A3B6494EF7D9EE2EF749C5D1F209AA161B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/verificar-herramientas.mjs",
+                      "sha256":  "04888235758B3E07702A4E12896916BD1FC16597E5C3234285494B3C97218BE7",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs",
+                      "sha256":  "D68A45CFD3387ED14ADAE44CD3CC1E166163F3CCC271A76038371CA66CA1D681",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "docs/evaluacion/RUBRICA.md",
+                      "sha256":  "BF0B44C84867AC6FAF66502AE7B4BBECE2B5E59393359895025776F962D725FE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "eslint.config.js",
+                      "sha256":  "36B54334EF20C59F2F835EA15480D0975F61085E72364D2943949F224D572E2A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "package.json",
+                      "sha256":  "71EE85C5A934BE2C2D2D8530C7D881CE0B27A76501E431C35400DCB4EC672604",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "package-lock.json",
+                      "sha256":  "62DEDD889FD5516E123C45F268B5CED16415532D16C3D841840E45816F43BFC2",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "scripts/check-architecture.mjs",
+                      "sha256":  "FABF01F3B5B01E9E907ADF0F4C43ED51D3B0F09506DBC43BF11C471DA9E6C7E9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "scripts/run-unit-tests.mjs",
+                      "sha256":  "7B51A767498E7EEB01AD61D46F9D7C2DDFDFCD19C3FF092DC4C6F4907FF4F301",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "skills-lock.json",
+                      "sha256":  "218D9EE86E707EFC788C5FF13684454F06C29E966F5DA5ADD267B1A5C3293C50",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/checklists/requirements.md",
+                      "sha256":  "50496F6A2B45B74A10F7E619BF9E07A068FDE3D6FE4B7F152721E332A30384CF",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/contracts/foundation.md",
+                      "sha256":  "A38DAED9C6339FC77A11487A4C1716A07528846E7F6EE7FB34EE0B77C0F399CE",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/data-model.md",
+                      "sha256":  "394E84663F5F96549C32FACEA7EC30A3175CC6B600B8782806342F1F4C33D9D9",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/plan.md",
+                      "sha256":  "2405D34F64E5EA21A308D91D954BE07F391D6F865F730A3BB0C64E0A8A0BB20B",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/quickstart.md",
+                      "sha256":  "F06BD6C53042E694D5F9F9F5CAE56863E1CB2B26DBA8D5EE1CC101EA13A69965",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/research.md",
+                      "sha256":  "53DA4196F7BD20081A06359990ADCC582C6CFE5FC140D0802661A0B63FB4CB00",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/spec.md",
+                      "sha256":  "FD9819749DC073D52BAFE964982E39A144B4285AEF1419F3E495EE7D5F10AA11",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/tasks.md",
+                      "sha256":  "893CB6AE6C0F4646F6D781348395C89F9E44EB65CDF6466EDE2453E141CCEB78",
+                      "unchanged":  false
+                  },
+                  {
+                      "path":  "specs/001-fundacion-expo-clean/validation.md",
+                      "sha256":  "2B1E7BAA4CF04A75DF435965DA5850C3DDEDF92952DC2A74AF4A39F559868AB8",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/app/_layout.tsx",
+                      "sha256":  "909AFC90ED2CF425420EF3CA809D6B03E03102D2C64DBC83C4AD384BF7B0A68C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/app/+not-found.tsx",
+                      "sha256":  "CDD50FD3219E5F96A5CF1339E5B7A8122784BF9B15CA4E80E94F7A51EF8A9766",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/app/index.tsx",
+                      "sha256":  "4957FF847D2CE8593881986E136A3DACB20E7240BB7C4F51A1A6E9BC257DCB51",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/app/technical.tsx",
+                      "sha256":  "010558749E8F3EB6792E9985B551C987C857ACB7C311EFE0B3C2005258C655D1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/features/foundation/domain/app-information.ts",
+                      "sha256":  "0BB85896DD5558F646ED548E043B337F6DFF1D4488F6D0A0EE1299687C69D36E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/features/foundation/domain/validate-information-request.ts",
+                      "sha256":  "BEB018D3BE4C819DCCEB3E399A1E5BC6A553DB62E8E9F7813109D467D2C8EDA1",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/features/foundation/presentation/not-found-screen.tsx",
+                      "sha256":  "26678337194B7E32A6C1706F2DEF5142059865577D1390D988D08E677FA53E8E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/features/foundation/presentation/technical-screen.tsx",
+                      "sha256":  "91DAB69C3CB919DE3AAFC71470D6E754980D24B7F0C877C16692C337EEEB9A52",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/features/foundation/presentation/welcome-screen.tsx",
+                      "sha256":  "355DEFA767D1207070CB398EAA28B1246961E22738BF63983A3BCBBA1BE49864",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/shared/ui/app-button.tsx",
+                      "sha256":  "02A56630FCA23F074293B94564708B0E948FACE3ADEBEBA38696F3F6C6C0D77C",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/shared/ui/app-text.tsx",
+                      "sha256":  "4773CE162FE0D7051AC384484F854C168D0B46959B03F60639FB285014C3500E",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/shared/ui/screen.tsx",
+                      "sha256":  "149B850736C605E6F631DC691925F2A38A6DDE937C0026E099DCD3F91DF897D0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "src/shared/ui/tokens.ts",
+                      "sha256":  "1D9592D3069D8E863B7F7CE10EF82B300066E8E724289EC421A52532387B0412",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tests/architecture/check-architecture.test.mjs",
+                      "sha256":  "DEC3C15E3BA922025F0A200281CBBD95A0811A8CE3BA0404B5C7B2050261D82A",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tests/architecture/fixtures/cases.mjs",
+                      "sha256":  "4E6337BB3F0AAAC90DFB8F01D8CFCD6E1EDD71B5AFD5E35401C540639653E6FD",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tests/unit/doubles/app-information-gateway.ts",
+                      "sha256":  "555FD18D8D3DF7EAE2E969A3B52124A2B9DAB002E1C901A94E6CAF3B7EA43FB9",
+                      "unchanged":  false
+                  },
+                  {
+                      "path":  "tests/unit/get-app-information.test.ts",
+                      "sha256":  "F8FE9BB1C7FCBAA91C0C4415917E4F95957DC485A16E4093636747DA852D68B0",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tests/unit/local-app-information-adapter.test.ts",
+                      "sha256":  "418ECB1C794F5D1330D660F37B3CCA40D52827F7330AFAF2E5E7C1C43BC4AB9E",
+                      "unchanged":  false
+                  },
+                  {
+                      "path":  "tests/unit/validate-information-request.test.ts",
+                      "sha256":  "245162D753A8FD5A1F9DBC1C80A13A4DA2ACEED9C0651322E05919EAAE023DA4",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tsconfig.core.json",
+                      "sha256":  "9185086B3B994142D22951CB6AACD942A0A27F4DE771FCAC8AF8B700333EA709",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tsconfig.json",
+                      "sha256":  "35DD09B35BD3546472F06E9D10E5E52912A2DC8FB9B3DF9D8AFB782F1F2B46BA",
+                      "unchanged":  true
+                  },
+                  {
+                      "path":  "tsconfig.tests.json",
+                      "sha256":  "9B322AAF818F166494989B6D4B20EDF90712C06577DA72A98910E52DAC53D73E",
+                      "unchanged":  true
+                  }
+              ]
+}

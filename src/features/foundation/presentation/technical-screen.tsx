@@ -2,15 +2,38 @@ import { AppButton } from '@/shared/ui/app-button';
 import { AppText } from '@/shared/ui/app-text';
 import { Screen } from '@/shared/ui/screen';
 
+import { useAppInformation } from './use-app-information';
+
 export function TechnicalScreen({ onBack }: { onBack: () => void }) {
+  const { estado, reintentar } = useAppInformation();
   return (
     <Screen>
       <AppText variant="title">Una base para crecer</AppText>
-      <AppText tone="textSecondary">Primera etapa de App Barbería</AppText>
-      <AppText>
-        Esta versión presenta la navegación inicial y los componentes
-        compartidos de la aplicación.
-      </AppText>
+      {estado.estado === 'cargando' ? (
+        <AppText accessibilityLiveRegion="polite">
+          Cargando información…
+        </AppText>
+      ) : estado.estado === 'exito' ? (
+        <>
+          <AppText variant="action">{estado.informacion.nombre}</AppText>
+          <AppText tone="textSecondary">
+            Versión {estado.informacion.version}
+          </AppText>
+          <AppText>{estado.informacion.descripcion}</AppText>
+        </>
+      ) : (
+        <>
+          <AppText tone="error" accessibilityLiveRegion="polite">
+            No pudimos cargar la información. Puedes volver a intentarlo.
+          </AppText>
+          <AppButton
+            label="Reintentar"
+            onPress={() => {
+              void reintentar();
+            }}
+          />
+        </>
+      )}
       <AppText variant="action">Tecnología</AppText>
       <AppText>Expo, React Native, Expo Router y TypeScript estricto.</AppText>
       <AppText variant="action">Organización</AppText>

@@ -81,3 +81,11 @@ El usuario confirmó que, en su Honor 90 Lite (CRT-NX3), Android 15, la flecha d
 **Origen de la evidencia:** prueba manual declarada por el usuario; no ejecutada por Codex.
 
 **Estado actualizado: T019 completada.** Esta confirmación satisface el último criterio pendiente, junto con las evidencias anteriores. Los estados pendientes consignados arriba se conservan como historial. El escalado exacto al 200 % continúa sin acreditarse para la validación posterior de accesibilidad.
+
+**Confirmación posterior a la corrección Metro — registrada el 11/11/2026**
+
+El usuario confirmó que la aplicación vuelve a funcionar correctamente en su Honor
+90 Lite, Android 15, Expo Go 58.0.5. Origen: prueba manual declarada por el usuario;
+no ejecutada por Codex. No se aportaron nuevos detalles de recorridos, capturas ni
+mediciones de escala. El 200 % exacto sigue sin acreditarse. Esta anotación conserva
+los resultados anteriores y no declara completadas tareas posteriores de accesibilidad.

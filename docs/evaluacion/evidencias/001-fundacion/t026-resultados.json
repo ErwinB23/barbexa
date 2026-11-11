@@ -1,0 +1,42 @@
+﻿[
+    {
+        "command":  "npm.cmd run typecheck",
+        "exit":  0,
+        "log":  "t026-typecheck.log"
+    },
+    {
+        "command":  "npm.cmd run lint",
+        "exit":  0,
+        "log":  "t026-lint.log"
+    },
+    {
+        "command":  "npm.cmd run format:check",
+        "exit":  0,
+        "log":  "t026-format.log"
+    },
+    {
+        "command":  "npm.cmd run architecture:check",
+        "exit":  0,
+        "log":  "arquitectura-real.log"
+    },
+    {
+        "command":  "node scripts/run-unit-tests.mjs",
+        "exit":  0,
+        "log":  "nucleo-pruebas.log"
+    },
+    {
+        "command":  "node --test tests/architecture/check-architecture.test.mjs",
+        "exit":  0,
+        "log":  "t026-regresiones.log"
+    },
+    {
+        "command":  "node node_modules/eslint/bin/eslint.js tests/unit --max-warnings 0",
+        "exit":  0,
+        "log":  "t026-lint-tests.log"
+    },
+    {
+        "command":  "node node_modules/prettier/bin/prettier.cjs --ignore-path .gitignore --check tests/unit",
+        "exit":  0,
+        "log":  "t026-format-tests.log"
+    }
+]

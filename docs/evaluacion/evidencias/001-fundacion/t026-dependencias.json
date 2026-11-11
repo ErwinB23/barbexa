@@ -1,0 +1,414 @@
+{
+  "files": [
+    "src/app/+not-found.tsx",
+    "src/app/_layout.tsx",
+    "src/app/index.tsx",
+    "src/app/technical.tsx",
+    "src/composition/app-composition.ts",
+    "src/composition/app-provider.tsx",
+    "src/features/foundation/application/app-information-gateway.ts",
+    "src/features/foundation/application/get-app-information.ts",
+    "src/features/foundation/domain/app-information.ts",
+    "src/features/foundation/domain/validate-information-request.ts",
+    "src/features/foundation/infrastructure/local-app-information-adapter.ts",
+    "src/features/foundation/presentation/information-context.ts",
+    "src/features/foundation/presentation/not-found-screen.tsx",
+    "src/features/foundation/presentation/technical-screen.tsx",
+    "src/features/foundation/presentation/welcome-screen.tsx",
+    "src/shared/ui/app-button.tsx",
+    "src/shared/ui/app-text.tsx",
+    "src/shared/ui/screen.tsx",
+    "src/shared/ui/tokens.ts"
+  ],
+  "core": [
+    "src/features/foundation/application/app-information-gateway.ts",
+    "src/features/foundation/application/get-app-information.ts",
+    "src/features/foundation/domain/app-information.ts",
+    "src/features/foundation/domain/validate-information-request.ts"
+  ],
+  "edgeCount": 43,
+  "aliases": 14,
+  "typeOnlyImports": 9,
+  "edges": [
+    {
+      "from": "src/app/+not-found.tsx",
+      "specifier": "expo-router",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/expo-router/build/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/app/+not-found.tsx",
+      "specifier": "@/features/foundation/presentation/not-found-screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/features/foundation/presentation/not-found-screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/app/_layout.tsx",
+      "specifier": "expo-router",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/expo-router/build/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/app/_layout.tsx",
+      "specifier": "@/composition/app-provider",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/composition/app-provider.tsx",
+      "external": false
+    },
+    {
+      "from": "src/app/index.tsx",
+      "specifier": "expo-router",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/expo-router/build/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/app/index.tsx",
+      "specifier": "@/features/foundation/presentation/welcome-screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/features/foundation/presentation/welcome-screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/app/technical.tsx",
+      "specifier": "expo-router",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/expo-router/build/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/app/technical.tsx",
+      "specifier": "@/features/foundation/presentation/technical-screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/features/foundation/presentation/technical-screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/composition/app-composition.ts",
+      "specifier": "../features/foundation/application/get-app-information.js",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/features/foundation/application/get-app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/composition/app-composition.ts",
+      "specifier": "../features/foundation/domain/app-information.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/domain/app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/composition/app-composition.ts",
+      "specifier": "../features/foundation/infrastructure/local-app-information-adapter.js",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/features/foundation/infrastructure/local-app-information-adapter.ts",
+      "external": false
+    },
+    {
+      "from": "src/composition/app-provider.tsx",
+      "specifier": "react",
+      "typeOnly": true,
+      "alias": false,
+      "target": "node_modules/@types/react/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/composition/app-provider.tsx",
+      "specifier": "../features/foundation/presentation/information-context",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/features/foundation/presentation/information-context.ts",
+      "external": false
+    },
+    {
+      "from": "src/composition/app-provider.tsx",
+      "specifier": "./app-composition",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/composition/app-composition.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/application/app-information-gateway.ts",
+      "specifier": "../domain/app-information.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/domain/app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/application/get-app-information.ts",
+      "specifier": "../domain/app-information.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/domain/app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/application/get-app-information.ts",
+      "specifier": "../domain/validate-information-request.js",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/features/foundation/domain/validate-information-request.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/application/get-app-information.ts",
+      "specifier": "./app-information-gateway.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/application/app-information-gateway.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/domain/validate-information-request.ts",
+      "specifier": "./app-information.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/domain/app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/infrastructure/local-app-information-adapter.ts",
+      "specifier": "../application/app-information-gateway.js",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/application/app-information-gateway.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/information-context.ts",
+      "specifier": "react",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/@types/react/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/features/foundation/presentation/information-context.ts",
+      "specifier": "../application/get-app-information",
+      "typeOnly": true,
+      "alias": false,
+      "target": "src/features/foundation/application/get-app-information.ts",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/not-found-screen.tsx",
+      "specifier": "@/shared/ui/app-button",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-button.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/not-found-screen.tsx",
+      "specifier": "@/shared/ui/app-text",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-text.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/not-found-screen.tsx",
+      "specifier": "@/shared/ui/screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/technical-screen.tsx",
+      "specifier": "@/shared/ui/app-button",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-button.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/technical-screen.tsx",
+      "specifier": "@/shared/ui/app-text",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-text.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/technical-screen.tsx",
+      "specifier": "@/shared/ui/screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/welcome-screen.tsx",
+      "specifier": "react-native",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/react-native/types_generated/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/features/foundation/presentation/welcome-screen.tsx",
+      "specifier": "@/shared/ui/app-button",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-button.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/welcome-screen.tsx",
+      "specifier": "@/shared/ui/app-text",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/app-text.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/welcome-screen.tsx",
+      "specifier": "@/shared/ui/screen",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/screen.tsx",
+      "external": false
+    },
+    {
+      "from": "src/features/foundation/presentation/welcome-screen.tsx",
+      "specifier": "@/shared/ui/tokens",
+      "typeOnly": false,
+      "alias": true,
+      "target": "src/shared/ui/tokens.ts",
+      "external": false
+    },
+    {
+      "from": "src/shared/ui/app-button.tsx",
+      "specifier": "react",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/@types/react/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/app-button.tsx",
+      "specifier": "react-native",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/react-native/types_generated/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/app-button.tsx",
+      "specifier": "./app-text",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/shared/ui/app-text.tsx",
+      "external": false
+    },
+    {
+      "from": "src/shared/ui/app-button.tsx",
+      "specifier": "./tokens",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/shared/ui/tokens.ts",
+      "external": false
+    },
+    {
+      "from": "src/shared/ui/app-text.tsx",
+      "specifier": "react-native",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/react-native/types_generated/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/app-text.tsx",
+      "specifier": "./tokens",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/shared/ui/tokens.ts",
+      "external": false
+    },
+    {
+      "from": "src/shared/ui/screen.tsx",
+      "specifier": "react",
+      "typeOnly": true,
+      "alias": false,
+      "target": "node_modules/@types/react/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/screen.tsx",
+      "specifier": "react-native",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/react-native/types_generated/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/screen.tsx",
+      "specifier": "react-native-safe-area-context",
+      "typeOnly": false,
+      "alias": false,
+      "target": "node_modules/react-native-safe-area-context/lib/typescript/src/index.d.ts",
+      "external": true
+    },
+    {
+      "from": "src/shared/ui/screen.tsx",
+      "specifier": "./tokens",
+      "typeOnly": false,
+      "alias": false,
+      "target": "src/shared/ui/tokens.ts",
+      "external": false
+    }
+  ],
+  "closure": [
+    {
+      "origin": "src/features/foundation/application/app-information-gateway.ts",
+      "localClosure": [
+        "src/features/foundation/application/app-information-gateway.ts",
+        "src/features/foundation/domain/app-information.ts"
+      ],
+      "externalDependencies": []
+    },
+    {
+      "origin": "src/features/foundation/application/get-app-information.ts",
+      "localClosure": [
+        "src/features/foundation/application/app-information-gateway.ts",
+        "src/features/foundation/application/get-app-information.ts",
+        "src/features/foundation/domain/app-information.ts",
+        "src/features/foundation/domain/validate-information-request.ts"
+      ],
+      "externalDependencies": []
+    },
+    {
+      "origin": "src/features/foundation/domain/app-information.ts",
+      "localClosure": [
+        "src/features/foundation/domain/app-information.ts"
+      ],
+      "externalDependencies": []
+    },
+    {
+      "origin": "src/features/foundation/domain/validate-information-request.ts",
+      "localClosure": [
+        "src/features/foundation/domain/app-information.ts",
+        "src/features/foundation/domain/validate-information-request.ts"
+      ],
+      "externalDependencies": []
+    }
+  ],
+  "limitation": "Reporte de imports/reexports estáticos del código actual. El checker existente comprueba otras formas y aplica reglas. No se recorren implementaciones de paquetes externos."
+}

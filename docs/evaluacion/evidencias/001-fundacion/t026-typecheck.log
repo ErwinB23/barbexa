@@ -1,0 +1,6 @@
+﻿Command: npm.cmd run typecheck
+
+> app-barberia@0.1.0 typecheck
+> tsc --noEmit && tsc -p tsconfig.core.json --noEmit
+
+exit=0

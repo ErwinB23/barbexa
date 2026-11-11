@@ -1,0 +1,6 @@
+tests/unit/doubles/app-information-gateway.ts(1,44): error TS2307: Cannot find module '../../../src/features/foundation/domain/app-information.js' or its corresponding type declarations.
+tests/unit/get-app-information.test.ts(4,48): error TS2307: Cannot find module '../../src/features/foundation/application/get-app-information.js' or its corresponding type declarations.
+tests/unit/get-app-information.test.ts(5,48): error TS2307: Cannot find module '../../src/features/foundation/infrastructure/local-app-information-adapter.js' or its corresponding type declarations.
+tests/unit/local-app-information-adapter.test.ts(4,48): error TS2307: Cannot find module '../../src/features/foundation/infrastructure/local-app-information-adapter.js' or its corresponding type declarations.
+tests/unit/validate-information-request.test.ts(4,46): error TS2307: Cannot find module '../../src/features/foundation/domain/validate-information-request.js' or its corresponding type declarations.
+exit=2

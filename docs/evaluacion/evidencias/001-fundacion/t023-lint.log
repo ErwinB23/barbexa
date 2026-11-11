@@ -1,0 +1,4 @@
+﻿
+> app-barberia@0.1.0 lint
+> eslint src scripts tests/architecture --max-warnings 0
+

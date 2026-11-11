@@ -227,3 +227,31 @@ T018 completada: Honor 90 Lite CRT-NX3, Android 15, Expo Go 58.0.5, LAN/Metro, d
 ## Cierre documental de T019 — 10/11/2026
 
 T019 completada: el usuario confirmó el funcionamiento de la flecha Atrás de cabecera en Honor 90 Lite (CRT-NX3), Android 15. [Registro adicional y evidencias anteriores](android-navegacion.md). La prueba fue manual y declarada por el usuario, no ejecutada por Codex. Esta actualización resuelve el único criterio que quedaba pendiente; se conservan los reportes anteriores como historial. El escalado exacto al 200 % continúa pendiente. No se ejecutaron T020–T040 ni se modificó código, dependencias o configuración.
+
+## Pruebas y dominio T020–T022 — 11/11/2026
+
+T020–T022 completadas dentro de alcance: pruebas futuras con rojo registrado, tipos propios y validación runtime. [Resultados y límites](t020-t022.md). El guard pasa 14/14 pruebas con cobertura 100 %; tipos app/core y arquitectura pasan, pero la suite completa y lint de tests/unit permanecen en rojo por módulos de T023/T024 aún no implementados. No se ejecutaron T023–T040 ni se declara cierre de US2/T026.
+
+## Caso de uso y adaptador T023–T024 — 11/11/2026
+
+T023 y T024 completadas. [Evidencias y límites](t023-t024.md): 50/50 unitarias, 38/38 regresiones arquitectónicas, cobertura del núcleo 100 % en líneas/funciones/ramas. Tipos, lint, formato y checker pasan. Los rojos anteriores quedan resueltos sin alterar sus registros. No se ejecutaron T025–T040 ni se conectó la UI con el caso de uso.
+
+## Composición y proveedor T025 — 11/11/2026
+
+T025 completada. [Evidencias y límites](t025.md): composición real, contexto de presentación y proveedor montado en el layout. 53/53 unitarias y 38/38 regresiones arquitectónicas; tipos, lint, formato, checker e integración React pasan. Cobertura del núcleo 100 %; no se atribuye ese porcentaje a UI/composición. La consulta visual y el reintento siguen en T027; no se ejecutaron T026–T040. Android no se volvió a probar.
+
+## Auditoría real T026 — 11/11/2026
+
+T026 completada: 19 módulos auditados, incluidos 4 de núcleo; cero infracciones y cero dependencias externas alcanzables desde el núcleo. 53/53 unitarias y 38/38 regresiones arquitectónicas aprobadas; tipos, lint y formato pasan. Cobertura del núcleo 100 % en líneas/funciones/ramas. [Auditoría y límites](t026.md), [pruebas](nucleo-pruebas.log), [cobertura](nucleo-cobertura.log), [checker real](arquitectura-real.log). No se modificaron fuentes ni checker. La pantalla técnica continúa estática; T027–T040 pendientes.
+
+## Consulta real en pantalla T027 — 11/11/2026
+
+T027 completada: la pantalla técnica consume el caso de uso desde el contexto, con carga, datos reales, error y reintento. Se ignoran respuestas obsoletas/tras desmontar y se bloquean duplicados. [Pruebas, resultados y límites](t027.md). El chequeo final pasa: 53 unitarias, 38 regresiones arquitectónicas y 6 pruebas de presentación. Cobertura 100 % solo del núcleo. Navegación automatizada conservada; Android no se volvió a probar. Sin ejecución de T028–T040.
+
+## Corrección de empaquetado posterior a T027 — 11/11/2026
+
+Se reprodujo el error de Metro y se corrigieron tres imports ejecutables en dos archivos, conservando los `.js` de tests y tipos. [Causa, corrección y resultados](t027-metro.md). Exportación Android real con Hermes: salida 0, 1161 módulos; el primer intento corregido tuvo un bloqueo de permisos, conservado en su registro. TypeScript, lint, formato y checker pasan; 53 unitarias, 38 regresiones arquitectónicas y 6 pruebas de presentación aprobadas. Navegación/proveedor automatizados pasan. Artefactos fuera del repositorio. Pendiente volver a probar esta versión en Android; el 200 % exacto sigue sin acreditarse. Sin ejecución de T028–T040, instalaciones, commit ni push.
+
+## Límites de backend T028 — 11/11/2026
+
+T028 completada: [composición actual/futura, inspección y límites](limites-backend.md). Sin SDK de backend activo, API Node, rutas +api ni carpetas Supabase; sin firmas conocidas de secretos en la inspección acotada, que no equivale a auditoría integral. No se atribuyen RLS/transacciones al adaptador local. `npm run check` pasa: 53 unitarias, 38 regresiones arquitectónicas y 6 pruebas de presentación, tipos, lint, formato y checker; compatibilidad Node de la corrección Metro conservada. El usuario confirmó funcionamiento Android posterior a la corrección; [registro manual atribuido al usuario](android-navegacion.md), no ejecutado por Codex. Siguen pendientes 200 % exacto y análisis de 11 vulnerabilidades moderadas. Sin ejecución de T029–T040, instalaciones, commit ni push.

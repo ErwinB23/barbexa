@@ -1,0 +1,80 @@
+﻿Command: node scripts/run-unit-tests.mjs
+Núcleo incluido en cobertura: ["src/features/foundation/application/get-app-information.ts","src/features/foundation/domain/validate-information-request.ts"]
+✔ composición real expone una función que obtiene los datos inyectados (2.7286ms)
+✔ composición conserva validación de entrada sin exponer el adaptador (0.3304ms)
+✔ composición convierte la configuración inválida en resultado controlado (0.3204ms)
+✔ consulta con doble devuelve información y llama una sola vez (2.2101ms)
+✔ consulta con adaptador local devuelve información y llama una sola vez (0.2944ms)
+✔ entrada inválida undefined no invoca gateway (0.144ms)
+✔ entrada inválida null no invoca gateway (0.0953ms)
+✔ entrada inválida "" no invoca gateway (0.1112ms)
+✔ entrada inválida {} no invoca gateway (0.0964ms)
+✔ entrada inválida [] no invoca gateway (0.0833ms)
+✔ entrada inválida {"idioma":""} no invoca gateway (0.0879ms)
+✔ entrada inválida {"idioma":"en-US"} no invoca gateway (0.0981ms)
+✔ entrada inválida {"idioma":1} no invoca gateway (0.07ms)
+✔ rechazo se convierte en no-disponible sin filtrar detalles; reintento funciona (1.2935ms)
+✔ configuración local malformada termina en no-disponible (0.1827ms)
+✔ adaptador local devuelve los tres campos públicos inyectados (2.233ms)
+✔ adaptador rechaza nombre malformado: "" (0.4469ms)
+✔ adaptador rechaza nombre malformado: "   " (0.1278ms)
+✔ adaptador rechaza nombre malformado: 42 (0.0941ms)
+✔ adaptador rechaza nombre malformado: null (0.1071ms)
+✔ adaptador rechaza nombre malformado: undefined (0.0832ms)
+✔ adaptador rechaza version malformado: "" (1.3262ms)
+✔ adaptador rechaza version malformado: "   " (0.1283ms)
+✔ adaptador rechaza version malformado: 42 (0.111ms)
+✔ adaptador rechaza version malformado: null (0.182ms)
+✔ adaptador rechaza version malformado: undefined (0.094ms)
+✔ adaptador rechaza descripcion malformado: "" (0.1199ms)
+✔ adaptador rechaza descripcion malformado: "   " (0.0653ms)
+✔ adaptador rechaza descripcion malformado: 42 (0.0801ms)
+✔ adaptador rechaza descripcion malformado: null (0.0626ms)
+✔ adaptador rechaza descripcion malformado: undefined (0.0806ms)
+✔ adaptador rechaza configuración ausente o incompleta: undefined (0.1976ms)
+✔ adaptador rechaza configuración ausente o incompleta: null (0.1074ms)
+✔ adaptador rechaza configuración ausente o incompleta: "configuracion-invalida" (0.1007ms)
+✔ adaptador rechaza configuración ausente o incompleta: [] (0.0752ms)
+✔ adaptador rechaza configuración ausente o incompleta: {} (0.0682ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"version":"0.1.0","descripcion":"Base local"} (0.0622ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","descripcion":"Base local"} (0.1161ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","version":"0.1.0"} (0.1047ms)
+✔ acepta solicitud existente con idioma es-PE (1.8644ms)
+✔ rechaza solicitud malformada undefined (0.1554ms)
+✔ rechaza solicitud malformada null (0.2478ms)
+✔ rechaza solicitud malformada "" (0.172ms)
+✔ rechaza solicitud malformada "es-PE" (0.1667ms)
+✔ rechaza solicitud malformada 1 (0.1203ms)
+✔ rechaza solicitud malformada true (0.1064ms)
+✔ rechaza solicitud malformada [] (0.0882ms)
+✔ rechaza solicitud malformada {} (0.1619ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0831ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.0583ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0621ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.0508ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.054ms)
+ℹ tests 53
+ℹ suites 0
+ℹ pass 53
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 177.6546
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         | 
+ℹ  src                                 |        |          |         | 
+ℹ   features                           |        |          |         | 
+ℹ    foundation                        |        |          |         | 
+ℹ     application                      |        |          |         | 
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     domain                           |        |          |         | 
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report
+exit=0

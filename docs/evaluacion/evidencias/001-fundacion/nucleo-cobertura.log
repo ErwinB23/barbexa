@@ -1,0 +1,18 @@
+Comando: node scripts/run-unit-tests.mjs
+Fuente de esta misma ejecución: nucleo-pruebas.log
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         | 
+ℹ  src                                 |        |          |         | 
+ℹ   features                           |        |          |         | 
+ℹ    foundation                        |        |          |         | 
+ℹ     application                      |        |          |         | 
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     domain                           |        |          |         | 
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-11",
+  "originalFiles": 763,
+  "unchangedFiles": 760,
+  "differences": [
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-navegacion.md",
+      "before": "38962e25d289fdc119841072e588365713ddf50e91d990f44a0fc1e980e11dcb",
+      "after": "1482ae08052ceb58965245fa8bd1d900188d390574fa840c9f840eed0bc12fab",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "before": "cf8c6ba8020156a6f9a7c718e6eca80278c4b69b69a444f79d71cd0e1cb5e943",
+      "after": "157e69346bdb2d4a08809f48acf686e6c2bc784454b814adb83faa65f34d3e9e",
+      "authorized": true
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/tasks.md",
+      "before": "e534daa0b24ab7a364c69e54a8fe9a019fd554e94b84a4bd22200d8b1a0f3726",
+      "after": "69eb5ddc5dd4446f61cbcb33a87db226982aa9775745771d40f0852fe20417fd",
+      "authorized": true
+    }
+  ],
+  "unexpectedChanges": 0,
+  "branch": "main",
+  "head": "904ff3de1a612ddb849a3f9a3a957df2e5d0b3c3",
+  "testBuildPresent": false
+}

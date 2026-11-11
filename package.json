@@ -28,10 +28,10 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit && tsc -p tsconfig.core.json --noEmit",
-    "lint": "eslint src scripts tests/architecture --max-warnings 0",
+    "lint": "eslint src scripts tests/architecture tests/presentation --max-warnings 0",
     "format:check": "prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json",
     "architecture:check": "node scripts/check-architecture.mjs",
-    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs",
+    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && node --test tests/presentation/use-app-information.test.mjs",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm run architecture:check && npm test",
     "start": "expo start --go --lan"
   }

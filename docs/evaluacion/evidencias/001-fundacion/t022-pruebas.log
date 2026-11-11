@@ -1,0 +1,37 @@
+✔ acepta solicitud existente con idioma es-PE (1.4149ms)
+✔ rechaza solicitud malformada undefined (0.08ms)
+✔ rechaza solicitud malformada null (0.0548ms)
+✔ rechaza solicitud malformada "" (0.0354ms)
+✔ rechaza solicitud malformada "es-PE" (0.0518ms)
+✔ rechaza solicitud malformada 1 (0.0382ms)
+✔ rechaza solicitud malformada true (0.0314ms)
+✔ rechaza solicitud malformada [] (0.0297ms)
+✔ rechaza solicitud malformada {} (0.0552ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0452ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.0305ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0386ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.0271ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.0264ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.1634
+ℹ start of coverage report
+ℹ --------------------------------------------------------------------------------------
+ℹ file                                  | line % | branch % | funcs % | uncovered lines
+ℹ --------------------------------------------------------------------------------------
+ℹ ..                                    |        |          |         | 
+ℹ  t022-build                           |        |          |         | 
+ℹ   src                                 |        |          |         | 
+ℹ    features                           |        |          |         | 
+ℹ     foundation                        |        |          |         | 
+ℹ      domain                           |        |          |         | 
+ℹ       validate-information-request.js | 100.00 |   100.00 |  100.00 | 
+ℹ --------------------------------------------------------------------------------------
+ℹ all files                             | 100.00 |   100.00 |  100.00 | 
+ℹ --------------------------------------------------------------------------------------
+ℹ end of coverage report

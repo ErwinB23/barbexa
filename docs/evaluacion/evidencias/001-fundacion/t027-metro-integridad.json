@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-11",
+  "baseline": "../t027-metro-antes.json",
+  "originalFiles": 752,
+  "unchangedFiles": 749,
+  "differences": [
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "before": "6270C33647DF8C98A6FFC20BDDB845B274E380C0761D9A0C99AE21EAEE9309E1",
+      "after": "CF8C6BA8020156A6F9A7C718E6ECA80278C4B69B69A444F79D71CD0E1CB5E943",
+      "authorized": true
+    },
+    {
+      "path": "src/composition/app-composition.ts",
+      "before": "FD61809139A5F8C1FA2C82E477DE98CD5476AC6316EA78FD36D1FA83DACC7F15",
+      "after": "20A22D5AF737332204C1683DEFB4FA2B6E10FD3C03570FF4E3C830ADE8B49412",
+      "authorized": true
+    },
+    {
+      "path": "src/features/foundation/application/get-app-information.ts",
+      "before": "71E98F9E87F0B9CD804213FA5DB54E058FD195E512FC33F87700CE8EF9549548",
+      "after": "7A1C7ADF7B630EBD966CD559FDEF70074DC15D3358A5DE53C5A747FDE8876413",
+      "authorized": true
+    }
+  ],
+  "unexpectedChanges": 0,
+  "branch": "main",
+  "head": "904ff3de1a612ddb849a3f9a3a957df2e5d0b3c3",
+  "gitUnchanged": true,
+  "testBuildPresent": false
+}
