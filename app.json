@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "App Barbería",
+    "slug": "app-barberia",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic"
+  }
+}
