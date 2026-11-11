@@ -211,3 +211,19 @@ T010 y T011 completadas: 38 escenarios comprobados (5 válidos, 33 inválidos). 
 ## Integración de controles y UI T012–T013
 
 T012 y T013 completadas. [Cambios, comandos y límites](t012-t013.md). Lint, formato y tipos UI pasan; check sigue detenido por núcleo vacío. Los 38 fixtures arquitectónicos pasan; faltan unitarias reales. Android y accesibilidad en dispositivo siguen pendientes. Sin ejecución de T014–T040.
+
+## Navegación T014–T017
+
+T014–T017 completadas: bienvenida, información técnica, retorno y ruta desconocida. [Detalles y verificaciones](t014-t017.md). Tipos app, lint, formato y cableado de callbacks pasan. EMPTY_CORE/TS18003 core permanecen; Android y accesibilidad real pendientes. No se ejecutaron T018–T040.
+
+## Registro manual parcial T018–T019
+
+Se registró la ejecución Android/Expo Go y los resultados satisfactorios declarados por el usuario, sin atribuirlos a Codex. [Entorno](android-entorno.md) y [navegación, límites y comprobaciones](android-navegacion.md). T018 y T019 siguen pendientes por datos del entorno, tres ciclos consecutivos, cabecera, reinicio y capturas no acreditados. El 200 % exacto sigue pendiente de validación posterior. Tipos app, callbacks y lint pasan; formato falla por tsconfig.json previamente modificado, conservado sin cambios.
+
+## Actualización de cierre T018–T019
+
+T018 completada: Honor 90 Lite CRT-NX3, Android 15, Expo Go 58.0.5, LAN/Metro, datos declarados por el usuario. Se verificaron visualmente las capturas reales .jpeg de Bienvenida y Base técnica (no existen los .png indicados). T019 sigue pendiente solo de confirmar Atrás de cabecera; ver la flecha no acredita su uso. Tres recorridos, reapertura y arranque sin Supabase confirmados por el usuario. [Entorno](android-entorno.md), [navegación y límites](android-navegacion.md). Formato de tsconfig.json corregido sin cambiar JSON; tipos app, callbacks, lint y formato pasan. El 200 % exacto sigue pendiente. Sin ejecución de T020–T040.
+
+## Cierre documental de T019 — 10/11/2026
+
+T019 completada: el usuario confirmó el funcionamiento de la flecha Atrás de cabecera en Honor 90 Lite (CRT-NX3), Android 15. [Registro adicional y evidencias anteriores](android-navegacion.md). La prueba fue manual y declarada por el usuario, no ejecutada por Codex. Esta actualización resuelve el único criterio que quedaba pendiente; se conservan los reportes anteriores como historial. El escalado exacto al 200 % continúa pendiente. No se ejecutaron T020–T040 ni se modificó código, dependencias o configuración.

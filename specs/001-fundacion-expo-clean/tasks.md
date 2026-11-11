@@ -61,15 +61,15 @@ arranque sin credenciales y tres recorridos, retorno y fallback en Android docum
 
 ### Implementation for User Story 1
 
-- [ ] T014 [US1] Configurar `app.json` y `src/app/_layout.tsx` con Router, entrada `expo-router/entry` en `package.json` y Stack estable; no agregar tabs, API routes ni inicialización de backend (FR-002, FR-003; depende T013).
-- [ ] T015 [P] [US1] Crear `src/features/foundation/presentation/welcome-screen.tsx` y `not-found-screen.tsx` con App Barbería, «Ver base técnica» y «Volver al inicio», usando UI común y callbacks de navegación sin infraestructura (FR-003, FR-008; depende T014).
-- [ ] T016 [P] [US1] Crear cascarón de `src/features/foundation/presentation/technical-screen.tsx` con título y contenido técnico estático, sin falsas funcionalidades ni promesas de aislamiento; preparar consumo posterior de consulta en US2 (FR-003, FR-007; depende T014).
-- [ ] T017 [US1] Crear `src/app/index.tsx`, `technical.tsx` y `+not-found.tsx` como rutas delgadas que montan vistas; configurar navegación a `/technical`, Atrás nativo/cabecera y replace a `/` desde ruta desconocida (FR-003; depende T015, T016).
+- [X] T014 [US1] Configurar `app.json` y `src/app/_layout.tsx` con Router, entrada `expo-router/entry` en `package.json` y Stack estable; no agregar tabs, API routes ni inicialización de backend (FR-002, FR-003; depende T013).
+- [X] T015 [P] [US1] Crear `src/features/foundation/presentation/welcome-screen.tsx` y `not-found-screen.tsx` con App Barbería, «Ver base técnica» y «Volver al inicio», usando UI común y callbacks de navegación sin infraestructura (FR-003, FR-008; depende T014).
+- [X] T016 [P] [US1] Crear cascarón de `src/features/foundation/presentation/technical-screen.tsx` con título y contenido técnico estático, sin falsas funcionalidades ni promesas de aislamiento; preparar consumo posterior de consulta en US2 (FR-003, FR-007; depende T014).
+- [X] T017 [US1] Crear `src/app/index.tsx`, `technical.tsx` y `+not-found.tsx` como rutas delgadas que montan vistas; configurar navegación a `/technical`, Atrás nativo/cabecera y replace a `/` desde ruta desconocida (FR-003; depende T015, T016).
 
 ### Manual Android — no sustituir por exportación
 
-- [ ] T018 [US1] Identificar dispositivo físico y Expo Go compatible SDK58 o AVD, red/Metro y prerrequisitos según quickstart.md; registrar modelo, Android, cliente y disponibilidad de ADB en `E/android-entorno.md`; si falta entorno dejar tarea pendiente y explicar bloqueo sin afirmar pruebas (FR-002, FR-011; depende T017).
-- [ ] T019 [US1] Ejecutar arranque sin backend, tres recorridos `/` → `/technical` → Atrás, cabecera, reinicio desde raíz y URL desconocida con recuperación; guardar resultados/capturas en `E/android-navegacion.md` y `E/capturas/`; comprobar hashes de T001 antes de aceptar historia (FR-001, FR-003, SC-001, SC-002; depende T018).
+- [X] T018 [US1] Identificar dispositivo físico y Expo Go compatible SDK58 o AVD, red/Metro y prerrequisitos según quickstart.md; registrar modelo, Android, cliente y disponibilidad de ADB en `E/android-entorno.md`; si falta entorno dejar tarea pendiente y explicar bloqueo sin afirmar pruebas (FR-002, FR-011; depende T017).
+- [x] T019 [US1] Ejecutar arranque sin backend, tres recorridos `/` → `/technical` → Atrás, cabecera, reinicio desde raíz y URL desconocida con recuperación; guardar resultados/capturas en `E/android-navegacion.md` y `E/capturas/`; comprobar hashes de T001 antes de aceptar historia (FR-001, FR-003, SC-001, SC-002; depende T018).
 
 **Checkpoint**: MVP navegable de US1 solo se acepta tras T019 ejecutada. Su cascarón no acredita
 US2/US3. Si falta Android, continuar trabajo local admisible conservando US1 pendiente.

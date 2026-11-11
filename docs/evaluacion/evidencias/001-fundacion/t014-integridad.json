@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-10T22:19:52.5151067-05:00",
+  "head": "16b2a7cc1513ef301b3f8caa4bd162dbabc88766",
+  "branch": "main",
+  "initialStatus": "clean",
+  "allowedTrackedChanges": [
+    "app.json",
+    "specs/001-fundacion-expo-clean/tasks.md",
+    "docs/evaluacion/evidencias/001-fundacion/informe.md"
+  ],
+  "files": [
+    {
+      "path": "app.json",
+      "sha256": "8039B67A6154C8A7BA5124DEAFBFFE0D9EA8A1F38F4F2FCF5913407C730DE355"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "sha256": "43720417B4A9142EE15367D86202351059C91883DD1F3D7D00A37B1706A0EFD4"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-architecture-check.log",
+      "sha256": "69B9BBA201DFBE5B6C15095E1BF7A8E1BF9B968A26DBA5713163E5B1E0160651"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-format-check.log",
+      "sha256": "21E553A517FC1BB5A6B74F5DAFE6A663D1F0036A09BB2733197492B3C74696DB"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-lint.log",
+      "sha256": "C46E6E69C57BF8E230867D4000194F96DCEDABF2D5E286670A0FC7D4CA899ACE"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-rutas.log",
+      "sha256": "DAAB4CF4B5CF6B468ADDC6DC5B5DDD4DACA0FBBFC5550568854D72E44B212BAD"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-t017.md",
+      "sha256": "FA7EC1950F19E616A0CDE7BFE4670459B568A182E0DD0AAEA3B0098713F48978"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-typecheck-completo.log",
+      "sha256": "1A704656FED18C9651D9F93340FEFBBB282044FBFAFCC049BBC8263E20BDADB9"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs",
+      "sha256": "D68A45CFD3387ED14ADAE44CD3CC1E166163F3CCC271A76038371CA66CA1D681"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/tasks.md",
+      "sha256": "A8ED2DC8ABE46793223314EE969A19B60399DA16CF7ECCAD7DEC51617DE004D4"
+    },
+    {
+      "path": "src/app/_layout.tsx",
+      "sha256": "909AFC90ED2CF425420EF3CA809D6B03E03102D2C64DBC83C4AD384BF7B0A68C"
+    },
+    {
+      "path": "src/app/+not-found.tsx",
+      "sha256": "CDD50FD3219E5F96A5CF1339E5B7A8122784BF9B15CA4E80E94F7A51EF8A9766"
+    },
+    {
+      "path": "src/app/index.tsx",
+      "sha256": "4957FF847D2CE8593881986E136A3DACB20E7240BB7C4F51A1A6E9BC257DCB51"
+    },
+    {
+      "path": "src/app/technical.tsx",
+      "sha256": "010558749E8F3EB6792E9985B551C987C857ACB7C311EFE0B3C2005258C655D1"
+    },
+    {
+      "path": "src/features/foundation/presentation/not-found-screen.tsx",
+      "sha256": "26678337194B7E32A6C1706F2DEF5142059865577D1390D988D08E677FA53E8E"
+    },
+    {
+      "path": "src/features/foundation/presentation/technical-screen.tsx",
+      "sha256": "91DAB69C3CB919DE3AAFC71470D6E754980D24B7F0C877C16692C337EEEB9A52"
+    },
+    {
+      "path": "src/features/foundation/presentation/welcome-screen.tsx",
+      "sha256": "355DEFA767D1207070CB398EAA28B1246961E22738BF63983A3BCBBA1BE49864"
+    }
+  ]
+}

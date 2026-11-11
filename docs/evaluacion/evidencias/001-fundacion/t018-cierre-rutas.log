@@ -1,0 +1,6 @@
+Command: node docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs
+index.tsx: callback de ruta y botón de vista correctos
+technical.tsx: callback de ruta y botón de vista correctos
++not-found.tsx: callback de ruta y botón de vista correctos
+Fallback sin historial, Stack, ruta inicial y configuración Router correctos.
+exit=0

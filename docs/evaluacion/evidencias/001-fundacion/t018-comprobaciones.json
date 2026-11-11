@@ -1,0 +1,18 @@
+[
+  {
+    "command": "node node_modules/typescript/bin/tsc --noEmit --pretty false",
+    "exit": 0
+  },
+  {
+    "command": "node docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs",
+    "exit": 0
+  },
+  {
+    "command": "npm run lint",
+    "exit": 0
+  },
+  {
+    "command": "npm run format:check",
+    "exit": 1
+  }
+]
