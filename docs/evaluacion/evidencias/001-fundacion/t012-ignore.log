@@ -1,0 +1,6 @@
+node_modules/probe
+.expo/probe
+.test-build/probe
+.artifacts/probe
+coverage/probe
+Evidencias visibles: exit 1 esperado para check-ignore.

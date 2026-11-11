@@ -1,0 +1,22 @@
+# Allowlist: even a broad invocation must preserve pre-existing content.
+/*
+!/src/
+!/scripts/
+!/tsconfig.json
+!/tsconfig.core.json
+!/tsconfig.tests.json
+!/eslint.config.js
+!/.prettierrc.json
+node_modules/
+.agents/
+.specify/
+docs/
+specs/
+.expo/
+.test-build/
+.artifacts/
+coverage/
+dist/
+build/
+package-lock.json
+**/*.min.js

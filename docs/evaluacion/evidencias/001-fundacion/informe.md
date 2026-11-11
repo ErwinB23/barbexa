@@ -199,3 +199,15 @@ cierre-expo-doctor.log y sus archivos exit; cierre-t005-t006.json registra fecha
 Git y atribución de resultados. archivos-despues-instalacion.json contiene el control actualizado;
 dependencias.log consolida las tres comprobaciones de cierre. Los archivos de intentos anteriores
 se conservan para trazabilidad. Fecha y entorno exactos constan en cierre-t005-t006.json.
+
+## Preparación T007–T009
+
+T007, T008 y T009 completadas como configuración y preparación verificadas. Véase [evidencia y límites](herramientas.md). El núcleo real, sus pruebas y su cobertura siguen pendientes; no se ejecutaron T010–T040.
+
+## Verificador arquitectónico T010–T011
+
+T010 y T011 completadas: 38 escenarios comprobados (5 válidos, 33 inválidos). [Evidencia, reglas y límites](arquitectura.md), [salidas y códigos](arquitectura-fixtures.log). El núcleo real sigue pendiente de T026; el checker rechaza EMPTY_CORE en el proyecto actual. Cambios locales de T007–T009 preservados; sin ejecución de T012–T040.
+
+## Integración de controles y UI T012–T013
+
+T012 y T013 completadas. [Cambios, comandos y límites](t012-t013.md). Lint, formato y tipos UI pasan; check sigue detenido por núcleo vacío. Los 38 fixtures arquitectónicos pasan; faltan unitarias reales. Android y accesibilidad en dispositivo siguen pendientes. Sin ejecución de T014–T040.

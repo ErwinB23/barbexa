@@ -1,0 +1,32 @@
+[
+  {
+    "command": "npm run typecheck",
+    "exit": 2,
+    "log": "t012-typecheck.log"
+  },
+  {
+    "command": "npm run lint",
+    "exit": 0,
+    "log": "t012-lint.log"
+  },
+  {
+    "command": "npm run format:check",
+    "exit": 0,
+    "log": "t012-format-check.log"
+  },
+  {
+    "command": "npm run architecture:check",
+    "exit": 1,
+    "log": "t012-architecture-check.log"
+  },
+  {
+    "command": "npm run test",
+    "exit": 1,
+    "log": "t012-test.log"
+  },
+  {
+    "command": "npm run check",
+    "exit": 2,
+    "log": "t012-check.log"
+  }
+]

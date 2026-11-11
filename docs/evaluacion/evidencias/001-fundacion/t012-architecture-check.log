@@ -1,0 +1,10 @@
+
+> app-barberia@0.1.0 architecture:check
+> node scripts/check-architecture.mjs
+
+Arquitectura: modules=4 core=0 edges=4
+  src/shared/ui/app-button.tsx [ui]
+  src/shared/ui/app-text.tsx [ui]
+  src/shared/ui/screen.tsx [ui]
+  src/shared/ui/tokens.ts [ui]
+[EMPTY_CORE] src -> núcleo: No hay módulos reales de dominio/aplicación para auditar

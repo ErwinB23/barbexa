@@ -1,0 +1,13 @@
+Checking formatting...
+All matched files use Prettier code style!
+prettier exit=0
+eslint exit=0
+Protegido: AGENTS.md
+Protegido: package.json
+Protegido: package-lock.json
+Protegido: app.json
+Protegido: .agents/skills/expo-project-structure/SKILL.md
+Protegido: .specify/memory/constitution.md
+Protegido: docs/evaluacion/RUBRICA.md
+Protegido: specs/001-fundacion-expo-clean/plan.md
+ignore-check exit=0

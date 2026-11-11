@@ -1,0 +1,173 @@
+Fixtures aislados: C:\Users\PREDATOR\AppData\Local\Temp\barberia-tools-29VBn2
+CASO sin-pruebas: exit 1
+Pendiente T020: no existen pruebas unitarias reales.
+
+CASO exito: exit 0
+Núcleo incluido en cobertura: ["src/features/probe/domain/value.ts"]
+✔ valor (0.5841ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.4565
+ℹ start of coverage report
+ℹ -----------------------------------------------------------------
+ℹ file             | line % | branch % | funcs % | uncovered lines
+ℹ -----------------------------------------------------------------
+ℹ .test-build      |        |          |         | 
+ℹ  src             |        |          |         | 
+ℹ   features       |        |          |         | 
+ℹ    probe         |        |          |         | 
+ℹ     domain       |        |          |         | 
+ℹ      value.js    | 100.00 |   100.00 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ all files        | 100.00 |   100.00 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ end of coverage report
+
+CASO asercion-fallida: exit 1
+Núcleo incluido en cobertura: ["src/features/probe/domain/value.ts"]
+✖ valor (0.9925ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.2696
+ℹ start of coverage report
+ℹ -----------------------------------------------------------------
+ℹ file             | line % | branch % | funcs % | uncovered lines
+ℹ -----------------------------------------------------------------
+ℹ .test-build      |        |          |         | 
+ℹ  src             |        |          |         | 
+ℹ   features       |        |          |         | 
+ℹ    probe         |        |          |         | 
+ℹ     domain       |        |          |         | 
+ℹ      value.js    | 100.00 |   100.00 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ all files        | 100.00 |   100.00 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ end of coverage report
+
+✖ failing tests:
+
+test at .test-build\tests\unit\value.test.js:9:22
+✖ valor (0.9925ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 9
+  
+      at TestContext.<anonymous> (C:\Users\PREDATOR\AppData\Local\Temp\barberia-tools-29VBn2\asercion-fallida\.test-build\tests\unit\value.test.js:9:55)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 9,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+CASO error-typescript: exit 1
+tests/unit/value.test.ts(5,7): error TS2322: Type 'string' is not assignable to type 'number'.
+
+CASO sin-cobertura: exit 1
+Núcleo incluido en cobertura: ["src/features/probe/domain/value.ts"]
+✔ valor (0.5568ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.186
+ℹ Error: 83.33% line coverage does not meet threshold of 100%.
+ℹ Error: 50.00% function coverage does not meet threshold of 100%.
+ℹ start of coverage report
+ℹ -----------------------------------------------------------------
+ℹ file             | line % | branch % | funcs % | uncovered lines
+ℹ -----------------------------------------------------------------
+ℹ .test-build      |        |          |         | 
+ℹ  src             |        |          |         | 
+ℹ   features       |        |          |         | 
+ℹ    probe         |        |          |         | 
+ℹ     domain       |        |          |         | 
+ℹ      value.js    |  83.33 |   100.00 |   50.00 | 6
+ℹ -----------------------------------------------------------------
+ℹ all files        |  83.33 |   100.00 |   50.00 | 
+ℹ -----------------------------------------------------------------
+ℹ end of coverage report
+
+CASO rama-sin-cubrir: exit 1
+Núcleo incluido en cobertura: ["src/features/probe/domain/value.ts"]
+✔ valor (0.7662ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64.022
+ℹ Error: 66.67% branch coverage does not meet threshold of 90%.
+ℹ start of coverage report
+ℹ -----------------------------------------------------------------
+ℹ file             | line % | branch % | funcs % | uncovered lines
+ℹ -----------------------------------------------------------------
+ℹ .test-build      |        |          |         | 
+ℹ  src             |        |          |         | 
+ℹ   features       |        |          |         | 
+ℹ    probe         |        |          |         | 
+ℹ     domain       |        |          |         | 
+ℹ      value.js    | 100.00 |    66.67 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ all files        | 100.00 |    66.67 |  100.00 | 
+ℹ -----------------------------------------------------------------
+ℹ end of coverage report
+
+CASO archivo-no-importado: exit 1
+Núcleo incluido en cobertura: ["src/features/probe/domain/unimported.ts","src/features/probe/domain/value.ts"]
+✔ valor (0.4903ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.7497
+ℹ Error: 87.50% line coverage does not meet threshold of 100%.
+ℹ Error: 50.00% function coverage does not meet threshold of 100%.
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------
+ℹ file               | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------
+ℹ .test-build        |        |          |         | 
+ℹ  src               |        |          |         | 
+ℹ   features         |        |          |         | 
+ℹ    probe           |        |          |         | 
+ℹ     domain         |        |          |         | 
+ℹ      unimported.js |  75.00 |   100.00 |    0.00 | 4
+ℹ      value.js      | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------
+ℹ all files          |  87.50 |   100.00 |   50.00 | 
+ℹ -------------------------------------------------------------------
+ℹ end of coverage report
+
+CASO sin-nucleo: exit 1
+Pendiente: no existe núcleo ejecutable para medir cobertura.
+
+CORE negativo: exit 2
+../../../../AppData/Local/Temp/barberia-tools-29VBn2/globals-core/src/features/probe/domain/value.ts(2,1): error TS2304: Cannot find name 'fetch'.
+../../../../AppData/Local/Temp/barberia-tools-29VBn2/globals-core/src/features/probe/domain/value.ts(2,15): error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+../../../../AppData/Local/Temp/barberia-tools-29VBn2/globals-core/src/features/probe/domain/value.ts(2,30): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+
+Herramientas: 9 escenarios comprobados. Sin pruebas de negocio ejecutadas.

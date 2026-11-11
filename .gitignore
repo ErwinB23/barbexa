@@ -1,1 +1,12 @@
 node_modules
+.expo/
+.test-build/
+.artifacts/
+dist/
+build/
+coverage/
+expo-env.d.ts
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
