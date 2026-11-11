@@ -1,3 +1,119 @@
+# Informe consolidado — 001-fundacion-expo-clean — cierre T040
+
+**Corte documental: 11/11/2026, America/Lima.** Rama `main`, HEAD
+`66c2f39448274e0ccb8ed47c09bf48d78e9177d4`. Al iniciar T038: modificados
+este informe y `specs/001-fundacion-expo-clean/tasks.md`; no versionados aún
+`reproduccion.md`, `reproduccion.log` y `t037.md` (trabajo autorizado T036–T037).
+El código del corte es el del commit indicado; esos cambios son documentales.
+
+**T001–T040 completadas: fundación cerrada técnicamente**, con los criterios
+vigentes revisados y riesgos pendientes explícitos. [Cierre e integridad](cierre.md).
+T039 creó [el contexto compartido](../../../../ESTADO-DESARROLLO.md). Esta sección
+es el estado vigente; el historial inferior conserva fallos y estados anteriores
+que quedaron superados por las comprobaciones y decisiones posteriores.
+
+## Base de evidencia, entorno y atribución
+
+| ID | Evidencia / fecha y entorno | Comando, resultado y límite |
+| --- | --- | --- |
+| G | [Reproducción T037](t037.md), [salidas](reproduccion.log), [guía T036](reproduccion.md); 11/11/2026, Windows, Node 24.21.0, npm 11.19.0, PowerShell 5.1; HEAD del corte más documentación T036 | Codex: npm ci pasó tras EACCES inicial/reintento autorizado; npm ls, npm run check, expo install --check, Doctor 1.21.6 y exportación Android: salida 0. Doctor 20/20; 67 unitarias, 38 regresiones arquitectónicas, 11 de presentación. 1141 módulos y Hermes 2.4 MB. Instalación aislada, no prueba física Android. |
+| I | [Preservación T037](t037.md) y reproduccion.log; mismo entorno/fecha/versión que G. Inventarios originales T001–T006 en el historial inferior (10/11/2026, HEAD 86ccdd4) | 799/799 SHA-256 iguales en principal y copia antes del cierre documental; lockfile intacto. Preservación inicial de 585 archivos documentada en el historial. Revisión actual no sustituye el cotejo final T040. |
+| A | [Android final](android-final.md), [información](capturas/android-final-informacion.jpeg), [estados](capturas/android-final-estados.jpeg); registros 11/11/2026, Honor 90 Lite CRT-NX3, Android 15, Expo Go 58.0.5 | Pruebas manuales declaradas por el usuario sobre la interfaz final, posteriormente incorporada a HEAD 66c2f39: tres ciclos con Atrás sistema/cabecera, fallback, reapertura sin credenciales y consulta. Uso local precargado en modo avión; no arranque offline ni Metro durante desconexión. Sin código nuevo en T036–T038; no se atribuyen estas pruebas a Codex ni a una sesión móvil de la copia T037. |
+| U | [TalkBack y decisión T034](android-talkback.md), [texto/contraste y enmienda T035](android-texto-contraste.md), [pruebas específicas](t035-comprobaciones.log); registros 11/11/2026, mismo Android que A | Usuario: lectura/navegación y controles finales, texto máximo legible/funcional sin recortes ni superposiciones. Codex: controles configurados >=48×48, roles/disabled, scroll/zonas seguras y contraste; pruebas Node aprobadas. Sin medición instrumental nativa ni 200 % exacto. Método y umbral revisados con autorización expresa. |
+| B | [Límites de backend](limites-backend.md), [inspección](t028-limites.log); 11/11/2026, revisión fuente y manifiestos | Inspección acotada de imports/paquetes/rutas y firmas de secretos: salida 0; no SDK backend activo, API Node ni rutas +api. No auditoría integral de secretos ni seguridad. Integraciones y garantías de servidor aún no implementadas. |
+
+G reutiliza ejecuciones reales de T037, no una ejecución nueva de T038.
+La cobertura 100 % líneas/funciones/ramas de G corresponde solo al núcleo ejecutable
+(caso de uso y validador); no a UI, estilos o adaptador. El checker auditó 21 módulos,
+4 de núcleo y 37 aristas. Sus 38 fixtures incluyen casos inválidos que deben fallar:
+sus códigos 1 esperados no son un fallo de la suite.
+
+## Matriz FR-001–FR-011
+
+Los ID de evidencia remiten a la tabla anterior con fecha, entorno, versión,
+comando/código, atribución y límites. «Acreditado» se limita a esta fundación.
+
+| Requisito | Estado y evidencia | Resultado / límite |
+| --- | --- | --- |
+| FR-001 | Acreditado por etapas, I y cierre T040 | Expo incorporado sin reinicializar Git; inventarios e integridad de copia/reinstalación conservados. Cambios documentales/Expo posteriores autorizados, no sobrescrituras de plantilla. Cotejo final T040 completado en cierre.md. |
+| FR-002 | Acreditado, G+A | Expo 58.0.24, RN 0.88.1, Router 58.0.31, React 19.3.0, TS 6.0.3; lockfile y guía reproducidos. Android identificado; web/iOS no acreditados. |
+| FR-003 | Acreditado, A+G y [rutas](t031-rutas.log) | Bienvenida, técnica, Atrás y fallback; rutas delgadas. Pruebas móviles del usuario y callbacks automatizados, no E2E móvil automatizado. |
+| FR-004 | Acreditado, G y [auditoría](t026.md) | Módulo foundation con presentación, aplicación, dominio, infraestructura y composición; tres capas lógicas sin imponer tres despliegues. Backend futuro no implementado. |
+| FR-005 | Acreditado, G | Núcleo con tipos propios, sin SDK/HTTP/React/SQL ni dependencias transitivas prohibidas; tipos, aliases, reexports y ciclos cubiertos por checker/fixtures. No demuestra autorización de backend. |
+| FR-006 | Acreditado, G y [contrato](../../../../specs/001-fundacion-expo-clean/contracts/foundation.md) | Mismo puerto con adaptador local real y doble; éxito, entrada inválida y rechazo probados; composición explícita. No entidades de negocio ficticias. |
+| FR-007 | Acreditado en alcance local, B+A | Arranque sin credenciales Supabase, sin API Node; composiciones futuras documentadas. No Auth, RLS, RPC, transacciones, Storage ni aislamiento multitenant reales acreditados. |
+| FR-008 | Acreditado, U y [componentes/galería](t029-t031.md) | Tokens y componentes compartidos, cuatro muestras etiquetadas, consulta real y recuperación diferenciadas. No pantallas de negocio. |
+| FR-009 | Acreditado con método revisado, U | Lectura asistida y máximo de fuente disponible; mínimos táctiles configurados, uso sin obstrucciones y contraste calculado. Sin medición nativa ni equivalencia máximo=200 %. |
+| FR-010 | Acreditado, G | Scripts repetibles, tipos estrictos, lint, formato, regresiones y pruebas del contrato en 0. Advertencias y vulnerabilidades no ocultadas. |
+| FR-011 | Evidencia consolidada y guía disponibles, G+A+U+este informe | FR/SC, comandos, límites y capturas vinculados; contexto T039 y cierre T040 documentados. |
+
+## Matriz SC-001–SC-006
+
+| Criterio vigente | Estado de evidencia al corte | Evidencia / límite |
+| --- | --- | --- |
+| SC-001 | Acreditado con diferencias autorizadas | I y [cotejo final T040](cierre.md): 585 originales, 581 idénticos, 4 documentos autorizados; sin eliminaciones. |
+| SC-002 | Acreditado en Android identificado | A y guía G; tres recorridos, fallback y reinicio declarados por usuario. No prueba nueva del teléfono en T038. |
+| SC-003 | Acreditado para núcleo local | G; auditoría de todos los módulos y dos adaptadores del mismo contrato, sin alterar núcleo. |
+| SC-004 | Acreditado | G; todos los controles definidos pasan, incluyendo los tres resultados del contrato; seguridad npm no se considera aprobada por esto. |
+| SC-005 revisado | Acreditado conforme al método/umbral autorizados | U; conservar enmienda de US3/SC-005 y ajuste T034. No acreditar dimensiones nativas ni 200 % exacto. |
+| SC-006 | Acreditado como trazabilidad con límites explícitos | Matrices, fuentes y estados de este informe; contexto T039 y cierre T040 completados. Las contribuciones académicas siguen siendo parciales; no se valida toda la rúbrica. |
+
+No se modifica el alcance aprobado para llenar estas matrices. Los antecedentes
+que mencionan 200 % obligatorio o T033/T034/T035 pendientes son históricos:
+sus decisiones posteriores están enlazadas en A y U. La validación exacta al
+200 % queda como trabajo futuro, no condición vigente de cierre de esta fundación.
+
+## Contribución a la rúbrica académica
+
+Fuente: [RUBRICA.md](../../RUBRICA.md). **Ningún criterio académico se declara
+validado en su totalidad** por existir esta documentación o por una base local.
+
+| Criterio | Contribución / estado |
+| --- | --- |
+| 1. Problema y requisitos | Parcial: especificación FR/SC y trazabilidad; falta desarrollo y validación del negocio completo. |
+| 2. Análisis y diseño | Parcial: plan, contratos y diseño técnico de esta fundación. |
+| 3. Arquitectura | Parcial: cliente modular auditado; servidor y sistema multitenant aún no implementados. |
+| 4. SDD | Parcial: spec/plan/tasks y enmiendas explícitas con evidencia; no finalización de todo el producto. |
+| 5. Unitarias e integración | Parcial: G, composición/adaptador local y presentación; sin integración Supabase/persistencia real. |
+| 6. E2E | Parcial: recorridos Android manuales A/U; sin suite E2E móvil automatizada ni flujos de negocio. |
+| 7. Interfaz/UX | Parcial: galería, navegación, TalkBack y texto máximo; límites de U preservados. |
+| 8. Escalabilidad frontend/backend | Pendiente: no pruebas de escala o backend desplegado. |
+| 9. Escalabilidad BD | Pendiente: no base/integración/carga real. |
+| 10. Dominio, DNS/CDN | Pendiente: no configuración ni evidencia de despliegue. |
+| 11. Caché | Pendiente: adaptador local no constituye implementación/evaluación de caché. |
+| 12. CI/CD | Pendiente: npm run check local no equivale a pipeline CI/CD. |
+| 13. k6 | Pendiente: no ejecución de carga. |
+| 14. Código y BD en GitHub | Pendiente de entrega evaluable; Git local no acredita publicación ni BD. No se hizo push. |
+| 15. Informe final | Pendiente: este informe de fundación contribuye, no sustituye la entrega académica final. |
+| 16. Presentación y dominio | Pendiente de sustentación; no deducible de archivos. |
+
+## Riesgos y trabajo posterior
+
+- **9 vulnerabilidades moderadas** confirmadas por npm ci de T037, sin análisis
+  concluido ni aceptación formal. No se declara auditoría de seguridad aprobada.
+  T038 exige consolidación, no un análisis de seguridad nuevo: no se ejecutaron
+  npm audit ni npm audit --omit=dev. Falta clasificar producción/desarrollo,
+  directas/transitivas, exposición y acciones antes de resolver o aceptar el riesgo.
+- Sin Supabase real, permisos/RLS/atomicidad, caché, DNS/CDN, CI/CD o k6; no atribuir
+  garantías remotas a los metadatos locales. [Composiciones futuras](limites-backend.md).
+- Sin validación web/iOS, arranque offline instalado o medición nativa de escala.
+- T039 y T040 completadas: contexto compartido y auditoría final enlazados arriba.
+
+## Verificaciones nuevas de T038
+
+Lectura de Git (`status --short`, rama, HEAD), contraste de requisitos/evidencias
+y comprobación de enlaces locales de esta consolidación. No se repitieron
+instalaciones, pruebas, exportación ni verificaciones manuales. `git diff --check`
+y cotejo SHA-256 al cierre verifican que solo se actualizan este informe y la
+casilla T038. Fecha/entorno del corte indicados arriba; resultados de G son reutilizados.
+
+---
+
+## Historial de evidencias
+
+Se conserva el contenido previo íntegro. Sus estados son los de cada registro,
+no sustituyen la consolidación vigente anterior.
+
 # Evidencia parcial — T001–T006
 
 > Estado vigente: T005 y T006 completadas; véase «Cierre verificado de T005–T006» al final. Las secciones anteriores conservan el intento inicial.
@@ -355,3 +471,25 @@ automatizadas existentes, sin atribuir pruebas de celular a Codex.
 [Decisión y límites](android-texto-contraste.md). No se midió 200 % ni dimensiones
 nativas de ese escalado; queda como validación futura, sin resultados inventados.
 Sin ejecución de T036–T040, cambios de código/dependencias, commit ni push.
+
+## Guía de reproducción T036
+
+T036 completada: [reproduccion.md](reproduccion.md), con prerrequisitos, 16 versiones
+efectivas del lockfile, comandos Windows, diagnóstico de errores, pasos Android,
+contraste y límites vigentes. Git inicial limpio en main; commit comprobado
+66c2f39448274e0ccb8ed47c09bf48d78e9177d4. Codex consultó Node/npm/PowerShell y
+comprobó consistencia de dependencias entre manifiesto y raíz del lockfile.
+No se ejecutó npm ci ni reproducción general: corresponde a T037. Siguen pendientes
+9 vulnerabilidades moderadas y validaciones futuras documentadas. Sin código,
+dependencias, requisitos aprobados, instalaciones, commit o push modificados.
+
+## Reproducción aislada T037
+
+T037 completada: [procedimiento, resultados y límites](t037.md) y
+[salidas reales](reproduccion.log). Copia externa del estado actual, sin reemplazar
+node_modules principal. npm ci pasó tras reintento autorizado por EACCES inicial;
+check, npm ls, compatibilidad Expo, Doctor 20/20 y empaquetado Hermes pasan.
+67 unitarias, 38 regresiones arquitectónicas y 11 de presentación aprobadas.
+799/799 hashes iniciales intactos en ambas carpetas antes del cierre documental.
+Persisten 9 vulnerabilidades moderadas pendientes de análisis; sin auditoría
+de seguridad aprobada ni pruebas manuales Android nuevas. Sin T038–T040 ni commit/push.

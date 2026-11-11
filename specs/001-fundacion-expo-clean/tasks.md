@@ -126,11 +126,11 @@ controles afectados de T032 y recorridos impactados; registrar la versión realm
 
 ## Phase 6: Polish & Cross-Cutting Concerns — 5 tareas
 
-- [ ] T036 Redactar `E/reproduccion.md` con prerrequisitos, versiones efectivas del lockfile, comandos, solución de errores y pasos Android derivados de quickstart.md; documentar contraste y límites sin modificar documentos aprobados (FR-002, FR-011; depende T032).
-- [ ] T037 Reproducir instalación con `npm ci` usando `package-lock.json` y ejecutar `npm run check` desde la guía nueva, registrando `E/reproduccion.log`; comparar archivos originales protegidos tras la reproducción y detener cierre ante diferencias (FR-001, FR-010, SC-001, SC-004; depende T036).
-- [ ] T038 Consolidar `E/informe.md` con matriz FR-001–FR-011/SC-001–SC-006 y evidencias vinculadas: fecha America/Lima, HEAD+diff, entorno, comando/exit code, resultado y límite; distinguir contribución parcial a rúbrica 1–7 y pendientes 8–16, sin declarar criterios académicos validados por documentación (FR-011, SC-006; depende T028, T035, T037).
-- [ ] T039 Crear `ESTADO-DESARROLLO.md` con avances demostrados, decisiones y pendientes; referenciar `E/informe.md`, composiciones futuras y obligaciones posteriores de caché/DNS-CDN/CI-CD/k6; conservar AGENTS.md, Constitución, especificación, plan y demás archivos previos intactos (FR-007, FR-011, SC-006; depende T038).
-- [ ] T040 Auditar diff y estado final, comparar hashes de todos los originales contra `M/archivos-antes.json`, HEAD y rama; registrar incorporaciones y resultado en `E/cierre.md`; aceptar la feature solo con los seis SC acreditados, sin commit ni push; bloqueos Android mantienen cierre pendiente (FR-001, FR-011, SC-001, SC-006; depende T039).
+- [x] T036 Redactar `E/reproduccion.md` con prerrequisitos, versiones efectivas del lockfile, comandos, solución de errores y pasos Android derivados de quickstart.md; documentar contraste y límites sin modificar documentos aprobados (FR-002, FR-011; depende T032).
+- [x] T037 Reproducir instalación con `npm ci` usando `package-lock.json` y ejecutar `npm run check` desde la guía nueva, registrando `E/reproduccion.log`; comparar archivos originales protegidos tras la reproducción y detener cierre ante diferencias (FR-001, FR-010, SC-001, SC-004; depende T036).
+- [x] T038 Consolidar `E/informe.md` con matriz FR-001–FR-011/SC-001–SC-006 y evidencias vinculadas: fecha America/Lima, HEAD+diff, entorno, comando/exit code, resultado y límite; distinguir contribución parcial a rúbrica 1–7 y pendientes 8–16, sin declarar criterios académicos validados por documentación (FR-011, SC-006; depende T028, T035, T037).
+- [x] T039 Crear `ESTADO-DESARROLLO.md` con avances demostrados, decisiones y pendientes; referenciar `E/informe.md`, composiciones futuras y obligaciones posteriores de caché/DNS-CDN/CI-CD/k6; conservar AGENTS.md, Constitución, especificación, plan y demás archivos previos intactos (FR-007, FR-011, SC-006; depende T038).
+- [x] T040 Auditar diff y estado final, comparar hashes de todos los originales contra `M/archivos-antes.json`, HEAD y rama; registrar incorporaciones y resultado en `E/cierre.md`; aceptar la feature solo con los seis SC acreditados, sin commit ni push; bloqueos Android mantienen cierre pendiente (FR-001, FR-011, SC-001, SC-006; depende T039).
 
 ## Dependencies & Execution Order
 
