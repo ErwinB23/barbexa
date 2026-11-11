@@ -10,11 +10,21 @@
 | FR-006 | SC-003, SC-004 | mismo contrato con adaptador real y doble; casos válidos e inválidos |
 | FR-007 | SC-002, SC-006 | arranque sin env de backend, sin llamadas remotas; diseño servidor revisado |
 | FR-008 | SC-005 | tokens compartidos y galería con cuatro estados, capturas |
-| FR-009 | SC-005 | TalkBack, escala 2.0, medidas 48 dp, reporte de contraste |
+| FR-009 | SC-005 | TalkBack, máximo de texto disponible en Android identificado, mínimos 48 dp comprobados técnicamente y reporte de contraste; evidencia manual conforme a SC-005 revisado |
 | FR-010 | SC-004 | scripts en cero, cobertura y fallos deliberados detectados |
 | FR-011 | SC-006 | informe por todos los FR/SC con estado, entorno, versión, comando y limitación |
 
 ## Casos unitarios mínimos
+
+Método de evidencia de T034 ajustado por decisión del responsable: se acepta
+la combinación de mínimos configurados >=48×48 dp y comprobaciones técnicas
+de accesibilidad con uso manual TalkBack y ausencia de obstrucciones declarados
+por el usuario. No exige medición instrumental nativa para cerrar T034; no
+acredita dimensiones nativas medidas ni el cumplimiento completo de SC-005.
+Justificación y límites: `docs/evaluacion/evidencias/001-fundacion/android-talkback.md`.
+El requisito de tamaño permanece. T035 se rige por la enmienda autorizada de
+SC-005 del 11/11/2026: máximo disponible declarado por el usuario más pruebas
+técnicas; 200 % exacto queda como validación futura sin resultados atribuidos.
 
 - Éxito con adaptador local y con doble: misma estructura propia, una llamada.
 - Idioma inválido, cadena vacía y solicitud malformada: entrada-invalida, cero llamadas.

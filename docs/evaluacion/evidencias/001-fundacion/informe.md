@@ -255,3 +255,103 @@ Se reprodujo el error de Metro y se corrigieron tres imports ejecutables en dos 
 ## Límites de backend T028 — 11/11/2026
 
 T028 completada: [composición actual/futura, inspección y límites](limites-backend.md). Sin SDK de backend activo, API Node, rutas +api ni carpetas Supabase; sin firmas conocidas de secretos en la inspección acotada, que no equivale a auditoría integral. No se atribuyen RLS/transacciones al adaptador local. `npm run check` pasa: 53 unitarias, 38 regresiones arquitectónicas y 6 pruebas de presentación, tipos, lint, formato y checker; compatibilidad Node de la corrección Metro conservada. El usuario confirmó funcionamiento Android posterior a la corrección; [registro manual atribuido al usuario](android-navegacion.md), no ejecutado por Codex. Siguen pendientes 200 % exacto y análisis de 11 vulnerabilidades moderadas. Sin ejecución de T029–T040, instalaciones, commit ni push.
+
+## Componentes y galer?a T029?T031 ? 11/11/2026
+
+T029, T030 y T031 completadas. [Contraste, componentes, pruebas y l?mites](t029-t031.md). Tokens existentes aprobados sin cambios; StatusMessage compartido y galer?a etiquetada con recuperaci?n local independiente de la consulta real. Controles finales: 67 unitarias, 38 regresiones arquitect?nicas y 11 pruebas de presentaci?n aprobadas; tipos, lint, formato y auditor?a de 21 m?dulos pasan. Navegaci?n automatizada conservada. No se repitieron pruebas manuales Android; el 200 % exacto sigue sin acreditarse. Sin ejecuci?n de T032?T040, instalaciones, commit ni push.
+
+## Verificaci?n T032?T034 ? 11/11/2026
+
+[Resultados y bloqueo](t032-t034.md). T032 pendiente: check y navegaci?n pasan (67 unitarias, 38 arquitect?nicas, 11 de presentaci?n), exportaci?n Android/Hermes aprobada; expo install --check falla y Doctor obtiene 19/20 por cuatro parches esperados distintos de los instalados. Sin actualizaci?n de paquetes. T033 y T034 pendientes de recorridos finales/offline/capturas y TalkBack con medidas nativas; [Android final](android-final.md), [TalkBack](android-talkback.md). Evidencias manuales anteriores conservadas y atribuidas al usuario. No se ejecut? T035?T040; 200 % exacto y an?lisis de vulnerabilidades siguen pendientes. Sin cambios de c?digo, commit ni push.
+
+## Cierre de T032
+
+T032 completada tras la actualizacion de Expo realizada por el usuario. Versiones instaladas y manifiestos consistentes comprobados por Codex sin reinstalar. El usuario reporta npm ls correcto, expo install --check actualizado, Doctor 20/20, check en 0 (67/38/11 pruebas) y exportacion Android correcta (1141 modulos, Hermes 2.4 MB); no se atribuyen esos comandos a Codex. Detalle y atribucion: [cierre T032](t032-t034.md#cierre-de-t032--11112026). Riesgo vigente: 9 vulnerabilidades moderadas pendientes de analisis, sin auditoria de seguridad aprobada. T033 y T034 siguen pendientes y no se ejecutaron T033-T040. Sin cambios de codigo, pruebas o versiones, commit ni push por Codex.
+
+## Evidencia manual parcial de T033 — 11/11/2026
+
+El usuario confirmó información consultada, galería, recuperación/restablecimiento,
+regreso al inicio y uso local precargado en modo avión, en Honor 90 Lite CRT-NX3,
+Android 15, Expo Go 58.0.5. Codex verificó visualmente las dos capturas nuevas
+`android-final-informacion.jpeg` y `android-final-estados.jpeg`, legibles; no
+ejecutó las pruebas Android. [Resultados y límites](android-final.md).
+T033 permanece pendiente de los tres ciclos finales con Atrás sistema/cabecera,
+fallback, reinicio desde raíz sin credenciales y confirmación de acceso LAN/Metro
+durante el tramo sin internet. No se acredita arranque offline ni 200 % exacto.
+Solo documentación actualizada; cambios locales anteriores preservados. Sin
+T034–T040, instalaciones, commit ni push.
+
+## Confirmaciones finales adicionales de T033 — 11/11/2026
+
+El usuario confirmó en la versión final tres recorridos consecutivos con Atrás
+de cabecera/Android, fallback con retorno, cierre/reapertura sin credenciales y
+consulta correcta tras reinicio, además de galería y recuperación. Se conservan
+las dos capturas finales ya verificadas. [Registro actualizado](android-final.md).
+Son pruebas manuales declaradas por el usuario, no ejecutadas por Codex.
+T033 queda pendiente únicamente de acreditar vistas sin internet manteniendo
+Metro accesible simultáneamente: el usuario confirmó uso local precargado en
+modo avión y LAN/Metro con conexión activa, sin confirmar Metro en modo avión.
+No se afirma arranque offline. No se modificó la casilla ni se ejecutaron
+T034–T040. Siguen pendientes 9 vulnerabilidades moderadas y 200 % exacto.
+
+## Cierre de T033 con ajuste autorizado — 11/11/2026
+
+T033 completada tras sustituir, por decisión explícita del responsable, el requisito
+de Metro accesible durante la desconexión por uso local de la aplicación previamente
+cargada sin internet. [Justificación, conformidad y evidencia](android-final.md).
+Se actualizan T033 y el paso 7 de quickstart; no hay conflicto con Constitución,
+FR/SC o rúbrica. Pruebas y capturas existentes declaradas por el usuario cubren
+los criterios ajustados; no se afirma arranque offline ni Metro durante modo avión.
+Sin ejecución de T034–T040 ni cambios de código, dependencias o pruebas.
+
+## Verificación parcial de T034 — 11/11/2026
+
+Se registraron las pruebas de TalkBack de estados finales, recuperación, regreso,
+comodidad táctil y ausencia de contenido oculto declaradas por el usuario.
+[Comprobaciones y límites](android-talkback.md): 11/11 pruebas de presentación
+aprobadas por Codex; mínimos configurados 48×48 y SafeAreaView/scroll revisados.
+T034 sigue pendiente de medidas nativas y detalle manual de nombre/rol, disabled,
+orden/foco de todos los controles. No se equipara configuración con medición.
+No se ejecutó T035–T040; 200 % exacto y análisis de 9 vulnerabilidades pendientes.
+
+## Cierre autorizado de T034 — 11/11/2026
+
+T034 completada con método de evidencia ajustado explícitamente por el responsable:
+comprobación técnica (mínimos 48×48, roles, disabled, foco y zonas seguras), 11
+pruebas aprobadas y recorrido TalkBack/uso sin obstrucciones declarado por el usuario.
+[Decisión y límites](android-talkback.md). No hay medición instrumental nativa ni
+200 % exacto confirmado. Se conserva el requisito de tamaño; SC-005 completo y
+T035–T040 siguen pendientes. Sin cambios de código o dependencias, commit ni push.
+
+## Verificación parcial de T035 — 11/11/2026
+
+T035 permanece pendiente: no se acredita escala efectiva 200 %, recorrido y
+restauración con escalas antes/durante/después ni medidas/capturas de ese ensayo.
+[Texto y contraste](android-texto-contraste.md): Codex ejecutó 67 unitarias
+(14 de contraste) y 4 pruebas de componentes, todas aprobadas; escalado habilitado,
+scroll y ratios verificados técnicamente, sin medición nativa. Se conserva la
+prueba de texto máximo declarada por el usuario sin equipararla a 200 %.
+T034 sigue cerrada; SC-005 no se declara completo. Sin T036–T040; 9 vulnerabilidades
+moderadas pendientes de análisis. No se modificaron código ni dependencias.
+
+## Revisión condicionada del cierre de T035 — 11/11/2026
+
+T035 permanece pendiente: SC-005 y el escenario 2 de US3 exigen expresamente
+texto al 200 %, porcentaje no acreditado por el máximo disponible declarado.
+La propuesta condicionada del responsable no puede aplicarse solo a la tarea
+sin contradecir la especificación vigente. [Revisión y límites](android-texto-contraste.md).
+Se conservan las evidencias parciales y la validación exacta como obligación
+futura pendiente, sin afirmar mediciones nativas ni cierre de SC-005. No se
+solicitaron pruebas nuevas ni se ejecutaron T036–T040.
+
+## Cierre de T035 tras enmienda autorizada de SC-005 — 11/11/2026
+
+T035 completada. El responsable autorizó expresamente cambiar escenario 2 de US3
+y SC-005 a máximo de texto disponible en Android identificado; se armonizaron
+tasks.md, validation.md y quickstart.md. El usuario repitió y confirmó textos
+legibles/comprensibles, botones funcionales y visibles, sin recortes,
+superposiciones o errores. Se combina esa evidencia manual con las comprobaciones
+automatizadas existentes, sin atribuir pruebas de celular a Codex.
+[Decisión y límites](android-texto-contraste.md). No se midió 200 % ni dimensiones
+nativas de ese escalado; queda como validación futura, sin resultados inventados.
+Sin ejecución de T036–T040, cambios de código/dependencias, commit ni push.

@@ -1,0 +1,56 @@
+{
+  "originalFiles": 792,
+  "unchangedFiles": 785,
+  "changes": [
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/calidad-final.log",
+      "before": "70b9f836ea55508201b787241af99c529bc9aa01ab900c7dbb3f9b94860fdfcf",
+      "after": "930e064ee4b6d62ef15fa4197293fbf0c8a429057524c8411fe8509bc9dde11b",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/empaquetado-android.log",
+      "before": "f11e0c18156ee15a8dec68dc0f312ee6de17ae858f855f2b11332c7cff1dd30f",
+      "after": "d153205f20d839ee0404137d1ca4c15c445dc67b4824dd77c72a91748c17e19c",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-dependencias.log",
+      "before": "c5f7f0851c7b20989eb12f01df84c409afbd17d808235416982135e7891db2ba",
+      "after": "ac5b91b04da6f2418623ef22f28b3fa6c44fb918f42dccf32fb55d08c1f3beb6",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-doctor.log",
+      "before": "dd8989127b2d892eb43c0691761f8ab9e0a23fbfb0e5d8ac09d5ce02bf799bac",
+      "after": "9a13e8708fa4c1ca4fc55a2c2e62ed5546efafa390c10a67d272467e4464ca3e",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-t034.md",
+      "before": "84f02092c5e4d39b001ee29109df76df83947578815e3809b6ca36aac5d6b9ba",
+      "after": "dafe8469e9393c214c30f3446fd7fa27093dab60fbbde76038f656fec388ebfe",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "before": "c7ca3f6afd7583233ce30470d810a0e7992877d02c0df1de1c1a1e4fb3c7e86b",
+      "after": "499caa9bf6e54346f446eb6270f4dcf812553e9340277c9df4e62243751df5cc",
+      "authorized": true
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/tasks.md",
+      "before": "ccbc99a087150b7ccbc4e22d9b9b0787084ee1a7c32b1d2720c7c586cc5a9d20",
+      "after": "565b2648638128375bda65e2adf134ff8cd621e5b4c4cbb632323de700eaf413",
+      "authorized": true
+    }
+  ],
+  "unexpectedChanges": 0,
+  "branch": "main",
+  "head": "d585e78c3fa8f01e62ae2ce70d8f859d97acbb58",
+  "diffCheckExit": 0,
+  "directDependenciesVerified": 16,
+  "manifestRootMatchesLock": true,
+  "installedVersionsMatchLock": true,
+  "T033T034MarkersUnchanged": true
+}

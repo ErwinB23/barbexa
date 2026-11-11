@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-11",
+  "originalFiles": 784,
+  "unchangedFiles": 783,
+  "differences": [
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "before": "2a44f8eceff4d87971c93a9ee122454e162002a6b40e87cb2d8632eb71ec2836",
+      "after": "c7ca3f6afd7583233ce30470d810a0e7992877d02c0df1de1c1a1e4fb3c7e86b",
+      "authorized": true
+    }
+  ],
+  "unexpectedChanges": 0,
+  "branch": "main",
+  "head": "d585e78c3fa8f01e62ae2ce70d8f859d97acbb58",
+  "testBuildPresent": false,
+  "tasksUnchanged": true,
+  "diffCheckExit": 0
+}

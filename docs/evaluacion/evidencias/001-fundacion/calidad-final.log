@@ -1,0 +1,502 @@
+
+> app-barberia@0.1.0 check
+> npm run typecheck && npm run lint && npm run format:check && npm run architecture:check && npm test
+
+
+> app-barberia@0.1.0 typecheck
+> tsc --noEmit && tsc -p tsconfig.core.json --noEmit
+
+
+> app-barberia@0.1.0 lint
+> eslint src scripts tests/architecture tests/presentation --max-warnings 0
+
+
+> app-barberia@0.1.0 format:check
+> prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> app-barberia@0.1.0 architecture:check
+> node scripts/check-architecture.mjs
+
+Arquitectura: modules=21 core=4 edges=37
+  src/app/+not-found.tsx [routes]
+  src/app/index.tsx [routes]
+  src/app/technical.tsx [routes]
+  src/app/_layout.tsx [routes]
+  src/composition/app-composition.ts [composition]
+  src/composition/app-provider.tsx [composition]
+  src/features/foundation/application/app-information-gateway.ts [application]
+  src/features/foundation/application/get-app-information.ts [application]
+  src/features/foundation/domain/app-information.ts [domain]
+  src/features/foundation/domain/validate-information-request.ts [domain]
+  src/features/foundation/infrastructure/local-app-information-adapter.ts [infrastructure]
+  src/features/foundation/presentation/information-context.ts [presentation]
+  src/features/foundation/presentation/not-found-screen.tsx [presentation]
+  src/features/foundation/presentation/technical-screen.tsx [presentation]
+  src/features/foundation/presentation/use-app-information.ts [presentation]
+  src/features/foundation/presentation/welcome-screen.tsx [presentation]
+  src/shared/ui/app-button.tsx [ui]
+  src/shared/ui/app-text.tsx [ui]
+  src/shared/ui/screen.tsx [ui]
+  src/shared/ui/status-message.tsx [ui]
+  src/shared/ui/tokens.ts [ui]
+
+> app-barberia@0.1.0 test
+> node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && node --test tests/presentation/use-app-information.test.mjs tests/presentation/shared-ui.test.mjs
+
+Fixtures temporales conservados: C:\Users\PREDATOR\AppData\Local\Temp\barberia-architecture-LPF5CS
+capas-validas: exit=0
+Arquitectura: modules=6 core=2 edges=6
+  src/app/index.ts [routes]
+  src/composition/app.ts [composition]
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+  src/features/sample/presentation/view.ts [presentation]
+
+alias-valido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+
+global-local-permitido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+
+externo-react-native: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/value.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/domain/value.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+externo-@supabase-supabase-js: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/value.ts -> @supabase/supabase-js: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/domain/value.ts -> @supabase/supabase-js: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> @supabase/supabase-js: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> @supabase/supabase-js: Dependencia externa alcanzable desde el núcleo
+
+externo-node-fs: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/value.ts -> node:fs: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/domain/value.ts -> node:fs: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+
+tipo-externo: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/application/use.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/application/use.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+reexport-externo: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/value.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/domain/value.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+alias-infra: exit=1
+Arquitectura: modules=3 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] src/features/sample/application/use.ts -> @/features/sample/infrastructure/adapter: application no puede depender de infrastructure (src/features/sample/infrastructure/adapter.ts)
+
+dominio-a-aplicacion: exit=1
+Arquitectura: modules=2 core=2 edges=2
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[LAYER] src/features/sample/domain/value.ts -> ../application/use: domain no puede depender de application (src/features/sample/application/use.ts)
+[CYCLE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> src/features/sample/application/use.ts: Ciclo de dependencias
+
+presentacion-a-infra: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+  src/features/sample/presentation/view.ts [presentation]
+[LAYER] src/features/sample/presentation/view.ts -> ../infrastructure/adapter: presentation no puede depender de infrastructure (src/features/sample/infrastructure/adapter.ts)
+
+infra-a-presentacion: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+  src/features/sample/presentation/view.ts [presentation]
+[LAYER] src/features/sample/infrastructure/adapter.ts -> ../presentation/view: infrastructure no puede depender de presentation (src/features/sample/presentation/view.ts)
+
+ruta-a-infra: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  src/app/index.ts [routes]
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] src/app/index.ts -> ../features/sample/infrastructure/adapter: routes no puede depender de infrastructure (src/features/sample/infrastructure/adapter.ts)
+
+otro-modulo: exit=1
+Arquitectura: modules=3 core=3 edges=1
+  src/features/other/domain/value.ts [domain]
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[LAYER] src/features/sample/application/use.ts -> ../../other/domain/value: application no puede depender de domain (src/features/other/domain/value.ts)
+
+transitivo-reexport: exit=1
+Arquitectura: modules=3 core=3 edges=2
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/bridge.ts [domain]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/bridge.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/domain/bridge.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> src/features/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/bridge.ts -> src/features/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> src/features/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+sin-resolver: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[UNRESOLVED] src/features/sample/application/use.ts -> ./absent: TypeScript no puede resolver la referencia
+
+import-type-query: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/application/use.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/application/use.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+require-externo: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/application/use.ts -> node:fs: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] src/features/sample/application/use.ts -> node:fs: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+
+dinamico-local-valido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+
+dinamico-no-literal-0: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[UNVERIFIABLE] src/features/sample/application/use.ts -> target: Import/require no literal: dependencia no verificable
+
+dinamico-no-literal-1: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[UNVERIFIABLE] src/features/sample/application/use.ts -> target: Import/require no literal: dependencia no verificable
+
+ciclo: exit=1
+Arquitectura: modules=3 core=3 edges=3
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/second.ts [domain]
+  src/features/sample/domain/value.ts [domain]
+[CYCLE] src/features/sample/domain/value.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> src/features/sample/domain/second.ts -> src/features/sample/domain/value.ts: Ciclo de dependencias
+
+global-fetch: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> fetch: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-XMLHttpRequest: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> XMLHttpRequest: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-WebSocket: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> WebSocket: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-process: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> process: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-eval: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> eval: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-globalThis: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_GLOBAL] src/features/sample/domain/value.ts -> globalThis: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+barrel-mixto: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/index.ts [unknown]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] src/features/sample/application/use.ts -> ../index: application no puede depender de unknown (src/features/sample/index.ts)
+[LAYER] src/features/sample/index.ts -> ubicación: Responsabilidad no identificada; evitar barrels que mezclan capas
+[LAYER] src/features/sample/index.ts -> ./infrastructure/adapter: unknown no puede depender de infrastructure (src/features/sample/infrastructure/adapter.ts)
+
+excluido-tsconfig: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[INCOMPLETE] src/features/sample/domain/value.ts -> tsconfig: Módulo fuente excluido de la configuración
+
+sintaxis-invalida: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[PARSE] src/features/sample/domain/value.ts -> AST: Variable declaration expected.
+
+nucleo-vacio: exit=1
+Arquitectura: modules=1 core=0 edges=0
+  src/shared/ui/text.ts [ui]
+[EMPTY_CORE] src -> núcleo: No hay módulos reales de dominio/aplicación para auditar
+
+src-vacio: exit=1
+Arquitectura: modules=0 core=0 edges=0
+[EMPTY_CORE] src -> núcleo: No hay módulos reales de dominio/aplicación para auditar
+
+sdk-en-adaptador: exit=0
+Arquitectura: modules=4 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+  src/features/sample/infrastructure/adapter.ts [infrastructure]
+  src/features/sample/presentation/view.ts [presentation]
+
+require-alias: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[UNVERIFIABLE] src/features/sample/domain/value.ts -> require: Alias o acceso indirecto a require no verificable
+
+referencia-tipos-node: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] src/features/sample/domain/value.ts -> node: Referencia de tipos externa prohibida en núcleo
+[CORE_TRANSITIVE] src/features/sample/application/use.ts -> src/features/sample/application/use.ts -> src/features/sample/domain/value.ts -> node: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] src/features/sample/domain/value.ts -> src/features/sample/domain/value.ts -> node: Dependencia externa alcanzable desde el núcleo
+
+referencia-lib-dom: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[CORE_LIB] src/features/sample/domain/value.ts -> dom: Biblioteca de plataforma prohibida en núcleo
+
+ruta-sdk: exit=1
+Arquitectura: modules=3 core=2 edges=1
+  src/app/index.ts [routes]
+  src/features/sample/application/use.ts [application]
+  src/features/sample/domain/value.ts [domain]
+[ROUTE_EXTERNAL] src/app/index.ts -> sdk: Las rutas solo usan navegación y composición de presentación
+
+✔ capas-validas (631.9528ms)
+✔ alias-valido (648.993ms)
+✔ global-local-permitido (638.1517ms)
+✔ externo-react-native (638.2728ms)
+✔ externo-@supabase-supabase-js (603.9243ms)
+✔ externo-node-fs (602.1898ms)
+✔ tipo-externo (599.7233ms)
+✔ reexport-externo (592.1181ms)
+✔ alias-infra (606.6811ms)
+✔ dominio-a-aplicacion (588.8577ms)
+✔ presentacion-a-infra (607.9519ms)
+✔ infra-a-presentacion (633.3648ms)
+✔ ruta-a-infra (612.8859ms)
+✔ otro-modulo (601.404ms)
+✔ transitivo-reexport (607.5217ms)
+✔ sin-resolver (604.3232ms)
+✔ import-type-query (611.7262ms)
+✔ require-externo (608.2426ms)
+✔ dinamico-local-valido (607.757ms)
+✔ dinamico-no-literal-0 (604.6999ms)
+✔ dinamico-no-literal-1 (685.0079ms)
+✔ ciclo (634.8478ms)
+✔ global-fetch (607.9891ms)
+✔ global-XMLHttpRequest (635.0164ms)
+✔ global-WebSocket (619.9325ms)
+✔ global-process (588.7464ms)
+✔ global-eval (589.6063ms)
+✔ global-globalThis (583.5123ms)
+✔ barrel-mixto (575.4527ms)
+✔ excluido-tsconfig (589.5935ms)
+✔ sintaxis-invalida (590.3286ms)
+✔ nucleo-vacio (596.2052ms)
+✔ src-vacio (269.4278ms)
+✔ sdk-en-adaptador (588.5788ms)
+✔ require-alias (612.9966ms)
+✔ referencia-tipos-node (654.3998ms)
+✔ referencia-lib-dom (622.359ms)
+✔ ruta-sdk (630.9445ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23023.9414
+Núcleo incluido en cobertura: ["src/features/foundation/application/get-app-information.ts","src/features/foundation/domain/validate-information-request.ts"]
+✔ composición real expone una función que obtiene los datos inyectados (2.233ms)
+✔ composición conserva validación de entrada sin exponer el adaptador (0.1891ms)
+✔ composición convierte la configuración inválida en resultado controlado (0.1644ms)
+text/background: 17.7397:1
+textSecondary/background: 10.3074:1
+error/background: 6.4700:1
+success/background: 7.1303:1
+text/surface: 16.1195:1
+textSecondary/surface: 9.3659:1
+error/surface: 5.8791:1
+success/surface: 6.4791:1
+onAction/action: 6.7016:1
+action/background: 6.7016:1
+action/surface: 6.0895:1
+textSecondary/surface: 9.3659:1
+onAction/action: 6.7016:1
+✔ contraste: negro/blanco 21, mismo color 1 y gris/blanco conocido (1.4962ms)
+✔ texto normal text/background >=4.5; grande >=3 (1.0073ms)
+✔ texto normal textSecondary/background >=4.5; grande >=3 (0.2294ms)
+✔ texto normal error/background >=4.5; grande >=3 (0.1128ms)
+✔ texto normal success/background >=4.5; grande >=3 (0.1268ms)
+✔ texto normal text/surface >=4.5; grande >=3 (0.1058ms)
+✔ texto normal textSecondary/surface >=4.5; grande >=3 (0.1081ms)
+✔ texto normal error/surface >=4.5; grande >=3 (0.0865ms)
+✔ texto normal success/surface >=4.5; grande >=3 (0.3238ms)
+✔ botón/texto/borde/foco onAction/action >=4.5 (0.648ms)
+✔ botón/texto/borde/foco action/background >=3 (0.1262ms)
+✔ botón/texto/borde/foco action/surface >=3 (0.9328ms)
+✔ botón/texto/borde/foco textSecondary/surface >=3 (0.0797ms)
+✔ botón/texto/borde/foco onAction/action >=3 (0.0634ms)
+✔ consulta con doble devuelve información y llama una sola vez (2.032ms)
+✔ consulta con adaptador local devuelve información y llama una sola vez (0.2706ms)
+✔ entrada inválida undefined no invoca gateway (0.1122ms)
+✔ entrada inválida null no invoca gateway (0.0602ms)
+✔ entrada inválida "" no invoca gateway (0.0866ms)
+✔ entrada inválida {} no invoca gateway (0.0794ms)
+✔ entrada inválida [] no invoca gateway (0.0563ms)
+✔ entrada inválida {"idioma":""} no invoca gateway (0.0637ms)
+✔ entrada inválida {"idioma":"en-US"} no invoca gateway (0.078ms)
+✔ entrada inválida {"idioma":1} no invoca gateway (0.0559ms)
+✔ rechazo se convierte en no-disponible sin filtrar detalles; reintento funciona (1.2745ms)
+✔ configuración local malformada termina en no-disponible (0.2282ms)
+✔ adaptador local devuelve los tres campos públicos inyectados (2.1681ms)
+✔ adaptador rechaza nombre malformado: "" (0.3997ms)
+✔ adaptador rechaza nombre malformado: "   " (0.1004ms)
+✔ adaptador rechaza nombre malformado: 42 (0.0716ms)
+✔ adaptador rechaza nombre malformado: null (0.0775ms)
+✔ adaptador rechaza nombre malformado: undefined (0.0702ms)
+✔ adaptador rechaza version malformado: "" (0.0727ms)
+✔ adaptador rechaza version malformado: "   " (1.0035ms)
+✔ adaptador rechaza version malformado: 42 (0.1411ms)
+✔ adaptador rechaza version malformado: null (0.1206ms)
+✔ adaptador rechaza version malformado: undefined (0.0581ms)
+✔ adaptador rechaza descripcion malformado: "" (0.081ms)
+✔ adaptador rechaza descripcion malformado: "   " (0.0487ms)
+✔ adaptador rechaza descripcion malformado: 42 (0.0703ms)
+✔ adaptador rechaza descripcion malformado: null (0.1549ms)
+✔ adaptador rechaza descripcion malformado: undefined (0.0634ms)
+✔ adaptador rechaza configuración ausente o incompleta: undefined (0.1085ms)
+✔ adaptador rechaza configuración ausente o incompleta: null (0.0636ms)
+✔ adaptador rechaza configuración ausente o incompleta: "configuracion-invalida" (0.0472ms)
+✔ adaptador rechaza configuración ausente o incompleta: [] (0.1345ms)
+✔ adaptador rechaza configuración ausente o incompleta: {} (0.1406ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"version":"0.1.0","descripcion":"Base local"} (0.072ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","descripcion":"Base local"} (0.0982ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","version":"0.1.0"} (0.0828ms)
+✔ acepta solicitud existente con idioma es-PE (1.1375ms)
+✔ rechaza solicitud malformada undefined (0.1273ms)
+✔ rechaza solicitud malformada null (0.08ms)
+✔ rechaza solicitud malformada "" (0.0596ms)
+✔ rechaza solicitud malformada "es-PE" (0.0747ms)
+✔ rechaza solicitud malformada 1 (0.0706ms)
+✔ rechaza solicitud malformada true (0.0681ms)
+✔ rechaza solicitud malformada [] (0.0498ms)
+✔ rechaza solicitud malformada {} (0.0743ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0523ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.0554ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0492ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.1141ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.0764ms)
+ℹ tests 67
+ℹ suites 0
+ℹ pass 67
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.34
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         | 
+ℹ  src                                 |        |          |         | 
+ℹ   features                           |        |          |         | 
+ℹ    foundation                        |        |          |         | 
+ℹ     application                      |        |          |         | 
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     domain                           |        |          |         | 
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report
+✔ StatusMessage: cuatro estados legibles, avisos controlados y recuperación accesible (99.7798ms)
+✔ AppButton: área mínima 48, disabled anunciado y contraste de foco interior (0.7304ms)
+✔ AppText y Screen: escala sin límite, sin truncado, scroll y zonas seguras (9.1671ms)
+✔ Bienvenida y recuperación conservan sus acciones con componentes definitivos (15.9956ms)
+✔ hook real: carga, exclusión de duplicados, error y reintento exitoso (98.6197ms)
+✔ composición real llega a éxito a través del contexto (12.9493ms)
+✔ respuesta obsoleta no sustituye la consulta nueva ni actualiza tras desmontar (2.9618ms)
+✔ pantalla comunica carga, datos reales y error con acción de recuperación (39.7224ms)
+✔ galería recupera y restablece solo su muestra sin reconsultar el caso de uso (5.0671ms)
+✔ hook convierte sin proveedor en error visible controlado (2.1319ms)
+✔ hook convierte rechazo inesperado en error visible controlado (1.861ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 521.9861
+ExitCode=0
+index.tsx: callback de ruta y botón de vista correctos
+technical.tsx: callback de ruta y botón de vista correctos
++not-found.tsx: callback de ruta y botón de vista correctos
+Fallback sin historial, Stack, ruta inicial y configuración Router correctos.
+Navegacion ExitCode=0
+Git diff --check ExitCode=0
+warning: in the working copy of 'docs/evaluacion/evidencias/001-fundacion/informe.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'specs/001-fundacion-expo-clean/tasks.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/features/foundation/presentation/technical-screen.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/presentation/use-app-information.test.mjs', LF will be replaced by CRLF the next time Git touches it
+
+CIERRE T032 - resultados declarados por el usuario, no ejecutados por Codex en este cierre:
+npm ls --depth=0: correcto.
+npm run check: ExitCode=0; 67 unitarias, 38 regresiones arquitectonicas y 11 de presentacion aprobadas. Resumen proporcionado, no salida completa.

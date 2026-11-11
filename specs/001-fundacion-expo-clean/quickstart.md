@@ -80,13 +80,22 @@ no introducir EAS ni JDK/Gradle como requisito del recorrido mínimo en disposit
    Verificar mensaje y «Volver al inicio». Usar URL real; no asumir puerto o IP.
 4. Activar TalkBack en Ajustes/Accesibilidad. Recorrer todos los controles, verificar lectura,
    orden, roles, estado deshabilitado, carga/error/éxito y acción de recuperación.
-5. Configurar fuente al 200 % y comprobar escala efectiva; si existe ADB, consultar primero
-   `adb shell settings get system font_scale`, cambiar a `2.0` y restaurar al finalizar.
-   Si el equipo no permite confirmar 200 %, declarar ese criterio pendiente, no aproximarlo.
+5. Para esta fundación, comprobar la interfaz al tamaño máximo de texto disponible
+   en el Android identificado: legibilidad, controles funcionales y ausencia de
+   recortes/superposiciones. Registrar el origen manual y complementar con pruebas
+   de componentes/contraste. No equiparar máximo a 200 % ni inventar mediciones.
+   La validación instrumental exacta al 200 % queda para una etapa futura,
+   conforme a la enmienda autorizada de SC-005; no bloquea T035 revisada.
 6. Verificar zonas seguras, scroll, controles >=48 dp y contraste de todos los pares utilizados.
    Registrar medidas y ratios; la captura por sí sola no demuestra contraste ni accesibilidad.
-7. Con bundle cargado, desconectar acceso a internet conservando la conexión local necesaria
-   a Metro; recorrer vistas y reintentar consulta local. No exigir arranque offline de Expo Go.
+   Para T034, por decisión documentada del responsable, se acepta comprobación técnica
+   de mínimos configurados y zonas seguras junto con uso manual TalkBack sin obstrucciones;
+   no se exige nueva medición instrumental nativa. Registrar esa limitación sin presentar
+   configuración como dimensiones medidas. Esto no modifica la validación de T035.
+7. Con la aplicación previamente cargada, desconectar acceso a internet y comprobar
+   información y controles locales. No exigir acceso simultáneo a Metro ni arranque offline.
+   Ajuste de T033 autorizado por el responsable del proyecto; justificación y evidencia
+   en `docs/evaluacion/evidencias/001-fundacion/android-final.md`.
 
 Guardar resultados por FR/SC, fecha America/Lima, HEAD + diff local, comandos/exit codes,
 versiones, logs sanitizados, capturas y límites. Véase [matriz](validation.md).

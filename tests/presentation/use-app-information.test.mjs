@@ -37,7 +37,18 @@ function load(file) {
       name === './use-app-information'
     )
       return { useAppInformation: () => viewState };
-    if (name.startsWith('@/shared/ui/'))
+    if (name === '@/shared/ui/status-message')
+      return load(path.join(root, 'src/shared/ui/status-message.tsx'));
+    if (name === 'react-native')
+      return {
+        View: ({ children }) => React.createElement('div', null, children),
+        StyleSheet: { create: (styles) => styles },
+      };
+    if (
+      name.startsWith('@/shared/ui/') ||
+      (file.endsWith('status-message.tsx') &&
+        ['./app-text', './app-button'].includes(name))
+    )
       return {
         AppText: ({ children }) => React.createElement('span', null, children),
         Screen: ({ children }) =>
@@ -314,6 +325,15 @@ test('pantalla comunica carga, datos reales y error con acción de recuperación
       }),
     );
     assert.ok(html.includes(expected), html);
+    for (const label of [
+      'Muestras de componentes',
+      'Muestra: carga',
+      'Muestra: vacío',
+      'Muestra: error',
+      'Muestra: éxito',
+    ]) {
+      assert.ok(html.includes(label), `Galería ausente: ${label}`);
+    }
     const back = buttons.find((button) => button.label === 'Volver al inicio');
     assert.ok(back);
     back.onPress();
@@ -323,6 +343,59 @@ test('pantalla comunica carga, datos reales y error con acción de recuperación
   }
   assert.equal(retries, 1);
   assert.equal(backs, 3);
+});
+
+test('galería recupera y restablece solo su muestra sin reconsultar el caso de uso', async () => {
+  const { TechnicalScreen } = load(
+    path.join(
+      root,
+      'src/features/foundation/presentation/technical-screen.tsx',
+    ),
+  );
+  let queryRetries = 0;
+  viewState = {
+    estado: { estado: 'exito', informacion: info },
+    reintentar: () => {
+      queryRetries++;
+    },
+  };
+  let tree;
+  function Probe() {
+    tree = TechnicalScreen({ onBack: () => {} });
+    return null;
+  }
+  function nodes(element) {
+    if (!element || typeof element !== 'object') return [];
+    return [
+      element,
+      ...React.Children.toArray(element.props?.children).flatMap(nodes),
+    ];
+  }
+  const renderer = createRoot(container());
+  try {
+    await act(async () => renderer.render(React.createElement(Probe)));
+    const sample = nodes(tree).find(
+      (n) => n.props.retryLabel === 'Reintentar muestra',
+    );
+    assert.ok(sample);
+    await act(async () => sample.props.onRetry());
+    assert.ok(
+      nodes(tree).some(
+        (n) => n.props.message === 'Muestra recuperada correctamente.',
+      ),
+    );
+    const reset = nodes(tree).find(
+      (n) => n.props.label === 'Restablecer muestra de error',
+    );
+    assert.ok(reset);
+    await act(async () => reset.props.onPress());
+    assert.ok(
+      nodes(tree).some((n) => n.props.retryLabel === 'Reintentar muestra'),
+    );
+    assert.equal(queryRetries, 0);
+  } finally {
+    await act(async () => renderer.unmount());
+  }
 });
 
 for (const [name, consultar] of [

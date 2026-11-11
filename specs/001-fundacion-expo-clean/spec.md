@@ -68,7 +68,7 @@ Android; ejecutar todos los controles locales y revisar su resultado.
 1. **Given** las dos vistas técnicas, **When** se revise su presentación, **Then** comparten
    colores, tipografía y espaciados semánticos; el control de navegación y los mensajes
    de estado son reutilizables y no dependen solo del color (FR-008).
-2. **Given** TalkBack activo y texto al 200 %, **When** se recorra la muestra, **Then** los
+2. **Given** TalkBack activo y texto al máximo disponible en el dispositivo Android identificado, **When** se recorra la muestra, **Then** los
    controles tienen nombre y rol, se alcanza todo el contenido sin recortes impeditivos
    y las áreas táctiles son de al menos 48 × 48 unidades lógicas (FR-009).
 3. **Given** la base y su entorno documentado, **When** se ejecuten tipos, lint, formato y
@@ -143,11 +143,18 @@ Android; ejecutar todos los controles locales y revisar su resultado.
 - **SC-004**: Todos los controles de calidad definidos finalizan correctamente y las tres situaciones
   de la operación técnica (éxito, entrada inválida, fallo externo) quedan verificadas (US2, US3).
 - **SC-005**: El 100 % de los controles interactivos de la muestra cumple tamaño, identificación y
-  contraste exigidos; el recorrido completo es utilizable con lectura asistida y texto al 200 % (US3).
+  contraste exigidos; el recorrido completo es utilizable con lectura asistida y texto al máximo disponible en el dispositivo Android identificado (US3). Para esta fundación se acepta evidencia manual declarada y comprobaciones técnicas/automatizadas; no se exige medición nativa del porcentaje ni se equipara ese máximo al 200 %.
 - **SC-006**: Cada requisito y resultado tiene evidencia o estado pendiente explícito; ningún criterio
   de la rúbrica se declara validado por el solo hecho de existir esta especificación (US1–US3).
 
 ## Assumptions
+
+Enmienda autorizada por el responsable del proyecto — 11/11/2026: el escenario 2
+de US3 y SC-005 sustituyen el umbral exacto 200 % por el máximo disponible en el
+Android identificado. Motivo: alcance inicial de la fundación y evidencia de uso
+real complementada por pruebas de componentes/contraste. No cambian FR-009,
+48×48, contraste, lectura asistida ni arquitectura. El 200 % exacto pasa a validación
+futura, no ejecutada. Evidencia y límites: `docs/evaluacion/evidencias/001-fundacion/android-texto-contraste.md`.
 
 - Esta tarea crea solo especificación, checklist y localizador de feature. La inicialización y
   todos los criterios anteriores son obligaciones para una implementación posterior.

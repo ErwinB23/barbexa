@@ -1,0 +1,126 @@
+T035: comprobaciones automatizadas de apoyo; no prueba Android ni escala 2.0.
+
+node scripts/run-unit-tests.mjs
+Núcleo incluido en cobertura: ["src/features/foundation/application/get-app-information.ts","src/features/foundation/domain/validate-information-request.ts"]
+✔ composición real expone una función que obtiene los datos inyectados (2.8228ms)
+✔ composición conserva validación de entrada sin exponer el adaptador (0.1882ms)
+✔ composición convierte la configuración inválida en resultado controlado (0.22ms)
+text/background: 17.7397:1
+textSecondary/background: 10.3074:1
+error/background: 6.4700:1
+success/background: 7.1303:1
+text/surface: 16.1195:1
+textSecondary/surface: 9.3659:1
+error/surface: 5.8791:1
+success/surface: 6.4791:1
+onAction/action: 6.7016:1
+action/background: 6.7016:1
+action/surface: 6.0895:1
+textSecondary/surface: 9.3659:1
+onAction/action: 6.7016:1
+✔ contraste: negro/blanco 21, mismo color 1 y gris/blanco conocido (0.8082ms)
+✔ texto normal text/background >=4.5; grande >=3 (0.6694ms)
+✔ texto normal textSecondary/background >=4.5; grande >=3 (0.1473ms)
+✔ texto normal error/background >=4.5; grande >=3 (0.0954ms)
+✔ texto normal success/background >=4.5; grande >=3 (0.3951ms)
+✔ texto normal text/surface >=4.5; grande >=3 (0.1361ms)
+✔ texto normal textSecondary/surface >=4.5; grande >=3 (0.252ms)
+✔ texto normal error/surface >=4.5; grande >=3 (0.1308ms)
+✔ texto normal success/surface >=4.5; grande >=3 (0.1563ms)
+✔ botón/texto/borde/foco onAction/action >=4.5 (0.2825ms)
+✔ botón/texto/borde/foco action/background >=3 (0.3506ms)
+✔ botón/texto/borde/foco action/surface >=3 (0.6277ms)
+✔ botón/texto/borde/foco textSecondary/surface >=3 (0.0454ms)
+✔ botón/texto/borde/foco onAction/action >=3 (0.0359ms)
+✔ consulta con doble devuelve información y llama una sola vez (1.121ms)
+✔ consulta con adaptador local devuelve información y llama una sola vez (0.1537ms)
+✔ entrada inválida undefined no invoca gateway (0.0787ms)
+✔ entrada inválida null no invoca gateway (0.0422ms)
+✔ entrada inválida "" no invoca gateway (0.063ms)
+✔ entrada inválida {} no invoca gateway (0.0559ms)
+✔ entrada inválida [] no invoca gateway (0.0396ms)
+✔ entrada inválida {"idioma":""} no invoca gateway (0.0451ms)
+✔ entrada inválida {"idioma":"en-US"} no invoca gateway (0.0579ms)
+✔ entrada inválida {"idioma":1} no invoca gateway (0.0401ms)
+✔ rechazo se convierte en no-disponible sin filtrar detalles; reintento funciona (0.8581ms)
+✔ configuración local malformada termina en no-disponible (0.1549ms)
+✔ adaptador local devuelve los tres campos públicos inyectados (1.2654ms)
+✔ adaptador rechaza nombre malformado: "" (0.2904ms)
+✔ adaptador rechaza nombre malformado: "   " (0.0712ms)
+✔ adaptador rechaza nombre malformado: 42 (0.0484ms)
+✔ adaptador rechaza nombre malformado: null (0.0964ms)
+✔ adaptador rechaza nombre malformado: undefined (0.0779ms)
+✔ adaptador rechaza version malformado: "" (0.0568ms)
+✔ adaptador rechaza version malformado: "   " (0.0727ms)
+✔ adaptador rechaza version malformado: 42 (0.0805ms)
+✔ adaptador rechaza version malformado: null (0.0749ms)
+✔ adaptador rechaza version malformado: undefined (0.0431ms)
+✔ adaptador rechaza descripcion malformado: "" (0.0585ms)
+✔ adaptador rechaza descripcion malformado: "   " (0.0339ms)
+✔ adaptador rechaza descripcion malformado: 42 (0.0435ms)
+✔ adaptador rechaza descripcion malformado: null (0.0552ms)
+✔ adaptador rechaza descripcion malformado: undefined (0.039ms)
+✔ adaptador rechaza configuración ausente o incompleta: undefined (0.0872ms)
+✔ adaptador rechaza configuración ausente o incompleta: null (0.0432ms)
+✔ adaptador rechaza configuración ausente o incompleta: "configuracion-invalida" (0.0445ms)
+✔ adaptador rechaza configuración ausente o incompleta: [] (0.0364ms)
+✔ adaptador rechaza configuración ausente o incompleta: {} (0.0325ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"version":"0.1.0","descripcion":"Base local"} (0.0332ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","descripcion":"Base local"} (0.0487ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","version":"0.1.0"} (0.0504ms)
+✔ acepta solicitud existente con idioma es-PE (0.7861ms)
+✔ rechaza solicitud malformada undefined (0.0935ms)
+✔ rechaza solicitud malformada null (0.0576ms)
+✔ rechaza solicitud malformada "" (0.0411ms)
+✔ rechaza solicitud malformada "es-PE" (0.0552ms)
+✔ rechaza solicitud malformada 1 (0.0534ms)
+✔ rechaza solicitud malformada true (0.0508ms)
+✔ rechaza solicitud malformada [] (0.0322ms)
+✔ rechaza solicitud malformada {} (0.0485ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0348ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.0285ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0298ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.0256ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.025ms)
+ℹ tests 67
+ℹ suites 0
+ℹ pass 67
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.5155
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         | 
+ℹ  src                                 |        |          |         | 
+ℹ   features                           |        |          |         | 
+ℹ    foundation                        |        |          |         | 
+ℹ     application                      |        |          |         | 
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     domain                           |        |          |         | 
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 | 
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report
+
+ExitCode=0
+
+node --test tests/presentation/shared-ui.test.mjs
+✔ StatusMessage: cuatro estados legibles, avisos controlados y recuperación accesible (61.9081ms)
+✔ AppButton: área mínima 48, disabled anunciado y contraste de foco interior (0.5327ms)
+✔ AppText y Screen: escala sin límite, sin truncado, scroll y zonas seguras (4.5478ms)
+✔ Bienvenida y recuperación conservan sus acciones con componentes definitivos (8.8674ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 300.8003
+
+ExitCode=0

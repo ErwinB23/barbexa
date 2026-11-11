@@ -35,7 +35,8 @@ function load(file) {
     if (name === 'expo-router') return { useRouter: () => router, Stack };
     if (name === 'react-native') return { View: ({ children }) => React.createElement('div', null, children), StyleSheet: { create: (styles) => styles } };
     // No se renderizan primitivas nativas en Node: se inspeccionan props y callbacks.
-    if (name.startsWith('@/shared/ui/') && !name.endsWith('/tokens')) {
+    if (name === '@/shared/ui/status-message') return load(path.join(root, 'src/shared/ui/status-message.tsx'));
+    if ((name.startsWith('@/shared/ui/') && !name.endsWith('/tokens')) || (file.endsWith('status-message.tsx') && ['./app-text', './app-button'].includes(name))) {
       return {
         AppText: ({ children }) => React.createElement('span', null, children),
         Screen: ({ children }) => React.createElement('section', null, children),
@@ -67,8 +68,11 @@ for (const [route, callback, expected] of [
   renderedButtons.length = 0;
   const { AppProvider } = load(path.join(root, 'src/composition/app-provider.tsx'));
   renderToStaticMarkup(React.createElement(AppProvider, null, element));
-  assert.equal(renderedButtons.length, 1);
-  renderedButtons[0].onPress();
+  const label = route === 'index.tsx' ? 'Ver base técnica' : 'Volver al inicio';
+  const navigationButtons = renderedButtons.filter(button => button.label === label);
+  assert.equal(navigationButtons.length, 1);
+  assert.equal(renderedButtons.length, route === 'technical.tsx' ? 3 : 1);
+  navigationButtons[0].onPress();
   assert.deepEqual(calls.pop(), expected);
   console.log(`${route}: callback de ruta y botón de vista correctos`);
 }

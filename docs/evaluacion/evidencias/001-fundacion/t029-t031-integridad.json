@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-11",
+  "originalFiles": 769,
+  "unchangedFiles": 763,
+  "differences": [
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "before": "157e69346bdb2d4a08809f48acf686e6c2bc784454b814adb83faa65f34d3e9e",
+      "after": "2a44f8eceff4d87971c93a9ee122454e162002a6b40e87cb2d8632eb71ec2836",
+      "authorized": true
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs",
+      "before": "4b1c1ce532921aeded0b1839969fdad6ed63e55906e86b1a6c8235c897171cd2",
+      "after": "286b9da7d86756f120a18038805d605ce1c5a22bbc96b65c7437a2a84a95c140",
+      "authorized": true
+    },
+    {
+      "path": "package.json",
+      "before": "7fa16d3f7f90a076a4e38e600a401a562b9d0d851ac22dba566f548c92fd10bc",
+      "after": "3f3c8e39b0f441ca410b389f56a4ed14143d506d91967b39f77746e5fb64443d",
+      "authorized": true
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/tasks.md",
+      "before": "69eb5ddc5dd4446f61cbcb33a87db226982aa9775745771d40f0852fe20417fd",
+      "after": "ccbc99a087150b7ccbc4e22d9b9b0787084ee1a7c32b1d2720c7c586cc5a9d20",
+      "authorized": true
+    },
+    {
+      "path": "src/features/foundation/presentation/technical-screen.tsx",
+      "before": "336436ce739abb4a02c26a1c2ca76625cb75295a09f2fd8394b2be631ff2a9ad",
+      "after": "e93224d6c12ac2ab602bc8823e6bd209308028f02782869680d04045818f1895",
+      "authorized": true
+    },
+    {
+      "path": "tests/presentation/use-app-information.test.mjs",
+      "before": "daa6e89729afbf9d3bdccc69068b9e0ae79136446bfe2800dfc55d247420e4de",
+      "after": "8fb3079708881767e87b88384f48549a4b6d9f13b764c34bf0642a7f4882ebb9",
+      "authorized": true
+    }
+  ],
+  "unexpectedChanges": 0,
+  "branch": "main",
+  "head": "d585e78c3fa8f01e62ae2ce70d8f859d97acbb58",
+  "testBuildPresent": false
+}

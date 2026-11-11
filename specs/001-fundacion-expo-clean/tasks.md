@@ -100,26 +100,26 @@ Integrar T027 no modifica los contratos de navegación de US1.
 ## Phase 5: User Story 3 — accesibilidad y calidad (Priority: P2) — 7 tareas
 
 **Goal**: Muestra reusable y accesible. **Independent Test**: controles automáticos aprobados y
-recorrido TalkBack/texto 200 % con medidas y capturas; no basta una revisión visual de código.
+recorrido TalkBack/texto al máximo disponible en el Android identificado, con evidencia manual y técnica conforme a SC-005 revisado; no basta una revisión visual de código.
 
 ### Tests for User Story 3
 
-- [ ] T029 [US3] Escribir y ejecutar `tests/unit/contrast.test.ts` con cálculo de luminancia/contraste y pares conocidos, más todos los pares semánticos usados de `src/shared/ui/tokens.ts`; exigir texto normal >=4.5:1, grande >=3:1 y controles/foco >=3:1, registrando cualquier fallo antes de ajustar tokens (FR-009, SC-005; depende T013).
+- [x] T029 [US3] Escribir y ejecutar `tests/unit/contrast.test.ts` con cálculo de luminancia/contraste y pares conocidos, más todos los pares semánticos usados de `src/shared/ui/tokens.ts`; exigir texto normal >=4.5:1, grande >=3:1 y controles/foco >=3:1, registrando cualquier fallo antes de ajustar tokens (FR-009, SC-005; depende T013).
 
 ### Implementation for User Story 3
 
-- [ ] T030 [US3] Completar `src/shared/ui/status-message.tsx` para carga, vacío, error con recuperación y éxito; revisar tokens de T013 y componentes para roles, nombres, foco, disabled, avisos sin repetición, texto escalable y 48×48 dp; resolver ratios fallidos sin cambiar el contrato (FR-008, FR-009; depende T029).
-- [ ] T031 [US3] Completar galería visual etiquetada de cuatro estados y consulta real en `src/features/foundation/presentation/technical-screen.tsx`; reutilizar StatusMessage sin forzar fallos en dominio ni inventar negocio y comprobar bienvenida/recuperación con los componentes definitivos (FR-008, FR-009; depende T030, T027).
+- [x] T030 [US3] Completar `src/shared/ui/status-message.tsx` para carga, vacío, error con recuperación y éxito; revisar tokens de T013 y componentes para roles, nombres, foco, disabled, avisos sin repetición, texto escalable y 48×48 dp; resolver ratios fallidos sin cambiar el contrato (FR-008, FR-009; depende T029).
+- [x] T031 [US3] Completar galería visual etiquetada de cuatro estados y consulta real en `src/features/foundation/presentation/technical-screen.tsx`; reutilizar StatusMessage sin forzar fallos en dominio ni inventar negocio y comprobar bienvenida/recuperación con los componentes definitivos (FR-008, FR-009; depende T030, T027).
 
 ### Automated Verification
 
-- [ ] T032 [US3] Ejecutar `npm run check`, `npx expo install --check`, `npx expo-doctor` y exportación Android de quickstart.md; guardar `E/calidad-final.log`, cobertura y `E/empaquetado-android.log`, corregir fallos y verificar hashes protegidos; exportar no acredita ejecución Android (FR-002, FR-005, FR-010, SC-003, SC-004; depende T031, T028).
+- [x] T032 [US3] Ejecutar `npm run check`, `npx expo install --check`, `npx expo-doctor` y exportación Android de quickstart.md; guardar `E/calidad-final.log`, cobertura y `E/empaquetado-android.log`, corregir fallos y verificar hashes protegidos; exportar no acredita ejecución Android (FR-002, FR-005, FR-010, SC-003, SC-004; depende T031, T028).
 
 ### Manual Android
 
-- [ ] T033 [US3] Repetir en Android los tres recorridos, fallback, reinicio y consulta sin credenciales sobre la versión final; comprobar vistas locales sin internet manteniendo Metro accesible; registrar versión/diff y resultados en `E/android-final.md` con nuevas capturas (FR-003, FR-007, FR-011, SC-002; depende T032, T018).
-- [ ] T034 [US3] Activar TalkBack y recorrer todos los controles/estados finales: orden, nombre/rol, foco, disabled, carga/error/éxito, recuperación; medir áreas >=48 dp y zonas seguras; registrar observaciones y correcciones en `E/android-talkback.md` (FR-008, FR-009, SC-005; depende T033).
-- [ ] T035 [US3] Configurar y comprobar fuente efectiva al 200 %, recorrer todo el contenido sin recortes impeditivos, revisar scroll y restaurar ajuste original; registrar escala antes/durante/después, medidas, ratios y capturas en `E/android-texto-contraste.md`; dejar pendiente si no puede acreditarse el 200 % (FR-009, SC-005; depende T034).
+- [x] T033 [US3] Repetir en Android los tres recorridos, fallback, reinicio y consulta sin credenciales sobre la versión final; comprobar información y controles locales de la aplicación previamente cargada sin acceso a internet, sin exigir acceso simultáneo a Metro ni acreditar arranque offline; registrar versión/diff y resultados en `E/android-final.md` con nuevas capturas (FR-003, FR-007, FR-011, SC-002; depende T032, T018). Ajuste autorizado y justificado en `E/android-final.md`.
+- [x] T034 [US3] Acreditar accesibilidad de controles/estados finales (orden, nombre/rol, foco, disabled, carga/error/éxito, recuperación) mediante recorrido TalkBack declarado por el usuario y comprobaciones técnicas; verificar mínimos configurados >=48×48 dp, zonas seguras y uso manual sin obstrucciones, sin exigir nueva medición instrumental nativa; registrar evidencia y límites en `E/android-talkback.md` (FR-008, FR-009, SC-005; depende T033). Método de evidencia ajustado por decisión explícita del responsable, documentada en ese registro; no sustituye T035 ni acredita SC-005 completo.
+- [x] T035 [US3] Acreditar uso de la interfaz final al máximo de fuente disponible en el Android identificado: textos legibles y comprensibles, botones visibles y funcionales, sin recortes, superposiciones ni errores; complementar con comprobaciones existentes de escalado/scroll y contraste y registrar evidencia, capturas disponibles y límites en `E/android-texto-contraste.md`. No exigir medición nativa ni escala/restauración instrumentadas; registrar 200 % exacto como validación futura no ejecutada (FR-009, SC-005 revisado por autorización del responsable; depende T034).
 
 **Checkpoint**: Si T033–T035 detectan cambios necesarios, corregir dentro de alcance y repetir los
 controles afectados de T032 y recorridos impactados; registrar la versión realmente comprobada.

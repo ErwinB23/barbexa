@@ -1,0 +1,21 @@
+✔ StatusMessage: cuatro estados legibles, avisos controlados y recuperación accesible (62.0309ms)
+✔ AppButton: área mínima 48, disabled anunciado y contraste de foco interior (1.3467ms)
+✔ AppText y Screen: escala sin límite, sin truncado, scroll y zonas seguras (4.9023ms)
+✔ Bienvenida y recuperación conservan sus acciones con componentes definitivos (9.4956ms)
+✔ hook real: carga, exclusión de duplicados, error y reintento exitoso (56.8615ms)
+✔ composición real llega a éxito a través del contexto (8.1855ms)
+✔ respuesta obsoleta no sustituye la consulta nueva ni actualiza tras desmontar (1.5321ms)
+✔ pantalla comunica carga, datos reales y error con acción de recuperación (23.6375ms)
+✔ galería recupera y restablece solo su muestra sin reconsultar el caso de uso (3.7051ms)
+✔ hook convierte sin proveedor en error visible controlado (1.3709ms)
+✔ hook convierte rechazo inesperado en error visible controlado (0.8278ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 338.3274
+
+ExitCode=0

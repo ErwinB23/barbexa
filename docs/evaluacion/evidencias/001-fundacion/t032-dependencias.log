@@ -1,0 +1,28 @@
+npx.cmd : AggregateError
+En línea: 2 Carácter: 1
++ & npx.cmd --no-install expo install --check 2>&1 | Tee-Object -FilePa ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (AggregateError:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+AggregateError [EACCES]: 
+    at internalConnectMultiple (node:net:1430:18)
+    at afterConnectMultiple (node:net:2099:7)
+ExitCode=1
+Reintento con acceso de red autorizado (sin instalar paquetes)
+npx.cmd : The following packages should be updated for best compatibility with the installed expo version:
+En línea: 2 Carácter: 157
++ ...  paquetes)'; & npx.cmd --no-install expo install --check 2>&1 | Tee-O ...
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (The following p...d expo version::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  expo@58.0.23 - expected version: ~58.0.24
+  expo-router@58.0.30 - expected version: ~58.0.31
+  expo-constants@58.0.15 - expected version: ~58.0.16
+  expo-linking@58.0.16 - expected version: ~58.0.17
+Your project may not work correctly until you install the expected versions of the packages.
+Found outdated dependencies
+ExitCode=1
+
+CIERRE T032 - usuario reporta npx expo install --check: Dependencies are up to date. No ejecutado por Codex en este cierre.
