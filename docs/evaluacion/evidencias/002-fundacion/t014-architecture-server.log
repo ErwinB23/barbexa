@@ -1,0 +1,8 @@
+COMMAND: scripts/check-server-architecture.mjs
+Arquitectura: modules=4 core=4 edges=5
+  supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts [application]
+  supabase/functions/_shared/tenant-foundation/application/foundation-provisioning-gateway.ts [application]
+  supabase/functions/_shared/tenant-foundation/domain/types.ts [domain]
+  supabase/functions/_shared/tenant-foundation/domain/validation.ts [domain]
+
+EXIT=0

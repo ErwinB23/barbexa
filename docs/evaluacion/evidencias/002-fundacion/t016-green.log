@@ -1,0 +1,11 @@
+running 4 tests from ./tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (18ms)
+Auth invalid anonymous malformed and provider errors ... ok (2ms)
+RPC service transport separate and DTO mapped for both key modes ... ok (318µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (23ms)
+
+ok | 4 passed | 0 failed (52ms)
+
+Check tests/server/tenant-foundation/adapters.test.ts
+
+EXIT=0

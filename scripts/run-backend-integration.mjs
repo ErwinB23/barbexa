@@ -57,18 +57,34 @@ function main() {
     url: process.env.BARBERIA_002_URL,
     projectId: process.env.BARBERIA_002_PROJECT_ID,
   });
-  const scenarios = [
-    'profiles.test.mjs',
-    'barbershops.test.mjs',
-    'authorization.test.mjs',
-  ].map((f) => path.join(root, 'tests/integration/tenant-foundation', f));
+  const selected = process.argv.slice(2);
+  if (selected.some((arg) => arg !== '--profiles'))
+    throw Error('NOT_READY_BACKEND_SCENARIOS');
+  const scenarios = (
+    selected.includes('--profiles')
+      ? ['profiles.test.mjs']
+      : ['profiles.test.mjs', 'barbershops.test.mjs', 'authorization.test.mjs']
+  ).map((f) => path.join(root, 'tests/integration/tenant-foundation', f));
   if (scenarios.some((f) => !fs.existsSync(f)))
     throw Error('NOT_READY_BACKEND_SCENARIOS');
   // These future suites must verify the actual stack identity before administrative setup.
-  runChecked(process.execPath, ['--test', ...scenarios], {
-    cwd: root,
-    timeout: 180000,
-  });
+  const report = runChecked(
+    process.execPath,
+    ['--test', '--test-reporter=tap', ...scenarios],
+    {
+      cwd: root,
+      timeout: 180000,
+    },
+  );
+  // Re-emit only successful fixed test labels/counters, never provider output or credentials.
+  for (const line of report.split('\n')) {
+    if (
+      /^\s*(ok \d+ - [A-Za-z0-9 /:,.()_-]+|# (tests|pass|fail|skipped) \d+)\s*$/.test(
+        line,
+      )
+    )
+      console.log(line.trim());
+  }
 }
 
 if (

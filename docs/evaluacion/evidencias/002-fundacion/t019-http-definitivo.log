@@ -1,0 +1,15 @@
+COMMAND: node scripts/run-backend-integration.mjs --profiles
+ok 1 - own absence ensure idempotence read and PATCH null/omitted
+ok 2 - other profile hidden and unchanged despite forged admin metadata
+ok 3 - body impersonation extra fields invalid JSON and types rejected
+ok 4 - privileged RPC direct INSERT DELETE and id mutation denied
+ok 5 - missing altered expired and independent-key JWT denied
+ok 6 - C1 simultaneous ensure creates one profile and never overwrites winner
+ok 7 - 8 KiB and unsupported method rejected on real handler
+ok 1 - real Auth Edge PostgREST profiles and C1
+# tests 8
+# pass 8
+# fail 0
+# skipped 0
+
+EXIT=0

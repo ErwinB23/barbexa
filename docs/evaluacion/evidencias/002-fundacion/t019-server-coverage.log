@@ -1,0 +1,9 @@
+COMMAND: coverage --include=.*tenant-foundation/(domain|application)/.* .artifacts/t019-server-coverage
+| File                              | Branch % | Function % | Line % |
+| --------------------------------- | -------- | ---------- | ------ |
+| application/ensure-own-profile.ts |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                   |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts              |    100.0 |      100.0 |  100.0 |
+| All files                         |    100.0 |      100.0 |  100.0 |
+
+EXIT=0

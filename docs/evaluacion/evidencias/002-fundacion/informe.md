@@ -302,3 +302,52 @@ conservados. [t008-t011-integridad.json](t008-t011-integridad.json) registra el 
 Rama main, HEAD 9938bb842683fcd6b7a3fd3ab5e8dd1711234347 sin cambios. Veinte enlaces locales
 del quickstart/local.md comprobados existentes; `git diff --check` exit 0 (advertencias LF/CRLF
 sin errores de whitespace). Sin commit ni push.
+
+## Bloque T012–T015 — 12/11/2026
+
+Inicio limpio main/eb2d605. T012 y T014 completadas; T013 preparada parcialmente pero
+bloqueada por Docker/API local inaccesibles; T015 no ejecutada por depender de T013.
+[Detalle, comandos, errores y límites](t012-t015.md).
+
+Cliente: 73/73 unitarias (seis nuevas), exit 0. Servidor: 3/3 reglas puras, exit 0;
+tres contratos HTTP anticipados continúan RED hasta T017. Cobertura de ambos núcleos
+nuevos medida por separado: 100 % líneas/funciones/ramas, sin atribuirla a SQL/HTTP/RLS.
+Tipos, lint, formato y ambos checkers exit 0; servidor con cuatro módulos de núcleo reales.
+No se modificaron dependencias, migraciones previas ni 001. Ninguna migración nueva o SQL
+aplicados; ningún contenedor modificado. No fue posible cotejar nuevamente metadatos del
+entorno antiguo porque Docker no responde. Persisten nueve avisos moderados sin remediación.
+
+Verificación final del bloque: `git diff --check` exit 0; revisión adicional de archivos nuevos
+sin hallazgos de secretos ni espacios finales. Los únicos archivos previos modificados son
+este informe y las casillas T012/T014 de tasks.md. Rama main/eb2d605 conservada; sin commit/push.
+
+## Continuaci?n T013/T015 ? 12/11/2026
+
+T013 y T015 completadas; supera el bloqueo hist?rico de la ejecuci?n previa.
+[Detalle y l?mites](t013-t015-cierre.md). RED SQL significativo: 23 assertions/12 fallos;
+migraci?n 20261113035717 aplicada con migration up solo en app-barberia-002-local:54422.
+GREEN: 39 perfiles + 118 esquema = 157/157, exit 0. Lint/advisors/migration list y controles
+de calidad aplicables exit 0. Tres denegaciones REST an?nimas aprobadas; dos solicitudes
+Edge reciben 503 por runtime detenido, por lo que no acreditan JWT/handler. Composici?n
+cliente y contratos HTTP siguen pendientes. Edge no fue reiniciado y sus logs no permiten
+atribuir una causa definitiva a exit 255. Los metadatos de 12 contenedores antiguos y ocho
+nuevos permanecen iguales; ninguna operaci?n modific? contenedores ni datos antiguos.
+No quedaron perfiles/usuarios de prueba. Sin reset, remoto, dependencias, commit o push.
+T016 es la siguiente tarea, sin ejecutar. Persisten nueve avisos npm moderados.
+
+## Bloque T016?T019 ? 12/11/2026
+
+T016?T019 completadas. [Detalle y l?mites de la verificaci?n](perfiles.md).
+Implementados adaptadores Auth/RPC, handler ensure-profile, composiciones servidor/cliente
+y adaptador HTTP cliente. Edge nuevo recuperado con functions serve; verifyJWT=true efectivo.
+Sin reiniciar el stack; doce contenedores antiguos y siete servicios nuevos ajenos a Edge
+con metadatos estables preservados. No se compartieron redes/vol?menes antiguos.
+Npm test exit 0: 75 unitarias, 38 arquitectura cliente, 45 servidor, 11 presentaci?n y 18 runner.
+Deno: 13/13; SQL: 157/157; HTTP real: ocho resultados TAP, todos exit 0. JWT v?lidos de Auth;
+negativos de expiraci?n y clave/issuer ajenos son fixtures firmadas enviadas al servicio real,
+no sesiones obtenidas de otro proyecto Auth. Cobertura de n?cleos 100 % por runtime, sin
+atribuirla a HTTP/SQL/UI. Tipos/lint/formato/checkers y deno check de ensure-profile aprobados.
+No se declara npm run check gen?rico superado: create-barbershop a?n pertenece a T025.
+Fixtures retiradas, cero perfiles/usuarios. Sin migraciones, dependencias, remoto, T020?T040,
+commit ni push. Persisten nueve avisos moderados npm. El log t013-t015-all.log fue recapturado
+por la repetici?n SQL y copiado a t019-sql.log; no se lo etiqueta como hist?rico inmutable.

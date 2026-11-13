@@ -1,0 +1,5 @@
+tests/unit/tenant-foundation/profiles.test.ts(3,67): error TS2307: Cannot find module '../../../src/features/tenant-foundation/application/profiles.js' or its corresponding type declarations.
+tests/unit/tenant-foundation/profiles.test.ts(18,96): error TS7006: Parameter 'input' implicitly has an 'any' type.
+tests/unit/tenant-foundation/profiles.test.ts(19,60): error TS7006: Parameter 'input' implicitly has an 'any' type.
+tests/unit/tenant-foundation/profiles.test.ts(20,60): error TS7006: Parameter 'input' implicitly has an 'any' type.
+tests/unit/tenant-foundation/profiles.test.ts(21,60): error TS7006: Parameter 'input' implicitly has an 'any' type.

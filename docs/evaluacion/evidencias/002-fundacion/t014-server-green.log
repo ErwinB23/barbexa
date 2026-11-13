@@ -1,0 +1,9 @@
+running 2 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (707µs)
+invalid actor/input and provider failure ... ok (536µs)
+
+ok | 2 passed | 0 failed (7ms)
+
+Check tests/server/tenant-foundation/profiles.test.ts
+
+EXIT=0

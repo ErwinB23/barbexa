@@ -1,0 +1,60 @@
+✖ missing token (20.2924ms)
+✖ altered token (2.0142ms)
+✖ real client composition and authenticated scenarios required (0.4318ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.5394
+
+✖ failing tests:
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:10:41
+✖ missing token (20.2924ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:54421
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2021:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 54421
+    }
+  }
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:10:41
+✖ altered token (2.0142ms)
+  [TypeError: fetch failed] {
+    [cause]: Error: connect ECONNREFUSED 127.0.0.1:54421
+        at TCPConnectWrap.afterConnect [as oncomplete] (node:net:2021:16) {
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 54421
+    }
+  }
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:14:1
+✖ real client composition and authenticated scenarios required (0.4318ms)
+  AssertionError [ERR_ASSERTION]: T018 composition absent; no HTTP integration success claimed
+      at TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profiles.test.mjs:15:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+EXIT=1

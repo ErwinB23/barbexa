@@ -1,0 +1,121 @@
+Núcleo incluido en cobertura: ["src/features/foundation/application/get-app-information.ts","src/features/foundation/domain/validate-information-request.ts","src/features/tenant-foundation/application/profiles.ts","src/features/tenant-foundation/domain/types.ts","src/features/tenant-foundation/domain/validation.ts"]
+✔ composición real expone una función que obtiene los datos inyectados (1.9871ms)
+✔ composición conserva validación de entrada sin exponer el adaptador (0.1014ms)
+✔ composición convierte la configuración inválida en resultado controlado (0.122ms)
+text/background: 17.7397:1
+textSecondary/background: 10.3074:1
+error/background: 6.4700:1
+success/background: 7.1303:1
+text/surface: 16.1195:1
+textSecondary/surface: 9.3659:1
+error/surface: 5.8791:1
+success/surface: 6.4791:1
+onAction/action: 6.7016:1
+action/background: 6.7016:1
+action/surface: 6.0895:1
+textSecondary/surface: 9.3659:1
+onAction/action: 6.7016:1
+✔ contraste: negro/blanco 21, mismo color 1 y gris/blanco conocido (1.6185ms)
+✔ texto normal text/background >=4.5; grande >=3 (1.4306ms)
+✔ texto normal textSecondary/background >=4.5; grande >=3 (0.0971ms)
+✔ texto normal error/background >=4.5; grande >=3 (0.0595ms)
+✔ texto normal success/background >=4.5; grande >=3 (0.0749ms)
+✔ texto normal text/surface >=4.5; grande >=3 (0.0657ms)
+✔ texto normal textSecondary/surface >=4.5; grande >=3 (0.0515ms)
+✔ texto normal error/surface >=4.5; grande >=3 (0.661ms)
+✔ texto normal success/surface >=4.5; grande >=3 (0.1066ms)
+✔ botón/texto/borde/foco onAction/action >=4.5 (0.1068ms)
+✔ botón/texto/borde/foco action/background >=3 (0.0511ms)
+✔ botón/texto/borde/foco action/surface >=3 (0.0422ms)
+✔ botón/texto/borde/foco textSecondary/surface >=3 (0.0393ms)
+✔ botón/texto/borde/foco onAction/action >=3 (0.0382ms)
+✔ consulta con doble devuelve información y llama una sola vez (1.3235ms)
+✔ consulta con adaptador local devuelve información y llama una sola vez (0.1566ms)
+✔ entrada inválida undefined no invoca gateway (0.0783ms)
+✔ entrada inválida null no invoca gateway (0.0558ms)
+✔ entrada inválida "" no invoca gateway (0.0615ms)
+✔ entrada inválida {} no invoca gateway (0.054ms)
+✔ entrada inválida [] no invoca gateway (0.0854ms)
+✔ entrada inválida {"idioma":""} no invoca gateway (0.055ms)
+✔ entrada inválida {"idioma":"en-US"} no invoca gateway (0.0587ms)
+✔ entrada inválida {"idioma":1} no invoca gateway (0.0389ms)
+✔ rechazo se convierte en no-disponible sin filtrar detalles; reintento funciona (0.2196ms)
+✔ configuración local malformada termina en no-disponible (0.1317ms)
+✔ adaptador local devuelve los tres campos públicos inyectados (1.616ms)
+✔ adaptador rechaza nombre malformado: "" (0.4998ms)
+✔ adaptador rechaza nombre malformado: "   " (0.0812ms)
+✔ adaptador rechaza nombre malformado: 42 (0.7187ms)
+✔ adaptador rechaza nombre malformado: null (0.0932ms)
+✔ adaptador rechaza nombre malformado: undefined (0.0621ms)
+✔ adaptador rechaza version malformado: "" (0.0687ms)
+✔ adaptador rechaza version malformado: "   " (0.1401ms)
+✔ adaptador rechaza version malformado: 42 (0.0836ms)
+✔ adaptador rechaza version malformado: null (0.1015ms)
+✔ adaptador rechaza version malformado: undefined (0.0537ms)
+✔ adaptador rechaza descripcion malformado: "" (0.0767ms)
+✔ adaptador rechaza descripcion malformado: "   " (0.065ms)
+✔ adaptador rechaza descripcion malformado: 42 (0.089ms)
+✔ adaptador rechaza descripcion malformado: null (0.0634ms)
+✔ adaptador rechaza descripcion malformado: undefined (0.0369ms)
+✔ adaptador rechaza configuración ausente o incompleta: undefined (0.0931ms)
+✔ adaptador rechaza configuración ausente o incompleta: null (0.0375ms)
+✔ adaptador rechaza configuración ausente o incompleta: "configuracion-invalida" (0.0422ms)
+✔ adaptador rechaza configuración ausente o incompleta: [] (0.0382ms)
+✔ adaptador rechaza configuración ausente o incompleta: {} (0.0365ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"version":"0.1.0","descripcion":"Base local"} (0.0363ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","descripcion":"Base local"} (0.0554ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","version":"0.1.0"} (0.08ms)
+✔ composition consumes real adapter and maps own read PATCH and Edge (34.6046ms)
+✔ zero rows and transport errors never invent success (1.2632ms)
+✔ ensure success and repeated ensure preserve existing profile (0.9652ms)
+✔ read success and controlled absence (0.1857ms)
+✔ normalization and PATCH omitted/null/empty phone (0.604ms)
+✔ invalid runtime input never reaches gateway (0.7521ms)
+✔ dependency failures sanitized and missing update not success (0.9676ms)
+✔ identifier validation and typed errors preserve safe codes (0.4052ms)
+✔ acepta solicitud existente con idioma es-PE (1.0295ms)
+✔ rechaza solicitud malformada undefined (0.0856ms)
+✔ rechaza solicitud malformada null (0.0488ms)
+✔ rechaza solicitud malformada "" (0.0409ms)
+✔ rechaza solicitud malformada "es-PE" (0.0446ms)
+✔ rechaza solicitud malformada 1 (0.0332ms)
+✔ rechaza solicitud malformada true (0.0499ms)
+✔ rechaza solicitud malformada [] (0.0308ms)
+✔ rechaza solicitud malformada {} (0.0426ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0327ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.0646ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0371ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.0312ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.0269ms)
+ℹ tests 75
+ℹ suites 0
+ℹ pass 75
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 134.5235
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         |
+ℹ  src                                 |        |          |         |
+ℹ   features                           |        |          |         |
+ℹ    foundation                        |        |          |         |
+ℹ     application                      |        |          |         |
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 |
+ℹ     domain                           |        |          |         |
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 |
+ℹ    tenant-foundation                 |        |          |         |
+ℹ     application                      |        |          |         |
+ℹ      profiles.js                     | 100.00 |   100.00 |  100.00 |
+ℹ     domain                           |        |          |         |
+ℹ      types.js                        | 100.00 |   100.00 |  100.00 |
+ℹ      validation.js                   | 100.00 |   100.00 |  100.00 |
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 |
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report
+
+EXIT=0

@@ -1,0 +1,379 @@
+{
+  "capturedAt": "2026-11-13T03:54:17.494Z",
+  "project": "app-barberia-002-local",
+  "old": [
+    {
+      "id": "94beec26bc1880fc858f4332e7718090405903b1d275137feea5c285983c701e",
+      "name": "/supabase_studio_barberia-app",
+      "image": "sha256:727a7f37b15f4c76c44e0d765e6be231d8d71c67f2933b2df8c6cbcc9b04c5d0",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_edge_runtime_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_edge_runtime_barberia-app/_data",
+          "destination": "/root/.cache/deno"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/functions",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/functions"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/snippets",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/snippets"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54323"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.542890473Z"
+    },
+    {
+      "id": "16934d3b2518b87a04d465e23c1d713f4034c22c7a19cf8ac6e3d5eee1bf8206",
+      "name": "/supabase_pg_meta_barberia-app",
+      "image": "sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.538351174Z"
+    },
+    {
+      "id": "b6c745b1f12c5b756069abf069e74245743df55ad2e8ac74a4127ecd544848e3",
+      "name": "/supabase_edge_runtime_barberia-app",
+      "image": "sha256:6b850a2ccf0bf50ecac9accff8098095cd191c389c2a53c59b857aa0f53a8343",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_edge_runtime_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_edge_runtime_barberia-app/_data",
+          "destination": "/root/.cache/deno"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/functions",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/functions"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "exited",
+      "exitCode": 15,
+      "startedAt": "2026-11-05T20:24:54.102729684Z"
+    },
+    {
+      "id": "619665f90ff224a1187d105e7ca87943bd9c210982a8f8bf27e39b7d31bc675c",
+      "name": "/supabase_storage_barberia-app",
+      "image": "sha256:dd4a100612635a8eb0d64387ddc38769fb30eb3ddd9b411d0fe3121e1cb223b3",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_storage_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_storage_barberia-app/_data",
+          "destination": "/mnt"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.513829213Z"
+    },
+    {
+      "id": "bdb67ccc0d1628dcfacde175295265cbd026411c11b37bb0208681371f730f2b",
+      "name": "/supabase_rest_barberia-app",
+      "image": "sha256:1347d7552b88f17832912c06afbf7c43209af6eeeb60834b04aae12c9bd9d5cc",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.536311974Z"
+    },
+    {
+      "id": "fc32bb646d68429916bb787db5603a5e767d70883aec7ce365549b3782844cae",
+      "name": "/supabase_realtime_barberia-app",
+      "image": "sha256:dac44c958d0776144f0046ff0c0f8d51e0ff4f8a86c4a5e25287dd2f79fffa1e",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.506610738Z"
+    },
+    {
+      "id": "1b81f7654d3940d74529a4d56b30c45ff8457fa46cc50a46b5189d13e28b275e",
+      "name": "/supabase_inbucket_barberia-app",
+      "image": "sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "8025/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54324"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.52057473Z"
+    },
+    {
+      "id": "a1692055f13be1830049b54c9ba034551f06d9dd4dee474552ad4325702d453e",
+      "name": "/supabase_auth_barberia-app",
+      "image": "sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:06.350150096Z"
+    },
+    {
+      "id": "a10a182e90cf0db7aa9b1d07016d0b70e256279fab3717204c18c7e2f05ccf7d",
+      "name": "/supabase_kong_barberia-app",
+      "image": "sha256:1b53405d8680a09d6f44494b7990bf7da2ea43f84a258c59717d4539abf09f6d",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54321"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.531633133Z"
+    },
+    {
+      "id": "71932b3ef188651421c1bae3b8505b9fa3bdf04141485d6395ddbc56d0f9da4e",
+      "name": "/supabase_vector_barberia-app",
+      "image": "sha256:5dcf67db0ee378caa87f3395cb9484ebe3e97bb0334d119f2ac33116e00c5773",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {},
+      "state": "restarting",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:53:56.505277361Z"
+    },
+    {
+      "id": "ba553ba538fa246d60e17c4eaf254842508b75b9cb4e77a05157d3f3f44d23f4",
+      "name": "/supabase_analytics_barberia-app",
+      "image": "sha256:a82f96c8845c1bcab128cfe17b4e325943ab949b657e9629a0bcc66f1d363179",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "4000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54327"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.541758789Z"
+    },
+    {
+      "id": "39a89ae6e8808a2d82964fe6c7844bf70c02bb4d02be22244f69c857fcd326a9",
+      "name": "/supabase_db_barberia-app",
+      "image": "sha256:7bd84e6a1d5322c7b864b9751873a0ac50f48df3f20a776e88114eadb2948fc0",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_db_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_db_barberia-app/_data",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54322"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0,
+      "startedAt": "2026-11-13T03:48:04.543249732Z"
+    }
+  ],
+  "current": [
+    {
+      "id": "60e459da33d9431f44bf8ae194441af25a6799158c2e5d67f293a9d7fe7f1474",
+      "name": "/supabase_db_app-barberia-002-local",
+      "image": "sha256:7c31363a3f7434ff14945f1b8a4880e6eca8b362e197e88b87c476c77aa3cf8c",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_db_app-barberia-002-local",
+          "source": "/var/lib/docker/volumes/supabase_db_app-barberia-002-local/_data",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54422"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "e2619c92ecef85b38aba624363e810f0efe881d88e6beb364a1db7dc71983d0c",
+      "name": "/supabase_studio_app-barberia-002-local",
+      "image": "sha256:09990d7831762e788b6d14bee7be40d452d45433b51a1592aaf3105bb126bbe2",
+      "mounts": [
+        {
+          "type": "bind",
+          "source": "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\supabase\\snippets",
+          "destination": "/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/snippets"
+        }
+      ],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54423"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "5a51a90139a0a46258e1f4555abeda1a0152af7a94f251f960431a8e8584574e",
+      "name": "/supabase_pg_meta_app-barberia-002-local",
+      "image": "sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "79050ac81253f9dd5bd12f2b255ba893211af2e492dcc1e1ebd5eea6271f0d8b",
+      "name": "/supabase_edge_runtime_app-barberia-002-local",
+      "image": "sha256:362e9177660ae4d3affb6978480cc6161a8ea0764f1c2c7f738348eda1c3fbf2",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {},
+      "state": "exited",
+      "exitCode": 255
+    },
+    {
+      "id": "28e75a85bae281fdecd52ba35f84425c893958998147031d6589b6a7531d917a",
+      "name": "/supabase_rest_app-barberia-002-local",
+      "image": "sha256:1347d7552b88f17832912c06afbf7c43209af6eeeb60834b04aae12c9bd9d5cc",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "d6b613ff753213d6dc8557c51c716d601dbac24f8b87344f93dfdd565ae8957e",
+      "name": "/supabase_inbucket_app-barberia-002-local",
+      "image": "sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {
+        "8025/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54424"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "5f37301197077be7ff2f372200a5fffcab67c9a7ffad424a4ce763be668a0c59",
+      "name": "/supabase_auth_app-barberia-002-local",
+      "image": "sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {},
+      "state": "running",
+      "exitCode": 0
+    },
+    {
+      "id": "c0e88b814eaaf96c5496540bade6e1772df5683f4c2ae11efb4bb5a023c7948d",
+      "name": "/supabase_kong_app-barberia-002-local",
+      "image": "sha256:1b53405d8680a09d6f44494b7990bf7da2ea43f84a258c59717d4539abf09f6d",
+      "mounts": [],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54421"
+          }
+        ]
+      },
+      "state": "running",
+      "exitCode": 0
+    }
+  ]
+}

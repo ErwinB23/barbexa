@@ -1,0 +1,3 @@
+COMMAND: node scripts/run-backend-integration.mjs --profiles (verified loopback env)
+
+EXIT=0

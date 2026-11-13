@@ -1,0 +1,60 @@
+COMMAND: node --test tests/integration/tenant-foundation/profiles.test.mjs
+✖ missing token (5004.1339ms)
+✖ altered token (63.0179ms)
+✖ real client composition and authenticated scenarios required (0.2689ms)
+✔ anonymous read (12.1217ms)
+✔ anonymous insert (4.9898ms)
+✔ anonymous delete (3.0065ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 3
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5168.945
+
+✖ failing tests:
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:17:3
+✖ missing token (5004.1339ms)
+  [TimeoutError: The operation was aborted due to timeout]
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:17:3
+✖ altered token (63.0179ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  503 !== 401
+
+      at TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profiles.test.mjs:24:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 503,
+    expected: 401,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\integration\tenant-foundation\profiles.test.mjs:26:1
+✖ real client composition and authenticated scenarios required (0.2689ms)
+  AssertionError [ERR_ASSERTION]: T018 composition absent; no HTTP integration success claimed
+      at TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profiles.test.mjs:27:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+EXIT=1

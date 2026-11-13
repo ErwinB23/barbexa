@@ -1,0 +1,24 @@
+running 4 tests from ./tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (16ms)
+Auth invalid anonymous malformed and provider errors ... ok (2ms)
+RPC service transport separate and DTO mapped for both key modes ... ok (341µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (9ms)
+running 3 tests from ./tests/server/tenant-foundation/handler.test.ts
+handler success correlates and actor comes only from verifier ... ok (17ms)
+handler rejects malformed extras types oversized and methods ... ok (2ms)
+handler provider errors CORS and redacted logs ... ok (383µs)
+running 6 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (409µs)
+invalid actor/input and provider failure ... ok (752µs)
+runtime validation null empty omitted fields and safe errors ... ok (655µs)
+HTTP contract UNAUTHENTICATED ... ok (16ms)
+HTTP contract INVALID_INPUT ... ok (315µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... ok (257µs)
+
+ok | 13 passed | 0 failed (226ms)
+
+Check tests/server/tenant-foundation/adapters.test.ts
+Check tests/server/tenant-foundation/handler.test.ts
+Check tests/server/tenant-foundation/profiles.test.ts
+
+EXIT=0

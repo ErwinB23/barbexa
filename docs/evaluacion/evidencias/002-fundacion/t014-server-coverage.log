@@ -1,0 +1,7 @@
+COMMAND: coverage --include=.*tenant-foundation/(domain|application)/.* --detailed .artifacts/t014-deno-cov
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts" (was it deleted after coverage was collected?). Skipping.
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/domain/types.ts" (was it deleted after coverage was collected?). Skipping.
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/domain/validation.ts" (was it deleted after coverage was collected?). Skipping.
+error: No covered files included in the report
+
+EXIT=1

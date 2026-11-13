@@ -1,0 +1,5 @@
+COMMAND: node_modules/prettier/bin/prettier.cjs --check src scripts supabase/functions tests/server tests/unit/tenant-foundation tests/integration/tenant-foundation
+Checking formatting...
+All matched files use Prettier code style!
+
+EXIT=0

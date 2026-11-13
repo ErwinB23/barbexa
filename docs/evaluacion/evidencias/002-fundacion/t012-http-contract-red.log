@@ -1,0 +1,38 @@
+COMMAND: deno test --no-config --no-npm --no-remote --no-prompt --filter HTTP contract tests/server/tenant-foundation/profiles.test.ts
+running 3 tests from ./tests/server/tenant-foundation/profiles.test.ts
+HTTP contract UNAUTHENTICATED ... FAILED (2ms)
+HTTP contract INVALID_INPUT ... FAILED (242µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... FAILED (186µs)
+
+ ERRORS
+
+HTTP contract UNAUTHENTICATED => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+error: TypeError: Requires read access to "C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\presentation\ensure-profile-handler.ts", run again with the --allow-read flag
+    const { createEnsureProfileHandler } = await import(handlerPath);
+                                           ^
+    at async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/server/tenant-foundation/profiles.test.ts:129:44
+
+HTTP contract INVALID_INPUT => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+error: TypeError: Requires read access to "C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\presentation\ensure-profile-handler.ts", run again with the --allow-read flag
+    const { createEnsureProfileHandler } = await import(handlerPath);
+                                           ^
+    at async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/server/tenant-foundation/profiles.test.ts:129:44
+
+HTTP contract DEPENDENCY_UNAVAILABLE => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+error: TypeError: Requires read access to "C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\presentation\ensure-profile-handler.ts", run again with the --allow-read flag
+    const { createEnsureProfileHandler } = await import(handlerPath);
+                                           ^
+    at async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/server/tenant-foundation/profiles.test.ts:129:44
+
+ FAILURES
+
+HTTP contract UNAUTHENTICATED => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+HTTP contract INVALID_INPUT => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+HTTP contract DEPENDENCY_UNAVAILABLE => ./tests/server/tenant-foundation/profiles.test.ts:126:8
+
+FAILED | 0 passed | 3 failed | 3 filtered out (6ms)
+
+Check tests/server/tenant-foundation/profiles.test.ts
+error: Test failed
+
+EXIT=1

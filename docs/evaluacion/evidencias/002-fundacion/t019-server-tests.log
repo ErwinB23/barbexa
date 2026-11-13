@@ -1,0 +1,36 @@
+COMMAND: test --no-config --no-npm --no-remote --no-prompt --coverage=.artifacts/t019-server-coverage tests/server/tenant-foundation
+running 4 tests from ./tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (16ms)
+Auth invalid anonymous malformed and provider errors ... ok (3ms)
+RPC service transport separate and DTO mapped for both key modes ... ok (473µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (21ms)
+running 3 tests from ./tests/server/tenant-foundation/handler.test.ts
+handler success correlates and actor comes only from verifier ... ok (17ms)
+handler rejects malformed extras types oversized and methods ... ok (2ms)
+handler provider errors CORS and redacted logs ... ok (451µs)
+running 6 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (505µs)
+invalid actor/input and provider failure ... ok (445µs)
+runtime validation null empty omitted fields and safe errors ... ok (378µs)
+HTTP contract UNAUTHENTICATED ... ok (16ms)
+HTTP contract INVALID_INPUT ... ok (249µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... ok (170µs)
+
+ok | 13 passed | 0 failed (266ms)
+
+| File                                          | Branch % | Function % | Line % |
+| --------------------------------------------- | -------- | ---------- | ------ |
+| application/ensure-own-profile.ts             |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                               |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts                          |    100.0 |      100.0 |  100.0 |
+| infrastructure/auth-verification-adapter.ts   |    100.0 |      100.0 |  100.0 |
+| infrastructure/postgres-foundation-adapter.ts |     94.7 |      100.0 |   82.1 |
+| presentation/ensure-profile-handler.ts        |     95.7 |      100.0 |  100.0 |
+| All files                                     |     97.3 |      100.0 |   95.5 |
+Check tests/server/tenant-foundation/adapters.test.ts
+Check tests/server/tenant-foundation/handler.test.ts
+Check tests/server/tenant-foundation/profiles.test.ts
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t019-server-coverage/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t019-server-coverage/html/index.html
+
+EXIT=0

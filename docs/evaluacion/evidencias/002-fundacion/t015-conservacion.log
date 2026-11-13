@@ -1,0 +1,7 @@
+READ ONLY docker inspect and SQL counts on new DB
+OLD_METADATA_UNCHANGED=12
+NEW_METADATA_UNCHANGED=8
+EDGE_STATE=exited EXIT=255 OOMKilled=false
+profiles=0
+auth_users=0
+EXIT=0

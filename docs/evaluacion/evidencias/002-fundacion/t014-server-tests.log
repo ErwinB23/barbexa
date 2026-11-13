@@ -1,0 +1,15 @@
+COMMAND: test --no-config --no-npm --no-remote --no-prompt --coverage=.artifacts/t014-deno-cov tests/server/tenant-foundation/profiles.test.ts
+running 3 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (534µs)
+invalid actor/input and provider failure ... ok (476µs)
+runtime validation null empty omitted fields and safe errors ... ok (286µs)
+
+ok | 3 passed | 0 failed (15ms)
+
+Check tests/server/tenant-foundation/profiles.test.ts
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts" (was it deleted after coverage was collected?). Skipping.
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/domain/types.ts" (was it deleted after coverage was collected?). Skipping.
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/domain/validation.ts" (was it deleted after coverage was collected?). Skipping.
+Error generating coverage report: No covered files included in the report
+
+EXIT=0

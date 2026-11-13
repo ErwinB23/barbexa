@@ -59,8 +59,12 @@ select ok(exists(select 1 from pg_indexes where schemaname='public' and tablenam
 
 select ok(exists(select 1 from pg_class where oid=to_regclass('public.'||t) and relrowsecurity), 'RLS enabled: '||t)
 from unnest(array['profiles','barbershops','barbershop_memberships']) t;
-select ok(to_regclass('public.'||t) is not null and not exists(select 1 from pg_policy
- where polrelid=to_regclass('public.'||t)), 'no permissive policies in initial increment: '||t)
+-- T015 explicitly adds only the two own-profile policies. Other tables remain closed.
+select ok(to_regclass('public.'||t) is not null and case when t='profiles' then
+ (select count(*)=2 and bool_and(polname in ('profiles_select_own','profiles_update_own'))
+  from pg_policy where polrelid=to_regclass('public.profiles'))
+ else not exists(select 1 from pg_policy where polrelid=to_regclass('public.'||t)) end,
+ 'only approved policies: '||t)
 from unnest(array['profiles','barbershops','barbershop_memberships']) t;
 
 select ok(case when to_regclass('public.'||t) is null then false

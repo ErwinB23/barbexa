@@ -1,0 +1,8 @@
+Target app-barberia-002-local DB 54422 / API 54421
+SQL_EXIT=0
+postgres|17.11
+profiles=0
+auth_users=0
+20261112031854
+HTTP /auth/v1/health STATUS=200 (no credentials)
+HTTP /rest/v1/ STATUS=200 (no credentials)

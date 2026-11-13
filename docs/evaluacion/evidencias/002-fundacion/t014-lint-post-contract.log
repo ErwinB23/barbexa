@@ -1,0 +1,3 @@
+COMMAND: node node_modules/eslint/bin/eslint.js src/features/tenant-foundation supabase/functions/_shared/tenant-foundation tests/unit/tenant-foundation tests/server/tenant-foundation tests/integration/tenant-foundation/profiles.test.mjs --max-warnings 0
+
+EXIT=0

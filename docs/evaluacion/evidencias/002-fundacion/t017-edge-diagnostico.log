@@ -1,0 +1,5 @@
+docker logs --tail 50 <NEW edge runtime>
+EXIT=0
+STATE=exited CONTAINER_EXIT=255 OOMKilled=false
+Serving functions on http://127.0.0.1:54421/functions/v1/<function-name>
+Using supabase-edge-runtime-1.78.1 (compatible with Deno v2.1.4)

@@ -1,0 +1,16 @@
+deno.exe : Check tests/server/tenant-foundation/profiles.test.ts
+En línea: 2 Carácter: 256
++ ... T=$result"; & 'C:/Users/PREDATOR/Desktop/Herramientas/AppBarberia/den ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Check tests/ser...rofiles.test.ts:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+TS2307 [ERROR]: Cannot find module 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/
+App-Barberia/supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts'.
+    at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/server/ten
+ant-foundation/profiles.test.ts:1:34
+
+error: Type checking failed.
+
+  [33minfo:[39m The program failed type-checking, but it still might work correctly.
+  [36mhint:[39m Re-run with [4m--no-check[24m to skip type-checking.

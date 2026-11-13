@@ -1,0 +1,3 @@
+COMMAND: docker version --format <server-version>
+
+EXIT=null

@@ -1,0 +1,696 @@
+COMMAND: supabase functions serve --workdir <verified App-Barberia root> (no JWT bypass)
+Setting up Edge Functions runtime...
+Skipped serving Function: create-barbershop
+2026-11-13T04:16:14.999860744Z Serving functions on http://127.0.0.1:54421/functions/v1/<function-name>
+2026-11-13T04:16:14.999888015Z  - http://127.0.0.1:54421/functions/v1/ensure-profile
+2026-11-13T04:16:14.999889285Z Using supabase-edge-runtime-1.78.1 (compatible with Deno v2.1.4)
+2026-11-13T04:20:38.398195545Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.515158610Z [Info] {"requestId":"1061ff2d-d5e8-44eb-9c46-57b03a992ca3","status":200}
+2026-11-13T04:20:38.515171666Z
+2026-11-13T04:20:38.525973764Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.532897498Z [Info] {"requestId":"bd3d2325-f165-402a-854f-b4fb70de316b","status":200}
+2026-11-13T04:20:38.532903748Z
+2026-11-13T04:20:38.561214213Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.568004454Z [Info] {"requestId":"3c69c331-5612-490b-bd20-e865bc941145","status":200}
+2026-11-13T04:20:38.568014511Z
+2026-11-13T04:20:38.594964108Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.600562638Z [Info] {"requestId":"e8e17a78-37fe-4fe5-b0ab-fcf2537ce572","status":400}
+2026-11-13T04:20:38.600571013Z
+2026-11-13T04:20:38.604101715Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.608457520Z [Info] {"requestId":"dfb0ba28-c14e-4259-8692-668302959d60","status":400}
+2026-11-13T04:20:38.608475133Z
+2026-11-13T04:20:38.611415196Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.616039001Z [Info] {"requestId":"0917ff63-3144-47cd-9fdd-009f00e0b744","status":400}
+2026-11-13T04:20:38.616045219Z
+2026-11-13T04:20:38.619258109Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.623171712Z [Info] {"requestId":"f2bcf81d-d3d8-45db-b818-622015632466","status":400}
+2026-11-13T04:20:38.623177355Z
+2026-11-13T04:20:38.625952755Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.630317506Z [Info] {"requestId":"7996e62b-cd8a-4283-a917-f0b511222753","status":400}
+2026-11-13T04:20:38.630333380Z
+2026-11-13T04:20:38.633623657Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.638390104Z [Info] {"requestId":"e3157192-2b7b-41c9-8934-d74fae182fd0","status":400}
+2026-11-13T04:20:38.638397067Z
+2026-11-13T04:20:38.641612828Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.646674766Z [Info] {"requestId":"0b29e8b1-7138-4380-a625-b8046aa8332f","status":400}
+2026-11-13T04:20:38.646683919Z
+2026-11-13T04:20:38.757384395Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:20:38.757868903Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.759608526Z [Info] {"requestId":"2e6f3da8-99b1-4021-a33e-e3147a9995c7","status":401}
+2026-11-13T04:20:38.759627879Z
+2026-11-13T04:20:38.766141040Z Asymmetric JWT verification error {
+2026-11-13T04:20:38.766162531Z   cause: bb: signature verification failed
+2026-11-13T04:20:38.766163425Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:20:38.766164858Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:20:38.766165543Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:20:38.766166940Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:20:38.766168112Z     name: [32m"bb"[39m
+2026-11-13T04:20:38.766169226Z   },
+2026-11-13T04:20:38.766170252Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:20:38.766170940Z }
+2026-11-13T04:20:38.769746756Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:20:38.770928304Z Symmetric Legacy JWT verification error {
+2026-11-13T04:20:38.770938106Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:20:38.770939011Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:20:38.770940535Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:20:38.770941195Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:20:38.770941954Z Caused by {
+2026-11-13T04:20:38.770943407Z   claim: exp,
+2026-11-13T04:20:38.770944344Z   reason: check_failed,
+2026-11-13T04:20:38.770945584Z   payload: {
+2026-11-13T04:20:38.770946247Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:20:38.770957211Z     sub: 6930b507-5bd0-4e4d-b46a-6045c08e5117,
+2026-11-13T04:20:38.770957860Z     aud: authenticated,
+2026-11-13T04:20:38.770958301Z     exp: 1794543578,
+2026-11-13T04:20:38.770958757Z     iat: 1794543637,
+2026-11-13T04:20:38.770959169Z     email: d15becde36307a01ce62c35f@example.invalid,
+2026-11-13T04:20:38.770959974Z     phone: ,
+2026-11-13T04:20:38.770960402Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:20:38.770960848Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:20:38.770961675Z     role: authenticated,
+2026-11-13T04:20:38.770962134Z     aal: aal1,
+2026-11-13T04:20:38.770965988Z     session_id: 11c76f2f-ce50-4d69-9ad8-8ff1894cca97,
+2026-11-13T04:20:38.770966499Z     is_anonymous: false
+2026-11-13T04:20:38.770966910Z   }
+2026-11-13T04:20:38.770967355Z } {
+2026-11-13T04:20:38.770967821Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:20:38.770968249Z     name: [32m"ph"[39m,
+2026-11-13T04:20:38.770969486Z     claim: [32m"exp"[39m,
+2026-11-13T04:20:38.770969932Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:20:38.770970369Z     payload: {
+2026-11-13T04:20:38.770970775Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:20:38.770971247Z       sub: [32m"6930b507-5bd0-4e4d-b46a-6045c08e5117"[39m,
+2026-11-13T04:20:38.770971655Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:20:38.770972120Z       exp: [33m1794543578[39m,
+2026-11-13T04:20:38.770972555Z       iat: [33m1794543637[39m,
+2026-11-13T04:20:38.770973005Z       email: [32m"d15becde36307a01ce62c35f@example.invalid"[39m,
+2026-11-13T04:20:38.770973428Z       phone: [32m""[39m,
+2026-11-13T04:20:38.770973887Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:20:38.770974338Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:20:38.770975044Z       role: [32m"authenticated"[39m,
+2026-11-13T04:20:38.770975510Z       aal: [32m"aal1"[39m,
+2026-11-13T04:20:38.770976394Z       session_id: [32m"11c76f2f-ce50-4d69-9ad8-8ff1894cca97"[39m,
+2026-11-13T04:20:38.770978299Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:20:38.770978995Z     }
+2026-11-13T04:20:38.770979685Z   },
+2026-11-13T04:20:38.770980430Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:20:38.770981089Z }
+2026-11-13T04:20:38.774512975Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:20:38.775007196Z Symmetric Legacy JWT verification error {
+2026-11-13T04:20:38.775018633Z   cause: bb: signature verification failed
+2026-11-13T04:20:38.775019258Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:20:38.775020109Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:20:38.775020587Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:20:38.775021745Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:20:38.775022230Z     name: [32m"bb"[39m
+2026-11-13T04:20:38.775023096Z   },
+2026-11-13T04:20:38.775023884Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:20:38.775024344Z }
+2026-11-13T04:20:38.783354589Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.792557676Z [Info] {"requestId":"56e47c9b-6787-4a58-8339-6f65253784d7","status":200}
+2026-11-13T04:20:38.792567672Z
+2026-11-13T04:20:38.798459708Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.807280074Z [Info] {"requestId":"991e46ab-76ee-4867-9f45-6988e349fd0c","status":200}
+2026-11-13T04:20:38.807286499Z
+2026-11-13T04:20:38.892953208Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.897698860Z [Info] {"requestId":"9c2fb2bf-76e2-4b66-b8e9-87c837717d5b","status":413}
+2026-11-13T04:20:38.897717238Z
+2026-11-13T04:20:38.900701345Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:20:38.902502893Z [Info] {"requestId":"40d7ea3c-d8fb-485a-a6f3-3db8aaaff1bc","status":405}
+2026-11-13T04:20:38.902518010Z
+2026-11-13T04:22:48.662228615Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.673672681Z [Info] {"requestId":"89049fca-bd19-45cc-8e55-28e13f195e46","status":200}
+2026-11-13T04:22:48.673681543Z
+2026-11-13T04:22:48.682109673Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.688581144Z [Info] {"requestId":"b69daab8-7a60-40df-b4b2-68000786a2ef","status":200}
+2026-11-13T04:22:48.688592788Z
+2026-11-13T04:22:48.711140304Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.717632924Z [Info] {"requestId":"083f8797-3f6d-427b-ab83-f2ac85f66274","status":200}
+2026-11-13T04:22:48.717643888Z
+2026-11-13T04:22:48.738898721Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.743335388Z [Info] {"requestId":"f78d9b25-1dc2-4cf9-8eae-4280e88fc125","status":400}
+2026-11-13T04:22:48.743348715Z
+2026-11-13T04:22:48.746227462Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.750230464Z [Info] {"requestId":"93767e3c-213b-476c-80af-8a3fd4dc66ad","status":400}
+2026-11-13T04:22:48.750235194Z
+2026-11-13T04:22:48.753395327Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.759280291Z [Info] {"requestId":"908b032f-2984-4cb9-8f58-bc02345dcf04","status":400}
+2026-11-13T04:22:48.759285616Z
+2026-11-13T04:22:48.761986042Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.765721441Z [Info] {"requestId":"39606f02-3a79-4e26-8633-1cde6186b965","status":400}
+2026-11-13T04:22:48.765726715Z
+2026-11-13T04:22:48.768502595Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.772869000Z [Info] {"requestId":"40694371-30ae-4e05-8ca5-3c8ca5040d9c","status":400}
+2026-11-13T04:22:48.772878414Z
+2026-11-13T04:22:48.775714342Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.779664788Z [Info] {"requestId":"922cd58a-79bc-4423-83fa-b051eacfc5bb","status":400}
+2026-11-13T04:22:48.779670505Z
+2026-11-13T04:22:48.782227899Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.786004786Z [Info] {"requestId":"aae3e6c6-8e71-4d85-bc10-efc62eb36996","status":400}
+2026-11-13T04:22:48.786010074Z
+2026-11-13T04:22:48.874850319Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:22:48.875140574Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.876975914Z [Info] {"requestId":"6c4215f0-eb3b-4753-ad55-7cf9c3c1943a","status":401}
+2026-11-13T04:22:48.876987872Z
+2026-11-13T04:22:48.880368983Z Asymmetric JWT verification error {
+2026-11-13T04:22:48.880379415Z   cause: bb: signature verification failed
+2026-11-13T04:22:48.880380394Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:22:48.880381516Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:22:48.880382266Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:22:48.880383623Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:22:48.880384792Z     name: [32m"bb"[39m
+2026-11-13T04:22:48.880386067Z   },
+2026-11-13T04:22:48.880386946Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:22:48.880387610Z }
+2026-11-13T04:22:48.882268737Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:22:48.882847701Z Symmetric Legacy JWT verification error {
+2026-11-13T04:22:48.882855523Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:22:48.882856505Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:22:48.882858191Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:22:48.882858856Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:22:48.882859531Z Caused by {
+2026-11-13T04:22:48.882860474Z   claim: exp,
+2026-11-13T04:22:48.882861292Z   reason: check_failed,
+2026-11-13T04:22:48.882862412Z   payload: {
+2026-11-13T04:22:48.882863037Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:22:48.882863696Z     sub: 2db4aac5-96c8-4e83-a26b-b85306bd0b84,
+2026-11-13T04:22:48.882864283Z     aud: authenticated,
+2026-11-13T04:22:48.882864893Z     exp: 1794543708,
+2026-11-13T04:22:48.882875066Z     iat: 1794543767,
+2026-11-13T04:22:48.882875642Z     email: 112b8fe76ec918356ceb7d79@example.invalid,
+2026-11-13T04:22:48.882876203Z     phone: ,
+2026-11-13T04:22:48.882876629Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:22:48.882877063Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:22:48.882877630Z     role: authenticated,
+2026-11-13T04:22:48.882878060Z     aal: aal1,
+2026-11-13T04:22:48.882878940Z     session_id: 8b6080d1-b5ba-4c4b-abf6-3890a28a94af,
+2026-11-13T04:22:48.882879329Z     is_anonymous: false
+2026-11-13T04:22:48.882879714Z   }
+2026-11-13T04:22:48.882880492Z } {
+2026-11-13T04:22:48.882880930Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:22:48.882881514Z     name: [32m"ph"[39m,
+2026-11-13T04:22:48.882882269Z     claim: [32m"exp"[39m,
+2026-11-13T04:22:48.882882671Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:22:48.882883048Z     payload: {
+2026-11-13T04:22:48.882883431Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:22:48.882883819Z       sub: [32m"2db4aac5-96c8-4e83-a26b-b85306bd0b84"[39m,
+2026-11-13T04:22:48.882884205Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:22:48.882884621Z       exp: [33m1794543708[39m,
+2026-11-13T04:22:48.882885014Z       iat: [33m1794543767[39m,
+2026-11-13T04:22:48.882885395Z       email: [32m"112b8fe76ec918356ceb7d79@example.invalid"[39m,
+2026-11-13T04:22:48.882885808Z       phone: [32m""[39m,
+2026-11-13T04:22:48.882886207Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:22:48.882886612Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:22:48.882887008Z       role: [32m"authenticated"[39m,
+2026-11-13T04:22:48.882887443Z       aal: [32m"aal1"[39m,
+2026-11-13T04:22:48.882888220Z       session_id: [32m"8b6080d1-b5ba-4c4b-abf6-3890a28a94af"[39m,
+2026-11-13T04:22:48.882888606Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:22:48.882889004Z     }
+2026-11-13T04:22:48.882889456Z   },
+2026-11-13T04:22:48.882889900Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:22:48.882890278Z }
+2026-11-13T04:22:48.885157591Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:22:48.885569046Z Symmetric Legacy JWT verification error {
+2026-11-13T04:22:48.885574680Z   cause: bb: signature verification failed
+2026-11-13T04:22:48.885575365Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:22:48.885576274Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:22:48.885576807Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:22:48.885577601Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:22:48.885578137Z     name: [32m"bb"[39m
+2026-11-13T04:22:48.885579170Z   },
+2026-11-13T04:22:48.885580055Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:22:48.885580492Z }
+2026-11-13T04:22:48.892854659Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.892974921Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.899925974Z [Info] {"requestId":"896bedd5-b96e-4764-9428-9457290170ec","status":200}
+2026-11-13T04:22:48.899937334Z
+2026-11-13T04:22:48.906751586Z [Info] {"requestId":"50a71849-bb4e-4117-a2f2-365981efb111","status":200}
+2026-11-13T04:22:48.906761065Z
+2026-11-13T04:22:48.987785488Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.992238523Z [Info] {"requestId":"07fd3561-cedd-406e-9e78-a24cec1c157b","status":413}
+2026-11-13T04:22:48.992245749Z
+2026-11-13T04:22:48.994888468Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:22:48.996400500Z [Info] {"requestId":"64d2b455-ae4f-429d-9b0a-9427788c1f88","status":405}
+2026-11-13T04:22:48.996408549Z
+2026-11-13T04:23:08.450910904Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.458713875Z [Info] {"requestId":"9e6c4009-f704-42bd-ae19-bca60de0b471","status":200}
+2026-11-13T04:23:08.458732627Z
+2026-11-13T04:23:08.466173905Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.471711652Z [Info] {"requestId":"b0c23cce-513b-4ca0-afb6-94d7a153d735","status":200}
+2026-11-13T04:23:08.471725722Z
+2026-11-13T04:23:08.494014874Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.500062581Z [Info] {"requestId":"187605df-f5cd-4ec1-bce8-1d8148d28e8d","status":200}
+2026-11-13T04:23:08.500072367Z
+2026-11-13T04:23:08.521463712Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.525874494Z [Info] {"requestId":"2e8d07d8-c0e9-4272-a86b-254898575c68","status":400}
+2026-11-13T04:23:08.525882772Z
+2026-11-13T04:23:08.529608662Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.534048768Z [Info] {"requestId":"020e6d83-4621-4ec7-bfd2-372b99b070a8","status":400}
+2026-11-13T04:23:08.534057501Z
+2026-11-13T04:23:08.537117396Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.541257827Z [Info] {"requestId":"4bddf439-b338-4a56-b8b6-80fda5cbb3c0","status":400}
+2026-11-13T04:23:08.541266399Z
+2026-11-13T04:23:08.544164766Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.548164805Z [Info] {"requestId":"d43ed829-6b66-4542-9ce8-cf9c91a42e6c","status":400}
+2026-11-13T04:23:08.548172836Z
+2026-11-13T04:23:08.550792714Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.555013935Z [Info] {"requestId":"8a403309-9671-4296-9656-a8263ec02560","status":400}
+2026-11-13T04:23:08.555018276Z
+2026-11-13T04:23:08.558014143Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.561710814Z [Info] {"requestId":"72ebdb6b-6117-4c93-91f0-4f479f755ee3","status":400}
+2026-11-13T04:23:08.561718883Z
+2026-11-13T04:23:08.564212420Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.568155366Z [Info] {"requestId":"10ed6260-b191-4ba5-ad4d-b3efac611dba","status":400}
+2026-11-13T04:23:08.568166635Z
+2026-11-13T04:23:08.663643439Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:23:08.664010532Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.665978158Z [Info] {"requestId":"d40f6aa4-2037-40f8-856e-906215c50c70","status":401}
+2026-11-13T04:23:08.665990887Z
+2026-11-13T04:23:08.669369197Z Asymmetric JWT verification error {
+2026-11-13T04:23:08.669380816Z   cause: bb: signature verification failed
+2026-11-13T04:23:08.669381426Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:23:08.669382298Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:23:08.669382760Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:23:08.669383793Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:23:08.669384402Z     name: [32m"bb"[39m
+2026-11-13T04:23:08.669385389Z   },
+2026-11-13T04:23:08.669385861Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:23:08.669386317Z }
+2026-11-13T04:23:08.671201500Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:23:08.671689890Z Symmetric Legacy JWT verification error {
+2026-11-13T04:23:08.671695263Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:23:08.671695835Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:23:08.671696623Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:23:08.671697029Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:23:08.671698012Z Caused by {
+2026-11-13T04:23:08.671698728Z   claim: exp,
+2026-11-13T04:23:08.671699193Z   reason: check_failed,
+2026-11-13T04:23:08.671700186Z   payload: {
+2026-11-13T04:23:08.671700620Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:23:08.671701066Z     sub: 70cfd16a-8e31-40ad-aaad-8ae3b169d183,
+2026-11-13T04:23:08.671701470Z     aud: authenticated,
+2026-11-13T04:23:08.671701859Z     exp: 1794543728,
+2026-11-13T04:23:08.671702241Z     iat: 1794543787,
+2026-11-13T04:23:08.671702610Z     email: 2ee6ceafd4ff8e58b1525321@example.invalid,
+2026-11-13T04:23:08.671703192Z     phone: ,
+2026-11-13T04:23:08.671713452Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:23:08.671714107Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:23:08.671714765Z     role: authenticated,
+2026-11-13T04:23:08.671715160Z     aal: aal1,
+2026-11-13T04:23:08.671716023Z     session_id: a61f44de-f916-4ddf-9002-4539f026c878,
+2026-11-13T04:23:08.671716457Z     is_anonymous: false
+2026-11-13T04:23:08.671716927Z   }
+2026-11-13T04:23:08.671717521Z } {
+2026-11-13T04:23:08.671717980Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:23:08.671718441Z     name: [32m"ph"[39m,
+2026-11-13T04:23:08.671719091Z     claim: [32m"exp"[39m,
+2026-11-13T04:23:08.671719461Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:23:08.671719894Z     payload: {
+2026-11-13T04:23:08.671720299Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:23:08.671720673Z       sub: [32m"70cfd16a-8e31-40ad-aaad-8ae3b169d183"[39m,
+2026-11-13T04:23:08.671721056Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:23:08.671721447Z       exp: [33m1794543728[39m,
+2026-11-13T04:23:08.671721822Z       iat: [33m1794543787[39m,
+2026-11-13T04:23:08.671722194Z       email: [32m"2ee6ceafd4ff8e58b1525321@example.invalid"[39m,
+2026-11-13T04:23:08.671722594Z       phone: [32m""[39m,
+2026-11-13T04:23:08.671722995Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:23:08.671723376Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:23:08.671724138Z       role: [32m"authenticated"[39m,
+2026-11-13T04:23:08.671724532Z       aal: [32m"aal1"[39m,
+2026-11-13T04:23:08.671725545Z       session_id: [32m"a61f44de-f916-4ddf-9002-4539f026c878"[39m,
+2026-11-13T04:23:08.671725984Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:23:08.671726944Z     }
+2026-11-13T04:23:08.671727478Z   },
+2026-11-13T04:23:08.671727967Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:23:08.671728361Z }
+2026-11-13T04:23:08.673900220Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:23:08.674255043Z Symmetric Legacy JWT verification error {
+2026-11-13T04:23:08.674260755Z   cause: bb: signature verification failed
+2026-11-13T04:23:08.674261435Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:23:08.674262247Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:23:08.674262761Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:23:08.674264193Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:23:08.674264901Z     name: [32m"bb"[39m
+2026-11-13T04:23:08.674265975Z   },
+2026-11-13T04:23:08.674266515Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:23:08.674266969Z }
+2026-11-13T04:23:08.680512796Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.682682160Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.687893112Z [Info] {"requestId":"bbe16c79-bb39-4d40-b96f-b332798487e2","status":200}
+2026-11-13T04:23:08.687903617Z
+2026-11-13T04:23:08.688042316Z [Info] {"requestId":"b9ca3900-d458-42fa-ad29-224f3585744e","status":200}
+2026-11-13T04:23:08.688047263Z
+2026-11-13T04:23:08.765590334Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.769574289Z [Info] {"requestId":"3f9c1a5c-384f-40ee-8458-138ecae2712e","status":413}
+2026-11-13T04:23:08.769584150Z
+2026-11-13T04:23:08.772053034Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:23:08.774131829Z [Info] {"requestId":"77f1e9f7-365b-4dd4-aca2-805726f24643","status":405}
+2026-11-13T04:23:08.774145879Z
+2026-11-13T04:23:58.496731130Z wall clock duration warning: isolate: 0a31c33d-ef5b-459b-b254-2cfd34911d27
+2026-11-13T04:23:58.502941215Z early termination has been triggered: isolate: 0a31c33d-ef5b-459b-b254-2cfd34911d27
+2026-11-13T04:24:13.601785514Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.658988760Z [Info] {"requestId":"a8b24f12-028a-4a78-b7f3-6a9660a7e198","status":200}
+2026-11-13T04:24:13.658997269Z
+2026-11-13T04:24:13.667886108Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.675447231Z [Info] {"requestId":"86567dae-dfb3-486b-8a9f-a95bcbd12e89","status":200}
+2026-11-13T04:24:13.675460106Z
+2026-11-13T04:24:13.701121479Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.707667367Z [Info] {"requestId":"c8f2270c-fab1-4a81-9999-c2f7fcf7f614","status":200}
+2026-11-13T04:24:13.707676330Z
+2026-11-13T04:24:13.730369932Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.734606799Z [Info] {"requestId":"60d3fece-f20b-4c27-bd61-d53b5cb61a0e","status":400}
+2026-11-13T04:24:13.734613069Z
+2026-11-13T04:24:13.737441782Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.742450948Z [Info] {"requestId":"e424e3f5-ac67-4e2f-8faf-e48b4dee9ece","status":400}
+2026-11-13T04:24:13.742461482Z
+2026-11-13T04:24:13.745199378Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.749286520Z [Info] {"requestId":"f313fe1a-a8bf-4aab-aea4-7fd5696eb729","status":400}
+2026-11-13T04:24:13.749295239Z
+2026-11-13T04:24:13.751936463Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.756083621Z [Info] {"requestId":"f302aa93-dffe-4849-9eab-8b3e22d23a62","status":400}
+2026-11-13T04:24:13.756091131Z
+2026-11-13T04:24:13.759176936Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.763193670Z [Info] {"requestId":"95629eb8-2f37-4052-8e5f-79eae078ebc3","status":400}
+2026-11-13T04:24:13.763202048Z
+2026-11-13T04:24:13.766125589Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.770216517Z [Info] {"requestId":"d7bcf640-3f48-432c-aa03-d79fac50796d","status":400}
+2026-11-13T04:24:13.770226645Z
+2026-11-13T04:24:13.772826813Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.776778309Z [Info] {"requestId":"0898d232-a8a8-42e0-8fc4-bbef892e4c9b","status":400}
+2026-11-13T04:24:13.776786287Z
+2026-11-13T04:24:13.866909750Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:24:13.867209034Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.869067809Z [Info] {"requestId":"bb65a1a8-2cdd-4dec-8f0d-a2296a729423","status":401}
+2026-11-13T04:24:13.869088842Z
+2026-11-13T04:24:13.876636848Z Asymmetric JWT verification error {
+2026-11-13T04:24:13.876647285Z   cause: bb: signature verification failed
+2026-11-13T04:24:13.876647950Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:24:13.876648943Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:24:13.876649499Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:24:13.876650239Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:24:13.876651047Z     name: [32m"bb"[39m
+2026-11-13T04:24:13.876652079Z   },
+2026-11-13T04:24:13.876652640Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:24:13.876653073Z }
+2026-11-13T04:24:13.878461643Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:24:13.878941142Z Symmetric Legacy JWT verification error {
+2026-11-13T04:24:13.878944229Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:24:13.878944885Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:24:13.878945814Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:24:13.878946244Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:24:13.878946655Z Caused by {
+2026-11-13T04:24:13.878947538Z   claim: exp,
+2026-11-13T04:24:13.878947984Z   reason: check_failed,
+2026-11-13T04:24:13.878948640Z   payload: {
+2026-11-13T04:24:13.878949092Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:24:13.878952098Z     sub: 5fa39733-5619-4f90-8ab6-b855f9e2854c,
+2026-11-13T04:24:13.878952568Z     aud: authenticated,
+2026-11-13T04:24:13.878952979Z     exp: 1794543793,
+2026-11-13T04:24:13.878953570Z     iat: 1794543852,
+2026-11-13T04:24:13.878954027Z     email: 48544ddff7f3f1af4d66f26c@example.invalid,
+2026-11-13T04:24:13.878954551Z     phone: ,
+2026-11-13T04:24:13.878963691Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:24:13.878964246Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:24:13.878964752Z     role: authenticated,
+2026-11-13T04:24:13.878965174Z     aal: aal1,
+2026-11-13T04:24:13.878965994Z     session_id: deb61f16-5c1a-46af-8b8b-be9b6b844f89,
+2026-11-13T04:24:13.878966398Z     is_anonymous: false
+2026-11-13T04:24:13.878966775Z   }
+2026-11-13T04:24:13.878967290Z } {
+2026-11-13T04:24:13.878967856Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:24:13.878968277Z     name: [32m"ph"[39m,
+2026-11-13T04:24:13.878968753Z     claim: [32m"exp"[39m,
+2026-11-13T04:24:13.878969192Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:24:13.878969548Z     payload: {
+2026-11-13T04:24:13.878969917Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:24:13.878970281Z       sub: [32m"5fa39733-5619-4f90-8ab6-b855f9e2854c"[39m,
+2026-11-13T04:24:13.878970670Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:24:13.878971055Z       exp: [33m1794543793[39m,
+2026-11-13T04:24:13.878971436Z       iat: [33m1794543852[39m,
+2026-11-13T04:24:13.878971831Z       email: [32m"48544ddff7f3f1af4d66f26c@example.invalid"[39m,
+2026-11-13T04:24:13.878972214Z       phone: [32m""[39m,
+2026-11-13T04:24:13.878972745Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:24:13.878973173Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:24:13.878973962Z       role: [32m"authenticated"[39m,
+2026-11-13T04:24:13.878974320Z       aal: [32m"aal1"[39m,
+2026-11-13T04:24:13.878975249Z       session_id: [32m"deb61f16-5c1a-46af-8b8b-be9b6b844f89"[39m,
+2026-11-13T04:24:13.878975832Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:24:13.878977041Z     }
+2026-11-13T04:24:13.878977576Z   },
+2026-11-13T04:24:13.878977977Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:24:13.878978386Z }
+2026-11-13T04:24:13.881512263Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:24:13.881693233Z Symmetric Legacy JWT verification error {
+2026-11-13T04:24:13.881699008Z   cause: bb: signature verification failed
+2026-11-13T04:24:13.881699719Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:24:13.881700617Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:24:13.881701136Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:24:13.881701803Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:24:13.881710042Z     name: [32m"bb"[39m
+2026-11-13T04:24:13.881711461Z   },
+2026-11-13T04:24:13.881712512Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:24:13.881712964Z }
+2026-11-13T04:24:13.887989850Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.889247316Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.895779161Z [Info] {"requestId":"24af7cf3-5b3f-4c8a-ac6d-c3262dc1e79d","status":200}
+2026-11-13T04:24:13.895786460Z
+2026-11-13T04:24:13.896184398Z [Info] {"requestId":"5894e1de-692d-4779-8f3a-f6031ee036c7","status":200}
+2026-11-13T04:24:13.896190187Z
+2026-11-13T04:24:13.970504634Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.975121564Z [Info] {"requestId":"5234de7e-7d3c-4050-958c-43ee1b5707de","status":413}
+2026-11-13T04:24:13.975126844Z
+2026-11-13T04:24:13.977417548Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:24:13.978909759Z [Info] {"requestId":"c3318f14-49b4-4253-9b35-bcabf2635b33","status":405}
+2026-11-13T04:24:13.978915979Z
+2026-11-13T04:27:33.642335561Z wall clock duration warning: isolate: 07d05c0c-5727-422f-ae03-7bc3d68490da
+2026-11-13T04:27:33.650689673Z early termination has been triggered: isolate: 07d05c0c-5727-422f-ae03-7bc3d68490da
+2026-11-13T04:28:56.478095853Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.526013516Z [Info] {"requestId":"2eb653ad-136d-47fa-8d10-e8c206e73a59","status":200}
+2026-11-13T04:28:56.526023558Z
+2026-11-13T04:28:56.534432608Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.540355791Z [Info] {"requestId":"f1ff7810-a3b5-46df-897e-89467e6aced0","status":200}
+2026-11-13T04:28:56.540368448Z
+2026-11-13T04:28:56.564003524Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.571121997Z [Info] {"requestId":"c86dfce7-1e3e-48d7-b829-46a06ff8438d","status":200}
+2026-11-13T04:28:56.571134701Z
+2026-11-13T04:28:56.592838573Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.596939764Z [Info] {"requestId":"b66847ac-e9b8-45ea-93a5-35536fb23e3a","status":400}
+2026-11-13T04:28:56.596948893Z
+2026-11-13T04:28:56.599830473Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.604216210Z [Info] {"requestId":"122c1e7c-5eda-4f7e-8262-23404c9ad255","status":400}
+2026-11-13T04:28:56.604224645Z
+2026-11-13T04:28:56.607395573Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.611978139Z [Info] {"requestId":"ccf52b8b-625f-4467-a482-29f0dc11c11b","status":400}
+2026-11-13T04:28:56.611984824Z
+2026-11-13T04:28:56.614790670Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.618878034Z [Info] {"requestId":"caf3e193-a189-4363-aa2a-7c9beb51223f","status":400}
+2026-11-13T04:28:56.618887118Z
+2026-11-13T04:28:56.621445418Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.626517571Z [Info] {"requestId":"d25e9b0c-308c-406d-a916-a89ca3786537","status":400}
+2026-11-13T04:28:56.626526584Z
+2026-11-13T04:28:56.629909309Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.634395853Z [Info] {"requestId":"958edc24-8e3c-406c-b5f1-55ff990b5233","status":400}
+2026-11-13T04:28:56.634401582Z
+2026-11-13T04:28:56.637263876Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.641210864Z [Info] {"requestId":"7d76c10f-297c-4321-93e1-01e7c8ea15cb","status":400}
+2026-11-13T04:28:56.641222199Z
+2026-11-13T04:28:56.735719484Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:28:56.735984001Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.738065630Z [Info] {"requestId":"3df22ed4-188e-4590-8e85-4b28799e5de5","status":401}
+2026-11-13T04:28:56.738080786Z
+2026-11-13T04:28:56.744214115Z Asymmetric JWT verification error {
+2026-11-13T04:28:56.744223647Z   cause: bb: signature verification failed
+2026-11-13T04:28:56.744224330Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:28:56.744225219Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:28:56.744225752Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:28:56.744226737Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:28:56.744227564Z     name: [32m"bb"[39m
+2026-11-13T04:28:56.744228764Z   },
+2026-11-13T04:28:56.744229709Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:28:56.744230165Z }
+2026-11-13T04:28:56.746019286Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:28:56.746535882Z Symmetric Legacy JWT verification error {
+2026-11-13T04:28:56.746540877Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:28:56.746541506Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:28:56.746542623Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:28:56.746543100Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:28:56.746543573Z Caused by {
+2026-11-13T04:28:56.746544519Z   claim: exp,
+2026-11-13T04:28:56.746545181Z   reason: check_failed,
+2026-11-13T04:28:56.746546201Z   payload: {
+2026-11-13T04:28:56.746546657Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:28:56.746547064Z     sub: d480a247-a44e-4d43-89d7-259bcedb9b7e,
+2026-11-13T04:28:56.746547460Z     aud: authenticated,
+2026-11-13T04:28:56.746547829Z     exp: 1794544076,
+2026-11-13T04:28:56.746550836Z     iat: 1794544135,
+2026-11-13T04:28:56.746551282Z     email: c813b8c4af1e373ea5946657@example.invalid,
+2026-11-13T04:28:56.746559928Z     phone: ,
+2026-11-13T04:28:56.746560435Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:28:56.746560870Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:28:56.746561879Z     role: authenticated,
+2026-11-13T04:28:56.746562272Z     aal: aal1,
+2026-11-13T04:28:56.746563058Z     session_id: 0640969b-e855-49e7-b214-19fbd39850e4,
+2026-11-13T04:28:56.746563438Z     is_anonymous: false
+2026-11-13T04:28:56.746563800Z   }
+2026-11-13T04:28:56.746564210Z } {
+2026-11-13T04:28:56.746564661Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:28:56.746565045Z     name: [32m"ph"[39m,
+2026-11-13T04:28:56.746565796Z     claim: [32m"exp"[39m,
+2026-11-13T04:28:56.746566201Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:28:56.746566571Z     payload: {
+2026-11-13T04:28:56.746566944Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:28:56.746567315Z       sub: [32m"d480a247-a44e-4d43-89d7-259bcedb9b7e"[39m,
+2026-11-13T04:28:56.746567697Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:28:56.746568063Z       exp: [33m1794544076[39m,
+2026-11-13T04:28:56.746568457Z       iat: [33m1794544135[39m,
+2026-11-13T04:28:56.746568861Z       email: [32m"c813b8c4af1e373ea5946657@example.invalid"[39m,
+2026-11-13T04:28:56.746569252Z       phone: [32m""[39m,
+2026-11-13T04:28:56.746569625Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:28:56.746570019Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:28:56.746570788Z       role: [32m"authenticated"[39m,
+2026-11-13T04:28:56.746571155Z       aal: [32m"aal1"[39m,
+2026-11-13T04:28:56.746571872Z       session_id: [32m"0640969b-e855-49e7-b214-19fbd39850e4"[39m,
+2026-11-13T04:28:56.746572233Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:28:56.746572598Z     }
+2026-11-13T04:28:56.746573107Z   },
+2026-11-13T04:28:56.746573552Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:28:56.746573929Z }
+2026-11-13T04:28:56.749354398Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:28:56.749746227Z Symmetric Legacy JWT verification error {
+2026-11-13T04:28:56.749755310Z   cause: bb: signature verification failed
+2026-11-13T04:28:56.749756017Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:28:56.749758436Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:28:56.749758924Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:28:56.749759918Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:28:56.749760934Z     name: [32m"bb"[39m
+2026-11-13T04:28:56.749762024Z   },
+2026-11-13T04:28:56.749762486Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:28:56.749762943Z }
+2026-11-13T04:28:56.756778908Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.756938201Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.762805632Z [Info] {"requestId":"e67d2140-0fb7-46da-b7dc-e83342af2403","status":200}
+2026-11-13T04:28:56.762816514Z
+2026-11-13T04:28:56.763686686Z [Info] {"requestId":"0c67a045-bab5-48eb-a3d6-f18be7b45b2d","status":200}
+2026-11-13T04:28:56.763691748Z
+2026-11-13T04:28:56.838141789Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.842596457Z [Info] {"requestId":"f8644096-c3eb-4a3a-a8bb-e5f7e3da6fce","status":413}
+2026-11-13T04:28:56.842603552Z
+2026-11-13T04:28:56.845074630Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:28:56.846686258Z [Info] {"requestId":"cfc1ab98-a307-4902-ab9c-e24ccdab78b9","status":405}
+2026-11-13T04:28:56.846693638Z
+2026-11-13T04:30:28.563166217Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.574699109Z [Info] {"requestId":"2d3727f3-5916-49b2-87e7-de86ef909a74","status":200}
+2026-11-13T04:30:28.574707026Z
+2026-11-13T04:30:28.582142736Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.587825943Z [Info] {"requestId":"4c308ada-10c6-4d44-9278-e803b87c5d42","status":200}
+2026-11-13T04:30:28.587836451Z
+2026-11-13T04:30:28.611768361Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.617615980Z [Info] {"requestId":"e931d825-08de-4f93-aa93-3b6fe9f5ebdd","status":200}
+2026-11-13T04:30:28.617623358Z
+2026-11-13T04:30:28.638866587Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.643348609Z [Info] {"requestId":"6476561a-3a95-4610-8ba3-f819c9363ddd","status":400}
+2026-11-13T04:30:28.643356984Z
+2026-11-13T04:30:28.646243593Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.650672710Z [Info] {"requestId":"7d4106de-deb5-49ae-adcb-f02de3da3acd","status":400}
+2026-11-13T04:30:28.650681710Z
+2026-11-13T04:30:28.653448981Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.657106458Z [Info] {"requestId":"64015391-bd62-4fdf-9aa7-508912afd64a","status":400}
+2026-11-13T04:30:28.657115380Z
+2026-11-13T04:30:28.660004064Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.664018001Z [Info] {"requestId":"dd0362dd-cd36-4484-b592-492bac278dff","status":400}
+2026-11-13T04:30:28.664023322Z
+2026-11-13T04:30:28.666577067Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.670201115Z [Info] {"requestId":"49433c23-8348-4df2-981a-3fa89b0478a6","status":400}
+2026-11-13T04:30:28.670208655Z
+2026-11-13T04:30:28.672830057Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.676566424Z [Info] {"requestId":"8189d5c3-0496-4acf-a5f9-ed2e20840b4a","status":400}
+2026-11-13T04:30:28.676576638Z
+2026-11-13T04:30:28.679475946Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.682944690Z [Info] {"requestId":"08e2e584-1ec4-4941-a222-9b4f5c42c197","status":400}
+2026-11-13T04:30:28.682956485Z
+2026-11-13T04:30:28.776327535Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:30:28.776623208Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.778250144Z [Info] {"requestId":"8fa7edf7-2143-4b91-945c-07f6a2deb6de","status":401}
+2026-11-13T04:30:28.778256744Z
+2026-11-13T04:30:28.783930005Z Asymmetric JWT verification error {
+2026-11-13T04:30:28.783948091Z   cause: bb: signature verification failed
+2026-11-13T04:30:28.783948932Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:30:28.783950172Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:30:28.783950644Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:30:28.783951478Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:30:28.783952395Z     name: [32m"bb"[39m
+2026-11-13T04:30:28.783953806Z   },
+2026-11-13T04:30:28.783954847Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:30:28.783955332Z }
+2026-11-13T04:30:28.786028866Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:30:28.786718475Z Symmetric Legacy JWT verification error {
+2026-11-13T04:30:28.786730443Z   cause: ph: "exp" claim timestamp check failed
+2026-11-13T04:30:28.786731270Z     at dq (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22373:41)
+2026-11-13T04:30:28.786732342Z     at Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22385:14)
+2026-11-13T04:30:28.786732822Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:30:28.786733300Z Caused by {
+2026-11-13T04:30:28.786733846Z   claim: exp,
+2026-11-13T04:30:28.786734296Z   reason: check_failed,
+2026-11-13T04:30:28.786735216Z   payload: {
+2026-11-13T04:30:28.786735658Z     iss: http://127.0.0.1:54421/auth/v1,
+2026-11-13T04:30:28.786736373Z     sub: 5967ffbe-718c-465b-a615-ad73358bc791,
+2026-11-13T04:30:28.786736858Z     aud: authenticated,
+2026-11-13T04:30:28.786737246Z     exp: 1794544168,
+2026-11-13T04:30:28.786737639Z     iat: 1794544227,
+2026-11-13T04:30:28.786738025Z     email: 1c3b648f1993e135328969b3@example.invalid,
+2026-11-13T04:30:28.786738760Z     phone: ,
+2026-11-13T04:30:28.786739193Z     app_metadata: { provider: email, providers: [ email ] },
+2026-11-13T04:30:28.786739628Z     user_metadata: { email_verified: true, role: administrator, userId: forged },
+2026-11-13T04:30:28.786748094Z     role: authenticated,
+2026-11-13T04:30:28.786748624Z     aal: aal1,
+2026-11-13T04:30:28.786749512Z     session_id: 550c9866-dc84-49fa-8817-b3d8bfe508a6,
+2026-11-13T04:30:28.786749951Z     is_anonymous: false
+2026-11-13T04:30:28.786750352Z   }
+2026-11-13T04:30:28.786750768Z } {
+2026-11-13T04:30:28.786751201Z     code: [32m"ERR_JWT_EXPIRED"[39m,
+2026-11-13T04:30:28.786751590Z     name: [32m"ph"[39m,
+2026-11-13T04:30:28.786752083Z     claim: [32m"exp"[39m,
+2026-11-13T04:30:28.786752487Z     reason: [32m"check_failed"[39m,
+2026-11-13T04:30:28.786752878Z     payload: {
+2026-11-13T04:30:28.786753288Z       iss: [32m"http://127.0.0.1:54421/auth/v1"[39m,
+2026-11-13T04:30:28.786753661Z       sub: [32m"5967ffbe-718c-465b-a615-ad73358bc791"[39m,
+2026-11-13T04:30:28.786754056Z       aud: [32m"authenticated"[39m,
+2026-11-13T04:30:28.786754417Z       exp: [33m1794544168[39m,
+2026-11-13T04:30:28.786754806Z       iat: [33m1794544227[39m,
+2026-11-13T04:30:28.786755228Z       email: [32m"1c3b648f1993e135328969b3@example.invalid"[39m,
+2026-11-13T04:30:28.786755676Z       phone: [32m""[39m,
+2026-11-13T04:30:28.786778994Z       app_metadata: { provider: [32m"email"[39m, providers: [ [32m"email"[39m ] },
+2026-11-13T04:30:28.786780081Z       user_metadata: { email_verified: [33mtrue[39m, role: [32m"administrator"[39m, userId: [32m"forged"[39m },
+2026-11-13T04:30:28.786780766Z       role: [32m"authenticated"[39m,
+2026-11-13T04:30:28.786781258Z       aal: [32m"aal1"[39m,
+2026-11-13T04:30:28.786782184Z       session_id: [32m"550c9866-dc84-49fa-8817-b3d8bfe508a6"[39m,
+2026-11-13T04:30:28.786782654Z       is_anonymous: [33mfalse[39m
+2026-11-13T04:30:28.786783153Z     }
+2026-11-13T04:30:28.786783700Z   },
+2026-11-13T04:30:28.786784145Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:30:28.786784749Z }
+2026-11-13T04:30:28.789038955Z Legacy token type detected, attempting HS256 verification.
+2026-11-13T04:30:28.789375242Z Symmetric Legacy JWT verification error {
+2026-11-13T04:30:28.789380722Z   cause: bb: signature verification failed
+2026-11-13T04:30:28.789381306Z     at que (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22289:36)
+2026-11-13T04:30:28.789382045Z     at eventLoopTick (ext:core/01_core.js:175:7)
+2026-11-13T04:30:28.789382478Z     at async Cb (file:///var/tmp/sb-compile-edge-runtime/root/index.ts:22382:11) {
+2026-11-13T04:30:28.789383171Z     code: [32m"ERR_JWS_SIGNATURE_VERIFICATION_FAILED"[39m,
+2026-11-13T04:30:28.789383772Z     name: [32m"bb"[39m
+2026-11-13T04:30:28.789384468Z   },
+2026-11-13T04:30:28.789385401Z   _tag: [32m"BootstrapOperationError"[39m
+2026-11-13T04:30:28.789385864Z }
+2026-11-13T04:30:28.795958906Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.796549972Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.803084617Z [Info] {"requestId":"439ded93-e7ac-4457-b22e-8f5d99631dbc","status":200}
+2026-11-13T04:30:28.803095100Z
+2026-11-13T04:30:28.808862122Z [Info] {"requestId":"37ed72b8-4a89-4019-bea9-137b7aa412ad","status":200}
+2026-11-13T04:30:28.808872549Z
+2026-11-13T04:30:28.884058153Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.887931278Z [Info] {"requestId":"c8880228-0ef4-4257-907c-58c276e4febb","status":413}
+2026-11-13T04:30:28.887942659Z
+2026-11-13T04:30:28.890236727Z serving the request with supabase/functions/ensure-profile
+2026-11-13T04:30:28.891672672Z [Info] {"requestId":"e4b8cfd7-8300-4ccc-8dc3-5ce55c15cdb3","status":405}
+2026-11-13T04:30:28.891680339Z
+2026-11-13T04:32:16.515719407Z wall clock duration warning: isolate: 6152e316-a543-48bd-a835-79c7022af4b0
+2026-11-13T04:32:16.522995820Z early termination has been triggered: isolate: 6152e316-a543-48bd-a835-79c7022af4b0

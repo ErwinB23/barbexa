@@ -1,0 +1,17 @@
+COMMAND: supabase test db supabase/tests/schema.test.sql --workdir <workspace>
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql ..
+# Failed test 33: "no permissive policies in initial increment: profiles"
+# Looks like you failed 1 test of 118
+Failed 1/118 subtests
+
+Test Summary Report
+-------------------
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql (Wstat: 0 Tests: 118 Failed: 1)
+  Failed test:  33
+Files=1, Tests=118,  0 wallclock secs ( 0.02 usr +  0.00 sys =  0.02 CPU)
+Result: FAIL
+Target: local stack (127.0.0.1:54422)
+psql:/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql:4: NOTICE:  extension "pgtap" already exists, skipping
+error running container: exit 1
+
+EXIT=1

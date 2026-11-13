@@ -101,8 +101,8 @@ de arranque habitual ni debe repetirse sobre datos que se quieran conservar. Par
 entorno propio cuando sea necesario: `npx.cmd --no-install supabase stop --workdir "$featureRoot"`
 (no ejecutado en este bloque, sin --all ni --no-backup). Nunca apuntar al directorio antiguo.
 
-Las entradas ensure-profile/create-barbershop tienen enabled=false hasta T017/T025 y
-verify_jwt=true. Un primer start con entradas habilitadas sin handlers falló y se corrigió
+Tras T019, ensure-profile tiene enabled=true y verify_jwt=true. create-barbershop conserva
+enabled=false/verify_jwt=true hasta T025. Un primer start con entradas habilitadas sin handlers falló y se corrigió
 esa configuración; no crear handlers ficticios ni usar --no-verify-jwt. Realtime, Storage y
 analytics están desactivados para este incremento. Start puede mostrar claves locales: no
 copiar su salida sin redactar en Git, Expo, evidencias ni transcripciones.
@@ -179,3 +179,15 @@ su evidencia con el alcance real y comprobar regresiones automatizadas. Si cambi
 deberá validarse el flujo afectado. Carga, caché, CI/CD, Google e interfaz Auth siguen futuras.
 Los avisos npm históricos y la consulta actual de [research.md](research.md#riesgo-npm-consulta-real)
 no quedan resueltos por superar integración. No ejecutar audit fix ni actualizaciones automáticas.
+
+## Incremento de perfiles comprobado en T019
+
+Ver [evidencia de perfiles](../../docs/evaluacion/evidencias/002-fundacion/perfiles.md).
+Con el stack propio operativo, functions serve --workdir expl?cito recupera ?nicamente el
+runtime de funciones, sin iniciar/parar el stack completo. Mantener una sola instancia.
+Para ejecutar solo lo implementado: configurar BARBERIA_002_URL=http://127.0.0.1:54421 y
+BARBERIA_002_PROJECT_ID=app-barberia-002-local, y usar
+`node scripts/run-backend-integration.mjs --profiles`. La preparaci?n privilegiada es local
+y privada; el cliente compilado recibe ?nicamente clave p?blica y token de usuario.
+El runner sin selector sigue exigiendo los escenarios futuros completos. No ejecutar
+create-barbershop ni afirmar integraci?n de barber?as antes de sus tareas.

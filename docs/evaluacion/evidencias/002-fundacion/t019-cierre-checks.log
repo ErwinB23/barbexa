@@ -1,0 +1,17 @@
+git diff --check
+warning: in the working copy of 'docs/evaluacion/evidencias/002-fundacion/informe.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/run-backend-integration.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'specs/002-fundacion-supabase-multitenant/quickstart.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'specs/002-fundacion-supabase-multitenant/tasks.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'supabase/config.toml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'supabase/tests/schema.test.sql', LF will be replaced by CRLF the next time Git touches it
+
+EXIT=0
+lint final integraci?n
+
+EXIT=0
+formato final integraci?n
+Checking formatting...
+All matched files use Prettier code style!
+
+EXIT=0

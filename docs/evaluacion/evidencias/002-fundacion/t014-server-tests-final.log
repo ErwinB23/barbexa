@@ -1,0 +1,18 @@
+running 3 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (925µs)
+invalid actor/input and provider failure ... ok (548µs)
+runtime validation null empty omitted fields and safe errors ... ok (508µs)
+
+ok | 3 passed | 0 failed (9ms)
+
+| File                              | Branch % | Function % | Line % |
+| --------------------------------- | -------- | ---------- | ------ |
+| application/ensure-own-profile.ts |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                   |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts              |    100.0 |      100.0 |  100.0 |
+| All files                         |    100.0 |      100.0 |  100.0 |
+Check tests/server/tenant-foundation/profiles.test.ts
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t014-deno-cov-final/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t014-deno-cov-final/html/index.html
+
+EXIT=0

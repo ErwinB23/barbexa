@@ -1,0 +1,4 @@
+COMMAND: check --no-config --no-npm --no-remote supabase/functions/ensure-profile/index.ts
+Check supabase/functions/ensure-profile/index.ts
+
+EXIT=0

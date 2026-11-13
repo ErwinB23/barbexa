@@ -1,0 +1,10 @@
+COMMAND: deno test --no-config --no-npm --no-remote --no-prompt --filter /verified actor|invalid actor|runtime validation/ tests/server/tenant-foundation/profiles.test.ts
+running 3 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (1ms)
+invalid actor/input and provider failure ... ok (470µs)
+runtime validation null empty omitted fields and safe errors ... ok (768µs)
+
+ok | 3 passed | 0 failed | 3 filtered out (6ms)
+
+
+EXIT=0
