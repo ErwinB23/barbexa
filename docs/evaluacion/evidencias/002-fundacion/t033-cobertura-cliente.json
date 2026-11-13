@@ -1,0 +1,43 @@
+{
+  "command": "npm run check / scripts/run-unit-tests.mjs",
+  "scope": "Node tenant-foundation executable domain/application; excludes foundation 001, adapters, SQL and UI",
+  "files": [
+    {
+      "file": "barbershops.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    },
+    {
+      "file": "memberships.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    },
+    {
+      "file": "profiles.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    },
+    {
+      "file": "barbershop-validation.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    },
+    {
+      "file": "types.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    },
+    {
+      "file": "validation.js",
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    }
+  ],
+  "exit": 0
+}

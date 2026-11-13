@@ -1,0 +1,6 @@
+COMMAND: git diff --check
+EXIT=2
+AFFECTED_FILES=["docs/evaluacion/evidencias/002-fundacion/t017-serve.log"]
+COMMAND: git diff --check -- . :(exclude)docs/evaluacion/evidencias/002-fundacion/t017-serve.log
+EXIT=0
+AFFECTED_FILES=[]

@@ -1,0 +1,13 @@
+{
+  "oldMetadataUnchanged": 12,
+  "nonEdgeNewUnchanged": 7,
+  "edgeId": "082f67bdadee2904c9992a5062a1a26a5a19023d4d8c405c1fdd1d641d9c0597",
+  "edgeState": "running",
+  "jwtConfig": {
+    "ensure-profile": {
+      "verifyJWT": true
+    }
+  },
+  "counts": "profiles=0\nauth_users=0",
+  "onlyEdgeRecovered": true
+}

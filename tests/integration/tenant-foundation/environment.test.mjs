@@ -3,6 +3,7 @@ import { Buffer } from 'node:buffer';
 import { test } from 'node:test';
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
 const helpers = () => import('./fixtures.mjs');
@@ -144,21 +145,46 @@ test('subprocess failure and timeout stop without exposing stdout', async () => 
     /TIMEOUT/,
   );
 });
-test('runner fails closed when backend does not exist', () => {
-  const r = spawnSync(
-    process.execPath,
-    ['scripts/run-backend-integration.mjs'],
-    {
+test('runner fails closed when backend does not exist', async () => {
+  const { createOwnedDirectory, removeOwnedDirectory } = await helpers();
+  const isolated = createOwnedDirectory();
+  try {
+    fs.mkdirSync(path.join(isolated, 'scripts'));
+    // The real project now has all scenario files. Keep testing the missing-file
+    // branch in an empty owned tree, without executing real backend scenarios.
+    const source = fs
+      .readFileSync('scripts/run-backend-integration.mjs', 'utf8')
+      .replace(
+        "'typescript'",
+        JSON.stringify(
+          pathToFileURL(
+            path.resolve('node_modules/typescript/lib/typescript.js'),
+          ).href,
+        ),
+      )
+      .replace(
+        "'../tests/integration/tenant-foundation/fixtures.mjs'",
+        JSON.stringify(
+          pathToFileURL(
+            path.resolve('tests/integration/tenant-foundation/fixtures.mjs'),
+          ).href,
+        ),
+      );
+    const entry = path.join(isolated, 'scripts/run-backend-integration.mjs');
+    fs.writeFileSync(entry, source);
+    const r = spawnSync(process.execPath, [entry], {
       encoding: 'utf8',
       env: {
         ...process.env,
         BARBERIA_002_URL: good.url,
         BARBERIA_002_PROJECT_ID: good.projectId,
       },
-    },
-  );
-  assert.equal(r.status, 1);
-  assert.match(r.stderr, /NOT_READY/);
+    });
+    assert.equal(r.status, 1);
+    assert.match(r.stderr, /NOT_READY/);
+  } finally {
+    removeOwnedDirectory(isolated);
+  }
 });
 test('isolated TypeScript compilation works after unit build cleanup', async () => {
   const { createOwnedDirectory, removeOwnedDirectory } = await helpers();

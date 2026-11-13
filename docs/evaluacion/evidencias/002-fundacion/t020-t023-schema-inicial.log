@@ -1,0 +1,9 @@
+COMMAND: supabase test db supabase/tests/schema.test.sql --workdir <workspace>
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql .. ok
+All tests successful.
+Files=1, Tests=118,  0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+Result: PASS
+Target: local stack (127.0.0.1:54422)
+psql:/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql:4: NOTICE:  extension "pgtap" already exists, skipping
+
+EXIT=0

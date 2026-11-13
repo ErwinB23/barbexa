@@ -1,0 +1,21 @@
+{
+  "C3": {
+    "status": 500,
+    "partialRows": 0
+  },
+  "C2": {
+    "connections": 2,
+    "barrierWaiters": 2,
+    "committed": 1,
+    "rejected": 1,
+    "sqlstate": "23505",
+    "exitCodes": [
+      0,
+      3
+    ]
+  },
+  "C4": {
+    "shops": 2,
+    "ownAdmins": 2
+  }
+}

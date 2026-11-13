@@ -1,0 +1,43 @@
+COMMAND: test --no-config --no-npm --no-remote --coverage=.artifacts/t022-cov tests/server/tenant-foundation
+running 4 tests from ./tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (14ms)
+Auth invalid anonymous malformed and provider errors ... ok (1ms)
+RPC service transport separate and DTO mapped for both key modes ... ok (362µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (23ms)
+running 3 tests from ./tests/server/tenant-foundation/barbershops.test.ts
+server own create forwards verified context and normalized name ... ok (886µs)
+server invalid actor impersonation profile required and provider timeout ... ok (509µs)
+server validators and malformed persistence results ... ok (325µs)
+running 3 tests from ./tests/server/tenant-foundation/handler.test.ts
+handler success correlates and actor comes only from verifier ... ok (18ms)
+handler rejects malformed extras types oversized and methods ... ok (1ms)
+handler provider errors CORS and redacted logs ... ok (873µs)
+running 6 tests from ./tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (938µs)
+invalid actor/input and provider failure ... ok (510µs)
+runtime validation null empty omitted fields and safe errors ... ok (288µs)
+HTTP contract UNAUTHENTICATED ... ok (17ms)
+HTTP contract INVALID_INPUT ... ok (247µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... ok (202µs)
+
+ok | 16 passed | 0 failed (327ms)
+
+| File                                          | Branch % | Function % | Line % |
+| --------------------------------------------- | -------- | ---------- | ------ |
+| application/create-own-barbershop.ts          |    100.0 |      100.0 |  100.0 |
+| application/ensure-own-profile.ts             |    100.0 |      100.0 |  100.0 |
+| domain/barbershop-validation.ts               |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                               |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts                          |    100.0 |      100.0 |  100.0 |
+| infrastructure/auth-verification-adapter.ts   |    100.0 |      100.0 |  100.0 |
+| infrastructure/postgres-foundation-adapter.ts |     94.7 |      100.0 |   82.1 |
+| presentation/ensure-profile-handler.ts        |     95.7 |      100.0 |  100.0 |
+| All files                                     |     97.9 |      100.0 |   96.4 |
+Check tests/server/tenant-foundation/adapters.test.ts
+Check tests/server/tenant-foundation/barbershops.test.ts
+Check tests/server/tenant-foundation/handler.test.ts
+Check tests/server/tenant-foundation/profiles.test.ts
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t022-cov/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/t022-cov/html/index.html
+
+EXIT=0

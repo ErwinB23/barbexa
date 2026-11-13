@@ -1,0 +1,135 @@
+COMMAND: node scripts/run-unit-tests.mjs
+Núcleo incluido en cobertura: ["src/features/foundation/application/get-app-information.ts","src/features/foundation/domain/validate-information-request.ts","src/features/tenant-foundation/application/barbershops.ts","src/features/tenant-foundation/application/memberships.ts","src/features/tenant-foundation/application/profiles.ts","src/features/tenant-foundation/domain/barbershop-validation.ts","src/features/tenant-foundation/domain/types.ts","src/features/tenant-foundation/domain/validation.ts"]
+✔ composición real expone una función que obtiene los datos inyectados (1.4977ms)
+✔ composición conserva validación de entrada sin exponer el adaptador (0.1663ms)
+✔ composición convierte la configuración inválida en resultado controlado (0.1689ms)
+text/background: 17.7397:1
+textSecondary/background: 10.3074:1
+error/background: 6.4700:1
+success/background: 7.1303:1
+text/surface: 16.1195:1
+textSecondary/surface: 9.3659:1
+error/surface: 5.8791:1
+success/surface: 6.4791:1
+onAction/action: 6.7016:1
+action/background: 6.7016:1
+action/surface: 6.0895:1
+textSecondary/surface: 9.3659:1
+onAction/action: 6.7016:1
+✔ contraste: negro/blanco 21, mismo color 1 y gris/blanco conocido (1.06ms)
+✔ texto normal text/background >=4.5; grande >=3 (0.7428ms)
+✔ texto normal textSecondary/background >=4.5; grande >=3 (0.1316ms)
+✔ texto normal error/background >=4.5; grande >=3 (0.6664ms)
+✔ texto normal success/background >=4.5; grande >=3 (0.1392ms)
+✔ texto normal text/surface >=4.5; grande >=3 (0.097ms)
+✔ texto normal textSecondary/surface >=4.5; grande >=3 (0.0731ms)
+✔ texto normal error/surface >=4.5; grande >=3 (0.0722ms)
+✔ texto normal success/surface >=4.5; grande >=3 (0.1583ms)
+✔ botón/texto/borde/foco onAction/action >=4.5 (0.137ms)
+✔ botón/texto/borde/foco action/background >=3 (0.0796ms)
+✔ botón/texto/borde/foco action/surface >=3 (0.1132ms)
+✔ botón/texto/borde/foco textSecondary/surface >=3 (0.1111ms)
+✔ botón/texto/borde/foco onAction/action >=3 (0.0809ms)
+✔ consulta con doble devuelve información y llama una sola vez (1.4617ms)
+✔ consulta con adaptador local devuelve información y llama una sola vez (0.1888ms)
+✔ entrada inválida undefined no invoca gateway (0.6542ms)
+✔ entrada inválida null no invoca gateway (0.0536ms)
+✔ entrada inválida "" no invoca gateway (0.0593ms)
+✔ entrada inválida {} no invoca gateway (0.0524ms)
+✔ entrada inválida [] no invoca gateway (0.0379ms)
+✔ entrada inválida {"idioma":""} no invoca gateway (0.0439ms)
+✔ entrada inválida {"idioma":"en-US"} no invoca gateway (0.0604ms)
+✔ entrada inválida {"idioma":1} no invoca gateway (0.0362ms)
+✔ rechazo se convierte en no-disponible sin filtrar detalles; reintento funciona (0.203ms)
+✔ configuración local malformada termina en no-disponible (0.0791ms)
+✔ adaptador local devuelve los tres campos públicos inyectados (3.4449ms)
+✔ adaptador rechaza nombre malformado: "" (0.4066ms)
+✔ adaptador rechaza nombre malformado: "   " (0.0867ms)
+✔ adaptador rechaza nombre malformado: 42 (0.0635ms)
+✔ adaptador rechaza nombre malformado: null (0.0789ms)
+✔ adaptador rechaza nombre malformado: undefined (0.0611ms)
+✔ adaptador rechaza version malformado: "" (0.0619ms)
+✔ adaptador rechaza version malformado: "   " (0.0582ms)
+✔ adaptador rechaza version malformado: 42 (0.0688ms)
+✔ adaptador rechaza version malformado: null (0.2045ms)
+✔ adaptador rechaza version malformado: undefined (0.1233ms)
+✔ adaptador rechaza descripcion malformado: "" (0.1166ms)
+✔ adaptador rechaza descripcion malformado: "   " (0.065ms)
+✔ adaptador rechaza descripcion malformado: 42 (0.0592ms)
+✔ adaptador rechaza descripcion malformado: null (0.065ms)
+✔ adaptador rechaza descripcion malformado: undefined (0.0546ms)
+✔ adaptador rechaza configuración ausente o incompleta: undefined (0.1098ms)
+✔ adaptador rechaza configuración ausente o incompleta: null (0.0396ms)
+✔ adaptador rechaza configuración ausente o incompleta: "configuracion-invalida" (0.0462ms)
+✔ adaptador rechaza configuración ausente o incompleta: [] (0.0379ms)
+✔ adaptador rechaza configuración ausente o incompleta: {} (0.0377ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"version":"0.1.0","descripcion":"Base local"} (0.0383ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","descripcion":"Base local"} (0.0714ms)
+✔ adaptador rechaza configuración ausente o incompleta: {"nombre":"App Barbería","version":"0.1.0"} (0.0816ms)
+✔ barbershop transport uses Edge and own JWT; timeout reconciles without retry (21.5941ms)
+✔ create/get/rename normalize and use narrow contract (1.7611ms)
+✔ invalid names identifiers and alternative actor/role rejected (1.931ms)
+✔ absence provider PROFILE_REQUIRED and timeout never retry (1.3625ms)
+✔ malformed provider outputs identifiers roles and status fail closed (0.3832ms)
+✔ composition consumes real adapter and maps own read PATCH and Edge (19.6512ms)
+✔ zero rows and transport errors never invent success (1.5253ms)
+✔ membership transport uses verified current identity, minimal projection and fresh JWT (20.2869ms)
+✔ membership transport rejects malformed and mismatched rows, maps denial and never caches permissions (2.3024ms)
+✔ own inactive and contextual membership lists preserve minimal types (1.6346ms)
+✔ invalid tenant provider failures and forbidden not cached (0.6576ms)
+✔ membership results reject malformed data and foreign tenant, and project minimal fields (1.0349ms)
+✔ ensure success and repeated ensure preserve existing profile (0.8799ms)
+✔ read success and controlled absence (0.1564ms)
+✔ normalization and PATCH omitted/null/empty phone (0.5415ms)
+✔ invalid runtime input never reaches gateway (0.5783ms)
+✔ dependency failures sanitized and missing update not success (0.1956ms)
+✔ identifier validation and typed errors preserve safe codes (0.2546ms)
+✔ acepta solicitud existente con idioma es-PE (0.7447ms)
+✔ rechaza solicitud malformada undefined (0.0714ms)
+✔ rechaza solicitud malformada null (0.0392ms)
+✔ rechaza solicitud malformada "" (0.038ms)
+✔ rechaza solicitud malformada "es-PE" (0.5338ms)
+✔ rechaza solicitud malformada 1 (0.0511ms)
+✔ rechaza solicitud malformada true (0.0392ms)
+✔ rechaza solicitud malformada [] (0.032ms)
+✔ rechaza solicitud malformada {} (0.0472ms)
+✔ rechaza solicitud malformada {"idioma":""} (0.0319ms)
+✔ rechaza solicitud malformada {"idioma":"es-ES"} (0.029ms)
+✔ rechaza solicitud malformada {"idioma":" es-PE "} (0.0259ms)
+✔ rechaza solicitud malformada {"idioma":null} (0.0272ms)
+✔ rechaza solicitud malformada {"idioma":1} (0.0241ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150.9904
+ℹ start of coverage report
+ℹ -------------------------------------------------------------------------------------
+ℹ file                                 | line % | branch % | funcs % | uncovered lines
+ℹ -------------------------------------------------------------------------------------
+ℹ .test-build                          |        |          |         |
+ℹ  src                                 |        |          |         |
+ℹ   features                           |        |          |         |
+ℹ    foundation                        |        |          |         |
+ℹ     application                      |        |          |         |
+ℹ      get-app-information.js          | 100.00 |   100.00 |  100.00 |
+ℹ     domain                           |        |          |         |
+ℹ      validate-information-request.js | 100.00 |   100.00 |  100.00 |
+ℹ    tenant-foundation                 |        |          |         |
+ℹ     application                      |        |          |         |
+ℹ      barbershops.js                  | 100.00 |   100.00 |  100.00 |
+ℹ      memberships.js                  | 100.00 |   100.00 |  100.00 |
+ℹ      profiles.js                     | 100.00 |   100.00 |  100.00 |
+ℹ     domain                           |        |          |         |
+ℹ      barbershop-validation.js        | 100.00 |   100.00 |  100.00 |
+ℹ      types.js                        | 100.00 |   100.00 |  100.00 |
+ℹ      validation.js                   | 100.00 |   100.00 |  100.00 |
+ℹ -------------------------------------------------------------------------------------
+ℹ all files                            | 100.00 |   100.00 |  100.00 |
+ℹ -------------------------------------------------------------------------------------
+ℹ end of coverage report
+
+EXIT=0

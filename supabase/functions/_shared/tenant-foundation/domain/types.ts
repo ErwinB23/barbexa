@@ -29,3 +29,19 @@ export class FoundationError extends Error {
 export interface VerifiedActor {
   readonly userId: string;
 }
+
+export interface Barbershop {
+  readonly id: string;
+  readonly name: string;
+}
+export interface Membership {
+  readonly id: string;
+  readonly userId: string;
+  readonly barbershopId: string;
+  readonly role: 'barber' | 'administrator';
+  readonly status: 'active' | 'inactive';
+}
+export interface CreatedBarbershop {
+  readonly barbershop: Barbershop;
+  readonly membership: Membership;
+}

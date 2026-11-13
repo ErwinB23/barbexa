@@ -1,0 +1,346 @@
+COMMAND: npm run coverage:server (Deno 2.9.8 in process PATH)
+
+> app-barberia@0.1.0 coverage:server
+> deno task --config supabase/functions/deno.json coverage
+
+running 4 tests from ../../tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (17ms)
+Auth invalid anonymous malformed and provider errors ... ok (973µs)
+RPC service transport separate and DTO mapped for both key modes ... ok (509µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (17ms)
+running 3 tests from ../../tests/server/tenant-foundation/barbershops.test.ts
+server own create forwards verified context and normalized name ... ok (590µs)
+server invalid actor impersonation profile required and provider timeout ... ok (450µs)
+server validators and malformed persistence results ... ok (444µs)
+running 3 tests from ../../tests/server/tenant-foundation/handler.test.ts
+handler success correlates and actor comes only from verifier ... ok (16ms)
+handler rejects malformed extras types oversized and methods ... ok (1ms)
+handler provider errors CORS and redacted logs ... ok (432µs)
+running 6 tests from ../../tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (694µs)
+invalid actor/input and provider failure ... ok (495µs)
+runtime validation null empty omitted fields and safe errors ... ok (377µs)
+HTTP contract UNAUTHENTICATED ... ok (18ms)
+HTTP contract INVALID_INPUT ... ok (385µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... ok (220µs)
+running 1 test from ../../tests/server/tenant-foundation/provisioning-adapter.test.ts
+barbershop RPC maps own membership and handler rejects forged role ... ok (19ms)
+
+ok | 17 passed | 0 failed (350ms)
+
+| File                                          | Branch % | Function % | Line % |
+| --------------------------------------------- | -------- | ---------- | ------ |
+| application/create-own-barbershop.ts          |    100.0 |      100.0 |  100.0 |
+| application/ensure-own-profile.ts             |    100.0 |      100.0 |  100.0 |
+| domain/barbershop-validation.ts               |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                               |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts                          |    100.0 |      100.0 |  100.0 |
+| infrastructure/auth-verification-adapter.ts   |    100.0 |      100.0 |  100.0 |
+| infrastructure/postgres-foundation-adapter.ts |     88.6 |      100.0 |   77.3 |
+| presentation/create-barbershop-handler.ts     |     62.1 |      100.0 |   80.2 |
+| presentation/ensure-profile-handler.ts        |     95.7 |      100.0 |  100.0 |
+| All files                                     |     92.2 |      100.0 |   90.6 |
+SF:C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\application\create-own-barbershop.ts
+FN:8,createOwnBarbershop
+FNDA:14,createOwnBarbershop
+FNF:1
+FNH:1
+BRDA:15,1,0,13
+BRDA:15,1,1,1
+BRDA:16,1,0,12
+BRDA:16,1,1,2
+BRDA:19,1,0,4
+BRDA:19,1,1,10
+BRDA:23,1,0,5
+BRDA:23,1,1,9
+BRF:8
+BRH:8
+DA:1,1
+DA:2,1
+DA:3,1
+DA:4,1
+DA:5,1
+DA:6,1
+DA:8,1
+DA:9,1
+DA:10,1
+DA:11,1
+DA:13,14
+DA:14,14
+DA:15,14
+DA:16,14
+DA:17,14
+DA:19,14
+DA:20,10
+DA:21,10
+DA:22,14
+DA:23,14
+DA:24,14
+DA:26,14
+LH:22
+LF:22
+end_of_record
+SF:C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\application\ensure-own-profile.ts
+FN:5,ensureOwnProfile
+FNDA:9,ensureOwnProfile
+FNF:1
+FNH:1
+BRDA:12,1,0,8
+BRDA:12,1,1,1
+BRDA:13,1,0,7
+BRDA:13,1,1,2
+BRDA:16,1,0,3
+BRDA:16,1,1,6
+BRF:6
+BRH:6
+DA:1,1
+DA:2,1
+DA:5,1
+DA:6,1
+DA:7,1
+DA:8,1
+DA:10,9
+DA:11,9
+DA:12,9
+DA:13,9
+DA:14,9
+DA:16,9
+DA:17,6
+DA:18,6
+DA:19,6
+DA:20,9
+LH:16
+LF:16
+end_of_record
+SF:C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\domain\barbershop-validation.ts
+FN:8,barbershopInput
+FN:21,shopId
+FN:25,isBarbershop
+FN:30,isMembership
+FN:41,createdBarbershop
+FNDA:16,barbershopInput
+FNDA:2,shopId
+FNDA:12,isBarbershop
+FNDA:15,isMembership
+FNDA:7,createdBarbershop
+FNF:5
+FNH:5
+BRDA:11,1,0,15
+BRDA:11,1,1,1
+BRDA:12,1,0,14
+BRDA:12,1,1,2
+BRDA:13,1,0,11
+BRDA:13,1,1,5
+BRDA:14,1,0,10
+BRDA:14,1,1,6
+BRDA:15,1,0,9
+BRDA:15,1,1,7
+BRDA:18,1,0,8
+BRDA:18,1,1,8
+BRDA:22,3,0,1
+BRDA:22,3,1,1
+BRDA:26,4,0,1
+BRDA:26,4,1,11
+BRDA:28,4,0,9
+BRDA:28,4,1,8
+BRDA:31,5,0,1
+BRDA:31,5,1,14
+BRDA:34,5,0,12
+BRDA:34,5,1,3
+BRDA:35,5,0,11
+BRDA:35,5,1,4
+BRDA:36,5,0,10
+BRDA:36,5,1,5
+BRDA:37,5,0,8
+BRDA:37,5,1,9
+BRDA:38,5,0,3
+BRDA:38,5,1,6
+BRDA:48,6,0,6
+BRDA:48,6,1,1
+BRDA:49,6,0,5
+BRDA:49,6,1,2
+BRDA:50,6,0,4
+BRDA:50,6,1,3
+BRDA:51,6,0,3
+BRDA:51,6,1,1
+BRDA:53,6,0,4
+BRDA:53,6,1,3
+BRF:40
+BRH:40
+DA:1,3
+DA:2,3
+DA:6,3
+DA:7,3
+DA:8,3
+DA:9,16
+DA:10,16
+DA:11,16
+DA:12,16
+DA:13,16
+DA:14,16
+DA:15,16
+DA:16,16
+DA:18,16
+DA:19,8
+DA:20,16
+DA:21,3
+DA:22,2
+DA:23,1
+DA:24,2
+DA:25,3
+DA:26,12
+DA:27,11
+DA:28,12
+DA:29,12
+DA:30,3
+DA:31,15
+DA:32,14
+DA:33,15
+DA:34,15
+DA:35,15
+DA:36,15
+DA:37,15
+DA:38,15
+DA:40,15
+DA:41,3
+DA:42,3
+DA:43,3
+DA:45,7
+DA:46,7
+DA:47,7
+DA:48,7
+DA:49,7
+DA:50,7
+DA:51,7
+DA:53,7
+DA:54,3
+DA:55,7
+LH:48
+LF:48
+end_of_record
+SF:C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\domain\types.ts
+FN:23,<instance_members_initializer>
+FN:24,FoundationError
+FNDA:60,<instance_members_initializer>
+FNDA:60,FoundationError
+FNF:2
+FNH:2
+BRF:0
+BRH:0
+DA:23,5
+DA:24,60
+DA:25,60
+DA:26,60
+DA:27,60
+DA:28,5
+LH:6
+LF:6
+end_of_record
+SF:C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\supabase\functions\_shared\tenant-foundation\domain\validation.ts
+FN:6,validId
+FN:14,record
+FN:22,name
+FN:27,phone
+FN:32,profileInput
+FN:39,profilePatch
+FN:47,dependency
+FNDA:77,validId
+FNDA:33,record
+FNDA:21,name
+FNDA:10,phone
+FNDA:25,profileInput
+FNDA:8,profilePatch
+FNDA:11,dependency
+FNF:7
+FNH:7
+BRDA:8,1,0,73
+BRDA:8,1,1,4
+BRDA:15,2,0,31
+BRDA:15,2,1,2
+BRDA:16,2,0,4
+BRDA:16,2,1,29
+BRDA:19,2,0,3
+BRDA:19,2,1,26
+BRDA:23,4,0,16
+BRDA:23,4,1,5
+BRDA:24,4,0,7
+BRDA:24,4,1,14
+BRDA:28,5,0,2
+BRDA:28,5,1,8
+BRDA:29,5,0,4
+BRDA:29,5,1,9
+BRDA:29,5,2,4
+BRDA:30,5,0,2
+BRDA:30,5,1,7
+BRDA:36,6,0,7
+BRDA:36,6,1,6
+BRDA:42,7,0,2
+BRDA:42,7,1,6
+BRDA:43,7,0,4
+BRDA:43,7,1,4
+BRDA:44,7,0,1
+BRDA:44,7,1,3
+BRDA:50,8,0,4
+BRDA:50,8,1,7
+BRDA:51,8,0,2
+BRDA:51,8,1,2
+BRF:31
+BRH:31
+DA:1,5
+DA:2,5
+DA:5,5
+DA:6,5
+DA:7,77
+DA:8,77
+DA:9,77
+DA:10,77
+DA:13,77
+DA:14,33
+DA:15,33
+DA:16,33
+DA:17,29
+DA:18,33
+DA:19,33
+DA:20,26
+DA:21,33
+DA:22,21
+DA:23,21
+DA:24,21
+DA:25,14
+DA:26,21
+DA:27,10
+DA:28,10
+DA:29,10
+DA:30,10
+DA:31,10
+DA:32,5
+DA:33,25
+DA:34,25
+DA:35,25
+DA:36,25
+DA:37,25
+DA:38,25
+DA:39,5
+DA:40,8
+DA:41,8
+DA:42,8
+DA:43,8
+DA:44,8
+DA:45,3
+DA:46,8
+DA:47,5
+DA:48,11
+DA:49,11
+DA:50,11
+DA:51,4
+DA:52,2
+DA:53,2
+DA:54,11
+LH:50
+LF:50
+end_of_record
+Task coverage DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt --coverage=../../.artifacts/server-coverage ../../tests/server/tenant-foundation && DENO_DIR=../../.artifacts/deno-cache deno coverage --threshold=100 --include='.*(domain|application).*' --lcov ../../.artifacts/server-coverage
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/server-coverage/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/.artifacts/server-coverage/html/index.html
+
+EXIT=0

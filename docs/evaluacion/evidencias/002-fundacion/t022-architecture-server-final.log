@@ -1,0 +1,15 @@
+COMMAND: scripts/check-server-architecture.mjs
+Arquitectura: modules=11 core=6 edges=23
+  supabase/functions/ensure-profile/index.ts [entry]
+  supabase/functions/_shared/tenant-foundation/application/create-own-barbershop.ts [application]
+  supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts [application]
+  supabase/functions/_shared/tenant-foundation/application/foundation-provisioning-gateway.ts [application]
+  supabase/functions/_shared/tenant-foundation/composition.ts [composition]
+  supabase/functions/_shared/tenant-foundation/domain/barbershop-validation.ts [domain]
+  supabase/functions/_shared/tenant-foundation/domain/types.ts [domain]
+  supabase/functions/_shared/tenant-foundation/domain/validation.ts [domain]
+  supabase/functions/_shared/tenant-foundation/infrastructure/auth-verification-adapter.ts [infrastructure]
+  supabase/functions/_shared/tenant-foundation/infrastructure/postgres-foundation-adapter.ts [infrastructure]
+  supabase/functions/_shared/tenant-foundation/presentation/ensure-profile-handler.ts [presentation]
+
+EXIT=0

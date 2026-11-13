@@ -1,0 +1,5 @@
+tests/unit/tenant-foundation/barbershop-http.test.ts(5,30): error TS2339: Property 'createOwnBarbershop' does not exist on type '{ ensureOwnProfile: (input: unknown) => Promise<Profile>; getOwnProfile: () => Promise<Profile | null>; updateOwnProfile: (input: unknown) => Promise<Profile>; }'.
+tests/unit/tenant-foundation/barbershop-http.test.ts(5,234): error TS2339: Property 'getBarbershop' does not exist on type '{ ensureOwnProfile: (input: unknown) => Promise<Profile>; getOwnProfile: () => Promise<Profile | null>; updateOwnProfile: (input: unknown) => Promise<Profile>; }'.
+tests/unit/tenant-foundation/barbershop-http.test.ts(5,288): error TS2339: Property 'renameBarbershop' does not exist on type '{ ensureOwnProfile: (input: unknown) => Promise<Profile>; getOwnProfile: () => Promise<Profile | null>; updateOwnProfile: (input: unknown) => Promise<Profile>; }'.
+
+EXIT=1

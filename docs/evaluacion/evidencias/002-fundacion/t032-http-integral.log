@@ -1,0 +1,5 @@
+ENV: BARBERIA_002_URL=http://127.0.0.1:54421 BARBERIA_002_PROJECT_ID=app-barberia-002-local
+COMMAND: node scripts/run-backend-integration.mjs
+SUBPROCESS_FAILED
+
+EXIT=1

@@ -1,0 +1,25 @@
+{
+  "branch": "main",
+  "head": "2f3726604ce41fe44816f5f8de622f57849f9c70",
+  "candidateFilesScanned": 122,
+  "activeLogExcludedFromContentScan": true,
+  "secretPatternFindings": [],
+  "localLinksMissing": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "diagnosticFiles": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ],
+    "onlyActiveLog": true
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "httpBaseCases": {
+    "defined": 342,
+    "passed": 342
+  },
+  "newLogWhitespaceNormalized": 15,
+  "stagingUnchanged": true
+}

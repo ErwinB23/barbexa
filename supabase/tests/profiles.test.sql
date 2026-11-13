@@ -50,7 +50,8 @@ select ok(has_function_privilege('service_role','private.ensure_own_profile(uuid
 select ok(not has_function_privilege('authenticated','public.ensure_own_profile(uuid,text,text)','EXECUTE'),'user wrapper ACL');
 select ok(not has_function_privilege('anon','public.ensure_own_profile(uuid,text,text)','EXECUTE'),'anon wrapper ACL');
 select ok(not exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where p.proname='ensure_own_profile' and n.nspname in ('public','private') and a.grantee=0),'no implicit PUBLIC execute');
-select ok(not has_schema_privilege('authenticated','private','USAGE'),'user private schema denied');
+-- T023 grants namespace USAGE for boolean helpers, never execution of provisioning.
+select ok(not has_function_privilege('authenticated','private.ensure_own_profile(uuid,text,text)','EXECUTE'),'user private provisioning denied');
 insert into auth.users(id) values ('33333333-3333-4333-8333-333333333333');
 set local role service_role;
 select results_eq($$select display_name from public.ensure_own_profile('33333333-3333-4333-8333-333333333333','  New  ','  ')$$,array['New'],'service provisions normalized profile');

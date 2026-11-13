@@ -1,0 +1,11 @@
+COMMAND: coverage --include=.*tenant-foundation/(domain|application)/.* .artifacts/t027-coverage
+| File                                 | Branch % | Function % | Line % |
+| ------------------------------------ | -------- | ---------- | ------ |
+| application/create-own-barbershop.ts |    100.0 |      100.0 |  100.0 |
+| application/ensure-own-profile.ts    |    100.0 |      100.0 |  100.0 |
+| domain/barbershop-validation.ts      |    100.0 |      100.0 |  100.0 |
+| domain/types.ts                      |    100.0 |      100.0 |  100.0 |
+| domain/validation.ts                 |    100.0 |      100.0 |  100.0 |
+| All files                            |    100.0 |      100.0 |  100.0 |
+
+EXIT=0

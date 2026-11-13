@@ -1,0 +1,29 @@
+COMMAND: node --test tests/integration/tenant-foundation/environment.test.mjs
+✔ local loopback and separate project accepted (3.994ms)
+✔ reject unsafe target https://example.com (0.2161ms)
+✔ reject unsafe target http://localhost.evil:54421 (0.108ms)
+✔ reject unsafe target http://127.0.0.1:54321 (0.0905ms)
+✔ reject unsafe target http://user:pass@127.0.0.1:54421 (0.0864ms)
+✔ reject unsafe target http://127.0.0.1:54421/path (0.1014ms)
+✔ reject unsafe target http://127.0.0.1:54421/?key=x (0.0804ms)
+✔ reject old or missing identity (0.1655ms)
+✔ secret never enters public composition settings (0.3767ms)
+✔ legacy service key rejected (0.2663ms)
+✔ service credential cannot be used as user token (0.2016ms)
+✔ fixture credentials random and never logged (0.3511ms)
+✔ owned cleanup and refusal of foreign directory (2.2962ms)
+✔ cleanup refuses altered ownership marker (3.5415ms)
+✔ cleanup refuses nested junction without following it (3.4536ms)
+✔ subprocess failure and timeout stop without exposing stdout (77.6984ms)
+✔ runner fails closed when backend does not exist (176.7986ms)
+✔ isolated TypeScript compilation works after unit build cleanup (696.4257ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1040.0559
+
+EXIT=0

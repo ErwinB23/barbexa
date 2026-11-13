@@ -1,0 +1,10 @@
+Check tests/server/tenant-foundation/barbershops.test.ts
+TS2307 [ERROR]: Cannot find module 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/supabase/functions/_shared/tenant-foundation/application/create-own-barbershop.ts'.
+    at file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/server/tenant-foundation/barbershops.test.ts:1:35
+
+error: Type checking failed.
+
+  [33minfo:[39m The program failed type-checking, but it still might work correctly.
+  [36mhint:[39m Re-run with [4m--no-check[24m to skip type-checking.
+
+EXIT=1

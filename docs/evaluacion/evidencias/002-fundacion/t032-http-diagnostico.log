@@ -1,0 +1,2656 @@
+COMMAND: node --test --test-concurrency=1 --test-reporter=tap <three approved integration suites>
+TAP version 13
+# Subtest: US4 application and direct HTTP authorization matrix with committed revocation
+    # Subtest: client/admin-A/A/shop-read
+    ok 1 - client/admin-A/A/shop-read
+      ---
+      duration_ms: 17.8962
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/A/shop-rename
+    ok 2 - client/admin-A/A/shop-rename
+      ---
+      duration_ms: 5.6713
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/A/member-own
+    ok 3 - client/admin-A/A/member-own
+      ---
+      duration_ms: 4.8299
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/A/member-RPC
+    ok 4 - client/admin-A/A/member-RPC
+      ---
+      duration_ms: 5.5079
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/B/shop-read
+    ok 5 - client/admin-A/B/shop-read
+      ---
+      duration_ms: 157.5815
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/B/shop-rename
+    ok 6 - client/admin-A/B/shop-rename
+      ---
+      duration_ms: 154.523
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/B/member-own
+    ok 7 - client/admin-A/B/member-own
+      ---
+      duration_ms: 151.8852
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/B/member-RPC
+    ok 8 - client/admin-A/B/member-RPC
+      ---
+      duration_ms: 153.5844
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/A/shop-read
+    ok 9 - client/admin-B/A/shop-read
+      ---
+      duration_ms: 155.1423
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/A/shop-rename
+    ok 10 - client/admin-B/A/shop-rename
+      ---
+      duration_ms: 148.2099
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/A/member-own
+    ok 11 - client/admin-B/A/member-own
+      ---
+      duration_ms: 146.1861
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/A/member-RPC
+    ok 12 - client/admin-B/A/member-RPC
+      ---
+      duration_ms: 151.0181
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/B/shop-read
+    ok 13 - client/admin-B/B/shop-read
+      ---
+      duration_ms: 5.0255
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/B/shop-rename
+    ok 14 - client/admin-B/B/shop-rename
+      ---
+      duration_ms: 5.8534
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/B/member-own
+    ok 15 - client/admin-B/B/member-own
+      ---
+      duration_ms: 3.7789
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/B/member-RPC
+    ok 16 - client/admin-B/B/member-RPC
+      ---
+      duration_ms: 3.8669
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/A/shop-read
+    ok 17 - client/barber-A/A/shop-read
+      ---
+      duration_ms: 12.1031
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/A/shop-rename
+    ok 18 - client/barber-A/A/shop-rename
+      ---
+      duration_ms: 154.6282
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/A/member-own
+    ok 19 - client/barber-A/A/member-own
+      ---
+      duration_ms: 4.868
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/A/member-RPC
+    ok 20 - client/barber-A/A/member-RPC
+      ---
+      duration_ms: 148.7201
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/B/shop-read
+    ok 21 - client/barber-A/B/shop-read
+      ---
+      duration_ms: 152.1056
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/B/shop-rename
+    ok 22 - client/barber-A/B/shop-rename
+      ---
+      duration_ms: 151.9358
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/B/member-own
+    ok 23 - client/barber-A/B/member-own
+      ---
+      duration_ms: 156.5291
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/B/member-RPC
+    ok 24 - client/barber-A/B/member-RPC
+      ---
+      duration_ms: 154.3209
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/A/shop-read
+    ok 25 - client/barber-B/A/shop-read
+      ---
+      duration_ms: 156.683
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/A/shop-rename
+    ok 26 - client/barber-B/A/shop-rename
+      ---
+      duration_ms: 155.8636
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/A/member-own
+    ok 27 - client/barber-B/A/member-own
+      ---
+      duration_ms: 149.7091
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/A/member-RPC
+    ok 28 - client/barber-B/A/member-RPC
+      ---
+      duration_ms: 152.6847
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/B/shop-read
+    ok 29 - client/barber-B/B/shop-read
+      ---
+      duration_ms: 5.8725
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/B/shop-rename
+    ok 30 - client/barber-B/B/shop-rename
+      ---
+      duration_ms: 154.4838
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/B/member-own
+    ok 31 - client/barber-B/B/member-own
+      ---
+      duration_ms: 4.8354
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/B/member-RPC
+    ok 32 - client/barber-B/B/member-RPC
+      ---
+      duration_ms: 147.958
+      type: 'test'
+      ...
+    # Subtest: client/client/A/shop-read
+    ok 33 - client/client/A/shop-read
+      ---
+      duration_ms: 153.2104
+      type: 'test'
+      ...
+    # Subtest: client/client/A/shop-rename
+    ok 34 - client/client/A/shop-rename
+      ---
+      duration_ms: 148.025
+      type: 'test'
+      ...
+    # Subtest: client/client/A/member-own
+    ok 35 - client/client/A/member-own
+      ---
+      duration_ms: 146.9407
+      type: 'test'
+      ...
+    # Subtest: client/client/A/member-RPC
+    ok 36 - client/client/A/member-RPC
+      ---
+      duration_ms: 145.5808
+      type: 'test'
+      ...
+    # Subtest: client/client/B/shop-read
+    ok 37 - client/client/B/shop-read
+      ---
+      duration_ms: 147.2752
+      type: 'test'
+      ...
+    # Subtest: client/client/B/shop-rename
+    ok 38 - client/client/B/shop-rename
+      ---
+      duration_ms: 154.0331
+      type: 'test'
+      ...
+    # Subtest: client/client/B/member-own
+    ok 39 - client/client/B/member-own
+      ---
+      duration_ms: 147.8555
+      type: 'test'
+      ...
+    # Subtest: client/client/B/member-RPC
+    ok 40 - client/client/B/member-RPC
+      ---
+      duration_ms: 147.7545
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/A/shop-read
+    ok 41 - client/shared-admin-A-barber-B/A/shop-read
+      ---
+      duration_ms: 13.0258
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/A/shop-rename
+    ok 42 - client/shared-admin-A-barber-B/A/shop-rename
+      ---
+      duration_ms: 5.5842
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/A/member-own
+    ok 43 - client/shared-admin-A-barber-B/A/member-own
+      ---
+      duration_ms: 4.2055
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/A/member-RPC
+    ok 44 - client/shared-admin-A-barber-B/A/member-RPC
+      ---
+      duration_ms: 3.9868
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/B/shop-read
+    ok 45 - client/shared-admin-A-barber-B/B/shop-read
+      ---
+      duration_ms: 3.2857
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/B/shop-rename
+    ok 46 - client/shared-admin-A-barber-B/B/shop-rename
+      ---
+      duration_ms: 152.3897
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/B/member-own
+    ok 47 - client/shared-admin-A-barber-B/B/member-own
+      ---
+      duration_ms: 5.1114
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/B/member-RPC
+    ok 48 - client/shared-admin-A-barber-B/B/member-RPC
+      ---
+      duration_ms: 150.1561
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/A/shop-read
+    ok 49 - client/inactive-A/A/shop-read
+      ---
+      duration_ms: 154.5392
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/A/shop-rename
+    ok 50 - client/inactive-A/A/shop-rename
+      ---
+      duration_ms: 148.8981
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/A/member-own
+    ok 51 - client/inactive-A/A/member-own
+      ---
+      duration_ms: 4.5336
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/A/member-RPC
+    ok 52 - client/inactive-A/A/member-RPC
+      ---
+      duration_ms: 143.7719
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/B/shop-read
+    ok 53 - client/inactive-A/B/shop-read
+      ---
+      duration_ms: 145.2032
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/B/shop-rename
+    ok 54 - client/inactive-A/B/shop-rename
+      ---
+      duration_ms: 150.1864
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/B/member-own
+    ok 55 - client/inactive-A/B/member-own
+      ---
+      duration_ms: 155.2603
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/B/member-RPC
+    ok 56 - client/inactive-A/B/member-RPC
+      ---
+      duration_ms: 153.6864
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/profile-read
+    ok 57 - client/admin-A/profile-read
+      ---
+      duration_ms: 5.722
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/profile-edit
+    ok 58 - client/admin-A/profile-edit
+      ---
+      duration_ms: 4.8071
+      type: 'test'
+      ...
+    # Subtest: client/admin-A/shop-create
+    ok 59 - client/admin-A/shop-create
+      ---
+      duration_ms: 14.6343
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/profile-read
+    ok 60 - client/admin-B/profile-read
+      ---
+      duration_ms: 4.7368
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/profile-edit
+    ok 61 - client/admin-B/profile-edit
+      ---
+      duration_ms: 4.4815
+      type: 'test'
+      ...
+    # Subtest: client/admin-B/shop-create
+    ok 62 - client/admin-B/shop-create
+      ---
+      duration_ms: 10.7707
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/profile-read
+    ok 63 - client/barber-A/profile-read
+      ---
+      duration_ms: 4.3336
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/profile-edit
+    ok 64 - client/barber-A/profile-edit
+      ---
+      duration_ms: 4.6107
+      type: 'test'
+      ...
+    # Subtest: client/barber-A/shop-create
+    ok 65 - client/barber-A/shop-create
+      ---
+      duration_ms: 11.8269
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/profile-read
+    ok 66 - client/barber-B/profile-read
+      ---
+      duration_ms: 4.4385
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/profile-edit
+    ok 67 - client/barber-B/profile-edit
+      ---
+      duration_ms: 4.068
+      type: 'test'
+      ...
+    # Subtest: client/barber-B/shop-create
+    ok 68 - client/barber-B/shop-create
+      ---
+      duration_ms: 11.095
+      type: 'test'
+      ...
+    # Subtest: client/client/profile-read
+    ok 69 - client/client/profile-read
+      ---
+      duration_ms: 4.3916
+      type: 'test'
+      ...
+    # Subtest: client/client/profile-edit
+    ok 70 - client/client/profile-edit
+      ---
+      duration_ms: 4.7944
+      type: 'test'
+      ...
+    # Subtest: client/client/shop-create
+    ok 71 - client/client/shop-create
+      ---
+      duration_ms: 11.7904
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/profile-read
+    ok 72 - client/shared-admin-A-barber-B/profile-read
+      ---
+      duration_ms: 4.3709
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/profile-edit
+    ok 73 - client/shared-admin-A-barber-B/profile-edit
+      ---
+      duration_ms: 4.8049
+      type: 'test'
+      ...
+    # Subtest: client/shared-admin-A-barber-B/shop-create
+    ok 74 - client/shared-admin-A-barber-B/shop-create
+      ---
+      duration_ms: 11.9653
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/profile-read
+    ok 75 - client/inactive-A/profile-read
+      ---
+      duration_ms: 5.5034
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/profile-edit
+    ok 76 - client/inactive-A/profile-edit
+      ---
+      duration_ms: 4.8059
+      type: 'test'
+      ...
+    # Subtest: client/inactive-A/shop-create
+    ok 77 - client/inactive-A/shop-create
+      ---
+      duration_ms: 10.7333
+      type: 'test'
+      ...
+    # Subtest: client/anonymous/member-own
+    ok 78 - client/anonymous/member-own
+      ---
+      duration_ms: 160.1159
+      type: 'test'
+      ...
+    # Subtest: client/anonymous/member-RPC
+    ok 79 - client/anonymous/member-RPC
+      ---
+      duration_ms: 143.6781
+      type: 'test'
+      ...
+    # Subtest: client/invalid-JWT/member-own
+    ok 80 - client/invalid-JWT/member-own
+      ---
+      duration_ms: 148.9952
+      type: 'test'
+      ...
+    # Subtest: client/invalid-JWT/member-RPC
+    ok 81 - client/invalid-JWT/member-RPC
+      ---
+      duration_ms: 156.3258
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-read
+    ok 82 - admin-A/A/shop-read
+      ---
+      duration_ms: 3.6043
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-rename
+    ok 83 - admin-A/A/shop-rename
+      ---
+      duration_ms: 4.8331
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/member-own
+    ok 84 - admin-A/A/member-own
+      ---
+      duration_ms: 2.8499
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/member-table
+    ok 85 - admin-A/A/member-table
+      ---
+      duration_ms: 2.5799
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/member-RPC
+    ok 86 - admin-A/A/member-RPC
+      ---
+      duration_ms: 2.1433
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-other
+    ok 87 - admin-A/A/profile-other
+      ---
+      duration_ms: 149.5107
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-join
+    ok 88 - admin-A/A/profile-join
+      ---
+      duration_ms: 3.4742
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/role
+    ok 89 - admin-A/A/role
+      ---
+      duration_ms: 153.9217
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/status
+    ok 90 - admin-A/A/status
+      ---
+      duration_ms: 149.8254
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/user_id
+    ok 91 - admin-A/A/user_id
+      ---
+      duration_ms: 149.7823
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/barbershop_id
+    ok 92 - admin-A/A/barbershop_id
+      ---
+      duration_ms: 169.6644
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/delete
+    ok 93 - admin-A/A/delete
+      ---
+      duration_ms: 147.3135
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/insert
+    ok 94 - admin-A/A/insert
+      ---
+      duration_ms: 156.4118
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-id
+    ok 95 - admin-A/A/profile-id
+      ---
+      duration_ms: 155.5089
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-id
+    ok 96 - admin-A/A/shop-id
+      ---
+      duration_ms: 150.7846
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-RPC
+    ok 97 - admin-A/A/profile-RPC
+      ---
+      duration_ms: 157.51
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-RPC
+    ok 98 - admin-A/A/shop-RPC
+      ---
+      duration_ms: 150.3715
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/forged-shop-body
+    ok 99 - admin-A/A/forged-shop-body
+      ---
+      duration_ms: 159.2364
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/forged-profile-body
+    ok 100 - admin-A/A/forged-profile-body
+      ---
+      duration_ms: 152.9965
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-read
+    ok 101 - admin-A/B/shop-read
+      ---
+      duration_ms: 145.9652
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-rename
+    ok 102 - admin-A/B/shop-rename
+      ---
+      duration_ms: 146.8279
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-own
+    ok 103 - admin-A/B/member-own
+      ---
+      duration_ms: 148.5516
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-table
+    ok 104 - admin-A/B/member-table
+      ---
+      duration_ms: 156.0111
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-RPC
+    ok 105 - admin-A/B/member-RPC
+      ---
+      duration_ms: 148.7624
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-other
+    ok 106 - admin-A/B/profile-other
+      ---
+      duration_ms: 146.5024
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-join
+    ok 107 - admin-A/B/profile-join
+      ---
+      duration_ms: 3.9749
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/role
+    ok 108 - admin-A/B/role
+      ---
+      duration_ms: 151.2782
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/status
+    ok 109 - admin-A/B/status
+      ---
+      duration_ms: 145.5596
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/user_id
+    ok 110 - admin-A/B/user_id
+      ---
+      duration_ms: 146.4875
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/barbershop_id
+    ok 111 - admin-A/B/barbershop_id
+      ---
+      duration_ms: 147.9496
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/delete
+    ok 112 - admin-A/B/delete
+      ---
+      duration_ms: 147.5146
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/insert
+    ok 113 - admin-A/B/insert
+      ---
+      duration_ms: 145.4325
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-id
+    ok 114 - admin-A/B/profile-id
+      ---
+      duration_ms: 148.9091
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-id
+    ok 115 - admin-A/B/shop-id
+      ---
+      duration_ms: 145.8705
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-RPC
+    ok 116 - admin-A/B/profile-RPC
+      ---
+      duration_ms: 143.1206
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-RPC
+    ok 117 - admin-A/B/shop-RPC
+      ---
+      duration_ms: 146.1933
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/forged-shop-body
+    ok 118 - admin-A/B/forged-shop-body
+      ---
+      duration_ms: 154.1474
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/forged-profile-body
+    ok 119 - admin-A/B/forged-profile-body
+      ---
+      duration_ms: 153.2385
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-read
+    ok 120 - admin-B/A/shop-read
+      ---
+      duration_ms: 147.6445
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-rename
+    ok 121 - admin-B/A/shop-rename
+      ---
+      duration_ms: 143.9884
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-own
+    ok 122 - admin-B/A/member-own
+      ---
+      duration_ms: 145.9224
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-table
+    ok 123 - admin-B/A/member-table
+      ---
+      duration_ms: 144.3872
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-RPC
+    ok 124 - admin-B/A/member-RPC
+      ---
+      duration_ms: 149.2383
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-other
+    ok 125 - admin-B/A/profile-other
+      ---
+      duration_ms: 153.8531
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-join
+    ok 126 - admin-B/A/profile-join
+      ---
+      duration_ms: 3.1451
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/role
+    ok 127 - admin-B/A/role
+      ---
+      duration_ms: 150.0972
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/status
+    ok 128 - admin-B/A/status
+      ---
+      duration_ms: 156.3106
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/user_id
+    ok 129 - admin-B/A/user_id
+      ---
+      duration_ms: 162.2494
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/barbershop_id
+    ok 130 - admin-B/A/barbershop_id
+      ---
+      duration_ms: 154.9786
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/delete
+    ok 131 - admin-B/A/delete
+      ---
+      duration_ms: 148.0112
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/insert
+    ok 132 - admin-B/A/insert
+      ---
+      duration_ms: 148.4074
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-id
+    ok 133 - admin-B/A/profile-id
+      ---
+      duration_ms: 153.0867
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-id
+    ok 134 - admin-B/A/shop-id
+      ---
+      duration_ms: 162.3105
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-RPC
+    ok 135 - admin-B/A/profile-RPC
+      ---
+      duration_ms: 148.741
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-RPC
+    ok 136 - admin-B/A/shop-RPC
+      ---
+      duration_ms: 167.0962
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/forged-shop-body
+    ok 137 - admin-B/A/forged-shop-body
+      ---
+      duration_ms: 1305.6725
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/forged-profile-body
+    ok 138 - admin-B/A/forged-profile-body
+      ---
+      duration_ms: 203.4748
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-read
+    ok 139 - admin-B/B/shop-read
+      ---
+      duration_ms: 3.7097
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-rename
+    ok 140 - admin-B/B/shop-rename
+      ---
+      duration_ms: 4.0254
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/member-own
+    ok 141 - admin-B/B/member-own
+      ---
+      duration_ms: 1.8423
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/member-table
+    ok 142 - admin-B/B/member-table
+      ---
+      duration_ms: 2.1625
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/member-RPC
+    ok 143 - admin-B/B/member-RPC
+      ---
+      duration_ms: 2.0832
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-other
+    ok 144 - admin-B/B/profile-other
+      ---
+      duration_ms: 152.3615
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-join
+    ok 145 - admin-B/B/profile-join
+      ---
+      duration_ms: 3.7959
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/role
+    ok 146 - admin-B/B/role
+      ---
+      duration_ms: 155.4
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/status
+    ok 147 - admin-B/B/status
+      ---
+      duration_ms: 149.6502
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/user_id
+    ok 148 - admin-B/B/user_id
+      ---
+      duration_ms: 148.5352
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/barbershop_id
+    ok 149 - admin-B/B/barbershop_id
+      ---
+      duration_ms: 148.7503
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/delete
+    ok 150 - admin-B/B/delete
+      ---
+      duration_ms: 161.8549
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/insert
+    ok 151 - admin-B/B/insert
+      ---
+      duration_ms: 161.2232
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-id
+    ok 152 - admin-B/B/profile-id
+      ---
+      duration_ms: 156.3769
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-id
+    ok 153 - admin-B/B/shop-id
+      ---
+      duration_ms: 151.097
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-RPC
+    ok 154 - admin-B/B/profile-RPC
+      ---
+      duration_ms: 147.9406
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-RPC
+    ok 155 - admin-B/B/shop-RPC
+      ---
+      duration_ms: 150.8755
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/forged-shop-body
+    ok 156 - admin-B/B/forged-shop-body
+      ---
+      duration_ms: 162.1616
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/forged-profile-body
+    ok 157 - admin-B/B/forged-profile-body
+      ---
+      duration_ms: 157.1137
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-read
+    ok 158 - barber-A/A/shop-read
+      ---
+      duration_ms: 2.9262
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-rename
+    ok 159 - barber-A/A/shop-rename
+      ---
+      duration_ms: 152.2122
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-own
+    ok 160 - barber-A/A/member-own
+      ---
+      duration_ms: 3.1429
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-table
+    ok 161 - barber-A/A/member-table
+      ---
+      duration_ms: 2.0381
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-RPC
+    ok 162 - barber-A/A/member-RPC
+      ---
+      duration_ms: 154.0977
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-other
+    ok 163 - barber-A/A/profile-other
+      ---
+      duration_ms: 146.9054
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-join
+    ok 164 - barber-A/A/profile-join
+      ---
+      duration_ms: 3.2607
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/role
+    ok 165 - barber-A/A/role
+      ---
+      duration_ms: 151.6873
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/status
+    ok 166 - barber-A/A/status
+      ---
+      duration_ms: 151.4324
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/user_id
+    ok 167 - barber-A/A/user_id
+      ---
+      duration_ms: 158.8343
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/barbershop_id
+    ok 168 - barber-A/A/barbershop_id
+      ---
+      duration_ms: 150.8904
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/delete
+    ok 169 - barber-A/A/delete
+      ---
+      duration_ms: 158.6389
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/insert
+    ok 170 - barber-A/A/insert
+      ---
+      duration_ms: 151.6436
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-id
+    ok 171 - barber-A/A/profile-id
+      ---
+      duration_ms: 158.8364
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-id
+    ok 172 - barber-A/A/shop-id
+      ---
+      duration_ms: 152.0355
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-RPC
+    ok 173 - barber-A/A/profile-RPC
+      ---
+      duration_ms: 149.0937
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-RPC
+    ok 174 - barber-A/A/shop-RPC
+      ---
+      duration_ms: 153.6445
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/forged-shop-body
+    ok 175 - barber-A/A/forged-shop-body
+      ---
+      duration_ms: 163.3272
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/forged-profile-body
+    ok 176 - barber-A/A/forged-profile-body
+      ---
+      duration_ms: 165.2002
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-read
+    ok 177 - barber-A/B/shop-read
+      ---
+      duration_ms: 153.5558
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-rename
+    ok 178 - barber-A/B/shop-rename
+      ---
+      duration_ms: 154.4376
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-own
+    ok 179 - barber-A/B/member-own
+      ---
+      duration_ms: 153.2887
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-table
+    ok 180 - barber-A/B/member-table
+      ---
+      duration_ms: 148.5246
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-RPC
+    ok 181 - barber-A/B/member-RPC
+      ---
+      duration_ms: 147.1744
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-other
+    ok 182 - barber-A/B/profile-other
+      ---
+      duration_ms: 155.2834
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-join
+    ok 183 - barber-A/B/profile-join
+      ---
+      duration_ms: 3.4015
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/role
+    ok 184 - barber-A/B/role
+      ---
+      duration_ms: 153.5454
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/status
+    ok 185 - barber-A/B/status
+      ---
+      duration_ms: 149.0399
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/user_id
+    ok 186 - barber-A/B/user_id
+      ---
+      duration_ms: 151.2912
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/barbershop_id
+    ok 187 - barber-A/B/barbershop_id
+      ---
+      duration_ms: 150.0217
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/delete
+    ok 188 - barber-A/B/delete
+      ---
+      duration_ms: 146.1116
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/insert
+    ok 189 - barber-A/B/insert
+      ---
+      duration_ms: 154.3132
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-id
+    ok 190 - barber-A/B/profile-id
+      ---
+      duration_ms: 154.1713
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-id
+    ok 191 - barber-A/B/shop-id
+      ---
+      duration_ms: 148.5862
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-RPC
+    ok 192 - barber-A/B/profile-RPC
+      ---
+      duration_ms: 155.5839
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-RPC
+    ok 193 - barber-A/B/shop-RPC
+      ---
+      duration_ms: 158.3157
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/forged-shop-body
+    ok 194 - barber-A/B/forged-shop-body
+      ---
+      duration_ms: 155.1304
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/forged-profile-body
+    ok 195 - barber-A/B/forged-profile-body
+      ---
+      duration_ms: 153.3637
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-read
+    ok 196 - barber-B/A/shop-read
+      ---
+      duration_ms: 147.3148
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-rename
+    ok 197 - barber-B/A/shop-rename
+      ---
+      duration_ms: 156.3144
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-own
+    ok 198 - barber-B/A/member-own
+      ---
+      duration_ms: 150.433
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-table
+    ok 199 - barber-B/A/member-table
+      ---
+      duration_ms: 150.6433
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-RPC
+    ok 200 - barber-B/A/member-RPC
+      ---
+      duration_ms: 155.0204
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-other
+    ok 201 - barber-B/A/profile-other
+      ---
+      duration_ms: 147.509
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-join
+    ok 202 - barber-B/A/profile-join
+      ---
+      duration_ms: 3.0165
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/role
+    ok 203 - barber-B/A/role
+      ---
+      duration_ms: 153.9158
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/status
+    ok 204 - barber-B/A/status
+      ---
+      duration_ms: 160.6629
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/user_id
+    ok 205 - barber-B/A/user_id
+      ---
+      duration_ms: 150.5815
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/barbershop_id
+    ok 206 - barber-B/A/barbershop_id
+      ---
+      duration_ms: 149.4036
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/delete
+    ok 207 - barber-B/A/delete
+      ---
+      duration_ms: 154.8651
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/insert
+    ok 208 - barber-B/A/insert
+      ---
+      duration_ms: 155.8776
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-id
+    ok 209 - barber-B/A/profile-id
+      ---
+      duration_ms: 149.2635
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-id
+    ok 210 - barber-B/A/shop-id
+      ---
+      duration_ms: 154.6714
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-RPC
+    ok 211 - barber-B/A/profile-RPC
+      ---
+      duration_ms: 149.5263
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-RPC
+    ok 212 - barber-B/A/shop-RPC
+      ---
+      duration_ms: 157.4035
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/forged-shop-body
+    ok 213 - barber-B/A/forged-shop-body
+      ---
+      duration_ms: 157.2509
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/forged-profile-body
+    ok 214 - barber-B/A/forged-profile-body
+      ---
+      duration_ms: 159.6079
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-read
+    ok 215 - barber-B/B/shop-read
+      ---
+      duration_ms: 3.1161
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-rename
+    ok 216 - barber-B/B/shop-rename
+      ---
+      duration_ms: 152.1808
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-own
+    ok 217 - barber-B/B/member-own
+      ---
+      duration_ms: 2.8555
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-table
+    ok 218 - barber-B/B/member-table
+      ---
+      duration_ms: 2.0622
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-RPC
+    ok 219 - barber-B/B/member-RPC
+      ---
+      duration_ms: 155.5492
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-other
+    ok 220 - barber-B/B/profile-other
+      ---
+      duration_ms: 155.1465
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-join
+    ok 221 - barber-B/B/profile-join
+      ---
+      duration_ms: 4.2205
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/role
+    ok 222 - barber-B/B/role
+      ---
+      duration_ms: 149.5447
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/status
+    ok 223 - barber-B/B/status
+      ---
+      duration_ms: 152.9644
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/user_id
+    ok 224 - barber-B/B/user_id
+      ---
+      duration_ms: 151.6898
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/barbershop_id
+    ok 225 - barber-B/B/barbershop_id
+      ---
+      duration_ms: 165.0944
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/delete
+    ok 226 - barber-B/B/delete
+      ---
+      duration_ms: 154.6744
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/insert
+    ok 227 - barber-B/B/insert
+      ---
+      duration_ms: 157.982
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-id
+    ok 228 - barber-B/B/profile-id
+      ---
+      duration_ms: 151.3298
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-id
+    ok 229 - barber-B/B/shop-id
+      ---
+      duration_ms: 151.2799
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-RPC
+    ok 230 - barber-B/B/profile-RPC
+      ---
+      duration_ms: 153.6509
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-RPC
+    ok 231 - barber-B/B/shop-RPC
+      ---
+      duration_ms: 148.8654
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/forged-shop-body
+    ok 232 - barber-B/B/forged-shop-body
+      ---
+      duration_ms: 156.3337
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/forged-profile-body
+    ok 233 - barber-B/B/forged-profile-body
+      ---
+      duration_ms: 157.3597
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-read
+    ok 234 - client/A/shop-read
+      ---
+      duration_ms: 148.6183
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-rename
+    ok 235 - client/A/shop-rename
+      ---
+      duration_ms: 151.7348
+      type: 'test'
+      ...
+    # Subtest: client/A/member-own
+    ok 236 - client/A/member-own
+      ---
+      duration_ms: 155.7047
+      type: 'test'
+      ...
+    # Subtest: client/A/member-table
+    ok 237 - client/A/member-table
+      ---
+      duration_ms: 160.762
+      type: 'test'
+      ...
+    # Subtest: client/A/member-RPC
+    ok 238 - client/A/member-RPC
+      ---
+      duration_ms: 155.9416
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-other
+    ok 239 - client/A/profile-other
+      ---
+      duration_ms: 152.9123
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-join
+    ok 240 - client/A/profile-join
+      ---
+      duration_ms: 3.0787
+      type: 'test'
+      ...
+    # Subtest: client/A/role
+    ok 241 - client/A/role
+      ---
+      duration_ms: 155.8445
+      type: 'test'
+      ...
+    # Subtest: client/A/status
+    ok 242 - client/A/status
+      ---
+      duration_ms: 148.4235
+      type: 'test'
+      ...
+    # Subtest: client/A/user_id
+    ok 243 - client/A/user_id
+      ---
+      duration_ms: 150.1662
+      type: 'test'
+      ...
+    # Subtest: client/A/barbershop_id
+    ok 244 - client/A/barbershop_id
+      ---
+      duration_ms: 152.5632
+      type: 'test'
+      ...
+    # Subtest: client/A/delete
+    ok 245 - client/A/delete
+      ---
+      duration_ms: 149.5637
+      type: 'test'
+      ...
+    # Subtest: client/A/insert
+    ok 246 - client/A/insert
+      ---
+      duration_ms: 148.7038
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-id
+    ok 247 - client/A/profile-id
+      ---
+      duration_ms: 154.6876
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-id
+    ok 248 - client/A/shop-id
+      ---
+      duration_ms: 153.8623
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-RPC
+    ok 249 - client/A/profile-RPC
+      ---
+      duration_ms: 154.7518
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-RPC
+    ok 250 - client/A/shop-RPC
+      ---
+      duration_ms: 150.8155
+      type: 'test'
+      ...
+    # Subtest: client/A/forged-shop-body
+    ok 251 - client/A/forged-shop-body
+      ---
+      duration_ms: 166.1158
+      type: 'test'
+      ...
+    # Subtest: client/A/forged-profile-body
+    ok 252 - client/A/forged-profile-body
+      ---
+      duration_ms: 167.317
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-read
+    ok 253 - client/B/shop-read
+      ---
+      duration_ms: 157.6464
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-rename
+    ok 254 - client/B/shop-rename
+      ---
+      duration_ms: 150.7479
+      type: 'test'
+      ...
+    # Subtest: client/B/member-own
+    ok 255 - client/B/member-own
+      ---
+      duration_ms: 149.6801
+      type: 'test'
+      ...
+    # Subtest: client/B/member-table
+    ok 256 - client/B/member-table
+      ---
+      duration_ms: 152.838
+      type: 'test'
+      ...
+    # Subtest: client/B/member-RPC
+    ok 257 - client/B/member-RPC
+      ---
+      duration_ms: 164.8082
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-other
+    ok 258 - client/B/profile-other
+      ---
+      duration_ms: 151.683
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-join
+    ok 259 - client/B/profile-join
+      ---
+      duration_ms: 2.9109
+      type: 'test'
+      ...
+    # Subtest: client/B/role
+    ok 260 - client/B/role
+      ---
+      duration_ms: 151.2661
+      type: 'test'
+      ...
+    # Subtest: client/B/status
+    ok 261 - client/B/status
+      ---
+      duration_ms: 150.3806
+      type: 'test'
+      ...
+    # Subtest: client/B/user_id
+    ok 262 - client/B/user_id
+      ---
+      duration_ms: 153.0814
+      type: 'test'
+      ...
+    # Subtest: client/B/barbershop_id
+    ok 263 - client/B/barbershop_id
+      ---
+      duration_ms: 151.6866
+      type: 'test'
+      ...
+    # Subtest: client/B/delete
+    ok 264 - client/B/delete
+      ---
+      duration_ms: 147.1221
+      type: 'test'
+      ...
+    # Subtest: client/B/insert
+    ok 265 - client/B/insert
+      ---
+      duration_ms: 149.136
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-id
+    ok 266 - client/B/profile-id
+      ---
+      duration_ms: 149.5894
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-id
+    ok 267 - client/B/shop-id
+      ---
+      duration_ms: 148.7843
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-RPC
+    ok 268 - client/B/profile-RPC
+      ---
+      duration_ms: 148.2511
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-RPC
+    ok 269 - client/B/shop-RPC
+      ---
+      duration_ms: 147.4484
+      type: 'test'
+      ...
+    # Subtest: client/B/forged-shop-body
+    ok 270 - client/B/forged-shop-body
+      ---
+      duration_ms: 157.9912
+      type: 'test'
+      ...
+    # Subtest: client/B/forged-profile-body
+    ok 271 - client/B/forged-profile-body
+      ---
+      duration_ms: 158.3578
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-read
+    ok 272 - shared-admin-A-barber-B/A/shop-read
+      ---
+      duration_ms: 2.7965
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-rename
+    ok 273 - shared-admin-A-barber-B/A/shop-rename
+      ---
+      duration_ms: 2.9052
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-own
+    ok 274 - shared-admin-A-barber-B/A/member-own
+      ---
+      duration_ms: 1.7484
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-table
+    ok 275 - shared-admin-A-barber-B/A/member-table
+      ---
+      duration_ms: 1.7937
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-RPC
+    ok 276 - shared-admin-A-barber-B/A/member-RPC
+      ---
+      duration_ms: 2.1572
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-other
+    ok 277 - shared-admin-A-barber-B/A/profile-other
+      ---
+      duration_ms: 150.7898
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-join
+    ok 278 - shared-admin-A-barber-B/A/profile-join
+      ---
+      duration_ms: 3.3727
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/role
+    ok 279 - shared-admin-A-barber-B/A/role
+      ---
+      duration_ms: 153.1688
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/status
+    ok 280 - shared-admin-A-barber-B/A/status
+      ---
+      duration_ms: 154.7367
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/user_id
+    ok 281 - shared-admin-A-barber-B/A/user_id
+      ---
+      duration_ms: 156.2249
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/barbershop_id
+    ok 282 - shared-admin-A-barber-B/A/barbershop_id
+      ---
+      duration_ms: 152.9155
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/delete
+    ok 283 - shared-admin-A-barber-B/A/delete
+      ---
+      duration_ms: 147.9309
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/insert
+    ok 284 - shared-admin-A-barber-B/A/insert
+      ---
+      duration_ms: 147.7022
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-id
+    ok 285 - shared-admin-A-barber-B/A/profile-id
+      ---
+      duration_ms: 157.9282
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-id
+    ok 286 - shared-admin-A-barber-B/A/shop-id
+      ---
+      duration_ms: 147.0798
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-RPC
+    ok 287 - shared-admin-A-barber-B/A/profile-RPC
+      ---
+      duration_ms: 147.6765
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-RPC
+    ok 288 - shared-admin-A-barber-B/A/shop-RPC
+      ---
+      duration_ms: 149.9942
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/forged-shop-body
+    ok 289 - shared-admin-A-barber-B/A/forged-shop-body
+      ---
+      duration_ms: 169.3344
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/forged-profile-body
+    ok 290 - shared-admin-A-barber-B/A/forged-profile-body
+      ---
+      duration_ms: 158.7668
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-read
+    ok 291 - shared-admin-A-barber-B/B/shop-read
+      ---
+      duration_ms: 2.7731
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-rename
+    ok 292 - shared-admin-A-barber-B/B/shop-rename
+      ---
+      duration_ms: 148.4804
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-own
+    ok 293 - shared-admin-A-barber-B/B/member-own
+      ---
+      duration_ms: 2.9419
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-table
+    ok 294 - shared-admin-A-barber-B/B/member-table
+      ---
+      duration_ms: 2.0236
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-RPC
+    ok 295 - shared-admin-A-barber-B/B/member-RPC
+      ---
+      duration_ms: 146.7337
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-other
+    ok 296 - shared-admin-A-barber-B/B/profile-other
+      ---
+      duration_ms: 148.3833
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-join
+    ok 297 - shared-admin-A-barber-B/B/profile-join
+      ---
+      duration_ms: 2.9582
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/role
+    ok 298 - shared-admin-A-barber-B/B/role
+      ---
+      duration_ms: 148.8471
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/status
+    ok 299 - shared-admin-A-barber-B/B/status
+      ---
+      duration_ms: 150.3946
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/user_id
+    ok 300 - shared-admin-A-barber-B/B/user_id
+      ---
+      duration_ms: 147.2691
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/barbershop_id
+    ok 301 - shared-admin-A-barber-B/B/barbershop_id
+      ---
+      duration_ms: 148.4913
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/delete
+    ok 302 - shared-admin-A-barber-B/B/delete
+      ---
+      duration_ms: 161.1855
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/insert
+    ok 303 - shared-admin-A-barber-B/B/insert
+      ---
+      duration_ms: 149.6844
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-id
+    ok 304 - shared-admin-A-barber-B/B/profile-id
+      ---
+      duration_ms: 148.2228
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-id
+    ok 305 - shared-admin-A-barber-B/B/shop-id
+      ---
+      duration_ms: 156.6912
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-RPC
+    ok 306 - shared-admin-A-barber-B/B/profile-RPC
+      ---
+      duration_ms: 155.258
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-RPC
+    ok 307 - shared-admin-A-barber-B/B/shop-RPC
+      ---
+      duration_ms: 154.0173
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/forged-shop-body
+    ok 308 - shared-admin-A-barber-B/B/forged-shop-body
+      ---
+      duration_ms: 157.9985
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/forged-profile-body
+    ok 309 - shared-admin-A-barber-B/B/forged-profile-body
+      ---
+      duration_ms: 155.9947
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-read
+    ok 310 - inactive-A/A/shop-read
+      ---
+      duration_ms: 150.3378
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-rename
+    ok 311 - inactive-A/A/shop-rename
+      ---
+      duration_ms: 146.5226
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-own
+    ok 312 - inactive-A/A/member-own
+      ---
+      duration_ms: 2.6963
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-table
+    ok 313 - inactive-A/A/member-table
+      ---
+      duration_ms: 3.1276
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-RPC
+    ok 314 - inactive-A/A/member-RPC
+      ---
+      duration_ms: 151.8711
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-other
+    ok 315 - inactive-A/A/profile-other
+      ---
+      duration_ms: 150.956
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-join
+    ok 316 - inactive-A/A/profile-join
+      ---
+      duration_ms: 3.0674
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/role
+    ok 317 - inactive-A/A/role
+      ---
+      duration_ms: 152.6021
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/status
+    ok 318 - inactive-A/A/status
+      ---
+      duration_ms: 155.2715
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/user_id
+    ok 319 - inactive-A/A/user_id
+      ---
+      duration_ms: 149.9298
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/barbershop_id
+    ok 320 - inactive-A/A/barbershop_id
+      ---
+      duration_ms: 146.6585
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/delete
+    ok 321 - inactive-A/A/delete
+      ---
+      duration_ms: 154.3751
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/insert
+    ok 322 - inactive-A/A/insert
+      ---
+      duration_ms: 148.1145
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-id
+    ok 323 - inactive-A/A/profile-id
+      ---
+      duration_ms: 161.8621
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-id
+    ok 324 - inactive-A/A/shop-id
+      ---
+      duration_ms: 150.6833
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-RPC
+    ok 325 - inactive-A/A/profile-RPC
+      ---
+      duration_ms: 152.0438
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-RPC
+    ok 326 - inactive-A/A/shop-RPC
+      ---
+      duration_ms: 145.8383
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/forged-shop-body
+    ok 327 - inactive-A/A/forged-shop-body
+      ---
+      duration_ms: 154.4239
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/forged-profile-body
+    ok 328 - inactive-A/A/forged-profile-body
+      ---
+      duration_ms: 156.9517
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-read
+    ok 329 - inactive-A/B/shop-read
+      ---
+      duration_ms: 157.795
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-rename
+    ok 330 - inactive-A/B/shop-rename
+      ---
+      duration_ms: 150.7574
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-own
+    ok 331 - inactive-A/B/member-own
+      ---
+      duration_ms: 147.5065
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-table
+    ok 332 - inactive-A/B/member-table
+      ---
+      duration_ms: 148.4286
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-RPC
+    ok 333 - inactive-A/B/member-RPC
+      ---
+      duration_ms: 148.481
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-other
+    ok 334 - inactive-A/B/profile-other
+      ---
+      duration_ms: 151.8354
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-join
+    ok 335 - inactive-A/B/profile-join
+      ---
+      duration_ms: 2.8178
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/role
+    ok 336 - inactive-A/B/role
+      ---
+      duration_ms: 146.1628
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/status
+    ok 337 - inactive-A/B/status
+      ---
+      duration_ms: 148.85
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/user_id
+    ok 338 - inactive-A/B/user_id
+      ---
+      duration_ms: 153.1961
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/barbershop_id
+    ok 339 - inactive-A/B/barbershop_id
+      ---
+      duration_ms: 154.9962
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/delete
+    ok 340 - inactive-A/B/delete
+      ---
+      duration_ms: 153.8645
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/insert
+    ok 341 - inactive-A/B/insert
+      ---
+      duration_ms: 165.0368
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-id
+    ok 342 - inactive-A/B/profile-id
+      ---
+      duration_ms: 148.5664
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-id
+    ok 343 - inactive-A/B/shop-id
+      ---
+      duration_ms: 148.4621
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-RPC
+    ok 344 - inactive-A/B/profile-RPC
+      ---
+      duration_ms: 150.8416
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-RPC
+    ok 345 - inactive-A/B/shop-RPC
+      ---
+      duration_ms: 158.6072
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/forged-shop-body
+    ok 346 - inactive-A/B/forged-shop-body
+      ---
+      duration_ms: 155.0504
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/forged-profile-body
+    ok 347 - inactive-A/B/forged-profile-body
+      ---
+      duration_ms: 155.8456
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-read
+    ok 348 - anonymous/A/shop-read
+      ---
+      duration_ms: 148.1738
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-rename
+    ok 349 - anonymous/A/shop-rename
+      ---
+      duration_ms: 150.086
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-own
+    ok 350 - anonymous/A/member-own
+      ---
+      duration_ms: 149.1658
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-table
+    ok 351 - anonymous/A/member-table
+      ---
+      duration_ms: 152.1876
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-RPC
+    ok 352 - anonymous/A/member-RPC
+      ---
+      duration_ms: 150.0766
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-other
+    ok 353 - anonymous/A/profile-other
+      ---
+      duration_ms: 146.5336
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-join
+    ok 354 - anonymous/A/profile-join
+      ---
+      duration_ms: 147.9094
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/role
+    ok 355 - anonymous/A/role
+      ---
+      duration_ms: 152.2093
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/status
+    ok 356 - anonymous/A/status
+      ---
+      duration_ms: 147.0978
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/user_id
+    ok 357 - anonymous/A/user_id
+      ---
+      duration_ms: 153.6675
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/barbershop_id
+    ok 358 - anonymous/A/barbershop_id
+      ---
+      duration_ms: 160.633
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/delete
+    ok 359 - anonymous/A/delete
+      ---
+      duration_ms: 149.2531
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/insert
+    ok 360 - anonymous/A/insert
+      ---
+      duration_ms: 146.0955
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-id
+    ok 361 - anonymous/A/profile-id
+      ---
+      duration_ms: 151.2806
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-id
+    ok 362 - anonymous/A/shop-id
+      ---
+      duration_ms: 148.4109
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-RPC
+    ok 363 - anonymous/A/profile-RPC
+      ---
+      duration_ms: 151.7937
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-RPC
+    ok 364 - anonymous/A/shop-RPC
+      ---
+      duration_ms: 153.9987
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/forged-shop-body
+    ok 365 - anonymous/A/forged-shop-body
+      ---
+      duration_ms: 154.8095
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/forged-profile-body
+    ok 366 - anonymous/A/forged-profile-body
+      ---
+      duration_ms: 152.8892
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-read
+    ok 367 - anonymous/B/shop-read
+      ---
+      duration_ms: 151.0512
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-rename
+    ok 368 - anonymous/B/shop-rename
+      ---
+      duration_ms: 146.4948
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-own
+    ok 369 - anonymous/B/member-own
+      ---
+      duration_ms: 148.2988
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-table
+    ok 370 - anonymous/B/member-table
+      ---
+      duration_ms: 148.2857
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-RPC
+    ok 371 - anonymous/B/member-RPC
+      ---
+      duration_ms: 151.1912
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-other
+    ok 372 - anonymous/B/profile-other
+      ---
+      duration_ms: 157.1572
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-join
+    ok 373 - anonymous/B/profile-join
+      ---
+      duration_ms: 151.5076
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/role
+    ok 374 - anonymous/B/role
+      ---
+      duration_ms: 150.6748
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/status
+    ok 375 - anonymous/B/status
+      ---
+      duration_ms: 150.2885
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/user_id
+    ok 376 - anonymous/B/user_id
+      ---
+      duration_ms: 147.5812
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/barbershop_id
+    ok 377 - anonymous/B/barbershop_id
+      ---
+      duration_ms: 156.9281
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/delete
+    ok 378 - anonymous/B/delete
+      ---
+      duration_ms: 151.1515
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/insert
+    ok 379 - anonymous/B/insert
+      ---
+      duration_ms: 151.0753
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-id
+    ok 380 - anonymous/B/profile-id
+      ---
+      duration_ms: 150.7256
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-id
+    ok 381 - anonymous/B/shop-id
+      ---
+      duration_ms: 149.3881
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-RPC
+    ok 382 - anonymous/B/profile-RPC
+      ---
+      duration_ms: 150.5053
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-RPC
+    ok 383 - anonymous/B/shop-RPC
+      ---
+      duration_ms: 149.013
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/forged-shop-body
+    ok 384 - anonymous/B/forged-shop-body
+      ---
+      duration_ms: 152.4336
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/forged-profile-body
+    ok 385 - anonymous/B/forged-profile-body
+      ---
+      duration_ms: 156.2934
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-read
+    ok 386 - invalid-JWT/A/shop-read
+      ---
+      duration_ms: 147.3027
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-rename
+    ok 387 - invalid-JWT/A/shop-rename
+      ---
+      duration_ms: 147.3944
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-own
+    ok 388 - invalid-JWT/A/member-own
+      ---
+      duration_ms: 155.1404
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-table
+    ok 389 - invalid-JWT/A/member-table
+      ---
+      duration_ms: 154.6933
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-RPC
+    ok 390 - invalid-JWT/A/member-RPC
+      ---
+      duration_ms: 150.1794
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-other
+    ok 391 - invalid-JWT/A/profile-other
+      ---
+      duration_ms: 146.6354
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-join
+    ok 392 - invalid-JWT/A/profile-join
+      ---
+      duration_ms: 152.1953
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/role
+    ok 393 - invalid-JWT/A/role
+      ---
+      duration_ms: 147.5546
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/status
+    ok 394 - invalid-JWT/A/status
+      ---
+      duration_ms: 148.2876
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/user_id
+    ok 395 - invalid-JWT/A/user_id
+      ---
+      duration_ms: 147.1123
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/barbershop_id
+    ok 396 - invalid-JWT/A/barbershop_id
+      ---
+      duration_ms: 149.9303
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/delete
+    ok 397 - invalid-JWT/A/delete
+      ---
+      duration_ms: 149.7064
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/insert
+    ok 398 - invalid-JWT/A/insert
+      ---
+      duration_ms: 148.4293
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-id
+    ok 399 - invalid-JWT/A/profile-id
+      ---
+      duration_ms: 147.1936
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-id
+    ok 400 - invalid-JWT/A/shop-id
+      ---
+      duration_ms: 148.4073
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-RPC
+    ok 401 - invalid-JWT/A/profile-RPC
+      ---
+      duration_ms: 143.3388
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-RPC
+    ok 402 - invalid-JWT/A/shop-RPC
+      ---
+      duration_ms: 147.1913
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/forged-shop-body
+    ok 403 - invalid-JWT/A/forged-shop-body
+      ---
+      duration_ms: 147.6735
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/forged-profile-body
+    ok 404 - invalid-JWT/A/forged-profile-body
+      ---
+      duration_ms: 149.5067
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-read
+    ok 405 - invalid-JWT/B/shop-read
+      ---
+      duration_ms: 150.2495
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-rename
+    ok 406 - invalid-JWT/B/shop-rename
+      ---
+      duration_ms: 162.6276
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-own
+    ok 407 - invalid-JWT/B/member-own
+      ---
+      duration_ms: 146.7415
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-table
+    ok 408 - invalid-JWT/B/member-table
+      ---
+      duration_ms: 149.4566
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-RPC
+    ok 409 - invalid-JWT/B/member-RPC
+      ---
+      duration_ms: 145.3915
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-other
+    ok 410 - invalid-JWT/B/profile-other
+      ---
+      duration_ms: 144.0318
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-join
+    ok 411 - invalid-JWT/B/profile-join
+      ---
+      duration_ms: 144.9377
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/role
+    ok 412 - invalid-JWT/B/role
+      ---
+      duration_ms: 148.4077
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/status
+    ok 413 - invalid-JWT/B/status
+      ---
+      duration_ms: 145.1671
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/user_id
+    ok 414 - invalid-JWT/B/user_id
+      ---
+      duration_ms: 147.3864
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/barbershop_id
+    ok 415 - invalid-JWT/B/barbershop_id
+      ---
+      duration_ms: 147.7712
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/delete
+    ok 416 - invalid-JWT/B/delete
+      ---
+      duration_ms: 150.2744
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/insert
+    ok 417 - invalid-JWT/B/insert
+      ---
+      duration_ms: 147.5073
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-id
+    ok 418 - invalid-JWT/B/profile-id
+      ---
+      duration_ms: 146.6714
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-id
+    ok 419 - invalid-JWT/B/shop-id
+      ---
+      duration_ms: 144.9422
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-RPC
+    ok 420 - invalid-JWT/B/profile-RPC
+      ---
+      duration_ms: 150.6251
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-RPC
+    ok 421 - invalid-JWT/B/shop-RPC
+      ---
+      duration_ms: 145.9648
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/forged-shop-body
+    ok 422 - invalid-JWT/B/forged-shop-body
+      ---
+      duration_ms: 149.9158
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/forged-profile-body
+    ok 423 - invalid-JWT/B/forged-profile-body
+      ---
+      duration_ms: 152.7745
+      type: 'test'
+      ...
+    # Subtest: revocation after commit uses same JWT; inactive own relation remains
+    ok 424 - revocation after commit uses same JWT; inactive own relation remains
+      ---
+      duration_ms: 110.7808
+      type: 'test'
+      ...
+    1..424
+ok 1 - US4 application and direct HTTP authorization matrix with committed revocation
+  ---
+  duration_ms: 56251.3615
+  type: 'test'
+  ...
+# Subtest: US3 real provisioning permissions rollback and races
+    # Subtest: own first admin and tenant creation grants no other shop access
+    ok 1 - own first admin and tenant creation grants no other shop access
+      ---
+      duration_ms: 33.6917
+      type: 'test'
+      ...
+    # Subtest: shared admin A barber B has contextual read and denied rename
+    ok 2 - shared admin A barber B has contextual read and denied rename
+      ---
+      duration_ms: 28.8764
+      type: 'test'
+      ...
+    # Subtest: body actor role extra IDs and direct user RPC denied
+    ok 3 - body actor role extra IDs and direct user RPC denied
+      ---
+      duration_ms: 37.6772
+      type: 'test'
+      ...
+    # Subtest: C3 real HTTP failure rolls back shop and membership
+    ok 4 - C3 real HTTP failure rolls back shop and membership
+      ---
+      duration_ms: 322.8798
+      type: 'test'
+      ...
+    # Subtest: C2 two psql sessions blocked at barrier then one UNIQUE rejection
+    ok 5 - C2 two psql sessions blocked at barrier then one UNIQUE rejection
+      ---
+      duration_ms: 530.4757
+      type: 'test'
+      ...
+    # Subtest: C4 two simultaneous independent creations each own one admin
+    ok 6 - C4 two simultaneous independent creations each own one admin
+      ---
+      duration_ms: 329.0294
+      type: 'test'
+      ...
+    1..6
+ok 2 - US3 real provisioning permissions rollback and races
+  ---
+  duration_ms: 2882.6494
+  type: 'test'
+  ...
+# Subtest: real Auth Edge PostgREST profiles and C1
+    # Subtest: own absence ensure idempotence read and PATCH null/omitted
+    ok 1 - own absence ensure idempotence read and PATCH null/omitted
+      ---
+      duration_ms: 80.6237
+      type: 'test'
+      ...
+    # Subtest: other profile hidden and unchanged despite forged admin metadata
+    ok 2 - other profile hidden and unchanged despite forged admin metadata
+      ---
+      duration_ms: 16.0614
+      type: 'test'
+      ...
+    # Subtest: body impersonation extra fields invalid JSON and types rejected
+    ok 3 - body impersonation extra fields invalid JSON and types rejected
+      ---
+      duration_ms: 65.8489
+      type: 'test'
+      ...
+    # Subtest: privileged RPC direct INSERT DELETE and id mutation denied
+    ok 4 - privileged RPC direct INSERT DELETE and id mutation denied
+      ---
+      duration_ms: 87.158
+      type: 'test'
+      ...
+    # Subtest: missing altered expired and independent-key JWT denied
+    ok 5 - missing altered expired and independent-key JWT denied
+      ---
+      duration_ms: 18.4526
+      type: 'test'
+      ...
+    # Subtest: C1 simultaneous ensure creates one profile and never overwrites winner
+    ok 6 - C1 simultaneous ensure creates one profile and never overwrites winner
+      ---
+      duration_ms: 87.7046
+      type: 'test'
+      ...
+    # Subtest: 8 KiB and unsupported method rejected on real handler
+    ok 7 - 8 KiB and unsupported method rejected on real handler
+      ---
+      duration_ms: 12.8727
+      type: 'test'
+      ...
+    1..7
+ok 3 - real Auth Edge PostgREST profiles and C1
+  ---
+  duration_ms: 1757.1103
+  type: 'test'
+  ...
+1..3
+# tests 440
+# suites 0
+# pass 440
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 70788.4164
+
+EXIT=0

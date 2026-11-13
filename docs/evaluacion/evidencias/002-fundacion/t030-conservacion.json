@@ -1,0 +1,16 @@
+{
+  "oldMetadataUnchanged": 12,
+  "nonEdgeNewUnchanged": 7,
+  "edgeId": "6e62b127b4ee4d404ee01041f994c1c8e89ddab85010db85c6eec70ae9a234d6",
+  "edgeState": "running",
+  "jwtConfig": {
+    "create-barbershop": {
+      "verifyJWT": true
+    },
+    "ensure-profile": {
+      "verifyJWT": true
+    }
+  },
+  "counts": "profiles=0\nauth_users=0\nshops=0\nmemberships=0\ntest_triggers=0\ntest_functions=0\ntest_backends=0",
+  "noContainerLifecycleOperations": true
+}

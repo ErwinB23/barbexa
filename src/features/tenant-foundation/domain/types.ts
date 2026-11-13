@@ -21,8 +21,27 @@ export type FoundationErrorCode =
   | 'INTERNAL_ERROR'
   | 'NOT_AVAILABLE';
 export class FoundationError extends Error {
-  constructor(readonly code: FoundationErrorCode) {
+  constructor(
+    readonly code: FoundationErrorCode,
+    readonly reconciliation?: readonly Membership[],
+  ) {
     super(code);
     this.name = 'FoundationError';
   }
+}
+
+export interface Barbershop {
+  readonly id: string;
+  readonly name: string;
+}
+export interface Membership {
+  readonly id: string;
+  readonly userId: string;
+  readonly barbershopId: string;
+  readonly role: 'barber' | 'administrator';
+  readonly status: 'active' | 'inactive';
+}
+export interface CreatedBarbershop {
+  readonly barbershop: Barbershop;
+  readonly membership: Membership;
 }

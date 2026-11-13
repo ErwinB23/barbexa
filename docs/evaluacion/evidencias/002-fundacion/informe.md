@@ -351,3 +351,79 @@ No se declara npm run check gen?rico superado: create-barbershop a?n pertenece a
 Fixtures retiradas, cero perfiles/usuarios. Sin migraciones, dependencias, remoto, T020?T040,
 commit ni push. Persisten nueve avisos moderados npm. El log t013-t015-all.log fue recapturado
 por la repetici?n SQL y copiado a t019-sql.log; no se lo etiqueta como hist?rico inmutable.
+
+## T020?T023 ? 12/11/2026
+
+Cuatro tareas completadas. [Evidencias y l?mites](t020-t023.md). Tipos/casos puros y puertos
+estrechos de barber?as, pruebas anticipadas y migraci?n 20261113045240 tenant_context_access
+aplicada solo en app-barberia-002-local:54422. RLS por membres?a activa, renombre solo admin
+del tenant y lectura inicial de membres?a propia; sin escrituras de personal.
+Unitarias cliente 79/79 y servidor 16/16; cobertura nueva de n?cleo 100 % por runtime.
+Tipos/lint/formato/ambos checkers exit 0. Tenants 20/20 + perfiles 39/39 + esquema 118/118
+aprobados. SQL global exit 1 exclusivamente por diez RED anticipadas de provisioning: no
+existe RPC de T024; C2/C4 definidos, no ejecutados. No se acredita atomicidad ni aislamiento
+integral de barber?as por HTTP. Doce contenedores antiguos y siete servicios nuevos ajenos
+a Edge conservados; Edge operativo, log activo preservado y sin ?rdenes de reinicio.
+Cero filas de fixtures/trigger temporal al cierre. Sin reset, dependencias, T024?T040,
+commit ni push; nueve avisos npm moderados conservados. Siguiente tarea disponible: T024.
+
+## T024?T027 ? 13/11/2026
+
+Cuatro tareas completadas; [evidencia](atomicidad.md). RPC transaccional nueva aplicada solo
+a app-barberia-002-local:54422, migraci?n 20261113050232_create_own_barbershop.sql. Ambos
+endpoints y composiciones reales; cliente alta/GET/PATCH y reconciliaci?n sin retry de POST.
+Los diez RED SQL est?n resueltos: 193/193 assertions finales, incluidos ACL/actor/perfil.
+HTTP US3: siete resultados TAP, C2 con dos sesiones/barrera y SQLSTATE 23505, C3 rollback
+tambi?n por HTTP, C4 dos altas independientes con admin propio ?nico por shop. Unitarias
+cliente 80/80, servidor 17/17 y regresi?n HTTP perfiles 8/8. npm run check ahora exit 0
+(Deno 2.9.8 disponible en PATH de ese proceso). No es aprobaci?n de auditor?a npm ni de
+aislamento multitenant integral, que sigue en T028 y posteriores. Doce contenedores antiguos
+y siete servicios nuevos ajenos a Edge conservados; cero fixtures/triggers/funciones/backends
+de prueba. Log activo preservado; sin ?rdenes de reinicio, db reset, remoto, dependencias,
+commit o push. Persisten nueve avisos moderados. Siguiente tarea disponible: T028.
+
+Cierre Git: diff global exit 2 exclusivamente por espacios finales generados en t017-serve.log;
+el diff de implementaci?n excluyendo solo ese log activo da exit 0. Registro t027-diff-check.log.
+No se edit? ni agreg? a staging el log, ni se detuvo su proceso. Revisi?n de 98 archivos
+candidatos acumulados sin hallazgos de secretos. main/2f37266 conservados; cambios sin commit.
+
+## T028?T030 ? 13/11/2026
+
+Tres tareas completadas; [evidencia y l?mites](t028-t030.md). Migraci?n CLI
+20261113053907_membership_listing_access aplicada solo a app-barberia-002-local:54422.
+Listado m?nimo invoker autorizado por administraci?n activa contextual; lectura propia
+inactiva conservada, sin escrituras de personal ni acceso a perfiles de compa?eros.
+SQL tenants 163/163, global 336/336; matriz HTTP directa 342/342 y revocaci?n con mismo
+JWT aprobadas. Dos preflight cliente siguen RED de T031: HTTP global exit 1. Unitarias
+anticipadas de memberships tambi?n RED TS2307; npm run check se detiene all? (exit 1),
+sin omitir verificaciones. AST real de ambos ?rboles, tipos, lint/formato, 38+45 regresiones
+arquitect?nicas, 17 unitarias servidor, 11 de presentaci?n y 18 del runner comprobados.
+Regresiones HTTP perfiles 8/8 y alta 7/7. Preservados doce contenedores antiguos y siete
+servicios nuevos ajenos a Edge; cero fixtures al cierre. Sin reinicios, reset, remoto,
+instalaciones, T031?T040, commit ni push. Log activo conservado. Nueve avisos moderados
+npm pendientes; no auditor?a de seguridad aprobada ni aislamiento integral acreditado.
+
+## T031?T033 ? 13/11/2026
+
+Bloque completado. [Integraci?n y aislamiento](aislamiento.md), [auditor?a y l?mites](calidad.md).
+Listados propios y administrativos conectados por puerto, casos de uso, adaptador y composici?n
+cliente: las ocho operaciones se consumen realmente por el runner, sin stubs o cach? de permisos.
+Corregida traducci?n Auth 403 bad_jwt a UNAUTHENTICATED; el rechazo contextual de RPC sigue FORBIDDEN.
+RED inicial y fallos intermedios conservados. SQL global 336/336; HTTP integral 440/440 resultados
+TAP, sin skipped (342 directos, 81 cliente, revocaci?n y regresiones; incluye padres TAP).
+Se confirma p?rdida de acceso tras COMMIT con mismo JWT y permisos diferentes A/B. Atomicidad
+y carreras C1?C4 siguen aprobadas. No se cambi? SQL, migraciones ni el n?cleo servidor.
+
+npm run check completo exit 0: 86 unitarias Node, 38+45 regresiones AST, 11 presentaci?n,
+18 runner y 17 Deno. AST real: cliente 30 m?dulos/core 11; servidor 13/core seis, sin infracciones.
+Cobertura de n?cleo cliente tenant-foundation al 100 % por archivo; servidor 85/85 ramas
+y 142/142 l?neas, separada de infraestructura/presentaci?n (cobertura parcial informativa).
+RLS/ACL/owners/search_path efectivos, lint y advisors locales comprobados. Nueve avisos npm
+moderados conservados como riesgo abierto; no auditor?a global de dependencias aprobada.
+
+Doce contenedores antiguos y siete servicios nuevos ajenos a Edge con metadatos preservados;
+cero usuarios/filas/artefactos SQL de test. Edge operativo con verifyJWT en ambas entradas;
+su identidad no se declara estable frente a serve activo. Sin ?rdenes de reinicio/parada,
+Cloud, instalaciones, T034?T040, cambios en 001/Constituci?n/r?brica, commit ni push.
+Revisi?n final de secretos, conservaci?n de archivos y diff global/acotado en t033-revision.json.
+Siguiente tarea disponible: T034.

@@ -59,11 +59,12 @@ select ok(exists(select 1 from pg_indexes where schemaname='public' and tablenam
 
 select ok(exists(select 1 from pg_class where oid=to_regclass('public.'||t) and relrowsecurity), 'RLS enabled: '||t)
 from unnest(array['profiles','barbershops','barbershop_memberships']) t;
--- T015 explicitly adds only the two own-profile policies. Other tables remain closed.
+-- Exact policies approved by T015 and T023; no additional access policies permitted.
 select ok(to_regclass('public.'||t) is not null and case when t='profiles' then
  (select count(*)=2 and bool_and(polname in ('profiles_select_own','profiles_update_own'))
   from pg_policy where polrelid=to_regclass('public.profiles'))
- else not exists(select 1 from pg_policy where polrelid=to_regclass('public.'||t)) end,
+ when t='barbershops' then (select count(*)=2 and bool_and(polname in ('barbershops_select_active_member','barbershops_update_active_admin')) from pg_policy where polrelid=to_regclass('public.barbershops'))
+ else (select count(*)=1 and bool_and(polname='memberships_select_own') from pg_policy where polrelid=to_regclass('public.barbershop_memberships')) end,
  'only approved policies: '||t)
 from unnest(array['profiles','barbershops','barbershop_memberships']) t;
 

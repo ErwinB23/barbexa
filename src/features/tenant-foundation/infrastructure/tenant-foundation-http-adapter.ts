@@ -1,6 +1,19 @@
-import { FoundationError, type Profile } from '../domain/types';
+import {
+  isBarbershop,
+  isMembership,
+  createdBarbershop,
+} from '../domain/barbershop-validation';
+import type {
+  BarbershopGateway,
+  TenantFoundationGateway,
+  MembershipGateway,
+} from '../application/tenant-foundation-gateway';
+import {
+  FoundationError,
+  type Profile,
+  type Membership,
+} from '../domain/types';
 import { validId } from '../domain/validation';
-import type { TenantFoundationGateway } from '../application/tenant-foundation-gateway';
 export interface TenantFoundationHttpOptions {
   baseUrl: string;
   publicKey: string;
@@ -25,7 +38,9 @@ export function createTenantFoundationHttpAdapter({
   getAccessToken,
   fetcher = fetch,
   timeoutMs = 5000,
-}: TenantFoundationHttpOptions): TenantFoundationGateway {
+}: TenantFoundationHttpOptions): TenantFoundationGateway &
+  BarbershopGateway &
+  MembershipGateway {
   const target = new URL(baseUrl);
   if (
     !publicCredential(publicKey) ||
@@ -54,6 +69,16 @@ export function createTenantFoundationHttpAdapter({
         signal: AbortSignal.timeout(timeoutMs),
       });
       if (!r.ok) {
+        // Auth uses 403 for an invalid JWT; it is not a tenant permission denial.
+        if (path === '/auth/v1/user' && (r.status === 401 || r.status === 403))
+          throw new FoundationError('UNAUTHENTICATED');
+        if (r.status === 409) {
+          const payload = (await r.json().catch(() => null)) as {
+            error?: { code?: unknown };
+          } | null;
+          if (payload?.error?.code === 'PROFILE_REQUIRED')
+            throw new FoundationError('PROFILE_REQUIRED');
+        }
         const codes: Record<
           number,
           'UNAUTHENTICATED' | 'FORBIDDEN' | 'CONFLICT' | 'INVALID_INPUT'
@@ -107,7 +132,124 @@ export function createTenantFoundationHttpAdapter({
       throw new FoundationError('DEPENDENCY_UNAVAILABLE');
     return value.length ? profile(value[0], id) : null;
   }
+  function membershipRows(value: unknown): Membership[] {
+    if (!Array.isArray(value))
+      throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+    return value.map((row: unknown) => {
+      if (typeof row !== 'object' || row === null)
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      const r = row as Record<string, unknown>;
+      const membership = {
+        id: r.id,
+        userId: r.user_id,
+        barbershopId: r.barbershop_id,
+        role: r.role,
+        status: r.status,
+      };
+      if (!isMembership(membership))
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      return membership;
+    });
+  }
   return {
+    async listOwnMemberships() {
+      const s = await session();
+      const rows = membershipRows(
+        await request(
+          '/rest/v1/barbershop_memberships?select=id,user_id,barbershop_id,role,status&user_id=eq.' +
+            encodeURIComponent(s.id),
+          s.token,
+        ),
+      );
+      if (rows.some((m) => m.userId !== s.id))
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      return rows;
+    },
+    async listBarbershopMemberships(id) {
+      const s = await session();
+      const rows = membershipRows(
+        await request('/rest/v1/rpc/list_barbershop_memberships', s.token, {
+          method: 'POST',
+          body: JSON.stringify({ p_barbershop_id: id }),
+        }),
+      );
+      if (rows.some((m) => m.barbershopId !== id))
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      return rows;
+    },
+    async createOwnBarbershop(input) {
+      const s = await session();
+      try {
+        return createdBarbershop(
+          (await request('/functions/v1/create-barbershop', s.token, {
+            method: 'POST',
+            body: JSON.stringify(input),
+          })) as import('../domain/types').CreatedBarbershop,
+        );
+      } catch (e) {
+        if (
+          e instanceof FoundationError &&
+          e.code === 'DEPENDENCY_UNAVAILABLE'
+        ) {
+          try {
+            const rows = await request(
+              '/rest/v1/barbershop_memberships?select=id,user_id,barbershop_id,role,status&user_id=eq.' +
+                s.id,
+              s.token,
+            );
+            if (!Array.isArray(rows)) throw Error();
+            const memberships = rows.map((r) => ({
+              id: r.id,
+              userId: r.user_id,
+              barbershopId: r.barbershop_id,
+              role: r.role,
+              status: r.status,
+            }));
+            if (!memberships.every((m) => isMembership(m) && m.userId === s.id))
+              throw Error();
+            throw new FoundationError('DEPENDENCY_UNAVAILABLE', memberships);
+          } catch (reconciled) {
+            if (
+              reconciled instanceof FoundationError &&
+              reconciled.reconciliation
+            )
+              throw reconciled;
+          }
+        }
+        throw e;
+      }
+    },
+    async getBarbershop(id) {
+      const s = await session();
+      const rows = await request(
+        '/rest/v1/barbershops?select=id,name&id=eq.' + encodeURIComponent(id),
+        s.token,
+      );
+      if (!Array.isArray(rows) || rows.length > 1)
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      if (!rows.length) return null;
+      if (!isBarbershop(rows[0]) || rows[0].id !== id)
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      return rows[0];
+    },
+    async renameBarbershop(id, name) {
+      const s = await session();
+      const rows = await request(
+        '/rest/v1/barbershops?select=id,name&id=eq.' + encodeURIComponent(id),
+        s.token,
+        {
+          method: 'PATCH',
+          headers: { Prefer: 'return=representation' },
+          body: JSON.stringify({ name }),
+        },
+      );
+      if (!Array.isArray(rows) || rows.length > 1)
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      if (!rows.length) return null;
+      if (!isBarbershop(rows[0]) || rows[0].id !== id)
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      return rows[0];
+    },
     async ensureOwnProfile(input) {
       const s = await session();
       return profile(

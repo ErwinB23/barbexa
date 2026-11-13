@@ -1,0 +1,5 @@
+COMMAND: check --no-config --no-npm --no-remote supabase/functions/ensure-profile/index.ts supabase/functions/create-barbershop/index.ts
+Check supabase/functions/ensure-profile/index.ts
+Check supabase/functions/create-barbershop/index.ts
+
+EXIT=0

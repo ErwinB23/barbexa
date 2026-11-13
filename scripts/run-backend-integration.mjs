@@ -58,19 +58,28 @@ function main() {
     projectId: process.env.BARBERIA_002_PROJECT_ID,
   });
   const selected = process.argv.slice(2);
-  if (selected.some((arg) => arg !== '--profiles'))
+  if (
+    selected.length > 1 ||
+    selected.some((arg) => !['--profiles', '--barbershops'].includes(arg))
+  )
     throw Error('NOT_READY_BACKEND_SCENARIOS');
   const scenarios = (
     selected.includes('--profiles')
       ? ['profiles.test.mjs']
-      : ['profiles.test.mjs', 'barbershops.test.mjs', 'authorization.test.mjs']
+      : selected.includes('--barbershops')
+        ? ['barbershops.test.mjs']
+        : [
+            'profiles.test.mjs',
+            'barbershops.test.mjs',
+            'authorization.test.mjs',
+          ]
   ).map((f) => path.join(root, 'tests/integration/tenant-foundation', f));
   if (scenarios.some((f) => !fs.existsSync(f)))
     throw Error('NOT_READY_BACKEND_SCENARIOS');
   // These future suites must verify the actual stack identity before administrative setup.
   const report = runChecked(
     process.execPath,
-    ['--test', '--test-reporter=tap', ...scenarios],
+    ['--test', '--test-concurrency=1', '--test-reporter=tap', ...scenarios],
     {
       cwd: root,
       timeout: 180000,

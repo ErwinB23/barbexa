@@ -1,6 +1,10 @@
+import { createdBarbershop } from '../domain/barbershop-validation.ts';
+import type {
+  BarbershopProvisioningGateway,
+  FoundationProvisioningGateway,
+} from '../application/foundation-provisioning-gateway.ts';
 import { FoundationError, type Profile } from '../domain/types.ts';
 import { validId } from '../domain/validation.ts';
-import type { FoundationProvisioningGateway } from '../application/foundation-provisioning-gateway.ts';
 interface Options {
   baseUrl: string;
   serviceKey: string;
@@ -12,8 +16,62 @@ export function createPostgresFoundationAdapter({
   serviceKey,
   fetcher = fetch,
   timeoutMs = 5000,
-}: Options): FoundationProvisioningGateway {
+}: Options): FoundationProvisioningGateway & BarbershopProvisioningGateway {
   return {
+    async createOwnBarbershop(actor, input) {
+      try {
+        const headers: Record<string, string> = {
+          apikey: serviceKey,
+          'Content-Type': 'application/json',
+        };
+        if (!serviceKey.startsWith('sb_secret_'))
+          headers.Authorization = 'Bearer ' + serviceKey;
+        const r = await fetcher(
+          baseUrl + '/rest/v1/rpc/create_own_barbershop',
+          {
+            method: 'POST',
+            headers,
+            body: JSON.stringify({
+              p_actor_id: actor.userId,
+              p_name: input.name,
+            }),
+            signal: AbortSignal.timeout(timeoutMs),
+          },
+        );
+        const data = await r.json();
+        if (!r.ok) {
+          if (data?.message === 'PROFILE_REQUIRED')
+            throw new FoundationError('PROFILE_REQUIRED');
+          throw new FoundationError(
+            r.status === 403
+              ? 'FORBIDDEN'
+              : r.status === 400
+                ? data?.code === '22023'
+                  ? 'INVALID_INPUT'
+                  : 'INTERNAL_ERROR'
+                : 'DEPENDENCY_UNAVAILABLE',
+          );
+        }
+        const member = data?.membership;
+        if (!member) throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+        return createdBarbershop(
+          {
+            barbershop: data.barbershop,
+            membership: {
+              id: member.id,
+              userId: member.user_id,
+              barbershopId: member.barbershop_id,
+              role: member.role,
+              status: member.status,
+            },
+          },
+          actor.userId,
+        );
+      } catch (e) {
+        if (e instanceof FoundationError) throw e;
+        throw new FoundationError('DEPENDENCY_UNAVAILABLE');
+      }
+    },
     async ensureOwnProfile(actor, input) {
       try {
         const headers: Record<string, string> = {

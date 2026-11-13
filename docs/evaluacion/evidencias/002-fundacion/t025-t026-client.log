@@ -1,0 +1,3 @@
+src/features/tenant-foundation/infrastructure/tenant-foundation-http-adapter.ts(65,24): error TS2339: Property 'error' does not exist on type '{}'.
+
+EXIT=1

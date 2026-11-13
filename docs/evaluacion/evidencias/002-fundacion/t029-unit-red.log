@@ -1,0 +1,3 @@
+tests/unit/tenant-foundation/memberships.test.ts(2,60): error TS2307: Cannot find module '../../../src/features/tenant-foundation/application/memberships.js' or its corresponding type declarations.
+
+EXIT=1

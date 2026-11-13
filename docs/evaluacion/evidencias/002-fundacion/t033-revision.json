@@ -1,0 +1,63 @@
+{
+  "branch": "main",
+  "head": "2f3726604ce41fe44816f5f8de622f57849f9c70",
+  "baselineFiles": 1060,
+  "createdFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/aislamiento.md",
+    "docs/evaluacion/evidencias/002-fundacion/calidad.md",
+    "docs/evaluacion/evidencias/002-fundacion/t031-auth-diagnostico.json",
+    "docs/evaluacion/evidencias/002-fundacion/t031-auth-red.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-http-ampliado.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-http-green.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-listados-red.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-unit-final.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-unit-green.log",
+    "docs/evaluacion/evidencias/002-fundacion/t031-unit-red.log",
+    "docs/evaluacion/evidencias/002-fundacion/t032-case-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t032-conservacion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t032-http-diagnostico.log",
+    "docs/evaluacion/evidencias/002-fundacion/t032-http-final.log",
+    "docs/evaluacion/evidencias/002-fundacion/t032-http-integral.log",
+    "docs/evaluacion/evidencias/002-fundacion/t032-sql-all.log",
+    "docs/evaluacion/evidencias/002-fundacion/t033-catalogo.json",
+    "docs/evaluacion/evidencias/002-fundacion/t033-check.log",
+    "docs/evaluacion/evidencias/002-fundacion/t033-cobertura-cliente.json",
+    "docs/evaluacion/evidencias/002-fundacion/t033-cobertura-servidor.json",
+    "docs/evaluacion/evidencias/002-fundacion/t033-conservacion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t033-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t033-server-coverage.log",
+    "docs/evaluacion/evidencias/002-fundacion/t033-sql-advisors.log",
+    "docs/evaluacion/evidencias/002-fundacion/t033-sql-lint.log",
+    "src/features/tenant-foundation/application/memberships.ts",
+    "tests/unit/tenant-foundation/membership-http.test.ts"
+  ],
+  "authorizedChangedFiles": [
+    "tests/integration/tenant-foundation/authorization.test.mjs",
+    "tests/integration/tenant-foundation/cases.mjs",
+    "tests/unit/tenant-foundation/memberships.test.ts",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/t017-serve.log",
+    "scripts/run-backend-integration.mjs",
+    "specs/002-fundacion-supabase-multitenant/tasks.md",
+    "src/composition/tenant-foundation-composition.ts",
+    "src/features/tenant-foundation/application/tenant-foundation-gateway.ts",
+    "src/features/tenant-foundation/infrastructure/tenant-foundation-http-adapter.ts"
+  ],
+  "unexpectedChanges": [],
+  "filesScanned": 162,
+  "secretPatternFindings": [],
+  "missingLocalLinks": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "diagnosticFiles": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ],
+    "onlyActiveLog": true
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "ownLogsWhitespaceNormalized": 15,
+  "stagingEmpty": true
+}

@@ -1,0 +1,4 @@
+COMMAND: node scripts/run-unit-tests.mjs
+tests/unit/tenant-foundation/memberships.test.ts(6,8): error TS2307: Cannot find module '../../../src/features/tenant-foundation/application/memberships.js' or its corresponding type declarations.
+
+EXIT=1

@@ -1,0 +1,16 @@
+COMMAND: npm.cmd run lint
+
+> app-barberia@0.1.0 lint
+> eslint src scripts tests/architecture tests/presentation tests/integration --max-warnings 0
+
+
+EXIT=0
+COMMAND: npm.cmd run format:check
+
+> app-barberia@0.1.0 format:check
+> prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json tsconfig.server.json tsconfig.server-core.json supabase/functions tests/architecture/check-server-architecture.test.mjs tests/architecture/server-fixtures tests/integration/tenant-foundation
+
+Checking formatting...
+All matched files use Prettier code style!
+
+EXIT=0

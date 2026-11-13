@@ -1,0 +1,5 @@
+COMMAND: supabase migration list --workdir <workspace>
+{"migrations":[{"local":"20261112031854","remote":"20261112031854","time":"2026-11-12 03:18:54"},{"local":"20261113035717","remote":"20261113035717","time":"2026-11-13 03:57:17"},{"local":"20261113045240","remote":"20261113045240","time":"2026-11-13 04:52:40"},{"local":"20261113050232","remote":"20261113050232","time":"2026-11-13 05:02:32"},{"local":"20261113053907","remote":"20261113053907","time":"2026-11-13 05:39:07"}],"message":"Migrations listed","target":{"kind":"local","host":"127.0.0.1","port":54422}}
+Target: local stack (127.0.0.1:54422)
+
+EXIT=0

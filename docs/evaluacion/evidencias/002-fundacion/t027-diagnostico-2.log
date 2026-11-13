@@ -1,0 +1,91 @@
+TAP version 13
+# Subtest: US3 real provisioning permissions rollback and races
+    # Subtest: own first admin and tenant creation grants no other shop access
+    ok 1 - own first admin and tenant creation grants no other shop access
+      ---
+      duration_ms: 99.826
+      type: 'test'
+      ...
+    # Subtest: shared admin A barber B has contextual read and denied rename
+    ok 2 - shared admin A barber B has contextual read and denied rename
+      ---
+      duration_ms: 38.6238
+      type: 'test'
+      ...
+    # Subtest: body actor role extra IDs and direct user RPC denied
+    ok 3 - body actor role extra IDs and direct user RPC denied
+      ---
+      duration_ms: 45.0242
+      type: 'test'
+      ...
+    # Subtest: C3 real HTTP failure rolls back shop and membership
+    ok 4 - C3 real HTTP failure rolls back shop and membership
+      ---
+      duration_ms: 346.654
+      type: 'test'
+      ...
+    # Subtest: C2 two psql sessions blocked at barrier then one UNIQUE rejection
+    not ok 5 - C2 two psql sessions blocked at barrier then one UNIQUE rejection
+      ---
+      duration_ms: 480.518
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\barbershops.test.mjs:147:17'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly deep-equal:
+        + actual - expected
+
+          [
+            0,
+        +   3
+        -   1
+          ]
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected:
+        0: 0
+        1: 1
+      actual:
+        0: 0
+        1: 3
+      operator: 'deepStrictEqual'
+      stack: |-
+        duplicateMembershipRace (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/concurrency.mjs:84:12)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/barbershops.test.mjs:150:27)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/barbershops.test.mjs:147:9
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/barbershops.test.mjs:10:7
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:167:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/barbershops.test.mjs:8:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+      ...
+    # Subtest: C4 two simultaneous independent creations each own one admin
+    ok 6 - C4 two simultaneous independent creations each own one admin
+      ---
+      duration_ms: 28.5519
+      type: 'test'
+      ...
+    1..6
+not ok 1 - US3 real provisioning permissions rollback and races
+  ---
+  duration_ms: 2795.2999
+  type: 'test'
+  location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\barbershops.test.mjs:7:1'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 7
+# suites 0
+# pass 5
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12664.4903
+
+EXIT=1

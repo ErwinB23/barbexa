@@ -1,0 +1,78 @@
+{
+  "command": "npm run coverage:server; LCOV BRF/BRH and LF/LH inspection",
+  "exit": 0,
+  "scope": "server tenant-foundation domain/application only",
+  "core": [
+    {
+      "file": "functions/_shared/tenant-foundation/application/create-own-barbershop.ts",
+      "branchesFound": 8,
+      "branchesHit": 8,
+      "linesFound": 22,
+      "linesHit": 22
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/application/ensure-own-profile.ts",
+      "branchesFound": 6,
+      "branchesHit": 6,
+      "linesFound": 16,
+      "linesHit": 16
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/domain/barbershop-validation.ts",
+      "branchesFound": 40,
+      "branchesHit": 40,
+      "linesFound": 48,
+      "linesHit": 48
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/domain/types.ts",
+      "branchesFound": 0,
+      "branchesHit": 0,
+      "linesFound": 6,
+      "linesHit": 6
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/domain/validation.ts",
+      "branchesFound": 31,
+      "branchesHit": 31,
+      "linesFound": 50,
+      "linesHit": 50
+    }
+  ],
+  "totals": {
+    "branchesFound": 85,
+    "branchesHit": 85,
+    "linesFound": 142,
+    "linesHit": 142
+  },
+  "outsideCoreInformational": [
+    {
+      "file": "functions/_shared/tenant-foundation/infrastructure/auth-verification-adapter.ts",
+      "branchesFound": 26,
+      "branchesHit": 26,
+      "linesFound": 35,
+      "linesHit": 35
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/infrastructure/postgres-foundation-adapter.ts",
+      "branchesFound": 44,
+      "branchesHit": 39,
+      "linesFound": 119,
+      "linesHit": 92
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/presentation/create-barbershop-handler.ts",
+      "branchesFound": 29,
+      "branchesHit": 18,
+      "linesFound": 91,
+      "linesHit": 73
+    },
+    {
+      "file": "functions/_shared/tenant-foundation/presentation/ensure-profile-handler.ts",
+      "branchesFound": 46,
+      "branchesHit": 44,
+      "linesFound": 91,
+      "linesHit": 91
+    }
+  ]
+}

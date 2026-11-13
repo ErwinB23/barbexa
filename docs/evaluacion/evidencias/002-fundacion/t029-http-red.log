@@ -1,0 +1,2605 @@
+TARGET ENV: BARBERIA_002_URL=http://127.0.0.1:54421 BARBERIA_002_PROJECT_ID=app-barberia-002-local
+COMMAND: node --test --test-reporter=tap tests/integration/tenant-foundation/authorization.test.mjs
+TAP version 13
+# Subtest: T029 anticipated authorization matrix real JWT and committed revocation
+    # Subtest: T031 public operation listOwnMemberships
+    not ok 1 - T031 public operation listOwnMemberships
+      ---
+      duration_ms: 1.041
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:47:19'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        + actual - expected
+
+        + 'undefined'
+        - 'function'
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 'function'
+      actual: 'undefined'
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:48:20)
+        Test.runInAsyncScope (node:async_hooks:227:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        TestContext.test (node:internal/test_runner/test:400:20)
+        file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:47:19
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+      ...
+    # Subtest: T031 public operation listBarbershopMemberships
+    not ok 2 - T031 public operation listBarbershopMemberships
+      ---
+      duration_ms: 0.2019
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:47:19'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        + actual - expected
+
+        + 'undefined'
+        - 'function'
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 'function'
+      actual: 'undefined'
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:48:20)
+        Test.runInAsyncScope (node:async_hooks:227:14)
+        Test.run (node:internal/test_runner/test:1402:25)
+        Test.start (node:internal/test_runner/test:1262:17)
+        TestContext.test (node:internal/test_runner/test:400:20)
+        file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:47:19
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+      ...
+    # Subtest: admin-A/A/shop-read
+    ok 3 - admin-A/A/shop-read
+      ---
+      duration_ms: 24.3727
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-rename
+    ok 4 - admin-A/A/shop-rename
+      ---
+      duration_ms: 4.2861
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/member-own
+    ok 5 - admin-A/A/member-own
+      ---
+      duration_ms: 4.4959
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/member-table
+    not ok 6 - admin-A/A/member-table
+      ---
+      duration_ms: 2.4458
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        1 !== 4
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 4
+      actual: 1
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:187:50)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-A/A/member-RPC
+    not ok 7 - admin-A/A/member-RPC
+      ---
+      duration_ms: 1.8962
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 200
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-A/A/profile-other
+    ok 8 - admin-A/A/profile-other
+      ---
+      duration_ms: 158.5479
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-join
+    ok 9 - admin-A/A/profile-join
+      ---
+      duration_ms: 7.3601
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/role
+    ok 10 - admin-A/A/role
+      ---
+      duration_ms: 150.0077
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/status
+    ok 11 - admin-A/A/status
+      ---
+      duration_ms: 150.8394
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/user_id
+    ok 12 - admin-A/A/user_id
+      ---
+      duration_ms: 152.1495
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/barbershop_id
+    ok 13 - admin-A/A/barbershop_id
+      ---
+      duration_ms: 148.969
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/delete
+    ok 14 - admin-A/A/delete
+      ---
+      duration_ms: 155.1795
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/insert
+    ok 15 - admin-A/A/insert
+      ---
+      duration_ms: 169.2533
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-id
+    ok 16 - admin-A/A/profile-id
+      ---
+      duration_ms: 156.0397
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-id
+    ok 17 - admin-A/A/shop-id
+      ---
+      duration_ms: 154.4481
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/profile-RPC
+    ok 18 - admin-A/A/profile-RPC
+      ---
+      duration_ms: 148.9992
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/shop-RPC
+    ok 19 - admin-A/A/shop-RPC
+      ---
+      duration_ms: 160.0921
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/forged-shop-body
+    ok 20 - admin-A/A/forged-shop-body
+      ---
+      duration_ms: 155.8134
+      type: 'test'
+      ...
+    # Subtest: admin-A/A/forged-profile-body
+    ok 21 - admin-A/A/forged-profile-body
+      ---
+      duration_ms: 160.3812
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-read
+    ok 22 - admin-A/B/shop-read
+      ---
+      duration_ms: 158.3551
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-rename
+    ok 23 - admin-A/B/shop-rename
+      ---
+      duration_ms: 162.6723
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-own
+    ok 24 - admin-A/B/member-own
+      ---
+      duration_ms: 150.395
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-table
+    ok 25 - admin-A/B/member-table
+      ---
+      duration_ms: 154.1861
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/member-RPC
+    not ok 26 - admin-A/B/member-RPC
+      ---
+      duration_ms: 77.8908
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-A/B/profile-other
+    ok 27 - admin-A/B/profile-other
+      ---
+      duration_ms: 152.7957
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-join
+    ok 28 - admin-A/B/profile-join
+      ---
+      duration_ms: 3.1169
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/role
+    ok 29 - admin-A/B/role
+      ---
+      duration_ms: 149.1591
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/status
+    ok 30 - admin-A/B/status
+      ---
+      duration_ms: 148.1097
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/user_id
+    ok 31 - admin-A/B/user_id
+      ---
+      duration_ms: 151.0201
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/barbershop_id
+    ok 32 - admin-A/B/barbershop_id
+      ---
+      duration_ms: 157.6767
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/delete
+    ok 33 - admin-A/B/delete
+      ---
+      duration_ms: 151.4551
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/insert
+    ok 34 - admin-A/B/insert
+      ---
+      duration_ms: 147.7361
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-id
+    ok 35 - admin-A/B/profile-id
+      ---
+      duration_ms: 151.6383
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-id
+    ok 36 - admin-A/B/shop-id
+      ---
+      duration_ms: 148.4215
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/profile-RPC
+    ok 37 - admin-A/B/profile-RPC
+      ---
+      duration_ms: 157.0206
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/shop-RPC
+    ok 38 - admin-A/B/shop-RPC
+      ---
+      duration_ms: 152.9123
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/forged-shop-body
+    ok 39 - admin-A/B/forged-shop-body
+      ---
+      duration_ms: 167.3836
+      type: 'test'
+      ...
+    # Subtest: admin-A/B/forged-profile-body
+    ok 40 - admin-A/B/forged-profile-body
+      ---
+      duration_ms: 160.3583
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-read
+    ok 41 - admin-B/A/shop-read
+      ---
+      duration_ms: 173.0303
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-rename
+    ok 42 - admin-B/A/shop-rename
+      ---
+      duration_ms: 150.8877
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-own
+    ok 43 - admin-B/A/member-own
+      ---
+      duration_ms: 148.6315
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-table
+    ok 44 - admin-B/A/member-table
+      ---
+      duration_ms: 153.5425
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/member-RPC
+    not ok 45 - admin-B/A/member-RPC
+      ---
+      duration_ms: 72.7169
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-B/A/profile-other
+    ok 46 - admin-B/A/profile-other
+      ---
+      duration_ms: 156.7221
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-join
+    ok 47 - admin-B/A/profile-join
+      ---
+      duration_ms: 3.1883
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/role
+    ok 48 - admin-B/A/role
+      ---
+      duration_ms: 153.5313
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/status
+    ok 49 - admin-B/A/status
+      ---
+      duration_ms: 151.3868
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/user_id
+    ok 50 - admin-B/A/user_id
+      ---
+      duration_ms: 151.6908
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/barbershop_id
+    ok 51 - admin-B/A/barbershop_id
+      ---
+      duration_ms: 148.5781
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/delete
+    ok 52 - admin-B/A/delete
+      ---
+      duration_ms: 146.6694
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/insert
+    ok 53 - admin-B/A/insert
+      ---
+      duration_ms: 146.0888
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-id
+    ok 54 - admin-B/A/profile-id
+      ---
+      duration_ms: 154.8384
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-id
+    ok 55 - admin-B/A/shop-id
+      ---
+      duration_ms: 148.4976
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/profile-RPC
+    ok 56 - admin-B/A/profile-RPC
+      ---
+      duration_ms: 148.107
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/shop-RPC
+    ok 57 - admin-B/A/shop-RPC
+      ---
+      duration_ms: 180.6871
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/forged-shop-body
+    ok 58 - admin-B/A/forged-shop-body
+      ---
+      duration_ms: 160.2908
+      type: 'test'
+      ...
+    # Subtest: admin-B/A/forged-profile-body
+    ok 59 - admin-B/A/forged-profile-body
+      ---
+      duration_ms: 153.1739
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-read
+    ok 60 - admin-B/B/shop-read
+      ---
+      duration_ms: 3.0531
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-rename
+    ok 61 - admin-B/B/shop-rename
+      ---
+      duration_ms: 3.8323
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/member-own
+    ok 62 - admin-B/B/member-own
+      ---
+      duration_ms: 1.696
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/member-table
+    not ok 63 - admin-B/B/member-table
+      ---
+      duration_ms: 1.8544
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        1 !== 3
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 3
+      actual: 1
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:187:50)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-B/B/member-RPC
+    not ok 64 - admin-B/B/member-RPC
+      ---
+      duration_ms: 1.5649
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 200
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: admin-B/B/profile-other
+    ok 65 - admin-B/B/profile-other
+      ---
+      duration_ms: 153.7637
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-join
+    ok 66 - admin-B/B/profile-join
+      ---
+      duration_ms: 3.4907
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/role
+    ok 67 - admin-B/B/role
+      ---
+      duration_ms: 155.1586
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/status
+    ok 68 - admin-B/B/status
+      ---
+      duration_ms: 163.8231
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/user_id
+    ok 69 - admin-B/B/user_id
+      ---
+      duration_ms: 162.8675
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/barbershop_id
+    ok 70 - admin-B/B/barbershop_id
+      ---
+      duration_ms: 149.8038
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/delete
+    ok 71 - admin-B/B/delete
+      ---
+      duration_ms: 155.6657
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/insert
+    ok 72 - admin-B/B/insert
+      ---
+      duration_ms: 156.551
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-id
+    ok 73 - admin-B/B/profile-id
+      ---
+      duration_ms: 151.2523
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-id
+    ok 74 - admin-B/B/shop-id
+      ---
+      duration_ms: 157.6468
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/profile-RPC
+    ok 75 - admin-B/B/profile-RPC
+      ---
+      duration_ms: 155.757
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/shop-RPC
+    ok 76 - admin-B/B/shop-RPC
+      ---
+      duration_ms: 156.6454
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/forged-shop-body
+    ok 77 - admin-B/B/forged-shop-body
+      ---
+      duration_ms: 158.1969
+      type: 'test'
+      ...
+    # Subtest: admin-B/B/forged-profile-body
+    ok 78 - admin-B/B/forged-profile-body
+      ---
+      duration_ms: 149.4243
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-read
+    ok 79 - barber-A/A/shop-read
+      ---
+      duration_ms: 10.6062
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-rename
+    ok 80 - barber-A/A/shop-rename
+      ---
+      duration_ms: 158.0572
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-own
+    ok 81 - barber-A/A/member-own
+      ---
+      duration_ms: 2.8752
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-table
+    ok 82 - barber-A/A/member-table
+      ---
+      duration_ms: 1.8946
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/member-RPC
+    not ok 83 - barber-A/A/member-RPC
+      ---
+      duration_ms: 77.9004
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: barber-A/A/profile-other
+    ok 84 - barber-A/A/profile-other
+      ---
+      duration_ms: 169.6255
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-join
+    ok 85 - barber-A/A/profile-join
+      ---
+      duration_ms: 3.168
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/role
+    ok 86 - barber-A/A/role
+      ---
+      duration_ms: 154.2747
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/status
+    ok 87 - barber-A/A/status
+      ---
+      duration_ms: 147.8738
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/user_id
+    ok 88 - barber-A/A/user_id
+      ---
+      duration_ms: 151.1001
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/barbershop_id
+    ok 89 - barber-A/A/barbershop_id
+      ---
+      duration_ms: 145.0588
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/delete
+    ok 90 - barber-A/A/delete
+      ---
+      duration_ms: 145.9587
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/insert
+    ok 91 - barber-A/A/insert
+      ---
+      duration_ms: 149.1116
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-id
+    ok 92 - barber-A/A/profile-id
+      ---
+      duration_ms: 155.9272
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-id
+    ok 93 - barber-A/A/shop-id
+      ---
+      duration_ms: 151.3961
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/profile-RPC
+    ok 94 - barber-A/A/profile-RPC
+      ---
+      duration_ms: 154.2254
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/shop-RPC
+    ok 95 - barber-A/A/shop-RPC
+      ---
+      duration_ms: 147.4514
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/forged-shop-body
+    ok 96 - barber-A/A/forged-shop-body
+      ---
+      duration_ms: 158.9153
+      type: 'test'
+      ...
+    # Subtest: barber-A/A/forged-profile-body
+    ok 97 - barber-A/A/forged-profile-body
+      ---
+      duration_ms: 151.4107
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-read
+    ok 98 - barber-A/B/shop-read
+      ---
+      duration_ms: 150.9805
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-rename
+    ok 99 - barber-A/B/shop-rename
+      ---
+      duration_ms: 157.1299
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-own
+    ok 100 - barber-A/B/member-own
+      ---
+      duration_ms: 148.7805
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-table
+    ok 101 - barber-A/B/member-table
+      ---
+      duration_ms: 147.7706
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/member-RPC
+    not ok 102 - barber-A/B/member-RPC
+      ---
+      duration_ms: 75.4478
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: barber-A/B/profile-other
+    ok 103 - barber-A/B/profile-other
+      ---
+      duration_ms: 149.9373
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-join
+    ok 104 - barber-A/B/profile-join
+      ---
+      duration_ms: 3.3791
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/role
+    ok 105 - barber-A/B/role
+      ---
+      duration_ms: 156.366
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/status
+    ok 106 - barber-A/B/status
+      ---
+      duration_ms: 155.3627
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/user_id
+    ok 107 - barber-A/B/user_id
+      ---
+      duration_ms: 147.8839
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/barbershop_id
+    ok 108 - barber-A/B/barbershop_id
+      ---
+      duration_ms: 157.3521
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/delete
+    ok 109 - barber-A/B/delete
+      ---
+      duration_ms: 156.6987
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/insert
+    ok 110 - barber-A/B/insert
+      ---
+      duration_ms: 157.0361
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-id
+    ok 111 - barber-A/B/profile-id
+      ---
+      duration_ms: 154.4011
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-id
+    ok 112 - barber-A/B/shop-id
+      ---
+      duration_ms: 168.3482
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/profile-RPC
+    ok 113 - barber-A/B/profile-RPC
+      ---
+      duration_ms: 147.5438
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/shop-RPC
+    ok 114 - barber-A/B/shop-RPC
+      ---
+      duration_ms: 149.9237
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/forged-shop-body
+    ok 115 - barber-A/B/forged-shop-body
+      ---
+      duration_ms: 163.4292
+      type: 'test'
+      ...
+    # Subtest: barber-A/B/forged-profile-body
+    ok 116 - barber-A/B/forged-profile-body
+      ---
+      duration_ms: 156.385
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-read
+    ok 117 - barber-B/A/shop-read
+      ---
+      duration_ms: 171.2809
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-rename
+    ok 118 - barber-B/A/shop-rename
+      ---
+      duration_ms: 148.8911
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-own
+    ok 119 - barber-B/A/member-own
+      ---
+      duration_ms: 158.2784
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-table
+    ok 120 - barber-B/A/member-table
+      ---
+      duration_ms: 160.1297
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/member-RPC
+    not ok 121 - barber-B/A/member-RPC
+      ---
+      duration_ms: 78.3026
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: barber-B/A/profile-other
+    ok 122 - barber-B/A/profile-other
+      ---
+      duration_ms: 156.0786
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-join
+    ok 123 - barber-B/A/profile-join
+      ---
+      duration_ms: 2.6699
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/role
+    ok 124 - barber-B/A/role
+      ---
+      duration_ms: 150.0049
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/status
+    ok 125 - barber-B/A/status
+      ---
+      duration_ms: 148.8507
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/user_id
+    ok 126 - barber-B/A/user_id
+      ---
+      duration_ms: 148.3605
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/barbershop_id
+    ok 127 - barber-B/A/barbershop_id
+      ---
+      duration_ms: 150.0577
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/delete
+    ok 128 - barber-B/A/delete
+      ---
+      duration_ms: 146.9584
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/insert
+    ok 129 - barber-B/A/insert
+      ---
+      duration_ms: 147.7582
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-id
+    ok 130 - barber-B/A/profile-id
+      ---
+      duration_ms: 155.8722
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-id
+    ok 131 - barber-B/A/shop-id
+      ---
+      duration_ms: 152.4973
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/profile-RPC
+    ok 132 - barber-B/A/profile-RPC
+      ---
+      duration_ms: 152.4228
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/shop-RPC
+    ok 133 - barber-B/A/shop-RPC
+      ---
+      duration_ms: 155.661
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/forged-shop-body
+    ok 134 - barber-B/A/forged-shop-body
+      ---
+      duration_ms: 155.8786
+      type: 'test'
+      ...
+    # Subtest: barber-B/A/forged-profile-body
+    ok 135 - barber-B/A/forged-profile-body
+      ---
+      duration_ms: 159.3165
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-read
+    ok 136 - barber-B/B/shop-read
+      ---
+      duration_ms: 3.4597
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-rename
+    ok 137 - barber-B/B/shop-rename
+      ---
+      duration_ms: 153.4923
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-own
+    ok 138 - barber-B/B/member-own
+      ---
+      duration_ms: 2.7206
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-table
+    ok 139 - barber-B/B/member-table
+      ---
+      duration_ms: 1.7296
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/member-RPC
+    not ok 140 - barber-B/B/member-RPC
+      ---
+      duration_ms: 75.8398
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: barber-B/B/profile-other
+    ok 141 - barber-B/B/profile-other
+      ---
+      duration_ms: 156.0033
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-join
+    ok 142 - barber-B/B/profile-join
+      ---
+      duration_ms: 3.8312
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/role
+    ok 143 - barber-B/B/role
+      ---
+      duration_ms: 149.5419
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/status
+    ok 144 - barber-B/B/status
+      ---
+      duration_ms: 149.721
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/user_id
+    ok 145 - barber-B/B/user_id
+      ---
+      duration_ms: 146.3796
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/barbershop_id
+    ok 146 - barber-B/B/barbershop_id
+      ---
+      duration_ms: 163.0147
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/delete
+    ok 147 - barber-B/B/delete
+      ---
+      duration_ms: 154.2555
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/insert
+    ok 148 - barber-B/B/insert
+      ---
+      duration_ms: 152.8571
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-id
+    ok 149 - barber-B/B/profile-id
+      ---
+      duration_ms: 157.1928
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-id
+    ok 150 - barber-B/B/shop-id
+      ---
+      duration_ms: 152.5245
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/profile-RPC
+    ok 151 - barber-B/B/profile-RPC
+      ---
+      duration_ms: 153.1613
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/shop-RPC
+    ok 152 - barber-B/B/shop-RPC
+      ---
+      duration_ms: 150.9698
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/forged-shop-body
+    ok 153 - barber-B/B/forged-shop-body
+      ---
+      duration_ms: 157.9194
+      type: 'test'
+      ...
+    # Subtest: barber-B/B/forged-profile-body
+    ok 154 - barber-B/B/forged-profile-body
+      ---
+      duration_ms: 154.9776
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-read
+    ok 155 - client/A/shop-read
+      ---
+      duration_ms: 164.4521
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-rename
+    ok 156 - client/A/shop-rename
+      ---
+      duration_ms: 156.7587
+      type: 'test'
+      ...
+    # Subtest: client/A/member-own
+    ok 157 - client/A/member-own
+      ---
+      duration_ms: 156.1884
+      type: 'test'
+      ...
+    # Subtest: client/A/member-table
+    ok 158 - client/A/member-table
+      ---
+      duration_ms: 154.5903
+      type: 'test'
+      ...
+    # Subtest: client/A/member-RPC
+    not ok 159 - client/A/member-RPC
+      ---
+      duration_ms: 73.2057
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: client/A/profile-other
+    ok 160 - client/A/profile-other
+      ---
+      duration_ms: 156.6907
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-join
+    ok 161 - client/A/profile-join
+      ---
+      duration_ms: 2.9497
+      type: 'test'
+      ...
+    # Subtest: client/A/role
+    ok 162 - client/A/role
+      ---
+      duration_ms: 149.9138
+      type: 'test'
+      ...
+    # Subtest: client/A/status
+    ok 163 - client/A/status
+      ---
+      duration_ms: 151.0454
+      type: 'test'
+      ...
+    # Subtest: client/A/user_id
+    ok 164 - client/A/user_id
+      ---
+      duration_ms: 153.2769
+      type: 'test'
+      ...
+    # Subtest: client/A/barbershop_id
+    ok 165 - client/A/barbershop_id
+      ---
+      duration_ms: 152.0332
+      type: 'test'
+      ...
+    # Subtest: client/A/delete
+    ok 166 - client/A/delete
+      ---
+      duration_ms: 144.5857
+      type: 'test'
+      ...
+    # Subtest: client/A/insert
+    ok 167 - client/A/insert
+      ---
+      duration_ms: 149.0317
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-id
+    ok 168 - client/A/profile-id
+      ---
+      duration_ms: 152.7588
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-id
+    ok 169 - client/A/shop-id
+      ---
+      duration_ms: 151.1358
+      type: 'test'
+      ...
+    # Subtest: client/A/profile-RPC
+    ok 170 - client/A/profile-RPC
+      ---
+      duration_ms: 155.4835
+      type: 'test'
+      ...
+    # Subtest: client/A/shop-RPC
+    ok 171 - client/A/shop-RPC
+      ---
+      duration_ms: 160.8131
+      type: 'test'
+      ...
+    # Subtest: client/A/forged-shop-body
+    ok 172 - client/A/forged-shop-body
+      ---
+      duration_ms: 154.5917
+      type: 'test'
+      ...
+    # Subtest: client/A/forged-profile-body
+    ok 173 - client/A/forged-profile-body
+      ---
+      duration_ms: 163.5132
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-read
+    ok 174 - client/B/shop-read
+      ---
+      duration_ms: 147.7139
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-rename
+    ok 175 - client/B/shop-rename
+      ---
+      duration_ms: 152.6287
+      type: 'test'
+      ...
+    # Subtest: client/B/member-own
+    ok 176 - client/B/member-own
+      ---
+      duration_ms: 152.5736
+      type: 'test'
+      ...
+    # Subtest: client/B/member-table
+    ok 177 - client/B/member-table
+      ---
+      duration_ms: 161.4138
+      type: 'test'
+      ...
+    # Subtest: client/B/member-RPC
+    not ok 178 - client/B/member-RPC
+      ---
+      duration_ms: 75.3451
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: client/B/profile-other
+    ok 179 - client/B/profile-other
+      ---
+      duration_ms: 155.1203
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-join
+    ok 180 - client/B/profile-join
+      ---
+      duration_ms: 4.5861
+      type: 'test'
+      ...
+    # Subtest: client/B/role
+    ok 181 - client/B/role
+      ---
+      duration_ms: 149.4214
+      type: 'test'
+      ...
+    # Subtest: client/B/status
+    ok 182 - client/B/status
+      ---
+      duration_ms: 148.2022
+      type: 'test'
+      ...
+    # Subtest: client/B/user_id
+    ok 183 - client/B/user_id
+      ---
+      duration_ms: 155.9675
+      type: 'test'
+      ...
+    # Subtest: client/B/barbershop_id
+    ok 184 - client/B/barbershop_id
+      ---
+      duration_ms: 157.7477
+      type: 'test'
+      ...
+    # Subtest: client/B/delete
+    ok 185 - client/B/delete
+      ---
+      duration_ms: 146.9833
+      type: 'test'
+      ...
+    # Subtest: client/B/insert
+    ok 186 - client/B/insert
+      ---
+      duration_ms: 148.4442
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-id
+    ok 187 - client/B/profile-id
+      ---
+      duration_ms: 163.3093
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-id
+    ok 188 - client/B/shop-id
+      ---
+      duration_ms: 151.4382
+      type: 'test'
+      ...
+    # Subtest: client/B/profile-RPC
+    ok 189 - client/B/profile-RPC
+      ---
+      duration_ms: 150.1678
+      type: 'test'
+      ...
+    # Subtest: client/B/shop-RPC
+    ok 190 - client/B/shop-RPC
+      ---
+      duration_ms: 154.151
+      type: 'test'
+      ...
+    # Subtest: client/B/forged-shop-body
+    ok 191 - client/B/forged-shop-body
+      ---
+      duration_ms: 160.0811
+      type: 'test'
+      ...
+    # Subtest: client/B/forged-profile-body
+    ok 192 - client/B/forged-profile-body
+      ---
+      duration_ms: 154.9076
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-read
+    ok 193 - shared-admin-A-barber-B/A/shop-read
+      ---
+      duration_ms: 12.6397
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-rename
+    ok 194 - shared-admin-A-barber-B/A/shop-rename
+      ---
+      duration_ms: 4.7239
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-own
+    ok 195 - shared-admin-A-barber-B/A/member-own
+      ---
+      duration_ms: 3.0524
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-table
+    not ok 196 - shared-admin-A-barber-B/A/member-table
+      ---
+      duration_ms: 3.9496
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        1 !== 4
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 4
+      actual: 1
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:187:50)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: shared-admin-A-barber-B/A/member-RPC
+    not ok 197 - shared-admin-A-barber-B/A/member-RPC
+      ---
+      duration_ms: 3.5648
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 200
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-other
+    ok 198 - shared-admin-A-barber-B/A/profile-other
+      ---
+      duration_ms: 156.4286
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-join
+    ok 199 - shared-admin-A-barber-B/A/profile-join
+      ---
+      duration_ms: 4.9563
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/role
+    ok 200 - shared-admin-A-barber-B/A/role
+      ---
+      duration_ms: 154.6201
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/status
+    ok 201 - shared-admin-A-barber-B/A/status
+      ---
+      duration_ms: 154.5881
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/user_id
+    ok 202 - shared-admin-A-barber-B/A/user_id
+      ---
+      duration_ms: 158.1853
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/barbershop_id
+    ok 203 - shared-admin-A-barber-B/A/barbershop_id
+      ---
+      duration_ms: 154.7117
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/delete
+    ok 204 - shared-admin-A-barber-B/A/delete
+      ---
+      duration_ms: 154.0425
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/insert
+    ok 205 - shared-admin-A-barber-B/A/insert
+      ---
+      duration_ms: 156.8858
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-id
+    ok 206 - shared-admin-A-barber-B/A/profile-id
+      ---
+      duration_ms: 169.2576
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-id
+    ok 207 - shared-admin-A-barber-B/A/shop-id
+      ---
+      duration_ms: 161.0678
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/profile-RPC
+    ok 208 - shared-admin-A-barber-B/A/profile-RPC
+      ---
+      duration_ms: 155.3774
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/shop-RPC
+    ok 209 - shared-admin-A-barber-B/A/shop-RPC
+      ---
+      duration_ms: 161.1888
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/forged-shop-body
+    ok 210 - shared-admin-A-barber-B/A/forged-shop-body
+      ---
+      duration_ms: 158.1501
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/A/forged-profile-body
+    ok 211 - shared-admin-A-barber-B/A/forged-profile-body
+      ---
+      duration_ms: 156.2339
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-read
+    ok 212 - shared-admin-A-barber-B/B/shop-read
+      ---
+      duration_ms: 5.6101
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-rename
+    ok 213 - shared-admin-A-barber-B/B/shop-rename
+      ---
+      duration_ms: 153.0259
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-own
+    ok 214 - shared-admin-A-barber-B/B/member-own
+      ---
+      duration_ms: 4.4161
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-table
+    ok 215 - shared-admin-A-barber-B/B/member-table
+      ---
+      duration_ms: 2.6709
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/member-RPC
+    not ok 216 - shared-admin-A-barber-B/B/member-RPC
+      ---
+      duration_ms: 81.4541
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-other
+    ok 217 - shared-admin-A-barber-B/B/profile-other
+      ---
+      duration_ms: 154.5195
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-join
+    ok 218 - shared-admin-A-barber-B/B/profile-join
+      ---
+      duration_ms: 5.1015
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/role
+    ok 219 - shared-admin-A-barber-B/B/role
+      ---
+      duration_ms: 161.4429
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/status
+    ok 220 - shared-admin-A-barber-B/B/status
+      ---
+      duration_ms: 169.4358
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/user_id
+    ok 221 - shared-admin-A-barber-B/B/user_id
+      ---
+      duration_ms: 155.9867
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/barbershop_id
+    ok 222 - shared-admin-A-barber-B/B/barbershop_id
+      ---
+      duration_ms: 152.85
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/delete
+    ok 223 - shared-admin-A-barber-B/B/delete
+      ---
+      duration_ms: 151.6089
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/insert
+    ok 224 - shared-admin-A-barber-B/B/insert
+      ---
+      duration_ms: 159.8906
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-id
+    ok 225 - shared-admin-A-barber-B/B/profile-id
+      ---
+      duration_ms: 153.1761
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-id
+    ok 226 - shared-admin-A-barber-B/B/shop-id
+      ---
+      duration_ms: 150.4897
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/profile-RPC
+    ok 227 - shared-admin-A-barber-B/B/profile-RPC
+      ---
+      duration_ms: 152.9681
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/shop-RPC
+    ok 228 - shared-admin-A-barber-B/B/shop-RPC
+      ---
+      duration_ms: 146.979
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/forged-shop-body
+    ok 229 - shared-admin-A-barber-B/B/forged-shop-body
+      ---
+      duration_ms: 162.8996
+      type: 'test'
+      ...
+    # Subtest: shared-admin-A-barber-B/B/forged-profile-body
+    ok 230 - shared-admin-A-barber-B/B/forged-profile-body
+      ---
+      duration_ms: 168.0195
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-read
+    ok 231 - inactive-A/A/shop-read
+      ---
+      duration_ms: 200.0259
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-rename
+    ok 232 - inactive-A/A/shop-rename
+      ---
+      duration_ms: 148.1793
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-own
+    ok 233 - inactive-A/A/member-own
+      ---
+      duration_ms: 3.5492
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-table
+    ok 234 - inactive-A/A/member-table
+      ---
+      duration_ms: 2.6519
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/member-RPC
+    not ok 235 - inactive-A/A/member-RPC
+      ---
+      duration_ms: 77.4413
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: inactive-A/A/profile-other
+    ok 236 - inactive-A/A/profile-other
+      ---
+      duration_ms: 149.0559
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-join
+    ok 237 - inactive-A/A/profile-join
+      ---
+      duration_ms: 4.5243
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/role
+    ok 238 - inactive-A/A/role
+      ---
+      duration_ms: 150.0415
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/status
+    ok 239 - inactive-A/A/status
+      ---
+      duration_ms: 148.2036
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/user_id
+    ok 240 - inactive-A/A/user_id
+      ---
+      duration_ms: 161.1783
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/barbershop_id
+    ok 241 - inactive-A/A/barbershop_id
+      ---
+      duration_ms: 167.1589
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/delete
+    ok 242 - inactive-A/A/delete
+      ---
+      duration_ms: 154.1752
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/insert
+    ok 243 - inactive-A/A/insert
+      ---
+      duration_ms: 152.0863
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-id
+    ok 244 - inactive-A/A/profile-id
+      ---
+      duration_ms: 146.658
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-id
+    ok 245 - inactive-A/A/shop-id
+      ---
+      duration_ms: 150.6518
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/profile-RPC
+    ok 246 - inactive-A/A/profile-RPC
+      ---
+      duration_ms: 153.9502
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/shop-RPC
+    ok 247 - inactive-A/A/shop-RPC
+      ---
+      duration_ms: 149.7217
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/forged-shop-body
+    ok 248 - inactive-A/A/forged-shop-body
+      ---
+      duration_ms: 164.1526
+      type: 'test'
+      ...
+    # Subtest: inactive-A/A/forged-profile-body
+    ok 249 - inactive-A/A/forged-profile-body
+      ---
+      duration_ms: 154.5732
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-read
+    ok 250 - inactive-A/B/shop-read
+      ---
+      duration_ms: 149.5678
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-rename
+    ok 251 - inactive-A/B/shop-rename
+      ---
+      duration_ms: 145.453
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-own
+    ok 252 - inactive-A/B/member-own
+      ---
+      duration_ms: 150.0203
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-table
+    ok 253 - inactive-A/B/member-table
+      ---
+      duration_ms: 150.1025
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/member-RPC
+    not ok 254 - inactive-A/B/member-RPC
+      ---
+      duration_ms: 74.7072
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: inactive-A/B/profile-other
+    ok 255 - inactive-A/B/profile-other
+      ---
+      duration_ms: 147.3956
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-join
+    ok 256 - inactive-A/B/profile-join
+      ---
+      duration_ms: 3.177
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/role
+    ok 257 - inactive-A/B/role
+      ---
+      duration_ms: 157.0103
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/status
+    ok 258 - inactive-A/B/status
+      ---
+      duration_ms: 152.703
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/user_id
+    ok 259 - inactive-A/B/user_id
+      ---
+      duration_ms: 151.9127
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/barbershop_id
+    ok 260 - inactive-A/B/barbershop_id
+      ---
+      duration_ms: 162.5352
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/delete
+    ok 261 - inactive-A/B/delete
+      ---
+      duration_ms: 153.0221
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/insert
+    ok 262 - inactive-A/B/insert
+      ---
+      duration_ms: 164.5245
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-id
+    ok 263 - inactive-A/B/profile-id
+      ---
+      duration_ms: 155.9706
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-id
+    ok 264 - inactive-A/B/shop-id
+      ---
+      duration_ms: 166.9701
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/profile-RPC
+    ok 265 - inactive-A/B/profile-RPC
+      ---
+      duration_ms: 147.5798
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/shop-RPC
+    ok 266 - inactive-A/B/shop-RPC
+      ---
+      duration_ms: 147.308
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/forged-shop-body
+    ok 267 - inactive-A/B/forged-shop-body
+      ---
+      duration_ms: 157.8397
+      type: 'test'
+      ...
+    # Subtest: inactive-A/B/forged-profile-body
+    ok 268 - inactive-A/B/forged-profile-body
+      ---
+      duration_ms: 152.0435
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-read
+    ok 269 - anonymous/A/shop-read
+      ---
+      duration_ms: 150.764
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-rename
+    ok 270 - anonymous/A/shop-rename
+      ---
+      duration_ms: 159.757
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-own
+    ok 271 - anonymous/A/member-own
+      ---
+      duration_ms: 149.3381
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-table
+    ok 272 - anonymous/A/member-table
+      ---
+      duration_ms: 149.8729
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/member-RPC
+    not ok 273 - anonymous/A/member-RPC
+      ---
+      duration_ms: 75.926
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 401
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 401
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: anonymous/A/profile-other
+    ok 274 - anonymous/A/profile-other
+      ---
+      duration_ms: 153.7004
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-join
+    ok 275 - anonymous/A/profile-join
+      ---
+      duration_ms: 154.3901
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/role
+    ok 276 - anonymous/A/role
+      ---
+      duration_ms: 170.0534
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/status
+    ok 277 - anonymous/A/status
+      ---
+      duration_ms: 154.1287
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/user_id
+    ok 278 - anonymous/A/user_id
+      ---
+      duration_ms: 163.8631
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/barbershop_id
+    ok 279 - anonymous/A/barbershop_id
+      ---
+      duration_ms: 149.3637
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/delete
+    ok 280 - anonymous/A/delete
+      ---
+      duration_ms: 150.445
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/insert
+    ok 281 - anonymous/A/insert
+      ---
+      duration_ms: 158.3679
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-id
+    ok 282 - anonymous/A/profile-id
+      ---
+      duration_ms: 173.022
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-id
+    ok 283 - anonymous/A/shop-id
+      ---
+      duration_ms: 153.2113
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/profile-RPC
+    ok 284 - anonymous/A/profile-RPC
+      ---
+      duration_ms: 150.9466
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/shop-RPC
+    ok 285 - anonymous/A/shop-RPC
+      ---
+      duration_ms: 155.8345
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/forged-shop-body
+    ok 286 - anonymous/A/forged-shop-body
+      ---
+      duration_ms: 162.9612
+      type: 'test'
+      ...
+    # Subtest: anonymous/A/forged-profile-body
+    ok 287 - anonymous/A/forged-profile-body
+      ---
+      duration_ms: 164.9211
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-read
+    ok 288 - anonymous/B/shop-read
+      ---
+      duration_ms: 160.5899
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-rename
+    ok 289 - anonymous/B/shop-rename
+      ---
+      duration_ms: 152.8304
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-own
+    ok 290 - anonymous/B/member-own
+      ---
+      duration_ms: 161.7719
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-table
+    ok 291 - anonymous/B/member-table
+      ---
+      duration_ms: 158.2806
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/member-RPC
+    not ok 292 - anonymous/B/member-RPC
+      ---
+      duration_ms: 82.7183
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:56:21'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 401
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 401
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:184:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:56:13
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: anonymous/B/profile-other
+    ok 293 - anonymous/B/profile-other
+      ---
+      duration_ms: 154.9865
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-join
+    ok 294 - anonymous/B/profile-join
+      ---
+      duration_ms: 161.3735
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/role
+    ok 295 - anonymous/B/role
+      ---
+      duration_ms: 158.7215
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/status
+    ok 296 - anonymous/B/status
+      ---
+      duration_ms: 153.5215
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/user_id
+    ok 297 - anonymous/B/user_id
+      ---
+      duration_ms: 152.6596
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/barbershop_id
+    ok 298 - anonymous/B/barbershop_id
+      ---
+      duration_ms: 163.9446
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/delete
+    ok 299 - anonymous/B/delete
+      ---
+      duration_ms: 158.4405
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/insert
+    ok 300 - anonymous/B/insert
+      ---
+      duration_ms: 163.5539
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-id
+    ok 301 - anonymous/B/profile-id
+      ---
+      duration_ms: 168.2155
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-id
+    ok 302 - anonymous/B/shop-id
+      ---
+      duration_ms: 157.6359
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/profile-RPC
+    ok 303 - anonymous/B/profile-RPC
+      ---
+      duration_ms: 169.7322
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/shop-RPC
+    ok 304 - anonymous/B/shop-RPC
+      ---
+      duration_ms: 165.3927
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/forged-shop-body
+    ok 305 - anonymous/B/forged-shop-body
+      ---
+      duration_ms: 165.2342
+      type: 'test'
+      ...
+    # Subtest: anonymous/B/forged-profile-body
+    ok 306 - anonymous/B/forged-profile-body
+      ---
+      duration_ms: 171.8469
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-read
+    ok 307 - invalid-JWT/A/shop-read
+      ---
+      duration_ms: 154.372
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-rename
+    ok 308 - invalid-JWT/A/shop-rename
+      ---
+      duration_ms: 158.512
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-own
+    ok 309 - invalid-JWT/A/member-own
+      ---
+      duration_ms: 164.8335
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-table
+    ok 310 - invalid-JWT/A/member-table
+      ---
+      duration_ms: 151.9152
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/member-RPC
+    ok 311 - invalid-JWT/A/member-RPC
+      ---
+      duration_ms: 166.1718
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-other
+    ok 312 - invalid-JWT/A/profile-other
+      ---
+      duration_ms: 162.0437
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-join
+    ok 313 - invalid-JWT/A/profile-join
+      ---
+      duration_ms: 160.675
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/role
+    ok 314 - invalid-JWT/A/role
+      ---
+      duration_ms: 166.5179
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/status
+    ok 315 - invalid-JWT/A/status
+      ---
+      duration_ms: 163.7433
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/user_id
+    ok 316 - invalid-JWT/A/user_id
+      ---
+      duration_ms: 170.5643
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/barbershop_id
+    ok 317 - invalid-JWT/A/barbershop_id
+      ---
+      duration_ms: 169.6553
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/delete
+    ok 318 - invalid-JWT/A/delete
+      ---
+      duration_ms: 159.7192
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/insert
+    ok 319 - invalid-JWT/A/insert
+      ---
+      duration_ms: 163.3651
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-id
+    ok 320 - invalid-JWT/A/profile-id
+      ---
+      duration_ms: 163.4807
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-id
+    ok 321 - invalid-JWT/A/shop-id
+      ---
+      duration_ms: 159.4371
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/profile-RPC
+    ok 322 - invalid-JWT/A/profile-RPC
+      ---
+      duration_ms: 161.0653
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/shop-RPC
+    ok 323 - invalid-JWT/A/shop-RPC
+      ---
+      duration_ms: 160.2351
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/forged-shop-body
+    ok 324 - invalid-JWT/A/forged-shop-body
+      ---
+      duration_ms: 153.0589
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/A/forged-profile-body
+    ok 325 - invalid-JWT/A/forged-profile-body
+      ---
+      duration_ms: 164.0229
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-read
+    ok 326 - invalid-JWT/B/shop-read
+      ---
+      duration_ms: 156.6795
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-rename
+    ok 327 - invalid-JWT/B/shop-rename
+      ---
+      duration_ms: 162.4423
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-own
+    ok 328 - invalid-JWT/B/member-own
+      ---
+      duration_ms: 159.4904
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-table
+    ok 329 - invalid-JWT/B/member-table
+      ---
+      duration_ms: 155.4467
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/member-RPC
+    ok 330 - invalid-JWT/B/member-RPC
+      ---
+      duration_ms: 156.3362
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-other
+    ok 331 - invalid-JWT/B/profile-other
+      ---
+      duration_ms: 147.0375
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-join
+    ok 332 - invalid-JWT/B/profile-join
+      ---
+      duration_ms: 151.3435
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/role
+    ok 333 - invalid-JWT/B/role
+      ---
+      duration_ms: 153.1762
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/status
+    ok 334 - invalid-JWT/B/status
+      ---
+      duration_ms: 155.9242
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/user_id
+    ok 335 - invalid-JWT/B/user_id
+      ---
+      duration_ms: 150.1733
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/barbershop_id
+    ok 336 - invalid-JWT/B/barbershop_id
+      ---
+      duration_ms: 149.7977
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/delete
+    ok 337 - invalid-JWT/B/delete
+      ---
+      duration_ms: 160.5619
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/insert
+    ok 338 - invalid-JWT/B/insert
+      ---
+      duration_ms: 150.4786
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-id
+    ok 339 - invalid-JWT/B/profile-id
+      ---
+      duration_ms: 151.309
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-id
+    ok 340 - invalid-JWT/B/shop-id
+      ---
+      duration_ms: 154.8859
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/profile-RPC
+    ok 341 - invalid-JWT/B/profile-RPC
+      ---
+      duration_ms: 150.7231
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/shop-RPC
+    ok 342 - invalid-JWT/B/shop-RPC
+      ---
+      duration_ms: 160.2788
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/forged-shop-body
+    ok 343 - invalid-JWT/B/forged-shop-body
+      ---
+      duration_ms: 161.0958
+      type: 'test'
+      ...
+    # Subtest: invalid-JWT/B/forged-profile-body
+    ok 344 - invalid-JWT/B/forged-profile-body
+      ---
+      duration_ms: 159.2364
+      type: 'test'
+      ...
+    # Subtest: revocation after commit uses same JWT; inactive own relation remains
+    not ok 345 - revocation after commit uses same JWT; inactive own relation remains
+      ---
+      duration_ms: 104.2549
+      type: 'test'
+      location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:208:19'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+
+        404 !== 403
+
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 403
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:245:22)
+        process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:208:11
+        async withCompiledClient (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/scripts/run-backend-integration.mjs:48:12)
+        async withProfileEnvironment.userCount (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:15:7)
+        async withProfileEnvironment (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/profile-environment.mjs:169:5)
+        async TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/authorization.test.mjs:13:3)
+        async Test.run (node:internal/test_runner/test:1409:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    1..345
+not ok 1 - T029 anticipated authorization matrix real JWT and committed revocation
+  ---
+  duration_ms: 48797.2954
+  type: 'test'
+  location: 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\tests\\integration\\tenant-foundation\\authorization.test.mjs:11:1'
+  failureType: 'subtestsFailed'
+  error: '22 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 346
+# suites 0
+# pass 323
+# fail 23
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 49021.2382
+
+EXIT=1

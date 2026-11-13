@@ -1,0 +1,3 @@
+COMMAND: node_modules/eslint/bin/eslint.js src supabase/functions tests/server tests/unit/tenant-foundation tests/integration/tenant-foundation --max-warnings 0
+
+EXIT=0

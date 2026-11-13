@@ -101,8 +101,8 @@ de arranque habitual ni debe repetirse sobre datos que se quieran conservar. Par
 entorno propio cuando sea necesario: `npx.cmd --no-install supabase stop --workdir "$featureRoot"`
 (no ejecutado en este bloque, sin --all ni --no-backup). Nunca apuntar al directorio antiguo.
 
-Tras T019, ensure-profile tiene enabled=true y verify_jwt=true. create-barbershop conserva
-enabled=false/verify_jwt=true hasta T025. Un primer start con entradas habilitadas sin handlers falló y se corrigió
+Tras T019, ensure-profile tiene enabled=true y verify_jwt=true. create-barbershop tambi?n tiene
+enabled=true/verify_jwt=true tras T025. Un primer start con entradas habilitadas sin handlers falló y se corrigió
 esa configuración; no crear handlers ficticios ni usar --no-verify-jwt. Realtime, Storage y
 analytics están desactivados para este incremento. Start puede mostrar claves locales: no
 copiar su salida sin redactar en Git, Expo, evidencias ni transcripciones.
@@ -191,3 +191,13 @@ BARBERIA_002_PROJECT_ID=app-barberia-002-local, y usar
 y privada; el cliente compilado recibe ?nicamente clave p?blica y token de usuario.
 El runner sin selector sigue exigiendo los escenarios futuros completos. No ejecutar
 create-barbershop ni afirmar integraci?n de barber?as antes de sus tareas.
+
+## Aprovisionamiento comprobado en T027
+
+Ambas entradas est?n implementadas y habilitadas con verify_jwt=true. Para US3, con el
+mismo destino local expl?cito y Edge activo, ejecutar
+`node scripts/run-backend-integration.mjs --barbershops`. [Atomicidad y l?mites](../../docs/evaluacion/evidencias/002-fundacion/atomicidad.md).
+La prueba C2 abre sesiones psql propias; C3 instala y retira un trigger limitado al actor
+sint?tico; todas las fixtures se limpian en finally. No ejecutar contra datos de producci?n.
+El check general fue ejecutado con c?digo 0 en T027, con Deno 2.9.8 disponible en el PATH
+del proceso. Los pasos posteriores y la matriz integral a?n no se acreditan por ese resultado.

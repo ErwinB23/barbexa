@@ -1,0 +1,29 @@
+COMMAND: node scripts/run-backend-integration.mjs --profiles (guarded local env)
+ok 1 - own absence ensure idempotence read and PATCH null/omitted
+ok 2 - other profile hidden and unchanged despite forged admin metadata
+ok 3 - body impersonation extra fields invalid JSON and types rejected
+ok 4 - privileged RPC direct INSERT DELETE and id mutation denied
+ok 5 - missing altered expired and independent-key JWT denied
+ok 6 - C1 simultaneous ensure creates one profile and never overwrites winner
+ok 7 - 8 KiB and unsupported method rejected on real handler
+ok 1 - real Auth Edge PostgREST profiles and C1
+# tests 8
+# pass 8
+# fail 0
+# skipped 0
+
+EXIT=0
+COMMAND: node scripts/run-backend-integration.mjs --barbershops (guarded local env)
+ok 1 - own first admin and tenant creation grants no other shop access
+ok 2 - shared admin A barber B has contextual read and denied rename
+ok 3 - body actor role extra IDs and direct user RPC denied
+ok 4 - C3 real HTTP failure rolls back shop and membership
+ok 5 - C2 two psql sessions blocked at barrier then one UNIQUE rejection
+ok 6 - C4 two simultaneous independent creations each own one admin
+ok 1 - US3 real provisioning permissions rollback and races
+# tests 7
+# pass 7
+# fail 0
+# skipped 0
+
+EXIT=0

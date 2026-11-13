@@ -1,0 +1,164 @@
+{
+  "target": "app-barberia-002-local:54422",
+  "command": "read-only pg_catalog/pg_policies and effective privilege functions via guarded local psql",
+  "exit": 0,
+  "tables": [
+    {
+      "name": "barbershop_memberships",
+      "rls": true,
+      "owner": "postgres"
+    },
+    {
+      "name": "barbershops",
+      "rls": true,
+      "owner": "postgres"
+    },
+    {
+      "name": "profiles",
+      "rls": true,
+      "owner": "postgres"
+    }
+  ],
+  "policies": [
+    {
+      "table": "profiles",
+      "name": "profiles_update_own",
+      "command": "UPDATE",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "(id = ( SELECT auth.uid() AS uid))",
+      "withCheck": "(id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "table": "profiles",
+      "name": "profiles_select_own",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "(id = ( SELECT auth.uid() AS uid))",
+      "withCheck": null
+    },
+    {
+      "table": "barbershops",
+      "name": "barbershops_update_active_admin",
+      "command": "UPDATE",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "private.is_active_admin(id)",
+      "withCheck": "private.is_active_admin(id)"
+    },
+    {
+      "table": "barbershops",
+      "name": "barbershops_select_active_member",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "private.is_active_member(id)",
+      "withCheck": null
+    },
+    {
+      "table": "barbershop_memberships",
+      "name": "memberships_select_own",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((user_id = ( SELECT auth.uid() AS uid)) OR private.is_active_admin(barbershop_id))",
+      "withCheck": null
+    }
+  ],
+  "functions": [
+    {
+      "signature": "private.is_active_member(uuid)",
+      "definer": true,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": true,
+      "serviceExecute": false,
+      "publicExecute": false
+    },
+    {
+      "signature": "private.is_active_admin(uuid)",
+      "definer": true,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": true,
+      "serviceExecute": false,
+      "publicExecute": false
+    },
+    {
+      "signature": "list_barbershop_memberships(uuid)",
+      "definer": false,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": true,
+      "serviceExecute": false,
+      "publicExecute": false
+    },
+    {
+      "signature": "private.ensure_own_profile(uuid,text,text)",
+      "definer": true,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": false,
+      "serviceExecute": true,
+      "publicExecute": false
+    },
+    {
+      "signature": "ensure_own_profile(uuid,text,text)",
+      "definer": false,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": false,
+      "serviceExecute": true,
+      "publicExecute": false
+    },
+    {
+      "signature": "private.create_own_barbershop(uuid,text)",
+      "definer": true,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": false,
+      "serviceExecute": true,
+      "publicExecute": false
+    },
+    {
+      "signature": "create_own_barbershop(uuid,text)",
+      "definer": false,
+      "settings": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres",
+      "anonExecute": false,
+      "authenticatedExecute": false,
+      "serviceExecute": true,
+      "publicExecute": false
+    }
+  ],
+  "membershipWritesDenied": true,
+  "profileIdImmutable": true,
+  "shopIdImmutable": true,
+  "serviceTableGrantsRevoked": true
+}

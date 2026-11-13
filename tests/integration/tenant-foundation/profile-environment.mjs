@@ -20,7 +20,9 @@ const inspect = (names) => {
     throw Error('LOCAL_INSPECTION_FAILED');
   }
 };
-export async function withProfileEnvironment(consume) {
+export async function withProfileEnvironment(consume, { userCount = 3 } = {}) {
+  if (!Number.isInteger(userCount) || userCount < 3 || userCount > 7)
+    throw Error('UNSAFE_FIXTURE_COUNT');
   assertLocalTarget({ url, projectId });
   if (
     process.env.BARBERIA_002_URL !== url ||
@@ -98,7 +100,7 @@ export async function withProfileEnvironment(consume) {
   };
   const users = [];
   try {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < userCount; i++) {
       const credentials = fixtureCredentials();
       const user = await admin('users', {
         method: 'POST',
@@ -169,6 +171,7 @@ export async function withProfileEnvironment(consume) {
       projectId,
       publicKey,
       users,
+      operator: { sql, docker, dbId: db.Id },
       ordinary,
       signedFixture,
       profileCount: (id) => {
@@ -180,6 +183,23 @@ export async function withProfileEnvironment(consume) {
     });
   } finally {
     if (users.length) {
+      const ids = users.map((u) => "'" + u.id + "'").join(',');
+      const shops = sql(
+        "select coalesce(string_agg(quote_literal(barbershop_id::text),','),'') from public.barbershop_memberships where user_id in (" +
+          ids +
+          ") and role='administrator'",
+      );
+      sql(
+        'begin;delete from public.barbershop_memberships where user_id in (' +
+          ids +
+          ')' +
+          (shops ? ' or barbershop_id in (' + shops + ')' : '') +
+          ';' +
+          (shops
+            ? 'delete from public.barbershops where id in (' + shops + ');'
+            : '') +
+          'commit;',
+      );
       sql(
         'delete from public.profiles where id in (' +
           users.map((u) => "'" + u.id + "'").join(',') +

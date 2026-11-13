@@ -1,0 +1,5 @@
+tests/unit/tenant-foundation/barbershops.test.ts(2,66): error TS2307: Cannot find module '../../../src/features/tenant-foundation/application/barbershops.js' or its corresponding type declarations.
+tests/unit/tenant-foundation/barbershops.test.ts(4,41): error TS2307: Cannot find module '../../../src/features/tenant-foundation/domain/barbershop-validation.js' or its corresponding type declarations.
+tests/unit/tenant-foundation/barbershops.test.ts(7,151): error TS7006: Parameter 'input' implicitly has an 'any' type.
+
+EXIT=1

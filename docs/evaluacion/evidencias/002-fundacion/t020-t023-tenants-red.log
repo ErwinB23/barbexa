@@ -1,0 +1,37 @@
+COMMAND: supabase test db supabase/tests/tenants.test.sql --workdir <workspace>
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql ..
+# Failed test 1: "shared member reads both shops SQLSTATE=42501"
+# Failed test 2: "admin renames A"
+#     died: 42501: permission denied for table barbershops
+#         HINT:       Grant the required privileges to the current role with: GRANT SELECT, UPDATE ON public.barbershops TO authenticated;
+#         CONTEXT:
+#             SQL statement "update public.barbershops set name='Renamed' where id='20000000-0000-4000-8000-000000000001'"
+#             PL/pgSQL function lives_ok(text,text) line 14 at EXECUTE
+# Failed test 3: "barber B update has no effect"
+#     died: 42501: permission denied for table barbershops
+#         HINT:       Grant the required privileges to the current role with: GRANT SELECT, UPDATE ON public.barbershops TO authenticated;
+#         CONTEXT:
+#             SQL statement "update public.barbershops set name='Forbidden' where id='20000000-0000-4000-8000-000000000002'"
+#             PL/pgSQL function lives_ok(text,text) line 14 at EXECUTE
+# Failed test 4: "B unchanged SQLSTATE=42501"
+# Failed test 5: "only own memberships SQLSTATE=42501"
+# Failed test 10: "authorized update persisted"
+#         have: A
+#         want: Renamed
+# Failed test 11: "visibility actor 2 SQLSTATE=42501"
+# Failed test 12: "visibility actor 3 SQLSTATE=42501"
+# Failed test 13: "visibility actor 4 SQLSTATE=42501"
+# Looks like you failed 9 tests of 14
+Failed 9/14 subtests
+
+Test Summary Report
+-------------------
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql (Wstat: 0 Tests: 14 Failed: 9)
+  Failed tests:  1-5, 10-13
+Files=1, Tests=14,  0 wallclock secs ( 0.01 usr  0.00 sys +  0.01 cusr  0.00 csys =  0.02 CPU)
+Result: FAIL
+Target: local stack (127.0.0.1:54422)
+psql:/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql:2: NOTICE:  extension "pgtap" already exists, skipping
+error running container: exit 1
+
+EXIT=1

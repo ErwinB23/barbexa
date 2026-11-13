@@ -1,0 +1,1703 @@
+{
+  "defined": 342,
+  "passed": 342,
+  "cases": [
+    {
+      "id": "admin-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/role",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/status",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/delete",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/insert",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "admin-A/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/role",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/status",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/delete",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/insert",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "admin-A/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/role",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/status",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/delete",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/insert",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "admin-B/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/role",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/status",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/delete",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/insert",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "admin-B/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/role",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/status",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/delete",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/insert",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "barber-A/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/role",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/status",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/delete",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/insert",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "barber-A/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/role",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/status",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/delete",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/insert",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "barber-B/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/role",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/status",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/delete",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/insert",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "barber-B/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "client/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "client/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "client/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "client/A/role",
+      "passed": true
+    },
+    {
+      "id": "client/A/status",
+      "passed": true
+    },
+    {
+      "id": "client/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "client/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "client/A/delete",
+      "passed": true
+    },
+    {
+      "id": "client/A/insert",
+      "passed": true
+    },
+    {
+      "id": "client/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "client/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "client/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "client/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "client/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "client/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "client/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "client/B/role",
+      "passed": true
+    },
+    {
+      "id": "client/B/status",
+      "passed": true
+    },
+    {
+      "id": "client/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "client/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "client/B/delete",
+      "passed": true
+    },
+    {
+      "id": "client/B/insert",
+      "passed": true
+    },
+    {
+      "id": "client/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "client/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "client/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "client/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/role",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/status",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/delete",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/insert",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/role",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/status",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/delete",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/insert",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "shared-admin-A-barber-B/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/role",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/status",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/delete",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/insert",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/role",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/status",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/delete",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/insert",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "inactive-A/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/role",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/status",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/delete",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/insert",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "anonymous/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/role",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/status",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/delete",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/insert",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "anonymous/B/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/member-table",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/profile-other",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/profile-join",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/role",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/status",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/user_id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/delete",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/insert",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/profile-id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/shop-id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/A/forged-profile-body",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/member-table",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/profile-other",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/profile-join",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/role",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/status",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/user_id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/barbershop_id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/delete",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/insert",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/profile-id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/shop-id",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/profile-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/shop-RPC",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/forged-shop-body",
+      "passed": true
+    },
+    {
+      "id": "invalid-JWT/B/forged-profile-body",
+      "passed": true
+    }
+  ],
+  "clientDefined": 81,
+  "clientPassed": 81,
+  "clientCases": [
+    {
+      "id": "client/admin-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/client/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/client/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/client/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/client/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/client/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/client/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/client/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/client/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/A/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/A/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/A/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/A/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/B/shop-read",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/B/shop-rename",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/B/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/B/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/admin-A/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/admin-B/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/barber-A/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/barber-B/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/client/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/client/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/client/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/shared-admin-A-barber-B/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/profile-read",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/profile-edit",
+      "passed": true
+    },
+    {
+      "id": "client/inactive-A/shop-create",
+      "passed": true
+    },
+    {
+      "id": "client/anonymous/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/anonymous/member-RPC",
+      "passed": true
+    },
+    {
+      "id": "client/invalid-JWT/member-own",
+      "passed": true
+    },
+    {
+      "id": "client/invalid-JWT/member-RPC",
+      "passed": true
+    }
+  ],
+  "revocationPassed": true
+}

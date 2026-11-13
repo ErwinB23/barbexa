@@ -1,0 +1,34 @@
+begin;
+create extension if not exists pgtap with schema extensions;
+set local search_path=public,extensions,pg_catalog;select no_plan();
+select has_function('public','create_own_barbershop',array['uuid','text']);
+select ok(coalesce(has_function_privilege('service_role',to_regprocedure('public.create_own_barbershop(uuid,text)'),'EXECUTE'),false),'service RPC required');
+select ok(coalesce(not has_function_privilege('authenticated',to_regprocedure('public.create_own_barbershop(uuid,text)'),'EXECUTE'),false),'ordinary RPC denied');
+set local role anon;
+select throws_ok($$select public.create_own_barbershop('10000000-0000-4000-8000-000000000001','Fixture')$$,'42501',null,'anon RPC denied');
+reset role;
+insert into auth.users(id) values ('10000000-0000-4000-8000-000000000001');
+insert into public.profiles(id,display_name) values ('10000000-0000-4000-8000-000000000001','Fixture');
+set local role service_role;
+select lives_ok($$select public.create_own_barbershop('10000000-0000-4000-8000-000000000001','Atomic fixture')$$,'valid creation required');
+reset role;
+select is((select count(*)::int from public.barbershops),1,'one shop created');
+select is((select count(*)::int from public.barbershop_memberships where user_id='10000000-0000-4000-8000-000000000001' and role='administrator' and status='active'),1,'first admin is actor');
+-- C3: failure injection belongs exclusively to this rolled-back test transaction.
+create function pg_temp.reject_initial_membership() returns trigger language plpgsql as $test$ begin raise exception 'TEST_MEMBERSHIP_FAILURE';end;$test$;
+create trigger test_membership_failure before insert on public.barbershop_memberships for each row execute function pg_temp.reject_initial_membership();
+set local role service_role;
+select throws_ok($$select public.create_own_barbershop('10000000-0000-4000-8000-000000000001','Rollback fixture')$$,'P0001','TEST_MEMBERSHIP_FAILURE','C3 induced failure');
+reset role;
+select is((select count(*)::int from public.barbershops),1,'C3 no partial shop');
+select is((select count(*)::int from public.barbershop_memberships),1,'C3 no partial membership');
+
+select ok(p.prosecdef=(n.nspname='private') and p.proconfig @> array['search_path=""'] and p.proowner=(select relowner from pg_class where oid='public.barbershops'::regclass),'safe provisioning function: '||n.nspname) from pg_proc p join pg_namespace n on n.oid=p.pronamespace where p.proname='create_own_barbershop' and n.nspname in ('private','public');
+select ok(not has_function_privilege('authenticated','private.create_own_barbershop(uuid,text)','EXECUTE'),'private RPC unavailable to users');
+select ok(not exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace cross join lateral aclexplode(coalesce(p.proacl,acldefault('f',p.proowner))) a where p.proname='create_own_barbershop' and n.nspname in ('public','private') and a.grantee=0),'no PUBLIC execute on provisioning');
+insert into auth.users(id) values ('10000000-0000-4000-8000-000000000002');
+set local role service_role;
+select throws_ok($$select public.create_own_barbershop(null,'Name')$$,'42501','UNAUTHENTICATED','null actor rejected');
+select throws_ok($$select public.create_own_barbershop('10000000-0000-4000-8000-000000000002','Name')$$,'P0001','PROFILE_REQUIRED','profile prerequisite');
+reset role;
+select * from finish();rollback;

@@ -1,0 +1,69 @@
+COMMAND: supabase test db supabase/tests/tenants.test.sql --workdir <workspace>
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql ..
+# Failed test 24: "M-table-list-0-0"
+#         have: 1
+#         want: 4
+# Failed test 25: "M-RPC-0-0 SQLSTATE=42883"
+# Failed test 30: "M-RPC-denied-0-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 43: "M-RPC-denied-1-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 47: "M-table-list-1-1"
+#         have: 1
+#         want: 3
+# Failed test 48: "M-RPC-1-1 SQLSTATE=42883"
+# Failed test 61: "M-RPC-denied-2-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 66: "M-RPC-denied-2-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 79: "M-RPC-denied-3-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 84: "M-RPC-denied-3-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 97: "M-RPC-denied-4-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 102: "M-RPC-denied-4-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 114: "M-table-list-5-0"
+#         have: 1
+#         want: 4
+# Failed test 115: "M-RPC-5-0 SQLSTATE=42883"
+# Failed test 120: "M-RPC-denied-5-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 133: "M-RPC-denied-6-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 138: "M-RPC-denied-6-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 148: "M-RPC-denied-7-0"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 150: "M-RPC-denied-7-1"
+#       caught: 42883: function public.list_barbershop_memberships(unknown) does not exist
+#       wanted: 42501
+# Failed test 157: "RPC minimal columns invoker"
+# Looks like you failed 20 tests of 158
+Failed 20/158 subtests
+
+Test Summary Report
+-------------------
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql (Wstat: 0 Tests: 158 Failed: 20)
+  Failed tests:  24-25, 30, 43, 47-48, 61, 66, 79, 84, 97
+                102, 114-115, 120, 133, 138, 148, 150, 157
+Files=1, Tests=158,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.01 cusr  0.00 csys =  0.05 CPU)
+Result: FAIL
+Target: local stack (127.0.0.1:54422)
+psql:/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/tenants.test.sql:2: NOTICE:  extension "pgtap" already exists, skipping
+error running container: exit 1
+
+EXIT=1

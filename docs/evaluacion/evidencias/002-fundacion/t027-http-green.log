@@ -1,0 +1,13 @@
+ok 1 - own first admin and tenant creation grants no other shop access
+ok 2 - shared admin A barber B has contextual read and denied rename
+ok 3 - body actor role extra IDs and direct user RPC denied
+ok 4 - C3 real HTTP failure rolls back shop and membership
+ok 5 - C2 two psql sessions blocked at barrier then one UNIQUE rejection
+ok 6 - C4 two simultaneous independent creations each own one admin
+ok 1 - US3 real provisioning permissions rollback and races
+# tests 7
+# pass 7
+# fail 0
+# skipped 0
+
+EXIT=0

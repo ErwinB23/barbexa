@@ -1,0 +1,9 @@
+running 2 tests from ./tests/server/tenant-foundation/barbershops.test.ts
+server own create forwards verified context and normalized name ... ok (752µs)
+server invalid actor impersonation profile required and provider timeout ... ok (1ms)
+
+ok | 2 passed | 0 failed (6ms)
+
+Check tests/server/tenant-foundation/barbershops.test.ts
+
+EXIT=0

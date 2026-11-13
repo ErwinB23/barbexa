@@ -1,8 +1,12 @@
+import { createOwnBarbershop } from './application/create-own-barbershop.ts';
+import { createBarbershopHandler } from './presentation/create-barbershop-handler.ts';
 import { ensureOwnProfile } from './application/ensure-own-profile.ts';
 import { createAuthVerificationAdapter } from './infrastructure/auth-verification-adapter.ts';
 import { createPostgresFoundationAdapter } from './infrastructure/postgres-foundation-adapter.ts';
 import { createEnsureProfileHandler } from './presentation/ensure-profile-handler.ts';
-export function createEnsureProfileService() {
+export function createEnsureProfileService(
+  operation: 'profile' | 'barbershop' = 'profile',
+) {
   const required = (name: string) => {
     const value = Deno.env.get(name);
     if (!value) throw Error('SERVER_CONFIGURATION_MISSING');
@@ -23,6 +27,14 @@ export function createEnsureProfileService() {
     .split(',')
     .map((s) => s.trim())
     .filter(Boolean);
+  if (operation === 'barbershop')
+    return createBarbershopHandler({
+      verifyActor,
+      createOwnBarbershop: (actor, input) =>
+        createOwnBarbershop(gateway, actor, input),
+      allowedOrigins,
+      log: (event) => console.info(JSON.stringify(event)),
+    });
   return createEnsureProfileHandler({
     verifyActor,
     ensureOwnProfile: (actor, input) => ensureOwnProfile(gateway, actor, input),
