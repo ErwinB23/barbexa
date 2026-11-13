@@ -1,0 +1,14 @@
+{
+  "version": "2.119.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@supabase/auth-js": "2.119.0",
+    "@supabase/storage-js": "2.119.0",
+    "@supabase/realtime-js": "2.119.0",
+    "@supabase/functions-js": "2.119.0",
+    "@supabase/postgrest-js": "2.119.0"
+  },
+  "dist.integrity": "sha512-MKP49G6bJbPhvsZDegZ/IXS/ITApPgplDCF5+F65KZ5kIArS5Y90WFxwvWYALx2bsxdrSuHvkCiXHYr3dU8+sw=="
+}

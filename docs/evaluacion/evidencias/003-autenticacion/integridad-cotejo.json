@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-13T21:49:41.494Z",
+  "files": 1158,
+  "unchanged": 1156,
+  "changed": [
+    "ESTADO-DESARROLLO.md",
+    "specs/003-autenticacion-navegacion/tasks.md"
+  ],
+  "unexpected": [],
+  "branch": "main",
+  "sameHead": true,
+  "note": "Compared before authorized checkpoint commit; baseline captures pre-existing approved edits, not pristine HEAD."
+}

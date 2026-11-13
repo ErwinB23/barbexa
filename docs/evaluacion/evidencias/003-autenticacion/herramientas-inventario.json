@@ -1,0 +1,28 @@
+{
+  "node": "C:\\Program Files\\nodejs\\node.exe",
+  "npm.cmd": "C:\\Program Files\\nodejs\\npm.cmd",
+  "java": "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath\\java.exe",
+  "javac": null,
+  "adb": null,
+  "emulator": null,
+  "sdkmanager": null,
+  "eas": null,
+  "deno": "C:\\Users\\PREDATOR\\Desktop\\Herramientas\\AppBarberia\\deno-2.9.8\\deno.exe",
+  "apps": [
+    {
+      "path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "version": "157.0.8103.52"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "version": "157.0.4341.46"
+    },
+    {
+      "path": "C:\\Windows\\System32\\Narrator.exe",
+      "version": "10.0.26100.8972"
+    }
+  ],
+  "androidSdkDefaultExists": false,
+  "androidSdkPathEnvConfigured": false,
+  "sdkDirs": null
+}

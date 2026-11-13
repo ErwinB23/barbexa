@@ -21,11 +21,15 @@ Supabase, HTTP, SQL ni tipos generados de persistencia. Los adaptadores DEBEN tr
 formatos y errores externos. PostgreSQL conserva las garantías definitivas que dependen
 del estado vigente y la concurrencia; su SQL DEBE verificarse por integración.
 
-### IV. Cliente móvil con prioridad Android
+### IV. Cliente Web y Android con aceptación conjunta
 
 El cliente DEBE usar Expo, React Native, Expo Router y TypeScript con comprobación estricta.
-Las rutas DEBEN limitarse a navegación y composición de presentación. Android DEBE ser la
-primera plataforma verificada; web e iOS solo se declararán soportados tras probar sus flujos.
+Las rutas DEBEN limitarse a navegación y composición de presentación. Desde la funcionalidad
+003, Web y Android DEBEN desarrollarse simultáneamente, con ligera prioridad de ejecución Web.
+Ambas DEBEN superar sus flujos funcionales reales para aceptar cada funcionalidad y su cierre;
+un fallo Android NO puede darse por aceptado por funcionar en Web, ni a la inversa.
+La lógica de autenticación y autorización DEBE compartirse cuando corresponda; navegación
+y presentación pueden adaptarse. iOS solo se declarará soportado tras probar sus flujos.
 
 ### V. Backend administrado
 
@@ -70,7 +74,8 @@ resolverse y documentarse antes de implementar la parte afectada.
 Los cambios DEBEN incluir pruebas unitarias de reglas y casos de uso e integración de
 adaptadores y persistencia según lo afectado. Reservas y permisos DEBEN cubrir aislamiento,
 concurrencia, atomicidad e intentos no autorizados. Los flujos críticos entregados DEBEN
-tener verificación E2E, priorizando Android. Las pruebas de escalabilidad y carga con k6
+tener verificación E2E en Web y Android desde 003, con ligera prioridad de ejecución Web
+y aceptación obligatoria de ambas. Las pruebas de escalabilidad y carga con k6
 DEBEN definir entorno, volumen y umbrales antes de ejecutarse. La caché DEBE implementarse
 para cumplir la rúbrica, seleccionando datos adecuados y verificando invalidación, vigencia,
 aislamiento entre barberías y rendimiento. La disponibilidad almacenada en caché nunca
@@ -140,4 +145,14 @@ nuevos o ampliaciones sustanciales; PATCH para aclaraciones sin cambio de obliga
 Cada cierre de tarea DEBE revisar cumplimiento y comunicar excepciones pendientes;
 no se aprobarán silenciosamente desviaciones arquitectónicas o de seguridad.
 
-**Version**: 1.0.1 | **Ratified**: 2026-11-10 | **Last Amended**: 2026-11-10
+### Enmienda autorizada — 2026-11-13
+
+1.0.1 → 2.0.0: el responsable aprobó sustituir Android primero por desarrollo simultáneo
+Web/Android con ligera prioridad Web y cierre condicionado a ambas plataformas. Afecta solo
+IV y IX; es MAJOR por redefinir la obligación de orden y aceptación. Conserva los doce
+principios, arquitectura, seguridad y alcance de producto. Aplica desde 003, sin invalidar
+evidencia histórica de 001/002. No requiere migración de datos ni código; los planes futuros
+DEBEN incluir ambas plataformas. Reglas locales anteriores de prioridad Android se interpretan
+conforme a esta enmienda hasta su sincronización documental; no autorizan omitir Android.
+
+**Version**: 2.0.0 | **Ratified**: 2026-11-10 | **Last Amended**: 2026-11-13

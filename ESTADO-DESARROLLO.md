@@ -1,5 +1,21 @@
 # Estado vigente — App Barbería
 
+## Preparación vigente de 003 — 13/11/2026
+
+Especificación [003](specs/003-autenticacion-navegacion/spec.md) aprobada para planificación;
+[plan técnico](specs/003-autenticacion-navegacion/plan.md) y 36 tareas aprobados. Preparación:
+T001/T002 verificadas (2/36), T003/T004 pendientes de vía Android y decisiones operativas;
+[evidencia](docs/evaluacion/evidencias/003-autenticacion/informe.md). Sin código funcional.
+Constitución 2.0.0: Web/Android simultáneos, ligera prioridad Web y
+aceptación funcional obligatoria de ambas desde 003; no modifica resultados históricos.
+Registro/login/logout local, sesión/perfil/contexto y recuperación; Google posterior,
+obligatorio en producto. Reutilizar 002, sin nuevas migraciones/Edge. Pendientes operativos:
+origen/redirects/correo/CORS, build Android para enlaces, análisis antes de instalar SDK y
+SecureStore, riesgo XSS de persistencia SPA. No configuración Cloud ni paquetes cambiados.
+Nueve avisos npm sin remediación; log activo intacto. Sin commit/push en esta preparación.
+
+## Cierre previo de 001/002 (histórico conservado)
+
 13/11/2026, America/Lima. Fundación 001 cerrada; fundación 002 cerrada técnicamente conforme a sus 40 tareas y límites de evidencia. No es el SaaS terminado ni el inicio de 003. Rama main; checkpoint anterior 42a695c. El hash de cierre se consulta en Git, no se predice en este archivo.
 
 [Constitución](.specify/memory/constitution.md), [rúbrica](docs/evaluacion/RUBRICA.md), [spec 002](specs/002-fundacion-supabase-multitenant/spec.md), [tareas](specs/002-fundacion-supabase-multitenant/tasks.md), [informe y trazabilidad](docs/evaluacion/evidencias/002-fundacion/informe.md), [guía](specs/002-fundacion-supabase-multitenant/quickstart.md), [cierre/integridad](docs/evaluacion/evidencias/002-fundacion/cierre.md).

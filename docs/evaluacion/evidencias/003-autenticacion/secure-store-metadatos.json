@@ -1,0 +1,7 @@
+{
+  "version": "58.0.3",
+  "peerDependencies": {
+    "expo": "*"
+  },
+  "dist.integrity": "sha512-RpubZfqJREEcwKbx3HFoWbtDd31t+yESMj7Ei5/mGQp5vViwUBzL4nUCZRLFyt+O690mT8We7dDtIUZeIk6LbQ=="
+}

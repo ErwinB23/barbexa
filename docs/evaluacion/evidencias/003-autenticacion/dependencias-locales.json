@@ -1,0 +1,41 @@
+{
+  "lockfileVersion": 3,
+  "rootMatches": true,
+  "versions": {
+    "expo": {
+      "locked": "58.0.24",
+      "installed": "58.0.24"
+    },
+    "expo-router": {
+      "locked": "58.0.31",
+      "installed": "58.0.31"
+    },
+    "expo-linking": {
+      "locked": "58.0.17",
+      "installed": "58.0.17"
+    },
+    "react": {
+      "locked": "19.3.0",
+      "installed": "19.3.0"
+    },
+    "react-native": {
+      "locked": "0.88.1",
+      "installed": "0.88.1"
+    },
+    "react-native-web": {
+      "locked": "0.21.4",
+      "installed": "0.21.4"
+    },
+    "typescript": {
+      "locked": "6.0.3",
+      "installed": "6.0.3"
+    },
+    "supabase": {
+      "locked": "3.1.0",
+      "installed": "3.1.0"
+    }
+  },
+  "authInstalled": false,
+  "secureStoreInstalled": false,
+  "sdkSecureStore": "~58.0.3"
+}
