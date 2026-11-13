@@ -1,0 +1,6 @@
+metadata isolation: OK
+PGRST_DB_SCHEMAS=public
+PostgreSQL 17.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit
+public_tables=0
+auth_users=0
+EXIT=0

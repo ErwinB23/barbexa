@@ -1,16 +1,18 @@
 # Quickstart de validación — 002
 
-**Guía prevista para implementación. No ejecutar en la fase plan.** Los scripts, configuración
-y migraciones nombrados aún no existen. Este documento no acredita backend preparado.
+**Estado tras T011:** configuración local, migración mínima cerrada y schema.test.sql existen
+y se comprobaron en el stack nuevo. Las operaciones de aplicación, entradas Edge y validaciones
+posteriores descritas aquí siguen previstas; no ejecutarlas antes de sus tareas autorizadas.
+Resultados y límites: [local.md](../../docs/evaluacion/evidencias/002-fundacion/local.md).
 Usar [modelo](data-model.md), [contratos](contracts/backend-foundation.md) y
 [matriz de aceptación](validation.md) como referencia, sin duplicar SQL aquí.
 
 ## Requisitos previos y destino
 
 - Git y Node 24.21.0/npm 11.19.0 existentes; conservar package-lock y usar herramientas de 001.
-- Supabase CLI 3.1.0, binario oficial Windows verificado con checksum, y Deno 2.9.8 para
-  check/test. Instalar herramientas solo en la fase autorizada, no mediante un paquete nuevo
-  en Expo. Verificar ayuda antes de ejecutar comandos.
+- Supabase CLI 3.1.0 fijada como devDependency, con integridad npm y ejecutable cotejados en
+  T003; usar `npx.cmd --no-install supabase` desde esta raíz. Deno 2.9.8 instalado externamente
+  para check/test. No reinstalar herramientas ya verificadas. Verificar ayuda antes de ejecutar.
 - Docker Desktop compatible con Windows/WSL2 y contenedores Linux, virtualización activa y
   puertos locales libres. Comprobar el motor real con `docker info`, no solo existencia del exe.
 - PostgreSQL major 17 local y en el proyecto administrado nuevo; registrar parche/digests.
@@ -56,17 +58,34 @@ comandos externos y detenerse ante cualquier fallo.
    completas a consola o logs: pueden contener secretos. El guard del runner acepta solo
    loopback para pruebas destructivas y rechaza URLs del backend anterior.
 
-Comandos locales previstos después de que existan migraciones revisadas:
+### Arranque del entorno ya preparado, sin depender del anterior
+
+Desde la raíz App-Barberia, confirmar `project_id = "app-barberia-002-local"` en
+supabase/config.toml y revisar Docker antes de arrancar. La red y los volúmenes propios llevan
+ese sufijo, distinto de barberia-app. API 54421, DB 54422, Studio 54423, correo local 54424;
+shadow 54420 reservado, pooler/analytics desactivados (54429/54427), inspector Edge 8183
+configurado sin sesión debug validada. Comprobar disponibilidad de puertos si están detenidos;
+si ya están ocupados, verificar que pertenecen a este stack, sin detener servicios ajenos.
+
+Comandos comprobados en T008–T011 (cada fallo debe detener la secuencia):
 
 ```powershell
-supabase start
+$featureRoot = (Get-Location).Path
+if ((Get-Content -Raw supabase/config.toml) -notmatch 'project_id = "app-barberia-002-local"') {
+  throw 'Destino local inesperado'
+}
+if (Get-ChildItem Env:SUPABASE_* -ErrorAction SilentlyContinue) {
+  throw 'Revisar variables SUPABASE_* heredadas antes de seleccionar destino'
+}
+npx.cmd --no-install supabase start --workdir "$featureRoot"
 if ($LASTEXITCODE -ne 0) { throw 'Fallo al iniciar el stack local' }
-supabase db reset --no-seed
-if ($LASTEXITCODE -ne 0) { throw 'Fallo al aplicar migraciones locales' }
-supabase migration list
-supabase db lint --fail-on warning
-supabase db advisors
-supabase test db
+npx.cmd --no-install supabase migration list --workdir "$featureRoot"
+if ($LASTEXITCODE -ne 0) { throw 'Fallo al listar migraciones locales' }
+npx.cmd --no-install supabase db lint --fail-on warning --workdir "$featureRoot"
+if ($LASTEXITCODE -ne 0) { throw 'Fallo en lint SQL' }
+npx.cmd --no-install supabase db advisors --workdir "$featureRoot"
+if ($LASTEXITCODE -ne 0) { throw 'Fallo en advisors' }
+npx.cmd --no-install supabase test db supabase/tests/schema.test.sql --workdir "$featureRoot"
 if ($LASTEXITCODE -ne 0) { throw 'Fallaron las pruebas PostgreSQL' }
 ```
 
@@ -75,6 +94,18 @@ extracto. CLI v3 selecciona local por defecto; no agregar `--remote` a estas pru
 flags heredados `--local`/`--linked`. `db reset` elimina datos del stack local: solo usar el
 entorno descartable identificado, nunca una base compartida. Ningún reset remoto forma
 parte de este procedimiento. Revisar hallazgos de advisors; exit 0 no equivale a audit passed.
+
+T011 ejecutó `npx.cmd --no-install supabase db reset --no-seed --workdir "$featureRoot"`
+solo tras comprobar identidad del contenedor/volumen nuevos y ausencia de datos. No es un paso
+de arranque habitual ni debe repetirse sobre datos que se quieran conservar. Para detener el
+entorno propio cuando sea necesario: `npx.cmd --no-install supabase stop --workdir "$featureRoot"`
+(no ejecutado en este bloque, sin --all ni --no-backup). Nunca apuntar al directorio antiguo.
+
+Las entradas ensure-profile/create-barbershop tienen enabled=false hasta T017/T025 y
+verify_jwt=true. Un primer start con entradas habilitadas sin handlers falló y se corrigió
+esa configuración; no crear handlers ficticios ni usar --no-verify-jwt. Realtime, Storage y
+analytics están desactivados para este incremento. Start puede mostrar claves locales: no
+copiar su salida sin redactar en Git, Expo, evidencias ni transcripciones.
 
 ## Sesiones, Edge e integración
 

@@ -19,20 +19,29 @@
     "react-native-web": "0.21.4"
   },
   "devDependencies": {
-    "typescript": "6.0.3",
-    "@types/react": "~19.3.0",
     "@types/node": "^24.0.0",
+    "@types/react": "~19.3.0",
     "eslint": "^9.18.0",
     "eslint-config-expo": "~58.0.4",
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "supabase": "3.1.0",
+    "typescript": "6.0.3"
   },
   "scripts": {
     "typecheck": "tsc --noEmit && tsc -p tsconfig.core.json --noEmit",
-    "lint": "eslint src scripts tests/architecture tests/presentation --max-warnings 0",
-    "format:check": "prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json",
+    "lint": "eslint src scripts tests/architecture tests/presentation tests/integration --max-warnings 0",
+    "format:check": "prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json tsconfig.server.json tsconfig.server-core.json supabase/functions tests/architecture/check-server-architecture.test.mjs tests/architecture/server-fixtures tests/integration/tenant-foundation",
     "architecture:check": "node scripts/check-architecture.mjs",
-    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && node --test tests/presentation/use-app-information.test.mjs tests/presentation/shared-ui.test.mjs",
-    "check": "npm run typecheck && npm run lint && npm run format:check && npm run architecture:check && npm test",
-    "start": "expo start --go --lan"
+    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && node --test tests/presentation/use-app-information.test.mjs tests/presentation/shared-ui.test.mjs && npm run test:architecture:server && npm run test:backend:environment",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run architecture:check && npm test && npm run check:server && npm run test:server",
+    "start": "expo start --go --lan",
+    "typecheck:server-core": "tsc -p tsconfig.server-core.json --noEmit",
+    "architecture:server": "node scripts/check-server-architecture.mjs",
+    "test:architecture:server": "node --test tests/architecture/check-server-architecture.test.mjs",
+    "check:server": "npm run typecheck:server-core && npm run architecture:server && deno task --config supabase/functions/deno.json check && npm run lint:server",
+    "test:server": "deno task --config supabase/functions/deno.json test",
+    "coverage:server": "deno task --config supabase/functions/deno.json coverage",
+    "lint:server": "eslint supabase/functions tests/server --max-warnings 0",
+    "test:backend:environment": "node --test tests/integration/tenant-foundation/environment.test.mjs"
   }
 }

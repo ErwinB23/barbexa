@@ -1,0 +1,357 @@
+alias-valido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+
+global-local-permitido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+
+externo-react-native: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/value.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/domain/value.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+externo-@supabase-supabase-js: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/value.ts -> @supabase/supabase-js: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/domain/value.ts -> @supabase/supabase-js: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> @supabase/supabase-js: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> @supabase/supabase-js: Dependencia externa alcanzable desde el núcleo
+
+externo-node-fs: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/value.ts -> node:fs: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/domain/value.ts -> node:fs: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+
+tipo-externo: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/application/use.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/application/use.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+reexport-externo: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/value.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/domain/value.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+alias-infra: exit=1
+Arquitectura: modules=3 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] supabase/functions/_shared/sample/application/use.ts -> @/_shared/sample/infrastructure/adapter: application no puede depender de infrastructure (supabase/functions/_shared/sample/infrastructure/adapter.ts)
+
+dominio-a-aplicacion: exit=1
+Arquitectura: modules=2 core=2 edges=2
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[LAYER] supabase/functions/_shared/sample/domain/value.ts -> ../application/use: domain no puede depender de application (supabase/functions/_shared/sample/application/use.ts)
+[CYCLE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/application/use.ts: Ciclo de dependencias
+
+presentacion-a-infra: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+  supabase/functions/_shared/sample/presentation/view.ts [presentation]
+[LAYER] supabase/functions/_shared/sample/presentation/view.ts -> ../infrastructure/adapter: presentation no puede depender de infrastructure (supabase/functions/_shared/sample/infrastructure/adapter.ts)
+
+infra-a-presentacion: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+  supabase/functions/_shared/sample/presentation/view.ts [presentation]
+[LAYER] supabase/functions/_shared/sample/infrastructure/adapter.ts -> ../presentation/view: infrastructure no puede depender de presentation (supabase/functions/_shared/sample/presentation/view.ts)
+
+ruta-a-infra: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  supabase/functions/sample/index.ts [entry]
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] supabase/functions/sample/index.ts -> ../_shared/sample/infrastructure/adapter: entry no puede depender de infrastructure (supabase/functions/_shared/sample/infrastructure/adapter.ts)
+
+otro-modulo: exit=1
+Arquitectura: modules=3 core=3 edges=1
+  supabase/functions/_shared/other/domain/value.ts [domain]
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[LAYER] supabase/functions/_shared/sample/application/use.ts -> ../../other/domain/value: application no puede depender de domain (supabase/functions/_shared/other/domain/value.ts)
+
+transitivo-reexport: exit=1
+Arquitectura: modules=3 core=3 edges=2
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/bridge.ts [domain]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/bridge.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/domain/bridge.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/bridge.ts -> supabase/functions/_shared/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/bridge.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+sin-resolver: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[UNRESOLVED] supabase/functions/_shared/sample/application/use.ts -> ./absent: TypeScript no puede resolver la referencia
+
+import-type-query: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/application/use.ts -> react-native: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/application/use.ts -> react-native: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> react-native: Dependencia externa alcanzable desde el núcleo
+
+require-externo: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/application/use.ts -> node:fs: El núcleo no puede depender de paquetes externos ni Node
+[UNRESOLVED] supabase/functions/_shared/sample/application/use.ts -> node:fs: TypeScript no puede resolver la referencia
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> node:fs: Dependencia externa alcanzable desde el núcleo
+
+dinamico-local-valido: exit=0
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+
+dinamico-no-literal-0: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[UNVERIFIABLE] supabase/functions/_shared/sample/application/use.ts -> target: Import/require no literal: dependencia no verificable
+
+dinamico-no-literal-1: exit=1
+Arquitectura: modules=2 core=2 edges=0
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[UNVERIFIABLE] supabase/functions/_shared/sample/application/use.ts -> target: Import/require no literal: dependencia no verificable
+
+ciclo: exit=1
+Arquitectura: modules=3 core=3 edges=3
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/second.ts [domain]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CYCLE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/second.ts -> supabase/functions/_shared/sample/domain/value.ts: Ciclo de dependencias
+
+global-fetch: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> fetch: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-XMLHttpRequest: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> XMLHttpRequest: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-WebSocket: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> WebSocket: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-process: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> process: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-eval: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> eval: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-globalThis: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> globalThis: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+barrel-mixto: exit=1
+Arquitectura: modules=4 core=2 edges=2
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/index.ts [unknown]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] supabase/functions/_shared/sample/application/use.ts -> ../index: application no puede depender de unknown (supabase/functions/_shared/sample/index.ts)
+[LAYER] supabase/functions/_shared/sample/index.ts -> ubicación: Responsabilidad no identificada; evitar barrels que mezclan capas
+[LAYER] supabase/functions/_shared/sample/index.ts -> ./infrastructure/adapter: unknown no puede depender de infrastructure (supabase/functions/_shared/sample/infrastructure/adapter.ts)
+
+excluido-tsconfig: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[INCOMPLETE] supabase/functions/_shared/sample/domain/value.ts -> tsconfig: Módulo fuente excluido de la configuración
+
+sintaxis-invalida: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[PARSE] supabase/functions/_shared/sample/domain/value.ts -> AST: Variable declaration expected.
+
+nucleo-vacio: exit=1
+Arquitectura: modules=0 core=0 edges=0
+[EMPTY_CORE] supabase/functions -> núcleo: No hay módulos reales de dominio/aplicación para auditar
+
+src-vacio: exit=1
+Arquitectura: modules=0 core=0 edges=0
+[EMPTY_CORE] supabase/functions -> núcleo: No hay módulos reales de dominio/aplicación para auditar
+
+sdk-en-adaptador: exit=0
+Arquitectura: modules=4 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+  supabase/functions/_shared/sample/presentation/view.ts [presentation]
+
+require-alias: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[UNVERIFIABLE] supabase/functions/_shared/sample/domain/value.ts -> require: Alias o acceso indirecto a require no verificable
+
+referencia-tipos-node: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_EXTERNAL] supabase/functions/_shared/sample/domain/value.ts -> node: Referencia de tipos externa prohibida en núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/application/use.ts -> supabase/functions/_shared/sample/domain/value.ts -> node: Dependencia externa alcanzable desde el núcleo
+[CORE_TRANSITIVE] supabase/functions/_shared/sample/domain/value.ts -> supabase/functions/_shared/sample/domain/value.ts -> node: Dependencia externa alcanzable desde el núcleo
+
+referencia-lib-dom: exit=1
+Arquitectura: modules=2 core=2 edges=1
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_LIB] supabase/functions/_shared/sample/domain/value.ts -> dom: Biblioteca de plataforma prohibida en núcleo
+
+ruta-sdk: exit=1
+Arquitectura: modules=3 core=2 edges=1
+  supabase/functions/sample/index.ts [entry]
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[ENTRY_EXTERNAL] supabase/functions/sample/index.ts -> sdk: Las rutas solo usan navegación y composición de presentación
+
+ensamblaje-servidor-valido: exit=0
+Arquitectura: modules=6 core=2 edges=6
+  supabase/functions/sample/index.ts [entry]
+  supabase/functions/_shared/sample/application/use.ts [application]
+  supabase/functions/_shared/sample/composition.ts [composition]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+  supabase/functions/_shared/sample/presentation/handler.ts [presentation]
+
+global-servidor-Deno: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> Deno: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-servidor-Request: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> Request: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-servidor-Response: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> Response: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-servidor-Headers: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> Headers: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+global-servidor-URL: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[CORE_GLOBAL] supabase/functions/_shared/sample/domain/value.ts -> URL: Global de plataforma o ejecución dinámica prohibido en núcleo
+
+cruce-cliente: exit=1
+Arquitectura: modules=1 core=1 edges=0
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+[INCOMPLETE] supabase/functions/_shared/sample/domain/value.ts -> ../../../../../src/client.ts: Dependencia local fuera del conjunto auditado: src/client.ts
+
+entrada-directa-infra: exit=1
+Arquitectura: modules=3 core=1 edges=1
+  supabase/functions/sample/index.ts [entry]
+  supabase/functions/_shared/sample/domain/value.ts [domain]
+  supabase/functions/_shared/sample/infrastructure/adapter.ts [infrastructure]
+[LAYER] supabase/functions/sample/index.ts -> ../_shared/sample/infrastructure/adapter.ts: entry no puede depender de infrastructure (supabase/functions/_shared/sample/infrastructure/adapter.ts)
+
+✔ alias-valido (1438.7219ms)
+✔ global-local-permitido (1300.2261ms)
+✔ externo-react-native (1278.5728ms)
+✔ externo-@supabase-supabase-js (1330.4224ms)
+✔ externo-node-fs (1275.5281ms)
+✔ tipo-externo (1251.9024ms)
+✔ reexport-externo (1276.3444ms)
+✔ alias-infra (1328.6778ms)
+✔ dominio-a-aplicacion (1269.5298ms)
+✔ presentacion-a-infra (1308.4563ms)
+✔ infra-a-presentacion (1301.1164ms)
+✔ ruta-a-infra (1340.787ms)
+✔ otro-modulo (1407.483ms)
+✔ transitivo-reexport (1363.7372ms)
+✔ sin-resolver (1258.9795ms)
+✔ import-type-query (1314.9838ms)
+✔ require-externo (1285.6993ms)
+✔ dinamico-local-valido (1287.4954ms)
+✔ dinamico-no-literal-0 (1281.5262ms)
+✔ dinamico-no-literal-1 (1293.8874ms)
+✔ ciclo (1269.6253ms)
+✔ global-fetch (1288.8391ms)
+✔ global-XMLHttpRequest (1266.8804ms)
+✔ global-WebSocket (1288.879ms)
+✔ global-process (1266.6729ms)
+✔ global-eval (1293.6779ms)
+✔ global-globalThis (1265.7284ms)
+✔ barrel-mixto (1274.4895ms)
+✔ excluido-tsconfig (1256.1934ms)
+✔ sintaxis-invalida (1265.9445ms)
+✔ nucleo-vacio (596.6965ms)
+✔ src-vacio (556.0037ms)
+✔ sdk-en-adaptador (1304.5164ms)
+✔ require-alias (1304.3708ms)
+✔ referencia-tipos-node (1274.1555ms)
+✔ referencia-lib-dom (1350.9806ms)
+✔ ruta-sdk (1270.0354ms)
+✔ ensamblaje-servidor-valido (1282.9197ms)
+✔ global-servidor-Deno (1284.238ms)
+✔ global-servidor-Request (1281.4762ms)
+✔ global-servidor-Response (1254.498ms)
+✔ global-servidor-Headers (1264.3067ms)
+✔ global-servidor-URL (1269.6054ms)
+✔ cruce-cliente (1265.1578ms)
+✔ entrada-directa-infra (1266.2521ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56961.8546
+
+EXIT=0

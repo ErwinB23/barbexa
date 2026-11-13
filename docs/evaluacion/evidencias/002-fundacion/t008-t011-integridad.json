@@ -1,0 +1,33 @@
+{
+  "before": 839,
+  "changed": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "specs/002-fundacion-supabase-multitenant/quickstart.md",
+    "specs/002-fundacion-supabase-multitenant/tasks.md"
+  ],
+  "created": [
+    "docs/evaluacion/evidencias/002-fundacion/docker-anterior.json",
+    "docs/evaluacion/evidencias/002-fundacion/docker-local.json",
+    "docs/evaluacion/evidencias/002-fundacion/docker-post-reset.json",
+    "docs/evaluacion/evidencias/002-fundacion/local.md",
+    "docs/evaluacion/evidencias/002-fundacion/schema-green.log",
+    "docs/evaluacion/evidencias/002-fundacion/schema-red.log",
+    "docs/evaluacion/evidencias/002-fundacion/t008-check.log",
+    "docs/evaluacion/evidencias/002-fundacion/t008-start-inicial.log",
+    "docs/evaluacion/evidencias/002-fundacion/t008-start.log",
+    "docs/evaluacion/evidencias/002-fundacion/t011-advisors.log",
+    "docs/evaluacion/evidencias/002-fundacion/t011-denegacion.log",
+    "docs/evaluacion/evidencias/002-fundacion/t011-lint.log",
+    "docs/evaluacion/evidencias/002-fundacion/t011-migrations.log",
+    "docs/evaluacion/evidencias/002-fundacion/t011-reset.log",
+    "supabase/config.toml",
+    "supabase/migrations/20261112031854_foundation_model.sql",
+    "supabase/tests/schema.test.sql"
+  ],
+  "checkedAt": "2026-11-12T03:32:43.069Z",
+  "branch": "main",
+  "head": "9938bb842683fcd6b7a3fd3ab5e8dd1711234347",
+  "unexpectedDifferences": [],
+  "scope": "SHA-256 de 839 archivos previos; diferencias solo en informe, quickstart y casillas T008–T011. Código Expo, fundación 001, dependencias y controles previos conservados. Este registro se agrega después del cotejo.",
+  "gitDiffCheckExit": 0
+}

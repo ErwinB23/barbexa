@@ -1,0 +1,4 @@
+COMMAND: supabase start --workdir <current workspace>
+{"_tag":"Error","error":{"code":"UnknownError","message":"failed to read file: open supabase/functions/create-barbershop/index.ts: no such file or directory"}}
+
+EXIT=1

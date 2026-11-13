@@ -1,0 +1,4946 @@
+{
+  "schemaVersion": 1,
+  "task": "T001",
+  "algorithm": "SHA-256",
+  "representation": "raw filesystem bytes; no newline normalization",
+  "capturedAtUtc": "2026-11-12T01:31:24.294Z",
+  "workspace": "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+  "git": {
+    "branch": "main",
+    "head": "9938bb842683fcd6b7a3fd3ab5e8dd1711234347",
+    "statusShort": "",
+    "trackedPathCount": 814
+  },
+  "scope": {
+    "excludeRootDirectories": [
+      ".git",
+      "node_modules",
+      ".expo",
+      ".test-build",
+      ".artifacts",
+      "coverage",
+      "dist",
+      "build"
+    ],
+    "excludeDirectoryNames": [
+      ".git",
+      "node_modules",
+      "__pycache__"
+    ],
+    "excludedDirectories": [
+      ".expo",
+      ".git",
+      "node_modules"
+    ],
+    "gitMetadataContentExcluded": true,
+    "existingEvidenceIncluded": true,
+    "secretContentRecorded": false
+  },
+  "fileCount": 815,
+  "files": [
+    {
+      "path": ".agents/skills/accessibility-review/SKILL.md",
+      "bytes": 4406,
+      "sha256": "da7a990f50e101b5978e0b069b1374f18b14f2ba4795324d78049f53a54f2b8d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/banner-design/references/banner-sizes-and-styles.md",
+      "bytes": 4993,
+      "sha256": "c8906fb1073a576ee8c680d9bc8586249cbc4ed36690da960d65a1c9c37143b7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/banner-design/SKILL.md",
+      "bytes": 8326,
+      "sha256": "913d9c4b2a3b405d638d50131e0dd3fe2787c839423d79287b7858ac29255acc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/approval-checklist.md",
+      "bytes": 4245,
+      "sha256": "4bf8549687f53a7b9684005b4b87de93c26f018e00609b4c506a5812abd13d20",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/asset-organization.md",
+      "bytes": 5110,
+      "sha256": "de98123417e9c5a1cc71a78131bba979c4c8ed2e5289e6c7a7f166576e488101",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/brand-guideline-template.md",
+      "bytes": 3572,
+      "sha256": "392db8cf10fef492221c15a86e68590074bf5716de1f2982f41c01fbe30567cc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/color-palette-management.md",
+      "bytes": 4254,
+      "sha256": "c429298ffe3955edb8b22c9f51426fef75e83d02848cd4300e89c0d3fc34b44a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/consistency-checklist.md",
+      "bytes": 1926,
+      "sha256": "56d8b2d4852cda11e600adec4b9dd68fc89a1b8265382359953bec5c5e5e2c36",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/logo-usage-rules.md",
+      "bytes": 5464,
+      "sha256": "044c5ddf30cfe0eea047451cfce6ea654939198ffdd8968a19161c97066a5a26",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/messaging-framework.md",
+      "bytes": 1763,
+      "sha256": "24b2500a72867b55dd10f4bf359178b0eb347fddd852659ce47b69d9f597d4e6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/typography-specifications.md",
+      "bytes": 5042,
+      "sha256": "921c3d9e6ddfde2677b9a3e32eee94c7922f54f22c1f380c5ed2eb25a7d5bfa9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/update.md",
+      "bytes": 3365,
+      "sha256": "537cb55ebe260e1de127bd6288b19d8d7b15b6c893545442a58b739cbd342b37",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/visual-identity.md",
+      "bytes": 1884,
+      "sha256": "63f0cfc5d95403d8e12aca4d839cc28471515574d9a431334bfbb96c15407c31",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/references/voice-framework.md",
+      "bytes": 1997,
+      "sha256": "08c15ac79f81cd964c5efbe593131b61a093c7e1b060d5dd28b17f3cc5b331fb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/scripts/extract-colors.cjs",
+      "bytes": 9328,
+      "sha256": "36d21f3905e5762cfc8054b3f3b7276f6bc656884fe57c6bfa539526044778ed",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/scripts/inject-brand-context.cjs",
+      "bytes": 9677,
+      "sha256": "5b98abdeb5c636f247102cd235f1d3421db7a4de53fd853360feaa0c471b5c96",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/scripts/sync-brand-to-tokens.cjs",
+      "bytes": 9545,
+      "sha256": "390a760570fdba6d6ecfdfd8907fc802b64659b6178f8920349b0c6a2c822106",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/scripts/tests/test_sync_brand_to_tokens.py",
+      "bytes": 1970,
+      "sha256": "0ace0cf7c6a8c12c0b9154f317e847b1084eb00b065b6f22431e37b7c7e948d6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/scripts/validate-asset.cjs",
+      "bytes": 10173,
+      "sha256": "4546c9109fb0f4f767426508cb29e60d02b301f8897cf16d8e378b7ce9d997fc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/SKILL.md",
+      "bytes": 2939,
+      "sha256": "6a450ee1a83a403d47cec2ede9030feb60a67a81fc425d2406e975339313bd44",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/brand/templates/brand-guidelines-starter.md",
+      "bytes": 6638,
+      "sha256": "d157a57b15f0b458c79636d11de42f3c89f03d8c0bbea1bdd3cf1c3542b2140d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/create-architectural-decision-record/SKILL.md",
+      "bytes": 3061,
+      "sha256": "c11af0c34fa034e36e622ad97f1194824c3cbbe675a8b17cdc0bedc91b188a72",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/cip/deliverables.csv",
+      "bytes": 13385,
+      "sha256": "229912f35c2f5a790508ddd62270cc7a92a84694027025ea5a30f1fb5ba84b70",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/cip/industries.csv",
+      "bytes": 4935,
+      "sha256": "729b1dea6d6f39b0bc22a1e659584e7ca5cead75841146d599c9f8dc00d4da46",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/cip/mockup-contexts.csv",
+      "bytes": 5205,
+      "sha256": "15d61cef16e6746d5aa665976f4de8074fedb64bfc5c7313a40eec1112a1d499",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/cip/styles.csv",
+      "bytes": 5967,
+      "sha256": "4e7f9e209bc90b60df62fd9843a1a73b365e54161dbd820b82817a8e512af4c4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/icon/styles.csv",
+      "bytes": 2250,
+      "sha256": "a4aa7d326ffe1e50961eb70e25a6351f45c0247cd245461fa1a27cdc72f903b4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/logo/colors.csv",
+      "bytes": 10674,
+      "sha256": "d60218f0705bb0f0b892a10468a5c8d9a44eef3d0262ef8df8970ba3fbab567a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/logo/industries.csv",
+      "bytes": 13274,
+      "sha256": "e58dda4b9d28851f70914f82c1d2a2cff626a991ca41076f64122f33cc8a6525",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/data/logo/styles.csv",
+      "bytes": 13678,
+      "sha256": "ea08bdfb7aa557f08d1b6299222423f948700f8e4029321acb58c8f83197bdf2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/banner-sizes-and-styles.md",
+      "bytes": 4993,
+      "sha256": "c8906fb1073a576ee8c680d9bc8586249cbc4ed36690da960d65a1c9c37143b7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/cip-deliverable-guide.md",
+      "bytes": 1735,
+      "sha256": "1424e120b967288e2334f24fcfa5cdc7f238420326a7444f4c5597efecfabc41",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/cip-design.md",
+      "bytes": 4589,
+      "sha256": "47a3b2e445bc07185edd0cd24ba8a417229baf86717dcdff7c4e403adbceb3f1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/cip-prompt-engineering.md",
+      "bytes": 2493,
+      "sha256": "4bf3a0c858f38c230e43e872857b72d9eb692e066e8de5920da75aac733e753c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/cip-style-guide.md",
+      "bytes": 2357,
+      "sha256": "f3e15408cd981e93804440c1159c12e02d001bc37a3945f455b3fc13729ed4e1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/design-routing.md",
+      "bytes": 5826,
+      "sha256": "32914a913f4f20d4cb1e497e5a87cfc04b71af4e6d75db72ecf50e4f060201c8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/icon-design.md",
+      "bytes": 4343,
+      "sha256": "39281931d070918b4e51ecd71054da99493cabe06a07dfa8f1f682e48637c83f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/logo-color-psychology.md",
+      "bytes": 3341,
+      "sha256": "3fd0e93e24c3b2ea7f3be778e8f2d03b1c62c7c6eab3ade478c8fca332bff287",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/logo-design.md",
+      "bytes": 3163,
+      "sha256": "2e845fe165c845fd9582c1d74204fa31de607380982a6ea0b5f8db4e293afa3a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/logo-prompt-engineering.md",
+      "bytes": 4314,
+      "sha256": "e50f55bf323263eb27b4cd4c5172383a787fb894581d5d2befb3f6e0180b253e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/logo-style-guide.md",
+      "bytes": 3435,
+      "sha256": "611baa841eedab101f45c113c6bfbd4d7e16e859c9d6ebd2cf941827a6e8dd15",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides-copywriting-formulas.md",
+      "bytes": 2604,
+      "sha256": "03733d5916ab771834745550045b736deeb94a08226f2b200f7953009c35b219",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides-create.md",
+      "bytes": 153,
+      "sha256": "792d647a5d4f87d765cf417f7ac54dd0b2fc4d229cc23ea9df56282d4c1ee086",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides-html-template.md",
+      "bytes": 9004,
+      "sha256": "fd5b051a37365fc6059c75bb388ec6f64daf1bd9ae938b287b6d762dc83c0c35",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides-layout-patterns.md",
+      "bytes": 3691,
+      "sha256": "0a967ca3bd829d3234e6f1802bade6c76447fabbaddbc8117c41adbae7dfb6df",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides-strategies.md",
+      "bytes": 2715,
+      "sha256": "27ee3e53ffa0ea679ec83ebeacb0bcfbce498df57277e99f574b9c139dc44286",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/slides.md",
+      "bytes": 1742,
+      "sha256": "5630d5daec947ff58ab1ac97c7a1ee77a21cf6f5dce5155535b65d291691979f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/references/social-photos-design.md",
+      "bytes": 11251,
+      "sha256": "2544c143ff3a4471a775e2271797a3871480f94de91b267178da92e8952192a0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/cip/core.py",
+      "bytes": 8062,
+      "sha256": "78a78a51f12d2382b2854414df395dc62b68532626ef724ddd5de713507911e4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/cip/generate.py",
+      "bytes": 19430,
+      "sha256": "2745040c9b534cf4113d2f7f4d7a52bc96a9fbfa12204c4f8460be4e15449069",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/cip/render-html.py",
+      "bytes": 13941,
+      "sha256": "a49a89a017ea4a2c492438055f05dfba3dfb4f91563f5f913359939beeaeccab",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/cip/search.py",
+      "bytes": 4524,
+      "sha256": "6619fbbe71983003a858c5eb79bc59c607b342610a1178b6976c687c2932161b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/icon/generate.py",
+      "bytes": 17151,
+      "sha256": "1a6be99dc233f6d9f8b558c26148203418be5b47c677cd83e48e41e78e38780c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/logo/core.py",
+      "bytes": 6023,
+      "sha256": "4f8b36ffe538e5995d0e0b740053a0899a1adf445ffdf484bd47f94e71ade8d0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/logo/generate.py",
+      "bytes": 14630,
+      "sha256": "6e4358f21cd85fec51c8d01b03e3696d6db180815309d7e10a19c623d4d4462c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/scripts/logo/search.py",
+      "bytes": 4745,
+      "sha256": "693b3a1824831f120d4c60ed72477847604da1f6b654343381f8e9d3800a28f2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design/SKILL.md",
+      "bytes": 12322,
+      "sha256": "413f4ab913d07f7fd92acbadc25d71aad63443be0c40d11234944aea688603b6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design-critique/SKILL.md",
+      "bytes": 4041,
+      "sha256": "4b51de88442cd8a0b7ca5c8c7583b28c65277c09466df2ab23457d57bf03aa23",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design-handoff/SKILL.md",
+      "bytes": 4084,
+      "sha256": "12dc4eed6b52bcd31d7b164d54e4292e5c93faeefaa4bd823b621404f11c0363",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/design-system/SKILL.md",
+      "bytes": 5790,
+      "sha256": "87e9759397bc5b1c1c4a2e84e1a884d13ea2a445eb6c17722f47f9c10f6ad2f2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/assets/templates/architecture.drawio",
+      "bytes": 8077,
+      "sha256": "b75427c47b381887650d60c9be74269b305e68bc418c349535e0b9c8311583ed",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/assets/templates/er-diagram.drawio",
+      "bytes": 26593,
+      "sha256": "87916374e712c64bce81187ec58ef990a8f55e7f656614debf3e375089159575",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/assets/templates/flowchart.drawio",
+      "bytes": 4590,
+      "sha256": "a00283e5805cb869de9f1966e4eb9a573ab93acde90599e2387f4afd55ba324e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/assets/templates/sequence.drawio",
+      "bytes": 7290,
+      "sha256": "612fea7621632ba547f5895db68d1f4e4c0e1a151075c182fa17fb74a687df11",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/assets/templates/uml-class.drawio",
+      "bytes": 12960,
+      "sha256": "699a57fc74bf31a7e8ee9e9a235287704a1ecb336aa4cc0b1bf90a80cbc766de",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/references/drawio-xml-schema.md",
+      "bytes": 10796,
+      "sha256": "58972b7b420bc0825e5c27df1d9820629e9572f242cc6c5b3aaf0ddf3285ada6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/references/shape-libraries.md",
+      "bytes": 13126,
+      "sha256": "8c7af0e6b0f51a90f6cc596febbf5f5a37451aeba039c8801bb2f460ab8b615f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/references/style-reference.md",
+      "bytes": 15491,
+      "sha256": "284445db390c99e4b753884a168c2d61f7a960e2c96177205fe0fb98155ee5be",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/scripts/.gitignore",
+      "bytes": 39,
+      "sha256": "e46e17a5808f62786c2c800d6e7e9186873dce392c04f5e0929d69f7339b8733",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/scripts/add-shape.py",
+      "bytes": 6642,
+      "sha256": "7b841276a0801fa3016e2058c1fb03cd57126f7675fc617f6b931de34b9bd8b0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/scripts/README.md",
+      "bytes": 3332,
+      "sha256": "790781b7c18fffdce93a43469485b6e94eabc3443ff97866d3c7b87c8c34fd47",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/scripts/validate-drawio.py",
+      "bytes": 7643,
+      "sha256": "797cffe7564935a15889b278f8cab7e1a242a8af68cb029c65599260962804e9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/draw-io-diagram-generator/SKILL.md",
+      "bytes": 19595,
+      "sha256": "0d5d86c1fe7dc596f9bb7058291469cf5671ab55fcfeabce8451eb513a705868",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/agents/openai.yaml",
+      "bytes": 347,
+      "sha256": "2f026573f78b181090a60599933d2c0260d67fc26721e39f0efc115df31ca4b1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/app-store-metadata.md",
+      "bytes": 14395,
+      "sha256": "70fc1321830171ca30eb252a708454c77a73c80c1301b266f997143480c6ce76",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/ios-app-store.md",
+      "bytes": 11921,
+      "sha256": "94bb9a4d1309a4e321138f2a1105666b3a9a658b0821b6f48cc98c39d4b584e2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/native-ios.md",
+      "bytes": 10347,
+      "sha256": "1f61df60802a1c7e99ae09e0a055b31a1412a68d1c431f0fabc16ddbb69ac213",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/play-store.md",
+      "bytes": 6034,
+      "sha256": "c518f82e948b7606341e852a4b4f86f9f0351c6da3e88b4b9004b57aa9e76083",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/testflight.md",
+      "bytes": 6035,
+      "sha256": "5204003519c79905aa8debb35f907e766c61815850e77e7902fc7794eef5d703",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/references/workflows.md",
+      "bytes": 2295,
+      "sha256": "18bdf360d63127524857a50017e5400eb924d0d8c287da3b6c9eeba1796bb237",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-app-stores/SKILL.md",
+      "bytes": 7636,
+      "sha256": "8819f0a86476aed33a6c8baeb42216083287b599001482f732e23e27ef86f357",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-hosting/agents/openai.yaml",
+      "bytes": 448,
+      "sha256": "34cd0823347cc5bf068740c69c82976f3c5b8974979266ba0b5d96d97d5732be",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-hosting/SKILL.md",
+      "bytes": 11957,
+      "sha256": "36f6bc03fb475b173d975c45487a225e8306b6b3dbddb6884270add26441c348",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/agents/openai.yaml",
+      "bytes": 453,
+      "sha256": "80819c9623a87cdedc1d3e5e66a346822572012b3e82af10589902cd37f71868",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/references/library-integrations.md",
+      "bytes": 7038,
+      "sha256": "c62dc9d75b0b121d63de551dd7833430cbd96d99e41bfa9082162a86e06e7d20",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/references/metrics.md",
+      "bytes": 8853,
+      "sha256": "9663078691e88ea0a94b3cb050fd8191256fd776dbfb00dfe74b5fc8c0ed49c0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/references/queries.md",
+      "bytes": 23499,
+      "sha256": "c2fbc16bac86dfbb69ddac2c1cf40f01270aeb6370c97dd1a821cc4ed973e6f0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/references/setup.md",
+      "bytes": 28550,
+      "sha256": "4c47823d22b47e6a70e7a47e0b516f5f48ae851f36884f13dd9dbbaff5591d9d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/references/third-party.md",
+      "bytes": 4802,
+      "sha256": "29fbaf539aa4c4de7896681727dbdd7c9b99b4960ed3eabc8624251bbfbc0cb6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-observe/SKILL.md",
+      "bytes": 5891,
+      "sha256": "05555988d814f2adaef2407e0b4ae5a43df050fec6479fab27365eb3fbdf0ac2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-update/agents/openai.yaml",
+      "bytes": 363,
+      "sha256": "297fedb0086d79492931a4083079f7ed67d31b28b4a6899f5deb42bb1f1a108e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-update/SKILL.md",
+      "bytes": 10067,
+      "sha256": "50c72e651abc225a5bc6bfa6600b31d7526c2633f8385dc31ab2b3285b091bb5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-workflows/agents/openai.yaml",
+      "bytes": 335,
+      "sha256": "f8b464f78780b2b5be08a49d14bc205eea99d49e0e58e901b7243338a6a789c7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-workflows/scripts/fetch.js",
+      "bytes": 3088,
+      "sha256": "b2414cb0973707beef936d812b80390836eae616395162fcbafbb5d259583dd1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-workflows/scripts/package.json",
+      "bytes": 109,
+      "sha256": "dc547dd3fecb86d0c1b8bc0fe8682a670a18390319ce30ceb9c56c3b2ff3c3e3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/eas-workflows/SKILL.md",
+      "bytes": 4937,
+      "sha256": "04241f18694ae43a005f841dcfe545ede83d9373a849741a99538cfe82cbce04",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/accessibility.md",
+      "bytes": 9735,
+      "sha256": "157e17252e1d52a21cc10d609213d94ee5f026a7d1d534f477712a54bd1d6025",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/compliance.md",
+      "bytes": 4361,
+      "sha256": "e8c9fa7fa08e4e17679b9facdcf4e9ba4a13bcf3c3d507480e70f50de24d1f6a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/deliverability.md",
+      "bytes": 3541,
+      "sha256": "4081840fd2ebfb4d52b1e22e62658f66327e55e5f00ef67c43552cc6a597110c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/email-capture.md",
+      "bytes": 3597,
+      "sha256": "9a44b8bdd1f7af8d1995a9809da51c9652e197f37955bd52273ff7e9c76253b2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/email-types.md",
+      "bytes": 5988,
+      "sha256": "af6758965d3a8aa6cea0ad8c61633b7cef84ac0b58512462f7192cd75fbc8d67",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/list-management.md",
+      "bytes": 4765,
+      "sha256": "07600719ac773f647cb25f054b430e981f9b1b0de3ff3ab464692372e680907c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/marketing-emails.md",
+      "bytes": 3428,
+      "sha256": "b59440de9f1dd64250f17be661a2e8063bee26582ed5d9ca3a1af3bf9646a78b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/sending-reliability.md",
+      "bytes": 4767,
+      "sha256": "3f6847eb95d61dd3b867733496981d07a097d5741cfdd6ed027e80038c5c5191",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/transactional-email-catalog.md",
+      "bytes": 10756,
+      "sha256": "59d73da28ea08eb62c69b54b7454fc7250f14c1d802fc51217db9a9ef644bb55",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/transactional-emails.md",
+      "bytes": 2581,
+      "sha256": "03e66dd224997ef13d4f894e436fc5558cfcec59dbab4f8ecef7817b69d4704a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/references/webhooks-events.md",
+      "bytes": 4518,
+      "sha256": "72d2f98bb328a65ebd132557a0f13067db00d39602d5c3714383dbc536886f0e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/email-best-practices/SKILL.md",
+      "bytes": 4098,
+      "sha256": "de14d134b1b65cc53a926ea251a77f74f6dc639c122e321448c71443a78e45b2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-animation/agents/openai.yaml",
+      "bytes": 220,
+      "sha256": "32105877fed5e87c6661fee73f52cfe0819131a7b3211cccd3b1ea2b6f7aeb13",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-animation/LICENSE",
+      "bytes": 1091,
+      "sha256": "d24da413cccbc3d844929a1cc08e5ba79385139c0c47c9d5bd0dd2df24ffe15c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-animation/RECIPES.md",
+      "bytes": 17207,
+      "sha256": "187a163e030fc1159efb3ccafcdd105657a3ccb5898f807772c74a0ab9d41502",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-animation/SKILL.md",
+      "bytes": 19272,
+      "sha256": "24575736846fb6c1501414855fd3da52f231eddfedbcbd54c3f3f4bb435f11ef",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-data-fetching/agents/openai.yaml",
+      "bytes": 425,
+      "sha256": "a17910dbd49a651278449e612d6af573a1165870cbdfa86b82f32ef537cddd88",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-data-fetching/references/expo-router-loaders.md",
+      "bytes": 10179,
+      "sha256": "4fb443d7bf0f9586b277e152c7532b995d10027fef1cae44bf87c085230b0911",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-data-fetching/references/offline-and-cancellation.md",
+      "bytes": 1468,
+      "sha256": "bdef8684b76a203ce9ffb7f4de5936eecba5483d2e75a2dcd452e5b35bf7830d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-data-fetching/SKILL.md",
+      "bytes": 14124,
+      "sha256": "07edc98e90518b5e7c7a069d54012cff58f437500d5684331e5ea45cbffc4dfb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-design-system/agents/openai.yaml",
+      "bytes": 580,
+      "sha256": "3e3b789c5ac82daba3f80f76edb2530816d6c3a936d490ba38fc269f758de231",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-design-system/references/audit.md",
+      "bytes": 8652,
+      "sha256": "7aba9ca4d0dabf872ccd54e56d25907de6ada8fa50e0170a653c04799f81304c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-design-system/references/native-slop.md",
+      "bytes": 8514,
+      "sha256": "3217b8e57d5a0e807a68632f3d6cc862ac9083b2bd031b8e01546a20b83c5ec8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-design-system/SKILL.md",
+      "bytes": 19795,
+      "sha256": "10182f288264887e35f051634a15553974a8167be14da4918853d2ccf97c8b20",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-dev-client/agents/openai.yaml",
+      "bytes": 335,
+      "sha256": "44c4c300636892b6b04eb4af7e6d4c6b2b0daeb487536e11b05c540ddcfd7e8f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-dev-client/SKILL.md",
+      "bytes": 5632,
+      "sha256": "a92a99ace19ec154d5c319454b587a3b4301af83954c7af967ffc3e4126cbc56",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-examples/agents/openai.yaml",
+      "bytes": 403,
+      "sha256": "6ed7c8c8f383311d637c4c0bbff4808d59af1e32447f4e82ae3523dbc9636459",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-examples/references/catalog.md",
+      "bytes": 4458,
+      "sha256": "d8a5dbbca7a1a2900cbb0648651f933bb7ea998921b99890f7616657d956ab06",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-examples/SKILL.md",
+      "bytes": 6864,
+      "sha256": "9fb36584ee52fa3f9123d62342fe0cfc1b5eef11b9549e39626112a7fc469359",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/agents/openai.yaml",
+      "bytes": 412,
+      "sha256": "cd9feada71748c88abc18ab6a3199f0ce7ed4c04d15a79a43f0ec9d8ac04b9b7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/controls.md",
+      "bytes": 5249,
+      "sha256": "360d74ae1a858d165b18081ace900e89c0c915515ebebcb2d7630084a26beb5f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/gradients.md",
+      "bytes": 2823,
+      "sha256": "e401012d5255dd762fd936fd1a01f21a59032494a476c1de4bdcf4e9e958803b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/icons.md",
+      "bytes": 6081,
+      "sha256": "3eff4e17c069a48cc93fb43e2e7787bc48fcf4c3f508d6c2cbbc612a6460433c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/media.md",
+      "bytes": 6422,
+      "sha256": "2fc72080e5dda7cca1623e4b58e7dcb3136f8f4297378f9083f567ab4ac574d2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/storage.md",
+      "bytes": 3056,
+      "sha256": "62d6a91f458a7f59eb81ca5279d7d022407749a12e95d70e2046a217230e17c7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/visual-effects.md",
+      "bytes": 5399,
+      "sha256": "4f30237240288a3e939e4d9fc41195306f9a14ed37d00825d757f8026dfc0f82",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/references/webgpu-three.md",
+      "bytes": 15071,
+      "sha256": "4e8b7eae87c9537eab2b28d43c2a718027825ead675a7477ddadaccd74dfebf6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-native-ui/SKILL.md",
+      "bytes": 12789,
+      "sha256": "83903d7a0a9aa32e1130283456f97b3e71f4083b372adfa7e025aa126f360a81",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-overview/agents/openai.yaml",
+      "bytes": 654,
+      "sha256": "0a43927292898ef94b78132cb300ee96bed27fd0d07f9a2a77305db0e4cc0ee2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-overview/references/launch-without-dev-menu.md",
+      "bytes": 1775,
+      "sha256": "4a6bdb973afe14bada7231cccc6314a1da09ad61ba9febe8549f262fb223c911",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-overview/SKILL.md",
+      "bytes": 9707,
+      "sha256": "ebaa64e533c568bcf8f3019819160390adb413dc9e4a16219a8b41e6aa76fe40",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-project-structure/agents/openai.yaml",
+      "bytes": 320,
+      "sha256": "864aaf5279b3baa5982e1e19418c9cdbd836c1eb948c9095a6df3ca80d549354",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-project-structure/SKILL.md",
+      "bytes": 6631,
+      "sha256": "e2da115b37333bee04750a50c2c832646e53f65c09777387568fa8ea76bcd3f3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/agents/openai.yaml",
+      "bytes": 426,
+      "sha256": "4532deea0bd6ad9d00b252b50f6b921e06ba5ffc3599bcbb0857ad25a2bf6b09",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/form-sheet.md",
+      "bytes": 6573,
+      "sha256": "f9935982a9dc6f0c926602e30b8deef9e271d5d58db2a8031ca18a690affcc90",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/route-structure.md",
+      "bytes": 5335,
+      "sha256": "80992ea08d16c0151dffacd4f31ce1b1cd553e01f4f941bd36d991a978ce274c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/search.md",
+      "bytes": 5421,
+      "sha256": "45a4ccb6d5c2c0d11ed52fb7f9bd50e3e95db33412de655a98f34ce140a831e0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/tabs.md",
+      "bytes": 13756,
+      "sha256": "b0c249c2eeb8f271cbe61ebea033699b0bef625558111b63970ffe4847b0e679",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/toolbar-and-headers.md",
+      "bytes": 8345,
+      "sha256": "7bdd70b3f48b9a5b79c24ee1861bf3d078ec39e93f5db7756e695ff92d244760",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/references/zoom-transitions.md",
+      "bytes": 5006,
+      "sha256": "4fddef8ee52e45e64c35f6cc45965d05678b135b26b5eddb116ef1b1fe0527ac",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-router/SKILL.md",
+      "bytes": 7289,
+      "sha256": "fb7f0f493081cc966ec3bd995cfd83e1ff09910db313c533be87aa219191d4c7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/agents/openai.yaml",
+      "bytes": 726,
+      "sha256": "db588822833dce173eeed3c525cbf2fa3285c84e9304be210a805bf839436986",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/references/drop-in-replacements.md",
+      "bytes": 2112,
+      "sha256": "eae57574bb7302da3f9b36718803bb83d01cc777680e6273b63b7d6c3497c855",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/references/jetpack-compose.md",
+      "bytes": 5590,
+      "sha256": "1783f09bc11d3da90a9e917c1b9072947fa137223bc3b1e31a76f95b8f9947bd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/references/swift-ui.md",
+      "bytes": 4470,
+      "sha256": "b6ebbe14bf34ac97c7bc083365dcb053f2d08e3b8a68dcf83e458aa8404b75d9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/references/universal.md",
+      "bytes": 4896,
+      "sha256": "6aca91a920f41e4d40797718597f9f637c4e3d1290b164e9990446d028ad2390",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/scripts/list-components.js",
+      "bytes": 7536,
+      "sha256": "fe06cf9e787abb086de0ff58a29158f112b93d4a0b07a45135f8840fa0d43ca1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-ui/SKILL.md",
+      "bytes": 7082,
+      "sha256": "48685f1284ba963f2ec959e62158528177cec8983ad9b6df467cda64ab41337b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/agents/openai.yaml",
+      "bytes": 377,
+      "sha256": "e8078cf1100f903ba48a05c0f81d8616f3f4a31e9d76c02015d2650ce4cd5017",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/expo-av-to-audio.md",
+      "bytes": 3815,
+      "sha256": "b455a85555e9af9def3441177006584c01ad93cced95d70a47a430537336f90c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/expo-av-to-video.md",
+      "bytes": 4422,
+      "sha256": "2fe6ffc6a7e8ee41643b0db4cf5f547198e5cd99060d1986660ccce052f6755d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/native-tabs.md",
+      "bytes": 3644,
+      "sha256": "bff2b54150e2047173f0c69da0fe9fd005d253b6c841a5ea9b6b393614346c27",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/new-architecture.md",
+      "bytes": 2256,
+      "sha256": "ebf4242393dd9fd83f77fafeefd0a942cd338ab2f341ec5d3a3dc2689b239dbd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/react-19.md",
+      "bytes": 1954,
+      "sha256": "17df383ddb3d619022e18cf545bbfc6745f5d3bc1166e3c7c8c2057828694bbd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/react-compiler.md",
+      "bytes": 1704,
+      "sha256": "146eb76c8f0e1d83f062ba202e2f3859a394a616fad1b20f234ef1c514776953",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/references/react-navigation-to-expo-router.md",
+      "bytes": 4235,
+      "sha256": "100202d9d487724910895696acf83ba1e5f7f1155583c1dd0c126cf92a409409",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/expo-upgrade/SKILL.md",
+      "bytes": 7847,
+      "sha256": "1a8fe076aebece5936a59bcaabb6a560e1e5acafd8ca614b4a83d763ceeb99a1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design/LICENSE.txt",
+      "bytes": 10351,
+      "sha256": "eb3d7b5485466acbd81f2b496f595ab637d2792e268206b27d99e793bdb67549",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design/SKILL.md",
+      "bytes": 9461,
+      "sha256": "b8009ae690dfa69edc7f08bb8715f32db8817112cfa4388741dbaf876c237df8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design-review/references/pattern-examples.md",
+      "bytes": 780,
+      "sha256": "51c7cb307c345fa0507b062d7c8e1a38e3683a0eec6e11e00001f7a1e3cc06e6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design-review/references/quick-checklist.md",
+      "bytes": 1594,
+      "sha256": "3c451b0937499e7349073044825389b691f0788336d9c571f18e3bde5928f8f3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design-review/references/review-output-format.md",
+      "bytes": 2858,
+      "sha256": "f195e24959c1cbd7526362132e389f0cac3d0efa123b8a7650679c64c65bdf8e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design-review/references/review-type-modifiers.md",
+      "bytes": 1675,
+      "sha256": "96a0ab621c262d5c29b7a5a9740f038a77c4782260507e437f1250efcaae8a66",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/frontend-design-review/SKILL.md",
+      "bytes": 6295,
+      "sha256": "a595fe62ad12448d6e3ca3b9b20dd210938e2f8f976a16aff623d44d867c02d7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/references/injection.md",
+      "bytes": 3035,
+      "sha256": "ebd6ef8d39ba6f1cd3dc13051e6ed4163d1d2ba36518cf0f7393836a211e58ff",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/references/permissions-and-tokens.md",
+      "bytes": 2743,
+      "sha256": "7272d00b20cf99c6fcbf34346f76730907c00701aef44bb9cfb7ab3eecac336b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/references/report-format.md",
+      "bytes": 1920,
+      "sha256": "3ecd2442e173bc001f858747873349be7c6c77050470b87ae516647908b1e86e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/references/supply-chain.md",
+      "bytes": 2938,
+      "sha256": "f66f613dbd732ce87c1e76b88208efde8feae3ffe5a3ab405cde4ce3df66f605",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/references/triggers-and-privilege.md",
+      "bytes": 3397,
+      "sha256": "465f3f76517e9f5374a73e30f46cb47e1fe62ce9fd81f782808a3abbb2df2756",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/github-actions-hardening/SKILL.md",
+      "bytes": 9852,
+      "sha256": "31a8e7483d978e6267941edefebbe42aaa946bb3d43c9095aa3db343d4a8ff06",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/browser-best-practices.md",
+      "bytes": 6905,
+      "sha256": "87f231092c854c384a4d7806c35d7f45ed699db89cfcea72510f264e46fcd5d0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/docs-guidance.md",
+      "bytes": 2760,
+      "sha256": "0f9668aa476fa041efe9aa86bdf826ce666dfba3ad18c615b08ce54185bff1ac",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/browser.js",
+      "bytes": 3668,
+      "sha256": "9ddb8077f45073ebd4869d397f3930a16a73703df163899e0e57ed438eea9537",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/cloud.js",
+      "bytes": 2242,
+      "sha256": "9d468490285bfafe49726bc9fab5b203095140ad16a597a2d4fe9a3ff7ca7c56",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/crypto-encoding.js",
+      "bytes": 2777,
+      "sha256": "4055d882eaadd26933d5db9caa3e871edb72affd9611fbcd248cc08d403ceb24",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/executors.js",
+      "bytes": 3937,
+      "sha256": "e5ea6b129a9e7440be93e972601de209a9f535b57c31c53b46f5e2e4b81becf0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-crawler.js",
+      "bytes": 1117,
+      "sha256": "381702d464e2414e94b86f270397fcb96e5244957ac978e45352cb4dea7a00ee",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-dns.js",
+      "bytes": 1418,
+      "sha256": "38d2fb82ff11740388a6cea0c0127096f96a2918002859767df1a6a68a409f61",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-exec.js",
+      "bytes": 1066,
+      "sha256": "779a5eaac2e5726f16d0554ce2fa9e908417b9838b0eb5c7cfc6d257a5d09eb6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-faker.js",
+      "bytes": 1347,
+      "sha256": "52b565614871b6ea5a62409da150a0e376784e0349d9f205c6653a2d676aa508",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-redis.js",
+      "bytes": 1903,
+      "sha256": "fa3780dcfb62778a6a233bdef1ca9682ead3fe792a88b156ac84b43e81da421b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-sql.js",
+      "bytes": 2258,
+      "sha256": "d31377cee025c2f62e4e7fca8bcdcddcec2d2329f65569968eae5d3b389d9890",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-tcp.js",
+      "bytes": 1657,
+      "sha256": "bc94d1f5c8748bd064b5a5c7272ecd986eaa015eb4201bcf050e00690315bc75",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/ext-tls.js",
+      "bytes": 1235,
+      "sha256": "573b1bdad8b90c29c292b38a937af1669279999d066227fed2cc6104aec62d6d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/functional.js",
+      "bytes": 3628,
+      "sha256": "4de26f1fea0665c6bf32cdb3bbaa7d26a6058f8e3e34f7a21538160ca0910b88",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/grpc.js",
+      "bytes": 2487,
+      "sha256": "8acbce2fc0d3051b7dbec675b92a4ab6a73dc3d82dfd8b48e16372617d7aa89b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/html.js",
+      "bytes": 2242,
+      "sha256": "89c2f2f9c16f0201aa332341e853d8cf0fe985f8787d56e55b119b5dd256f832",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/http.js",
+      "bytes": 3841,
+      "sha256": "fad0b05f7aaed72d507ec84d1cb0d74ac255b34383e9860177f177661daad6e9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/metrics.js",
+      "bytes": 4009,
+      "sha256": "e3f4465d3195d5ea17453d81722a36626bff0e170c2db4064abf6036419ef727",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/examples/websocket.js",
+      "bytes": 2036,
+      "sha256": "1f76336c6a4aea0575ac9d8fd3ccdef863f98a1f536e9ec2f1cc269aaf5343ef",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/SETUP.md",
+      "bytes": 1529,
+      "sha256": "376138cd42061104faf9309f333ae300313d31b7a4d9bfb3078ec4ece8e6d87f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/k6/SKILL.md",
+      "bytes": 13218,
+      "sha256": "0e0aa6d4b7038fb3fd019af336311ab4f8648ac36d71cfa60b38eff281385ac3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/auth-and-data.md",
+      "bytes": 6096,
+      "sha256": "c98d57b039717154c893f6d743c5179e9bacd933da5a2649e1bff3364625a816",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/ci-cd.md",
+      "bytes": 6306,
+      "sha256": "dc6417965148be31cc771ba0052de15f35e727f9b9cb57064574eee8f79545b0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/commands.md",
+      "bytes": 9704,
+      "sha256": "6b7eee1e13c531adb8c5ab708771812b2a411877dfc338c675ecffec48207bdf",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/flow-control.md",
+      "bytes": 6533,
+      "sha256": "3f70ad6996ab510ab5411f382ee0e9d080d54be8701bd8c4ab8308447d297cd4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/javascript.md",
+      "bytes": 7828,
+      "sha256": "909aa2747e38c36fcaf87f3ddf4d32f8721983a806bf0f2c6a2026613075960d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/mcp.md",
+      "bytes": 4243,
+      "sha256": "9e9f0df5cdfa15dba3e5672080286bc46f12fa5b866e9490bb2727871fa8da46",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/patterns.md",
+      "bytes": 8879,
+      "sha256": "e3082a96f6f15f30f599a70359a821af159362a013b4f37f5281bc2a8fe749e2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/platforms.md",
+      "bytes": 6107,
+      "sha256": "3814c445ae0186dc2d7a116f8733e28e83823494e4bfaad7d9445c2609a9a7f5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/reference/selectors.md",
+      "bytes": 5753,
+      "sha256": "e687bd0e47d2b9e965adaba50c8ced8c9bf020afa8ec53d8d1e4031631c46e38",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/SKILL.md",
+      "bytes": 8716,
+      "sha256": "8b381e736dafab70fbef9a06495f6b89cd2dbc3c1fc1e64a060b61decca0851b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/auth-otp.yaml",
+      "bytes": 2196,
+      "sha256": "e8f8b053b17df987e955d96376986f8df4aad725c0e7be7a4140fea41c767a34",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/config.yaml",
+      "bytes": 999,
+      "sha256": "bf51d830ac13aa9e84ec406797d40d0777e075f5dbd002822a610e8233e2acf7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/github-actions.yml",
+      "bytes": 2052,
+      "sha256": "428a80b377904dbcd2a995768a275aa506057ef2bdeda03c54a774918439d987",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/scripts/clear-inbox.js",
+      "bytes": 469,
+      "sha256": "afb1d98b05377e50fa71640795e77e34915d809fa8a3bad08f043971e3dd0731",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/scripts/fetch-otp.js",
+      "bytes": 1318,
+      "sha256": "83f0c0a5a8e2190a7d0b73f5ebcc731ce1673435dfc84d8ecf6b6ba315e4c1d6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/maestro-mobile-testing/templates/smoke.yaml",
+      "bytes": 767,
+      "sha256": "0d15f2b5d88cb1ede3cc98ba4bdc486947c9b4e5a22b109e66f32849fc1d044b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/oo-component-documentation/assets/documentation-template.md",
+      "bytes": 2887,
+      "sha256": "e0bb3e2724ac018c814644e963bd3253af75acad64a1761229b83f1e0f74ab35",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/oo-component-documentation/references/create-mode.md",
+      "bytes": 1929,
+      "sha256": "f4cd087523ebba889c1eae4a7a4cb9b9cef7ef6a5550940946a234a40f1cbcc0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/oo-component-documentation/references/update-mode.md",
+      "bytes": 2047,
+      "sha256": "06e226853fef1c2d74a81c792691ab276a96d9bc07db5bb196257ac5cc2b2360",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/oo-component-documentation/SKILL.md",
+      "bytes": 5384,
+      "sha256": "27716aa29ebc98e0b21c2f09e6694eecf1449896cc1070e2460fe5d4285357cc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/opentelemetry/references/collector-config.md",
+      "bytes": 19333,
+      "sha256": "482bfa00c885d3ecc8809d6910c45e7dc13c09c6b223f957d92c0c08e6d071f2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/opentelemetry/references/instrumentation.md",
+      "bytes": 21946,
+      "sha256": "affd493d0e773e4e3e98f8b9551e1277dede1e4c11216c55af8175d2c1300eaf",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/opentelemetry/SKILL.md",
+      "bytes": 7074,
+      "sha256": "788443be854ecab208f810dfb97e6589f3590def722d003a1e2a6e6e44d1da01",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/element-attributes.md",
+      "bytes": 688,
+      "sha256": "f9ccaf85f43b7fa522a48ece60e3f18f10d43cb509ebd48a010eefbd0cd4f47a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/playwright-tests.md",
+      "bytes": 1729,
+      "sha256": "8da5c537cf6335c1e7590d5418b9a68c9007fd5851aa58331530e09f6ec06b78",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/pr-attachments.md",
+      "bytes": 2890,
+      "sha256": "3f3be9d08e21125ff1b29f03fe6957d3ba8804da650b13cdeee1e5965f0999ce",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/request-mocking.md",
+      "bytes": 2269,
+      "sha256": "f1f6e6360309394bd457e1a9f78a66b1abd016a29d463a1e1215f168458a6fcd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/running-code.md",
+      "bytes": 6215,
+      "sha256": "096a293af6b0e290b6cd2c08595a421de30bbb99bacb28a454972d4efd35458a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/session-management.md",
+      "bytes": 6156,
+      "sha256": "be81d12b1113f0a0fa5523a61e6a9adec02400359137d09269deeb6f90559622",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/storage-state.md",
+      "bytes": 5596,
+      "sha256": "9706044c7d10587c5018abfc8a0a28c3b3a54ec0e9fa071b0d00c2d5c432fc31",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/test-generation.md",
+      "bytes": 16505,
+      "sha256": "867a83612aec52143a826866727dc1f52e31227f7cd2cd479274376282b0395e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/tracing.md",
+      "bytes": 3754,
+      "sha256": "07ccb2af8fb500d80214fae9fa15d46b02a24805443637dbb7bb61446cb87089",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/references/video-recording.md",
+      "bytes": 9604,
+      "sha256": "89393670f4d54e2878f1c3adce2a3c91210302d2d957c73a177b15bbd812ca27",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/playwright-cli/SKILL.md",
+      "bytes": 16195,
+      "sha256": "e0ae73f2075661e612b9404044861c53590e846b6b3f19ebd247a5846dba907a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/references/hazard-catalog.md",
+      "bytes": 20837,
+      "sha256": "e9c2f68a92646a9fdf1b2e8a557809d09b940d4c84c30b82dc1ed602099716d5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/references/lang-python.md",
+      "bytes": 6872,
+      "sha256": "329378e1263373ec2fc329f89c73714f31a8719758835f77429995f6858c9e98",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/references/lang-rust-go.md",
+      "bytes": 7773,
+      "sha256": "86eacc8ca0c56cc2630e20b0cf832f0a741719b918d4e9830ffe372f4b5cda9b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/references/lang-typescript.md",
+      "bytes": 6045,
+      "sha256": "eadede5e2cd56820a792be23c1e17efb804cd9e5014381e9654035fefb56ac15",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/scripts/detect_hazards.py",
+      "bytes": 26794,
+      "sha256": "94bb97bafe72b9e37f93099ed114c8b28182baa85c1b49b561700ca48156d508",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/poka-yoke/SKILL.md",
+      "bytes": 11185,
+      "sha256": "39bd4171c088862253310b91a5046f38bf9441da8d3fa78b60a04577949839e4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/research-synthesis/SKILL.md",
+      "bytes": 3106,
+      "sha256": "442bf460c3844ea821493e72332c74ae248d17591fc23e159cea2e5dfcc9552b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/api-keys.md",
+      "bytes": 3566,
+      "sha256": "b245d0d91a9acac8ba12871e33dd21d79db17b727c6b7ceb9618f1821db1fc71",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/automations.md",
+      "bytes": 9262,
+      "sha256": "3bc03dc101e6e0bc9361834676991d6577277382f52b4cc18de5df4c8797e2a2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/broadcasts.md",
+      "bytes": 6705,
+      "sha256": "2f524963b4591248e389cf9fac48241b6b8635dddeadf3149e458f4af98f8e1b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/contact-properties.md",
+      "bytes": 3555,
+      "sha256": "5670e588f1704c76bd9f599ebf1ac15a682b7d3aeea487061c0cba79e4f69fb2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/contacts.md",
+      "bytes": 6794,
+      "sha256": "715e312e1f6ff622c36e9b4437c38ece156753aaf83587cb404fffd19fcbb4a7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/domains.md",
+      "bytes": 10439,
+      "sha256": "261ae02751275c693cbc99997bce7c3c0a2f5f97cc39f5b4effb485115a89200",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/events.md",
+      "bytes": 3904,
+      "sha256": "fa7633104bf9e35da7dea88e5fd17c6d3d9bf8564093791a12e7c1cf5346a6a1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/fetch-all-templates.mjs",
+      "bytes": 926,
+      "sha256": "a968e0901c44cd4dcb83b2026064a084ddc46f1081b992e50fb3f81df46a0205",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/inboxes.md",
+      "bytes": 24826,
+      "sha256": "ce68e65244829b066d84f552759860dadee7fa4dab0fbd5e97c050969380bb63",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/installation.md",
+      "bytes": 3490,
+      "sha256": "fd78057f21c5af896bbff35731d1f89404dbe672e03907523dce9355a2e3e818",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/logs.md",
+      "bytes": 5059,
+      "sha256": "11ee292477c405ee1704ff9d82a88739a22e5e01d3580f80dec803589483dc8e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/receiving.md",
+      "bytes": 9166,
+      "sha256": "69454dcf3f192dc85ca234621e4f934039ce1b9e549814c36dfc6fb0b7b9005e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/segments.md",
+      "bytes": 2453,
+      "sha256": "179caa7136ce41bb91be9a2e3b9f393503ba9a60a5bc9a596d0f85f60c39b1a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/sending/batch-email-examples.md",
+      "bytes": 25049,
+      "sha256": "e17926db3de268bf9d10c38d8c00efe53803740464510b2364aa6bf5766c83e2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/sending/best-practices.md",
+      "bytes": 13114,
+      "sha256": "0d4310a271ce656fb5962a654c606baff03242f7918b3d57ab55e54da97e1145",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/sending/email-management.md",
+      "bytes": 8901,
+      "sha256": "9963f0c8a0c8f82f1a33a2e5f84897042a81cd46e02962f3e26702108dd32d6d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/sending/overview.md",
+      "bytes": 7824,
+      "sha256": "439b5d760ccad2fd1b04ac569ca33005295df4268a16fcd7ae40cef8e2870881",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/sending/single-email-examples.md",
+      "bytes": 12789,
+      "sha256": "b2f54a6a1798213bb96c9a9a0f42d9f2338e54d158eca618c33a1e687e67b859",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/templates.md",
+      "bytes": 7502,
+      "sha256": "ae37450be42771d7eafbbf613bfd374ab27dc7ac6f33ccb72b34bad018335520",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/topics.md",
+      "bytes": 2990,
+      "sha256": "2218d80825b6f6a30e0a4266f66bd9066a67fd06e6b00cde548d7bb402a96174",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/usage.md",
+      "bytes": 5554,
+      "sha256": "1ce2b1ad4ae11aa14089d84b0be43d846a9a9c4a580da11ee985fefc6a90451e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/references/webhooks.md",
+      "bytes": 14760,
+      "sha256": "ada8ccb925011daf56968f541788e5ec5e5137145d1e34d0029f30f4b90b2eac",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/resend/SKILL.md",
+      "bytes": 14469,
+      "sha256": "b83c1282d2d4803c56131582965e06e9b3aefafecf4024c3df739783fb9a43cc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/references/language-patterns.md",
+      "bytes": 5341,
+      "sha256": "ddfbcbb68b9d605789c85a168a274219f0ad86f5fc76b46b5332eb42f0c042b3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/references/report-format.md",
+      "bytes": 6780,
+      "sha256": "688ef9f2862303527314eb17a090a72d512b907a685f5d1f122d6ebd5ae66db1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/references/secret-patterns.md",
+      "bytes": 3524,
+      "sha256": "38f84f60021490d785f33fc70f2ce784888d2a751781a881372e6862e7e11288",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/references/vuln-categories.md",
+      "bytes": 7913,
+      "sha256": "d06159479bd92b9dcf3a2842e09f7712f1fd297c0bc9792fe20bc3cb69188df5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/references/vulnerable-packages.md",
+      "bytes": 3979,
+      "sha256": "8693a6a258bad18a8a1d0925bc1eae9c744071ff37a36b8f1da83adca93608af",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/security-review/SKILL.md",
+      "bytes": 9094,
+      "sha256": "002392d88637b89e4cbc409a0531834970937f3b57c0b448a17e04b5ca6d356c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/references/copywriting-formulas.md",
+      "bytes": 2604,
+      "sha256": "03733d5916ab771834745550045b736deeb94a08226f2b200f7953009c35b219",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/references/create.md",
+      "bytes": 153,
+      "sha256": "792d647a5d4f87d765cf417f7ac54dd0b2fc4d229cc23ea9df56282d4c1ee086",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/references/html-template.md",
+      "bytes": 9004,
+      "sha256": "fd5b051a37365fc6059c75bb388ec6f64daf1bd9ae938b287b6d762dc83c0c35",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/references/layout-patterns.md",
+      "bytes": 3691,
+      "sha256": "0a967ca3bd829d3234e6f1802bade6c76447fabbaddbc8117c41adbae7dfb6df",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/references/slide-strategies.md",
+      "bytes": 2715,
+      "sha256": "27ee3e53ffa0ea679ec83ebeacb0bcfbce498df57277e99f574b9c139dc44286",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/slides/SKILL.md",
+      "bytes": 1137,
+      "sha256": "2b90bdaf63f231919a01f4962f374ecd84af101a7e7545f8d9c68e049025accb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-analyze/SKILL.md",
+      "bytes": 12035,
+      "sha256": "fad1c37a451e017995b15fc3eefe243274642fbb3ff7c8a5ab021908df71aa93",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-checklist/SKILL.md",
+      "bytes": 22657,
+      "sha256": "5c1dce9333a2b733422e2dc75de7fc4d63ba91a460833d14ef3966a672328b9d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-clarify/SKILL.md",
+      "bytes": 19707,
+      "sha256": "1e9de2b2a673c923f7ca650fc40e4d5f24654163c577e0f1ceb70edfaa08114b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-constitution/SKILL.md",
+      "bytes": 10520,
+      "sha256": "ff6604c8424d4f4edf80f19ccfda1ede1a1dc5091a397cc1f0078a0bc3b0a538",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-converge/SKILL.md",
+      "bytes": 13455,
+      "sha256": "369e168cbcc9f903d1b8f3f360a32d24a7ebf3d07066b8676032cffcafbebd9e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-implement/SKILL.md",
+      "bytes": 13083,
+      "sha256": "4d58a80ede8d837798d13a838b83a88fd4335104d0806d27f8018664a1ee0b85",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-plan/SKILL.md",
+      "bytes": 8239,
+      "sha256": "0834b2298c078b0a89ee64a3e47e140cc9b31c4049492bd504491199a0fe3e73",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-specify/SKILL.md",
+      "bytes": 18638,
+      "sha256": "a505028de7f6489878696d6656c7d057f3a66119ebb8c0cc82d69fabb7b344ff",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-tasks/SKILL.md",
+      "bytes": 11582,
+      "sha256": "1e1d18b34e39d62d6388297f035505905741b07973102e0d44aa8647d85ab093",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/speckit-taskstoissues/SKILL.md",
+      "bytes": 8637,
+      "sha256": "47d5a13f2a39f2e40d8915feef7ff08cd36e08b176c7f28d107758e9e983b4d2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase/assets/feedback-issue-template.md",
+      "bytes": 476,
+      "sha256": "74b5dfa3a8f7d6584af059a12bae4cd6bb66d1f3205dc306bf31d4f4ae2a13b1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase/CHANGELOG.md",
+      "bytes": 8442,
+      "sha256": "653a274669ff4d84eb3004ad379050cb73dbf75740df82ccb9768f29f0422190",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase/references/skill-feedback.md",
+      "bytes": 1052,
+      "sha256": "85e688b56623f9250d23b60ea950dee740fd537980fc72178fe185eab76742b7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase/SKILL.md",
+      "bytes": 14462,
+      "sha256": "44f4cfefb57751abf9288fb2920de621c748964de1301db627dea725e187bccf",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/CHANGELOG.md",
+      "bytes": 5757,
+      "sha256": "849d982843672c2c7796cf3488b20c29538cdd304c1d64a60aec2500138059e9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/_contributing.md",
+      "bytes": 4283,
+      "sha256": "b851de03355ea919862b637fdc14fefab648149cf1013b0194a17108b2d8af4c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/_sections.md",
+      "bytes": 1721,
+      "sha256": "ad2d6f6b0938ff844f7f8971153ab6d08a03ef6511b02fb9cee9336c7b209e93",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/_template.md",
+      "bytes": 1074,
+      "sha256": "39e9fce3c6ae1af110f689e018d4417f3547ed0417a7b6198b207285e60bf9b8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/advanced-full-text-search.md",
+      "bytes": 1523,
+      "sha256": "0682b713263c5b6b9638a31f810bad07aa179bc4f79bbb787b92ed287e00fe76",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md",
+      "bytes": 1493,
+      "sha256": "9bcbf7da33f6fe6fa9525680ca26d4e3412b534104cffb5f8529596d76631e4f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/conn-idle-timeout.md",
+      "bytes": 1328,
+      "sha256": "cd4386d0b5a2bd6d0148975f0f379016b47c7cf139b9483c4f24619c6a89f5e3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/conn-limits.md",
+      "bytes": 1369,
+      "sha256": "9ed6e5e3a45458a52f2863a60324a05d80da1d9f3e23bcb83b06f464f6a3cee7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/conn-pooling.md",
+      "bytes": 1423,
+      "sha256": "60cd5f7942c44bdf6d8622a49a2e9f0f7fd01daf8e62bd1bd66b195cd6942975",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+      "bytes": 1575,
+      "sha256": "5ce48ff1e426c9b90c75c5733817fc2dd8feea9e4db3298ec9373b9cd0cf3bf8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/data-batch-inserts.md",
+      "bytes": 1341,
+      "sha256": "98251b608bb6cfefd28828c9e5fffc705a155f1212fa0cb82904c5bc2e417572",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/data-n-plus-one.md",
+      "bytes": 1414,
+      "sha256": "f5c60f85f208161cd7567bb7cff0f559618814216a4426bb1351b51f75ec334d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/data-pagination.md",
+      "bytes": 1408,
+      "sha256": "c0bffeb6880c1f5b961e7c2ff36fd16686ebb09e5e49ed17499654beabea3e60",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/data-upsert.md",
+      "bytes": 1440,
+      "sha256": "b366aa7da1e7929fba3011f99d949b2593967920d0c3c8572e07c0407c367054",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/lock-advisory.md",
+      "bytes": 1587,
+      "sha256": "6d6b50c5ec9f85eb7aebbb1466e642e427c1732efa558488a9cae7ef9903febd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+      "bytes": 1923,
+      "sha256": "55f2074581d4db4996fc3ea1d3c120295209a70115f773e2c54f6b312405b293",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+      "bytes": 1400,
+      "sha256": "2538a22231c0dfde9967812b6bd5fb347287b671f72806495f89d0d0764e5fe6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/lock-skip-locked.md",
+      "bytes": 1407,
+      "sha256": "42c7492ba7f5d2c8ede9a5af072ea63deacf71e5695e022cae15b46b1ce4df13",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+      "bytes": 1486,
+      "sha256": "94881b47194cb164b1d2a004e79f181370af44ec830b9263e990e2710bd02b76",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md",
+      "bytes": 1473,
+      "sha256": "812bf181876bacac5a2f914e7ffcf2a0a215b6d18dda752e65e75d926cbbcef4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md",
+      "bytes": 1561,
+      "sha256": "8d35221e676f13b122865d5df947a008c41367bd180010e52fde3c429e8552a9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+      "bytes": 1498,
+      "sha256": "7e75d1b4d4431cb874ecc28710e95b7d2d7364511daa5d2c8e9d7de7ce1d0054",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/query-covering-indexes.md",
+      "bytes": 1327,
+      "sha256": "028770393de8c0be6dcc7b9fb017f8209761d1854ebf433f036367e602f2d04d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/query-index-types.md",
+      "bytes": 1569,
+      "sha256": "5f054ce4f835091bb5ff89875deb5f8ade9e447e2ea62d1ca07382d104af0f2d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+      "bytes": 1261,
+      "sha256": "15ddf120c86020612d2713225c850e0e4f022b38021f40f45e5bbe58f245dcc3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/query-partial-indexes.md",
+      "bytes": 1392,
+      "sha256": "106e2b88ff64115efa0a6b5f448d31788681493eeec05ad373f7c2ce6c8e0381",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-constraints.md",
+      "bytes": 1960,
+      "sha256": "d6e16d565c9832b70f8b1d472f7dc86dafa1351a44e8da72c88b48d337f73d7f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-data-types.md",
+      "bytes": 1499,
+      "sha256": "df3197b3393f37b065396c2d3d2035d870d5d572ceaf6562e7c85559dcd11871",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-foreign-key-indexes.md",
+      "bytes": 1738,
+      "sha256": "b49a4e74ded6dd2a2bcf82d21fd22470c403b54cc526dc387f95c001c005c5d2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-lowercase-identifiers.md",
+      "bytes": 1783,
+      "sha256": "e7e3e073df2fd787cc4e58dbfe1b7eb1f80439326042c5e73a69ae8a3b1dd734",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-partitioning.md",
+      "bytes": 1603,
+      "sha256": "d940ee09551e970f97c629e816502989c37f7dcea1df94b4b52f79f6eefc9971",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/schema-primary-keys.md",
+      "bytes": 1882,
+      "sha256": "8e4350d0c4b0034fa843ef74716978729329543ff57fe9fad1d22e31a86ae0c5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/security-privileges.md",
+      "bytes": 1620,
+      "sha256": "079b20aba6ce8dbea81678fafdd95b4f9785440e91d07eb96029104597cb9693",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+      "bytes": 1422,
+      "sha256": "e1b419ae752d06f6180a0dd61fa21cfdc2b19e34902495bd2827d3e6e350dfe3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/references/security-rls-performance.md",
+      "bytes": 2166,
+      "sha256": "b9defa5e5815a5dadf792b7c9ad7941eeaa1034082b3b06c9cd56083184022ad",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/supabase-postgres-best-practices/SKILL.md",
+      "bytes": 3295,
+      "sha256": "4d7d1bd60f2ad7fd0d510269279519059dcc630d832f4c241d90735244c70525",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/condition-based-waiting-example.ts",
+      "bytes": 5054,
+      "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/condition-based-waiting.md",
+      "bytes": 3516,
+      "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/defense-in-depth.md",
+      "bytes": 3650,
+      "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/find-polluter.sh",
+      "bytes": 1986,
+      "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/root-cause-tracing.md",
+      "bytes": 5321,
+      "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/systematic-debugging/SKILL.md",
+      "bytes": 9530,
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/test-driven-development/SKILL.md",
+      "bytes": 9578,
+      "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/test-driven-development/writing-good-tests.md",
+      "bytes": 8268,
+      "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/canvas-design-system.md",
+      "bytes": 7888,
+      "sha256": "f5de85ff39d9f3a8275c4164b921ba72d5e1d34b8d7a9243d9ee34b3870a4f5f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/shadcn-accessibility.md",
+      "bytes": 9976,
+      "sha256": "a22cd4ccf82b635b2b2c4f12416a0c4f7edcd825d219d6089450fa797a0d9511",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/shadcn-components.md",
+      "bytes": 11155,
+      "sha256": "79c4f91cbf68993a43fa3a95889c35db73de45bdd3dfd83a6830863c01aa598a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/shadcn-theming.md",
+      "bytes": 8672,
+      "sha256": "d17d641474221123ff0e0288043ca2f2dab3ac96908a19eed28d82f9e58865ed",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/tailwind-customization.md",
+      "bytes": 10171,
+      "sha256": "4c5adeed6263a274f74f6eb2c816ca420fd6ef4f35683582988bacd404799afe",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/tailwind-responsive.md",
+      "bytes": 8270,
+      "sha256": "8d00ae620df26daea4623c7bf996d6e612e09d359305fcfa2b40cab757ed840c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/references/tailwind-utilities.md",
+      "bytes": 9980,
+      "sha256": "aba1c40ef84f43beea142ae310371e332541f39d973df90a71f1854823effda1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/requirements.txt",
+      "bytes": 444,
+      "sha256": "09402d2d274248e18bb5fd0a0267fd7cbf99b7a2440e73e87f054aa8f259f9da",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/shadcn_add.py",
+      "bytes": 8799,
+      "sha256": "0c11d28ce9f12217df2c3306f24ae1f73527d5116db63707ab55cbe1a8bcf28c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/tailwind_config_gen.py",
+      "bytes": 14418,
+      "sha256": "2e264ec871499681aecd6111f60743fba31b5ceb7e9ccb2b71b7346039285f89",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/tests/coverage-ui.json",
+      "bytes": 35121,
+      "sha256": "33bdc1f5998db9a38cac8e6128a82711f8f8b65fbb3dcb0c1680ae260441cbce",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/tests/requirements.txt",
+      "bytes": 52,
+      "sha256": "80846c98ee02a7e9651ec4eee6709f840b785646b469aad5284ab7ab9b344f17",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/tests/test_shadcn_add.py",
+      "bytes": 9919,
+      "sha256": "35f60ac5d74c4a7f950854a0337883c3e8dd812c58fcf6c5153876e43a6effa2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/scripts/tests/test_tailwind_config_gen.py",
+      "bytes": 14658,
+      "sha256": "4efa59fdbe318d55e6a452d85401db5d1aa4504f93739878bb40d8bb504af585",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-styling/SKILL.md",
+      "bytes": 10045,
+      "sha256": "f8b6c3832d2af51f67b3932e3c4a79bcd8a8596cc61ce1547a686fc951e5c62d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/app-interface.csv",
+      "bytes": 11046,
+      "sha256": "331e7cf2c0b222d80c566c5f255c63cb339f65bfd02e471a720f28e4864a9f08",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/catalog-summary.json",
+      "bytes": 2392,
+      "sha256": "65fe0b64480a8a827738297d0a64ca55c627d4afcb774fe4555c59cea8dd6905",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/charts.csv",
+      "bytes": 23365,
+      "sha256": "4115cf1120680f2cedef0676cb648f30c7ef4699e2a947535d4113e71ed3b12a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/colors.csv",
+      "bytes": 37940,
+      "sha256": "8162429222bce22df62b564085946a30d07cc9722c58d0a3a494bd0d1d00841c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/data-provenance.json",
+      "bytes": 36686,
+      "sha256": "e82fb33ed49375a300e93d9c11ccd1c1493c999e84ee7ee295e527634786e2e0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/google-font-licenses.json",
+      "bytes": 433127,
+      "sha256": "35688523f2955795caa1a47c53b83099e60c1708461476f9cc3a050cf3b0148a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/google-fonts.csv",
+      "bytes": 747241,
+      "sha256": "1c8c3b2ea1faf6a1012da463756def8b3889db33f2226f0343bb4daa80307d03",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/icons.csv",
+      "bytes": 57945,
+      "sha256": "50816c6012030178195a16ee481ebf58b47bd985d70e8ec58886cc83f6eddafc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/landing.csv",
+      "bytes": 25449,
+      "sha256": "9a2edd3bb676c2a58f00ade7a062e285222d4297bfd847c8d5b056f0dbbf52d0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/motion.csv",
+      "bytes": 14679,
+      "sha256": "381affe8df8ea1f66fbbda2598827f9f54299107bbe6a1b4e9b68f6b62091ceb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json",
+      "bytes": 823933,
+      "sha256": "2399325233b277b5c97a80e6a5e8941154f5d057beee4e7613db87c87d700236",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/products.csv",
+      "bytes": 75623,
+      "sha256": "42473f75e8dde5987bdf89ce55d8c168091b80a356cae691dd60247d80720b70",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/react-performance.csv",
+      "bytes": 15080,
+      "sha256": "3d925802539abac5afeb63ae8aa1960b7229ad271b3a47caed40ab2d97ad0734",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/angular.csv",
+      "bytes": 19863,
+      "sha256": "704be83f2bad30c7e6de01afb113ffa01e0c458762f48b7102f31ba2367b5553",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/astro.csv",
+      "bytes": 14591,
+      "sha256": "2c2f55fadaafc05e04cc321c8194a1a28b656e6757fe2ba316f41b16428299c6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/avalonia.csv",
+      "bytes": 27327,
+      "sha256": "442fca14675a020683473e7e49f08abb27b9df0765c80efe54aef61f1a4ac258",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/flutter.csv",
+      "bytes": 14192,
+      "sha256": "64dba0ac17349f28bce517a0f5f48c54d9ed2e487ec0c0258303463b382f41a0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv",
+      "bytes": 16551,
+      "sha256": "d05a581d20af57b8ca0104a6d31d90a07c437d500662a96c3029fc2f9a4678ee",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/javafx.csv",
+      "bytes": 33577,
+      "sha256": "2e819b8d5abdd23ad4dae0991650fdb57af497aabd68b37463aa9c442944c869",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv",
+      "bytes": 12295,
+      "sha256": "699de218b286948eaec7d15767b6e1350ee299167e49bf476d82e3ff58724e0a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/laravel.csv",
+      "bytes": 20163,
+      "sha256": "854ea4daa5fc61292d22235ad33b49ba3fe22423c3de8d3cb03758ffed3b59f9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nextjs.csv",
+      "bytes": 18687,
+      "sha256": "ecd2c27b2ea0127d203ae726060efcdd7335b5e83f96b99e4f3befbbfeebd5a4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv",
+      "bytes": 24106,
+      "sha256": "c36ee8470926b4a0748d241363c71664c9969c2edbc62f7f72de0db73880fac6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv",
+      "bytes": 23014,
+      "sha256": "3d9b54ed2d151bd9c86e9e5609b8a6f88a00c4c52fa601a30af96c49b2c4d176",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react-native.csv",
+      "bytes": 14049,
+      "sha256": "ba31dd9c0c04da6bc02a74448bf121f9c0728ae5ba3b4d47b487778b0a1135b5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/react.csv",
+      "bytes": 19036,
+      "sha256": "2d2b9c198e875106a30f7ee68341a9ee0033cad60a7e130cf23152783e08aeda",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/shadcn.csv",
+      "bytes": 23184,
+      "sha256": "e56cfde5b74907836ac3582a4779d5b7f3d206a702ab81b8669a1b668c3eeb51",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/svelte.csv",
+      "bytes": 15078,
+      "sha256": "f6e379ba802941ba26b01d4ffbe3cd39120f2587659a1d93851c707f66bc13db",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/swiftui.csv",
+      "bytes": 15323,
+      "sha256": "bdd9231ff3ad658f4e7c063e1eb49df2fd09ac8d90631a86df899b39833b9623",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/threejs.csv",
+      "bytes": 46051,
+      "sha256": "97542e0ba34915a0ff7578be20e1619495df47c95c8c1c39b83e3785e1de771f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uno.csv",
+      "bytes": 30091,
+      "sha256": "a0474363e4225b5367214d5675fd3e075f137026f9500f0d04357882ef4f6d48",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/uwp.csv",
+      "bytes": 24692,
+      "sha256": "c409f08c1fbba1f1029f1acaa554e7b4471cc85517a5751c9f2e62465badcd5c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/vue.csv",
+      "bytes": 12813,
+      "sha256": "b655f1ebb9dff2652d15981f31b1784c8a6d4759efd2815a14f3088257569f95",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/winui.csv",
+      "bytes": 27890,
+      "sha256": "e676dc1c13ee6c205c40b0746f1335150a346c7a49a0616d2545bc3d2c930c85",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/stacks/wpf.csv",
+      "bytes": 24158,
+      "sha256": "9781a9950b20333637b30a02e498b7efca21b618a3eeb8665836f3ac6e974da7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/styles.csv",
+      "bytes": 149478,
+      "sha256": "a93a4d9d7025856575d7b7583bda020be9043013432c5af7c58af9dbdfb206b7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/typography.csv",
+      "bytes": 49997,
+      "sha256": "321fc446e89024488ebae96dda93efc4d2307bd8bddb240857ad51364f6782c8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ui-reasoning.csv",
+      "bytes": 77360,
+      "sha256": "f0774dd741cecdad5eec842034bd6d5e9ea50e9f220a1910069748daa0bb8e9a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/data/ux-guidelines.csv",
+      "bytes": 27516,
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/core.py",
+      "bytes": 41234,
+      "sha256": "e544826963efefce3c59b65e18d83d92a5baf571f05458025bf1fa9021eced42",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/design_system.py",
+      "bytes": 70937,
+      "sha256": "6a94743c3362c9c7e6d1450b94f4014d9ea752e7b4e151f6f0bdb217e0544bf7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/reasoning_contract.py",
+      "bytes": 5824,
+      "sha256": "b8bac1af82aa280d3e06f00aabaeac4337e632996b07fed874e2b6ee6e9c5913",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/search.py",
+      "bytes": 9123,
+      "sha256": "8373e2dd2d560d9853ec116140de0e0d5bee45a6abe5e041173c84e1c36a7f87",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json",
+      "bytes": 1079,
+      "sha256": "22d8dc81a7d6827b7e8b64b53e7d184210fb9759e8e294e0d5133c81cc460176",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json",
+      "bytes": 1772,
+      "sha256": "c608ad5c4084ebc50a4bbbfb69ea2456c01fd5519c457e18410fffd250ae948f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv",
+      "bytes": 480,
+      "sha256": "4e0761b839dc6b2187a370e82eddc0aed8a7ff10c09e28dd814bb3656dac595b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json",
+      "bytes": 328,
+      "sha256": "30bffc29ae348416a2de2f9c6c418e768e4578f136b0f4bac5d2f70124f2e9ba",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json",
+      "bytes": 97,
+      "sha256": "6243a48a4619986768c4628e2d0c98ff195beba71ba9be5df8f0c52fc6d90c0b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv",
+      "bytes": 495,
+      "sha256": "68362c9a700c13b96f000784a0198c1c7e117a7088a01c85744e44233038fe9d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json",
+      "bytes": 571,
+      "sha256": "ae4d0bb076240824e1b643c2270d1f8cc0952a69502ec1e622b7dedd85b930bb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json",
+      "bytes": 370,
+      "sha256": "500588c757d6de03e3d7e69b27a8b8b1f88ccf6bb0333e4c1e9b0d6a4f112475",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json",
+      "bytes": 87,
+      "sha256": "d79f2ee0afdbc2f87776733e145df3538a16a25d7c2fba0056bb48295dad0ded",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json",
+      "bytes": 81,
+      "sha256": "1c57a1d76bcc0cdd3632d4c18b9c0e79576b4591df39831c9607e5d0eb4f2cec",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json",
+      "bytes": 89436,
+      "sha256": "38398452985116e74e31bd6bccca0f4decd1bbfe4eebc1ac99f7a1836baaf77f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json",
+      "bytes": 36734,
+      "sha256": "e77d36eebbf6ddc2860946a02cdb659351da6c09f2688f1ed30939a418099646",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json",
+      "bytes": 5079,
+      "sha256": "9d738e11c6b82fecc8d0946e7b38515518ded5ed3294a7eb19a021c4edb5b57d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py",
+      "bytes": 19466,
+      "sha256": "3e2ca5d12702318f641ae62d0c14f22a3bcc84d84e79b863c0e947d475604adb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py",
+      "bytes": 8954,
+      "sha256": "3ffc6b4905c9ea26d7ac4527ab154d153584231aee71b2ae4bd017977fa09cc5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_core.py",
+      "bytes": 16680,
+      "sha256": "3527fe2f4b852f69f07c17ddc0d615d9a6e025c924e45a33985579a94a8d2118",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py",
+      "bytes": 19513,
+      "sha256": "0360d6e10080c0bca214f2b0bbad582ba50702a542ce21013351aca54938df3a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py",
+      "bytes": 7690,
+      "sha256": "517ba1ba6195c94811126d1162139c51aff77fc68c3e320c7bb6c1e89e76bc9b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py",
+      "bytes": 8170,
+      "sha256": "904f90bc6d364763673fa6067d98a4227d535760fa8b6d26abe22208176997ca",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py",
+      "bytes": 8430,
+      "sha256": "2fe56a4d6fe5fff15ff592274b0eeaba925146cefea6c0fa29d8f1b77c9aca1f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py",
+      "bytes": 7425,
+      "sha256": "cd14d0092e8a454d213aa104b53e4e70ba698491fa00fde9fdec5ca8a3d70011",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py",
+      "bytes": 5874,
+      "sha256": "b51d32ee8a15505b87cb81957fb2d1b385e041e8beb4463c311d236bfd29ebd4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py",
+      "bytes": 7699,
+      "sha256": "becc5fa40e7516613d4e9930f226aa483e3796090c17cb16542c93d1927e680d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/scripts/validate_data.py",
+      "bytes": 52064,
+      "sha256": "718ad4cbb227436015c9c2bc80fc583d6ed738b01c1a940ef85e350780d99f58",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ui-ux-pro-max/SKILL.md",
+      "bytes": 55451,
+      "sha256": "e5baf9400d4347e5ed3eb1f6b99cd0b9ba545b8b0e507aabb2b87397bbf73ea1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/user-research/SKILL.md",
+      "bytes": 1792,
+      "sha256": "c72224f47474de011e8523550843ba2a5e5fd1e008c78456b2d166567fa3fac6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/ux-copy/SKILL.md",
+      "bytes": 3543,
+      "sha256": "2220c4aa2451f8ea5818dabb1db804f248c2d038b3260427b9b5aac310a6ed2b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/AGENTS.md",
+      "bytes": 22627,
+      "sha256": "89e3ddd58fcf99a53a50e25dfd21b8cde1be5f10b7df6bacd3dfa6796932f516",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/metadata.json",
+      "bytes": 530,
+      "sha256": "49262ed5cb4186f31ee980cf8d990be0170c51efed4908d0464a1cff9905bd05",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/README.md",
+      "bytes": 2140,
+      "sha256": "85915a43a6f0b4efe525e3cf6398dd866166da2025837c4460468a24a940da94",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/_sections.md",
+      "bytes": 829,
+      "sha256": "a174213b87e6911e2b766995a2cbaf8d1534057076e82fb79fe3f0ecb38047df",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/_template.md",
+      "bytes": 329,
+      "sha256": "587f7d16b0660eb61fee4a4d3d7df2b3077d6835de170602c7d6e60bee559131",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md",
+      "bytes": 2267,
+      "sha256": "007555ebb020f4d552582a2c4db194db71a1fd33094012e5187bcfa4f8c392d5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/architecture-compound-components.md",
+      "bytes": 2600,
+      "sha256": "f246af13dc269b521cf20eb8ad99a0cb645beac381c8c9b117262c34612c8457",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md",
+      "bytes": 1886,
+      "sha256": "7c45a0d21b3c4126a32cba916ee31adeae195386ad1dbbe6634aedb7457aa0ad",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md",
+      "bytes": 2395,
+      "sha256": "8c19e596e61807549d01ce8c6954c6358199f97a8511c0c02c625ec0efda8c0e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/react19-no-forwardref.md",
+      "bytes": 953,
+      "sha256": "881830adb7534c4b2d70db426556646ad9837f5478f744f35641f635ada22227",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/state-context-interface.md",
+      "bytes": 4974,
+      "sha256": "09e73afbf9285fa416679cc864a287b9e8b821d0969272ab784295386d8c9bc3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/state-decouple-implementation.md",
+      "bytes": 2699,
+      "sha256": "76a8c1eb29a70d8996ab3f71260345af2f7bc89deab815a421d6c87c6591a9c3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/rules/state-lift-state.md",
+      "bytes": 3224,
+      "sha256": "74c54038a6c554c748fe31cec673b80861b5d920b7553cf78cdf10d18b4b759b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-composition-patterns/SKILL.md",
+      "bytes": 2886,
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/AGENTS.md",
+      "bytes": 108261,
+      "sha256": "fc93e7421177bbf869cce892bc60a6c83a4517d974bc3bf65c4e2c1e58a6ccf6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/metadata.json",
+      "bytes": 921,
+      "sha256": "c4e18bac3290fbe1b471a605867d4df68b03144ea26b8befdbe8f9d8fd124354",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/README.md",
+      "bytes": 3360,
+      "sha256": "9eafb2123d3b8b2aef41fba0db2648a3f4f49996f8c7c8bb2c86263befd8b48a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/_sections.md",
+      "bytes": 1554,
+      "sha256": "01c59969e4e867f0708c8f8ef9c6d87fab9a07d0586244f429ff84013db8a115",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/_template.md",
+      "bytes": 631,
+      "sha256": "99df2a3ea088c6c22de2484ddc7e964d0e9923846f44c63380343ecc64455442",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md",
+      "bytes": 1802,
+      "sha256": "55ed8f9f27a1bff803d6fa55828176207714b02123cbb97ddb8a90d88024a723",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md",
+      "bytes": 1483,
+      "sha256": "a3097edeecfb2ff6851cd66ed8cdf0617c3c88180504bee824aa6e75a215bbbc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/advanced-init-once.md",
+      "bytes": 958,
+      "sha256": "3e4dc22173eb0e2b6dcf583e3babd862b8696328f8f59aee7c4d746c5bc05f6c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/advanced-use-latest.md",
+      "bytes": 1072,
+      "sha256": "8a3f64dfe5a77d1564248faf17fe662ae75b55d497a243cb30b38eb07ccbbf9a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-api-routes.md",
+      "bytes": 1125,
+      "sha256": "523338540d73427dc14c0cbb19f2741ebccdf8b105a7b2c1b33d2905cf237a42",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md",
+      "bytes": 1220,
+      "sha256": "03107c1f70a293cd58a8abc5474c5548e20ea4efdf01b6d45aae7ad0ac1cb32c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-defer-await.md",
+      "bytes": 2208,
+      "sha256": "f3c142d090615abdcc99d31c123be37b31f0f1ed8d9ec9f7789a3bc6883ae0fb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-dependencies.md",
+      "bytes": 1293,
+      "sha256": "16ef469f877e30c6b8e1e1b4bc3e527312fa3c6318cb785a4eca186ea236131a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-parallel.md",
+      "bytes": 654,
+      "sha256": "6d2f841896279e976dfcdc1ac89e70771ac188baadfd43c096b5706cb838b961",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md",
+      "bytes": 2510,
+      "sha256": "de05fedac2eb7ae563b887b5a424464ec3dfaf84e5b7797467ebe2a796ac8afc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md",
+      "bytes": 2382,
+      "sha256": "62090b5c815fd71bf1133dce754f51abc16a9456d0ccd025fd627de27726e92a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md",
+      "bytes": 2795,
+      "sha256": "e648f6d54525f07a691357040ca5bff6ea3424788a91ff63812adb29622a671b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-conditional.md",
+      "bytes": 949,
+      "sha256": "09c8259c3efb04fc0abb8e412ccbda217c222ae8118516283e571c995fe3a7d4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md",
+      "bytes": 920,
+      "sha256": "3719fb47b191e8db4fe22686ec88448ad5af9e6838585425abbe103d0b642e37",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md",
+      "bytes": 791,
+      "sha256": "401817a7369f315fc5a68a1095742ff7d53d0461906880dc9d64a41495ee1986",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/bundle-preload.md",
+      "bytes": 1149,
+      "sha256": "d1f7cc28da7cd5ab249acd287edc5b761afcfb194e9cb62cd44c5f3543db2de2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/client-event-listeners.md",
+      "bytes": 1969,
+      "sha256": "242a873349febc1ce685e85617994784dbab92c2eaa68aed7fed5a83e7680e93",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/client-localstorage-schema.md",
+      "bytes": 1950,
+      "sha256": "0fb7cdf9dc93fdf22f87e3669f953fb9d4ac9b0be42eec4a29fe9a2560610b88",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md",
+      "bytes": 1644,
+      "sha256": "1f35016f9053de69e884ee9be00654e37979c2ca85f5e57764dc2626ff7acb4b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/client-swr-dedup.md",
+      "bytes": 1159,
+      "sha256": "644652c39c6cc00de8d1c77a7273612e868dc3f7edda30764164c12ec0f764a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-batch-dom-css.md",
+      "bytes": 3266,
+      "sha256": "480b891b9eaf96e929dc1e964274a4828e3a78009b7d00ccd965a0d425215959",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-cache-function-results.md",
+      "bytes": 1949,
+      "sha256": "3daaa11d24f4295cb6be8bc6f407f2ce83cc7b5bd1f0e68891ea8ab835721dc7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-cache-property-access.md",
+      "bytes": 532,
+      "sha256": "73e47431e74878a927061bf0ddc7cd91a7556cb35d2573f3421e82300d9ae311",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-cache-storage.md",
+      "bytes": 1651,
+      "sha256": "11b826b0433898c1ece2d3547010d8e77db9fb240185748c45db91493de9b6cc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-combine-iterations.md",
+      "bytes": 753,
+      "sha256": "71add08aeeb43091d4ff4c0b2842cce8b4bdef8ad3e732cc034bb5a84827e746",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-early-exit.md",
+      "bytes": 1133,
+      "sha256": "925ce5ce87f3347186ca62212f29cc6baa2b8c85a96d2720ad07c3d0abf781c0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-flatmap-filter.md",
+      "bytes": 1411,
+      "sha256": "9e5b166a41914d975bef7635467f8fb32cd98b5c3126c0bc6f163490812fb5f0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-hoist-regexp.md",
+      "bytes": 1028,
+      "sha256": "f9e9aef2f7c2307dd7310f283df85dcada45fc43e9bb941b0c3aa414dec21ec4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-index-maps.md",
+      "bytes": 837,
+      "sha256": "5df1bdc2cfabb2c98abd55d26762e5c18189535c2e686184f426082e62920391",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-length-check-first.md",
+      "bytes": 1747,
+      "sha256": "8b54a311c826b299272f29187fc58bc55772a04c4a72eeb29456ee96dc9fc624",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-min-max-loop.md",
+      "bytes": 2290,
+      "sha256": "87dfb67e2f39df6ad8bcfb5b78c5fb364d3c07554ad188a202408d99f3763421",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-request-idle-callback.md",
+      "bytes": 2647,
+      "sha256": "ee08f83905b4011abbc33d594033157d77561b5bbd9b36b04f0f409581ffec32",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-set-map-lookups.md",
+      "bytes": 532,
+      "sha256": "a7fd781a6ba9ad49065961b6f9a90ef486bf6b648390e1a08704025f98e1642b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md",
+      "bytes": 1782,
+      "sha256": "d0a5e1b0fec48a0a81397957e2f068e224329f7c42cb5feeed8aae6fa64025e8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-activity.md",
+      "bytes": 564,
+      "sha256": "1e5e7eaf3555e61d6a2e900089c676527d26259501db5594f59544b6c664f85a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "bytes": 1185,
+      "sha256": "9c6ae0ca7a51434e803887c64cded760956579a1452ccb80a461a03f9c937c77",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-conditional-render.md",
+      "bytes": 980,
+      "sha256": "2ec2fa23c4148285144687050c52369adba3da2fbe3d486f8d3e0aad8f06f2bc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-content-visibility.md",
+      "bytes": 815,
+      "sha256": "64eee6d5b916fe74df33363994b27fc7f71bea3bcedc7ee04bda23107ca3e6e4",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md",
+      "bytes": 1039,
+      "sha256": "93b229560fae92005ed9a2a829064607b39b2e984e92d221d05b2d41df2b7c0e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "bytes": 2308,
+      "sha256": "dc7ab358c67c177bca6e6f360fbc935ebe4efa928c0ba3ebd3f9f3d9e2000ca3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "bytes": 872,
+      "sha256": "915bacb934e2927d84b37a3f3d225a47b309ac8f9e494ed2bcb66ce07c5676a2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-resource-hints.md",
+      "bytes": 2549,
+      "sha256": "351b1095d641717b930f1b2253282b7120af3023bc74e06c17675168d4286864",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md",
+      "bytes": 1868,
+      "sha256": "4cea07b7875ba7fc2c7465ff23b63a2bb334f90aaf2d9293d38d67b05fdb32ab",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-svg-precision.md",
+      "bytes": 588,
+      "sha256": "ed468533f6e95f622859c884b122cf21f9f593ed6bb3d500a54de4b9f9bcb9fb",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md",
+      "bytes": 2074,
+      "sha256": "3a1249c3f13026b6f54ab5712c388df219d6af01b12aa542749acd99a46f4bc1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-defer-reads.md",
+      "bytes": 973,
+      "sha256": "234050a77faf50cb306be10a9e15bd4421134ab5907e75f13e6d78e2bd262dc9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-dependencies.md",
+      "bytes": 824,
+      "sha256": "17eb5830956fb56486fd3cfc7431f5849d39751730c05ad9e77dd4f0c27169c5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "bytes": 1201,
+      "sha256": "cb11ec76f50aa7b6847269f02d79b120c889a30d9ecd2c1d578f75144419c77a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-derived-state.md",
+      "bytes": 728,
+      "sha256": "1c326bb67b01fb084eb00c8911b0a7cff54681c2315b629f88e49b64eaa6481d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md",
+      "bytes": 2968,
+      "sha256": "5e68df6b2ae8058e67f476ff1ac67bde159f5a9d18df439e46eabcdeb7b52e58",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md",
+      "bytes": 2016,
+      "sha256": "4ae844740f266fc8cbf050701230286624a2440ec5be67b9a63d9edc3c580573",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md",
+      "bytes": 1173,
+      "sha256": "81c47476564ad8a79fc68fc442734255ca7d6829424359464503fda0a9f9a0dd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-memo.md",
+      "bytes": 1148,
+      "sha256": "1f258990c2f27ff6256b3cc5c43300631bb3f0d81f749aed08d07fcdcc131dd1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md",
+      "bytes": 1268,
+      "sha256": "abc2cbf167bee056743023351e96806a411d3398da8802093620aecf0721f029",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md",
+      "bytes": 2135,
+      "sha256": "1cc32907a770272524ba682eef9e7efdd8ad4533b6f89b718a1fcd7d1d0eb6a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "bytes": 1018,
+      "sha256": "5bdcf2d1558ba5204e643c887b7b4060f89630969425651eb68e96427d97f800",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md",
+      "bytes": 1844,
+      "sha256": "6f45d703343484ef9acef9388397f3642966ae6a5a258899a0cf1f9977cfbf6c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md",
+      "bytes": 1055,
+      "sha256": "60f4033909a62df5e5b8c601494f9e50a562e2f8c1c2d81eac24f38142265f1c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md",
+      "bytes": 1846,
+      "sha256": "8c3579576a61a949884167745dcfaf1d5426ba305cc61fd0a79602d70fda4909",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "bytes": 1742,
+      "sha256": "f1a649af9d1d0b5c762f6c9c4c1c70c90d7df82aa10296ee87aadb78c1b76c54",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-after-nonblocking.md",
+      "bytes": 2012,
+      "sha256": "d0b8d24a3db9f0f65f9e2bddbf230b0e03a5f60e1229d93a4a18f5e7a991c7c2",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-auth-actions.md",
+      "bytes": 2649,
+      "sha256": "a2ca8aa102839251c7971ec784560fab943c20b36fe6f80365d4110c13260c23",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-cache-lru.md",
+      "bytes": 1353,
+      "sha256": "1924b64561841923b88a657085097a0aeba3e0ba2d5470b9f5c15cc10d6ae70f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-cache-react.md",
+      "bytes": 2228,
+      "sha256": "fddeea6c870bb3da4134b61d54b7d09b83d2603f929b7547cd3dc1dc269edd5c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-dedup-props.md",
+      "bytes": 2060,
+      "sha256": "c2747424cdac46be62f835f245a0aa887b0090b416d28e2ac8676702645eeb37",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-hoist-static-io.md",
+      "bytes": 4423,
+      "sha256": "5abea4dd882b13661bd5f7dfb93f9e547d5f08176c61c448ade91b210ed5d49f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md",
+      "bytes": 1766,
+      "sha256": "4d869bf1cd2f1632e5ca4c0e64b1cf0e71c5f5a0f940bc8a22174d205e735ed7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-parallel-fetching.md",
+      "bytes": 1554,
+      "sha256": "569a2e9fc04f9606686cd75c5894ef8781b502786a7fffe241396846c7733472",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md",
+      "bytes": 992,
+      "sha256": "ad5d9656984d4a959997a2367bf59cc6632297b4634a1dd13a087939d83f30b3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/rules/server-serialization.md",
+      "bytes": 996,
+      "sha256": "f4c7d68b29c82381baad059c4a7f09e868e71ec9c3115a26ad3ae7d24c0dfe1f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-best-practices/SKILL.md",
+      "bytes": 7251,
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/AGENTS.md",
+      "bytes": 73771,
+      "sha256": "72996343b8260800fbeb9af63ddaed91f14b65dc547e0922f9f8e9bd72076cbf",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/metadata.json",
+      "bytes": 896,
+      "sha256": "59ee2274cadbd95b2220727028f0dbc26d3e0251e7937226edc9e7640756ba21",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/README.md",
+      "bytes": 5064,
+      "sha256": "d60d7623005a833b928be6a109ed9d14dea43d7217fb534e8f2e4de5fc1f0ddf",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/_sections.md",
+      "bytes": 2228,
+      "sha256": "21d7445e92bd7d393b420118c3fb9ebbf30aaf123a15143afb6c0b1b562cfdfd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/_template.md",
+      "bytes": 631,
+      "sha256": "99df2a3ea088c6c22de2484ddc7e964d0e9923846f44c63380343ecc64455442",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/animation-derived-value.md",
+      "bytes": 1373,
+      "sha256": "689228e9d59227934f296563963951aa9368be0afb2a188f650de161203b1862",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/animation-gesture-detector-press.md",
+      "bytes": 2559,
+      "sha256": "69408d4be669e74689d865c5f50a22fc3a802d521fe493371761abd20526e58e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/animation-gpu-properties.md",
+      "bytes": 2059,
+      "sha256": "f885e4179445da27cbc225e0a4aa3ed9016fc3507ca6f864392ba7a9d0bd7516",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/design-system-compound-components.md",
+      "bytes": 1625,
+      "sha256": "dcb10900a58fcf57cca2e27c062d02df2325a7949e08fb45e9e05cc2b132b1a6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/fonts-config-plugin.md",
+      "bytes": 1393,
+      "sha256": "b92568774064a604e7a479d4c8d7263aed5609740e9161d2f2764bfff761905d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/imports-design-system-folder.md",
+      "bytes": 1418,
+      "sha256": "aa6337f7f2869a46a9141ec65e02c3da5c3bf051023899b82e0f0aef5bff8423",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/js-hoist-intl.md",
+      "bytes": 1645,
+      "sha256": "b4b08622465ffcd5e5961878eb8c6d7359aa242d16c990b59941c9111962fe46",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-callbacks.md",
+      "bytes": 1059,
+      "sha256": "db800e9dfe0080eb4954b96e2a362ee8344d08e08b1ed06bc8059450f3e6f0dd",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-function-references.md",
+      "bytes": 4133,
+      "sha256": "b54470e41d578b207ee3223f6853efb7fbf8e5f83d9aecf8da16989072f99544",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-images.md",
+      "bytes": 1417,
+      "sha256": "e88f16ac113c29230d674b7aa2c66c31d5772a74b1ea378d48a97b1143fe6c19",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-inline-objects.md",
+      "bytes": 2308,
+      "sha256": "e2a80aac0f29c6abaf0163c1cc273d09cc8a0030ec077ca2022bbf5c309e4625",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-item-expensive.md",
+      "bytes": 2466,
+      "sha256": "a68cc8ec5dba3c55761bd5df9dfd3d98485f63076868d3e03af15f1e58907ce3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-item-memo.md",
+      "bytes": 2250,
+      "sha256": "38ec1d149ee485434d11c2b9e2101dfc914afadae4a0738ca905f26b05f708c1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-item-types.md",
+      "bytes": 2749,
+      "sha256": "eed225f4e9e504bfa7db01f5395d1402545cc47de8adf1829a9408cd5d158cf6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/list-performance-virtualize.md",
+      "bytes": 1742,
+      "sha256": "98cad308118acb4d6e8e975c0168ce56e2d48ca52ed47f23bc9a30667c066ada",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/monorepo-native-deps-in-app.md",
+      "bytes": 1091,
+      "sha256": "8368b109027fcec1b8a81bfb99718aef2b64edaba77107f73d7c465cc5a14217",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/monorepo-single-dependency-versions.md",
+      "bytes": 1351,
+      "sha256": "61c01b9eaab1e319bf078204231fb573bdfea3c43a6eb99e7ef73ee95d474ccc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/navigation-native-navigators.md",
+      "bytes": 4941,
+      "sha256": "6642dedb57e72f0b56df5fbc3d5b8aaa91fc4456932c12712cfd076d393f32c6",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/react-compiler-destructure-functions.md",
+      "bytes": 1274,
+      "sha256": "8048926a4fa3fbd28fc0ecf4ba4c383a2f0ed06c2fd7330dd4a15d7f4e548044",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/react-compiler-reanimated-shared-values.md",
+      "bytes": 1268,
+      "sha256": "3174303a72b6849ff0eda5cd9f9650f26baa5f31ed28d35a75076af714fb2ffc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/react-state-dispatcher.md",
+      "bytes": 2255,
+      "sha256": "7ec5b653e3ff8d9ca97d8d66981cce5590c0e49fa79ab708fd6324542b588870",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/react-state-fallback.md",
+      "bytes": 1735,
+      "sha256": "eb76e386d71680bfdfc0ab64dba1221f4d3d0fdcb4980bb4a871381d58e9e58b",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/react-state-minimize.md",
+      "bytes": 1740,
+      "sha256": "31b989de61defda1c61d8578c4700efd64a427218c3f3dbb7062a1666e1cbe43",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/rendering-no-falsy-and.md",
+      "bytes": 1812,
+      "sha256": "7300fa45ac3a4968db144727a21052421bc62de9b5e9f6f59e28bd16d2fff001",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/rendering-text-in-text-component.md",
+      "bytes": 697,
+      "sha256": "fc67897b6126b6b5574f4d284a6c5b2282528fe89de8ec08e6cfd2a86ab5b235",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/scroll-position-no-state.md",
+      "bytes": 1936,
+      "sha256": "70aa1ee679e755556d7b01b326431fe898d3c23ddba40d0da6bdac23c87a1525",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/state-ground-truth.md",
+      "bytes": 2172,
+      "sha256": "9f3efc73d2e66a5deb3199c9774f42524cd6a0f69784af38301946be5d747cb5",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-expo-image.md",
+      "bytes": 1648,
+      "sha256": "c3c13cce3dd2cc7f8a9b4861e5743af98f62e28f5699f72f492e79a335cfae55",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-image-gallery.md",
+      "bytes": 2546,
+      "sha256": "b34d1ba03710ed9622187716541ae618968e7d03bc28895c2ac918d3cc5853f1",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-measure-views.md",
+      "bytes": 2232,
+      "sha256": "170d058abc4900ea9e851e54f5e8b437ffffc2c9d3847ae35e30a515c8990c3d",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-menus.md",
+      "bytes": 4598,
+      "sha256": "5964adbecfe9aeb28d736a4eaacec6469a1c4ca3f48779d243eb38b6d181cfe9",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-native-modals.md",
+      "bytes": 1859,
+      "sha256": "d803493b3046ad31cbb2c189f1fffb948fd0055050e3c322589bd548421e23a8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-pressable.md",
+      "bytes": 1534,
+      "sha256": "52cdbad127d713d7d32c59ef74ab1bbd6dca211edc9b25993453f7f4545e79fa",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-safe-area-scroll.md",
+      "bytes": 1579,
+      "sha256": "3dd776caef2344d73529010940b50042861d06d31a192122a4df64bc06aed0e8",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-scrollview-content-inset.md",
+      "bytes": 1317,
+      "sha256": "89e4bbe5e9a602660f4155e9d4c0dee09db1adf21c73f47213cd67ec896e5a13",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/rules/ui-styling.md",
+      "bytes": 2212,
+      "sha256": "cdef4d8b1a097b844e5992ab78e66a2dc604faf1e90f8d325a0eb116e8ef6a7e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/vercel-react-native-skills/SKILL.md",
+      "bytes": 4439,
+      "sha256": "4012750a5ccbe064ca04af3835d5d1b011979d2d09d9b6df1c8128fac58e0a66",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/verification-before-completion/SKILL.md",
+      "bytes": 3646,
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".agents/skills/web-design-guidelines/SKILL.md",
+      "bytes": 1231,
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 134,
+      "sha256": "d7770f90cddd8bd65b6d9ad83a41c46d04cefca28ec882f07182b50636bf15c7",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".prettierignore",
+      "bytes": 322,
+      "sha256": "fd112cb230b581c054dd683bb00bca639338c4a95060b118c4469d80816da55c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".prettierrc.json",
+      "bytes": 89,
+      "sha256": "2a27fe84bb94e145d7580b118377a97c0e62657108a23b36912399b91cc1e36f",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/.gitignore",
+      "bytes": 586,
+      "sha256": "0a61c5378b0bb2e0f85babff99c8b166f2170a2c12378cd17d929aa19296ec88",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/feature.json",
+      "bytes": 71,
+      "sha256": "e9fd065c809d124d0906a167bd8cf01fd6258daf16d923c69d89c1caba75a8b6",
+      "gitState": "ignored"
+    },
+    {
+      "path": ".specify/init-options.json",
+      "bytes": 205,
+      "sha256": "8c74963c75bec05ee624f37208dbcfb9227e40c09c97ce21851e17219af8965c",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/integration.json",
+      "bytes": 286,
+      "sha256": "8bace24f46460e51826d86bc4a41010838cfed92eab69c7081ee8fa9797e16a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/integrations/codex.manifest.json",
+      "bytes": 1300,
+      "sha256": "e884eb48c7b2424eeb3b15d66dfd2d6ece257a438aa220a4ba9c97913be286ff",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/integrations/speckit.manifest.json",
+      "bytes": 1535,
+      "sha256": "3a239413ce51b2d8d43de41c04c2f7b57b6299ea2f5c09439d2c18be2cda5373",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/memory/.constitution-template.json",
+      "bytes": 103,
+      "sha256": "8fc4b39294bae0c10d59547ad7d415b6f0e890d656cbf7171dd567f4e9054711",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "bytes": 8721,
+      "sha256": "460ab2b8c66cf6d2a212fde43191a02056e2ce0c2dc14a68f419f14da0041159",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/check-prerequisites.ps1",
+      "bytes": 6974,
+      "sha256": "057404ffc15acea9afeb169d9c3942de4940c7ee6f889a1ae423a24133e15340",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/common.ps1",
+      "bytes": 35296,
+      "sha256": "8b188a9c3a2e979cfcb874acc4452175c00e9095cb0caef18374ea0cfbc384c0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/create-new-feature.ps1",
+      "bytes": 14876,
+      "sha256": "481c7368541a816b1679e5ed65fa9e5aea84b09f8be3a02ff8a340e3b48dd58a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/resolve-template.ps1",
+      "bytes": 889,
+      "sha256": "e49c565a09902e4ebd4b5a51c4e014d5067fdee5b1592f15cb44ef31f430d745",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-plan.ps1",
+      "bytes": 3062,
+      "sha256": "5939ef98418e8dc8cc722ef53ba359fc814f3d2a9fd7620f04e8d145a7041f1a",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/scripts/powershell/setup-tasks.ps1",
+      "bytes": 3892,
+      "sha256": "578c19c7fa196327c1c6791e3179accffab049fe62851961139d67bd699f336e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/templates/checklist-template.md",
+      "bytes": 2033,
+      "sha256": "70bbc48e884fab372ffb09e83e78ff983e28b69caebf8cd9964a02b6836683ac",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/templates/constitution-template.md",
+      "bytes": 2346,
+      "sha256": "ce7549540fa45543cca797a150201d868e64495fdff39dc38246fb17bd4024b3",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/templates/plan-template.md",
+      "bytes": 3682,
+      "sha256": "a828ad6206526574ab3fc99be6d0154588cb1c9774c5919d71b81ab5b2dbffa0",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/templates/spec-template.md",
+      "bytes": 4556,
+      "sha256": "3945437fc35cd30a5b2bf7beea680337c3516826d3efa5a6b92c4a7eca1ba28e",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/templates/tasks-template.md",
+      "bytes": 9171,
+      "sha256": "b0f527d41e546af0c31903e04f9b20965b6b497b573792198f663a64ce128863",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/workflows/speckit/workflow.yml",
+      "bytes": 2118,
+      "sha256": "177761c5e7df28126beea043b5cb45aeaf7958090c022dc11ac71399422fcfbc",
+      "gitState": "tracked"
+    },
+    {
+      "path": ".specify/workflows/workflow-registry.json",
+      "bytes": 381,
+      "sha256": "34249016bb4ee506b2f6bdcea97858785514eebf7a5a5fe7578141b0415e0e64",
+      "gitState": "tracked"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2850,
+      "sha256": "bea5dbfe63f1842ae8363d366f76291e5ff823cdb94fe5f71cd709b12f7def2a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "app.json",
+      "bytes": 315,
+      "sha256": "8039b67a6154c8a7ba5124deafbffe0d9ea8a1f38f4f2fcf5913407c730de355",
+      "gitState": "tracked"
+    },
+    {
+      "path": "assets/images/icon.png",
+      "bytes": 799005,
+      "sha256": "7a667804bb80a6a424a5daf18a2599c4f32237cf06fe78fc0de45dbb09e0eccf",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/arquitectura/analisis-supabase-anterior.md",
+      "bytes": 32899,
+      "sha256": "ed1d308ae169ebbbd157928c78461c919b5335531663f31dd5035f55a7a2ea8e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-entorno.md",
+      "bytes": 2037,
+      "sha256": "a40a054586a17c01439237521f4f0e33e11f2c545c573931055638914e2ea339",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-final.md",
+      "bytes": 7821,
+      "sha256": "4404eb081053bd5eb2bfe0b64a439187fd9ccbbf90fbd3b663c4033a760b335b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-navegacion.md",
+      "bytes": 6076,
+      "sha256": "1482ae08052ceb58965245fa8bd1d900188d390574fa840c9f840eed0bc12fab",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-talkback.md",
+      "bytes": 5326,
+      "sha256": "95e69585f7b6236030ee9a4f6f30b97c1e4c34b1b21109acea077f519c160571",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/android-texto-contraste.md",
+      "bytes": 8055,
+      "sha256": "501bcfa2ddbfc24b6eda2ae08d57574417b0c582088bcfd5c32313956615d830",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-calidad.log",
+      "bytes": 100,
+      "sha256": "298cfd68cbe19a0cc06b13505bc094fd8f16a7ea4e55db4b1cbcf54a5e048120",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-escapes-red.log",
+      "bytes": 20511,
+      "sha256": "f637f40a101432d8a24d4d892ab3f7fc573e7fc667e27cf17b0a60e474578ca3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-fixtures.log",
+      "bytes": 17589,
+      "sha256": "2f47f69be5f4afcf72dc70f5b6fcf8c43d95cc364b55b1ae8853cc58be39aaf0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-integridad.json",
+      "bytes": 122035,
+      "sha256": "dcadad030056ffe9444e5a30ca270222415669a242e30298a4d7f8a51d46c6c1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-proyecto-pendiente.log",
+      "bytes": 129,
+      "sha256": "33fd53a3c037b68bffc505fd52c2a5d583dd894f972552c8584a74299ef2ab24",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-real.log",
+      "bytes": 1237,
+      "sha256": "b977f0f211aef55471828f42139689924d82644338fa66ecc2b70e85a3e82fc1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura-red.log",
+      "bytes": 82942,
+      "sha256": "2b53a5fe28068c2f1b0c786738d7c4fe06dc5a964635a6f8a73b5af04d465d69",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/arquitectura.md",
+      "bytes": 5117,
+      "sha256": "b92bc98a0161d932528882e88f79320fe99da7ed233d7bc854c64adc6133742e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/calidad-final.log",
+      "bytes": 28428,
+      "sha256": "930e064ee4b6d62ef15fa4197293fbf0c8a429057524c8411fe8509bc9dde11b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/capturas/android-base-tecnica.jpeg",
+      "bytes": 58298,
+      "sha256": "b64eaf55ad09f494b8052bac9cb88e3720196f0967827447a544066dc0827ae7",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/capturas/android-bienvenida.jpeg",
+      "bytes": 195063,
+      "sha256": "f8b3578314ffeb477e581d37fe7cf6162666abbc29e5978659dd7647ccb6f0df",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/capturas/android-final-estados.jpeg",
+      "bytes": 67648,
+      "sha256": "47a059d7c6a435126db6de4618174af554151f9a78127490d8918ba076baa90c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/capturas/android-final-informacion.jpeg",
+      "bytes": 71134,
+      "sha256": "8f00beedd640e177a0e4a9ff88d74d8ea98cacd9f9fef3a813855e2b9895e0a2",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/cierre.md",
+      "bytes": 5619,
+      "sha256": "76660c5699bc8c6e93661f8f83ef30b31cb8c990e15ade9bb32b0924d78742bb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/empaquetado-android.log",
+      "bytes": 2166,
+      "sha256": "d153205f20d839ee0404137d1ca4c15c445dc67b4824dd77c72a91748c17e19c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas-config.log",
+      "bytes": 412,
+      "sha256": "0776c04a84b4d480049f451c0ec4534a62881e1d08635a2d502e116edbce63e5",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas-green.log",
+      "bytes": 7590,
+      "sha256": "a6ffdd1f4c792a40120b60409a59b5d759b04672ad55abb3c8f583582a64db67",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas-integridad.json",
+      "bytes": 124091,
+      "sha256": "267dc12e202118a2baf660d8769cd0c7c213e912a7ab9af919f42b0824954fcf",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas-proyecto.log",
+      "bytes": 780,
+      "sha256": "0411fceac433881391367c94b2f7df9d300c96cccbedcbd17a3acff2a1de13f5",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas-red.log",
+      "bytes": 664,
+      "sha256": "d2b4d3ee9b5f0d444b136b359722bca760d1000fa277fce19c9c67acfbb02909",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/herramientas.md",
+      "bytes": 4367,
+      "sha256": "9115a3bdda902ea8072692d44b8b3cdd162b6e3d541c0f776a7f77d4867977a3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/informe.md",
+      "bytes": 42320,
+      "sha256": "6d4bd4af31d6c7cb1a67109c7237b201c100e2d03a6b32407c222541923b8309",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/integridad-cierre.json",
+      "bytes": 213686,
+      "sha256": "b1ffd0c32c877ab857c22550cb7f78b1bbb5fe04996a0b6dc0d42c474645358f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/limites-backend.md",
+      "bytes": 6316,
+      "sha256": "077dc1419c0a5ac352b6b11d2ae9e3cf0016166c74f5c7929477038c83aeaeb0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/nucleo-cobertura.log",
+      "bytes": 1264,
+      "sha256": "a32842f022688ed3d4d8cbf6b0609b9363e162cf8e8fa1e142accaba536d32e0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/nucleo-pruebas.log",
+      "bytes": 5109,
+      "sha256": "9446fd870d2c429cda03b9e5a554a719d81741ca531b5d49996248bb2166fac4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/relever-dependencias-t026.mjs",
+      "bytes": 3437,
+      "sha256": "f1afc8026fd04d8b6b2ec738e563ac04f264d5163448734aca89f373f68ed9ca",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/reproduccion.log",
+      "bytes": 33960,
+      "sha256": "15acc2c7e0c01a9a20540b8345a69505878c56877a5997283db3e93a8abab9a4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/reproduccion.md",
+      "bytes": 8727,
+      "sha256": "ac5c27c3007eb57e5fe986e629eba11d1520a0cb79116491f48b7a2f174f80ef",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-architecture-check.log",
+      "bytes": 350,
+      "sha256": "bd37ad5bb78513a7fa5ec7e960b02c68f09055733b33212499e70c88d178dd3e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-check.log",
+      "bytes": 557,
+      "sha256": "e9e0fcfd46381ebcd31bfb82a3413bf20c14d497380f40effa938225d31128d8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-format-check.log",
+      "bytes": 226,
+      "sha256": "21e553a517fc1bb5a6b74f5dafe6a663d1f0036a09bb2733197492b3c74696db",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-ignore.log",
+      "bytes": 143,
+      "sha256": "5596e0de535768d849d45c19717dfe39996aabee9ec20df24133d675b793089a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-integridad.json",
+      "bytes": 123841,
+      "sha256": "8962cda8c3e7f4367e6d62f2f33581d7c209aad9d2a6a24ab17bf1694cfdf970",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-lint.log",
+      "bytes": 89,
+      "sha256": "c46e6e69c57bf8e230867d4000194f96dcedabf2d5e286670a0fc7d4ca899ace",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-resultados.json",
+      "bytes": 583,
+      "sha256": "b3b3cd602e1445e61d0b025d4ad772993263e89679bbb45ad9d6871c1e12c2e6",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-t013.md",
+      "bytes": 3655,
+      "sha256": "21b83a4b62943dff012f8ce4c1902263054813fd4e8a65c0c360f60998eba814",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-test.log",
+      "bytes": 17762,
+      "sha256": "0f7028c5436b0e4784de3cd7bf2982e4553a76191a5e2f64bae9af2b14ee677b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t012-typecheck.log",
+      "bytes": 422,
+      "sha256": "1a704656fed18c9651d9f93340fefbbb282044fbfafcc049bbc8263e20bdadb9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t013-contraste.log",
+      "bytes": 145,
+      "sha256": "1911339b1dcb97e5eb4e41856a8f377933e9fed277d1eae11258bb2c08427ec3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t013-tipos.log",
+      "bytes": 16,
+      "sha256": "0e700bde5f13d59c24370879a36259b334f195616058f0f96a73a9c46cb5437f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-architecture-check.log",
+      "bytes": 709,
+      "sha256": "69b9bba201dfbe5b6c15095e1bf7a8e1bf9b968a26dba5713163e5b1e0160651",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-format-check.log",
+      "bytes": 226,
+      "sha256": "21e553a517fc1bb5a6b74f5dafe6a663d1f0036a09bb2733197492b3c74696db",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-integridad.json",
+      "bytes": 3109,
+      "sha256": "8e7e9d9ca0421fd620421e2e4ab74e168374a2ffdb257d7e55943424e7da15c2",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-lint.log",
+      "bytes": 89,
+      "sha256": "c46e6e69c57bf8e230867d4000194f96dcedabf2d5e286670a0fc7d4ca899ace",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-rutas.log",
+      "bytes": 260,
+      "sha256": "daab4cf4b5cf6b468addc6dc5b5ddd4daca0fbbfc5550568854d72e44b212bad",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-t017.md",
+      "bytes": 3558,
+      "sha256": "fa7ec1950f19e616a0cde7bfe4670459b568a182e0dd0aaea3b0098713f48978",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-tipos.log",
+      "bytes": 79,
+      "sha256": "ba03d414ef856436a9214126e8d9a7414c590b2c8b5deb5fbac4dc9f17d36298",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t014-typecheck-completo.log",
+      "bytes": 422,
+      "sha256": "1a704656fed18c9651d9f93340fefbbb282044fbfafcc049bbc8263e20bdadb9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-app-types.log",
+      "bytes": 79,
+      "sha256": "21a66239de6dc0aea4949d3775267bbb9b6d531667a24c2207f80d2a28ff224d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-comprobaciones.json",
+      "bytes": 346,
+      "sha256": "ea2427efe1f4f0ad23873acd0735df97a39c42f55180bf91a75eb7d634850e84",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-formato.log",
+      "bytes": 265,
+      "sha256": "76c7077d417fb110e9f3105d858e9c799c279a20255838e50e3c920fa73d7cae",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-integridad.json",
+      "bytes": 127571,
+      "sha256": "27709b64f3f15e78f2ab0bd8c1923ee38c1671a990272f1ed4dd7b113cc61be7",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-json-equivalente.log",
+      "bytes": 71,
+      "sha256": "531ccf727a9fdc5a9c24505d39adfdb202ce6befa7a100f68a7f2f2471433c04",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-lint.log",
+      "bytes": 120,
+      "sha256": "88f7e10376aa4eb97ae704dd362f3ced4444acdfcbd61427849368ce0ec8efeb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-rutas.log",
+      "bytes": 344,
+      "sha256": "8778a7bd6b62fd0427df96fedb6fbd9d380af3979a9774d439d18b531fbbdc91",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-cierre-tipos.log",
+      "bytes": 79,
+      "sha256": "21a66239de6dc0aea4949d3775267bbb9b6d531667a24c2207f80d2a28ff224d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-comprobaciones.json",
+      "bytes": 346,
+      "sha256": "f5437f0c2dfaed3f53df5b2fc59e458f668b925bf1a15954c6550be285a3387a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-format.log",
+      "bytes": 328,
+      "sha256": "92d236bc582c0dc1ac105689912ae77f9f71ec8813390d81124d258850a8edd8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-herramientas-android.json",
+      "bytes": 62,
+      "sha256": "feb4dcd7524df41a2b5b17cc706d8300f78ad39eb3c136180bd8637d03ae49bb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-integridad.json",
+      "bytes": 131211,
+      "sha256": "4e538266c2fdc60d494a41a9b04911569d0f6c236f436f57b46d2403df216dbb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-lint.log",
+      "bytes": 120,
+      "sha256": "88f7e10376aa4eb97ae704dd362f3ced4444acdfcbd61427849368ce0ec8efeb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t018-routes.log",
+      "bytes": 344,
+      "sha256": "8778a7bd6b62fd0427df96fedb6fbd9d380af3979a9774d439d18b531fbbdc91",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-architecture-check.log",
+      "bytes": 757,
+      "sha256": "7e429c8a68b97649189197b092ac0963fd837adc43de0339896d9730630bf40a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-format-check.log",
+      "bytes": 226,
+      "sha256": "21e553a517fc1bb5a6b74f5dafe6a663d1f0036a09bb2733197492b3c74696db",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-formato-tests.log",
+      "bytes": 68,
+      "sha256": "f20510a9da4717c51c4cffee6d0dd88d6c9a723d0a83711d01216f5b48961283",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-lint-tests.log",
+      "bytes": 750,
+      "sha256": "cf0fcb12e5bab150e7515f2e84b9fe39ec2a3bcd2d08883f5dcd70c24e9af550",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-lint.log",
+      "bytes": 89,
+      "sha256": "c46e6e69c57bf8e230867d4000194f96dcedabf2d5e286670a0fc7d4ca899ace",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-resultados.json",
+      "bytes": 322,
+      "sha256": "d48f528ec92a46b079cb9bce89527a2f3e33ec8f19420ccf8ec6f8de6d577fe9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-rojo-inicial.log",
+      "bytes": 993,
+      "sha256": "1d6322c27a7dd33022b7ebcc3d30171078f552fdaeafbc2dc6cadaa62af575de",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-t022.md",
+      "bytes": 4490,
+      "sha256": "62efd37a0b1d2d2ec2866cc5afdd54ad04a1a2020d59e1ec9cde61eaf22c434f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-test.log",
+      "bytes": 18305,
+      "sha256": "c862e972ae90d61b5764b1c74b551173f78da373cdb9b51f2d6019cf1ee8f95c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t020-typecheck.log",
+      "bytes": 90,
+      "sha256": "45b7452d1cbe09a3691eb5b4cc8bbc92e36a473d5cde31d3e7a0b6b070c9a2ea",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t022-compilacion-intento-inicial.log",
+      "bytes": 143,
+      "sha256": "2aca6e97df20568a3ecdd4c85c18ef3022dd6ad833c64efce5d723ea24846276",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t022-compilacion.log",
+      "bytes": 159,
+      "sha256": "8903c5f42b7bbff92dc508644ea256a61e16e60c63cf88267ba524ea79980dc8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t022-pruebas.log",
+      "bytes": 2012,
+      "sha256": "ac0e256413c85de40a32bb6f00bf10a3b6494ef7d9ee2ef749c5d1f209aa161b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-architecture-check.log",
+      "bytes": 1008,
+      "sha256": "5d72276022f7fabd57443bc6b022e5f68da14d44dbc755a00b200daa76f6ddf4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-format-check.log",
+      "bytes": 229,
+      "sha256": "c7e2cfd84f3e6801372e78e738bdf7790fa643cb1d07b4731b017d9240a72bdc",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-formato-tests.log",
+      "bytes": 71,
+      "sha256": "34d14f3148327930c85aea9bd84bb3425f7bf68b5dd00285f38724e35028b73d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-integridad.json",
+      "bytes": 192123,
+      "sha256": "8f69c7b447a91dc6422b69ca9421409985b5d073fbabf4dea6b89b93bbae9a2f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-lint.log",
+      "bytes": 92,
+      "sha256": "217c61a9424e7113c27655ebea3e43460b9770790c5f69138efea59684ae8261",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-resultados.json",
+      "bytes": 601,
+      "sha256": "f12f5f7f2f45ef2f54a946d521f7b2c7e39783b0c87e9d1b45f860f97a7f733a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-rojo.log",
+      "bytes": 1196,
+      "sha256": "fd3c1fde9259e4792e40a73d70b0fb26174004c96241d913585dc2b90b29c1fb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-t024.md",
+      "bytes": 3798,
+      "sha256": "501b73af8410c092b39aa00ff35be992abde501791270a770429c9b54d0f219c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-test.log",
+      "bytes": 22416,
+      "sha256": "635971e8f81a89b4c157df982f8949afc9d4988c1c01b63d1eb3b04174dc5e10",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-typecheck.log",
+      "bytes": 93,
+      "sha256": "540ad900f8c939fd8439ab8d8442e1ceed72ed7c65ec22525c60605f6bf541b6",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t023-unitarias.log",
+      "bytes": 7786,
+      "sha256": "2ed65118e6dc457ff8fef9271732e60909cfc4c3e39145f93249fb1aa35ad955",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-architecture-check.log",
+      "bytes": 1188,
+      "sha256": "b8bd427924bdbdda60609f6076ef4d8cd1eb3acf7b7140f175b162aae7278f45",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-format-check.log",
+      "bytes": 229,
+      "sha256": "c7e2cfd84f3e6801372e78e738bdf7790fa643cb1d07b4731b017d9240a72bdc",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-formato-tests.log",
+      "bytes": 138,
+      "sha256": "fbdd37869c73ce85afb11ffefa058e0181874c073fdfee7d7a4b5086b7ea3b1b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-integridad.json",
+      "bytes": 195892,
+      "sha256": "6c6a8ed7d59a4431fe76d9e257350a14733185015fd7ea706a0b8a801726980a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-lint-tests.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-lint.log",
+      "bytes": 92,
+      "sha256": "217c61a9424e7113c27655ebea3e43460b9770790c5f69138efea59684ae8261",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-proveedor-rojo.log",
+      "bytes": 2864,
+      "sha256": "cfe009ee6f46ac369b1ed7c9d65b81073f443adc37e40f22a7b697916988a51d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-proveedor.log",
+      "bytes": 428,
+      "sha256": "5412ccf7026bae719836d683e3588e8279a894a18bb30a78c07a428cbd3b44db",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-resultados.json",
+      "bytes": 395,
+      "sha256": "9418c8b8459bec8696a6c0ec5001ddd208ae8a27e91a931ccb96d596b67ac9e7",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-rojo.log",
+      "bytes": 320,
+      "sha256": "b23a1c818e0ebcd74355651268fbf0eec7fdad13f1ab96cb4f36d8241ece4258",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-rutas-intento-inicial.log",
+      "bytes": 3726,
+      "sha256": "c05c9d9d189d4ccab404dfca9813c520e8b70acd29b345ab2ea115b4e06558cb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-rutas.log",
+      "bytes": 514,
+      "sha256": "2be920d44adf5e98ddfbdb0c988cd1e27722e34b70e047e1331b927f8a29813f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-test.log",
+      "bytes": 22676,
+      "sha256": "4a93652132a9f4d308da37057e762e50c5955e282944d32a309856ef0f03cbf3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025-typecheck.log",
+      "bytes": 93,
+      "sha256": "540ad900f8c939fd8439ab8d8442e1ceed72ed7c65ec22525c60605f6bf541b6",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t025.md",
+      "bytes": 4559,
+      "sha256": "9dfac9130d629e6831120021e3ae598eb4fd251d6a59742a0fb614d92f0e543f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-dependencias.json",
+      "bytes": 13491,
+      "sha256": "5afcaa3f8dcf5eeedf43073f8108fbd2298dc7605bc207c1fc9719317328b855",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-dependencias.log",
+      "bytes": 244,
+      "sha256": "a22975705bfcd70d789517b3f1bca2df465d94ebaae3f61be86545043b3bfe89",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-format-tests.log",
+      "bytes": 177,
+      "sha256": "5753c616c9ceff21d8758283d00302e9328c0745046536959842b0be8c3b5d9d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-format.log",
+      "bytes": 272,
+      "sha256": "4233b1dc54cf16bc245ead250121a17095307d57b1855bfd5887299d220b8a55",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-integridad.json",
+      "bytes": 201334,
+      "sha256": "7a5dc05ccda97b69d3d95bb93ef2b6eb936b37dec7a2e36d610f03ab519dbe68",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-lint-tests.log",
+      "bytes": 88,
+      "sha256": "cc573bcf5fafbc11e82f587f43a4036f1f76791bd9a6ee43266aca0253a5266f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-lint.log",
+      "bytes": 127,
+      "sha256": "71b73ca98553ccf7ddb4700aad212717e69ad7dfb9e1eecb2faa0b88a1a177e0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-regresiones.log",
+      "bytes": 17568,
+      "sha256": "8aca24d7c38043345f0534eeadd77743d5f0c09953acf351e92d43ccf8c50629",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-resultados.json",
+      "bytes": 1134,
+      "sha256": "3e37f8a09ecb7c4c776a777b08d52dbc9c7c480a0a9e23a085bf454f8ebb15cf",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026-typecheck.log",
+      "bytes": 133,
+      "sha256": "41eac9c46e798c1e0b346ac206d0abfc65f99adc002f9a6f9c0cf07ed792fba4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t026.md",
+      "bytes": 6346,
+      "sha256": "bb726ecb0dd5f762007ffa27fadb1a02097000c1f4a3ef4cc1ed55aa445ac076",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-architecture-check.log",
+      "bytes": 1266,
+      "sha256": "cab948c01192b80028bdafa7337263562cffc75ab06e39d2c284e9a3d01ff459",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-check-final.log",
+      "bytes": 49642,
+      "sha256": "f6226ce5661ad431a05b0334b005c9c514d0cec6c49e5a57a3c3b036ce3bc44d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-format-check.log",
+      "bytes": 229,
+      "sha256": "c7e2cfd84f3e6801372e78e738bdf7790fa643cb1d07b4731b017d9240a72bdc",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-formato-pruebas.log",
+      "bytes": 71,
+      "sha256": "34d14f3148327930c85aea9bd84bb3425f7bf68b5dd00285f38724e35028b73d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-integridad.json",
+      "bytes": 205851,
+      "sha256": "67e3f27075816656e201e776ef6ed1346dfbab105fc633b0b084e137569d25b0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-lint-intento-inicial.log",
+      "bytes": 1472,
+      "sha256": "e4bef61567e366ce954cbffe84b32a5504c29d40e0094c38158802595933046c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-lint-presentacion.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-lint.log",
+      "bytes": 218,
+      "sha256": "876f602c0b478ae3ac060f6af31b7c89f35d3ebb7029079da1a88413dcb61331",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-android-final.log",
+      "bytes": 3582,
+      "sha256": "81d011f17413f0542bdf37361987b064728ce6ea02dda2e4675aa0fc3c733f4d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-android-rojo.log",
+      "bytes": 7286,
+      "sha256": "5dbba00914493253255080a185f97b10456df49ea9313c29e3c9d65060c1d2af",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-artefactos.json",
+      "bytes": 614,
+      "sha256": "0224246af540d411ac21a0587e1cc6a043e3332ca82fd019ce50e60c4cf5b8c1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-check.log",
+      "bytes": 49640,
+      "sha256": "5013d344a0241e6eb677e1202ef30981565bed5b8144319bf9b4f05829b2f5d0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-diagnostico.log",
+      "bytes": 3594,
+      "sha256": "9fcee54279b3583268ff285bebc5ce28867d62b32567b16defaa20e30149e959",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-diff-check.log",
+      "bytes": 2342,
+      "sha256": "258d63efc62a45053a00b97a950ee659b669b23cbc942aac1cca8993bc08ed40",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-hermes-permisos.log",
+      "bytes": 8632,
+      "sha256": "934fa65ad6beec7d0f8a0b8efb206a04f4c615b8dca138aa38ebfcd2322e811b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-integridad.json",
+      "bytes": 1106,
+      "sha256": "3eae2e4bf28017851219ffb349ba26b5f02482ee749773305c6711d9a0727b5b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-proveedor.log",
+      "bytes": 452,
+      "sha256": "e7164d6612e36f18283a02e79c5d206d5c12ea02e32b1a9642c665ee8abe44c0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro-rutas.log",
+      "bytes": 538,
+      "sha256": "bac57734403fd816002b80ff05da00c0fae0868074b406cfd5689b0a55eaf22c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-metro.md",
+      "bytes": 5003,
+      "sha256": "c1f94644759a93915ac7c8aaa77cfcc19a77dd62b27a3b37dc0dd03085b01a73",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-presentacion.log",
+      "bytes": 1172,
+      "sha256": "c474db761b8dca9516debfe1d485007c8298139c609c9ffc5392cf4b3a37da50",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-proveedor.log",
+      "bytes": 428,
+      "sha256": "5412ccf7026bae719836d683e3588e8279a894a18bb30a78c07a428cbd3b44db",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-resultados-iniciales.json",
+      "bytes": 620,
+      "sha256": "b313de897f6abdcbdbf1ebb17deb879165bb1c6c540b2f2e8d2270989e0d82d9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-resultados.json",
+      "bytes": 620,
+      "sha256": "b313de897f6abdcbdbf1ebb17deb879165bb1c6c540b2f2e8d2270989e0d82d9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-rojo.log",
+      "bytes": 14188,
+      "sha256": "8158b8ccabdd4c650b0b7b458b64d644c7e5926099753c57ceb0c22160947468",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-rutas-intento-inicial.log",
+      "bytes": 4128,
+      "sha256": "7cb97d153d7dd7bab101246e85e43f32f836573857cf0ea6e1378e991018fb30",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-rutas.log",
+      "bytes": 514,
+      "sha256": "2be920d44adf5e98ddfbdb0c988cd1e27722e34b70e047e1331b927f8a29813f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-test.log",
+      "bytes": 23354,
+      "sha256": "b3e820cbe29d8e8c61c3bcc55de5bda3c4693904d27c8fe7ba6763a878ddcc51",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027-typecheck.log",
+      "bytes": 93,
+      "sha256": "540ad900f8c939fd8439ab8d8442e1ceed72ed7c65ec22525c60605f6bf541b6",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t027.md",
+      "bytes": 6110,
+      "sha256": "f0cefe9c00c789ec33456391a9266e5a2ee32906c4710bcaf906066ecaa498ee",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t028-check.log",
+      "bytes": 49638,
+      "sha256": "c61d6d08b03f553f622dee4634f9e35a64b2f535634657af4ce7820045392ab4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t028-diff-check.log",
+      "bytes": 2658,
+      "sha256": "310a9c409f678710d4c3d6990484cabef8b036f7dc779dcc542a0027732b6f62",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t028-integridad.json",
+      "bytes": 1049,
+      "sha256": "3455a9fbfe6ee18f4c20b04004486f5c5b52f552dd090ca0752b53d004235cd5",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t028-limites.log",
+      "bytes": 15320,
+      "sha256": "24c384893fde5182f658ec9652b738a85cdcd34c736f6c9d6907b9791039a4ce",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-contraste-inicial.log",
+      "bytes": 12276,
+      "sha256": "3a0cf7802b25600f1487019e1a0dabea65f26a5925ebbb36db903d0d893fe42a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031-check-final.log",
+      "bytes": 53224,
+      "sha256": "b8f9d2c85be97ddff5e9bf21a460973cf2ba7f97ac13e56614ea56df55816ed0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031-check.log",
+      "bytes": 1176,
+      "sha256": "aa5a9afdb60186d26b69f7874d9a603223817e448b9b733ce5ac32fc2af9cbfd",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031-diff-check.log",
+      "bytes": 2402,
+      "sha256": "722b0fbc9070d85128905ba12891ff9bb5f910a58785fdd5a598d76b5f9a1f93",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031-formato-pruebas.log",
+      "bytes": 162,
+      "sha256": "1403da29a0ff31fdb989679513cee9bb32791643dd58e41a49bcbc6e78c26fc8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031-integridad.json",
+      "bytes": 1832,
+      "sha256": "13e55e9006e3588ed7f59c172910c8986d2dddc67adcb7a2dba5ad649184d9f1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t029-t031.md",
+      "bytes": 6036,
+      "sha256": "25d82548d3e16512eef486169f7771060f1b14157d34df64998e291f3c06c8ef",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t030-rojo.log",
+      "bytes": 3248,
+      "sha256": "7f6d53eefdfe59ac9405d24ce15a15a0cd7e19485b7f46ebb49e0ef649735539",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t030-t031-presentacion.log",
+      "bytes": 1938,
+      "sha256": "daf73e454991a4d60f687d8ebccfdb5cc97554ae2e43112d072cf8d3e7ef87e8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t030-t031-rojo.log",
+      "bytes": 6342,
+      "sha256": "0a1e9e3b37c4da9fcc62e6fe8eb82e21b62ce64dffaffa629d8a7676ab923194",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t031-rutas-inicial.log",
+      "bytes": 2242,
+      "sha256": "15a87c54466b6ff85d27dddd6148cc3d14c5025cdde979a65d7eb22731efaa87",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t031-rutas.log",
+      "bytes": 538,
+      "sha256": "bac57734403fd816002b80ff05da00c0fae0868074b406cfd5689b0a55eaf22c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-cierre-integridad.json",
+      "bytes": 2282,
+      "sha256": "678cc8f13a85ac34a02d9c4ef158b14eef3fe1df39136c228b6abf280f242738",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-dependencias.log",
+      "bytes": 1438,
+      "sha256": "ac5b91b04da6f2418623ef22f28b3fa6c44fb918f42dccf32fb55d08c1f3beb6",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-doctor.log",
+      "bytes": 3578,
+      "sha256": "9a13e8708fa4c1ca4fc55a2c2e62ed5546efafa390c10a67d272467e4464ca3e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-integridad.json",
+      "bytes": 550,
+      "sha256": "2ee52250440f9cbcfa36c30770957b3fb6f5d2ee7803fe9fb005522038f77e8e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t032-t034.md",
+      "bytes": 6861,
+      "sha256": "dafe8469e9393c214c30f3446fd7fa27093dab60fbbde76038f656fec388ebfe",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t034-comprobaciones.log",
+      "bytes": 1086,
+      "sha256": "588e80bcbead8c050489392f2f9d8e029f328105c77304dd9c19047c086b061d",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t035-comprobaciones.log",
+      "bytes": 6910,
+      "sha256": "58cb48340b588dc48aa4d89a404a7678967eceacaa3e2716580c6ba752c22657",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/t037.md",
+      "bytes": 3527,
+      "sha256": "a2a5348e5ac3ed7750239cd9446157bb473254b299957328f21816bfcd357706",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-herramientas.mjs",
+      "bytes": 3634,
+      "sha256": "04888235758b3e07702a4e12896916bd1fc16597e5c3234285494b3c97218be7",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-limites-backend.mjs",
+      "bytes": 3210,
+      "sha256": "a75539e56a3243940b4dc491a172fc725847f9a209df17f1f9c92f54124c8375",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-proveedor.mjs",
+      "bytes": 3125,
+      "sha256": "bef653146a6b38e56fe408857914dd0310361653cdd36d7dcf5c8868064209eb",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/001-fundacion/verificar-rutas.mjs",
+      "bytes": 4768,
+      "sha256": "286b9da7d86756f120a18038805d605ce1c5a22bbc96b65c7437a2a84a95c140",
+      "gitState": "tracked"
+    },
+    {
+      "path": "docs/evaluacion/RUBRICA.md",
+      "bytes": 1105,
+      "sha256": "bf0b44c84867ac6faf66502ae7b4bbece2b5e59393359895025776f962d725fe",
+      "gitState": "tracked"
+    },
+    {
+      "path": "eslint.config.js",
+      "bytes": 518,
+      "sha256": "36b54334ef20c59f2f835ea15480d0975f61085e72364d2943949f224d572e2a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "ESTADO-DESARROLLO.md",
+      "bytes": 6651,
+      "sha256": "f237c09375b536f0208b44fb68d6312ebeea764f84baf077046c77e811f88701",
+      "gitState": "tracked"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 464951,
+      "sha256": "acd3aa90bfb91fa11b3bade8eee99c01cbe7330e60a90112ec24f358ab82961f",
+      "gitState": "tracked"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1440,
+      "sha256": "8dda469b60dbda8547f2872eb74837a581d2081fa84f2a57517a28f98740385c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "scripts/check-architecture.mjs",
+      "bytes": 11689,
+      "sha256": "fabf01f3b5b01e9e907adf0f4c43ed51d3b0f09506dbc43bf11c471da9e6c7e9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "scripts/run-unit-tests.mjs",
+      "bytes": 4309,
+      "sha256": "7b51a767498e7eeb01ad61d46f9d7c2ddfdfcd19c3ff092dc4c6f4907ff4f301",
+      "gitState": "tracked"
+    },
+    {
+      "path": "skills-lock.json",
+      "bytes": 13266,
+      "sha256": "218d9ee86e707efc788c5ff13684454f06c29e966f5da5add267b1a5c3293c50",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/checklists/requirements.md",
+      "bytes": 2124,
+      "sha256": "50496f6a2b45b74a10f7e619bf9e07a068fde3d6fe4b7f152721e332a30384cf",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/contracts/foundation.md",
+      "bytes": 4468,
+      "sha256": "a38daed9c6339fc77a11487a4c1716a07528846e7f6ee7fb34ee0b77c0f399ce",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/data-model.md",
+      "bytes": 1726,
+      "sha256": "394e84663f5f96549c32facea7ec30a3175cc6b600b8782806342f1f4c33d9d9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/plan.md",
+      "bytes": 8244,
+      "sha256": "2405d34f64e5ea21a308d91d954be07f391d6f865f730a3bb0c64e0a8a0bb20b",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/quickstart.md",
+      "bytes": 7917,
+      "sha256": "763657074cf6f7409265a2c9202a4218998e35c82a677cfcf970a509334478dd",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/research.md",
+      "bytes": 8932,
+      "sha256": "53da4196f7bd20081a06359990adcc582c6cfe5fc140d0802661a0b63fb4cb00",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/spec.md",
+      "bytes": 12907,
+      "sha256": "5f3fb7145449f7f1c9f608099c1a82691ba6e2fbbc3a895bea18105c65636009",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/tasks.md",
+      "bytes": 21399,
+      "sha256": "e025ee421fcf99d3f46f54ff0432e72bacbd77c7e4c0ccbbd0e74b5e71618065",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/001-fundacion-expo-clean/validation.md",
+      "bytes": 4811,
+      "sha256": "4071b8337afec314d3923980c067b3a66bdb115d5f63709b6bc96849dd9e5be3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/checklists/requirements.md",
+      "bytes": 2630,
+      "sha256": "12b0af9c8086c8ebc20f46a7d6ad10d42045154468a6130656a896270c826bbe",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/contracts/backend-foundation.md",
+      "bytes": 7748,
+      "sha256": "1f2ceda5dbd660f32f2d98d61af0ac1781f113bf0c08563bf4cde4d0d9277eea",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/data-model.md",
+      "bytes": 7761,
+      "sha256": "15ec184c0fe0a6c1818180c013234ff81b04a4d32f875c8cb54a545c86ed6408",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/plan.md",
+      "bytes": 15830,
+      "sha256": "6ddbdf706cb9a4e589494e896d62dad04c3fe2c1d9a5333b236fc8bdcd0c0214",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/quickstart.md",
+      "bytes": 8277,
+      "sha256": "edd43f2c76af70650dcafd285c62d869cd8056dc297797ed77b38223769af1fe",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/research.md",
+      "bytes": 12778,
+      "sha256": "4c97e3efc77efb74a53f6771afaf8ba967d3ae5e614e5eceaea50fe301fe86c3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/spec.md",
+      "bytes": 19546,
+      "sha256": "5647e5ae0bc41dc342d6bfa60cfb950a296a8f691c060e823bc0ddc9e140f605",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/tasks.md",
+      "bytes": 37384,
+      "sha256": "a51fa64135babfa6b940eaa64285b901b6732056d22459e0606882b60b43af71",
+      "gitState": "tracked"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/validation.md",
+      "bytes": 11150,
+      "sha256": "ea293613ade263ab05b0e59b87d795d66434c601683de925d8dbc2bcf4b363b8",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/app/_layout.tsx",
+      "bytes": 629,
+      "sha256": "ab34eb64fee47b37c7a579f06df5bcff38fd32fb8491a5284dfa94cc95aff403",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/app/+not-found.tsx",
+      "bytes": 269,
+      "sha256": "cdd50fd3219e5f96a5cf1339e5b7a8122784bf9b15ca4e80e94f7a51ef8a9766",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/app/index.tsx",
+      "bytes": 275,
+      "sha256": "4957ff847d2ce8593881986e136a3dacb20e7240bb7c4f51a1a6e9bc257dcb51",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/app/technical.tsx",
+      "bytes": 361,
+      "sha256": "010558749e8f3eb6792e9985b551c987c857acb7c311efe0b3c2005258c655d1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/composition/app-composition.ts",
+      "bytes": 515,
+      "sha256": "20a22d5af737332204c1683defb4fa2b6e10fd3c03570ff4e3c830ade8b49412",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/composition/app-provider.tsx",
+      "bytes": 674,
+      "sha256": "a47b29dad76e70f831a9f51993b85c2c2ee97c7d9c55fa68ef74268c8d807ca4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/application/app-information-gateway.ts",
+      "bytes": 171,
+      "sha256": "82e5c77c2c3374e48fe3d1df15f025be22a113ee40763e768b330506442e7ec5",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/application/get-app-information.ts",
+      "bytes": 741,
+      "sha256": "7a1c7adf7b630ebd966cd559fdef70074dc15d3358a5de53c5a747fde8876413",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/domain/app-information.ts",
+      "bytes": 504,
+      "sha256": "0bb85896dd5558f646ed548e043b337f6dff1d4488f6d0a0ee1299687c69d36e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/domain/validate-information-request.ts",
+      "bytes": 350,
+      "sha256": "beb018d3be4c819dcceb3e399a1e5bc6a553db62e8e9f7813109d467d2c8eda1",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/infrastructure/local-app-information-adapter.ts",
+      "bytes": 994,
+      "sha256": "e73963a4d5d693fd4b8662227c90b947296eef4373b45348d5f45bd207cc4989",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/presentation/information-context.ts",
+      "bytes": 258,
+      "sha256": "76071df790879259995639c9fd7ef938ad0a133b77fd0accb61934f5b265ae99",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/presentation/not-found-screen.tsx",
+      "bytes": 618,
+      "sha256": "26678337194b7e32a6c1706f2def5142059865577d1390d988d08e677fa53e8e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/presentation/technical-screen.tsx",
+      "bytes": 3431,
+      "sha256": "e93224d6c12ac2ab602bc8823e6bd209308028f02782869680d04045818f1895",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/presentation/use-app-information.ts",
+      "bytes": 1856,
+      "sha256": "374c69492cba2356973ce0e42e40448872260b585e783fb29e2e37cd2c4f95f3",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/features/foundation/presentation/welcome-screen.tsx",
+      "bytes": 1519,
+      "sha256": "355defa767d1207070cb398eaa28b1246961e22738bf63983a3bcbba1be49864",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/shared/ui/app-button.tsx",
+      "bytes": 1641,
+      "sha256": "02a56630fca23f074293b94564708b0e948face3adebeba38696f3f6c6c0d77c",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/shared/ui/app-text.tsx",
+      "bytes": 843,
+      "sha256": "4773ce162fe0d7051ac384484f854c168d0b46959b03f60639fb285014c3500e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/shared/ui/screen.tsx",
+      "bytes": 864,
+      "sha256": "149b850736c605e6f631dc691925f2a38a6dde937c0026e099dcd3f91df897d0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/shared/ui/status-message.tsx",
+      "bytes": 1121,
+      "sha256": "a62b6bdeb213eb248cd5c8ed04f0b25b3eccbb7b9630b3ced25385e9f734681e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "src/shared/ui/tokens.ts",
+      "bytes": 612,
+      "sha256": "1d9592d3069d8e863b7f7ce10ef82b300066e8e724289ec421a52532387b0412",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/architecture/check-architecture.test.mjs",
+      "bytes": 1905,
+      "sha256": "dec3c15e3ba922025f0a200281cbbd95a0811a8ce3ba0404b5c7b2050261d82a",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/architecture/fixtures/cases.mjs",
+      "bytes": 6009,
+      "sha256": "4e6337bb3f0aaac90dfb8f01d8cfcd6e1edd71b5afd5e35401c540639653e6fd",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/presentation/shared-ui.test.mjs",
+      "bytes": 5535,
+      "sha256": "05a0a80dbe4909ec22ece1d7d8b2d7a668d83b4a4303737234a70e08dc9de6bc",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/presentation/use-app-information.test.mjs",
+      "bytes": 12360,
+      "sha256": "8fb3079708881767e87b88384f48549a4b6d9f13b764c34bf0642a7f4882ebb9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/app-composition.test.ts",
+      "bytes": 1127,
+      "sha256": "a025cf17253aa569878894ff9204573dc8bed0e26b9664e239ccb35e8a2ed43e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/contrast.test.ts",
+      "bytes": 1816,
+      "sha256": "1d7162001e3b30da3c2437805770e5294f150681d3b0c13595b74e73e9fe9d33",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/doubles/app-information-gateway.ts",
+      "bytes": 535,
+      "sha256": "555fd18d8d3df7eae2e969a3b52124a2b9dab002e1c901a94e6caf3b7ea43fb9",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/get-app-information.test.ts",
+      "bytes": 2895,
+      "sha256": "f8fe9bb1c7fcbaa91c0c4415917e4f95957dc485a16e4093636747da852d68b0",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/local-app-information-adapter.test.ts",
+      "bytes": 1367,
+      "sha256": "418ecb1c794f5d1330d660f37b3cca40d52827f7330afaf2e5e7c1c43bc4ab9e",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tests/unit/validate-information-request.test.ts",
+      "bytes": 667,
+      "sha256": "245162d753a8fd5a1f9dbc1c80a13a4da2aceed9c0651322e05919eaae023da4",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tsconfig.core.json",
+      "bytes": 383,
+      "sha256": "9185086b3b994142d22951cb6aacd942a0a27f4de771fcac8af8b700333ea709",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 370,
+      "sha256": "35dd09b35bd3546472f06e9d10e5e52912a2dc8fb9b3df9d8afb782f1f2b46ba",
+      "gitState": "tracked"
+    },
+    {
+      "path": "tsconfig.tests.json",
+      "bytes": 567,
+      "sha256": "9b322aaf818f166494989b6d4b20edf90712c06577da72a98910e52dac53d73e",
+      "gitState": "tracked"
+    }
+  ],
+  "authorizedChangesForT001": [
+    {
+      "path": "docs/evaluacion/evidencias/002-fundacion/inventario-inicial.json",
+      "change": "create baseline; not self-included"
+    },
+    {
+      "path": "docs/evaluacion/evidencias/002-fundacion/informe.md",
+      "change": "create evidence report"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/tasks.md",
+      "change": "only T001 checkbox from unchecked to checked after verification"
+    }
+  ]
+}

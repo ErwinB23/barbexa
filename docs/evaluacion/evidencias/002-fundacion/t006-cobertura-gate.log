@@ -1,0 +1,41 @@
+test --no-config --no-npm --no-remote --no-prompt --coverage=C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\partial C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\value.test.ts EXIT=0
+running 1 test from ../../../../AppData/Local/Temp/barberia-deno-gate-MTOONM/value.test.ts
+branch ... ok (857µs)
+
+ok | 1 passed | 0 failed (23ms)
+
+| File      | Branch % | Function % | Line % |
+| --------- | -------- | ---------- | ------ |
+| value.ts  |     50.0 |      100.0 |  100.0 |
+| All files |     50.0 |      100.0 |  100.0 |
+Check file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/value.test.ts
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/partial/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/partial/html/index.html
+
+coverage --threshold=100 --include=.*domain.* C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\partial EXIT=1
+| File      | Branch % | Function % | Line % |
+| --------- | -------- | ---------- | ------ |
+| value.ts  |     50.0 |      100.0 |  100.0 |
+| All files |     50.0 |      100.0 |  100.0 |
+error: Coverage threshold not met:
+  - Branch coverage 50.00% is below the threshold of 100.00%
+
+test --no-config --no-npm --no-remote --no-prompt --coverage=C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\full C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\value.test.ts EXIT=0
+running 1 test from ../../../../AppData/Local/Temp/barberia-deno-gate-MTOONM/value.test.ts
+branch ... ok (998µs)
+
+ok | 1 passed | 0 failed (23ms)
+
+| File      | Branch % | Function % | Line % |
+| --------- | -------- | ---------- | ------ |
+| value.ts  |    100.0 |      100.0 |  100.0 |
+| All files |    100.0 |      100.0 |  100.0 |
+Check file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/value.test.ts
+Lcov coverage report has been generated at file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/full/lcov.info
+HTML coverage report has been generated at file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-gate-MTOONM/full/html/index.html
+
+coverage --threshold=100 --include=.*domain.* C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-gate-MTOONM\full EXIT=0
+| File      | Branch % | Function % | Line % |
+| --------- | -------- | ---------- | ------ |
+| value.ts  |    100.0 |      100.0 |  100.0 |
+| All files |    100.0 |      100.0 |  100.0 |

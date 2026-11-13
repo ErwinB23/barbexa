@@ -7,6 +7,8 @@ build/
 coverage/
 expo-env.d.ts
 *.tsbuildinfo
+supabase/.temp/
+supabase/.branches/
 .env
 .env.*
 !.env.example

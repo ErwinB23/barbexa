@@ -1,0 +1,189 @@
+T011: actual default-deny SQL checks on NEW isolated container supabase_db_app-barberia-002-local
+Each subprocess: docker exec <new-db> psql -U postgres -d postgres -At -v ON_ERROR_STOP=1 -v VERBOSITY=verbose -c <SQL>
+SQL: begin; set local role anon; select * from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.profiles TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; insert into public.profiles(id,display_name) values ('11111111-1111-4111-8111-111111111111','Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.profiles TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; update public.profiles set display_name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.profiles TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; delete from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.profiles TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; select * from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershops TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; insert into public.barbershops(name) values ('Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershops TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; update public.barbershops set name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershops TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; delete from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershops TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; select * from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershop_memberships TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; insert into public.barbershop_memberships(user_id,barbershop_id,role,status) values ('11111111-1111-4111-8111-111111111111','22222222-2222-4222-8222-222222222222','administrator','active'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershop_memberships TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; update public.barbershop_memberships set status='inactive'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershop_memberships TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role anon; delete from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershop_memberships TO anon;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; select * from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.profiles TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; insert into public.profiles(id,display_name) values ('11111111-1111-4111-8111-111111111111','Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.profiles TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; update public.profiles set display_name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.profiles TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; delete from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.profiles TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; select * from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershops TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; insert into public.barbershops(name) values ('Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershops TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; update public.barbershops set name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershops TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; delete from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershops TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; select * from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershop_memberships TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; insert into public.barbershop_memberships(user_id,barbershop_id,role,status) values ('11111111-1111-4111-8111-111111111111','22222222-2222-4222-8222-222222222222','administrator','active'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershop_memberships TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; update public.barbershop_memberships set status='inactive'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershop_memberships TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role authenticated; delete from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershop_memberships TO authenticated;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; select * from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.profiles TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; insert into public.profiles(id,display_name) values ('11111111-1111-4111-8111-111111111111','Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.profiles TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; update public.profiles set display_name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.profiles TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; delete from public.profiles; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table profiles
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.profiles TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; select * from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershops TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; insert into public.barbershops(name) values ('Denied fixture'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershops TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; update public.barbershops set name='Denied fixture'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershops TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; delete from public.barbershops; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershops
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershops TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; select * from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT SELECT ON public.barbershop_memberships TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; insert into public.barbershop_memberships(user_id,barbershop_id,role,status) values ('11111111-1111-4111-8111-111111111111','22222222-2222-4222-8222-222222222222','administrator','active'); rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT INSERT ON public.barbershop_memberships TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; update public.barbershop_memberships set status='inactive'; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT UPDATE ON public.barbershop_memberships TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+SQL: begin; set local role service_role; delete from public.barbershop_memberships; rollback;
+EXIT=1 EXPECTED=1 SQLSTATE=42501 RESULT=PASS
+ERROR:  42501: permission denied for table barbershop_memberships
+HINT:  Grant the required privileges to the current role with: GRANT DELETE ON public.barbershop_memberships TO service_role;
+LOCATION:  aclcheck_error, aclchk.c:2843
+Post-test SQL: select 'profiles='||count(*) from public.profiles; select 'barbershops='||count(*) from public.barbershops; select 'memberships='||count(*) from public.barbershop_memberships; select 'auth_users='||count(*) from auth.users;
+profiles=0
+barbershops=0
+memberships=0
+auth_users=0
+DENIED=36/36; owner count query EXIT=0; harness EXIT=0
+This checks default-deny table ACLs, not the future JWT/tenant-role RLS matrix.

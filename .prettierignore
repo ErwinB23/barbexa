@@ -7,6 +7,10 @@
 !/tsconfig.tests.json
 !/eslint.config.js
 !/.prettierrc.json
+!/tsconfig.server.json
+!/tsconfig.server-core.json
+!/supabase/
+!/tests/
 node_modules/
 .agents/
 .specify/
@@ -20,3 +24,5 @@ dist/
 build/
 package-lock.json
 **/*.min.js
+supabase/.temp/
+supabase/.branches/

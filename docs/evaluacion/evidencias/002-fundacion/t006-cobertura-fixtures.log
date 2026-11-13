@@ -1,0 +1,27 @@
+test --no-config --no-npm --no-remote --no-prompt --coverage=C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\partial C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\value.test.ts EXIT=0
+running 1 test from ../../../../AppData/Local/Temp/barberia-deno-coverage-NnjHMW/value.test.ts
+branch ... ok (1ms)
+
+ok | 1 passed | 0 failed (41ms)
+
+Check file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/value.test.ts
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/domain/value.ts" (was it deleted after coverage was collected?). Skipping.
+Error generating coverage report: No covered files included in the report
+
+coverage --threshold=100 --include=.*domain.* C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\partial EXIT=1
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/domain/value.ts" (was it deleted after coverage was collected?). Skipping.
+error: No covered files included in the report
+
+test --no-config --no-npm --no-remote --no-prompt --coverage=C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\full C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\value.test.ts EXIT=0
+running 1 test from ../../../../AppData/Local/Temp/barberia-deno-coverage-NnjHMW/value.test.ts
+branch ... ok (873µs)
+
+ok | 1 passed | 0 failed (22ms)
+
+Check file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/value.test.ts
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/domain/value.ts" (was it deleted after coverage was collected?). Skipping.
+Error generating coverage report: No covered files included in the report
+
+coverage --threshold=100 --include=.*domain.* C:\Users\PREDATOR\AppData\Local\Temp\barberia-deno-coverage-NnjHMW\full EXIT=1
+Missing transpiled source code for: "file:///C:/Users/PREDATOR/AppData/Local/Temp/barberia-deno-coverage-NnjHMW/domain/value.ts" (was it deleted after coverage was collected?). Skipping.
+error: No covered files included in the report

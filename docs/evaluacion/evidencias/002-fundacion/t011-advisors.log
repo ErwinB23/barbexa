@@ -1,0 +1,6 @@
+COMMAND: supabase db advisors --workdir <current workspace>
+{"results":[],"message":"db advisors","target":{"kind":"local","host":"127.0.0.1","port":54422}}
+Target: local stack (127.0.0.1:54422)
+No issues found
+
+EXIT=0

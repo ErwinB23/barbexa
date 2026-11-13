@@ -1,0 +1,241 @@
+{
+  "capturedAt": "2026-11-12T02:57:43.719Z",
+  "names": [
+    "supabase_studio_barberia-app",
+    "supabase_pg_meta_barberia-app",
+    "supabase_edge_runtime_barberia-app",
+    "supabase_storage_barberia-app",
+    "supabase_rest_barberia-app",
+    "supabase_realtime_barberia-app",
+    "supabase_inbucket_barberia-app",
+    "supabase_auth_barberia-app",
+    "supabase_kong_barberia-app",
+    "supabase_vector_barberia-app",
+    "supabase_analytics_barberia-app",
+    "supabase_db_barberia-app"
+  ],
+  "networks": [
+    "bridge",
+    "host",
+    "none",
+    "supabase_network_barberia-app"
+  ],
+  "volumes": [
+    "supabase_db_barberia-app",
+    "supabase_edge_runtime_barberia-app",
+    "supabase_storage_barberia-app"
+  ],
+  "old": [
+    {
+      "id": "94beec26bc1880fc858f4332e7718090405903b1d275137feea5c285983c701e",
+      "name": "/supabase_studio_barberia-app",
+      "image": "sha256:727a7f37b15f4c76c44e0d765e6be231d8d71c67f2933b2df8c6cbcc9b04c5d0",
+      "created": "2026-11-05T20:24:55.178628338Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_edge_runtime_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_edge_runtime_barberia-app/_data",
+          "destination": "/root/.cache/deno"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/functions",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/functions"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/snippets",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/snippets"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "3000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54323"
+          }
+        ]
+      }
+    },
+    {
+      "id": "16934d3b2518b87a04d465e23c1d713f4034c22c7a19cf8ac6e3d5eee1bf8206",
+      "name": "/supabase_pg_meta_barberia-app",
+      "image": "sha256:145325b7e39f8ef4931d6e8cfd3f6f4d655de09d72a2ccc96d9513542c2202bd",
+      "created": "2026-11-05T20:24:54.465284671Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "b6c745b1f12c5b756069abf069e74245743df55ad2e8ac74a4127ecd544848e3",
+      "name": "/supabase_edge_runtime_barberia-app",
+      "image": "sha256:6b850a2ccf0bf50ecac9accff8098095cd191c389c2a53c59b857aa0f53a8343",
+      "created": "2026-11-05T20:24:53.689944664Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_edge_runtime_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_edge_runtime_barberia-app/_data",
+          "destination": "/root/.cache/deno"
+        },
+        {
+          "type": "bind",
+          "source": "/run/desktop/mnt/host/c/Proyectos_personales/barberia-app-main/supabase/functions",
+          "destination": "/Proyectos_personales/barberia-app-main/supabase/functions"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "619665f90ff224a1187d105e7ca87943bd9c210982a8f8bf27e39b7d31bc675c",
+      "name": "/supabase_storage_barberia-app",
+      "image": "sha256:dd4a100612635a8eb0d64387ddc38769fb30eb3ddd9b411d0fe3121e1cb223b3",
+      "created": "2026-11-05T20:24:52.883091947Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_storage_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_storage_barberia-app/_data",
+          "destination": "/mnt"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "bdb67ccc0d1628dcfacde175295265cbd026411c11b37bb0208681371f730f2b",
+      "name": "/supabase_rest_barberia-app",
+      "image": "sha256:1347d7552b88f17832912c06afbf7c43209af6eeeb60834b04aae12c9bd9d5cc",
+      "created": "2026-11-05T20:24:52.201692278Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "fc32bb646d68429916bb787db5603a5e767d70883aec7ce365549b3782844cae",
+      "name": "/supabase_realtime_barberia-app",
+      "image": "sha256:dac44c958d0776144f0046ff0c0f8d51e0ff4f8a86c4a5e25287dd2f79fffa1e",
+      "created": "2026-11-05T20:24:51.606667671Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "1b81f7654d3940d74529a4d56b30c45ff8457fa46cc50a46b5189d13e28b275e",
+      "name": "/supabase_inbucket_barberia-app",
+      "image": "sha256:ed9b00c609e77e99c79b93f1178255ebc271868920f2c69a8d166bd5634ed10d",
+      "created": "2026-11-05T20:24:50.830741357Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "8025/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54324"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1692055f13be1830049b54c9ba034551f06d9dd4dee474552ad4325702d453e",
+      "name": "/supabase_auth_barberia-app",
+      "image": "sha256:1736a63078f5922b198c4cbe50f80ab9a2d3b54fe8b7b6cfb2e9dc5dbbc12c6b",
+      "created": "2026-11-05T20:24:50.267562397Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "a10a182e90cf0db7aa9b1d07016d0b70e256279fab3717204c18c7e2f05ccf7d",
+      "name": "/supabase_kong_barberia-app",
+      "image": "sha256:1b53405d8680a09d6f44494b7990bf7da2ea43f84a258c59717d4539abf09f6d",
+      "created": "2026-11-05T20:24:49.473169799Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "8000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54321"
+          }
+        ]
+      }
+    },
+    {
+      "id": "71932b3ef188651421c1bae3b8505b9fa3bdf04141485d6395ddbc56d0f9da4e",
+      "name": "/supabase_vector_barberia-app",
+      "image": "sha256:5dcf67db0ee378caa87f3395cb9484ebe3e97bb0334d119f2ac33116e00c5773",
+      "created": "2026-11-05T20:24:48.94053715Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {}
+    },
+    {
+      "id": "ba553ba538fa246d60e17c4eaf254842508b75b9cb4e77a05157d3f3f44d23f4",
+      "name": "/supabase_analytics_barberia-app",
+      "image": "sha256:a82f96c8845c1bcab128cfe17b4e325943ab949b657e9629a0bcc66f1d363179",
+      "created": "2026-11-05T20:24:48.24073494Z",
+      "mounts": [],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "4000/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54327"
+          }
+        ]
+      }
+    },
+    {
+      "id": "39a89ae6e8808a2d82964fe6c7844bf70c02bb4d02be22244f69c857fcd326a9",
+      "name": "/supabase_db_barberia-app",
+      "image": "sha256:7bd84e6a1d5322c7b864b9751873a0ac50f48df3f20a776e88114eadb2948fc0",
+      "created": "2026-11-05T20:24:30.448358833Z",
+      "mounts": [
+        {
+          "type": "volume",
+          "name": "supabase_db_barberia-app",
+          "source": "/var/lib/docker/volumes/supabase_db_barberia-app/_data",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54322"
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "metadata only; no database connection or credentials"
+}

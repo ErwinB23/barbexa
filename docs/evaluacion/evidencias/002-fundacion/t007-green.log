@@ -1,0 +1,28 @@
+✔ local loopback and separate project accepted (4.4854ms)
+✔ reject unsafe target https://example.com (0.478ms)
+✔ reject unsafe target http://localhost.evil:54421 (0.1399ms)
+✔ reject unsafe target http://127.0.0.1:54321 (0.0933ms)
+✔ reject unsafe target http://user:pass@127.0.0.1:54421 (0.0957ms)
+✔ reject unsafe target http://127.0.0.1:54421/path (0.0992ms)
+✔ reject unsafe target http://127.0.0.1:54421/?key=x (0.0811ms)
+✔ reject old or missing identity (0.1896ms)
+✔ secret never enters public composition settings (0.3756ms)
+✔ legacy service key rejected (1.3212ms)
+✔ service credential cannot be used as user token (0.2356ms)
+✔ fixture credentials random and never logged (0.8787ms)
+✔ owned cleanup and refusal of foreign directory (2.8659ms)
+✔ cleanup refuses altered ownership marker (3.6604ms)
+✔ cleanup refuses nested junction without following it (4.3881ms)
+✔ subprocess failure and timeout stop without exposing stdout (88.244ms)
+✔ runner fails closed when backend does not exist (211.1302ms)
+✔ isolated TypeScript compilation works after unit build cleanup (1029.2183ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1468.6811
+
+EXIT=0

@@ -17,7 +17,11 @@ module.exports = defineConfig([
   ]),
   expoConfig,
   {
-    files: ['scripts/**/*.mjs'],
+    files: ['scripts/**/*.mjs', 'tests/**/*.mjs'],
     languageOptions: { globals: { process: 'readonly', console: 'readonly' } },
+  },
+  {
+    files: ['supabase/functions/**/*.ts', 'tests/server/**/*.ts'],
+    languageOptions: { globals: { Deno: 'readonly' } },
   },
 ]);

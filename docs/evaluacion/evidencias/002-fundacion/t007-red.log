@@ -1,0 +1,321 @@
+✖ local loopback and separate project accepted (3.5319ms)
+✖ reject unsafe target https://example.com (1.1876ms)
+✖ reject unsafe target http://localhost.evil:54421 (0.8799ms)
+✖ reject unsafe target http://127.0.0.1:54321 (1.2386ms)
+✖ reject unsafe target http://user:pass@127.0.0.1:54421 (1.1219ms)
+✖ reject unsafe target http://127.0.0.1:54421/path (0.7707ms)
+✖ reject unsafe target http://127.0.0.1:54421/?key=x (0.8281ms)
+✖ reject old or missing identity (1.199ms)
+✖ secret never enters public composition settings (2.7412ms)
+✖ legacy service key rejected (1.3879ms)
+✖ fixture credentials random and never logged (0.8296ms)
+✖ owned cleanup and refusal of foreign directory (0.7681ms)
+✖ cleanup refuses altered ownership marker (1.164ms)
+✖ subprocess failure and timeout stop without exposing stdout (0.8787ms)
+✖ runner fails closed when backend does not exist (118.2382ms)
+✖ isolated TypeScript compilation works after unit build cleanup (1.4196ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 0
+ℹ fail 16
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 327.528
+
+✖ failing tests:
+
+test at tests\integration\tenant-foundation\environment.test.mjs:9:1
+✖ local loopback and separate project accepted (3.5319ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target https://example.com (1.1876ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target http://localhost.evil:54421 (0.8799ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target http://127.0.0.1:54321 (1.2386ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target http://user:pass@127.0.0.1:54421 (1.1219ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target http://127.0.0.1:54421/path (0.7707ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:15:3
+✖ reject unsafe target http://127.0.0.1:54421/?key=x (0.8281ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:20:1
+✖ reject old or missing identity (1.199ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:24:1
+✖ secret never enters public composition settings (2.7412ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:31:1
+✖ legacy service key rejected (1.3879ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:36:1
+✖ fixture credentials random and never logged (0.8296ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:41:1
+✖ owned cleanup and refusal of foreign directory (0.7681ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:47:1
+✖ cleanup refuses altered ownership marker (1.164ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:53:1
+✖ subprocess failure and timeout stop without exposing stdout (0.8787ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:58:1
+✖ runner fails closed when backend does not exist (118.2382ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /NOT_READY/. Input:
+
+  'node:internal/modules/cjs/loader:1568\r\n' +
+    '  throw err;\r\n' +
+    '  ^\r\n' +
+    '\r\n' +
+    "Error: Cannot find module 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\scripts\\run-backend-integration.mjs'\r\n" +
+    '    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)\r\n' +
+    '    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)\r\n' +
+    '    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)\r\n' +
+    '    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)\r\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1341:5)\r\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n' +
+    '    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n' +
+    '    at node:internal/main/run_main_module:33:47 {\r\n' +
+    "  code: 'MODULE_NOT_FOUND',\r\n" +
+    '  requireStack: []\r\n' +
+    '}\r\n' +
+    '\r\n' +
+    'Node.js v24.21.0\r\n'
+
+      at TestContext.<anonymous> (file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/environment.test.mjs:60:36)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: "node:internal/modules/cjs/loader:1568\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia\\scripts\\run-backend-integration.mjs'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1564:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1341:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.21.0\r\n",
+    expected: /NOT_READY/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\integration\tenant-foundation\environment.test.mjs:62:1
+✖ isolated TypeScript compilation works after unit build cleanup (1.4196ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\fixtures.mjs' imported from C:\Users\PREDATOR\Desktop\SEMETRE 2026 II\Arquitectura de Software\App-Barberia\tests\integration\tenant-foundation\environment.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+      at moduleResolve (node:internal/modules/esm/resolve:879:10)
+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+      at #resolve (node:internal/modules/esm/loader:687:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+      at node:internal/modules/esm/loader:636:32
+      at TracingChannel.tracePromise (node:diagnostics_channel:362:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///C:/Users/PREDATOR/Desktop/SEMETRE%202026%20II/Arquitectura%20de%20Software/App-Barberia/tests/integration/tenant-foundation/fixtures.mjs'
+  }
+
+EXIT=1

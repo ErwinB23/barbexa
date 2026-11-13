@@ -1,0 +1,187 @@
+COMMAND: supabase start --workdir <current workspace>
+[sensitive line omitted]
+Skipped serving Function: create-barbershop
+Skipped serving Function: ensure-profile
+v1.78.1: Pulling from supabase/edge-runtime
+2026.11.09-sha-1567384: Pulling from supabase/studio
+17.11.0.018: Pulling from supabase/postgres
+f8514b363eb6: Pulling fs layer
+500adcb45032: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+c7052810510b: Pulling fs layer
+0abf6ab9329c: Pulling fs layer
+8020f5d96ea2: Pulling fs layer
+a5ed3c87bbce: Pulling fs layer
+1b7992cf5ea8: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+3c5f479ca65a: Pulling fs layer
+5d0c6c5710f1: Pulling fs layer
+009fdb44ca13: Pulling fs layer
+ff2c4258f9cf: Pulling fs layer
+c0ebdcf19c02: Pulling fs layer
+aacdc27c5533: Pulling fs layer
+500adcb45032: Download complete
+f8514b363eb6: Download complete
+0abf6ab9329c: Download complete
+dd051e1b8c92: Download complete
+dd051e1b8c92: Download complete
+44136fa355b3: Already exists
+dd051e1b8c92: Pull complete
+c7052810510b: Download complete
+c7052810510b: Pull complete
+500adcb45032: Pull complete
+0abf6ab9329c: Pull complete
+44136fa355b3: Already exists
+6531567e985e: Download complete
+fa33d6f02ba2: Pulling fs layer
+60bf8bfe16a7: Pulling fs layer
+0a88acd31a7e: Pulling fs layer
+21c9ccd4d650: Pulling fs layer
+9d4f5a31dafe: Pulling fs layer
+4eeff15172a8: Pulling fs layer
+eedd6c22469d: Pulling fs layer
+e8a84a3e8749: Pulling fs layer
+db04625bb825: Pulling fs layer
+558da21df5ff: Pulling fs layer
+f013a10a80d8: Pulling fs layer
+0620d22b0132: Pulling fs layer
+4d67901a1695: Pulling fs layer
+cad2b0c06910: Pulling fs layer
+c358fb44e004: Pulling fs layer
+75fff1994592: Pulling fs layer
+22f6016db27a: Pulling fs layer
+98c87e7d48da: Pulling fs layer
+f764dee38eb9: Pulling fs layer
+5e9b4a97f639: Pulling fs layer
+8a2ae6d764fb: Pulling fs layer
+a65000170b43: Pulling fs layer
+b2ae74461bfa: Pulling fs layer
+7e6d01e66c1c: Pulling fs layer
+a278b50bba20: Pulling fs layer
+b6cb2d7131ef: Pulling fs layer
+ee70790e49f2: Pulling fs layer
+55b3e3c4d2d2: Pulling fs layer
+5e9b4a97f639: Already exists
+44136fa355b3: Already exists
+a278b50bba20: Download complete
+7e6d01e66c1c: Download complete
+95e94df9ca0a: Download complete
+failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://d2glxqk2uabbnd.cloudfront.net/v2/cb0fd6-575108962802-28c1502c-abe8-ce63-7c82-c11a2f745e7f/74633dd8-cfdd-4ad8-bca6-8e7378869a86?[PARAMETROS_FIRMADOS_REDACTADOS]": EOF
+Retrying after 4s: public.ecr.aws/supabase/studio:2026.11.09-sha-1567384
+fa33d6f02ba2: Download complete
+60bf8bfe16a7: Download complete
+21c9ccd4d650: Download complete
+0a88acd31a7e: Download complete
+558da21df5ff: Download complete
+4eeff15172a8: Download complete
+eedd6c22469d: Download complete
+db04625bb825: Download complete
+e8a84a3e8749: Download complete
+f013a10a80d8: Download complete
+4d67901a1695: Download complete
+0620d22b0132: Download complete
+9d4f5a31dafe: Download complete
+cad2b0c06910: Download complete
+98c87e7d48da: Download complete
+75fff1994592: Download complete
+c358fb44e004: Download complete
+22f6016db27a: Download complete
+f764dee38eb9: Download complete
+a65000170b43: Download complete
+55b3e3c4d2d2: Download complete
+b2ae74461bfa: Download complete
+8a2ae6d764fb: Download complete
+f764dee38eb9: Pull complete
+8a2ae6d764fb: Pull complete
+ee70790e49f2: Download complete
+d52e69874cb5: Download complete
+8020f5d96ea2: Download complete
+8020f5d96ea2: Pull complete
+f8514b363eb6: Pull complete
+Digest: sha256:362e9177660ae4d3affb6978480cc6161a8ea0764f1c2c7f738348eda1c3fbf2
+Status: Downloaded newer image for public.ecr.aws/supabase/edge-runtime:v1.78.1
+public.ecr.aws/supabase/edge-runtime:v1.78.1
+2026.11.09-sha-1567384: Pulling from supabase/studio
+ff2c4258f9cf: Pulling fs layer
+a5ed3c87bbce: Pulling fs layer
+3c5f479ca65a: Pulling fs layer
+009fdb44ca13: Pulling fs layer
+c0ebdcf19c02: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+aacdc27c5533: Pulling fs layer
+5d0c6c5710f1: Pulling fs layer
+1b7992cf5ea8: Pulling fs layer
+dd051e1b8c92: Already exists
+3c5f479ca65a: Download complete
+44136fa355b3: Already exists
+3c5f479ca65a: Pull complete
+failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://d2glxqk2uabbnd.cloudfront.net/v2/3b95f2-575108962802-28c1502c-abe8-ce63-7c82-c11a2f745e7f/4408ec3c-bfbb-4503-ace8-725fd3bab9c3?[PARAMETROS_FIRMADOS_REDACTADOS]": EOF
+Retrying after 8s: public.ecr.aws/supabase/studio:2026.11.09-sha-1567384
+2026.11.09-sha-1567384: Pulling from supabase/studio
+a5ed3c87bbce: Pulling fs layer
+1b7992cf5ea8: Pulling fs layer
+ff2c4258f9cf: Pulling fs layer
+5d0c6c5710f1: Pulling fs layer
+dd051e1b8c92: Pulling fs layer
+3c5f479ca65a: Pulling fs layer
+c0ebdcf19c02: Pulling fs layer
+aacdc27c5533: Pulling fs layer
+009fdb44ca13: Pulling fs layer
+44136fa355b3: Already exists
+dd051e1b8c92: Already exists
+95e94df9ca0a: Download complete
+b6cb2d7131ef: Download complete
+3c5f479ca65a: Download complete
+3c5f479ca65a: Pull complete
+aacdc27c5533: Download complete
+b6cb2d7131ef: Pull complete
+a278b50bba20: Pull complete
+7e6d01e66c1c: Pull complete
+0a88acd31a7e: Pull complete
+a65000170b43: Pull complete
+55b3e3c4d2d2: Pull complete
+b2ae74461bfa: Pull complete
+ee70790e49f2: Pull complete
+fa33d6f02ba2: Pull complete
+60bf8bfe16a7: Pull complete
+21c9ccd4d650: Pull complete
+4eeff15172a8: Pull complete
+eedd6c22469d: Pull complete
+db04625bb825: Pull complete
+e8a84a3e8749: Pull complete
+f013a10a80d8: Pull complete
+4d67901a1695: Pull complete
+0620d22b0132: Pull complete
+9d4f5a31dafe: Pull complete
+558da21df5ff: Pull complete
+cad2b0c06910: Pull complete
+98c87e7d48da: Pull complete
+75fff1994592: Pull complete
+c358fb44e004: Pull complete
+22f6016db27a: Pull complete
+Digest: sha256:7c31363a3f7434ff14945f1b8a4880e6eca8b362e197e88b87c476c77aa3cf8c
+Status: Downloaded newer image for public.ecr.aws/supabase/postgres:17.11.0.018
+public.ecr.aws/supabase/postgres:17.11.0.018
+5d0c6c5710f1: Download complete
+1b7992cf5ea8: Download complete
+5d0c6c5710f1: Pull complete
+1b7992cf5ea8: Pull complete
+c0ebdcf19c02: Download complete
+ff2c4258f9cf: Download complete
+ff2c4258f9cf: Pull complete
+009fdb44ca13: Download complete
+009fdb44ca13: Pull complete
+aacdc27c5533: Pull complete
+c0ebdcf19c02: Pull complete
+a5ed3c87bbce: Download complete
+a5ed3c87bbce: Pull complete
+Digest: sha256:09990d7831762e788b6d14bee7be40d452d45433b51a1592aaf3105bb126bbe2
+Status: Downloaded newer image for public.ecr.aws/supabase/studio:2026.11.09-sha-1567384
+public.ecr.aws/supabase/studio:2026.11.09-sha-1567384
+Starting database...
+Initialising schema...
+Seeding globals from roles.sql...
+Skipped serving Function: create-barbershop
+Skipped serving Function: ensure-profile
+
+EXIT=0

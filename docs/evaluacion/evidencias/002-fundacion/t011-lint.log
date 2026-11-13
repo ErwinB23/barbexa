@@ -1,0 +1,9 @@
+COMMAND: supabase db lint --fail-on warning --workdir <current workspace>
+{"results":[],"message":"db lint","target":{"kind":"local","host":"127.0.0.1","port":54422}}
+Target: local stack (127.0.0.1:54422)
+Linting schema: extensions
+Linting schema: public
+
+No schema errors found
+
+EXIT=0

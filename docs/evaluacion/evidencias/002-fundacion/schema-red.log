@@ -1,0 +1,168 @@
+COMMAND: supabase test db supabase/tests/schema.test.sql --workdir <workspace>
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql ..
+# Failed test 4: "table exists: profiles"
+# Failed test 5: "table exists: barbershops"
+# Failed test 6: "table exists: barbershop_memberships"
+# Failed test 7: "exact minimal columns: profiles"
+# Failed test 8: "exact minimal columns: barbershops"
+# Failed test 9: "exact minimal columns: barbershop_memberships"
+# Failed test 10: "column type/nullability: profiles.id"
+# Failed test 11: "column type/nullability: profiles.display_name"
+# Failed test 12: "column type/nullability: profiles.phone"
+# Failed test 13: "column type/nullability: barbershops.id"
+# Failed test 14: "column type/nullability: barbershops.name"
+# Failed test 15: "column type/nullability: barbershop_memberships.id"
+# Failed test 16: "column type/nullability: barbershop_memberships.user_id"
+# Failed test 17: "column type/nullability: barbershop_memberships.barbershop_id"
+# Failed test 18: "column type/nullability: barbershop_memberships.role"
+# Failed test 19: "column type/nullability: barbershop_memberships.status"
+# Failed test 20: "id primary key: profiles"
+# Failed test 21: "id primary key: barbershops"
+# Failed test 22: "id primary key: barbershop_memberships"
+# Failed test 23: "server UUID default: barbershops"
+# Failed test 24: "server UUID default: barbershop_memberships"
+# Failed test 25: "restrictive FK: profiles.id"
+# Failed test 26: "restrictive FK: barbershop_memberships.user_id"
+# Failed test 27: "restrictive FK: barbershop_memberships.barbershop_id"
+# Failed test 28: "unique user/shop pair"
+# Failed test 29: "tenant/user FK lookup index"
+# Failed test 30: "RLS enabled: profiles"
+# Failed test 31: "RLS enabled: barbershops"
+# Failed test 32: "RLS enabled: barbershop_memberships"
+# Failed test 33: "no permissive policies in initial increment: profiles"
+# Failed test 34: "no permissive policies in initial increment: barbershops"
+# Failed test 35: "no permissive policies in initial increment: barbershop_memberships"
+# Failed test 36: "no direct grant: anon profiles SELECT"
+# Failed test 37: "no direct grant: anon barbershops SELECT"
+# Failed test 38: "no direct grant: anon barbershop_memberships SELECT"
+# Failed test 39: "no direct grant: authenticated profiles SELECT"
+# Failed test 40: "no direct grant: authenticated barbershops SELECT"
+# Failed test 41: "no direct grant: authenticated barbershop_memberships SELECT"
+# Failed test 42: "no direct grant: service_role profiles SELECT"
+# Failed test 43: "no direct grant: service_role barbershops SELECT"
+# Failed test 44: "no direct grant: service_role barbershop_memberships SELECT"
+# Failed test 45: "no direct grant: anon profiles INSERT"
+# Failed test 46: "no direct grant: anon barbershops INSERT"
+# Failed test 47: "no direct grant: anon barbershop_memberships INSERT"
+# Failed test 48: "no direct grant: authenticated profiles INSERT"
+# Failed test 49: "no direct grant: authenticated barbershops INSERT"
+# Failed test 50: "no direct grant: authenticated barbershop_memberships INSERT"
+# Failed test 51: "no direct grant: service_role profiles INSERT"
+# Failed test 52: "no direct grant: service_role barbershops INSERT"
+# Failed test 53: "no direct grant: service_role barbershop_memberships INSERT"
+# Failed test 54: "no direct grant: anon profiles UPDATE"
+# Failed test 55: "no direct grant: anon barbershops UPDATE"
+# Failed test 56: "no direct grant: anon barbershop_memberships UPDATE"
+# Failed test 57: "no direct grant: authenticated profiles UPDATE"
+# Failed test 58: "no direct grant: authenticated barbershops UPDATE"
+# Failed test 59: "no direct grant: authenticated barbershop_memberships UPDATE"
+# Failed test 60: "no direct grant: service_role profiles UPDATE"
+# Failed test 61: "no direct grant: service_role barbershops UPDATE"
+# Failed test 62: "no direct grant: service_role barbershop_memberships UPDATE"
+# Failed test 63: "no direct grant: anon profiles DELETE"
+# Failed test 64: "no direct grant: anon barbershops DELETE"
+# Failed test 65: "no direct grant: anon barbershop_memberships DELETE"
+# Failed test 66: "no direct grant: authenticated profiles DELETE"
+# Failed test 67: "no direct grant: authenticated barbershops DELETE"
+# Failed test 68: "no direct grant: authenticated barbershop_memberships DELETE"
+# Failed test 69: "no direct grant: service_role profiles DELETE"
+# Failed test 70: "no direct grant: service_role barbershops DELETE"
+# Failed test 71: "no direct grant: service_role barbershop_memberships DELETE"
+# Failed test 72: "no direct grant: anon profiles TRUNCATE"
+# Failed test 73: "no direct grant: anon barbershops TRUNCATE"
+# Failed test 74: "no direct grant: anon barbershop_memberships TRUNCATE"
+# Failed test 75: "no direct grant: authenticated profiles TRUNCATE"
+# Failed test 76: "no direct grant: authenticated barbershops TRUNCATE"
+# Failed test 77: "no direct grant: authenticated barbershop_memberships TRUNCATE"
+# Failed test 78: "no direct grant: service_role profiles TRUNCATE"
+# Failed test 79: "no direct grant: service_role barbershops TRUNCATE"
+# Failed test 80: "no direct grant: service_role barbershop_memberships TRUNCATE"
+# Failed test 81: "no direct grant: anon profiles REFERENCES"
+# Failed test 82: "no direct grant: anon barbershops REFERENCES"
+# Failed test 83: "no direct grant: anon barbershop_memberships REFERENCES"
+# Failed test 84: "no direct grant: authenticated profiles REFERENCES"
+# Failed test 85: "no direct grant: authenticated barbershops REFERENCES"
+# Failed test 86: "no direct grant: authenticated barbershop_memberships REFERENCES"
+# Failed test 87: "no direct grant: service_role profiles REFERENCES"
+# Failed test 88: "no direct grant: service_role barbershops REFERENCES"
+# Failed test 89: "no direct grant: service_role barbershop_memberships REFERENCES"
+# Failed test 90: "no direct grant: anon profiles TRIGGER"
+# Failed test 91: "no direct grant: anon barbershops TRIGGER"
+# Failed test 92: "no direct grant: anon barbershop_memberships TRIGGER"
+# Failed test 93: "no direct grant: authenticated profiles TRIGGER"
+# Failed test 94: "no direct grant: authenticated barbershops TRIGGER"
+# Failed test 95: "no direct grant: authenticated barbershop_memberships TRIGGER"
+# Failed test 96: "no direct grant: service_role profiles TRIGGER"
+# Failed test 97: "no direct grant: service_role barbershops TRIGGER"
+# Failed test 98: "no direct grant: service_role barbershop_memberships TRIGGER"
+# Failed test 99: "no PUBLIC table grant: profiles"
+# Failed test 100: "no PUBLIC table grant: barbershops"
+# Failed test 101: "no PUBLIC table grant: barbershop_memberships"
+# Failed test 102: "profile and optional phone accepted"
+#     died: 42P01: relation "public.profiles" does not exist
+#         CONTEXT:
+#             PL/pgSQL function lives_ok(text,text) line 14 at EXECUTE
+# Failed test 103: "blank profile name rejected"
+#       caught: 42P01: relation "public.profiles" does not exist
+#       wanted: 23514
+# Failed test 104: "null profile name rejected"
+#       caught: 42P01: relation "public.profiles" does not exist
+#       wanted: 23502
+# Failed test 105: "duplicate identity rejected"
+#       caught: 42P01: relation "public.profiles" does not exist
+#       wanted: 23505
+# Failed test 106: "unknown Auth identity rejected"
+#       caught: 42P01: relation "public.profiles" does not exist
+#       wanted: 23503
+# Failed test 107: "duplicate business names permitted"
+#     died: 42P01: relation "public.barbershops" does not exist
+#         CONTEXT:
+#             PL/pgSQL function lives_ok(text,text) line 14 at EXECUTE
+# Failed test 108: "blank shop name rejected"
+#       caught: 42P01: relation "public.barbershops" does not exist
+#       wanted: 23514
+# Failed test 109: "null shop name rejected"
+#       caught: 42P01: relation "public.barbershops" does not exist
+#       wanted: 23502
+# Failed test 110: "valid fixture association accepted"
+#     died: 42P01: relation "public.barbershop_memberships" does not exist
+#         CONTEXT:
+#             PL/pgSQL function lives_ok(text,text) line 14 at EXECUTE
+# Failed test 111: "duplicate pair rejected"
+#       caught: 42P01: relation "public.barbershop_memberships" does not exist
+#       wanted: 23505
+# Failed test 112: "client is not a professional membership role"
+#       caught: 42P01: relation "public.barbershop_memberships" does not exist
+#       wanted: 23514
+# Failed test 113: "unknown status rejected"
+#       caught: 42P01: relation "public.barbershop_memberships" does not exist
+#       wanted: 23514
+# Failed test 114: "membership requires profile"
+#       caught: 42P01: relation "public.barbershop_memberships" does not exist
+#       wanted: 23503
+# Failed test 115: "membership requires shop"
+#       caught: 42P01: relation "public.barbershop_memberships" does not exist
+#       wanted: 23503
+# Failed test 116: "profile restricts identity deletion"
+#       caught: no exception
+#       wanted: 23503
+# Failed test 117: "membership restricts profile deletion"
+#       caught: 42P01: relation "public.profiles" does not exist
+#       wanted: 23503
+# Failed test 118: "membership restricts shop deletion"
+#       caught: 42P01: relation "public.barbershops" does not exist
+#       wanted: 23503
+# Looks like you failed 115 tests of 118
+Failed 115/118 subtests
+
+Test Summary Report
+-------------------
+/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql (Wstat: 0 Tests: 118 Failed: 115)
+  Failed tests:  4-118
+Files=1, Tests=118,  0 wallclock secs ( 0.02 usr +  0.01 sys =  0.03 CPU)
+Result: FAIL
+Target: local stack (127.0.0.1:54422)
+psql:/Users/PREDATOR/Desktop/SEMETRE 2026 II/Arquitectura de Software/App-Barberia/supabase/tests/schema.test.sql:4: NOTICE:  extension "pgtap" already exists, skipping
+error running container: exit 1
+
+EXIT=1
