@@ -1,0 +1,145 @@
+{
+  "command": "supabase config diff --remote=vuoncrtkkkquvddunrxx --output-format json",
+  "exit": 0,
+  "target": {
+    "kind": "linked",
+    "project_ref": "vuoncrtkkkquvddunrxx",
+    "environment": "unverified",
+    "local_scope": "base"
+  },
+  "scope": {
+    "present": [
+      "api",
+      "auth",
+      "database",
+      "pooler",
+      "realtime",
+      "storage"
+    ],
+    "missing": []
+  },
+  "counts": {
+    "update": 11,
+    "remote_only": 0,
+    "local_only": 1,
+    "total": 12
+  },
+  "changes": [
+    {
+      "path": [
+        "api",
+        "schemas"
+      ],
+      "class": "update",
+      "declared": true,
+      "local": [
+        "public"
+      ],
+      "remote": [
+        "public",
+        "graphql_public"
+      ]
+    },
+    {
+      "path": [
+        "auth",
+        "additional_redirect_urls"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "email",
+        "max_frequency"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "email",
+        "otp_length"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "mfa",
+        "totp",
+        "enroll_enabled"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "mfa",
+        "totp",
+        "verify_enabled"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "password_requirements"
+      ],
+      "class": "local_only",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "site_url"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "auth",
+        "sms",
+        "enable_confirmations"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "db",
+        "pooler",
+        "default_pool_size"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "db",
+        "pooler",
+        "max_client_conn"
+      ],
+      "class": "update",
+      "declared": true
+    },
+    {
+      "path": [
+        "storage",
+        "s3_protocol",
+        "enabled"
+      ],
+      "class": "update",
+      "declared": true
+    }
+  ],
+  "maskedFieldsCount": 2,
+  "unmanagedFieldsCount": 14,
+  "rawOutputRetained": false
+}

@@ -427,3 +427,120 @@ su identidad no se declara estable frente a serve activo. Sin ?rdenes de reinici
 Cloud, instalaciones, T034?T040, cambios en 001/Constituci?n/r?brica, commit ni push.
 Revisi?n final de secretos, conservaci?n de archivos y diff global/acotado en t033-revision.json.
 Siguiente tarea disponible: T034.
+
+## T034?T035 ? 13/11/2026
+
+T034 completada: [consultas](consultas.md), 10 000 usuarios/perfiles, 1 000 barber?as y
+20 000 membres?as transaccionales, EXPLAIN ANALYZE real y rollback. Variante auth.uid()
+139.660 ms frente a filtro literal real del adaptador 0.043 ms; sin nuevos ?ndices ni SLO.
+
+T035 completada con enmienda autorizada de SC-006/US1 y criterios documentales, compatible
+con Constituci?n/r?brica: no exige tercero ni crear otro entorno solo para aceptaci?n.
+[Registro completo y l?mites](reproduccion.md). Antes de recibirse la decisi?n ya se cre?
+una copia externa y un stack temporal aislado: npm ci/start exit 0, cinco migraciones,
+SQL 336/336, HTTP 440/440 incluidas carreras, npm run check exit 0; sin revisi?n externa.
+Cat?logo equivalente a T033 y hashes de package/lock id?nticos. Desde la decisi?n no se
+crean nuevos entornos ni se repiten verificaciones; se reutilizan evidencias reales.
+Stack/proceso temporal quedan existentes, sin nuevas operaciones de ciclo de vida; no
+se toca el log activo ni proyectos anteriores. Nueve avisos moderados abiertos; sin
+seguridad npm aprobada, Cloud, T036?T040, commit o push.
+
+## T036 — identidad de destino y pendientes, 13/11/2026
+
+[Destino autorizado](destino.md): referencia pública vuoncrtkkkquvddunrxx, URL exacta
+aportada por el usuario; nombre app-barberia-arquitectura, organización barberia-app,
+São Paulo y Healthy son declaraciones del usuario, sin contraste autenticado de Codex.
+Documentación oficial confirma São Paulo/sa-east-1; no demuestra región efectiva.
+Consulta web del dashboard inaccesible; antecedente CLI sin sesión autenticada reutilizado.
+T036 queda pendiente por disponibilidad efectiva de PostgreSQL 17 y responsable/costo,
+con Data API/default grants/RLS remotos aún sin verificar. Aprobación del destino ya recibida.
+Sin link, SQL/despliegue, T037–T040, cambios de contenedores, código, dependencias, commit
+o push. Cambios anteriores y log activo conservados. Nueve avisos npm siguen pendientes.
+
+### Actualización de cierre T036 — 13/11/2026
+
+T036 completada tras evidencia manual declarada por el usuario en el dashboard del destino
+vuoncrtkkkquvddunrxx: identidad/organización/región/Healthy, PostgreSQL 17.11.0.019, Auth
+2.197.0 y PostgREST 14.18. Plan Free, spend cap enabled, dos facturas $0.00, sin métodos
+de pago y créditos $0.00, según usuario; no promesa de costo futuro cero. Responsable/aprobador:
+usuario responsable del proyecto; organización de facturación barberia-app. Codex no inspeccionó
+el dashboard autenticado ni ejecutó SQL remoto. Data API activa, exposición automática
+desactivada; schemas public y graphql_public, search path public/extensions, Max rows 1000;
+ninguna tabla/función disponible y Automatic RLS desactivado al crear. Estas opciones no
+aprueban RLS/ACL de negocio; migraciones y pruebas remotas futuras deben verificarlas.
+Diferencia graphql_public registrada para revisión posterior sin alterar configuración.
+[Detalle y atribución](destino.md). T037 habilitada pero no ejecutada; no duplicar creación
+manual. Sin link, despliegues, cambios de contenedores, código, dependencias, commit ni push.
+Persisten nueve avisos moderados npm. El registro previo de T036 pendiente es histórico.
+
+## T037 — acceso operativo pendiente, 13/11/2026
+
+Creación manual del destino vuoncrtkkkquvddunrxx reconocida sin duplicarla. T036 habilita
+T037, pero esta queda abierta: consulta real projects list --output-format json exit 1,
+AccessTokenRequiredError. Identidad/configuración siguen acreditadas por evidencia manual
+del usuario de T036, no por una conexión nueva de Codex. Ayuda login/list consultada exit 0.
+Se revisaron offline cinco migraciones, sus transacciones/RLS/ACL/EXECUTE y efectos previstos,
+sin afirmar cuáles faltan realmente en remoto. [Destino, procedimiento manual y plan de
+validación/recuperación futura](destino.md).
+Plan documental de operaciones posteriores no ejecuta T038. Sin link, dry-run, SQL, despliegue,
+creación, cambios de contenedores/dependencias, commit o push. Nueve avisos npm conservados.
+
+### Cierre de T037 — 13/11/2026
+
+T037 completada: creación manual reconocida y acceso operativo de lectura acreditado
+mediante consulta nueva CLI projects list --output-format json, exit 0. Coincidencia exacta
+vuoncrtkkkquvddunrxx/app-barberia-arquitectura, sa-east-1, ACTIVE_HEALTHY y organización
+zxqsrgokncxawohnfidv; el proyecto anterior klebvayvsvibwjpkzrff es distinto. No hay vínculo
+local: el aviso de project ref no contradice el listado autenticado correcto. Versiones
+y condiciones del plan reutilizadas de evidencia manual T036, sin nuevas lecturas SQL.
+[Resultado saneado](t037-acceso-verificado.json) y [cierre/plan posterior](destino.md).
+El bloqueo de autenticación previo queda superado sin borrar su registro histórico.
+T038 habilitada pero no ejecutada: historial/previsualización/configuración y permisos
+deben revisarse antes de solicitar autorización de escrituras concretas. Sin link, push,
+migraciones remotas, despliegue, operaciones de contenedores, commit o push Git.
+Persisten nueve avisos moderados npm y RLS/ACL de negocio remotas sin validar.
+
+## T038 — preparación sin escrituras, 13/11/2026
+
+T038 permanece pendiente. Consulta autenticada nueva: proyecto exacto
+vuoncrtkkkquvddunrxx/app-barberia-arquitectura, sa-east-1, ACTIVE_HEALTHY y organización
+zxqsrgokncxawohnfidv; exit 0. CLI 3.1.0/help contrastados. Config diff dirigido explícitamente
+al nuevo proyecto, exit 0: 12 diferencias; confirma public/graphql_public frente a public
+local. No se aplica configuración global. [Plan revisable, riesgos y recuperación](remoto.md)
+y [comparación filtrada](t038-config-diff.json).
+
+Historial remoto y dry-run **no ejecutados**: el código oficial v3.1.0 documenta que,
+sin contraseña de base, la conexión crea un rol temporal por POST cli/login-role, incluso
+antes de la previsualización SQL. Ese efecto no está autorizado bajo la restricción actual
+de cero escrituras. No se solicitó ni guardó contraseña. Por ello los cinco archivos locales
+están preparados para contrastar, pero no se afirma que todos estén pendientes en remoto.
+Es necesario revisar/autorizar específicamente ese mecanismo antes de esos dos comandos.
+
+Se proponen, sin ejecutarlas, la reducción de Exposed schemas a public, las migraciones
+que resulten pendientes y los despliegues explícitos ensure-profile/create-barbershop con
+verify_jwt=true. Identidades sintéticas y eventual configuración de secretos/orígenes
+requieren preparación/autorización separada. Sin link, migraciones, despliegues, T039–T040,
+operaciones de contenedores, cambios de código/dependencias, commit o push. Evidencias
+locales previas reutilizadas con su alcance; no se atribuyen a Cloud. Nueve avisos npm
+siguen abiertos. [Conservación y comprobaciones](t038-preparacion.json).
+
+### T038 — historial y dry-run tras autorización limitada, 13/11/2026
+
+El usuario autorizó el rol temporal de conexión de CLI 3.1.0 únicamente para las dos
+consultas del destino vuoncrtkkkquvddunrxx. Versión/help y destino reconfirmados; projects
+list exit 0. Migration list **exit 0**: historial remoto sin versiones registradas.
+Db push --dry-run --skip-vault **exit 0**, dryRun=true, destino explícito coincidente:
+las cinco migraciones locales están pendientes, en orden 20261112031854, 20261113035717,
+20261113045240, 20261113050232 y 20261113053907. Cero seeds/roles personalizados; sin
+discrepancias de historial/plan. [Detalle y resultados filtrados](remoto.md).
+
+No se usaron confirmaciones globales ni apareció una confirmación adicional. Se observó
+preparación del rol temporal en ambas consultas; no se verificó su eliminación/caducidad
+ni si hubo reutilización. Cero roles personalizados no significa cero roles temporales.
+Historial vacío no prueba esquema vacío y dry-run no valida los cuerpos SQL ni RLS/ACL.
+El bloqueo de conexión anterior queda superado exclusivamente para estas consultas.
+
+T038 sigue pendiente: no se aplicaron migraciones, configuración o despliegues Edge,
+ni se acreditó paridad remota. Sin link, SQL adicional, operaciones de contenedores,
+T039–T040, commit o push. Log activo y cambios anteriores conservados. Persisten nueve
+avisos moderados npm. [Conservación y revisión actual](t038-consultas-revision.json).

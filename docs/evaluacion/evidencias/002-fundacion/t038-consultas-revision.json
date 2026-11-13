@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-13",
+  "phase": "T038_PREPARATION_WITH_AUTHORIZED_TEMPORARY_CONNECTION_ROLE",
+  "branch": "main",
+  "head": "477b3600468e959250229a672c875197e2ace613",
+  "cliVersion": "3.1.0",
+  "initialSandboxHelpChecksExit": 1,
+  "repeatedOutsideSandboxVersionAndHelpExit": 0,
+  "targetVerified": true,
+  "migrationListExit": 0,
+  "dryRunExit": 0,
+  "remoteVersions": [],
+  "pendingMigrationFiles": [
+    "20261112031854_foundation_model.sql",
+    "20261113035717_profile_access_and_provisioning.sql",
+    "20261113045240_tenant_context_access.sql",
+    "20261113050232_create_own_barbershop.sql",
+    "20261113053907_membership_listing_access.sql"
+  ],
+  "dryRunMatchesPendingAndOrder": true,
+  "previewOnly": true,
+  "historyProvesEmptySchema": false,
+  "temporaryRole": {
+    "explicitlyAuthorized": true,
+    "setupMessagesObservedForBothCommands": true,
+    "exactCreatedRoleCount": null,
+    "deletionVerified": false,
+    "expirationVerified": false,
+    "cleanupExecuted": false,
+    "note": "Process completion does not prove role deletion. No credentials, connection strings or role identifiers retained."
+  },
+  "additionalConsentRequested": false,
+  "globalConfirmationsUsed": false,
+  "businessMigrationsApplied": false,
+  "configurationChanged": false,
+  "edgeFunctionsDeployed": false,
+  "localContainerOperations": false,
+  "oldProjectOperations": false,
+  "migrationHashesUnchanged": true,
+  "migrations": [
+    {
+      "file": "20261112031854_foundation_model.sql",
+      "sha256": "91514d8c53b6c06a9c375931ed179e2b19e735bf12e61e6a099ab19e1e99403e"
+    },
+    {
+      "file": "20261113035717_profile_access_and_provisioning.sql",
+      "sha256": "5349d336dd7ddaea3897dfb9340e3fb2c118720e859e399e61e78d51e11dcd8e"
+    },
+    {
+      "file": "20261113045240_tenant_context_access.sql",
+      "sha256": "79eb75cd1f47bfaf24a172b37a917ffa145ec01430f672000553fd16f0e5316b"
+    },
+    {
+      "file": "20261113050232_create_own_barbershop.sql",
+      "sha256": "263b6b04813a68c7ed9fdfe8e29a96a5d967441752805ee8dd1a6efb74010fe7"
+    },
+    {
+      "file": "20261113053907_membership_listing_access.sql",
+      "sha256": "cbf81553ccccb4052fcf069afc7e824cf04390012fd3c05d683eb7fad4e1aadd"
+    }
+  ],
+  "changedExistingFilesSinceSnapshot": [
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md"
+  ],
+  "unexpectedContentChanges": [],
+  "activeLogNotEditedOrStopped": true,
+  "secretScanFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-consultas-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-migration-list.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-dry-run.json"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "diagnostic": ""
+  },
+  "stagingEmpty": true,
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "npmRisk": "Nine moderate advisories remain unresolved. No audit fix or new audit run."
+}

@@ -1,0 +1,96 @@
+{
+  "exit": 0,
+  "project": "app-barberia-002-repro-20261113",
+  "resources": [
+    {
+      "name": "/supabase_db_app-barberia-002-repro-20261113",
+      "image": "sha256:7c31363a3f7434ff14945f1b8a4880e6eca8b362e197e88b87c476c77aa3cf8c",
+      "state": "running",
+      "mounts": [
+        {
+          "name": "supabase_db_app-barberia-002-repro-20261113",
+          "type": "volume",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_app-barberia-002-repro-20261113"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54522"
+          }
+        ]
+      }
+    },
+    {
+      "name": "/supabase_edge_runtime_app-barberia-002-repro-20261113",
+      "image": "sha256:362e9177660ae4d3affb6978480cc6161a8ea0764f1c2c7f738348eda1c3fbf2",
+      "state": "running",
+      "mounts": [
+        {
+          "name": "supabase_edge_runtime_app-barberia-002-repro-20261113",
+          "type": "volume",
+          "destination": "/root/.cache/deno"
+        },
+        {
+          "type": "bind",
+          "destination": "/Users/PREDATOR/Desktop/app-barberia-t035-JLYmuT/supabase/functions"
+        }
+      ],
+      "networks": [
+        "supabase_network_app-barberia-002-repro-20261113"
+      ],
+      "ports": {}
+    },
+    {
+      "name": "/supabase_db_app-barberia-002-local",
+      "image": "sha256:7c31363a3f7434ff14945f1b8a4880e6eca8b362e197e88b87c476c77aa3cf8c",
+      "state": "running",
+      "mounts": [
+        {
+          "name": "supabase_db_app-barberia-002-local",
+          "type": "volume",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_app-barberia-002-local"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54422"
+          }
+        ]
+      }
+    },
+    {
+      "name": "/supabase_db_barberia-app",
+      "image": "sha256:7bd84e6a1d5322c7b864b9751873a0ac50f48df3f20a776e88114eadb2948fc0",
+      "state": "running",
+      "mounts": [
+        {
+          "name": "supabase_db_barberia-app",
+          "type": "volume",
+          "destination": "/var/lib/postgresql/data"
+        }
+      ],
+      "networks": [
+        "supabase_network_barberia-app"
+      ],
+      "ports": {
+        "5432/tcp": [
+          {
+            "HostIp": "",
+            "HostPort": "54322"
+          }
+        ]
+      }
+    }
+  ],
+  "mainAndOldNotOperated": true
+}

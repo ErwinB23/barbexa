@@ -201,3 +201,16 @@ La prueba C2 abre sesiones psql propias; C3 instala y retira un trigger limitado
 sint?tico; todas las fixtures se limpian en finally. No ejecutar contra datos de producci?n.
 El check general fue ejecutado con c?digo 0 en T027, con Deno 2.9.8 disponible en el PATH
 del proceso. Los pasos posteriores y la matriz integral a?n no se acreditan por ese resultado.
+
+## Enmienda T035/SC-006 ? 13/11/2026
+
+No se exige una reproducci?n por terceros ni crear otro stack solo para estos criterios.
+Usar migraciones versionadas y resultados reales SQL/HTTP/calidad vinculados a esta gu?a.
+La reproducci?n local automatizada ya ejecutada antes de la decisi?n se conserva en
+[reproduccion.md](../../docs/evaluacion/evidencias/002-fundacion/reproduccion.md), con sus
+bindings temporales, hashes y l?mites; no es una revisi?n externa ni prueba de Cloud.
+Los comandos globales supabase de ejemplos requieren PATH; preferir npx.cmd --no-install
+supabase o el binario local fijado. Deno 2.9.8 se configura en PATH del proceso; no cambiar
+la pol?tica de PowerShell. El runner necesita BARBERIA_002_URL y BARBERIA_002_PROJECT_ID
+coincidentes con su guard; no apuntarlo a otro destino sin bindings revisados. No ejecutar
+init/reset sobre una carpeta/base existente. Reutilizar resultados vigentes sin repetirlos.

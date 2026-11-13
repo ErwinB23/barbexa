@@ -230,3 +230,11 @@ además whitespace y destinos de enlaces; `git diff --no-index --check` devuelve
 diferencias frente a NUL, sin diagnósticos de whitespace (no es una prueba de backend fallida).
 No se modificaron spec/checklist 002, documentos de 001, código, dependencias, Constitución
 o rúbrica; rama e historial conservados. Sin hooks before/after_plan registrados.
+
+## Enmienda de aceptaci?n documental ? 13/11/2026
+
+SC-006/T035 ya no requieren tercero ni un entorno adicional creado solo para aceptaci?n,
+por decisi?n expl?cita del responsable compatible con Constituci?n y r?brica. Reutilizar
+evidencias reales de migraciones/configuraci?n/SQL/HTTP/calidad. La segunda preparaci?n
+local ya ejecutada se conserva como resultado adicional de SC-001, sin exigir repetirla
+ni confundirla con paridad remota. Arquitectura, modelo y permisos no cambian.

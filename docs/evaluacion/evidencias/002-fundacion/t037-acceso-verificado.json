@@ -1,0 +1,23 @@
+{
+  "command": "supabase projects list --output-format json",
+  "exit": 0,
+  "expectedProject": {
+    "ref": "vuoncrtkkkquvddunrxx",
+    "name": "app-barberia-arquitectura",
+    "organization": "zxqsrgokncxawohnfidv",
+    "region": "sa-east-1"
+  },
+  "warningNoLocalLink": true,
+  "targetFound": true,
+  "project": {
+    "ref": "vuoncrtkkkquvddunrxx",
+    "name": "app-barberia-arquitectura",
+    "region": "sa-east-1",
+    "status": "ACTIVE_HEALTHY",
+    "organizationId": "zxqsrgokncxawohnfidv"
+  },
+  "oldProjectDistinct": true,
+  "matchesApproval": true,
+  "authenticatedListSucceeded": true,
+  "localProjectRefFileExists": false
+}

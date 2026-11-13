@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "477b3600468e959250229a672c875197e2ace613",
+  "scope": "PREPARATION_ONLY",
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "targetVerified": true,
+  "cliVersion": "3.1.0",
+  "helpCommands": [
+    {
+      "command": "--version",
+      "exit": 0
+    },
+    {
+      "command": "config diff --help",
+      "exit": 0
+    },
+    {
+      "command": "migration list --help",
+      "exit": 0
+    },
+    {
+      "command": "db push --help",
+      "exit": 0
+    },
+    {
+      "command": "functions deploy --help",
+      "exit": 0
+    }
+  ],
+  "configDiff": {
+    "command": "supabase config diff --remote=vuoncrtkkkquvddunrxx --output-format json",
+    "exit": 0,
+    "differences": 12,
+    "source": "t038-config-diff.json"
+  },
+  "migrationHistory": {
+    "executed": false,
+    "exit": null,
+    "reason": "Remote connection without database password mints a temporary role through POST cli/login-role; current authorization prohibits all remote writes."
+  },
+  "dryRun": {
+    "executed": false,
+    "exit": null,
+    "reason": "Same connection resolver runs before dry-run. No migration preview obtained."
+  },
+  "pendingRemoteMigrations": null,
+  "migrationsPreparedForComparison": [
+    {
+      "file": "20261112031854_foundation_model.sql",
+      "sha256": "91514d8c53b6c06a9c375931ed179e2b19e735bf12e61e6a099ab19e1e99403e",
+      "remoteStatus": "UNKNOWN_HISTORY_NOT_READ"
+    },
+    {
+      "file": "20261113035717_profile_access_and_provisioning.sql",
+      "sha256": "5349d336dd7ddaea3897dfb9340e3fb2c118720e859e399e61e78d51e11dcd8e",
+      "remoteStatus": "UNKNOWN_HISTORY_NOT_READ"
+    },
+    {
+      "file": "20261113045240_tenant_context_access.sql",
+      "sha256": "79eb75cd1f47bfaf24a172b37a917ffa145ec01430f672000553fd16f0e5316b",
+      "remoteStatus": "UNKNOWN_HISTORY_NOT_READ"
+    },
+    {
+      "file": "20261113050232_create_own_barbershop.sql",
+      "sha256": "263b6b04813a68c7ed9fdfe8e29a96a5d967441752805ee8dd1a6efb74010fe7",
+      "remoteStatus": "UNKNOWN_HISTORY_NOT_READ"
+    },
+    {
+      "file": "20261113053907_membership_listing_access.sql",
+      "sha256": "cbf81553ccccb4052fcf069afc7e824cf04390012fd3c05d683eb7fad4e1aadd",
+      "remoteStatus": "UNKNOWN_HISTORY_NOT_READ"
+    }
+  ],
+  "migrationHashesMatchT037": true,
+  "functionConfiguration": [
+    {
+      "name": "ensure-profile",
+      "entryExists": true,
+      "enabled": true,
+      "verifyJwt": true,
+      "deploymentExecuted": false
+    },
+    {
+      "name": "create-barbershop",
+      "entryExists": true,
+      "enabled": true,
+      "verifyJwt": true,
+      "deploymentExecuted": false
+    }
+  ],
+  "remoteWritesExecuted": [],
+  "containerOperationsExecuted": [],
+  "localProjectRefFileExists": false,
+  "rawConfigOutputRetained": false,
+  "previousFilesPreservedExceptAuthorizedReportAppend": true,
+  "changedExistingFilesSincePreparationSnapshot": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md"
+  ],
+  "activeLogExcludedFromContentComparisonAndNotEdited": true,
+  "secretReviewScope": [
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-destino-verificado.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-config-diff.json",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "stdout": "",
+    "lineEndingWarningsOnly": true
+  },
+  "stagingEmpty": true,
+  "npmRisk": "Nine moderate advisories remain unresolved; no audit passed claim.",
+  "tests": "No implementation tests rerun: evidence-only preparation; earlier local SQL/HTTP/check results reused, not remote verification."
+}

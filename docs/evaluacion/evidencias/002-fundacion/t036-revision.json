@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "477b3600468e959250229a672c875197e2ace613",
+  "T035Complete": true,
+  "T036Complete": true,
+  "T037StillPending": true,
+  "projectReferenceFromUser": "vuoncrtkkkquvddunrxx",
+  "remoteAuthenticatedVerificationByCodex": false,
+  "evidenceOrigin": "manual dashboard checks declared by user",
+  "userReported": {
+    "project": "app-barberia-arquitectura",
+    "organization": "barberia-app",
+    "region": "sa-east-1",
+    "status": "Healthy",
+    "postgres": "17.11.0.019",
+    "auth": "2.197.0",
+    "postgrest": "14.18",
+    "plan": "Free",
+    "spendCap": true,
+    "invoicesUSD": [
+      0,
+      0
+    ],
+    "paymentMethods": 0,
+    "creditBalanceUSD": 0,
+    "dataApi": true,
+    "automaticExposure": false,
+    "schemas": [
+      "public",
+      "graphql_public"
+    ],
+    "extraSearchPath": [
+      "public",
+      "extensions"
+    ],
+    "maxRows": 1000,
+    "availableExposedTablesAndFunctions": 0,
+    "automaticRlsAtCreation": false
+  },
+  "responsible": "project responsible user approving this destination; no IAM role inferred",
+  "businessRlsAclRemotelyValidated": false,
+  "configurationDifferenceForLaterReview": "graphql_public also exposed; no change made",
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "secretFindings": [],
+  "stagingEmpty": true,
+  "filesChangedThisTurn": [
+    "docs/evaluacion/evidencias/002-fundacion/destino.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/t036-revision.json",
+    "specs/002-fundacion-supabase-multitenant/tasks.md"
+  ],
+  "noRemoteWritesOrContainerOperations": true
+}

@@ -1,0 +1,7 @@
+{
+  "command": "supabase projects list --output-format json",
+  "exit": 1,
+  "expectedProjectRef": "vuoncrtkkkquvddunrxx",
+  "errorCode": "AccessTokenRequiredError",
+  "manualAuthenticationRequired": true
+}

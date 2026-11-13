@@ -1,0 +1,34 @@
+{
+  "branch": "main",
+  "head": "477b3600468e959250229a672c875197e2ace613",
+  "secretFindings": [],
+  "missingLinks": [],
+  "changedSinceSnapshot": [
+    "docs/evaluacion/evidencias/002-fundacion/t034-query-plans.log",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "specs/002-fundacion-supabase-multitenant/plan.md",
+    "specs/002-fundacion-supabase-multitenant/quickstart.md",
+    "specs/002-fundacion-supabase-multitenant/spec.md",
+    "specs/002-fundacion-supabase-multitenant/tasks.md",
+    "specs/002-fundacion-supabase-multitenant/validation.md"
+  ],
+  "unexpectedChanges": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "stagingEmpty": true,
+  "SC006Amended": true,
+  "T035Completed": true,
+  "reusedReproduction": {
+    "sqlExit": "0",
+    "httpExit": "0",
+    "qualityExit": "0"
+  }
+}

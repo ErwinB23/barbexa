@@ -129,7 +129,7 @@ de producción. Reservas, k6, caché, CI/CD y DNS/CDN conservan pendientes de pr
 | SC-003 | Altas correctas, C1–C4 y fallos sin resultados parciales |
 | SC-004 | Matriz V3–V5 completa, denominador explícito, cero resultados indebidos |
 | SC-005 | V4 + privilegios/secretos V3/V7, actor real preservado |
-| SC-006 | Otra persona sigue quickstart; FR con resultado o pendiente e informe |
+| SC-006 | Migraciones versionadas + SQL/HTTP/calidad ejecutados + gu?a; FR con evidencia o pendiente expl?cito. Sin tercero ni nuevo entorno obligatorio (enmienda 13/11/2026) |
 
 ## Registro de evidencia futura y límites
 

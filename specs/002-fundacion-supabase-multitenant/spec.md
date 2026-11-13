@@ -31,9 +31,10 @@ obtener el mismo modelo, permisos y resultados con datos sintéticos.
 1. **Given** el repositorio existente y la referencia antigua, **When** se prepare el
    nuevo backend, **Then** el destino queda identificado y no se conecta ni escribe
    en el anterior; los archivos previos e historial permanecen preservados (FR-001–FR-003).
-2. **Given** otro entorno vacío, **When** una persona siga la guía, **Then** obtiene
-   las mismas capacidades y resultados de prueba sin secretos en el código ni
-   pasos manuales no registrados (FR-002, FR-016–FR-018).
+2. **Given** migraciones versionadas y configuración documentada, **When** se contrasten
+   las comprobaciones SQL/HTTP y de calidad ejecutadas con la guía, **Then** las capacidades,
+   resultados y pasos necesarios quedan verificables sin secretos ni revisión externa
+   obligatoria (FR-002, FR-016–FR-018).
 
 ### User Story 2 - Gestionar únicamente mi perfil personal (Priority: P1)
 
@@ -228,9 +229,11 @@ suplantación para solicitudes ordinarias.
 - **SC-005**: Todas las operaciones verificadas conservan al actor real; el 100 % de intentos
   de elevar permisos mediante datos enviados o sesiones no válidas se rechaza sin exponer
   credenciales de servidor (US2–US4; FR-004, FR-014–FR-018).
-- **SC-006**: Cada requisito tiene aceptación y evidencia o pendiente explícito; otra persona
-  repite los flujos mínimos/comprobaciones con la guía sin pantallas de negocio ni datos del
-  sistema anterior (US1–US4; FR-018–FR-020).
+- **SC-006**: Cada requisito tiene aceptación y evidencia o pendiente explícito. Las migraciones
+  versionadas, pruebas SQL/HTTP ejecutadas, controles de calidad y guía de configuración
+  permiten verificar los flujos mínimos sin datos del sistema anterior ni pantallas de negocio.
+  No requiere reproducción por terceros ni crear un entorno adicional solo para este criterio
+  (US1–US4; FR-018–FR-020).
 
 Son metas, **no resultados obtenidos**, ni prueba de seguridad absoluta. Solo
 abarcan las capacidades y combinaciones verificadas de esta fundación.
@@ -284,3 +287,12 @@ exclusiones no eliminan obligaciones de las funcionalidades posteriores.
   [actores y roles contextuales](https://github.com/ErwinB23/barberia_app-arquitSoft-02-Erwin/blob/1eb8852388480388f39035641eb87d299def9258/docs/01-analisis-de-sistema/01-actores.md),
   [requisitos RF01–RF05, RF26 y RF41–RF42](https://github.com/ErwinB23/barberia_app-arquitSoft-02-Erwin/blob/1eb8852388480388f39035641eb87d299def9258/docs/01-analisis-de-sistema/03-requisitos-funcionales.md).
   Esta entrega aporta fundamentos, no cumplimiento íntegro de esos flujos de negocio.
+
+### Enmienda autorizada de evidencia ? 13/11/2026
+
+El responsable elimina la revisi?n externa obligatoria de SC-006 y US1 escenario 2.
+Constituci?n IX?XI y r?brica 4?6/14?16 exigen evidencia y documentaci?n, no ejecuci?n por
+terceros. La aceptaci?n usa resultados reales y pendientes expl?citos, sin cambiar permisos,
+arquitectura ni pruebas de seguridad. No se crean m?s entornos para SC-006/T035. SC-001
+permanece: las dos preparaciones locales ya ejecutadas se documentan con su alcance; no
+acreditan Supabase Cloud. La evidencia adicional existente no se borra ni se inventa revisi?n humana.

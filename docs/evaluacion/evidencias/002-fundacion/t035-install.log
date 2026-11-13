@@ -1,0 +1,19 @@
+COMMAND: npm ci (external copy)
+
+added 994 packages, and audited 995 packages in 38s
+
+168 packages are looking for funding
+  run `npm fund` for details
+
+9 moderate severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+EXIT=0

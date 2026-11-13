@@ -1,0 +1,59 @@
+{
+  "command": "supabase db push --dry-run --remote=vuoncrtkkkquvddunrxx --skip-vault --output-format json",
+  "target": "vuoncrtkkkquvddunrxx",
+  "exit": 0,
+  "spawnError": null,
+  "noGlobalConfirmation": true,
+  "stdinClosed": true,
+  "skipVault": true,
+  "temporaryRoleMechanismAuthorized": true,
+  "roleSetupMessageObserved": true,
+  "extraConsentRequested": false,
+  "rawOutputRetained": false,
+  "outputShape": {
+    "upToDate": "boolean",
+    "dryRun": "boolean",
+    "migrations": {
+      "length": 5,
+      "sample": "string"
+    },
+    "seeds": {
+      "length": 0,
+      "sample": null
+    },
+    "roles": {
+      "length": 0,
+      "sample": null
+    },
+    "message": "string",
+    "target": {
+      "kind": "string",
+      "project_ref": "string",
+      "project_name": "string",
+      "environment": "string"
+    }
+  },
+  "preview": {
+    "dryRun": true,
+    "upToDate": false,
+    "targetMatches": true,
+    "migrations": [
+      "20261112031854_foundation_model.sql",
+      "20261113035717_profile_access_and_provisioning.sql",
+      "20261113045240_tenant_context_access.sql",
+      "20261113050232_create_own_barbershop.sql",
+      "20261113053907_membership_listing_access.sql"
+    ],
+    "seedsCount": 0,
+    "rolesCount": 0
+  },
+  "dryRunMarkerObserved": true,
+  "knownMigrationFilesMentioned": [
+    "20261112031854_foundation_model.sql",
+    "20261113035717_profile_access_and_provisioning.sql",
+    "20261113045240_tenant_context_access.sql",
+    "20261113050232_create_own_barbershop.sql",
+    "20261113053907_membership_listing_access.sql"
+  ],
+  "applyMessageObserved": false
+}
