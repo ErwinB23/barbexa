@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "42a695cc257f87711fec6a31a31d9c55ad69e1f3",
+  "target": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "cliVersion": "3.1.0",
+  "functions": [
+    {
+      "id": "42c8cd39-dfe0-4b09-83a7-8046bae0dc65",
+      "name": "ensure-profile",
+      "slug": "ensure-profile",
+      "version": 1,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    },
+    {
+      "id": "0cc5dbdf-195e-4d8d-83f0-63ab5b1ee224",
+      "name": "create-barbershop",
+      "slug": "create-barbershop",
+      "version": 1,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    }
+  ],
+  "remoteMetadataVerified": true,
+  "deploymentExitCodes": {
+    "ensure-profile": 0,
+    "create-barbershop": 0
+  },
+  "sourceAndConfigUnchanged": true,
+  "checkServerExit": 0,
+  "testServerExit": 0,
+  "serverUnitTests": 17,
+  "httpNegativeChecks": {
+    "passed": 10,
+    "total": 10,
+    "all401": true,
+    "publicKeyOnlyHandlerRejects": true
+  },
+  "functionalValidUserSessionsTested": false,
+  "businessDataPrepared": false,
+  "remoteSqlExecuted": false,
+  "dataApiOrRlsAclChanged": false,
+  "containersOrOldProjectOperated": false,
+  "commitsOrPushesCreated": false,
+  "previousSqlEvidenceAndExistingFilesPreservedExceptReportUpdates": true,
+  "changedExistingFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md"
+  ],
+  "newEvidenceFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-create-barbershop.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-ensure-profile.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-fuentes.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-http.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-between.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-local.log"
+  ],
+  "unexpectedChanges": [],
+  "secretScanScope": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-create-barbershop.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-ensure-profile.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-fuentes.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-http.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-between.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-local.log"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "text": ""
+  },
+  "stagingEmpty": true,
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "remaining": "Authorized synthetic users/tenants preparation and cleanup, functional remote parity, API exposure decision, effective runtime version evidence; nine moderate npm advisories remain unresolved."
+}

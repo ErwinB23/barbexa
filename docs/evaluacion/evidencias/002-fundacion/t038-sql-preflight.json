@@ -1,0 +1,45 @@
+{
+  "command": "supabase db query --read-only --remote=vuoncrtkkkquvddunrxx --file .artifacts/t038-preflight.sql --output-format json",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "exit": 0,
+  "rawOutputRetained": false,
+  "outputShape": {
+    "boundary": "string",
+    "rows": {
+      "length": 1,
+      "sample": {
+        "catalog": {
+          "authUsersTableExists": "boolean",
+          "businessRelations": "object",
+          "conflictingFunctions": "object",
+          "migrationLedgerExists": "boolean",
+          "postgresVersion": "string",
+          "privateRelations": "object",
+          "privateSchemaExists": "boolean",
+          "publicRelations": "object",
+          "requiredRoles": "object",
+          "transactionReadOnly": "string"
+        }
+      }
+    },
+    "warning": "string"
+  },
+  "temporaryRoleSetupMessageObserved": false,
+  "error": null,
+  "catalog": {
+    "authUsersTableExists": true,
+    "businessRelations": [],
+    "conflictingFunctions": [],
+    "migrationLedgerExists": false,
+    "postgresVersion": "17.11",
+    "privateRelations": [],
+    "privateSchemaExists": false,
+    "publicRelations": [],
+    "requiredRoles": [
+      "anon",
+      "authenticated",
+      "service_role"
+    ],
+    "transactionReadOnly": "on"
+  }
+}

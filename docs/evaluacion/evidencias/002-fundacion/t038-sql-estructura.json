@@ -1,0 +1,343 @@
+{
+  "scope": "REMOTE_STRUCTURAL_METADATA_ONLY_NOT_FUNCTIONAL_ISOLATION",
+  "passed": 83,
+  "total": 83,
+  "failed": [],
+  "checks": [
+    {
+      "name": "catalog_query_succeeded_read_only",
+      "passed": true
+    },
+    {
+      "name": "postgres_17",
+      "passed": true
+    },
+    {
+      "name": "exact_three_business_tables",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.rls_enabled",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.owner",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.no_table_level_grants_for_api_roles",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.column_shape",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.id.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.id.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.id.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.user_id.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.user_id.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.user_id.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.barbershop_id.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.barbershop_id.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.barbershop_id.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.role.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.role.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.role.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.status.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.status.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershop_memberships.status.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.rls_enabled",
+      "passed": true
+    },
+    {
+      "name": "barbershops.owner",
+      "passed": true
+    },
+    {
+      "name": "barbershops.no_table_level_grants_for_api_roles",
+      "passed": true
+    },
+    {
+      "name": "barbershops.column_shape",
+      "passed": true
+    },
+    {
+      "name": "barbershops.id.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.id.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.id.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.name.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.name.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "barbershops.name.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.rls_enabled",
+      "passed": true
+    },
+    {
+      "name": "profiles.owner",
+      "passed": true
+    },
+    {
+      "name": "profiles.no_table_level_grants_for_api_roles",
+      "passed": true
+    },
+    {
+      "name": "profiles.column_shape",
+      "passed": true
+    },
+    {
+      "name": "profiles.id.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.id.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.id.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.display_name.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.display_name.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.display_name.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.phone.anon.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.phone.authenticated.column_grants",
+      "passed": true
+    },
+    {
+      "name": "profiles.phone.service_role.column_grants",
+      "passed": true
+    },
+    {
+      "name": "exact_five_policies",
+      "passed": true
+    },
+    {
+      "name": "memberships_select_own.context_and_role",
+      "passed": true
+    },
+    {
+      "name": "barbershops_select_active_member.context_and_role",
+      "passed": true
+    },
+    {
+      "name": "barbershops_update_active_admin.context_and_role",
+      "passed": true
+    },
+    {
+      "name": "profiles_select_own.context_and_role",
+      "passed": true
+    },
+    {
+      "name": "profiles_update_own.context_and_role",
+      "passed": true
+    },
+    {
+      "name": "exact_seven_functions",
+      "passed": true
+    },
+    {
+      "name": "private.create_own_barbershop.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "private.create_own_barbershop.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "private.create_own_barbershop.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "private.ensure_own_profile.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "private.ensure_own_profile.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "private.ensure_own_profile.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_admin.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_admin.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_admin.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_member.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_member.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "private.is_active_member.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "public.create_own_barbershop.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "public.create_own_barbershop.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "public.create_own_barbershop.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "public.ensure_own_profile.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "public.ensure_own_profile.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "public.ensure_own_profile.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "public.list_barbershop_memberships.security_owner_search_path",
+      "passed": true
+    },
+    {
+      "name": "public.list_barbershop_memberships.execute_minimum_privilege",
+      "passed": true
+    },
+    {
+      "name": "public.list_barbershop_memberships.body_matches_approved_local_migration",
+      "passed": true
+    },
+    {
+      "name": "exact_eleven_constraints",
+      "passed": true
+    },
+    {
+      "name": "foreign_keys_and_delete_restrict",
+      "passed": true
+    },
+    {
+      "name": "unique_membership_pair",
+      "passed": true
+    },
+    {
+      "name": "allowed_roles_and_status_checks",
+      "passed": true
+    },
+    {
+      "name": "five_expected_indexes",
+      "passed": true
+    },
+    {
+      "name": "no_api_schema_create_grants",
+      "passed": true
+    },
+    {
+      "name": "private_schema_usage_restricted",
+      "passed": true
+    },
+    {
+      "name": "no_business_rows_created",
+      "passed": true
+    },
+    {
+      "name": "five_applied_versions_in_history",
+      "passed": true
+    },
+    {
+      "name": "real_application_succeeded_exact_target_and_no_extras",
+      "passed": true
+    }
+  ],
+  "functionalJwtIsolationTested": false,
+  "edgeFunctionsDeployed": false,
+  "graphqlPublicChanged": false
+}

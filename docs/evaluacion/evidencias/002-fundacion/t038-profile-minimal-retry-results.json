@@ -1,0 +1,161 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "runId": "t038-profile-07584886-6ae3-44cc-a49a-f887728ec0da",
+  "authorization": "USER_REPLY_ONE_AUTH_USER_ONE_PROFILE_AND_SELECTIVE_CLEANUP",
+  "created": {
+    "users": 1,
+    "profiles": 1,
+    "barbershops": 0,
+    "memberships": 0
+  },
+  "publicCompositionUsed": true,
+  "checks": [
+    {
+      "id": "AUTH_ONE_CONFIRMED_USER",
+      "passed": true,
+      "obtained": {
+        "status": 200,
+        "confirmed": true
+      }
+    },
+    {
+      "id": "AUTH_OWN_SESSION",
+      "passed": true,
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      }
+    },
+    {
+      "id": "PROFILE_BASE_OWN",
+      "passed": true,
+      "obtained": {
+        "ownIdentity": true,
+        "baselineValuesMatch": true
+      }
+    },
+    {
+      "id": "P1_PATCH_NAME_OMITTED_PHONE",
+      "passed": true,
+      "obtained": {
+        "ownIdentity": true,
+        "nameTrimmed": true,
+        "phonePreserved": true
+      }
+    },
+    {
+      "id": "P1_GET_PERSISTENCE",
+      "passed": true,
+      "obtained": {
+        "ownIdentity": true,
+        "persisted": true
+      }
+    },
+    {
+      "id": "P2_PATCH_EXPLICIT_NULL",
+      "passed": true,
+      "obtained": {
+        "ownIdentity": true,
+        "namePreserved": true,
+        "phoneRemoved": true
+      }
+    },
+    {
+      "id": "P2_GET_PERSISTENCE",
+      "passed": true,
+      "obtained": {
+        "ownIdentity": true,
+        "persisted": true
+      }
+    }
+  ],
+  "calls": [
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "POST",
+      "path": "/functions/v1/ensure-profile",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "PATCH",
+      "path": "/rest/v1/profiles",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/profiles",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "PATCH",
+      "path": "/rest/v1/profiles",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/auth/v1/user",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    },
+    {
+      "method": "GET",
+      "path": "/rest/v1/profiles",
+      "status": 200,
+      "credential": "PUBLIC_KEY_AND_USER_JWT"
+    }
+  ],
+  "error": null,
+  "cleanup": {
+    "completed": true,
+    "logoutStatus": 204,
+    "authDeleteStatus": 200,
+    "profilesRemoved": 1,
+    "remaining": {
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "refreshTokens": 0,
+      "sessions": 0,
+      "users": 0
+    },
+    "countsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtImmediatelyInvalidatedClaimed": false,
+    "platformAuditLogsPurged": false
+  },
+  "passed": 7,
+  "total": 7,
+  "secretsOrRawResponsesPersisted": false
+}

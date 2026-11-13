@@ -1,0 +1,41 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "originalRunPreserved": true,
+  "originalExit": 1,
+  "originalPassed": 41,
+  "originalTotal": 42,
+  "originalFailedAssertion": "E_ANON_REST_DENIED expected 403 but received 401",
+  "diagnosis": "The operator expected the authenticated insufficient-privilege status for an anonymous request. PostgREST maps 42501 to 401 when unauthenticated and 403 when authenticated.",
+  "source": "https://docs.postgrest.org/en/v14/references/errors.html",
+  "readonlyRepeat": {
+    "route": "/rest/v1/barbershops?select=id,name",
+    "status": 401,
+    "errorCode": "42501",
+    "denied": true,
+    "businessRowsReturned": 0
+  },
+  "graphqlAnonymousRead": {
+    "status": 200,
+    "errorsPresent": true,
+    "collectionReturned": false,
+    "rowsReturned": null,
+    "tenantedAuthenticatedGraphqlTested": false,
+    "interpretation": "After cleanup and without an authenticated tenant session; this is not evidence of A/B GraphQL isolation."
+  },
+  "apiExposure": {
+    "configDiffExit": 0,
+    "localSchemas": [
+      "public"
+    ],
+    "remoteSchemas": [
+      "public",
+      "graphql_public"
+    ],
+    "configurationChanged": false
+  },
+  "extraUsersOrShopsCreated": 0,
+  "sourceOrPolicyChanges": false,
+  "privateManifestRemoved": true,
+  "privateSqlRemoved": true,
+  "secretsPersisted": false
+}

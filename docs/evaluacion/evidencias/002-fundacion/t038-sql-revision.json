@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "checkpoint": "42a695cc257f87711fec6a31a31d9c55ad69e1f3",
+  "checkpointFiles": 32,
+  "checkpointExcludedActiveLog": true,
+  "checkpointSecretReview": "No findings in 32 candidate files; staged content matched reviewed content; cached diff check exit 0.",
+  "target": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "cliVersion": "3.1.0",
+  "approvedSqlApplicationCount": 1,
+  "applicationExit": 0,
+  "applicationExactTarget": true,
+  "preflightExit": 0,
+  "preflightReadOnly": true,
+  "preflightConflicts": 0,
+  "remoteVersions": [
+    "20261112031854",
+    "20261113035717",
+    "20261113045240",
+    "20261113050232",
+    "20261113053907"
+  ],
+  "allFiveVersionsApplied": true,
+  "structuralCheckResult": {
+    "passed": 83,
+    "total": 83,
+    "failed": []
+  },
+  "functionalJwtIsolationTested": false,
+  "edgeDeployed": false,
+  "graphqlConfigurationModified": false,
+  "sqlMigrationHashesUnchanged": true,
+  "readOnlySqlSourcesPreserved": true,
+  "oldProjectOrContainersOperated": false,
+  "temporaryConnectionRoleDeletionOrExpirationVerified": false,
+  "modifiedAfterCheckpoint": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+  ],
+  "newEvidenceFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-preflight-catalogo.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-application.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-catalogo.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-dry-run.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-estructura.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-preflight.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-verificar-catalogo.sql"
+  ],
+  "unexpectedChanges": [],
+  "secretScanScope": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-preflight-catalogo.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-application.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-catalogo.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-dry-run.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-estructura.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-preflight.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-verificar-catalogo.sql"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "diagnostic": ""
+  },
+  "stagingEmpty": true,
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "npmRisk": "Nine moderate advisories remain unresolved. No dependency changes or audit fix.",
+  "testsNotRerun": "No application code changed. Prior local tests are not attributed to Cloud; 83 checks inspect new remote catalog metadata only."
+}

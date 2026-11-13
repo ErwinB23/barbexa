@@ -1,0 +1,9 @@
+{
+  "command": "supabase projects list --output-format json",
+  "exit": 0,
+  "ref": "vuoncrtkkkquvddunrxx",
+  "name": "app-barberia-arquitectura",
+  "region": "sa-east-1",
+  "status": "ACTIVE_HEALTHY",
+  "matched": true
+}

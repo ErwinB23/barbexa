@@ -1,0 +1,58 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "runId": "t038-profile-67fc90b1-7236-4641-95b6-422ef5d1bb73",
+  "authorization": "USER_REPLY_ONE_AUTH_USER_ONE_PROFILE_AND_SELECTIVE_CLEANUP",
+  "created": {
+    "users": 1,
+    "profiles": 0,
+    "barbershops": 0,
+    "memberships": 0
+  },
+  "publicCompositionUsed": true,
+  "checks": [
+    {
+      "id": "AUTH_ONE_CONFIRMED_USER",
+      "passed": true,
+      "obtained": {
+        "status": 200,
+        "confirmed": true
+      }
+    },
+    {
+      "id": "AUTH_OWN_SESSION",
+      "passed": true,
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      }
+    }
+  ],
+  "calls": [],
+  "error": "REMOTE_PROFILE_TEST_FAILED",
+  "cleanup": {
+    "completed": true,
+    "logoutStatus": 204,
+    "authDeleteStatus": 200,
+    "profilesRemoved": 0,
+    "remaining": {
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "refreshTokens": 0,
+      "sessions": 0,
+      "users": 0
+    },
+    "countsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtImmediatelyInvalidatedClaimed": false,
+    "platformAuditLogsPurged": false
+  },
+  "passed": 2,
+  "total": 2,
+  "secretsOrRawResponsesPersisted": false
+}

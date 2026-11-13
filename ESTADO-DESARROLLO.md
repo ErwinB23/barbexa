@@ -1,3 +1,19 @@
+# Estado vigente — App Barbería
+
+13/11/2026, America/Lima. Fundación 001 cerrada; fundación 002 cerrada técnicamente conforme a sus 40 tareas y límites de evidencia. No es el SaaS terminado ni el inicio de 003. Rama main; checkpoint anterior 42a695c. El hash de cierre se consulta en Git, no se predice en este archivo.
+
+[Constitución](.specify/memory/constitution.md), [rúbrica](docs/evaluacion/RUBRICA.md), [spec 002](specs/002-fundacion-supabase-multitenant/spec.md), [tareas](specs/002-fundacion-supabase-multitenant/tasks.md), [informe y trazabilidad](docs/evaluacion/evidencias/002-fundacion/informe.md), [guía](specs/002-fundacion-supabase-multitenant/quickstart.md), [cierre/integridad](docs/evaluacion/evidencias/002-fundacion/cierre.md).
+
+Modelo profiles/barbershops/barbershop_memberships, membresías activas/contextuales y RLS; Clean Architecture y composición cliente/Edge. Cinco migraciones en Cloud nuevo vuoncrtkkkquvddunrxx/sa-east-1; ensure-profile/create-barbershop ACTIVE v1, verify_jwt=true. PostgreSQL 17.11, Auth v2.197.0; runtime Edge numérico no observado. GraphQL opcional, extensión no instalada; sin cambio de configuración exigido.
+
+Local: SQL 336/336, HTTP 440/440, calidad y reproducción con evidencia; Cloud: estructura 83/83, negativas 10/10, aislamiento/roles/revocación y edición propia 7/7. Resultados y atribuciones separadas en informe. Primeros fallos de expectativas/callback y sus correcciones conservados. Fixtures limpiadas; no invalidez inmediata garantizada de JWT. Sin nuevas pruebas Android/Google/UI 002.
+
+Riesgos: nueve avisos npm moderados sin remediación/aceptación formal. No auditoría global aprobada. Caché, DNS/CDN, CI/CD, k6 y escalabilidad completa siguen pendientes; también negocio, Google/pantallas Auth, invitaciones, Storage/imágenes, mapas/reseñas y notificaciones. No administrador global, API Node propia o microservicios.
+
+No operar el Supabase antiguo ni sus contenedores. Log activo t017-serve.log preservado y excluido del commit. Cierre local autorizado; sin push. Para la próxima funcionalidad: primero especificación/decisiones y autorización de su alcance; no se inicia 003 aquí.
+
+## Registro histórico heredado de 001 (no estado actual)
+
 # Estado de desarrollo — App Barbería
 
 Actualizado: 11/11/2026, America/Lima. Feature activa:

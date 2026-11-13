@@ -1,0 +1,20 @@
+{
+  "command": "supabase functions list --remote=vuoncrtkkkquvddunrxx --output-format json",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "exit": 0,
+  "outputShape": {
+    "functions": {
+      "length": 0,
+      "sample": null
+    },
+    "message": "string",
+    "target": {
+      "kind": "string",
+      "project_ref": "string",
+      "project_name": "string",
+      "environment": "string"
+    }
+  },
+  "functions": [],
+  "rawOutputRetained": false
+}

@@ -1,0 +1,530 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "runId": "t038-45d7847f-5a28-4bf3-b860-849ecb8d5d80",
+  "scenarios": [
+    {
+      "id": "AUTH_CREATE_A",
+      "expected": "200/201, confirmed fixture account",
+      "obtained": {
+        "status": 200,
+        "created": true,
+        "confirmed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "AUTH_SESSION_A",
+      "expected": "200 own authenticated session",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "AUTH_CREATE_B",
+      "expected": "200/201, confirmed fixture account",
+      "obtained": {
+        "status": 200,
+        "created": true,
+        "confirmed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "AUTH_SESSION_B",
+      "expected": "200 own authenticated session",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "AUTH_CREATE_C",
+      "expected": "200/201, confirmed fixture account",
+      "obtained": {
+        "status": 200,
+        "created": true,
+        "confirmed": true
+      },
+      "passed": true
+    },
+    {
+      "id": "AUTH_SESSION_C",
+      "expected": "200 own authenticated session",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "B_PROFILE_REQUIRED_ATOMIC_ERROR",
+      "expected": "409 PROFILE_REQUIRED and no shop/membership change",
+      "obtained": {
+        "status": 409,
+        "errorCode": "PROFILE_REQUIRED",
+        "shopDelta": 0,
+        "membershipDelta": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "A_ENSURE_PROFILE_A",
+      "expected": "200 own profile",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A_ENSURE_PROFILE_B",
+      "expected": "200 own profile",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A_ENSURE_PROFILE_C",
+      "expected": "200 own profile",
+      "obtained": {
+        "status": 200,
+        "ownIdentity": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A_PROFILE_IDEMPOTENT",
+      "expected": "200 same existing profile, no overwrite",
+      "obtained": {
+        "status": 200,
+        "sameIdentity": true,
+        "originalNameRetained": true
+      },
+      "passed": true
+    },
+    {
+      "id": "A_PROFILE_BODY_ID_REJECTED",
+      "expected": "400 INVALID_INPUT",
+      "obtained": {
+        "status": 400,
+        "errorCode": "INVALID_INPUT"
+      },
+      "passed": true
+    },
+    {
+      "id": "A_REST_OWN_PROFILE",
+      "expected": "200 one own profile",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "A_REST_OTHER_PROFILE_DENIED",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "A_PATCH_OTHER_PROFILE_DENIED",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "A_OTHER_PROFILE_UNCHANGED",
+      "expected": "Original profile retained",
+      "obtained": {
+        "status": 200,
+        "unchanged": true
+      },
+      "passed": true
+    },
+    {
+      "id": "B_CREATE_SHOP_A",
+      "expected": "201 own admin active membership",
+      "obtained": {
+        "status": 201,
+        "ownActor": true,
+        "role": "administrator",
+        "state": "active",
+        "relationshipValid": true
+      },
+      "passed": true
+    },
+    {
+      "id": "B_CREATE_SHOP_B",
+      "expected": "201 own admin active membership",
+      "obtained": {
+        "status": 201,
+        "ownActor": true,
+        "role": "administrator",
+        "state": "active",
+        "relationshipValid": true
+      },
+      "passed": true
+    },
+    {
+      "id": "C_READ_OWN_SHOP_A",
+      "expected": "200 own tenant only",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "C_READ_OTHER_SHOP_A",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "C_PATCH_OTHER_SHOP_A",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "C_LIST_OTHER_MEMBERSHIPS_A",
+      "expected": "403 FORBIDDEN",
+      "obtained": {
+        "status": 403,
+        "errorCode": "42501"
+      },
+      "passed": true
+    },
+    {
+      "id": "C_READ_OWN_SHOP_B",
+      "expected": "200 own tenant only",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "C_READ_OTHER_SHOP_B",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "C_PATCH_OTHER_SHOP_B",
+      "expected": "200 zero rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "C_LIST_OTHER_MEMBERSHIPS_B",
+      "expected": "403 FORBIDDEN",
+      "obtained": {
+        "status": 403,
+        "errorCode": "42501"
+      },
+      "passed": true
+    },
+    {
+      "id": "C_ADMIN_LIST_OWN_MEMBERSHIPS",
+      "expected": "200 own tenant minimum projection",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "E_PRIVILEGED_RPC_DENIED",
+      "expected": "403 ordinary user cannot EXECUTE",
+      "obtained": {
+        "status": 403,
+        "errorCode": "42501"
+      },
+      "passed": true
+    },
+    {
+      "id": "D_CONTROLLED_FIXTURES",
+      "expected": "Two memberships, no schema/permission changes",
+      "obtained": {
+        "added": 2
+      },
+      "passed": true
+    },
+    {
+      "id": "D_BARBER_B_CAN_READ_B",
+      "expected": "200 one tenant B",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "D_ADMIN_A_NOT_ADMIN_B",
+      "expected": "200 zero edited rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "D_BARBER_B_CANNOT_LIST_STAFF",
+      "expected": "403 FORBIDDEN",
+      "obtained": {
+        "status": 403
+      },
+      "passed": true
+    },
+    {
+      "id": "D_ADMIN_A_CAN_RENAME_A",
+      "expected": "200 one updated own tenant",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "D_OWN_MULTITENANT_MEMBERSHIPS",
+      "expected": "Own two roles scoped to A/B",
+      "obtained": {
+        "status": 200,
+        "rows": 2,
+        "distinctContextualRoles": true
+      },
+      "passed": true
+    },
+    {
+      "id": "D_SELF_PROMOTION_DENIED",
+      "expected": "403 no membership write privilege",
+      "obtained": {
+        "status": 403
+      },
+      "passed": true
+    },
+    {
+      "id": "D_INACTIVE_OR_OUTSIDER_A",
+      "expected": "200 zero business rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "D_INACTIVE_OR_OUTSIDER_B",
+      "expected": "200 zero business rows",
+      "obtained": {
+        "status": 200,
+        "rows": 0
+      },
+      "passed": true
+    },
+    {
+      "id": "D_INACTIVE_RELATION_VISIBLE_TO_ITS_OWNER",
+      "expected": "200 one own inactive relation",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "D_REVOKE_PREPARATION",
+      "expected": "One exact fixture membership revoked",
+      "obtained": {
+        "changed": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "D_REVOCATION_WITH_SAME_JWT",
+      "expected": "200 zero B rows without refreshing JWT",
+      "obtained": {
+        "status": 200,
+        "rows": 0,
+        "sameSession": true
+      },
+      "passed": true
+    },
+    {
+      "id": "D_REVOCATION_DOES_NOT_REMOVE_A_ACCESS",
+      "expected": "200 own A remains accessible",
+      "obtained": {
+        "status": 200,
+        "rows": 1
+      },
+      "passed": true
+    },
+    {
+      "id": "E_ANON_REST_DENIED",
+      "expected": "403 no ordinary anonymous table access",
+      "obtained": {
+        "status": 401
+      },
+      "passed": false
+    }
+  ],
+  "operations": [
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "COUNTS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "COUNTS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "COUNTS",
+      "exit": 0
+    },
+    {
+      "kind": "SCOPED_FIXTURE_OR_CLEANUP_DML",
+      "id": "FIXTURE_CONTEXTUAL_MEMBERSHIPS",
+      "exit": 0
+    },
+    {
+      "kind": "SCOPED_FIXTURE_OR_CLEANUP_DML",
+      "id": "FIXTURE_REVOKE_EXACT_MEMBERSHIP",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "RECOVER_EXACT_AUTH_EMAILS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "RECOVER_EXACT_SHOPS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "RECOVER_EXACT_MEMBERSHIPS",
+      "exit": 0
+    },
+    {
+      "kind": "SCOPED_FIXTURE_OR_CLEANUP_DML",
+      "id": "CLEANUP_MEMBERSHIPS",
+      "exit": 0
+    },
+    {
+      "kind": "SCOPED_FIXTURE_OR_CLEANUP_DML",
+      "id": "CLEANUP_BARBERSHOPS",
+      "exit": 0
+    },
+    {
+      "kind": "SCOPED_FIXTURE_OR_CLEANUP_DML",
+      "id": "CLEANUP_PROFILES",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "CLEANUP_VERIFY_EXACT_IDS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "CLEANUP_REFRESH_TOKENS",
+      "exit": 0
+    },
+    {
+      "kind": "SQL_READ_ONLY",
+      "id": "COUNTS",
+      "exit": 0
+    }
+  ],
+  "passed": 41,
+  "total": 42,
+  "created": {
+    "users": 3,
+    "barbershops": 2,
+    "memberships": 4
+  },
+  "error": "SCENARIO_FAILED_E_ANON_REST_DENIED",
+  "cleanup": {
+    "completed": true,
+    "remainingExactRecords": {
+      "barbershops": 0,
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "sessions": 0,
+      "users": 0,
+      "refreshTokens": 0
+    },
+    "removed": {
+      "memberships": 4,
+      "barbershops": 2,
+      "profiles": 3
+    },
+    "authDeleted": [
+      {
+        "alias": "A",
+        "status": 200
+      },
+      {
+        "alias": "B",
+        "status": 200
+      },
+      {
+        "alias": "C",
+        "status": 200
+      }
+    ],
+    "logout": [
+      {
+        "alias": "A",
+        "status": 204
+      },
+      {
+        "alias": "B",
+        "status": 204
+      },
+      {
+        "alias": "C",
+        "status": 204
+      }
+    ],
+    "globalCountsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtInvalidationClaimed": false,
+    "authAuditLogsPurged": false,
+    "privateManifestSha256": "84a206a063e091cf668896683188971fbb5fa8bc52cc85da5ff2ceb213f2327a"
+  },
+  "credentialsPersisted": false,
+  "rawResponsesPersisted": false
+}

@@ -1,0 +1,120 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "keyRead": {
+    "command": "supabase projects api-keys --remote=vuoncrtkkkquvddunrxx --output-format json",
+    "exit": 0,
+    "revealUsed": false,
+    "publicKeyAvailable": true,
+    "legacyAnonJwtAvailable": true,
+    "valuesRetained": false
+  },
+  "requests": [
+    {
+      "function": "ensure-profile",
+      "case": "NO_AUTHENTICATION",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "ensure-profile",
+      "case": "INVALID_BEARER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_INVALID_JWT_FORMAT",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "ensure-profile",
+      "case": "INVALID_API_KEY_ONLY",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "ensure-profile",
+      "case": "PUBLIC_API_KEY_ONLY_NO_USER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHENTICATED",
+      "handlerRequestIdPresent": true,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "ensure-profile",
+      "case": "LEGACY_ANON_JWT_AS_BEARER_NO_USER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHENTICATED",
+      "handlerRequestIdPresent": true,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "create-barbershop",
+      "case": "NO_AUTHENTICATION",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "create-barbershop",
+      "case": "INVALID_BEARER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_INVALID_JWT_FORMAT",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "create-barbershop",
+      "case": "INVALID_API_KEY_ONLY",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "handlerRequestIdPresent": false,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "create-barbershop",
+      "case": "PUBLIC_API_KEY_ONLY_NO_USER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHENTICATED",
+      "handlerRequestIdPresent": true,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    },
+    {
+      "function": "create-barbershop",
+      "case": "LEGACY_ANON_JWT_AS_BEARER_NO_USER",
+      "status": 401,
+      "denied": true,
+      "errorCode": "UNAUTHENTICATED",
+      "handlerRequestIdPresent": true,
+      "containsBusinessPayload": false,
+      "rawHeadersAndBodyRetained": false
+    }
+  ],
+  "passed": 10,
+  "total": 10,
+  "additionalBusinessWritesAuthorized": false,
+  "businessDataPrepared": false,
+  "requestPayload": "Empty JSON object, invalid for both business use cases as an additional nonmutation guard.",
+  "validUserSessionsTested": false,
+  "secretsOrHeadersStored": false
+}

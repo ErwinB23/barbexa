@@ -214,3 +214,15 @@ supabase o el binario local fijado. Deno 2.9.8 se configura en PATH del proceso;
 la pol?tica de PowerShell. El runner necesita BARBERIA_002_URL y BARBERIA_002_PROJECT_ID
 coincidentes con su guard; no apuntarlo a otro destino sin bindings revisados. No ejecutar
 init/reset sobre una carpeta/base existente. Reutilizar resultados vigentes sin repetirlos.
+
+## Guía final vigente de 002 — 13/11/2026
+
+El procedimiento de planificación anterior es histórico; configuración/migraciones y dos Edge ya se implementaron. Consultar [reproducción local](../../docs/evaluacion/evidencias/002-fundacion/reproduccion.md), [destino](../../docs/evaluacion/evidencias/002-fundacion/destino.md), [operación remota](../../docs/evaluacion/evidencias/002-fundacion/remoto.md) y [cierre](../../docs/evaluacion/evidencias/002-fundacion/cierre.md).
+
+Windows/PowerShell: npm ci para instalación reproducible cuando corresponda, Supabase CLI fijada 3.1.0 vía npx.cmd --no-install supabase, Deno 2.9.8 disponible en PATH del proceso y Docker Linux para el stack local. Seguir los comandos/puertos de reproduccion.md, sin reset de bases existentes. Check local npm run check requiere Deno. Este cierre no reinstala ni repite baterías.
+
+Cloud único vuoncrtkkkquvddunrxx/sa-east-1; usar siempre --remote=vuoncrtkkkquvddunrxx, nunca el anterior klebvayvsvibwjpkzrff. Listado/historial son consultas; revisar ayuda y efectos de autenticación. No repetir db push, deploy o fixtures solo por leer esta guía. Cada nueva escritura y prueba con datos necesita autorización y limpieza por UUID; no ejecutar el runner destructivo local contra Cloud. Las migraciones versionadas no se reescriben.
+
+Los dos endpoints usan JWT y validan identidad en Auth; solo claves públicas en cliente. Claves privadas/JWT/contraseñas no se guardan ni se pegan en comandos, evidencias o Git. pg_graphql no instalado: graphql_public es wrapper de plataforma deshabilitado, no API contratada. No cambiarlo para aparentar paridad.
+
+No reutilizar las sesiones de fixtures retiradas. Evidencia histórica y limpieza en t038-cierre-paridad.md. Nueve avisos npm pendientes: no audit fix ni seguridad aprobada. UI/Google y negocio completo siguen fuera de esta fundación.

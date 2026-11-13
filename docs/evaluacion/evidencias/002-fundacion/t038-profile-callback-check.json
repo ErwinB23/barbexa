@@ -1,0 +1,12 @@
+{
+  "scope": "LOCAL_COMPILATION_AND_CALLBACK_SHAPE_ONLY_NO_NETWORK_OR_FIXTURES",
+  "receivedModuleType": "object",
+  "factoryType": "function",
+  "originalCallbackMismatchReproduced": true,
+  "correctedCallbackDestructuresFactory": true,
+  "businessClientFactoryInvoked": false,
+  "remoteRequests": 0,
+  "usersCreated": 0,
+  "profilesCreated": 0,
+  "applicationCodeChanged": false
+}

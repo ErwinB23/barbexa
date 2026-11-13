@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "42a695cc257f87711fec6a31a31d9c55ad69e1f3",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "access": {
+    "adminVerified": true,
+    "keyRevealUsed": false,
+    "credentialsPersisted": false,
+    "authVersion": "v2.197.0",
+    "postgresVersion": "17.11"
+  },
+  "initialRun": {
+    "exit": 1,
+    "passed": 41,
+    "total": 42,
+    "error": "SCENARIO_FAILED_E_ANON_REST_DENIED",
+    "retainedUnmodified": true
+  },
+  "created": {
+    "users": 3,
+    "profiles": 3,
+    "barbershops": 2,
+    "memberships": 4
+  },
+  "withinAuthorization": true,
+  "anonymousRejectionRecheck": {
+    "route": "/rest/v1/barbershops?select=id,name",
+    "status": 401,
+    "errorCode": "42501",
+    "denied": true,
+    "businessRowsReturned": 0
+  },
+  "initialFailureDiagnosedAsOperatorExpectation": true,
+  "full42CheckRerunClaimed": false,
+  "cleanup": {
+    "completed": true,
+    "remainingExactRecords": {
+      "barbershops": 0,
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "sessions": 0,
+      "users": 0,
+      "refreshTokens": 0
+    },
+    "removed": {
+      "memberships": 4,
+      "barbershops": 2,
+      "profiles": 3
+    },
+    "authDeleted": [
+      {
+        "alias": "A",
+        "status": 200
+      },
+      {
+        "alias": "B",
+        "status": 200
+      },
+      {
+        "alias": "C",
+        "status": 200
+      }
+    ],
+    "logout": [
+      {
+        "alias": "A",
+        "status": 204
+      },
+      {
+        "alias": "B",
+        "status": 204
+      },
+      {
+        "alias": "C",
+        "status": 204
+      }
+    ],
+    "globalCountsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtInvalidationClaimed": false,
+    "authAuditLogsPurged": false,
+    "privateManifestSha256": "84a206a063e091cf668896683188971fbb5fa8bc52cc85da5ff2ceb213f2327a"
+  },
+  "allControlledActiveRecordsRemoved": true,
+  "privateManifestRemoved": true,
+  "privateIdentifierSqlRemoved": true,
+  "automaticDataRecreationBlocked": true,
+  "graphqlAuthenticatedTenantCheckExecuted": false,
+  "configurationDifference": {
+    "configDiffExit": 0,
+    "localSchemas": [
+      "public"
+    ],
+    "remoteSchemas": [
+      "public",
+      "graphql_public"
+    ],
+    "configurationChanged": false
+  },
+  "additionalUsersCreatedAfterCleanup": 0,
+  "applicationOrSchemaPoliciesModified": false,
+  "oldProjectOrLocalContainersOperated": false,
+  "commitsOrPushesCreated": false,
+  "previousFilesPreservedExceptAuthorizedReports": true,
+  "changedExistingFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md"
+  ],
+  "newEvidenceFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-access.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-diagnostico.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-results.json"
+  ],
+  "unexpectedChanges": [],
+  "secretScanScope": [
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-access.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-diagnostico.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-results.json"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "diagnostic": ""
+  },
+  "stagingEmpty": true,
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "npmRisk": "Nine moderate advisories remain unresolved; no dependency audit/fix performed."
+}

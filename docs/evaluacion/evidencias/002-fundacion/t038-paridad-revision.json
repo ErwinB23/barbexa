@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "42a695cc257f87711fec6a31a31d9c55ad69e1f3",
+  "target": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "remoteReadonlyQueryExit": 0,
+  "configDiffExit": 0,
+  "graphqlContractualRequirement": false,
+  "pgGraphqlInstalled": false,
+  "graphqlEffectiveBusinessEngine": false,
+  "graphqlStubInvoker": true,
+  "graphqlBothCallsDisabled": true,
+  "remoteConfigurationChangeRequiredFor002": false,
+  "newProfileTest": {
+    "prepared": true,
+    "authorized": false,
+    "executed": false,
+    "users": 1,
+    "profiles": 1,
+    "barbershops": 0,
+    "memberships": 0,
+    "patches": 2,
+    "cleanup": "Logout, exact profile UUID deletion, Auth Admin deletion, exact residual checks."
+  },
+  "newDataCreated": false,
+  "remoteWritesPerformed": false,
+  "extensionConfigurationPoliciesChanged": false,
+  "oldProjectOrContainersOperated": false,
+  "initial41of42AndFollowupEvidencePreserved": true,
+  "approvedTestExpectationsUnchanged": true,
+  "previousFilesPreservedExceptAuthorizedEvidenceUpdates": true,
+  "changedExistingFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md"
+  ],
+  "newEvidenceFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-inspeccion-graphql.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-inspeccion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-minima.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-revision.json"
+  ],
+  "unexpectedChanges": [],
+  "secretScanScope": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-inspeccion-graphql.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-inspeccion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-minima.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-revision.json"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "text": ""
+  },
+  "stagingEmpty": true,
+  "T038Pending": true,
+  "T039T040Pending": true,
+  "npmRisk": "Nine moderate advisories unresolved; no changes or audit rerun.",
+  "approvedMatrixAlreadyExpectsAnonymous401": true,
+  "temporaryOperatorAlreadyCorrectedTo401And42501": true
+}

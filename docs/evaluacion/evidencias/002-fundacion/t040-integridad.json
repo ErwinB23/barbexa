@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-13",
+  "baselineFileCount": 815,
+  "identicalFiles": 804,
+  "differences": [
+    {
+      "path": ".gitignore",
+      "missing": false,
+      "original": "d7770f90cddd8bd65b6d9ad83a41c46d04cefca28ec882f07182b50636bf15c7",
+      "current": "a8c2cbbaadacc14918676d1bf175b040a6b1b7050118b9bb7648df28cc28c6de",
+      "authorization": "T007/T008: artefactos y secretos fuera de Git"
+    },
+    {
+      "path": ".prettierignore",
+      "missing": false,
+      "original": "fd112cb230b581c054dd683bb00bca639338c4a95060b118c4469d80816da55c",
+      "current": "41dbf396e423a8402ffd6bc6ee425ee51736a1b1c5d094c7ee7ac01b37ae023e",
+      "authorization": "T004–T007: configuración de calidad"
+    },
+    {
+      "path": "eslint.config.js",
+      "missing": false,
+      "original": "36b54334ef20c59f2f835ea15480d0975f61085e72364d2943949f224d572e2a",
+      "current": "ddde67af2862189811c11ca15e717dc9fc87b452f1a0cd28d2a36b70c3f8dc57",
+      "authorization": "T004–T007: controles servidor"
+    },
+    {
+      "path": "ESTADO-DESARROLLO.md",
+      "missing": false,
+      "original": "f237c09375b536f0208b44fb68d6312ebeea764f84baf077046c77e811f88701",
+      "current": "523d3455265fccaa66aa2cbcbcaa23576eded58875728650d285573774d63f72",
+      "authorization": "T039: contexto vigente"
+    },
+    {
+      "path": "package-lock.json",
+      "missing": false,
+      "original": "acd3aa90bfb91fa11b3bade8eee99c01cbe7330e60a90112ec24f358ab82961f",
+      "current": "0b29fe9a08cced8a1f1e5434a515077f88599113fbc34e65d845543e8cb70141",
+      "authorization": "T003: lockfile de CLI aprobada"
+    },
+    {
+      "path": "package.json",
+      "missing": false,
+      "original": "8dda469b60dbda8547f2872eb74837a581d2081fa84f2a57517a28f98740385c",
+      "current": "9c3e03b545d6b7c6fa08bcfa6924fa183af3462fcdfd7e30896406824f5f40b4",
+      "authorization": "T003: Supabase CLI fijada, controles aprobados"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/plan.md",
+      "missing": false,
+      "original": "6ddbdf706cb9a4e589494e896d62dad04c3fe2c1d9a5333b236fc8bdcd0c0214",
+      "current": "d87a0206b5c10f4f2cb830e6210de7763f8b56761a14cf73ad18be2c19afdb08",
+      "authorization": "T035: enmienda SC-006 autorizada"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/quickstart.md",
+      "missing": false,
+      "original": "edd43f2c76af70650dcafd285c62d869cd8056dc297797ed77b38223769af1fe",
+      "current": "4af456eb67d618065346b880c54b91f96c354d8fc0bc9f8fd03a42f3083e5058",
+      "authorization": "T035/T039: guía vigente"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/spec.md",
+      "missing": false,
+      "original": "5647e5ae0bc41dc342d6bfa60cfb950a296a8f691c060e823bc0ddc9e140f605",
+      "current": "c5dd8628b79f44be18de87edcd7db3d391dd9791593611379a1d9eba5701706d",
+      "authorization": "T035: enmienda SC-006 autorizada"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/tasks.md",
+      "missing": false,
+      "original": "a51fa64135babfa6b940eaa64285b901b6732056d22459e0606882b60b43af71",
+      "current": "b8568103968ff6cb9b562c571f7b7639fc9add40db27bc15bb533041aa14f436",
+      "authorization": "Progreso verificado T001–T040"
+    },
+    {
+      "path": "specs/002-fundacion-supabase-multitenant/validation.md",
+      "missing": false,
+      "original": "ea293613ade263ab05b0e59b87d795d66434c601683de925d8dbc2bcf4b363b8",
+      "current": "23b99e399b010a4bc7190c9647d13ea50128807d2e631398b01c9858e3eaa212",
+      "authorization": "T035: enmienda SC-006 autorizada"
+    }
+  ],
+  "unexpectedDifferences": [],
+  "baselineHeadAncestorExit": 0,
+  "missingTrace": [],
+  "checklistUnchecked": 0,
+  "candidates": [
+    "ESTADO-DESARROLLO.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "specs/002-fundacion-supabase-multitenant/quickstart.md",
+    "specs/002-fundacion-supabase-multitenant/tasks.md",
+    "docs/evaluacion/evidencias/002-fundacion/cierre.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-cierre-paridad.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-create-barbershop.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-deploy-ensure-profile.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-fuentes.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-http.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-list-between.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-local.log",
+    "docs/evaluacion/evidencias/002-fundacion/t038-edge-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-access.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-diagnostico.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-functional-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-inspeccion-graphql.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-inspeccion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-minima.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-preflight-catalogo.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-callback-check.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-retry-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-paridad-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-application.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-catalogo.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-destino.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-dry-run.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-estructura.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-after.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-list-before.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-preflight.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-sql-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-verificar-catalogo.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t040-integridad.json"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "scopedDiffExit": 0,
+  "globalDiff": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "remoteOperationsPerformed": false,
+  "fullBatteriesRerun": false,
+  "tasksCompleted": 40,
+  "tasksPending": 0
+}

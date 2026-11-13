@@ -1,0 +1,63 @@
+
+> app-barberia@0.1.0 check:server
+> npm run typecheck:server-core && npm run architecture:server && deno task --config supabase/functions/deno.json check && npm run lint:server
+
+
+> app-barberia@0.1.0 typecheck:server-core
+> tsc -p tsconfig.server-core.json --noEmit
+
+
+> app-barberia@0.1.0 architecture:server
+> node scripts/check-server-architecture.mjs
+
+Arquitectura: modules=13 core=6 edges=29
+  supabase/functions/create-barbershop/index.ts [entry]
+  supabase/functions/ensure-profile/index.ts [entry]
+  supabase/functions/_shared/tenant-foundation/application/create-own-barbershop.ts [application]
+  supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts [application]
+  supabase/functions/_shared/tenant-foundation/application/foundation-provisioning-gateway.ts [application]
+  supabase/functions/_shared/tenant-foundation/composition.ts [composition]
+  supabase/functions/_shared/tenant-foundation/domain/barbershop-validation.ts [domain]
+  supabase/functions/_shared/tenant-foundation/domain/types.ts [domain]
+  supabase/functions/_shared/tenant-foundation/domain/validation.ts [domain]
+  supabase/functions/_shared/tenant-foundation/infrastructure/auth-verification-adapter.ts [infrastructure]
+  supabase/functions/_shared/tenant-foundation/infrastructure/postgres-foundation-adapter.ts [infrastructure]
+  supabase/functions/_shared/tenant-foundation/presentation/create-barbershop-handler.ts [presentation]
+  supabase/functions/_shared/tenant-foundation/presentation/ensure-profile-handler.ts [presentation]
+Task check DENO_DIR=../../.artifacts/deno-cache deno check --no-npm --no-remote ensure-profile/index.ts create-barbershop/index.ts
+
+> app-barberia@0.1.0 lint:server
+> eslint supabase/functions tests/server --max-warnings 0
+
+CHECK_SERVER_EXIT=0
+
+> app-barberia@0.1.0 test:server
+> deno task --config supabase/functions/deno.json test
+
+Task test DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt ../../tests/server/tenant-foundation
+running 4 tests from ../../tests/server/tenant-foundation/adapters.test.ts
+Auth verifies on configured user endpoint and ignores metadata identity ... ok (21ms)
+Auth invalid anonymous malformed and provider errors ... ok (1ms)
+RPC service transport separate and DTO mapped for both key modes ... ok (458µs)
+RPC errors cardinality malformed payload and timeout fail safely ... ok (8ms)
+running 3 tests from ../../tests/server/tenant-foundation/barbershops.test.ts
+server own create forwards verified context and normalized name ... ok (412µs)
+server invalid actor impersonation profile required and provider timeout ... ok (425µs)
+server validators and malformed persistence results ... ok (321µs)
+running 3 tests from ../../tests/server/tenant-foundation/handler.test.ts
+handler success correlates and actor comes only from verifier ... ok (16ms)
+handler rejects malformed extras types oversized and methods ... ok (1ms)
+handler provider errors CORS and redacted logs ... ok (460µs)
+running 6 tests from ../../tests/server/tenant-foundation/profiles.test.ts
+verified actor forwarded and repeated ensure preserves existing data ... ok (455µs)
+invalid actor/input and provider failure ... ok (404µs)
+runtime validation null empty omitted fields and safe errors ... ok (312µs)
+HTTP contract UNAUTHENTICATED ... ok (14ms)
+HTTP contract INVALID_INPUT ... ok (382µs)
+HTTP contract DEPENDENCY_UNAVAILABLE ... ok (373µs)
+running 1 test from ../../tests/server/tenant-foundation/provisioning-adapter.test.ts
+barbershop RPC maps own membership and handler rejects forged role ... ok (17ms)
+
+ok | 17 passed | 0 failed (382ms)
+
+TEST_SERVER_EXIT=0

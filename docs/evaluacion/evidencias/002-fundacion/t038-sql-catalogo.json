@@ -1,0 +1,808 @@
+{
+  "command": "supabase db query --read-only --remote=vuoncrtkkkquvddunrxx --file .artifacts/t038-catalog-after.sql --output-format json",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "exit": 0,
+  "rawOutputRetained": false,
+  "outputShape": {
+    "boundary": "string",
+    "rows": {
+      "length": 1,
+      "sample": {
+        "catalog": {
+          "businessRowCounts": "object",
+          "constraints": "object",
+          "functions": "object",
+          "indexes": "object",
+          "policies": "object",
+          "postgresVersion": "string",
+          "schemaPrivileges": "object",
+          "tables": "object",
+          "transactionReadOnly": "string"
+        }
+      }
+    },
+    "warning": "string"
+  },
+  "temporaryRoleSetupMessageObserved": false,
+  "error": null,
+  "catalog": {
+    "businessRowCounts": {
+      "barbershop_memberships": 0,
+      "barbershops": 0,
+      "profiles": 0
+    },
+    "constraints": [
+      {
+        "definition": "PRIMARY KEY (id)",
+        "name": "barbershop_memberships_pkey",
+        "table": "barbershop_memberships",
+        "type": "p"
+      },
+      {
+        "definition": "CHECK ((role = ANY (ARRAY['barber'::text, 'administrator'::text])))",
+        "name": "barbershop_memberships_role_valid",
+        "table": "barbershop_memberships",
+        "type": "c"
+      },
+      {
+        "definition": "FOREIGN KEY (barbershop_id) REFERENCES barbershops(id) ON DELETE RESTRICT",
+        "name": "barbershop_memberships_shop_fkey",
+        "table": "barbershop_memberships",
+        "type": "f"
+      },
+      {
+        "definition": "CHECK ((status = ANY (ARRAY['active'::text, 'inactive'::text])))",
+        "name": "barbershop_memberships_status_valid",
+        "table": "barbershop_memberships",
+        "type": "c"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES profiles(id) ON DELETE RESTRICT",
+        "name": "barbershop_memberships_user_fkey",
+        "table": "barbershop_memberships",
+        "type": "f"
+      },
+      {
+        "definition": "UNIQUE (user_id, barbershop_id)",
+        "name": "barbershop_memberships_user_shop_key",
+        "table": "barbershop_memberships",
+        "type": "u"
+      },
+      {
+        "definition": "CHECK ((char_length(btrim(name)) > 0))",
+        "name": "barbershops_name_not_blank",
+        "table": "barbershops",
+        "type": "c"
+      },
+      {
+        "definition": "PRIMARY KEY (id)",
+        "name": "barbershops_pkey",
+        "table": "barbershops",
+        "type": "p"
+      },
+      {
+        "definition": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE RESTRICT",
+        "name": "profiles_auth_user_fkey",
+        "table": "profiles",
+        "type": "f"
+      },
+      {
+        "definition": "CHECK ((char_length(btrim(display_name)) > 0))",
+        "name": "profiles_display_name_not_blank",
+        "table": "profiles",
+        "type": "c"
+      },
+      {
+        "definition": "PRIMARY KEY (id)",
+        "name": "profiles_pkey",
+        "table": "profiles",
+        "type": "p"
+      }
+    ],
+    "functions": [
+      {
+        "arguments": "p_actor_id uuid, p_name text",
+        "definition": "CREATE OR REPLACE FUNCTION private.create_own_barbershop(p_actor_id uuid, p_name text)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare shop public.barbershops; member public.barbershop_memberships;\nbegin\n  if p_actor_id is null or not exists(select 1 from auth.users u where u.id=p_actor_id and not coalesce(u.is_anonymous,false)) then\n    raise exception using errcode='42501',message='UNAUTHENTICATED';\n  end if;\n  if not exists(select 1 from public.profiles p where p.id=p_actor_id) then\n    raise exception using errcode='P0001',message='PROFILE_REQUIRED';\n  end if;\n  if p_name is null or pg_catalog.btrim(p_name)='' then\n    raise exception using errcode='22023',message='INVALID_INPUT';\n  end if;\n  insert into public.barbershops(name) values(pg_catalog.btrim(p_name)) returning * into shop;\n  insert into public.barbershop_memberships(user_id,barbershop_id,role,status)\n    values(p_actor_id,shop.id,'administrator','active') returning * into member;\n  return pg_catalog.jsonb_build_object('barbershop',pg_catalog.to_jsonb(shop),'membership',pg_catalog.to_jsonb(member));\nend;\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": false,
+            "role": "authenticated"
+          },
+          {
+            "allowed": true,
+            "role": "service_role"
+          }
+        ],
+        "name": "create_own_barbershop",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "private",
+        "securityDefiner": true,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_actor_id uuid, p_display_name text, p_phone text",
+        "definition": "CREATE OR REPLACE FUNCTION private.ensure_own_profile(p_actor_id uuid, p_display_name text, p_phone text)\n RETURNS SETOF profiles\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\nbegin\n  if p_actor_id is null or not exists (\n    select 1 from auth.users u where u.id = p_actor_id and not coalesce(u.is_anonymous, false)\n  ) then\n    raise exception using errcode = '42501', message = 'UNAUTHENTICATED';\n  end if;\n  if p_display_name is null or pg_catalog.btrim(p_display_name) = '' then\n    raise exception using errcode = '22023', message = 'INVALID_INPUT';\n  end if;\n  insert into public.profiles (id, display_name, phone)\n    values (p_actor_id, pg_catalog.btrim(p_display_name), nullif(pg_catalog.btrim(p_phone), ''))\n    on conflict (id) do nothing;\n  -- Separate statement obtains the committed row after an overlapping insert at READ COMMITTED.\n  return query select p.id, p.display_name, p.phone from public.profiles p where p.id = p_actor_id;\nend;\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": false,
+            "role": "authenticated"
+          },
+          {
+            "allowed": true,
+            "role": "service_role"
+          }
+        ],
+        "name": "ensure_own_profile",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "private",
+        "securityDefiner": true,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_shop_id uuid",
+        "definition": "CREATE OR REPLACE FUNCTION private.is_active_admin(p_shop_id uuid)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select exists (\n    select 1 from public.barbershop_memberships m\n    where m.barbershop_id = p_shop_id and m.user_id = (select auth.uid())\n      and m.status = 'active' and m.role = 'administrator'\n  );\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": true,
+            "role": "authenticated"
+          },
+          {
+            "allowed": false,
+            "role": "service_role"
+          }
+        ],
+        "name": "is_active_admin",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "private",
+        "securityDefiner": true,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_shop_id uuid",
+        "definition": "CREATE OR REPLACE FUNCTION private.is_active_member(p_shop_id uuid)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select exists (\n    select 1 from public.barbershop_memberships m\n    where m.barbershop_id = p_shop_id and m.user_id = (select auth.uid())\n      and m.status = 'active'\n  );\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": true,
+            "role": "authenticated"
+          },
+          {
+            "allowed": false,
+            "role": "service_role"
+          }
+        ],
+        "name": "is_active_member",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "private",
+        "securityDefiner": true,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_actor_id uuid, p_name text",
+        "definition": "CREATE OR REPLACE FUNCTION public.create_own_barbershop(p_actor_id uuid, p_name text)\n RETURNS jsonb\n LANGUAGE sql\n SET search_path TO ''\nAS $function$\n  select private.create_own_barbershop(p_actor_id,p_name);\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": false,
+            "role": "authenticated"
+          },
+          {
+            "allowed": true,
+            "role": "service_role"
+          }
+        ],
+        "name": "create_own_barbershop",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "public",
+        "securityDefiner": false,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_actor_id uuid, p_display_name text, p_phone text",
+        "definition": "CREATE OR REPLACE FUNCTION public.ensure_own_profile(p_actor_id uuid, p_display_name text, p_phone text)\n RETURNS SETOF profiles\n LANGUAGE sql\n SET search_path TO ''\nAS $function$\n  select p.id, p.display_name, p.phone\n  from private.ensure_own_profile(p_actor_id, p_display_name, p_phone) p;\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": false,
+            "role": "authenticated"
+          },
+          {
+            "allowed": true,
+            "role": "service_role"
+          }
+        ],
+        "name": "ensure_own_profile",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "public",
+        "securityDefiner": false,
+        "settings": [
+          "search_path=\"\""
+        ]
+      },
+      {
+        "arguments": "p_barbershop_id uuid",
+        "definition": "CREATE OR REPLACE FUNCTION public.list_barbershop_memberships(p_barbershop_id uuid)\n RETURNS TABLE(id uuid, user_id uuid, barbershop_id uuid, role text, status text)\n LANGUAGE plpgsql\n SET search_path TO ''\nAS $function$\nbegin\n  if not private.is_active_admin(p_barbershop_id) then\n    raise exception using errcode = '42501', message = 'FORBIDDEN';\n  end if;\n  return query\n    select m.id, m.user_id, m.barbershop_id, m.role, m.status\n    from public.barbershop_memberships m\n    where m.barbershop_id = p_barbershop_id;\nend;\n$function$\n",
+        "execute": [
+          {
+            "allowed": false,
+            "role": "anon"
+          },
+          {
+            "allowed": true,
+            "role": "authenticated"
+          },
+          {
+            "allowed": false,
+            "role": "service_role"
+          }
+        ],
+        "name": "list_barbershop_memberships",
+        "owner": "postgres",
+        "publicExecute": false,
+        "schema": "public",
+        "securityDefiner": false,
+        "settings": [
+          "search_path=\"\""
+        ]
+      }
+    ],
+    "indexes": [
+      {
+        "definition": "CREATE UNIQUE INDEX barbershop_memberships_pkey ON public.barbershop_memberships USING btree (id)",
+        "name": "barbershop_memberships_pkey",
+        "table": "barbershop_memberships"
+      },
+      {
+        "definition": "CREATE INDEX barbershop_memberships_shop_user_idx ON public.barbershop_memberships USING btree (barbershop_id, user_id)",
+        "name": "barbershop_memberships_shop_user_idx",
+        "table": "barbershop_memberships"
+      },
+      {
+        "definition": "CREATE UNIQUE INDEX barbershop_memberships_user_shop_key ON public.barbershop_memberships USING btree (user_id, barbershop_id)",
+        "name": "barbershop_memberships_user_shop_key",
+        "table": "barbershop_memberships"
+      },
+      {
+        "definition": "CREATE UNIQUE INDEX barbershops_pkey ON public.barbershops USING btree (id)",
+        "name": "barbershops_pkey",
+        "table": "barbershops"
+      },
+      {
+        "definition": "CREATE UNIQUE INDEX profiles_pkey ON public.profiles USING btree (id)",
+        "name": "profiles_pkey",
+        "table": "profiles"
+      }
+    ],
+    "policies": [
+      {
+        "check": null,
+        "command": "SELECT",
+        "name": "memberships_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "barbershop_memberships",
+        "using": "((user_id = ( SELECT auth.uid() AS uid)) OR private.is_active_admin(barbershop_id))"
+      },
+      {
+        "check": null,
+        "command": "SELECT",
+        "name": "barbershops_select_active_member",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "barbershops",
+        "using": "private.is_active_member(id)"
+      },
+      {
+        "check": "private.is_active_admin(id)",
+        "command": "UPDATE",
+        "name": "barbershops_update_active_admin",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "barbershops",
+        "using": "private.is_active_admin(id)"
+      },
+      {
+        "check": null,
+        "command": "SELECT",
+        "name": "profiles_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "profiles",
+        "using": "(id = ( SELECT auth.uid() AS uid))"
+      },
+      {
+        "check": "(id = ( SELECT auth.uid() AS uid))",
+        "command": "UPDATE",
+        "name": "profiles_update_own",
+        "roles": [
+          "authenticated"
+        ],
+        "table": "profiles",
+        "using": "(id = ( SELECT auth.uid() AS uid))"
+      }
+    ],
+    "postgresVersion": "17.11",
+    "schemaPrivileges": [
+      {
+        "create": false,
+        "role": "anon",
+        "schema": "private",
+        "usage": false
+      },
+      {
+        "create": false,
+        "role": "authenticated",
+        "schema": "private",
+        "usage": true
+      },
+      {
+        "create": false,
+        "role": "service_role",
+        "schema": "private",
+        "usage": true
+      },
+      {
+        "create": false,
+        "role": "anon",
+        "schema": "public",
+        "usage": true
+      },
+      {
+        "create": false,
+        "role": "authenticated",
+        "schema": "public",
+        "usage": true
+      },
+      {
+        "create": false,
+        "role": "service_role",
+        "schema": "public",
+        "usage": true
+      }
+    ],
+    "tables": [
+      {
+        "columns": [
+          {
+            "name": "id",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "uuid"
+          },
+          {
+            "name": "user_id",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "uuid"
+          },
+          {
+            "name": "barbershop_id",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "uuid"
+          },
+          {
+            "name": "role",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "name": "status",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "forceRls": false,
+        "name": "barbershop_memberships",
+        "owner": "postgres",
+        "privileges": [
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "anon",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "authenticated",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "service_role",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          }
+        ],
+        "rls": true
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "uuid"
+          },
+          {
+            "name": "name",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": true
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "forceRls": false,
+        "name": "barbershops",
+        "owner": "postgres",
+        "privileges": [
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "anon",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "authenticated",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "service_role",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          }
+        ],
+        "rls": true
+      },
+      {
+        "columns": [
+          {
+            "name": "id",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "uuid"
+          },
+          {
+            "name": "display_name",
+            "notNull": true,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": true
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "text"
+          },
+          {
+            "name": "phone",
+            "notNull": false,
+            "privileges": [
+              {
+                "insert": false,
+                "references": false,
+                "role": "anon",
+                "select": false,
+                "update": false
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "authenticated",
+                "select": true,
+                "update": true
+              },
+              {
+                "insert": false,
+                "references": false,
+                "role": "service_role",
+                "select": false,
+                "update": false
+              }
+            ],
+            "type": "text"
+          }
+        ],
+        "forceRls": false,
+        "name": "profiles",
+        "owner": "postgres",
+        "privileges": [
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "anon",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "authenticated",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          },
+          {
+            "delete": false,
+            "insert": false,
+            "references": false,
+            "role": "service_role",
+            "select": false,
+            "trigger": false,
+            "truncate": false,
+            "update": false
+          }
+        ],
+        "rls": true
+      }
+    ],
+    "transactionReadOnly": "on"
+  }
+}

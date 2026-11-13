@@ -1,0 +1,27 @@
+{
+  "command": "supabase functions deploy create-barbershop --remote=vuoncrtkkkquvddunrxx --use-api --output-format json --yes",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "name": "create-barbershop",
+  "exit": 0,
+  "spawnError": null,
+  "errorCode": null,
+  "outputShape": {
+    "project_ref": "string",
+    "functions": {
+      "length": 1,
+      "sample": "string"
+    },
+    "dashboard_url": "string",
+    "message": "string",
+    "target": {
+      "kind": "string",
+      "project_ref": "string",
+      "project_name": "string",
+      "environment": "string"
+    }
+  },
+  "rawOutputRetained": false,
+  "noVerifyJwtDisabled": true,
+  "noPrune": true,
+  "noDockerOperations": true
+}

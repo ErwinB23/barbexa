@@ -1,0 +1,82 @@
+{
+  "scope": "REVIEW_OF_TWO_EXISTING_EDGE_ENTRIES_AND_TRANSITIVE_LOCAL_MODULES",
+  "files": [
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/application/create-own-barbershop.ts",
+      "sha256": "d7fac1d76a25b5eb312f29197f1cb99f66625b38cdf2daf47d8a40d1c17770bd"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/application/ensure-own-profile.ts",
+      "sha256": "ede379951d095536c9848ab7fc68f36d4bbdb59bd5b8b3d33e6f62601163ccf8"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/application/foundation-provisioning-gateway.ts",
+      "sha256": "52426977a28856ad4ee79c8e7912a3e14a673c048479209599961db1f5cad669"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/composition.ts",
+      "sha256": "d32fb41aa4ab364ca62bfdaf08a1b15d057b6d4ff5d6e8b286503645fedffaf9"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/domain/barbershop-validation.ts",
+      "sha256": "9aa66a76654381ca6af7bb4707866629939c035e77a634d0fa759f5814a56223"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/domain/types.ts",
+      "sha256": "1d4058c37521b470d7494507a50061833cce91fcbd4365fcda5ec3b5438a5ebd"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/domain/validation.ts",
+      "sha256": "03c96d2f1fe186d9ee49c0784da096d368692f7422dcd184251ee8f7d5e1e6e7"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/infrastructure/auth-verification-adapter.ts",
+      "sha256": "2d4a67c2784f74cde9ef33a07f76280ff27af97078eb90e70954fab7748fdb47"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/infrastructure/postgres-foundation-adapter.ts",
+      "sha256": "b5ab5118aa191b3b7c082bbe1e6a74c14c7942859b22beea23590af0f3ac16db"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/presentation/create-barbershop-handler.ts",
+      "sha256": "f97e92431083199170a954bf42ea394f1c11fa957a8c656ac92b55e4994e5f37"
+    },
+    {
+      "file": "supabase/functions/_shared/tenant-foundation/presentation/ensure-profile-handler.ts",
+      "sha256": "83dd2f99024f16cd9d759352ca7524e5aba6fc6260ed4aa5cbc3c3605aff7a54"
+    },
+    {
+      "file": "supabase/functions/create-barbershop/index.ts",
+      "sha256": "1d5fb7f5c463616565291139198f46ace8240c8c33732fcb1ea0f8f1caa01543"
+    },
+    {
+      "file": "supabase/functions/deno.json",
+      "sha256": "1cd26637594818a19d18970a7a262b38aad61ef502541970ec13c3895ad2e94c"
+    },
+    {
+      "file": "supabase/functions/ensure-profile/index.ts",
+      "sha256": "dbc90f3a9e5f0658ac4f401fe1103aaf4a331dcce4009593e1535f18240bae97"
+    }
+  ],
+  "configSha256": "aa3cfa731e9cb04d507f4278bd478878d63a4e40ff9fc55669e8368539b76ed2",
+  "functions": [
+    {
+      "name": "ensure-profile",
+      "entrypoint": "supabase/functions/ensure-profile/index.ts",
+      "entrypointExists": true,
+      "enabled": true,
+      "verifyJwt": true
+    },
+    {
+      "name": "create-barbershop",
+      "entrypoint": "supabase/functions/create-barbershop/index.ts",
+      "entrypointExists": true,
+      "enabled": true,
+      "verifyJwt": true
+    }
+  ],
+  "findings": [],
+  "dependencies": "Relative TypeScript modules and native Deno/fetch only; no new packages.",
+  "identity": "Handler calls verified Auth /auth/v1/user and rejects missing UUID or is_anonymous!=false before gateway.",
+  "authorization": "Provisioning is own-actor only; no preexisting membership required to create a new tenant. Existing tenant access relies on the previously inspected contextual PostgreSQL ACL/RLS."
+}

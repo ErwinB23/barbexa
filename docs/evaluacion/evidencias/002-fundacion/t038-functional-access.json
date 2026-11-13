@@ -1,0 +1,122 @@
+{
+  "ref": "vuoncrtkkkquvddunrxx",
+  "name": "app-barberia-arquitectura",
+  "region": "sa-east-1",
+  "status": "ACTIVE_HEALTHY",
+  "cliVersion": "3.1.0",
+  "administrativeCredentialSource": "Authenticated CLI API-key retrieval, trusted local process memory only",
+  "revealUsed": false,
+  "administrativeAuthGetStatus": 200,
+  "credentialsPersisted": false,
+  "authHealth": {
+    "status": 200,
+    "version": "v2.197.0"
+  },
+  "preflight": {
+    "businessOrAuthTriggers": [],
+    "counts": {
+      "authUsers": 0,
+      "barbershops": 0,
+      "memberships": 0,
+      "profiles": 0
+    },
+    "foreignKeys": [
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.identities",
+        "name": "identities_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.sessions",
+        "name": "sessions_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.mfa_factors",
+        "name": "mfa_factors_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.one_time_tokens",
+        "name": "one_time_tokens_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.oauth_authorizations",
+        "name": "oauth_authorizations_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.oauth_consents",
+        "name": "oauth_consents_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.webauthn_credentials",
+        "name": "webauthn_credentials_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.webauthn_challenges",
+        "name": "webauthn_challenges_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE SET NULL",
+        "deleteAction": "n",
+        "from": "auth.scim_users",
+        "name": "scim_users_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+        "deleteAction": "c",
+        "from": "auth.mfa_recovery_code_sets",
+        "name": "mfa_recovery_code_sets_user_id_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE RESTRICT",
+        "deleteAction": "r",
+        "from": "profiles",
+        "name": "profiles_auth_user_fkey",
+        "to": "auth.users"
+      },
+      {
+        "definition": "FOREIGN KEY (user_id) REFERENCES profiles(id) ON DELETE RESTRICT",
+        "deleteAction": "r",
+        "from": "barbershop_memberships",
+        "name": "barbershop_memberships_user_fkey",
+        "to": "profiles"
+      },
+      {
+        "definition": "FOREIGN KEY (barbershop_id) REFERENCES barbershops(id) ON DELETE RESTRICT",
+        "deleteAction": "r",
+        "from": "barbershop_memberships",
+        "name": "barbershop_memberships_shop_fkey",
+        "to": "barbershops"
+      }
+    ],
+    "postgresVersion": "17.11",
+    "transactionReadOnly": "on"
+  },
+  "unexpectedForeignKeys": [],
+  "preflightSafe": true,
+  "businessWritesExecuted": false
+}

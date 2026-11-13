@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-13",
+  "branch": "main",
+  "head": "42a695cc257f87711fec6a31a31d9c55ad69e1f3",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "graphqlRequiredByContract": false,
+  "pgGraphqlInstalled": false,
+  "remoteConfigurationChanged": false,
+  "profileAttempts": [
+    {
+      "attempt": 1,
+      "separateAuthorization": true,
+      "exit": 1,
+      "created": {
+        "users": 1,
+        "profiles": 0,
+        "barbershops": 0,
+        "memberships": 0
+      },
+      "error": "REMOTE_PROFILE_TEST_FAILED",
+      "ordinaryCalls": 0,
+      "cleanupComplete": true
+    },
+    {
+      "attempt": 2,
+      "separateAuthorization": true,
+      "exit": 0,
+      "created": {
+        "users": 1,
+        "profiles": 1,
+        "barbershops": 0,
+        "memberships": 0
+      },
+      "passed": 7,
+      "total": 7,
+      "error": null,
+      "cleanupComplete": true
+    }
+  ],
+  "callbackMismatchLocallyReproducedAndCorrected": true,
+  "publicApplicationCompositionActuallyUsedOnRetry": true,
+  "ownPatchCount": 2,
+  "firstCleanup": {
+    "completed": true,
+    "logoutStatus": 204,
+    "authDeleteStatus": 200,
+    "profilesRemoved": 0,
+    "remaining": {
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "refreshTokens": 0,
+      "sessions": 0,
+      "users": 0
+    },
+    "countsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtImmediatelyInvalidatedClaimed": false,
+    "platformAuditLogsPurged": false
+  },
+  "retryCleanup": {
+    "completed": true,
+    "logoutStatus": 204,
+    "authDeleteStatus": 200,
+    "profilesRemoved": 1,
+    "remaining": {
+      "identities": 0,
+      "memberships": 0,
+      "profiles": 0,
+      "refreshTokens": 0,
+      "sessions": 0,
+      "users": 0
+    },
+    "countsAfter": {
+      "memberships": 0,
+      "profiles": 0,
+      "shops": 0,
+      "users": 0
+    },
+    "globalCountsRestored": true,
+    "accessJwtImmediatelyInvalidatedClaimed": false,
+    "platformAuditLogsPurged": false
+  },
+  "bothPrivateManifestsRemoved": true,
+  "bothPrivateSqlFilesRemoved": true,
+  "onlyTask038CheckboxChanged": true,
+  "T038Completed": true,
+  "T039T040Pending": true,
+  "taskCounts": {
+    "completed": 38,
+    "pending": 2
+  },
+  "initialFunctionalHistoryPreserved": true,
+  "changedExistingFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "specs/002-fundacion-supabase-multitenant/tasks.md"
+  ],
+  "newEvidenceFiles": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-cierre-paridad.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-inspeccion-graphql.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-inspeccion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-minima.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-callback-check.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-retry-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-paridad-revision.json"
+  ],
+  "unexpectedChanges": [],
+  "secretScanScope": [
+    "docs/evaluacion/evidencias/002-fundacion/t038-funcional.md",
+    "docs/evaluacion/evidencias/002-fundacion/informe.md",
+    "docs/evaluacion/evidencias/002-fundacion/remoto.md",
+    "specs/002-fundacion-supabase-multitenant/tasks.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-cierre-paridad.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-inspeccion-graphql.sql",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-inspeccion.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-minima.md",
+    "docs/evaluacion/evidencias/002-fundacion/t038-paridad-revision.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-callback-check.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-minimal-retry-results.json",
+    "docs/evaluacion/evidencias/002-fundacion/t038-profile-paridad-revision.json"
+  ],
+  "secretFindings": [],
+  "missingLinks": [],
+  "trailingWhitespace": [],
+  "globalDiffCheck": {
+    "exit": 2,
+    "files": [
+      "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+    ]
+  },
+  "excludingOnlyActiveLog": {
+    "exit": 0,
+    "text": ""
+  },
+  "stagingEmpty": true,
+  "commitOrPushCreated": false,
+  "containersOrOldProjectOperated": false,
+  "npmRisk": "Nine moderate advisories unresolved; no dependency changes or acceptance of risk."
+}

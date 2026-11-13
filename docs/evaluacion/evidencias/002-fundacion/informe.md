@@ -544,3 +544,187 @@ T038 sigue pendiente: no se aplicaron migraciones, configuración o despliegues 
 ni se acreditó paridad remota. Sin link, SQL adicional, operaciones de contenedores,
 T039–T040, commit o push. Log activo y cambios anteriores conservados. Persisten nueve
 avisos moderados npm. [Conservación y revisión actual](t038-consultas-revision.json).
+
+### T038 — cinco migraciones SQL aplicadas con autorización expresa, 13/11/2026
+
+Checkpoint previo local **42a695c**, 32 archivos T034–T038, revisión de secretos sin
+hallazgos y cached diff check 0; log activo excluido, sin push. Destino reconfirmado
+por CLI autenticada: vuoncrtkkkquvddunrxx/app-barberia-arquitectura, sa-east-1, Healthy.
+Preflight de solo lectura exit 0: PostgreSQL 17.11, sin tablas/funciones/esquema private
+en conflicto. Hashes de los cinco SQL intactos; historial y dry-run previos exit 0.
+
+**Una única aplicación real db push --skip-vault**, exit **0**, con confirmación limitada
+a ese comando y plan exacto autorizado. Sin seeds, roles personalizados, configuración
+o Edge. Las cinco versiones figuran en el historial posterior, exit 0. No falló ninguna
+migración y no se reintentó la aplicación. [Detalle, comandos y resultados](remoto.md).
+
+Inspección remota posterior read-only exit 0; **83/83 comprobaciones estructurales**:
+tres tablas con RLS, cinco políticas, once restricciones, cinco índices y siete funciones
+con cuerpos/SECURITY DEFINER/INVOKER/search_path/EXECUTE previstos. Grants por columna
+y ausencia de escrituras ordinarias de membresías comprobados en catálogo. Cero filas
+de negocio; sin fixtures remotas. No son pruebas funcionales de aislamiento con JWT.
+
+T038 continúa pendiente de despliegues/paridad funcional y revisión de exposición:
+graphql_public sin modificar, Edge sin desplegar. Sin T039–T040, cambios de código,
+dependencias o contenedores; proyecto anterior no operado. Roles temporales: eliminación
+y caducidad no acreditadas. Nueve avisos npm moderados sin remediación/aceptación formal.
+Las evidencias posteriores al checkpoint quedan sin commit. [Revisión final](t038-sql-revision.json).
+
+### T038 — ambas Edge Functions publicadas, 13/11/2026
+
+Autorización expresa únicamente para ensure-profile y create-barbershop. Destino nuevo
+vuoncrtkkkquvddunrxx/sa-east-1 reconfirmado mediante CLI 3.1.0. Revisión de 14 fuentes,
+entrypoints, variables y verify_jwt=true; sin secretos/URLs locales incrustados detectados.
+Check:server exit 0; pruebas servidor nuevas 17/17, exit 0, con dobles locales.
+
+Despliegues individuales por API, **exit 0 cada uno**. Primera función verificada antes
+de publicar la segunda. Listado final: ambas **versión 1, ACTIVE, verify_jwt=true**, sin
+funciones adicionales. Sin no-verify-jwt, prune, Docker o cambios de código/configuración.
+Checkpoint 42a695c conservado; evidencias posteriores sin commit ni push.
+
+HTTP real **10/10 denegaciones 401**, cinco por función: sin autenticación, Bearer inválido,
+apikey inválida, clave pública sola y JWT legacy anon sin usuario. Material público/anon
+seleccionado solo en memoria, sin --reveal ni guardar valores/cabeceras. En los casos
+público/anon respondió el handler UNAUTHENTICATED, con X-Request-Id, acreditando arranque
+y control de usuario adicional al gateway. Sin payload de negocio ni datos preparados.
+No se ejecutó SQL remoto ni se midieron filas nuevamente en este turno.
+
+[Detalle y plan de preparación/limpieza de futuras identidades sintéticas](remoto.md).
+T038 continúa pendiente de paridad funcional con JWT y tenants reales de prueba autorizados,
+revisión de exposición y diferencias de versiones; el runtime Edge no se leyó. Auth 2.197.0
+es antecedente manual; PostgreSQL 17.11 corresponde a la inspección SQL anterior. Sin
+cambios en Data API/graphql_public/RLS/ACL, proyecto anterior, contenedores o T039–T040.
+No se repite auditoría npm: nueve avisos moderados siguen pendientes. [Revisión actual](t038-edge-revision.json).
+
+### T038 — validación funcional real, fixtures retiradas, 13/11/2026
+
+Nuevo acceso operativo comprobado en vuoncrtkkkquvddunrxx/sa-east-1, Auth Admin 200 con
+credencial solo en memoria; baseline cero e inspección FK/triggers read-only. Auth
+v2.197.0 y PostgreSQL 17.11 actuales. Se crearon **tres usuarios**, **tres perfiles**,
+**dos barberías** y **cuatro membresías**, con sesiones propias para todas las operaciones
+de negocio. Correos example.invalid, confirmación administrativa sin envíos.
+
+Cumplidos perfiles/idempotencia/propiedad, altas de primer administrador, PROFILE_REQUIRED
+sin parciales, aislamiento A/B, roles admin-A/barbero-B, inactividad, autopromoción
+denegada, RPC privilegiada denegada y revocación con JWT sin renovar. [Tabla y evidencia](t038-funcional.md).
+Run inicial **41/42, exit 1** por expectativa errónea del operador: exigía 403 para anon,
+recibió 401. Se limpió todo en finally; repetición de lectura posterior **401/42501**,
+conforme a PostgREST, exit 0. Sin cambiar producto ni ocultar el resultado inicial.
+
+Retiradas selectivamente cuatro membresías/dos barberías/tres perfiles y tres usuarios
+Auth; logout 204 y bajas Auth 200. **Cero registros activos de prueba**, incluidas
+identidades/sesiones/refresh tokens; conteos globales restaurados. Manifiesto privado y
+SQL temporal de IDs eliminados. Auditoría de plataforma no purgada; no se promete
+invalidación inmediata de JWT ya emitidos.
+
+T038 **permanece pendiente** de resolver/validar la diferencia de exposición GraphQL y
+paridad aún no ejecutada (GraphQL con A/B, edición propia de perfil y pruebas remotas
+de rollback/concurrencia). GraphQL anónimo tras limpiar devolvió errores y no prueba
+aislamiento. No se crearon más recursos tras usar el cupo autorizado. Nueve avisos npm
+moderados abiertos. Sin DDL/políticas/despliegues/configuración, T039–T040, proyecto
+anterior, contenedores, commit o push. [Revisión final](t038-functional-revision.json).
+
+### T038 — depuración de pendientes contractuales, 13/11/2026
+
+Revisión de T038/FR-006/SC-002/contratos/validation: GraphQL **no es un requisito** de
+002. Inspección remota read-only nueva confirma pg_graphql no instalado y wrapper
+graphql_public.graphql invoker limitado a error de extensión deshabilitada. Queries
+HTTP confirman ese error sin data. public/graphql_public frente a public es diferencia
+de plataforma documentada, sin necesidad demostrada de cambiar configuración para 002.
+La exigencia previa de GraphQL A/B se corrige como interpretación excesiva, conservando
+los registros de lo realmente ejecutado y no ejecutado.
+
+El pendiente es UpdateOwnProfile real: PATCH propio exitoso, teléfono omitido conservado,
+null que lo retira, nombre/identidad preservados y GET posterior. Los grants/políticas
+propios se inspeccionaron; la prueba no se ejecuta sin nueva autorización de **un usuario
+y un perfil, cero barberías/membresías**, con limpieza selectiva. La expectativa anónima
+401 ya es correcta en matriz/operador; no se cambia ningún test aprobado ni el 41/42
+histórico. [Análisis y prueba mínima](t038-paridad-minima.md).
+
+T038 sigue pendiente únicamente de cubrir/evaluar ese hueco real; GraphQL/carreras
+remotas no se convierten en requisitos nuevos. Sin datos nuevos, escrituras remotas,
+configuración, extensiones, T039–T040, contenedores, commit o push. Nueve avisos npm
+abiertos. [Revisión final](t038-paridad-revision.json).
+
+### T038 completada — paridad contractual cerrada, 13/11/2026
+
+[Cotejo de aceptación](t038-cierre-paridad.md). Tras autorización de un usuario/un perfil,
+el primer intento falló por cableado del operador antes del perfil; limpió el usuario.
+Se corrigió y comprobó localmente el callback; nueva autorización expresa permitió un
+segundo intento. **Exit 0, 7/7 checks** en este último: composición pública real,
+PATCH propio de nombre conservando teléfono omitido, PATCH phone=null conservando
+nombre/identidad y lecturas posteriores. [Resultado](t038-profile-minimal-retry-results.json).
+
+Ambas limpiezas verificadas; en estos intentos se crearon dos usuarios bajo permisos
+separados y un perfil, cero barberías/membresías. Cero usuarios/perfiles/identidades/
+sesiones/refresh tokens asociados, conteos de negocio restaurados; manifiestos privados
+retirados. No se presume invalidez inmediata de JWT ni se purga auditoría de plataforma.
+
+**T038 [x]** tras revisar sus criterios literales; no exige una API GraphQL no contratada.
+No se alteran los resultados históricos (41/42, comprobación posterior 401/42501 y
+primer intento de callback fallido). GraphQL deshabilitado y versión numérica de runtime
+Edge no observada documentados; sin inventar pruebas GraphQL/carreras remotas.
+T039–T040 pendientes, sin ejecutar. Nueve avisos npm moderados continúan sin remediación
+o aceptación formal. Sin cambios de aplicación/esquema/configuración, contenedores,
+proyecto anterior, commit o push. [Conservación y diff](t038-profile-paridad-revision.json).
+
+## T039 — consolidación final, 13/11/2026
+
+Fundación 002 completada dentro de su alcance; el SaaS completo no está terminado.
+Esta sección es el estado vigente; RED, bloqueos y pendientes anteriores son históricos.
+No se borran ni se convierten retrospectivamente en GREEN.
+
+| Requisito | Resultado dentro de 002 | Evidencia |
+| --- | --- | --- |
+| FR-001 | Proyecto nuevo independiente | [destino.md](destino.md), [t038-cierre-paridad.md](t038-cierre-paridad.md) |
+| FR-002 | Migraciones/configuración reproducibles | [reproduccion.md](reproduccion.md) |
+| FR-003 | Conservación e historial | [cierre.md](cierre.md) |
+| FR-004 | Actor verificado por Auth | [perfiles.md](perfiles.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-005 | Perfil único/idempotencia | [perfiles.md](perfiles.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-006 | Edición/lectura propias | [t038-profile-minimal-retry-results.json](t038-profile-minimal-retry-results.json) |
+| FR-007 | Perfiles ajenos denegados | [aislamiento.md](aislamiento.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-008 | Alta propia con primer administrador | [atomicidad.md](atomicidad.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-009 | Atomicidad e integridad | [atomicidad.md](atomicidad.md), [t038-sql-estructura.json](t038-sql-estructura.json) |
+| FR-010 | Acceso y renombre contextuales | [t038-functional-results.json](t038-functional-results.json) |
+| FR-011 | Pareja/roles/estado por tenant | [aislamiento.md](aislamiento.md), [t038-sql-estructura.json](t038-sql-estructura.json) |
+| FR-012 | Membresías mínimas propias/contextuales | [aislamiento.md](aislamiento.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-013 | Sin gestión ordinaria de personal | [aislamiento.md](aislamiento.md), [t038-functional-results.json](t038-functional-results.json) |
+| FR-014 | Vigencia sin refresh | [t038-functional-results.json](t038-functional-results.json) |
+| FR-015 | RLS/ACL compartidos | [t038-sql-catalogo.json](t038-sql-catalogo.json), [t038-sql-estructura.json](t038-sql-estructura.json) |
+| FR-016 | Secretos/operaciones privilegiadas | [calidad.md](calidad.md), [t038-edge-http.json](t038-edge-http.json) |
+| FR-017 | Clean Architecture y composición | [calidad.md](calidad.md), [t038-edge-local.log](t038-edge-local.log) |
+| FR-018 | SQL y HTTP reales | [aislamiento.md](aislamiento.md), [t038-cierre-paridad.md](t038-cierre-paridad.md) |
+| FR-019 | Consumidor reproducible, 001 preservada | [reproduccion.md](reproduccion.md), [t038-profile-minimal-retry-results.json](t038-profile-minimal-retry-results.json), [cierre.md](cierre.md) |
+| FR-020 | Trazabilidad y riesgo vigente | [riesgo-npm.md](riesgo-npm.md), [cierre.md](cierre.md) |
+
+| Criterio | Evidencia y alcance |
+| --- | --- |
+| SC-001 | [reproduccion.md](reproduccion.md), [destino.md](destino.md): preparaciones locales aisladas y nuevo Cloud; conservación en cierre |
+| SC-002 | [perfiles.md](perfiles.md), [t038-profile-minimal-retry-results.json](t038-profile-minimal-retry-results.json): perfiles propios y edición; pruebas locales y Cloud separadas |
+| SC-003 | [atomicidad.md](atomicidad.md), [t038-functional-results.json](t038-functional-results.json): carreras/rollback inducido locales; altas y PROFILE_REQUIRED remoto sin parciales |
+| SC-004 | [aislamiento.md](aislamiento.md), [t038-functional-results.json](t038-functional-results.json): matriz local completa y casos funcionales remotos identificados; no se atribuyen 440 casos a Cloud |
+| SC-005 | [calidad.md](calidad.md), [t038-edge-http.json](t038-edge-http.json): identidad, secretos y denegaciones; no seguridad absoluta |
+| SC-006 | [reproduccion.md](reproduccion.md), guía quickstart y esta trazabilidad; enmienda autorizada sin tercero obligatorio |
+
+### Atribución y límites de las evidencias reutilizadas
+
+- Local real: SQL 336/336 y HTTP integral 440/440, check exit 0 en T032/T033; reproducción aislada T035. No se repiten en T039/T040.
+- Dobles: unitarias Node/Deno y fixtures AST verifican contratos/arquitectura; no sustituyen Auth/RLS reales. Tokens externos simulados se identifican como fixtures.
+- Cloud: cinco migraciones, catálogo 83/83, dos funciones ACTIVE v1 con JWT, diez rechazos HTTP, flujos A/B/roles/revocación y edición propia final 7/7.
+- Historia conservada: 41/42 inicial por esperar 403 en anon, repetición correcta 401/42501; primer intento de perfil fallido por callback, limpieza y segundo intento aprobado. No se afirma rerun 42/42.
+- Manual: creación/plan Free y datos del dashboard atribuidos al usuario; no garantizan costo futuro cero. Android/TalkBack/escala de texto son evidencia 001 del usuario, no pruebas nuevas de UI 002.
+- Limpiezas Cloud verificadas por IDs exactos, cero fixtures activas. JWT pueden sobrevivir criptográficamente hasta expirar; auditoría de plataforma no purgada. Runtime Edge numérico no observado; GraphQL no contratado y extensión ausente.
+
+### Rúbrica y pendientes del producto
+
+Criterios 1–5: aportes de requisitos, diseño, arquitectura, SDD, unitarias/integración; no calificación académica definitiva. 6: flujos backend reales y Android 001 reutilizado, sin E2E móvil de autenticación 002. 7: UI 001, sin pantallas nuevas. 8–9: índices/planes aportan evidencia parcial, sin validación de escalabilidad global. 10 DNS/CDN, 11 caché, 12 CI/CD y 13 k6 siguen pendientes. 14–16: commit local/documentación no sustituyen publicación final, informe académico y sustentación.
+
+Google y pantallas Auth, reservas/disponibilidad/servicios, pagos manuales, personal/invitaciones, mapas/búsqueda/reseñas, imágenes/Storage y notificaciones quedan futuros. Sin API Node propia ni microservicios. Nueve avisos moderados npm siguen sin remediación ni aceptación formal; historial 9 → 8/3 sin dev → 9 documentado, sin atribuir remediación.
+
+## T040 — cierre formal de 002, 13/11/2026
+
+T039 y T040 completadas, **40/40 tareas**. Cotejo nuevo de 815 archivos iniciales: 804 idénticos, 11 diferencias autorizadas, cero archivos ausentes/diferencias inesperadas. Ascendencia Git conservada. Trazabilidad 20 FR/seis SC y enlaces revisados, sin hallazgos de secretos en candidatos. [Cierre](cierre.md) y [detalle verificable](t040-integridad.json).
+
+Comprobaciones nuevas: SHA-256, ascendencia, casillas/checklist, enlaces, revisión de candidatos y diff. Se reutilizan pruebas ya vinculadas; no se ejecutan instalaciones, SQL/HTTP remoto o baterías completas. Diff global exit 2 exclusivamente por t017-serve.log, excluyéndolo exit 0; ese log no se edita, detiene o incluye en el commit.
+
+Cierre de fundación técnica, no del SaaS ni de toda la rúbrica. Nueve avisos npm y capacidades futuras conservan pendientes; auditoría de dependencias no aprobada. Commit local solicitado sujeto a staging revisado, sin push. No se inicia 003.

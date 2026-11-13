@@ -1,0 +1,161 @@
+{
+  "date": "2026-11-13",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "name": "app-barberia-arquitectura",
+  "region": "sa-east-1",
+  "targetVerified": true,
+  "cliQueryExit": 0,
+  "configDiffExit": 0,
+  "inspection": {
+    "graphqlFunctions": [
+      {
+        "arguments": "\"operationName\" text, query text, variables jsonb, extensions jsonb",
+        "definition": "CREATE OR REPLACE FUNCTION graphql_public.graphql(\"operationName\" text DEFAULT NULL::text, query text DEFAULT NULL::text, variables jsonb DEFAULT NULL::jsonb, extensions jsonb DEFAULT NULL::jsonb)\n RETURNS jsonb\n LANGUAGE plpgsql\nAS $function$\n            DECLARE\n                server_version float;\n            BEGIN\n                server_version = (SELECT (SPLIT_PART((select version()), ' ', 2))::float);\n\n                IF server_version >= 14 THEN\n                    RETURN jsonb_build_object(\n                        'errors', jsonb_build_array(\n                            jsonb_build_object(\n                                'message', 'pg_graphql extension is not enabled.'\n                            )\n                        )\n                    );\n                ELSE\n                    RETURN jsonb_build_object(\n                        'errors', jsonb_build_array(\n                            jsonb_build_object(\n                                'message', 'pg_graphql is only available on projects running Postgres 14 onwards.'\n                            )\n                        )\n                    );\n                END IF;\n            END;\n        $function$\n",
+        "execute": [
+          {
+            "allowed": true,
+            "role": "anon"
+          },
+          {
+            "allowed": true,
+            "role": "authenticated"
+          },
+          {
+            "allowed": true,
+            "role": "service_role"
+          }
+        ],
+        "name": "graphql",
+        "owner": "supabase_admin",
+        "schema": "graphql_public",
+        "securityDefiner": false,
+        "settings": null
+      }
+    ],
+    "graphqlRelations": [],
+    "graphqlSchemas": [
+      {
+        "name": "graphql_public",
+        "owner": "supabase_admin",
+        "rolePrivileges": [
+          {
+            "create": false,
+            "role": "anon",
+            "usage": true
+          },
+          {
+            "create": false,
+            "role": "authenticated",
+            "usage": true
+          },
+          {
+            "create": false,
+            "role": "service_role",
+            "usage": true
+          }
+        ]
+      },
+      {
+        "name": "graphql",
+        "owner": "supabase_admin",
+        "rolePrivileges": [
+          {
+            "create": false,
+            "role": "anon",
+            "usage": true
+          },
+          {
+            "create": false,
+            "role": "authenticated",
+            "usage": true
+          },
+          {
+            "create": false,
+            "role": "service_role",
+            "usage": true
+          }
+        ]
+      }
+    ],
+    "pgGraphqlAvailable": [
+      {
+        "defaultVersion": "1.6.3",
+        "installedVersion": null,
+        "name": "pg_graphql"
+      }
+    ],
+    "pgGraphqlInstalled": [],
+    "profileColumnGrants": [
+      {
+        "column": "id",
+        "select": true,
+        "update": false
+      },
+      {
+        "column": "display_name",
+        "select": true,
+        "update": true
+      },
+      {
+        "column": "phone",
+        "select": true,
+        "update": true
+      }
+    ],
+    "profilePolicy": [
+      {
+        "check": null,
+        "command": "SELECT",
+        "name": "profiles_select_own",
+        "roles": [
+          "authenticated"
+        ],
+        "using": "(id = ( SELECT auth.uid() AS uid))"
+      },
+      {
+        "check": "(id = ( SELECT auth.uid() AS uid))",
+        "command": "UPDATE",
+        "name": "profiles_update_own",
+        "roles": [
+          "authenticated"
+        ],
+        "using": "(id = ( SELECT auth.uid() AS uid))"
+      }
+    ],
+    "transactionReadOnly": "on"
+  },
+  "exposure": {
+    "local": [
+      "public"
+    ],
+    "remote": [
+      "public",
+      "graphql_public"
+    ]
+  },
+  "graphqlAnonymousReadonly": [
+    {
+      "case": "TYPE_QUERY",
+      "status": 200,
+      "errors": [
+        "pg_graphql extension is not enabled."
+      ],
+      "dataPresent": false,
+      "rawHeadersStored": false
+    },
+    {
+      "case": "BUSINESS_QUERY",
+      "status": 200,
+      "errors": [
+        "pg_graphql extension is not enabled."
+      ],
+      "dataPresent": false,
+      "rawHeadersStored": false
+    }
+  ],
+  "configurationChanges": false,
+  "extensionChanges": false,
+  "dataCreated": false,
+  "authenticatedGraphqlTenantTested": false,
+  "credentialsRetained": false
+}

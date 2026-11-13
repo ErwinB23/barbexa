@@ -1,0 +1,47 @@
+{
+  "command": "supabase migration list --remote=vuoncrtkkkquvddunrxx --output-format json",
+  "ref": "vuoncrtkkkquvddunrxx",
+  "exit": 0,
+  "rawOutputRetained": false,
+  "outputShape": {
+    "migrations": {
+      "length": 5,
+      "sample": {
+        "local": "string",
+        "remote": "string",
+        "time": "string"
+      }
+    },
+    "message": "string",
+    "target": {
+      "kind": "string",
+      "project_ref": "string",
+      "project_name": "string",
+      "environment": "string"
+    }
+  },
+  "temporaryRoleSetupMessageObserved": true,
+  "error": null,
+  "migrations": [
+    {
+      "local": "20261112031854",
+      "remote": ""
+    },
+    {
+      "local": "20261113035717",
+      "remote": ""
+    },
+    {
+      "local": "20261113045240",
+      "remote": ""
+    },
+    {
+      "local": "20261113050232",
+      "remote": ""
+    },
+    {
+      "local": "20261113053907",
+      "remote": ""
+    }
+  ]
+}
