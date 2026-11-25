@@ -1,0 +1,13 @@
+{
+  "branch": "main",
+  "head": "0ccd33c",
+  "reviewedFiles": 66,
+  "secretFindings": [],
+  "invalidLocalLinks": [],
+  "completed": 15,
+  "total": 34,
+  "diffCheckGlobal": 2,
+  "diffCheckExcludingOnlyActiveLog": 0,
+  "stagedFiles": [],
+  "extensionHooksPresent": false
+}

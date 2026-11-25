@@ -1,0 +1,57 @@
+{
+  "project": "app-barberia-002-local",
+  "observed": [
+    {
+      "case": "slots",
+      "available": true
+    },
+    {
+      "case": "confirm",
+      "initialHTTP": 201,
+      "replayedHTTP": 200,
+      "oneReservation": true
+    },
+    {
+      "case": "duplicate",
+      "statuses": [
+        200,
+        201
+      ],
+      "oneReservation": true
+    },
+    {
+      "case": "lost-response",
+      "actualRequestCommitted": true,
+      "replayed": true,
+      "oneReservation": true
+    },
+    {
+      "case": "own-detail",
+      "persisted": true,
+      "foreignRows": 0,
+      "adminOwnProjectionDoesNotBecomeAgenda": true
+    },
+    {
+      "case": "forged-and-direct",
+      "fieldsDenied": 7,
+      "foreignServiceHTTP": 400,
+      "directRPC": 403
+    },
+    {
+      "case": "identity-origin",
+      "anonymousHTTP": 401,
+      "invalidHTTP": 401,
+      "originHTTP": 403,
+      "cancelNotImplementedHTTP": 400
+    },
+    {
+      "case": "conflict",
+      "occupationHTTP": 409,
+      "uniformMessage": true,
+      "noPrivateReservationId": true,
+      "fingerprintHTTP": 409
+    }
+  ],
+  "manualWebAndroid": false,
+  "dataHeldForManual": true
+}

@@ -1,0 +1,3 @@
+Index Scan using reservations_client_user_id_barbershop_id_request_id_key on reservations
+  Index Cond: (client_user_id = '[OWNED_ID]'::uuid)
+  Filter: (starts_at >= now())

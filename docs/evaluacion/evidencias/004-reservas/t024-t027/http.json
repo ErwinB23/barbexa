@@ -1,0 +1,51 @@
+{
+  "project": "app-barberia-002-local",
+  "checks": [
+    "local-cancel-handler-active",
+    "inclusive120-outside-and-configured-cutoff",
+    "historical120-rejects-client-despite-current-policy",
+    "foreign-staff-cannot-cancel",
+    "staff-requires-reason",
+    "authorized-staff-cancels-with-reason",
+    "repetition-safe",
+    "first-audit-preserved",
+    "rollback-keeps-manual-booking-confirmed",
+    "two-http-connections-cancel-confirm-safe",
+    "cancelled-no-longer-occupies",
+    "current-T019-records-identical",
+    "fixture-limit-and-manual-preservation"
+  ],
+  "fixtures": [
+    {
+      "id": "4311d883-cd7d-4101-b702-588ff9efeb25",
+      "purpose": "snapshot120",
+      "manual": false,
+      "state": "cancelled"
+    },
+    {
+      "id": "a765a956-b913-47c9-a538-2adff7451a09",
+      "purpose": "race-original",
+      "manual": false,
+      "state": "cancelled"
+    },
+    {
+      "id": "24364b77-64f8-4b48-8a7d-c5a49a679512",
+      "purpose": "manual-Web",
+      "manual": true,
+      "state": "confirmed"
+    },
+    {
+      "id": "d22e270a-c562-4bb7-a03c-d6c0b8980a05",
+      "purpose": "manual-Android",
+      "manual": true,
+      "state": "confirmed"
+    },
+    {
+      "id": "b74f7e2e-8c7c-48ee-945c-91d57c2ab7d1",
+      "purpose": "race-replacement",
+      "manual": false,
+      "state": "confirmed"
+    }
+  ],
+  "preservedForManual": true
+}

@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-14",
+  "target": "app-barberia-002-local:54421",
+  "surface": "public API",
+  "cases": [
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "http://localhost:8081",
+      "auth": "none",
+      "status": 204,
+      "expected": 204,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": null,
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "http://unapproved.invalid",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "anon",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHENTICATED",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "POST",
+      "origin": "http://unapproved.invalid",
+      "auth": "anon",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "FORBIDDEN",
+      "passed": false
+    },
+    {
+      "function": "ensure-profile",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "none",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "invalid",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHORIZED_INVALID_JWT_FORMAT",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "http://localhost:80810",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "http://127.0.0.1:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "https://localhost:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "method": "OPTIONS",
+      "origin": "http://localhost.evil:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "http://localhost:8081",
+      "auth": "none",
+      "status": 204,
+      "expected": 204,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": null,
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "http://unapproved.invalid",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "anon",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHENTICATED",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "POST",
+      "origin": "http://unapproved.invalid",
+      "auth": "anon",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "FORBIDDEN",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "none",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "auth": "invalid",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "http://localhost:8081",
+      "errorCode": "UNAUTHORIZED_INVALID_JWT_FORMAT",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "http://localhost:80810",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "http://127.0.0.1:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "https://localhost:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "method": "OPTIONS",
+      "origin": "http://localhost.evil:8081",
+      "auth": "none",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "errorCode": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "name": "auth-health",
+      "status": 200,
+      "expected": 200,
+      "allowOrigin": "*",
+      "passed": true
+    },
+    {
+      "name": "rest-denied",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "*",
+      "passed": true
+    }
+  ],
+  "passed": 20,
+  "total": 22,
+  "privilegedCredentialsUsed": false,
+  "usersCreated": 0
+}

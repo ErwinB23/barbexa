@@ -1,0 +1,252 @@
+{
+  "stage": "B5.2 implementation gaps",
+  "status": "rename-implemented-closure-blocked-contract",
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "rename": {
+    "implemented": true,
+    "existingUseCase": "002 renameBarbershop reused",
+    "port": "ShopNameGateway",
+    "application": "getSelectedShop/renameSelectedShop scoped to current administrator tenant",
+    "transport": "Existing authenticated foundation GET/PATCH, never create-barbershop when editing",
+    "sameIdRequired": true,
+    "independentCreateMode": "/barbershop-admin?view=create",
+    "editMode": "/barbershop-admin",
+    "catalogInvalidated": true,
+    "visibleContextRefreshedUsingExistingReadAction": true,
+    "duplicateSubmissionsBlocked": true,
+    "lateResponsesDiscarded": true,
+    "uncertainResultRequiresReadBeforeWrite": true,
+    "realLocalRenameExecuted": false,
+    "androidInterfaceChanged": false
+  },
+  "closure": {
+    "implemented": false,
+    "reason": "User explicitly required stopping this part when essential withdrawal contract rules are undefined.",
+    "existing": "FR007/general schedule management and set-exception insertion.009 personal remove is not administrative withdrawal.",
+    "definedAuthorization": "Owner/secondary operational editHours only; no new permissions",
+    "decisionsRequired": [
+      "physical deletion versus historical annulment, including past closures",
+      "persistent audit fields and reason requirement",
+      "command idempotency identity and replay/missing/foreign/already-withdrawn response"
+    ],
+    "proposedEndpointNotExisting": true,
+    "migrationsPrepared": [],
+    "sqlOrEdgeChanged": false,
+    "disposableSqlTestsExecuted": false,
+    "disposableTestsReason": "No approved executable withdrawal contract or SQL prepared yet; not an infrastructure failure."
+  },
+  "tests": {
+    "red": {
+      "passed": 6,
+      "failed": 6,
+      "newCasesFailedBeforeImplementation": true
+    },
+    "final": {
+      "command": "node --test tests/integration/authentication/composition.test.mjs tests/integration/booking/shop-name.test.mjs tests/integration/booking/operation-client.test.mjs tests/integration/booking/operation-http.test.mjs tests/integration/booking/catalog-cache.test.mjs tests/presentation/booking/operation.test.mjs tests/presentation/booking/shop-name-editor.test.mjs tests/presentation/booking/team-authority.test.mjs",
+      "passed": 46,
+      "failed": 0,
+      "network": "local doubles only; no real registration/email/OAuth/business commands"
+    },
+    "quality": {
+      "typecheck": "passed",
+      "lint": "passed",
+      "formatCheck": "passed",
+      "architectureCheck": "passed, modules199/core50/edges649",
+      "testFileFormatting": "passed",
+      "diffWhitespaceCheck": "passed for tracked touched paths; source patches reviewed separately"
+    },
+    "browserReadOnly": {
+      "status": "passed",
+      "startedAt": "2026-11-21T03:49:52.042Z",
+      "errors": [],
+      "http": [
+        {
+          "actor": "owner",
+          "operation": "close-own-readonly-session",
+          "status": 204
+        }
+      ],
+      "forms": [
+        {
+          "route": "/barbershop-admin",
+          "fields": [
+            {
+              "id": "selected-shop-name",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "contact",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "address",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "minimumNoticeMin",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "bookingHorizonDays",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "maxFuturePerClient",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "slotStepMin",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "bufferMin",
+              "type": "text",
+              "disabled": false
+            },
+            {
+              "id": "cancellationAdvanceMin",
+              "type": "text",
+              "disabled": false
+            }
+          ],
+          "expectedButtonsPresentAndEnabled": [
+            "Guardar nombre de esta barbería",
+            "Consultar nombre actual"
+          ],
+          "currentNamePrefilledAndMatchesDatabase": true,
+          "creationFieldAbsent": true
+        },
+        {
+          "route": "/barbershop-admin?view=create",
+          "fields": [
+            {
+              "id": "shop-name",
+              "type": "text",
+              "disabled": false
+            }
+          ],
+          "expectedButtonsPresentAndEnabled": [
+            "Crear barbería y ser su administrador"
+          ],
+          "renameFieldAbsent": true
+        }
+      ],
+      "businessWrites": 0,
+      "authority": {
+        "capacity": "owner",
+        "permissions": {
+          "refund": true,
+          "publish": true,
+          "editHours": true,
+          "manageTeam": true,
+          "editServices": true,
+          "confirmPayment": true,
+          "transferOwnership": true,
+          "manageReservations": true,
+          "manageAdministrators": true
+        }
+      },
+      "finalCounts": {
+        "care": 28,
+        "items": 44,
+        "shops": 8,
+        "users": 14,
+        "profiles": 13,
+        "careEvents": 67,
+        "invitations": 8,
+        "memberships": 14,
+        "reservations": 41,
+        "invitationMail": 5,
+        "reservationEvents": 54
+      },
+      "businessFingerprintsUnchanged": true,
+      "remainingOwnSessions": 0
+    }
+  },
+  "integrity": {
+    "status": "passed",
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "allBusinessFingerprintsUnchanged": true,
+    "schemaHistoryAndEnvironmentUnchanged": true,
+    "authUsersOperationalTimestampChangesExcluded": true,
+    "dbHealthy": true,
+    "project": "app-barberia-002-local",
+    "databasePort": 54422
+  },
+  "actualEffects": {
+    "businessWrites": 0,
+    "executedPlannedCommands": 0,
+    "newShops": 0,
+    "newServices": 0,
+    "newProfessionalProfiles": 0,
+    "newMemberships": 0,
+    "newReservations": 0,
+    "closureRemovals": 0,
+    "yapeConfigurationChanges": 0,
+    "emails": 0,
+    "sqlDdl": 0,
+    "newAuthAccounts": 0,
+    "necessaryReadOnlySessionClosed": 1,
+    "ownSessionsRemaining": 0,
+    "serviceOperations": 0,
+    "cloudUsed": false
+  },
+  "modifiedCodeAndTestFiles": [
+    "src/features/barbershop-operation/application/operation-application.ts",
+    "src/features/barbershop-operation/presentation/operation-screen.tsx",
+    "src/features/barbershop-operation/presentation/shop-name-editor.web.tsx",
+    "src/composition/shop-name-gateway.ts",
+    "src/composition/auth-composition.ts",
+    "src/composition/barbershop-operation-composition.ts",
+    "src/composition/operation-route.web.tsx",
+    "scripts/run-client-checks.mjs",
+    "tests/integration/booking/shop-name.test.mjs",
+    "tests/presentation/booking/operation.test.mjs",
+    "tests/presentation/booking/shop-name-editor.test.mjs"
+  ],
+  "modifiedDocumentation": [
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "specs/004-mvp-reservas/contracts/booking.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "docs/evaluacion/evidencias/004-reservas/b52-implementacion.json"
+  ],
+  "planReadiness": {
+    "totalFutureBusinessCommands": 22,
+    "nowImplementedTransportCommands": 21,
+    "stillMissingWithdrawalCommands": 1,
+    "realExecutionAuthorized": false,
+    "readyForWholeJourney": false,
+    "next": "Approve missing withdrawal contract decisions; implement/test that part before a separate migration/application and business journey authorization."
+  },
+  "matrixAfter": {
+    "VERIFICADA": 34,
+    "IMPLEMENTADA SIN VALIDACIÓN INTEGRAL": 5,
+    "NO APLICA": 4,
+    "BLOQUEADA": 3,
+    "PARCIAL": 2
+  },
+  "wholeB5Closed": false,
+  "administrativeSmtpAndOwnershipTransfer": "separate unresolved requirements"
+}

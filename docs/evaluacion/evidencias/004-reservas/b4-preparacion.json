@@ -1,0 +1,292 @@
+{
+  "block": "B4",
+  "status": "prepared-readonly-no-business-writes",
+  "checkedAt": "2026-11-20T22:27:08.002Z",
+  "environment": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "databasePort": 54422,
+    "postgres": "17.11",
+    "readOnlyTransactions": true
+  },
+  "baseline": {
+    "care": 27,
+    "items": 43,
+    "shops": 8,
+    "users": 14,
+    "profiles": 13,
+    "careEvents": 65,
+    "invitations": 7,
+    "memberships": 13,
+    "reservations": 40,
+    "invitationMail": 5,
+    "reservationEvents": 53
+  },
+  "inventory": {
+    "blocks": 0,
+    "assignments": 1,
+    "professional": {
+      "id": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+      "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+      "user": "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "active": true
+    },
+    "summaryToday": {
+      "date": "2026-11-20",
+      "total": 2,
+      "cancelled": 1,
+      "completed": 1
+    },
+    "futureConfirmed": 0,
+    "weeklyIntervals": 7,
+    "invitationCounts": [
+      {
+        "n": 2,
+        "role": "administrator",
+        "status": "accepted"
+      },
+      {
+        "n": 1,
+        "role": "barber",
+        "status": "accepted"
+      },
+      {
+        "n": 2,
+        "role": "administrator",
+        "status": "cancelled"
+      },
+      {
+        "n": 1,
+        "role": "barber",
+        "status": "cancelled"
+      },
+      {
+        "n": 1,
+        "role": "administrator",
+        "status": "rejected"
+      }
+    ],
+    "ownProfileFields": [
+      {
+        "id": "8ff39bfd-5242-4058-8875-b2d378500d91",
+        "hasPhone": false,
+        "namePresent": true
+      },
+      {
+        "id": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "hasPhone": false,
+        "namePresent": true
+      }
+    ],
+    "workerMemberships": [
+      {
+        "role": "barber",
+        "shop": "dda8ee93-750b-4f53-949b-9f205eff6cb4",
+        "status": "active"
+      },
+      {
+        "role": "barber",
+        "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "status": "active"
+      }
+    ],
+    "testInviteCandidate": {
+      "id": "1727ac35-2672-42dc-b5b1-6b0482fdc72f",
+      "confirmed": true,
+      "hasProfile": true,
+      "hasPassword": true,
+      "currentShopMemberships": 0,
+      "pendingShopInvitations": 0
+    },
+    "availableCredentialIds": [
+      "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "1727ac35-2672-42dc-b5b1-6b0482fdc72f",
+      "aecfc300-c0ca-4005-bbda-d59c7ac2df69"
+    ]
+  },
+  "chrome": {
+    "realChrome": true,
+    "realLocalGoTrueSessionsForReadsOnly": true,
+    "checks": [
+      {
+        "id": "profile-editor-readonly",
+        "fields": [
+          "displayName",
+          "phone"
+        ],
+        "saveNotClicked": true
+      },
+      {
+        "id": "profile-close-without-save",
+        "passed": true
+      },
+      {
+        "id": "client-team-denied-loading-resolved",
+        "loading": false,
+        "invite": false,
+        "ownerControls": false,
+        "home": true
+      },
+      {
+        "id": "client-incoming-only",
+        "noOutgoingEditor": true
+      },
+      {
+        "id": "self-professional-editor-connected",
+        "hasSave": true,
+        "noAdministrativeInvitationControls": true
+      },
+      {
+        "id": "own-summary-real-local",
+        "date": "2026-11-20",
+        "total": 2,
+        "completed": 1,
+        "cancelled": 1,
+        "noFinancialFields": true
+      },
+      {
+        "id": "own-summary-empty-date",
+        "passed": true
+      },
+      {
+        "id": "self-schedule-read-and-form",
+        "intervals": 7,
+        "blocks": 0,
+        "version": 5,
+        "hasSaveControl": true
+      }
+    ],
+    "http": [
+      {
+        "actor": "worker",
+        "operation": "get-own-professional",
+        "status": 200
+      },
+      {
+        "actor": "worker",
+        "operation": "own-professional-summary",
+        "status": 200
+      },
+      {
+        "actor": "worker",
+        "operation": "get-own-schedule",
+        "status": 200
+      },
+      {
+        "actor": "client",
+        "operation": "close-own-readonly-session",
+        "status": 204
+      },
+      {
+        "actor": "worker",
+        "operation": "close-own-readonly-session",
+        "status": 204
+      }
+    ],
+    "errors": [],
+    "productAuthenticationNotRetested": true,
+    "businessWriteGate": "denies every business mutation"
+  },
+  "verification": {
+    "checkedAt": "2026-11-20T22:27:08.002Z",
+    "allBusinessRowsUnchanged": true,
+    "all40ReservationsAnd43ItemsAndPaymentCareUnchanged": true,
+    "ownersMembershipsProfilesProfessionalsUnchanged": true,
+    "schemaHistoryAndEnvironmentUnchanged": true,
+    "counts": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 53
+    },
+    "readonlyChromeChecks": 8,
+    "businessWrites": 0,
+    "ownSessionsClosed": [
+      {
+        "actor": "client",
+        "operation": "close-own-readonly-session",
+        "status": 204
+      },
+      {
+        "actor": "worker",
+        "operation": "close-own-readonly-session",
+        "status": 204
+      }
+    ],
+    "authUserSigninMetadataMayChange": true
+  },
+  "reusedEvidence": [
+    "specs/006-perfil-personal/tasks.md",
+    "specs/008-autogestion-profesional/tasks.md",
+    "specs/009-horarios-profesionales/tasks.md",
+    "specs/011-equipo-resumen-profesional/tasks.md",
+    "specs/011-equipo-resumen-profesional/contracts/team-authority-2e3-removal-result.json",
+    "specs/011-equipo-resumen-profesional/contracts/team-authority-2e-result.json"
+  ],
+  "findings": {
+    "newProductDefectDemonstrated": false,
+    "existingModulesNeedRewrite": false,
+    "implementedButWebWritesPending": [
+      "006 own profile save/restore",
+      "008 own professional name save/restore",
+      "009 own weekly schedule/block create-edit-remove",
+      "004 internal barber invitation/acceptance",
+      "004 principal professional create/activate/capability management"
+    ],
+    "newReadonlyWebAccreditation": [
+      "Client team guard finishes with access denied rather than perpetual loading",
+      "Professional nonfinancial summary correct 2/1/1 and empty state"
+    ],
+    "u5SpecificVisualAcceptanceNotClaimed": true,
+    "rosterFunctionalEvidenceReusedFromU3": true
+  },
+  "proposedWrites": {
+    "authorized": false,
+    "executed": 0,
+    "plan": "docs/PLAN-FINALIZACION-WEB.md B4 P1-P4/E1-E2",
+    "personalProfilePatch": 2,
+    "ownProfessionalUpdate": 2,
+    "ownScheduleSet": 2,
+    "ownBlockUpsert": 2,
+    "ownBlockRemove": 1,
+    "internalBarberInvite": 1,
+    "barberAccept": 1,
+    "newProfessionalCreate": 1,
+    "newProfessionalActiveChanges": 2,
+    "newProfessionalCapabilitiesSet": 1,
+    "totalBusinessCommands": 15,
+    "newAccounts": 0,
+    "newReservations": 0,
+    "newEmails": 0,
+    "newTeamRecordsToRetain": {
+      "acceptedInvitation": 1,
+      "barberMembership": 1,
+      "professionalProfile": 1,
+      "capability": 1
+    },
+    "restoration": "P1/P2 original field values; P3 original weekly intervals; P4 delete only its newly created block. Preserve legitimate versions/timestamps/audits; interval IDs may change.",
+    "protectedReservations": 40,
+    "protectedItems": 43
+  },
+  "separatePending": [
+    "Administrative SMTP delivery unknown remains unverified; do not resend",
+    "Ownership transfer final acceptance remains blocked by business decisions",
+    "User visual acceptance and Android/joint task gates remain separate",
+    "Specific U5 visual roster not repeated; functional existing U3 evidence reused",
+    "Residual offer CRUD/admin local hours keep their original matrix status; not closed by self-schedule tests",
+    "Manual Yape receipt Web explicitly reserved for B5; not tested now",
+    "Old U3 session from first B3 capture failure remains external pending without token"
+  ],
+  "productionFilesChanged": false,
+  "servicesOperated": false,
+  "cloudAccessed": false,
+  "noB5": true
+}

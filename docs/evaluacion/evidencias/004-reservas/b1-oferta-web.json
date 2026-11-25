@@ -1,0 +1,365 @@
+{
+  "block": "B1 oferta Web",
+  "status": "passed",
+  "target": "app-barberia-002-local",
+  "shopId": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+  "ownerId": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+  "serviceId": "0805ab4a-c879-4054-a2d9-1de5af150407",
+  "verification": "Real Chrome UI + GoTrue LOCAL JWT + client catalog RPC + PostgreSQL reads; no service-role actor",
+  "preconditions": {
+    "ownerVerified": true,
+    "publication": "published",
+    "originalDescriptionPreserved": true,
+    "descriptionWasEmpty": true,
+    "originalServiceNonFinancialAndFinancialFieldsRead": true,
+    "protectedBaselineCaptured": true
+  },
+  "writes": [
+    {
+      "index": 0,
+      "action": "upsert-service"
+    },
+    {
+      "index": 1,
+      "action": "upsert-service"
+    },
+    {
+      "index": 2,
+      "action": "set-publication"
+    },
+    {
+      "index": 3,
+      "action": "set-publication"
+    }
+  ],
+  "confirmedSteps": [
+    "description-http-sql-confirmed",
+    "description-restored-http-sql",
+    "paused-http-sql-confirmed",
+    "published-http-sql-confirmed"
+  ],
+  "http": [
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "owner-verified",
+      "status": 200,
+      "capacity": "owner",
+      "secondaryCount": 0
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "owner-write0",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "owner-write1",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "owner-write2",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_booking_slots",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "owner-write3",
+      "status": 200
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "status": 200
+    },
+    {
+      "name": "list_barbershop_memberships",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_booking_slots",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "close-own-test-session-owner",
+      "status": 204
+    }
+  ],
+  "clientViews": [
+    "temporary-description-visible-in-client-detail",
+    "original-description-visible-in-client-detail",
+    "paused-still-explorable-reserve-disabled",
+    "published-reserve-enabled-slots-available"
+  ],
+  "slots": [
+    {
+      "state": "paused",
+      "date": "2026-11-21",
+      "count": 0
+    },
+    {
+      "state": "published",
+      "date": "2026-11-21",
+      "count": 96
+    }
+  ],
+  "restoration": {
+    "publication": "published",
+    "versionBefore": 1,
+    "versionAfter": 5,
+    "versionDelta": 4,
+    "serviceRestoredExactly": true,
+    "allProtectedFingerprintsUnchanged": true,
+    "otherSettingsAndShopsUnchanged": true,
+    "counts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "noBusinessAuditRowsChanged": true
+  },
+  "regressions": {
+    "responseCaptureTestsWithLocalDoubles": 11,
+    "passed": 11,
+    "operatorUnboundReferences": 0,
+    "applicationFixNeeded": false,
+    "applicationCodeChanged": false
+  },
+  "limits": {
+    "previousB1ExplorationEvidenceReused": ".artifacts/b1-readonly/final-verification.json",
+    "consumerViewsUseSameLegitimateU3Identity": true,
+    "realtimePushAcrossExistingClientTabsNotTested": true,
+    "noBookingCreated": true,
+    "noPaymentCreated": true,
+    "noAuthModuleRetest": true,
+    "noAdministrative2E3Replay": true,
+    "cloudOrAndroidChanged": false,
+    "sqlRlsOrEdgeChanged": false,
+    "servicesRestarted": false
+  },
+  "audit": {
+    "offerVersionBefore": 1,
+    "offerVersionAfter": 5,
+    "versionSequence": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "businessAuditRowsUnchanged": true,
+    "explanation": "Existing configure/publication/service commands increment booking settings version once per write; no dedicated service/publication audit event is created by this contract. Existing audit/event rows were preserved. Normal authentication audit effects only."
+  },
+  "closure": {
+    "B1AgreedWebScopeComplete": true,
+    "whole004OrAndroidClosed": false,
+    "B2Started": false,
+    "descriptionAndPublishedStateRestored": true
+  },
+  "errors": [],
+  "privateEvidence": ".artifacts/b1-offer-edit/run/{before.json,after.json,result.json}"
+}

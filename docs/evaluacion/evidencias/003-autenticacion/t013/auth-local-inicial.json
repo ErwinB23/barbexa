@@ -1,0 +1,38 @@
+{
+  "executedBy": "Codex",
+  "date": "2026-11-14",
+  "results": [
+    {
+      "path": "/auth/v1/user",
+      "status": 401,
+      "expectedDenied": true
+    },
+    {
+      "path": "/rest/v1/",
+      "status": 200,
+      "expectedDenied": false
+    },
+    {
+      "origin": "http://localhost:8081",
+      "method": "OPTIONS",
+      "status": 204,
+      "allowOrigin": "http://localhost:8081"
+    },
+    {
+      "origin": "http://unapproved.invalid",
+      "method": "OPTIONS",
+      "status": 403,
+      "allowOrigin": null
+    },
+    {
+      "mailpitLanStatus": 200
+    },
+    {
+      "confirmationPublicOrigin": "http://192.168.0.33:54421",
+      "apiExternalUrl": "http://192.168.0.33:54421/auth/v1",
+      "siteUrl": "http://localhost:8081",
+      "confirmationRequired": true,
+      "redirectsUnchanged": true
+    }
+  ]
+}

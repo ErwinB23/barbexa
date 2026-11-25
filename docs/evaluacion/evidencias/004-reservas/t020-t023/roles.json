@@ -1,0 +1,16 @@
+{
+  "project": "app-barberia-002-local",
+  "checks": [
+    "admin-A-retains-own-agenda",
+    "same-JWT-barber-B-only-assigned",
+    "admin-A-does-not-become-admin-B",
+    "same-JWT-role-downgrade-sees-assigned",
+    "barber-foreign-professional-denied",
+    "same-JWT-inactive-denied-immediately",
+    "baseline-counts-and-profiles-unchanged",
+    "protected-records-unchanged",
+    "original-administrator-restored"
+  ],
+  "restored": true,
+  "residue": 0
+}

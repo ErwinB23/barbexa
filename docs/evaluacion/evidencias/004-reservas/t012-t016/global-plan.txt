@@ -1,0 +1,2 @@
+Index Scan using reservations_barber_user_id_occupied_excl on reservations
+  Index Cond: ((barber_user_id = '00000000-0000-4000-8000-000000000001'::uuid) AND (occupied && '["2026-12-01 15:00:00+00","2026-12-01 15:30:00+00")'::tstzrange))

@@ -1,0 +1,166 @@
+{
+  "block": "B2",
+  "status": "prepared_not_executed",
+  "target": "app-barberia-002-local API127.0.0.1:54421 PostgreSQL54422",
+  "readOnlyState": {
+    "care": {
+      "tolerance": 10,
+      "yapeConfigured": true
+    },
+    "actors": [
+      {
+        "id": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "profile": 1,
+        "confirmed": true,
+        "notBanned": true,
+        "hasPassword": true,
+        "memberships": []
+      },
+      {
+        "id": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "profile": 1,
+        "confirmed": true,
+        "notBanned": true,
+        "hasPassword": true,
+        "memberships": [
+          {
+            "role": "administrator",
+            "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+            "status": "active"
+          }
+        ]
+      },
+      {
+        "id": "8ff39bfd-5242-4058-8875-b2d378500d91",
+        "profile": 1,
+        "confirmed": true,
+        "notBanned": true,
+        "hasPassword": true,
+        "memberships": [
+          {
+            "role": "barber",
+            "shop": "dda8ee93-750b-4f53-949b-9f205eff6cb4",
+            "status": "active"
+          },
+          {
+            "role": "barber",
+            "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+            "status": "active"
+          }
+        ]
+      }
+    ],
+    "service": {
+      "id": "0805ab4a-c879-4054-a2d9-1de5af150407",
+      "price": 25,
+      "active": true,
+      "minutes": 15
+    },
+    "settings": {
+      "step": 15,
+      "buffer": 0,
+      "notice": 0,
+      "version": 5,
+      "maxFuture": 30,
+      "horizonDays": 30,
+      "publication": "published"
+    },
+    "serverUtc": "2026-11-20T20:04:20.962771+00:00",
+    "serverLima": "2026-11-20 15:04:20",
+    "professional": {
+      "id": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+      "role": "barber",
+      "user": "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "active": true,
+      "membership": "active",
+      "ownIntervals": 7,
+      "shopIntervals": 7,
+      "assignedServices": 1
+    },
+    "candidateEndUtc": "2026-11-20T20:30:00+00:00",
+    "candidateStartUtc": "2026-11-20T20:15:00+00:00",
+    "candidateStartLima": "2026-11-20 15:15",
+    "clientFutureBookings": 0,
+    "conflictsAcrossShops": 0
+  },
+  "readOnlyPreservation": true,
+  "existingCredentialsPresentForIdentifiedTestActors": true,
+  "noCredentialsUsedOrExposed": true,
+  "presentationFinding": {
+    "environment": "local presentation double, no HTTP",
+    "paymentSelected": false,
+    "buttonDisabled": false,
+    "confirmCalls": 0
+  },
+  "proposal": {
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+    "service": "0805ab4a-c879-4054-a2d9-1de5af150407",
+    "payment": "cash, simulated manual receipt only",
+    "amountMinor": 2500,
+    "durationMin": 15,
+    "startUtcCandidate": "2026-11-20T20:15:00+00:00",
+    "startLimaCandidate": "2026-11-20 15:15",
+    "timeNotReserved": true,
+    "timeMustBeRevalidatedAtExecution": true,
+    "timeRule": "next 15-minute grid start at least 5 minutes after server time; wait for server start before attention; do not use a past candidate",
+    "businessHttpCommands": [
+      "confirm",
+      "care/receive",
+      "care/start",
+      "care/complete"
+    ],
+    "expectedHttp": [
+      201,
+      200,
+      200,
+      200
+    ],
+    "newRows": {
+      "public.reservations": 1,
+      "public.reservation_items": 1,
+      "public.reservation_events": 1,
+      "private.booking_care": 1,
+      "private.care_events": 4
+    },
+    "updates": {
+      "private.booking_care": 3
+    },
+    "endState": {
+      "reservation": "confirmed",
+      "attendance": "completed",
+      "payment": "paid",
+      "method": "cash"
+    },
+    "retention": "retain new synthetic reservation and audit; preserve all37originals; no cleanup authorized",
+    "expectedFinalCounts": {
+      "reservations": 38,
+      "items": 41,
+      "care": 25,
+      "careEvents": 61,
+      "reservationEvents": 49
+    },
+    "sessionsForFutureRun": [
+      "existing client normal GoTrue session",
+      "existing assigned worker normal GoTrue session",
+      "U3 read-only administrative agenda/filter verification if required"
+    ]
+  },
+  "notPerformed": {
+    "sessions": true,
+    "reservations": true,
+    "payments": true,
+    "attention": true,
+    "codeChanges": true,
+    "cloud": true
+  },
+  "remainingAuthorization": [
+    "one new synthetic reservation and its ledger/items/events in LOCAL",
+    "three state transitions only on that new reservation: receive/start/complete",
+    "normal LOCAL actor sessions and safe read verification",
+    "minimal booking confirmation UI fix plus directed regressions; no redesign",
+    "no B3, no original reservation mutations, no migrations/configuration/services changes"
+  ]
+}

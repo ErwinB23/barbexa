@@ -1,0 +1,21 @@
+{
+  "origin": "http://127.0.0.1:8081",
+  "result": [
+    {
+      "platform": "web",
+      "http": 200,
+      "bytes": 5392449,
+      "completeGraphRequested": true,
+      "apkBuilt": false,
+      "runtimeDeviceTest": false
+    },
+    {
+      "platform": "android",
+      "http": 200,
+      "bytes": 7030332,
+      "completeGraphRequested": true,
+      "apkBuilt": false,
+      "runtimeDeviceTest": false
+    }
+  ]
+}

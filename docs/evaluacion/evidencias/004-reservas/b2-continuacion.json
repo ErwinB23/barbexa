@@ -1,0 +1,336 @@
+{
+  "block": "B2 continuation",
+  "status": "passed",
+  "checkedAt": "2026-11-20T20:30:44.432Z",
+  "reservationId": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+  "target": {
+    "project": "app-barberia-002-local",
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91"
+  },
+  "diagnosis": {
+    "reproducedInChrome": true,
+    "exceptionClass": "SyntaxError",
+    "path": "/context",
+    "documentReady": "complete",
+    "documentBodyPresent": true,
+    "cause": "Verifier context predicate emitted a literal newline inside a single-quoted split argument, producing invalid JavaScript",
+    "sourceOnlyVerifier": true,
+    "notAuthEdgePostgresOrApplicationDefect": true
+  },
+  "correction": {
+    "file": ".artifacts/b2-run/continue.mjs",
+    "change": "Escape newline in generated Chrome context predicate; wait for selected context when selecting membership",
+    "regressionFile": ".artifacts/b2-run/context-expression.test.mjs",
+    "actualPredicateRegressions": 2,
+    "bothFailedWithSyntaxErrorBeforeFix": true,
+    "bothPassedAfterFix": true,
+    "existingContextVerifierRegressions": 4,
+    "totalPassed": 6,
+    "unboundReferences": 0,
+    "applicationOrServerChanged": false,
+    "noRepeatOf28PriorTests": true
+  },
+  "initial": {
+    "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+    "end": "2026-11-20T20:45:00+00:00",
+    "care": {
+      "method": "cash",
+      "payment": "pending",
+      "attendance": "confirmed",
+      "amountMinor": 2500
+    },
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "start": "2026-11-20T20:30:00+00:00",
+    "state": "confirmed",
+    "amount": 25,
+    "barber": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "events": [
+      {
+        "kind": "created",
+        "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "capacity": "client"
+      }
+    ],
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "minutes": 15,
+    "itemCount": 1
+  },
+  "eligibility": {
+    "server": {
+      "day": "2026-11-20",
+      "now": "2026-11-20T20:27:24.69838+00:00"
+    },
+    "start": "2026-11-20T20:30:00+00:00",
+    "end": "2026-11-20T20:45:00+00:00",
+    "rule": "start>=starts_at; no upper lateness bound; complete requires in-service",
+    "professional": {
+      "role": "barber",
+      "active": true,
+      "assigned": true,
+      "membership": "active",
+      "serviceActive": true
+    }
+  },
+  "serverAtStart": "2026-11-20T20:30:00.240955+00:00",
+  "realExecution": {
+    "steps": [
+      "receive-http200-sql",
+      "start-http200-sql",
+      "complete-http200-sql"
+    ],
+    "http": [
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "verified-Barbero",
+        "status": 200,
+        "capacity": "barber",
+        "secondaryCount": null
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "worker-receive",
+        "status": 200
+      },
+      {
+        "name": "worker-start",
+        "status": 200
+      },
+      {
+        "name": "worker-complete",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "verified-Administrador",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 0
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "list_booking_agenda",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "list_booking_barbershops",
+        "status": 200
+      },
+      {
+        "name": "close-own-test-session-worker",
+        "status": 204
+      },
+      {
+        "name": "close-own-test-session-owner",
+        "status": 204
+      },
+      {
+        "name": "close-own-test-session-client",
+        "status": 204
+      }
+    ],
+    "web": [
+      "assigned-worker-agenda-and-permissions",
+      "admin-completed-paid-filter-includes-new-booking",
+      "admin-pending-payment-filter-excludes-paid-booking",
+      "admin-all-filters-restores-booking",
+      "client-final-completed-paid-visible"
+    ],
+    "permissions": {
+      "worker": {
+        "attend": true,
+        "refund": false,
+        "receive": true
+      }
+    },
+    "transitions": [
+      {
+        "command": "receive",
+        "state": {
+          "method": "cash",
+          "payment": "paid",
+          "attendance": "confirmed",
+          "amountMinor": 2500
+        },
+        "http": 200,
+        "server": "2026-11-20T20:27:36.687307+00:00"
+      },
+      {
+        "command": "start",
+        "state": {
+          "method": "cash",
+          "payment": "paid",
+          "attendance": "in-service",
+          "amountMinor": 2500
+        },
+        "http": 200,
+        "server": "2026-11-20T20:30:00.726921+00:00"
+      },
+      {
+        "command": "complete",
+        "state": {
+          "method": "cash",
+          "payment": "paid",
+          "attendance": "completed",
+          "amountMinor": 2500
+        },
+        "http": 200,
+        "server": "2026-11-20T20:30:01.116597+00:00"
+      }
+    ],
+    "issuedCommands": [
+      "receive",
+      "start",
+      "complete"
+    ],
+    "normalGoTrueSessions": true,
+    "serviceRoleNotUsedAsActor": true,
+    "noNewReservation": true,
+    "noRepeatConfirmation": true,
+    "noAutomaticBusinessRetry": true,
+    "paymentFictitiousCash": true,
+    "filtersOnlyAdministrativeByDesign": true,
+    "completeImmediatelyAfterStartPermittedByContract": true
+  },
+  "final": {
+    "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+    "end": "2026-11-20T20:45:00+00:00",
+    "start": "2026-11-20T20:30:00+00:00",
+    "state": "confirmed",
+    "amount": 25,
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "method": "cash",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "payment": "paid",
+    "attendance": "completed",
+    "careEvents": [
+      "complete",
+      "created",
+      "receive",
+      "start"
+    ],
+    "amountMinor": 2500,
+    "reservationEvents": [
+      "confirmed"
+    ]
+  },
+  "preservation": {
+    "checkedAt": "2026-11-20T20:30:44.432Z",
+    "state": {
+      "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+      "end": "2026-11-20T20:45:00+00:00",
+      "start": "2026-11-20T20:30:00+00:00",
+      "state": "confirmed",
+      "amount": 25,
+      "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+      "method": "cash",
+      "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "payment": "paid",
+      "attendance": "completed",
+      "careEvents": [
+        "complete",
+        "created",
+        "receive",
+        "start"
+      ],
+      "amountMinor": 2500,
+      "reservationEvents": [
+        "confirmed"
+      ]
+    },
+    "onlyEightAuthorizedNewRows": true,
+    "allOriginal37ReservationsAnd40ItemsIntact": true,
+    "allOriginalCarePaymentsProfilesMembershipsIntact": true,
+    "otherTenantsUnchanged": true,
+    "schemaAndMigrationHistoryUnchanged": true,
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 25,
+      "items": 41,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 61,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 38,
+      "invitationMail": 5,
+      "reservationEvents": 49
+    },
+    "authHealth": 200,
+    "databaseHealth": "healthy",
+    "noBusinessRetry": true
+  },
+  "errors": [],
+  "closure": {
+    "B2AuthorizedCashWorkflowAndFiltersComplete": true,
+    "whole005AndAndroidClosed": false,
+    "noB3": true,
+    "YapeNewBrowserReceiptNotExecuted": true,
+    "priorBookingEvidence": "docs/evaluacion/evidencias/004-reservas/b2-ejecucion.json",
+    "prior005HttpEvidenceReused": true
+  },
+  "privateEvidence": ".artifacts/b2-run/continuation/{before.json,result.json,after.json,after-row-hashes.json,final-verification.json,after-final-verification.json}"
+}

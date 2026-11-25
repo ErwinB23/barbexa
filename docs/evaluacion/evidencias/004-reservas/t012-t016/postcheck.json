@@ -1,0 +1,99 @@
+{
+  "project": "app-barberia-002-local",
+  "counts": {
+    "items": 0,
+    "shops": 0,
+    "users": 2,
+    "events": 0,
+    "orphans": 0,
+    "profiles": 2,
+    "services": 0,
+    "invitations": 0,
+    "memberships": 0,
+    "reservations": 0,
+    "professionals": 0
+  },
+  "functions": [
+    {
+      "acl": "{postgres=X/postgres,service_role=X/postgres}",
+      "name": "confirm_booking",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false
+    },
+    {
+      "acl": "{postgres=X/postgres,authenticated=X/postgres}",
+      "name": "list_booking_slots",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "public",
+      "definer": false
+    },
+    {
+      "acl": "{postgres=X/postgres}",
+      "name": "reservation_available",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true
+    },
+    {
+      "acl": "{postgres=X/postgres,service_role=X/postgres}",
+      "name": "reservation_confirm",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true
+    },
+    {
+      "acl": "{postgres=X/postgres}",
+      "name": "reservation_json",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": false
+    },
+    {
+      "acl": "{postgres=X/postgres,authenticated=X/postgres}",
+      "name": "reservation_slots",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true
+    },
+    {
+      "acl": "{postgres=X/postgres,authenticated=X/postgres}",
+      "name": "reservation_visible",
+      "owner": "postgres",
+      "config": [
+        "search_path=\"\""
+      ],
+      "schema": "private",
+      "definer": true
+    }
+  ],
+  "versions": [
+    "20261112031854",
+    "20261113035717",
+    "20261113045240",
+    "20261113050232",
+    "20261113053907",
+    "20261114195018",
+    "20261114202045",
+    "20261114220827",
+    "20261114224344"
+  ]
+}

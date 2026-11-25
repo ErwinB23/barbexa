@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "scope": "Controles afectados; no batería SQL/HTTP histórica de 002 ni check general repetido",
+  "checks": [
+    {
+      "command": "npm.cmd run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/run-unit-tests.mjs",
+      "exitCode": 0,
+      "passed": 129,
+      "failed": 0,
+      "coreCoverage": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 93.48
+      },
+      "coverageScope": "Núcleo cubierto por runner; no UI/SDK/Hermes"
+    },
+    {
+      "command": "node --test tests/integration/authentication/*.test.mjs tests/presentation/registration.test.mjs tests/presentation/protected-navigation.test.mjs tests/presentation/session-resolution.test.mjs tests/presentation/tenant-context.test.mjs",
+      "exitCode": 0,
+      "passed": 73,
+      "failed": 0
+    },
+    {
+      "command": "node --test tests/integration/authentication/tenant-context.test.mjs",
+      "exitCode": 0,
+      "passed": 2,
+      "note": "Recomprobación dirigida después de ajustar el operador; incluida en los 73, no sumar como nuevas"
+    },
+    {
+      "command": "eslint (archivos afectados enumerados en resultado.md) --max-warnings 0",
+      "exitCode": 0
+    },
+    {
+      "command": "prettier --check (archivos afectados enumerados en resultado.md)",
+      "exitCode": 0
+    },
+    {
+      "command": "npm.cmd run architecture:check",
+      "exitCode": 0,
+      "modules": 72,
+      "core": 18,
+      "edges": 181
+    },
+    {
+      "command": "node scripts/local-auth-context-fixtures.mjs prepare",
+      "exitCode": 0,
+      "newUsers": 3,
+      "newProfiles": 3,
+      "newShops": 2,
+      "newMemberships": 4
+    },
+    {
+      "command": "node scripts/local-auth-context-fixtures.mjs verify",
+      "exitCode": 0,
+      "realLocalChecks": 11
+    },
+    {
+      "command": "node scripts/local-auth-context-fixtures.mjs revoke",
+      "exitCode": 0,
+      "executedBy": "usuario",
+      "invocationsConfirmed": 1
+    },
+    {
+      "command": "node scripts/local-auth-context-fixtures.mjs cleanup",
+      "exitCode": 0,
+      "remainingFixtureRecords": 0,
+      "existingDataPreserved": true
+    }
+  ],
+  "initialFailures": [
+    {
+      "kind": "RED T020",
+      "reason": "restore/invalidate/refresh ausentes; pruebas unitarias y adaptador",
+      "exitCode": 1
+    },
+    {
+      "kind": "RED T022",
+      "reason": "contenido de resolución de sesión ausente",
+      "exitCode": 1
+    },
+    {
+      "kind": "RED T024/T026",
+      "reason": "módulo de contexto/vista ausentes",
+      "exitCode": 1
+    },
+    {
+      "kind": "refresh race regression",
+      "reason": "TOKEN_REFRESHED durante getUser interpretado como signed-out",
+      "exitCode": 1,
+      "correction": "Distinguir generación de credenciales de renovación del mismo actor; regresión GREEN"
+    },
+    {
+      "kind": "composition regression",
+      "reason": "La expectativa anterior de 2 requests no incluía lectura vigente de identidad/membresías de contexto",
+      "exitCode": 1,
+      "correction": "Expectativas explícitas de 4 llamadas con perfil y membresías una vez, sin eliminar pruebas"
+    },
+    {
+      "kind": "lint",
+      "exitCode": 1,
+      "reason": "Tres warnings (variables sin uso y ternario como sentencia)",
+      "correction": "Retirados; lint final 0"
+    }
+  ],
+  "limits": [
+    "T019 y T023 no acreditadas completamente",
+    "Nueve avisos npm moderados siguen sin remediar",
+    "Sin cambios Cloud, RLS, JWT, Kong, GoTrue o dependencias en este bloque"
+  ]
+}

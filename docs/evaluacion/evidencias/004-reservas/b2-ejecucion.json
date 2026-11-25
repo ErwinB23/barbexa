@@ -1,0 +1,232 @@
+{
+  "block": "B2",
+  "status": "partial_stopped_after_booking",
+  "checkedAt": "2026-11-20T20:18:31.392Z",
+  "buttonFix": {
+    "file": "src/features/reservations/presentation/booking-screen.tsx",
+    "behavior": "Disabled when payment is required and missing, while preserving busy, uncertain retry and legacy conditions",
+    "newRegressions": 6,
+    "redMissingPaymentTestFailed": true,
+    "greenDirectedTests": 28,
+    "typecheck": 0,
+    "lint": 0,
+    "format": 0,
+    "architecture": 0,
+    "noServerChange": true
+  },
+  "target": {
+    "project": "app-barberia-002-local",
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91"
+  },
+  "reservationId": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+  "selectedSlot": {
+    "endsAt": "2026-11-20T20:45:00.000Z",
+    "startsAt": "2026-11-20T20:30:00.000Z",
+    "estimatedTotal": {
+      "currency": "PEN",
+      "amountMinor": 2500
+    },
+    "serverAtSelection": "2026-11-20T20:17:11.761891+00:00"
+  },
+  "executedSteps": [
+    "confirmed-http201-sql"
+  ],
+  "web": [
+    "missing-payment-confirm-disabled",
+    "client-own-reservation-and-care-visible"
+  ],
+  "http": [
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "get_booking_catalog",
+      "status": 200
+    },
+    {
+      "name": "list_booking_slots",
+      "status": 200
+    },
+    {
+      "name": "list_booking_slots",
+      "status": 200
+    },
+    {
+      "name": "list_booking_slots",
+      "status": 200
+    },
+    {
+      "name": "client-confirm",
+      "status": 201
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "name": "close-own-test-session-client",
+      "status": 204
+    },
+    {
+      "name": "close-own-test-session-worker",
+      "status": 204
+    }
+  ],
+  "issuedCommands": [
+    "confirm"
+  ],
+  "mutationCounts": {
+    "confirm": 1,
+    "receive": 0,
+    "start": 0,
+    "complete": 0
+  },
+  "incident": {
+    "phase": "worker-sign-in",
+    "code": "WEB_EVALUATION_FAILED",
+    "class": "Error",
+    "observation": "Browser Runtime.evaluate reported exception during professional Web entry; full exception details not retained by verifier",
+    "rootCauseDemonstrated": false,
+    "notAttributedToAuthEdgeOrSupabase": true,
+    "noRepairOrBusinessRetry": true,
+    "professionalOwnSessionLogoutHttp": 204
+  },
+  "finalState": {
+    "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+    "end": "2026-11-20T20:45:00+00:00",
+    "start": "2026-11-20T20:30:00+00:00",
+    "state": "confirmed",
+    "amount": 25,
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "method": "cash",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "payment": "pending",
+    "attendance": "confirmed",
+    "careEvents": [
+      "created"
+    ],
+    "amountMinor": 2500,
+    "reservationEvents": [
+      "confirmed"
+    ]
+  },
+  "preservation": {
+    "checkedAt": "2026-11-20T20:18:31.392Z",
+    "state": {
+      "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+      "end": "2026-11-20T20:45:00+00:00",
+      "start": "2026-11-20T20:30:00+00:00",
+      "state": "confirmed",
+      "amount": 25,
+      "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+      "method": "cash",
+      "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "payment": "pending",
+      "attendance": "confirmed",
+      "careEvents": [
+        "created"
+      ],
+      "amountMinor": 2500,
+      "reservationEvents": [
+        "confirmed"
+      ]
+    },
+    "onlyFiveAuthorizedNewRows": true,
+    "allOriginal37ReservationsAnd40ItemsIntact": true,
+    "allOriginalCarePaymentsProfilesMembershipsIntact": true,
+    "otherTenantsUnchanged": true,
+    "schemaAndMigrationHistoryUnchanged": true,
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 25,
+      "items": 41,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 58,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 38,
+      "invitationMail": 5,
+      "reservationEvents": 49
+    },
+    "authHealth": 200,
+    "databaseHealth": "healthy",
+    "noBusinessRetry": true
+  },
+  "actualNewRows": {
+    "public.reservations": 1,
+    "public.reservation_items": 1,
+    "public.reservation_events": 1,
+    "private.booking_care": 1,
+    "private.care_events": 1
+  },
+  "expectedDifference": "Five inserts belong to successful confirmation. The remaining three care-event inserts and three updates were not executed because execution stopped before receive/start/complete.",
+  "notExecuted": [
+    "professional agenda validation",
+    "fictitious cash receipt",
+    "start",
+    "complete",
+    "administrative care/payment filters",
+    "final completed-paid client view"
+  ],
+  "scope": {
+    "noOriginalReservationChanged": true,
+    "noCloudSqlRlsEdgeChanged": true,
+    "noB1OrAuthenticationModuleChanged": true,
+    "noServicesRestarted": true,
+    "noB3": true
+  },
+  "closure": {
+    "B2Complete": false,
+    "nextAuthorization": "Diagnose the professional Web evaluation error and resume only receive/start/complete on existing reservation c4e9b153-9275-4a9d-9f32-f009bdb087d9; no new reservation or repeat confirmation"
+  },
+  "privateEvidence": ".artifacts/b2-run/run/: before.json, result.json, stopped-snapshot.json, after-stopped.json, stop-verification.json"
+}

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-14T00:07:08.271Z",
+  "smtpAttempts": 1,
+  "smtpExitCode": 0,
+  "mailpitHttpStatus": 200,
+  "matchingMessages": 1,
+  "received": true,
+  "fictitiousAddressesOnly": true,
+  "authUsersCreated": 0
+}

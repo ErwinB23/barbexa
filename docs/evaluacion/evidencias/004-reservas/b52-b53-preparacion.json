@@ -1,0 +1,637 @@
+{
+  "block": "B5.2/B5.3 preparation",
+  "status": "prepared-with-two-implementation-gaps-no-business-writes",
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "checkedAt": "2026-11-21T03:26:40.504878+00:00",
+  "authorization": "Read-only LOCAL, necessary read session, documentation only; no proposed business commands executed",
+  "localVerification": {
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "businessRowsSameAsB51": true,
+    "businessFingerprintsUnchangedThroughBrowser": true,
+    "schemaHistoryUnchanged": true,
+    "readOnlyTransactions": "on",
+    "chromeForms": [
+      {
+        "route": "/barbershop-admin?view=create",
+        "fields": [
+          {
+            "id": "shop-name",
+            "type": "text",
+            "disabled": false
+          }
+        ],
+        "expectedButtonsPresentAndEnabled": [
+          "Crear barbería y ser su administrador"
+        ]
+      },
+      {
+        "route": "/barbershop-admin",
+        "fields": [
+          {
+            "id": "shop-name",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "contact",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "address",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "minimumNoticeMin",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "bookingHorizonDays",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "maxFuturePerClient",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "slotStepMin",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "bufferMin",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "cancellationAdvanceMin",
+            "type": "text",
+            "disabled": false
+          }
+        ],
+        "expectedButtonsPresentAndEnabled": [
+          "Guardar configuración",
+          "Retirar oferta pública"
+        ],
+        "renameFieldPresent": false
+      },
+      {
+        "route": "/services",
+        "fields": [
+          {
+            "id": "service-name",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "description",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "price",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "duration",
+            "type": "text",
+            "disabled": false
+          }
+        ],
+        "expectedButtonsPresentAndEnabled": [
+          "Crear servicio"
+        ]
+      },
+      {
+        "route": "/schedules",
+        "fields": [
+          {
+            "id": "opens",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "closes",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "exception-date",
+            "type": "text",
+            "disabled": false
+          },
+          {
+            "id": "exception-reason",
+            "type": "text",
+            "disabled": false
+          }
+        ],
+        "expectedButtonsPresentAndEnabled": [
+          "Editar horario del local",
+          "Guardar todos los intervalos",
+          "Guardar excepción"
+        ],
+        "administrativeExceptionRemovalVisible": false
+      },
+      {
+        "route": "/agenda",
+        "careSettingsForm": true,
+        "saveControl": true,
+        "tolerance": 10,
+        "instructionsSynthetic": true
+      }
+    ],
+    "ownerCapacity": "owner",
+    "settingsReadHttp": 200,
+    "ownSessionClosedHttp": 204,
+    "remainingOwnSessions": 0,
+    "businessWrites": 0,
+    "servicesOperated": 0,
+    "cloudRequests": 0
+  },
+  "actors": {
+    "owner": {
+      "label": "U3",
+      "id": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "credentials": "existing authorized fictitious credentials; confirmed/profile available"
+    },
+    "client": {
+      "id": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+      "credentials": "existing authorized fictitious credentials; confirmed/profile available"
+    }
+  },
+  "fixtureProposal": {
+    "nameAtCreation": "B5 Cierre Web LOCAL",
+    "nameAfterSingleRename": "B5 Cierre Web LOCAL validado",
+    "exists": false,
+    "uuid": "Must use actual response ID; no fabricated UUID",
+    "uniqueNameNotRequiredByContract": true,
+    "publicContact": "Contacto ficticio B5 LOCAL",
+    "address": "Dirección ficticia B5 LOCAL",
+    "policies": {
+      "minimumNoticeMin": 0,
+      "bookingHorizonDays": 30,
+      "maxFuturePerClient": 30,
+      "slotStepMin": 15,
+      "bufferMin": 0,
+      "cancellationAdvanceMin": 120
+    },
+    "professional": "New active professional profile for U3 in the new shop, explicit existing owner membership; no new Auth user",
+    "service": "B5 Servicio sintético",
+    "newServiceFinal": {
+      "amountMinor": 3000,
+      "currency": "PEN",
+      "durationMin": 30,
+      "active": true
+    },
+    "shopWeekly": "07:00–24:00, weekdays0..6",
+    "professionalWeekly": "08:00–23:45, weekdays0..6",
+    "whyNotExistingHours": "0050 shop and original professional are24/7. Shrinking shop alone violates containment; changing originals would touch accredited fixtures. Existing B4 professional has no schedules, not evidence that old hours can be safely shrunk."
+  },
+  "branches": [
+    {
+      "id": "B5.2-A",
+      "title": "Crear y editar barbería",
+      "implemented": "Create form and atomic ownership exist. Configuration fields exist. Foundation rename use case/adapter and RLS exist, but no rename UI or operation composition.",
+      "routes": [
+        "/barbershop-admin?view=create",
+        "/barbershop-admin"
+      ],
+      "files": [
+        "src/features/barbershop-operation/presentation/operation-screen.tsx",
+        "src/features/barbershop-operation/application/operation-application.ts",
+        "src/features/tenant-foundation/application/barbershops.ts",
+        "src/features/tenant-foundation/infrastructure/tenant-foundation-http-adapter.ts",
+        "src/composition/tenant-foundation-composition.ts",
+        "supabase/functions/_shared/tenant-foundation/presentation/create-barbershop-handler.ts"
+      ],
+      "reusedEvidence": [
+        "002 creation contracts/SQL",
+        "011 atomic creation/ownership invariants",
+        "2E owner panel"
+      ],
+      "missingWeb": "Create one fixture, save its required configuration, rename it through a distinct control (requires frontend integration).",
+      "actors": [
+        "U3"
+      ],
+      "affected": "New shop only; new administrator membership/owner/audit/settings. No preexisting owner or membership updated.",
+      "commands": [
+        "POST create-barbershop {name}:201",
+        "configure-shop:200",
+        "PATCH barbershops newId {name}:200 after existing rename use case is wired to Web"
+      ],
+      "restoration": "No old values changed. Preserve final fixture name and configuration; do not delete the new shop/membership/ownership.",
+      "retained": "One shop, owner membership, ownership row, created authority event and settings row.",
+      "success": "Creator is owner, secondaryCount=0, other tenants unchanged; configuration roundtrip; rename changes same shop ID only.",
+      "authorization": "One new shop and its automatic membership/ownership/audit/settings; one configure; one rename. Frontend-only rename integration before this branch is complete."
+    },
+    {
+      "id": "B5.2-B",
+      "title": "Retirada de oferta",
+      "implemented": "set-publication and Retirar oferta pública exist; withdrawn is excluded from commercial discovery/catalogue/slots.",
+      "routes": [
+        "/barbershop-admin"
+      ],
+      "files": [
+        "src/features/barbershop-operation/presentation/operation-screen.tsx",
+        "supabase/migrations/20261114220827_booking_catalog_visibility.sql",
+        "supabase/migrations/20261120010538_team_authority.sql"
+      ],
+      "reusedEvidence": [
+        "B1 pause/republish Chrome",
+        "004 visibility/authorization SQL and HTTP"
+      ],
+      "missingWeb": "On the new complete fixture: publish as setup, withdraw once, verify not discoverable/not bookable, republish once.",
+      "actors": [
+        "U3",
+        "client for commercial reads"
+      ],
+      "affected": "Only new fixture booking_settings publication/version; no reservation updates.",
+      "commands": [
+        "set-publication published:200",
+        "set-publication withdrawn:200",
+        "set-publication published:200"
+      ],
+      "restoration": "Return to published, preserve legitimate version increments. Existing eight shops remain untouched.",
+      "retained": "New fixture remains published for the no-show setup; captured state transitions in evidence.",
+      "success": "Withdrawn absent from list_booking_barbershops; get_booking_catalog/list_booking_slots return NOT_AVAILABLE for known ID (no new booking attempt); republish restores its visibility. All 41 bookings unchanged.",
+      "authorization": "Three publication commands on the new fixture only; no pause test repeated."
+    },
+    {
+      "id": "B5.2-C",
+      "title": "Servicios",
+      "implemented": "Create/edit PEN price and duration and active toggle all exist in /services.",
+      "routes": [
+        "/services",
+        "/staff?view=team"
+      ],
+      "files": [
+        "src/features/barbershop-operation/presentation/operation-screen.tsx",
+        "src/features/barbershop-operation/infrastructure/operation-http-adapter.ts",
+        "supabase/functions/_shared/barbershop-operation/application/operation.ts",
+        "supabase/migrations/20261120010538_team_authority.sql"
+      ],
+      "reusedEvidence": [
+        "B1 description edit/restore Chrome",
+        "004 service validation/snapshots",
+        "B4 professional/capabilities"
+      ],
+      "missingWeb": "Create only a new service at S/25,15min; edit to S/30,30min; deactivate/save; reactivate/save. Observe catalogue and valid slot price/duration, inactive absence.",
+      "actors": [
+        "U3",
+        "client for commercial reads"
+      ],
+      "affected": "Only new fixture service and its settings version; setup new U3 professional and new capability.",
+      "commands": [
+        "upsert-service create:200",
+        "upsert-service edit price/duration:200",
+        "upsert-service active=false:200",
+        "upsert-service active=true:200"
+      ],
+      "restoration": "New service has no historic booked values to restore; final active/S30/30min kept deliberately. No existing service edited.",
+      "retained": "One new active service, one professional profile for the new owner membership and one capability.",
+      "success": "Same service UUID throughout edit/toggles; catalogue shows S30/30min only while active. No edits to old snapshots/services/capabilities.",
+      "authorization": "Four service commands; plus two setup commands set-professional and set-capabilities on the new tenant, no invitation or new Auth identity."
+    },
+    {
+      "id": "B5.2-D",
+      "title": "Horarios y cierres administrativos",
+      "implemented": "Admin set-shop-hours/set-barber-hours and create set-exception exist. No admin exception list/remove in screen, app union or database wrapper. Only remove_own_booking_block exists and cannot stand in for admin shop closure removal.",
+      "routes": [
+        "/schedules"
+      ],
+      "files": [
+        "src/features/barbershop-operation/presentation/operation-screen.tsx",
+        "src/features/barbershop-operation/application/operation-application.ts",
+        "supabase/functions/_shared/barbershop-operation/application/operation.ts",
+        "supabase/migrations/20261120010538_team_authority.sql",
+        "specs/004-mvp-reservas/contracts/booking.md"
+      ],
+      "reusedEvidence": [
+        "004 containment/reservation protection SQL",
+        "009/B4 own schedules and blocks; do not repeat"
+      ],
+      "missingWeb": "On new fixture, initialize weekly shop07:00–24:00 and professional08:00–23:45; temporarily expand shop to06:00–24:00 and restore07:00; create new shop closure tomorrow11:00–12:00 and remove only it after new contract is approved.",
+      "actors": [
+        "U3"
+      ],
+      "affected": "Only new tenant hours and one new exception; all 41 prior bookings protected. Administrative changes still must contain professional intervals.",
+      "commands": [
+        "set-shop-hours initial:200",
+        "set-barber-hours initial:200",
+        "set-shop-hours temporary:200",
+        "set-shop-hours restore:200",
+        "set-exception barberId=null:200",
+        "PROPOSED remove-exception {barbershopId,exceptionId}:200, not currently implemented"
+      ],
+      "restoration": "Restore weekly interval VALUES, not UUIDs or versions. Replacements may regenerate seven interval IDs and delete only the new fixture interval rows. Restore zero temporary closures through an authorized new admin operation.",
+      "retained": "Seven shop and seven professional intervals in the new tenant; closure ID/HTTP/hashes in evidence. Do not invent a closure audit table that does not exist.",
+      "success": "Stored local hours roundtrip. Expansion alone does NOT create early slots because professional hours remain08:00–23:45. Closure suppresses every overlapping slot; removal restores it, no booking touched.",
+      "authorization": "Six commands including two initial schedule setup commands; before closure creation/removal, separately approve minimal contract/Edge/client/LOCAL additive migration and tests for admin removal, with locked tenant authorization. No migration authorized now."
+    },
+    {
+      "id": "B5.3-A",
+      "title": "Configuración Yape",
+      "implemented": "CareSettings is rendered in /agenda for administrator, not /barbershop-admin. Fields: noShowToleranceMin and yapeInstructions; active owner/secondary can configure, professional/client cannot.",
+      "routes": [
+        "/agenda"
+      ],
+      "files": [
+        "src/features/reservations/presentation/agenda-screen.tsx",
+        "src/features/reservations/presentation/care-control.tsx",
+        "supabase/migrations/20261120010538_team_authority.sql"
+      ],
+      "reusedEvidence": [
+        "005 settings/roles/idempotence HTTP",
+        "B5.1 Yape selection/receipt complete; do not repeat"
+      ],
+      "missingWeb": "In 005 aislada0, read current settings, temporarily change synthetic instructions only, reload, restore the exact original instructions and tolerance10.",
+      "actors": [
+        "U3"
+      ],
+      "affected": "Only existing 0050 private.care_settings; two configured audit events. All booking ledger snapshots protected.",
+      "commands": [
+        "care/configure temporary:200",
+        "care/configure exact restore:200"
+      ],
+      "restoration": "Keep noShowToleranceMin=10 in both commands. Original instructions in memory only; verify final SHA256 equals baseline, never print them.",
+      "retained": "Two legitimate configured events; restored settings, no new payments.",
+      "success": "After both saves the form reloads with expected values. Final current settings hash restored; all 41 reservation/care rows unchanged, including Yape B5.1 instructions snapshot.",
+      "authorization": "Exactly two configure commands on0050, original instructions restoration, no receive/configuration of external Yape."
+    },
+    {
+      "id": "B5.3-B",
+      "title": "Inasistencia",
+      "implemented": "CareControl offers Registrar inasistencia; server permits only assigned active professional, including an administrator with explicit professional profile.",
+      "routes": [
+        "/agenda",
+        "/booking",
+        "/my-reservations"
+      ],
+      "files": [
+        "src/features/reservations/presentation/care-control.tsx",
+        "supabase/migrations/20261120010538_team_authority.sql",
+        "specs/005-atencion-pagos-manuales/contracts/care.md"
+      ],
+      "reusedEvidence": [
+        "005 real-tests.json:91 checks, temporal no-show and roles",
+        "B2 start/complete and B5.1 receipt; do not repeat"
+      ],
+      "missingWeb": "One NEW synthetic booking in new tenant, cash pending, S30/30min, assigned to U3 professional. Wait for actual server startsAt+snapshotTolerance10min; record one no-show via Chrome.",
+      "actors": [
+        "client",
+        "U3 as assigned professional"
+      ],
+      "affected": "One new reservation/item/care ledger/confirmed event/created event; update only its care attendance; append one no-show event.",
+      "commands": [
+        "confirm paymentMethod=cash:201, setup only, no receipt",
+        "care/no-show:200"
+      ],
+      "restoration": "None: retain the new no-show booking as evidence. No existing booking used, including B5.1.",
+      "retained": "New reservation, item, confirmed event, care ledger, created and no-show events.",
+      "success": "Reservation remains confirmed, attendance no-show, payment pending/cash/S30. Exactly one no-show by assigned U3. This is not cancellation/refund: occupied range remains; no early release of a still future interval. No start/complete/receive.",
+      "authorization": "One new reservation + one no-show, real waiting if needed; no time changes or tolerance changes. Expected final42 bookings/45items; current41 remain intact."
+    }
+  ],
+  "proposedCommands": [
+    {
+      "id": "A1",
+      "command": "create-barbershop",
+      "actor": "U3",
+      "effects": "new shop, owner membership, ownership, created authority event",
+      "http": 201,
+      "availability": "existing"
+    },
+    {
+      "id": "A2",
+      "command": "configure-shop",
+      "actor": "U3",
+      "effects": "new settings; contact/address/policies",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "A3",
+      "command": "renameBarbershop via PATCH",
+      "actor": "U3",
+      "effects": "same new shop name only",
+      "http": 200,
+      "availability": "requires Web integration"
+    },
+    {
+      "id": "C1",
+      "command": "upsert-service create",
+      "actor": "U3",
+      "effects": "one new service S25/15min",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "C2",
+      "command": "upsert-service edit",
+      "actor": "U3",
+      "effects": "same service S30/30min",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "P1",
+      "command": "set-professional",
+      "actor": "U3",
+      "effects": "new active U3 professional in new tenant only",
+      "http": 200,
+      "availability": "existing setup"
+    },
+    {
+      "id": "P2",
+      "command": "set-capabilities",
+      "actor": "U3",
+      "effects": "one new professional/service link",
+      "http": 200,
+      "availability": "existing setup"
+    },
+    {
+      "id": "D1",
+      "command": "set-shop-hours initial",
+      "actor": "U3",
+      "effects": "7 new shop intervals07:00–24:00",
+      "http": 200,
+      "availability": "existing setup"
+    },
+    {
+      "id": "D2",
+      "command": "set-barber-hours initial",
+      "actor": "U3",
+      "effects": "7 new professional intervals08:00–23:45",
+      "http": 200,
+      "availability": "existing setup"
+    },
+    {
+      "id": "B1",
+      "command": "set-publication published",
+      "actor": "U3",
+      "effects": "new shop becomes commercially visible",
+      "http": 200,
+      "availability": "existing setup"
+    },
+    {
+      "id": "C3",
+      "command": "upsert-service inactive",
+      "actor": "U3",
+      "effects": "new service absent from catalogue",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "C4",
+      "command": "upsert-service active",
+      "actor": "U3",
+      "effects": "same new service visible again",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "D3",
+      "command": "set-shop-hours temporary",
+      "actor": "U3",
+      "effects": "replace only new7intervals with06:00–24:00",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "D4",
+      "command": "set-shop-hours restore",
+      "actor": "U3",
+      "effects": "replace only new7intervals back07:00–24:00",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "D5",
+      "command": "set-exception",
+      "actor": "U3",
+      "effects": "new shop closure tomorrow11:00–12:00, no reservations there",
+      "http": 200,
+      "availability": "existing; do not issue until removal is available"
+    },
+    {
+      "id": "D6",
+      "command": "PROPOSED remove-exception",
+      "actor": "U3",
+      "effects": "remove only D5; exact contract and possible audit effects require approval",
+      "http": 200,
+      "availability": "requires contract/Edge/SQL/Web implementation"
+    },
+    {
+      "id": "B2",
+      "command": "set-publication withdrawn",
+      "actor": "U3",
+      "effects": "only new shop hidden; no reservation changes",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "B3",
+      "command": "set-publication published",
+      "actor": "U3",
+      "effects": "restore new shop published",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "Y1",
+      "command": "care/configure temporary",
+      "actor": "U3",
+      "effects": "only0050 instructions; tolerance10; configured event",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "Y2",
+      "command": "care/configure restore",
+      "actor": "U3",
+      "effects": "only0050 instructions exact restoration; configured event",
+      "http": 200,
+      "availability": "existing"
+    },
+    {
+      "id": "N1",
+      "command": "confirm cash pending",
+      "actor": "client",
+      "effects": "one new booking/item/care/confirmed/created, S30/30min",
+      "http": 201,
+      "availability": "existing setup; slot must be available when executed"
+    },
+    {
+      "id": "N2",
+      "command": "care/no-show",
+      "actor": "U3 assigned professional",
+      "effects": "only new care attendance; one no-show event",
+      "http": 200,
+      "availability": "existing; wait server time"
+    }
+  ],
+  "totalProposedCommands": 22,
+  "currentlyAvailableCommands": 20,
+  "requiresNewWebIntegrationCommands": 1,
+  "requiresNewAdminRemovalContractCommands": 1,
+  "readyForWholeJourneyNow": false,
+  "commandCountExcludesAuthAndReads": true,
+  "conditionalExpectedCounts": {
+    "reservations": 42,
+    "items": 45,
+    "shops": 9,
+    "users": 14,
+    "personalProfiles": 13,
+    "memberships": 15,
+    "ownerships": 9,
+    "care": 29,
+    "careEvents": 71,
+    "reservationEvents": 55,
+    "notes": "Assumes proposed admin removal does not introduce additional care/reservation events; audit effects must be finalized with its contract. One additional service/profile/capability, 7 shop and7professional intervals; restored0050care settings. No existing membership/ownership modified."
+  },
+  "preservation": {
+    "protectedReservations": 41,
+    "protectedItems": 44,
+    "protectedB51": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+    "newTeamB4": "preserve memberships/professional/capability/invitation",
+    "temporaryChangesToOriginalData": "Only two future Yape configure writes to0050, restored exactly; all other business writes scoped to new fixture",
+    "hoursReplacement": "Temp/restore delete+insert7 rows each only in NEW fixture; interval IDs and settings versions not restored",
+    "cleanup": "No fixture cleanup or deletion of history"
+  },
+  "pendingSeparate": [
+    "SMTP administrative unknown delivery",
+    "Final ownership transfer",
+    "Android acceptance",
+    "Public Cloud/deployment",
+    "Visual approval and F5 performance"
+  ],
+  "matrixAfter": {
+    "VERIFICADA": 34,
+    "IMPLEMENTADA SIN VALIDACIÓN INTEGRAL": 4,
+    "NO APLICA": 4,
+    "BLOQUEADA": 3,
+    "PARCIAL": 3
+  },
+  "productChanges": 0,
+  "sqlChanges": 0,
+  "businessWrites": 0
+}

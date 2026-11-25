@@ -1,0 +1,50 @@
+{
+  "project": "app-barberia-002-local",
+  "steps": [
+    "disconnect-existing-auth-attempt",
+    "disconnect-existing-auth-ok",
+    "connect-existing-auth-dynamic-ok",
+    "start-auth-single-attempt",
+    "edge-already-running-no-start"
+  ],
+  "success": true,
+  "noConfigurationOrBusinessDataWrites": true,
+  "postgresReady": true,
+  "collision": {
+    "requestedIP": "172.19.0.4",
+    "occupiedBy": "supabase_studio_app-barberia-002-local"
+  },
+  "originalAliases": [
+    "auth"
+  ],
+  "authContainerUnchanged": true,
+  "directAuthFromKongHealthy": true,
+  "auth": {
+    "running": true,
+    "sameContainer": true,
+    "ip": "172.19.0.9",
+    "dynamic": true,
+    "aliases": [
+      "auth"
+    ]
+  },
+  "kongResolvesAuth": true,
+  "publicAuth": [
+    {
+      "host": "127.0.0.1",
+      "http": 200
+    },
+    {
+      "host": "192.168.0.16",
+      "http": 200
+    }
+  ],
+  "edge": {
+    "running": true,
+    "sameContainer": true,
+    "anonymousHTTP": 401
+  },
+  "otherEndpointsUnchanged": true,
+  "authStillRunning": true,
+  "edgeStillRunning": true
+}

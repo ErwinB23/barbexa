@@ -1,0 +1,227 @@
+{
+  "block": "B5-preparation",
+  "status": "prepared-not-executed",
+  "checkedAt": "2026-11-20T22:57:42.277Z",
+  "scope": "Directed B5 consolidation; no new business/Auth session or money operations",
+  "environment": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "databasePort": 54422,
+    "readOnlyTransactions": "on"
+  },
+  "verification": {
+    "counts": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 53
+    },
+    "businessAndAuthRowsSameAsB4": true,
+    "noChangesDuringReads": true,
+    "schemaHistoryUnchanged": true
+  },
+  "yapeCurrentState": {
+    "implemented": true,
+    "realChromeSelectionAndReceiveNotYetAccredited": true,
+    "policy": {
+      "step": 15,
+      "notice": 0,
+      "horizon": 30,
+      "version": 17,
+      "publication": "published"
+    },
+    "workerEligibility": {
+      "role": "barber",
+      "price": 25,
+      "status": "active",
+      "duration": 15,
+      "assignment": true,
+      "profileActive": true,
+      "serviceActive": true
+    },
+    "instructionsAssessment": {
+      "configured": true,
+      "clearlyMarkedAsTest": true,
+      "containsLongDigitSequence": false,
+      "containsPaymentUrl": false,
+      "sha256": "bdef51a114b645d945574e430ad16719675707622c3ff3543f918771df0aef8c"
+    },
+    "tolerance": 10,
+    "historicalYapeStates": [
+      {
+        "n": 1,
+        "state": "confirmed",
+        "attendance": "completed",
+        "payment_status": "paid"
+      },
+      {
+        "n": 3,
+        "state": "confirmed",
+        "attendance": "confirmed",
+        "payment_status": "paid"
+      },
+      {
+        "n": 1,
+        "state": "confirmed",
+        "attendance": "confirmed",
+        "payment_status": "pending"
+      },
+      {
+        "n": 4,
+        "state": "cancelled",
+        "attendance": "cancelled",
+        "payment_status": "refunded"
+      }
+    ],
+    "historicalRowsProtected": true,
+    "automaticCharge": false,
+    "proofUploadOrBankingCredentialFields": false,
+    "paymentStatuses": [
+      "pending",
+      "paid",
+      "refunded"
+    ],
+    "rejectedPaymentStatusExists": false,
+    "unverifiedPaymentRemainsPending": true,
+    "confirmationAuthority": "assigned active professional or operational administrator of the tenant; client cannot receive",
+    "refundAuthority": "owner only; outside this test",
+    "idempotenceEvidenceReused": "005 real-tests.json: 91 checks and 10 pairs; not rerun"
+  },
+  "proposal": {
+    "authorized": false,
+    "executed": false,
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+    "service": "0805ab4a-c879-4054-a2d9-1de5af150407",
+    "candidate": {
+      "endsAt": "2026-11-21T16:15:00+00:00",
+      "startsAt": "2026-11-21T16:00:00+00:00",
+      "shopHours": true,
+      "noException": true,
+      "professionalHours": true,
+      "noPhysicalReservation": true
+    },
+    "candidateIsNotReservedMustRequery": true,
+    "paymentMethod": "yape fictitious",
+    "amountMinor": 2500,
+    "newReservationRequired": true,
+    "why": "All 40 current reservations are protected; modifying a historical Yape pending row would also not accredit new Web method selection",
+    "commands": [
+      {
+        "action": "confirm",
+        "expectedHttp": 201,
+        "actor": "existing client",
+        "newRows": 5
+      },
+      {
+        "action": "care",
+        "command": "receive",
+        "expectedHttp": 200,
+        "actor": "assigned existing professional",
+        "attestation": "explicitly fictitious external receipt",
+        "newRows": 1,
+        "updatedRows": 1
+      }
+    ],
+    "expectedFinal": {
+      "reservation": "confirmed",
+      "attendance": "confirmed",
+      "payment": "paid",
+      "method": "yape",
+      "reservations": 41,
+      "items": 44,
+      "care": 28,
+      "careEvents": 67,
+      "reservationEvents": 54
+    },
+    "businessInsertTotal": 6,
+    "businessUpdateTotal": 1,
+    "noRealMoney": true,
+    "noNewUsersOrEmailsOrConfiguration": true,
+    "noAttentionTransitionsOrCleanup": true,
+    "webScreens": [
+      "/booking",
+      "/my-reservations",
+      "/agenda"
+    ]
+  },
+  "consolidation": {
+    "matrixRows": 48,
+    "statusCounts": {
+      "VERIFICADA": 33,
+      "IMPLEMENTADA SIN VALIDACIÓN INTEGRAL": 7,
+      "NO APLICA": 4,
+      "BLOQUEADA": 3,
+      "PARCIAL": 1
+    },
+    "blocks": [
+      {
+        "file": "b1-oferta-web.json",
+        "status": "passed"
+      },
+      {
+        "file": "b2-continuacion.json",
+        "status": "passed"
+      },
+      {
+        "file": "b3-ejecucion.json",
+        "status": "functional-web-complete"
+      },
+      {
+        "file": "b4-ejecucion.json",
+        "status": "functional-web-complete-agreed-scope"
+      }
+    ],
+    "regressionFilesPresent": [
+      "tests/presentation/booking/booking.test.mjs",
+      "tests/presentation/booking/management-eligibility.test.mjs",
+      ".artifacts/b2-run/context-expression.test.mjs",
+      ".artifacts/b3-run/history-selector.test.mjs",
+      ".artifacts/b3-run/capture.test.mjs",
+      ".artifacts/b4-run/gate.test.mjs"
+    ],
+    "onlyDocumentationConsistencyCheck": true,
+    "noTestsOrBusinessRunsRepeated": true
+  },
+  "remainingWebValidation": [
+    "Create/update shop configuration from Web",
+    "Withdraw offer from Web, distinct from approved pause/republish",
+    "Service creation/price-duration edit/active-state Web branches",
+    "Administrative local/professional hours and closures, distinct from own schedule B4",
+    "Save/restore synthetic Yape instructions from Web, separate configure authorization",
+    "Web no-show command, backend already accredited; separate eligible synthetic booking/permission"
+  ],
+  "closureDecisions": {
+    "yapeAloneClosesAllB5": false,
+    "reason": "Implemented contractual Web branches still lack actual UI mutation evidence",
+    "smtp": "Unknown current admin notification delivery does not block internal acceptance; prevents claiming all email notification acceptance complete without evidence or explicit deferral",
+    "transfer": "Final ownership acceptance intentionally blocked by HA007 business decisions; does not block agreed core daily operations, remains incomplete",
+    "required": "Accredit remaining Web deltas or obtain explicit scope deferrals; do not mark unverified requirements complete"
+  },
+  "independentPending": [
+    "Administrative SMTP current unknown delivery",
+    "Final ownership transfer business decisions",
+    "User visual acceptance",
+    "Android and joint specification acceptance",
+    "Cloud/public deployment and academic delivery",
+    "Initial-load/F5 measured performance",
+    "Initial failed-capture U3 session without selective revocation token"
+  ],
+  "productFilesChanged": false,
+  "servicesOperated": false,
+  "newAuthSessions": 0,
+  "businessWrites": 0,
+  "noCloud": true,
+  "noEmail": true,
+  "noMoney": true,
+  "noYapeExecution": true
+}

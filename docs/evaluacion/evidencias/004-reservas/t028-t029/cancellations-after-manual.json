@@ -1,0 +1,22 @@
+{
+  "project": "app-barberia-002-local",
+  "readOnly": true,
+  "records": [
+    {
+      "id": "24364b77-64f8-4b48-8a7d-c5a49a679512",
+      "state": "confirmed",
+      "cancellationEvents": 0,
+      "reasonPresent": null,
+      "capacity": null,
+      "purpose": "manual-Web"
+    },
+    {
+      "id": "d22e270a-c562-4bb7-a03c-d6c0b8980a05",
+      "state": "confirmed",
+      "cancellationEvents": 0,
+      "reasonPresent": null,
+      "capacity": null,
+      "purpose": "manual-Android"
+    }
+  ]
+}

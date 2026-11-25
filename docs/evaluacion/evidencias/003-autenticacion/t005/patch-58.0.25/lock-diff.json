@@ -1,0 +1,24 @@
+{
+  "added": [],
+  "removed": [],
+  "changed": [
+    {
+      "path": "",
+      "before": "0.1.0",
+      "after": "0.1.0",
+      "fields": [
+        "dependencies"
+      ]
+    },
+    {
+      "path": "node_modules/expo",
+      "before": "58.0.24",
+      "after": "58.0.25",
+      "fields": [
+        "version",
+        "resolved",
+        "integrity"
+      ]
+    }
+  ]
+}

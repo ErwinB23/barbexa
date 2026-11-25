@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "project": "app-barberia-002-local",
+  "result": {
+    "remaining": {
+      "shops": 0,
+      "users": 0,
+      "profiles": 0,
+      "memberships": 0
+    },
+    "existingDataFingerprintPreserved": true
+  }
+}

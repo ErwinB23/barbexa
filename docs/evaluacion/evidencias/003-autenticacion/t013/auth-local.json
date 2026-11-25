@@ -1,0 +1,43 @@
+{
+  "executedBy": "Codex",
+  "date": "2026-11-14",
+  "results": [
+    {
+      "path": "/auth/v1/user",
+      "status": 401,
+      "scope": "unauthenticated request"
+    },
+    {
+      "path": "/rest/v1/",
+      "status": 200,
+      "scope": "OpenAPI metadata, not private rows"
+    },
+    {
+      "path": "/rest/v1/profiles?select=*&limit=0",
+      "status": 401,
+      "scope": "unauthenticated request"
+    },
+    {
+      "origin": "http://localhost:8081",
+      "method": "OPTIONS",
+      "status": 204,
+      "allowOrigin": "http://localhost:8081"
+    },
+    {
+      "origin": "http://unapproved.invalid",
+      "method": "OPTIONS",
+      "status": 403,
+      "allowOrigin": null
+    },
+    {
+      "mailpitLanStatus": 200
+    },
+    {
+      "confirmationPublicOrigin": "http://192.168.0.33:54421",
+      "apiExternalUrl": "http://192.168.0.33:54421/auth/v1",
+      "siteUrl": "http://localhost:8081",
+      "confirmationRequired": true,
+      "redirectsUnchanged": true
+    }
+  ]
+}

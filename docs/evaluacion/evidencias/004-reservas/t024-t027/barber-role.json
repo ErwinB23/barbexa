@@ -1,0 +1,18 @@
+{
+  "project": "app-barberia-002-local",
+  "id": "5552ae59-dd0b-4838-9b15-681fefa45282",
+  "checks": [
+    "barber-still-requires-reason",
+    "same-JWT-inactive-cannot-cancel",
+    "inactive-did-not-change-booking",
+    "same-JWT-assigned-active-barber-cancels",
+    "event-records-barber-capacity",
+    "administrator-agenda-permission-restored",
+    "T019-records-identical",
+    "manual-fixtures-remain-confirmed"
+  ],
+  "restored": true,
+  "preserved": true,
+  "fixturesTotal": 7,
+  "finalState": "cancelled"
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-14",
+  "branch": "main",
+  "head": "0ccd33c",
+  "diffCheckGlobal": 2,
+  "diffCheckExcludingOnlyActiveLog": 0,
+  "activeLog": "docs/evaluacion/evidencias/002-fundacion/t017-serve.log",
+  "activeLogEditedByThisWork": false,
+  "stagedContentFiles": [],
+  "commitOrPush": false,
+  "completed003": 24,
+  "total003": 36,
+  "pending003": [
+    "T014",
+    "T019",
+    "T023",
+    "T028",
+    "T029",
+    "T030",
+    "T031",
+    "T032",
+    "T033",
+    "T034",
+    "T035",
+    "T036"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "surface": "public local API54421 through gateway to handler",
+  "cases": [
+    {
+      "function": "ensure-profile",
+      "origin": "http://localhost:8081",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "*",
+      "errorCode": "UNAUTHENTICATED",
+      "passed": false
+    },
+    {
+      "function": "ensure-profile",
+      "origin": "http://unapproved.invalid",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": "*",
+      "errorCode": "FORBIDDEN",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "origin": "http://localhost:8081",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": "*",
+      "errorCode": "UNAUTHENTICATED",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "origin": "http://unapproved.invalid",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": "*",
+      "errorCode": "FORBIDDEN",
+      "passed": false
+    }
+  ],
+  "passed": 0,
+  "total": 4,
+  "usersCreated": 0
+}

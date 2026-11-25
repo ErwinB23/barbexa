@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-25",
+  "timezone": "America/Lima",
+  "testedCommit": "9192d1a1e36937f6f4e835839a90b881dbebf332",
+  "scope": "independent clean local Git checkout; no private config, prior dependencies or reports",
+  "npmCi": {
+    "exit": 0,
+    "packages": 1027
+  },
+  "npmCheck": {
+    "exit": 0
+  },
+  "tests": {
+    "clientCoreAndIntegration": 493,
+    "presentationAndIntegration": 652,
+    "clientArchitecture": 38,
+    "serverArchitecture": 45,
+    "environment": 18,
+    "deno": 96,
+    "failed": 0,
+    "skipped": 0,
+    "overlap": "Node core/integration and presentation/integration overlap; do not sum"
+  },
+  "coverage": {
+    "client": {
+      "scope": "client-domain-application",
+      "totals": {
+        "lines": {
+          "hit": 3808,
+          "total": 3808
+        },
+        "functions": {
+          "hit": 447,
+          "total": 447
+        },
+        "branches": {
+          "hit": 1725,
+          "total": 1852
+        }
+      },
+      "percentages": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 93.1425485961123
+      },
+      "files": 45
+    },
+    "server": {
+      "scope": "server-domain-application",
+      "totals": {
+        "lines": {
+          "hit": 1640,
+          "total": 1640
+        },
+        "functions": {
+          "hit": 99,
+          "total": 99
+        },
+        "branches": {
+          "hit": 1007,
+          "total": 1007
+        }
+      },
+      "percentages": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 100
+      },
+      "files": 29
+    }
+  },
+  "openapi": {
+    "exit": 0,
+    "version": "3.0.3",
+    "paths": 26,
+    "operationCommands": 33,
+    "validatedRequests": 11,
+    "validatedResponses": 7,
+    "testsIncludedInCheck": 3
+  },
+  "web": {
+    "platform": "web",
+    "mode": "compile-only-without-credentials",
+    "indexBytes": 1439,
+    "indexSha256": "23626a2c5108fe63dff1e3b1c428a211f9e122f8479b712c2c80baf4388dfdaa"
+  },
+  "artifactPreparation": {
+    "exit": 0,
+    "aggregateJsonFiles": 4
+  },
+  "versions": {
+    "node": "24.21.0",
+    "deno": "2.9.8"
+  },
+  "fixes": [
+    "OS-owned unique temporary directory with cleanup for coverage-report test",
+    "Docker PATH lookup instead of workstation absolute path in manual fixture helper"
+  ],
+  "preservation": {
+    "previousCommits": 21,
+    "approvedFunctionalConfigTestPaths": 690,
+    "intentionallyChangedTestHelpers": 2,
+    "unchangedOtherPaths": 688,
+    "protectedResourceAndLogHashes": 310,
+    "downloadedLocalToolHashes": 552
+  },
+  "notExecuted": [
+    "GitHub Actions remote/upload",
+    "Supabase Cloud",
+    "SQL/HTTP real fixtures",
+    "Android physical",
+    "deployed E2E",
+    "k6",
+    "deployment"
+  ],
+  "publication": "not authorized; author metadata and historical local paths remain; no history rewrite",
+  "rawLogs": "ignored local .artifacts/local-commits/final-*.log"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-14",
+  "branch": "main",
+  "head": "0ccd33ca77750b1f31953aaef85cc947ee42309f",
+  "filesInventoried": 1393,
+  "inventorySha256": "482e6f4ec63aed3a1c78e341b900f3c464229cfc3c76c5d9f5246e8926f3d3dd",
+  "baselineLocalIgnored": ".artifacts/004/baseline.json",
+  "authorization": "Solicitud del usuario: revisar004 y ejecutar exclusivamente T001–T007; esquema local aditivo/reversible; sin Cloud/datos anteriores/commit/push",
+  "dataPlan": "Solo fixtures SQL sintéticas dentro de BEGIN/ROLLBACK; sin cuentas Auth API/correo, sin persistencia ni limpieza DELETE. Máximo4 identidades,2 barberías,4 membresías por transacción. Ningún dato de usuario existente.",
+  "migrationsPlanned": [
+    "_booking_catalog.sql:8 tablas nuevas,ACL/RLS/constraints/índices; btree_gist si disponible"
+  ],
+  "activeLogExcluded": "docs/evaluacion/evidencias/002-fundacion/t017-serve.log"
+}

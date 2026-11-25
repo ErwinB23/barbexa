@@ -1,0 +1,17 @@
+{
+  "checkedAtUtc": "2026-11-14T00:38:40.166Z",
+  "id": "27c95d3f-bfaf-49c0-9746-cc2e0e69522f",
+  "status": "FINISHED",
+  "projectId": "d428c9e5-0852-43c3-974c-fae3bf286f3e",
+  "platform": "ANDROID",
+  "profile": "development",
+  "distribution": "INTERNAL",
+  "appIdentifier": "com.erwin23.appbarberia",
+  "appVersion": "0.1.0",
+  "appBuildVersion": "1",
+  "createdAt": "2026-11-14T00:20:16.245Z",
+  "completedAt": "2026-11-14T00:37:54.599Z",
+  "buildPage": "https://expo.dev/accounts/erwin23/projects/app-barberia/builds/27c95d3f-bfaf-49c0-9746-cc2e0e69522f",
+  "installationUrl": "https://expo.dev/artifacts/eas/TzdjtNXauGxZ5b56OkqVSq1C485GE0BcZ0v3ad3TUKg.apk",
+  "queryExitCode": 0
+}

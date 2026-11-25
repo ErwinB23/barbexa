@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "usuario",
+  "project": "app-barberia-002-local",
+  "result": {
+    "updatedOnlyOwnedMembership": true,
+    "serverPrivateShopRows": 0,
+    "manualRefreshStillRequired": true
+  },
+  "attributionCorrection": "El usuario confirmó la única invocación del operador local. La etiqueta fija Codex del generador no acreditaba quién lo ejecutó; no se alteran resultados."
+}

@@ -1,0 +1,14 @@
+{
+  "runtime": "Chromium browser, not Hermes",
+  "secureContext": true,
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+  "URL": true,
+  "URLSearchParams": true,
+  "getRandomValues": true,
+  "subtle": true,
+  "urlRoundtrip": true,
+  "paramsRoundtrip": true,
+  "randomCall": true,
+  "digestCall": true,
+  "processExit": 0
+}

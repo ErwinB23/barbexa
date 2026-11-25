@@ -1,0 +1,24 @@
+{
+  "project": "app-barberia-002-local",
+  "duplicate": {
+    "connections": 2,
+    "observedBarrierWaiters": 2,
+    "committed": 1,
+    "rejected": 1,
+    "sqlstate": "23505"
+  },
+  "acceptance": {
+    "connections": 2,
+    "observedBarrierWaiters": 2,
+    "committed": 1,
+    "rejected": 1,
+    "sqlstate": "23505"
+  },
+  "acceptVersusCancel": {
+    "connections": 2,
+    "observedBarrierWaiters": 2,
+    "committed": 1,
+    "rejected": 1,
+    "sqlstate": "23505"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "reports": [
+    {
+      "file": "schema.test.sql",
+      "tests": 118,
+      "exitCode": 0
+    },
+    {
+      "file": "profiles.test.sql",
+      "tests": 39,
+      "exitCode": 0
+    },
+    {
+      "file": "tenants.test.sql",
+      "tests": 163,
+      "exitCode": 0
+    },
+    {
+      "file": "provisioning.test.sql",
+      "tests": 16,
+      "exitCode": 0
+    }
+  ],
+  "total": 336
+}

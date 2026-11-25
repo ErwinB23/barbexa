@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-14",
+  "checks": [
+    {
+      "command": "check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks (feature override004)",
+      "exitCode": 0
+    },
+    {
+      "command": "node --test tests/integration/booking/environment.test.mjs tests/integration/tenant-foundation/environment.test.mjs",
+      "exitCode": 0,
+      "passed": 23
+    },
+    {
+      "command": "node scripts/run-backend-integration.mjs --booking-schema (new local stack)",
+      "exitCode": 0,
+      "schema": 63,
+      "access": 45,
+      "total": 108
+    },
+    {
+      "command": "SQL regression schema/profiles/tenants/provisioning in verified local DB",
+      "exitCode": 0,
+      "passed": 336
+    },
+    {
+      "command": "supabase migration new booking_catalog",
+      "exitCode": 0,
+      "created": "20261114195018_booking_catalog.sql"
+    },
+    {
+      "command": "supabase db push --dry-run --skip-vault",
+      "exitCode": 0,
+      "target": "127.0.0.1:54422",
+      "pending": [
+        "20261114195018_booking_catalog.sql"
+      ]
+    },
+    {
+      "command": "DDL validation with final ROLLBACK (before real application)",
+      "exitCode": 0
+    },
+    {
+      "command": "supabase db push --skip-vault",
+      "exitCode": 0,
+      "target": "127.0.0.1:54422",
+      "applied": [
+        "20261114195018_booking_catalog.sql"
+      ]
+    },
+    {
+      "command": "node scripts/run-unit-tests.mjs",
+      "exitCode": 0,
+      "passed": 134,
+      "new": 5,
+      "coreCoverage": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 93.93
+      },
+      "notUiCoverage": true
+    },
+    {
+      "command": "deno test --no-config --no-npm --no-remote --no-prompt tests/server/barbershop-operation tests/server/reservations",
+      "exitCode": 0,
+      "passed": 5
+    },
+    {
+      "command": "deno check --no-config --no-npm --no-remote (two new server application gateways)",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck:server-core",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run architecture:check",
+      "exitCode": 0,
+      "modules": 78,
+      "core": 24,
+      "edges": 185
+    },
+    {
+      "command": "npm run architecture:server",
+      "exitCode": 0,
+      "modules": 19,
+      "core": 12,
+      "edges": 33
+    },
+    {
+      "command": "eslint (runner/new core/integration/server tests) --max-warnings 0",
+      "exitCode": 0
+    },
+    {
+      "command": "prettier --check (runner/new core/all new tests)",
+      "exitCode": 0
+    }
+  ],
+  "initialResults": [
+    {
+      "check": "runner missing exports RED",
+      "exitCode": 1
+    },
+    {
+      "check": "runner transaction escape regression RED",
+      "exitCode": 1
+    },
+    {
+      "check": "pgTAP setup absent",
+      "exitCode": 1,
+      "kind": "test infrastructure",
+      "reason": "no_plan missing; fixed transaction-local extension setup"
+    },
+    {
+      "check": "schema RED",
+      "exitCode": 1,
+      "failedAssertions": 22,
+      "total": 63
+    },
+    {
+      "check": "first access GREEN attempt",
+      "exitCode": 1,
+      "kind": "test fixture",
+      "reason": "UNION date text requires timestamptz cast"
+    },
+    {
+      "check": "domain missing modules RED",
+      "exitCode": 1,
+      "compilerCode": "TS2307"
+    },
+    {
+      "check": "architecture initial",
+      "exitCode": 1,
+      "rule": "LAYER",
+      "fixed": "Own module boundary types; checker unchanged"
+    },
+    {
+      "check": "lint initial",
+      "exitCode": 1,
+      "fixed": "Import order and duplicate type imports"
+    }
+  ],
+  "notExecuted": [
+    "003 functional tests",
+    "new booking HTTP/UI",
+    "reservation concurrency/rollback",
+    "Cloud",
+    "npm audit/fix",
+    "build",
+    "commit/push"
+  ]
+}

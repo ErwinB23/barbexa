@@ -1,0 +1,29 @@
+{
+  "project": "app-barberia-002-local",
+  "operations": [],
+  "lan": [
+    "192.168.0.16"
+  ],
+  "postgresReady": true,
+  "authPublicURL": "http://192.168.0.33:54421/auth/v1",
+  "error": "DOCKER_OPERATION_FAILED",
+  "success": false,
+  "startAttempts": [
+    {
+      "service": "GoTrue",
+      "attempts": 1,
+      "result": "failed-network-address-in-use"
+    }
+  ],
+  "edgeStartAttempted": false,
+  "networkConflict": {
+    "authRequestedIPv4": "172.19.0.4",
+    "alreadyAssignedTo": "supabase_studio_app-barberia-002-local"
+  },
+  "noConfigurationChanges": true,
+  "noBusinessDataWrites": true,
+  "finalPublicAuth": {
+    "http": 503,
+    "nameResolutionFailed": true
+  }
+}

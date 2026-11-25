@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "scope": "Bundling only; not functional device validation",
+  "results": [
+    {
+      "platform": "web",
+      "status": 200,
+      "contextScreen": true,
+      "sessionLifecycle": true,
+      "temporaryProbePresent": false,
+      "milliseconds": 8197
+    },
+    {
+      "platform": "android",
+      "status": 200,
+      "contextScreen": true,
+      "sessionLifecycle": true,
+      "temporaryProbePresent": false,
+      "milliseconds": 10350
+    }
+  ]
+}

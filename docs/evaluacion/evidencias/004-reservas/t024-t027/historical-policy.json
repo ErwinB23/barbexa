@@ -1,0 +1,12 @@
+{
+  "project": "app-barberia-002-local",
+  "currentAdvanceMin": 120,
+  "historicalSnapshotAdvanceMin": 0,
+  "clientHTTP": 200,
+  "configurationNotModified": true,
+  "id": "13167f26-5e65-4479-85ff-fe1dfa33053a",
+  "purpose": "historical-policy-differs-from-current",
+  "state": "cancelled",
+  "fixturesTotal": 6,
+  "manualFixturesStillConfirmed": true
+}

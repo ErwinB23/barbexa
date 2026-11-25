@@ -1,0 +1,321 @@
+{
+  "block": "B5 cierre funcional Web LOCAL",
+  "status": "passed",
+  "date": "2026-11-21",
+  "timezone": "America/Lima",
+  "shop": {
+    "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+    "name": "B5 Cierre Web LOCAL validado"
+  },
+  "environment": {
+    "project": "app-barberia-002-local",
+    "postgres": "127.0.0.1:54422",
+    "api": "127.0.0.1:54421",
+    "web": "http://localhost:8081",
+    "cloudUsed": false
+  },
+  "withdrawal": {
+    "reusedPreviouslyExecutedEvidence": true,
+    "notRepeated": true,
+    "transition": {
+      "kind": "withdraw",
+      "http": 200,
+      "actor": "U3",
+      "before": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T22:53:25.338897+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "published",
+        "version": 17,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "after": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T22:53:34.939873+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "withdrawn",
+        "version": 18,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "verifiedPostgres": true
+    },
+    "http": [
+      {
+        "actor": "owner",
+        "operation": "withdraw",
+        "status": 200,
+        "serverRequestId": "00c32245-6a18-4cbf-bbd8-bb43dbf282d7"
+      }
+    ]
+  },
+  "republication": {
+    "issuedExactlyOnce": true,
+    "transition": {
+      "kind": "republish",
+      "http": 200,
+      "actor": "U3",
+      "before": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T23:03:07.89826+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "withdrawn",
+        "version": 18,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "after": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T23:03:25.717012+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "published",
+        "version": 19,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "verifiedPostgres": true
+    },
+    "http": [
+      {
+        "actor": "owner",
+        "operation": "republish",
+        "status": 200,
+        "serverRequestId": "9702e255-90f2-4598-a228-ac5c073fbb9c"
+      }
+    ],
+    "authority": {
+      "actor": "U3",
+      "verifiedByGoTrue": true,
+      "serverCapacity": "owner",
+      "publish": true
+    }
+  },
+  "actualChromeChecks": [
+    {
+      "phase": "withdrawn",
+      "actor": "client-withdrawn",
+      "freshBrowserContext": true,
+      "httpCacheDisabled": true,
+      "appCacheFresh": true,
+      "exploreVisible": false,
+      "bookingShopOffered": false,
+      "catalogHttp": 500,
+      "slotsHttp": 500,
+      "slotSelectionVisible": false,
+      "reservationCreated": false
+    },
+    {
+      "phase": "published",
+      "actor": "client-published",
+      "freshBrowserContext": true,
+      "httpCacheDisabled": true,
+      "appCacheFresh": true,
+      "exploreVisible": true,
+      "bookingShopOffered": true,
+      "catalogHttp": 200,
+      "slotsHttp": 200,
+      "slotSelectionVisible": true,
+      "reservationCreated": false
+    }
+  ],
+  "readHttp": [
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 0,
+      "shopIds": []
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 6,
+      "shopIds": [
+        "00958628-be5d-4798-bb59-fd04845b72e9",
+        "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "6b55d223-2b0c-46c8-a8d6-01f15bd688a7",
+        "c62167dd-d508-4c2e-8eb4-795f8cd5a55e",
+        "d9d9ce56-b9a9-4ac1-8dfb-095e5ca388b7",
+        "dda8ee93-750b-4f53-949b-9f205eff6cb4"
+      ]
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-get_booking_catalog",
+      "status": 500,
+      "cache": "no-store",
+      "errorCode": "P0002"
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-list_booking_slots",
+      "status": 500,
+      "cache": "no-store",
+      "errorCode": "P0002"
+    },
+    {
+      "actor": "client-published",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 1,
+      "shopIds": [
+        "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6"
+      ]
+    },
+    {
+      "actor": "client-published",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 7,
+      "shopIds": [
+        "00958628-be5d-4798-bb59-fd04845b72e9",
+        "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "6b55d223-2b0c-46c8-a8d6-01f15bd688a7",
+        "c62167dd-d508-4c2e-8eb4-795f8cd5a55e",
+        "d9d9ce56-b9a9-4ac1-8dfb-095e5ca388b7",
+        "dda8ee93-750b-4f53-949b-9f205eff6cb4",
+        "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6"
+      ]
+    },
+    {
+      "actor": "client-published",
+      "operation": "read-get_booking_catalog",
+      "status": 200,
+      "cache": "no-store",
+      "publicationState": "published"
+    },
+    {
+      "actor": "client-published",
+      "operation": "read-list_booking_slots",
+      "status": 200,
+      "cache": "no-store",
+      "count": 62
+    }
+  ],
+  "sessionCleanup": [
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "client-published",
+      "operation": "close-own-session",
+      "status": 204
+    }
+  ],
+  "independentPostgresIntegrity": {
+    "status": "passed",
+    "checkedAt": "2026-11-21T23:06:27.452745+00:00",
+    "project": "app-barberia-002-local",
+    "postgres": "127.0.0.1:54422",
+    "api": "127.0.0.1:54421",
+    "shop": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+    "publication": "published",
+    "version": 19,
+    "counts": {
+      "care": 29,
+      "items": 45,
+      "shops": 9,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 71,
+      "invitations": 8,
+      "memberships": 15,
+      "reservations": 42,
+      "invitationMail": 5,
+      "reservationEvents": 55
+    },
+    "history": 18,
+    "readOnly": true,
+    "allProtectedBusinessRowsUnchanged": true,
+    "onlyChangedBusinessRow": "target publication withdrawn→published/version18→19; across both authorized transitions publication restored and version17→19",
+    "insertedBusinessRows": 0,
+    "deletedBusinessRows": 0,
+    "allOtherSettingsUnchanged": true,
+    "schemaHistoryEnvUnchanged": true,
+    "noShowAudits": 1,
+    "ownNewSessionsRemaining": 0,
+    "closedOwnSessions": 3
+  },
+  "verifier": {
+    "scope": "test operator only",
+    "cause": "incorrect404 expectation; existing SQL P0002/NOT_AVAILABLE maps to direct PostgREST HTTP500",
+    "classification": {
+      "http": 500,
+      "code": "P0002",
+      "message": "NOT_AVAILABLE",
+      "details": null,
+      "hint": null,
+      "requires": "approved read RPC, exact tenant and SQL withdrawn; any other response fails closed"
+    },
+    "tests": {
+      "command": "node --test .artifacts/b5-republish/withdrawn-response.test.mjs .artifacts/b5-republish/resume.test.mjs",
+      "passed": 4,
+      "failed": 0,
+      "doublesOnly": true,
+      "coverage": [
+        "catalogue and slot exact denial",
+        "reject arbitrary500 and incorrect response/context",
+        "single republication without repeated withdrawal",
+        "resume source uses strict classifier and no withdrawal click"
+      ]
+    },
+    "files": {
+      ".artifacts/b5-offer-final/run.mjs": "fceb469649e2075654c0f2f5893174c81cdc4e42dd3b1f42cf1f53be742375d3",
+      ".artifacts/b5-republish/run.mjs": "8d5aa033640e7e232b089c7afe55f50d2d70fe69a0ea179cbbab4aa7c5178c0f",
+      ".artifacts/b5-republish/withdrawn-response.mjs": "e2ff54a05ccab68caff4e4a3b7bca6a8b7ac436626b99213c0e98f1b17436b28",
+      ".artifacts/b5-republish/withdrawn-response.test.mjs": "9c4eafdfe269ea3336f35e49c8a72d54e319988dc9b61fc8bdd5aeed3be58e43",
+      ".artifacts/b5-republish/resume.test.mjs": "e5e2d6eb0cfdcfb0c9a1fb979c85f3029d2371abbebb3fc4c26a1582859b72df",
+      ".artifacts/b5-republish/final-read.mjs": "b8c3ed698752bd18371c20e2c863363e84d11dd9073453af5d65662776e23bc0"
+    }
+  },
+  "publicationTraceability": {
+    "mechanism": "existing settings version + separately persisted HTTP request IDs, actor and SQL snapshots",
+    "newPublicationAuditRows": 0,
+    "note": "Current set-publication contract increments version; does not append dedicated publication events. No extra SQL or audit writes introduced."
+  },
+  "closure": {
+    "originalCommandsExecuted": 22,
+    "originalCommandsFullyAccredited": 22,
+    "additionalAuthorizedTransitionsTotal": 2,
+    "additionalBusinessCommandsThisContinuation": 1,
+    "B1": "previously accredited; not repeated",
+    "B2": "previously accredited; not repeated",
+    "B3": "previously accredited; not repeated",
+    "B4": "previously accredited; not repeated",
+    "B51": "previously accredited; not repeated",
+    "B52": "closed functional Web LOCAL",
+    "B53": "closed functional Web LOCAL",
+    "B5": "functionally finished Web LOCAL",
+    "matrix": {
+      "verified": 40,
+      "withoutIntegralValidation": 0,
+      "notApplicable": 4,
+      "blocked": 3,
+      "partial": 1
+    }
+  },
+  "limits": [
+    "No product/SQL/RLS/Edge change",
+    "No new reservations or payments",
+    "No Cloud/Android/migrations/restart/deploy/Git writes",
+    "Academic joint tasks and other environments remain open as applicable",
+    "Dedicated publication events not implemented by current contract; HTTP request IDs and SQL versions retained",
+    "Administrative SMTP unknown, property transfer, public infrastructure, visual and Android acceptance, initial/F5 performance separate"
+  ],
+  "priorEvidence": [
+    "b523-funcional.json",
+    "b5-ultimas-comprobaciones.json",
+    "b5-retiro-republicacion.json"
+  ],
+  "rawEvidence": ".artifacts/b5-republish",
+  "errors": []
+}

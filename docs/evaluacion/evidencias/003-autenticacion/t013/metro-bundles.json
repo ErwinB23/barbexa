@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-14",
+  "development": true,
+  "newApk": false,
+  "executedBy": "Codex",
+  "records": [
+    {
+      "platform": "web",
+      "status": 200,
+      "localPublicKeyBundled": true,
+      "envNamePresent": true,
+      "envFilePresent": false,
+      "dotenvVirtualModule": false,
+      "signupModuleBundled": true,
+      "confirmationModuleBundled": true,
+      "hasRuntimeProvider": true
+    },
+    {
+      "platform": "android",
+      "status": 200,
+      "localPublicKeyBundled": true,
+      "envNamePresent": true,
+      "envFilePresent": false,
+      "dotenvVirtualModule": false,
+      "signupModuleBundled": true,
+      "confirmationModuleBundled": true,
+      "hasRuntimeProvider": true
+    }
+  ]
+}

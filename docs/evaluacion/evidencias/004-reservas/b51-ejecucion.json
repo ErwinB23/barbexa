@@ -1,0 +1,490 @@
+{
+  "block": "B5.1",
+  "status": "functional-web-yape-complete-agreed-scope",
+  "checkedAt": "2026-11-21T03:14:57.563934+00:00",
+  "localDate": "2026-11-20",
+  "timezone": "America/Lima",
+  "previousAttempt": {
+    "block": "B5.1",
+    "status": "blocked-before-business-operations",
+    "checkedAt": "2026-11-21T03:04:26.663Z",
+    "authorization": {
+      "newFictitiousYapeReservations": 1,
+      "assignedProfessionalFictitiousReceipts": 1,
+      "localSessionsAndReadChecks": true,
+      "serviceStartsOrRestarts": false
+    },
+    "environment": {
+      "expectedProject": "app-barberia-002-local",
+      "api": "http://127.0.0.1:54421",
+      "databasePort": 54422,
+      "web": "http://localhost:8081",
+      "selectedDockerContext": "desktop-linux",
+      "dockerApiAvailable": false,
+      "dockerEnginePipeMissing": true,
+      "apiPortListening": false,
+      "databasePortListening": false,
+      "metroPortListening": false,
+      "dockerDesktopProcessCount": 0,
+      "dockerServiceFound": false,
+      "actualDatabaseIdentityNotRevalidated": true
+    },
+    "executed": {
+      "newAuthSessions": 0,
+      "businessCommands": 0,
+      "newReservations": 0,
+      "receipts": 0,
+      "emails": 0,
+      "serviceOperations": 0,
+      "productChanges": 0,
+      "cloudRequests": 0
+    },
+    "results": {
+      "reservationYape": {
+        "status": "not-executed",
+        "http": null
+      },
+      "fictitiousReceipt": {
+        "status": "not-executed",
+        "http": null
+      },
+      "chromeJourney": "not-started",
+      "postgresQueries": "not-started-reader-environment-guard-failed",
+      "currentCounts": null,
+      "currentIntegrityNotRevalidated": true
+    },
+    "historicalBaseline": {
+      "source": "docs/evaluacion/evidencias/004-reservas/b5-preparacion.json",
+      "reservations": 40,
+      "items": 43,
+      "care": 27,
+      "careEvents": 65,
+      "reservationEvents": 53,
+      "warning": "Historical evidence only; not a current query"
+    },
+    "preparedVerifier": {
+      "files": [
+        ".artifacts/b51-run/gate.mjs",
+        ".artifacts/b51-run/gate.test.mjs",
+        ".artifacts/b51-run/state.mjs",
+        ".artifacts/b51-run/preflight.mjs"
+      ],
+      "testsWithDoubles": {
+        "command": "node --test .artifacts/b51-run/gate.test.mjs",
+        "passed": 2,
+        "failed": 0
+      },
+      "syntaxChecks": "passed for all four verifier modules",
+      "databaseAssertions": "not executed; database unavailable"
+    },
+    "nextStep": "Make existing LOCAL services available through user action or specific service-start authorization; revalidate baseline and live slots before issuing the two already-authorized business commands.",
+    "remainingB5Branches": [
+      "create/update shop configuration Web",
+      "withdraw publication Web",
+      "service CRUD/activation Web",
+      "admin hours/closures Web",
+      "save/restore Yape instructions Web",
+      "no-show Web"
+    ],
+    "wholeB5Closed": false
+  },
+  "authorization": {
+    "businessCommands": 2,
+    "localSessions": true,
+    "controlledLocalServicesStart": "explicitly authorized in subsequent user message"
+  },
+  "environment": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "databasePort": 54422,
+    "web": "http://localhost:8081",
+    "profile": "local-team-authority",
+    "database": "PostgreSQL 17.11",
+    "migrations": 17
+  },
+  "serviceOperations": {
+    "dockerDesktopStartedByUser": true,
+    "existingLocalEdgeRuntimeStarted": 1,
+    "localMetroStarted": 1,
+    "otherContainersOperatedByCodex": 0,
+    "backupsStarted": 0,
+    "configChanged": false,
+    "volumesRecreated": false,
+    "metroRawOutputStored": false
+  },
+  "preflight": {
+    "baseline": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 53
+    },
+    "businessRowsSameAsHistoricalB5": true,
+    "authUsersFullFingerprintDifferedBeforeTest": true,
+    "authChangeCauseNotAttributed": true,
+    "authStableFieldsUnchangedDuringTest": true,
+    "clientEligible": true,
+    "shopPublished": true,
+    "settingsVersion": 17,
+    "servicePriceMinor": 2500,
+    "durationMinutes": 15,
+    "professionalActiveAndAssigned": true,
+    "syntheticInstructionsHash": "bdef51a114b645d945574e430ad16719675707622c3ff3543f918771df0aef8c"
+  },
+  "reservationId": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+  "slot": {
+    "startsAt": "2026-11-21T16:00:00.000Z",
+    "endsAt": "2026-11-21T16:15:00.000Z",
+    "localDate": "2026-11-21",
+    "serverClock": "2026-11-21T03:13:52.460646+00:00",
+    "availabilityRead200": true
+  },
+  "actualBusinessOperations": [
+    {
+      "operation": "confirm-yape",
+      "http": 201,
+      "state": {
+        "id": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+        "end": "2026-11-21T16:15:00+00:00",
+        "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "items": 1,
+        "start": "2026-11-21T16:00:00+00:00",
+        "state": "confirmed",
+        "amount": 25,
+        "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "method": "yape",
+        "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+        "payment": "pending",
+        "duration": 15,
+        "attendance": "confirmed",
+        "careEvents": [
+          {
+            "kind": "created",
+            "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+            "capacity": "client"
+          }
+        ],
+        "amountMinor": 2500,
+        "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+        "reservationEvents": [
+          {
+            "kind": "confirmed",
+            "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+            "capacity": "client"
+          }
+        ]
+      }
+    },
+    {
+      "operation": "receive-yape",
+      "http": 200,
+      "state": {
+        "id": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+        "end": "2026-11-21T16:15:00+00:00",
+        "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "items": 1,
+        "start": "2026-11-21T16:00:00+00:00",
+        "state": "confirmed",
+        "amount": 25,
+        "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "method": "yape",
+        "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+        "payment": "paid",
+        "duration": 15,
+        "attendance": "confirmed",
+        "careEvents": [
+          {
+            "kind": "created",
+            "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+            "capacity": "client"
+          },
+          {
+            "kind": "receive",
+            "actor": "8ff39bfd-5242-4058-8875-b2d378500d91",
+            "capacity": "barber"
+          }
+        ],
+        "amountMinor": 2500,
+        "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+        "reservationEvents": [
+          {
+            "kind": "confirmed",
+            "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+            "capacity": "client"
+          }
+        ]
+      }
+    }
+  ],
+  "chromeEvidence": [
+    {
+      "actor": "client",
+      "route": "/my-reservations",
+      "reservation": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+      "method": "yape",
+      "payment": "pending",
+      "attendance": "confirmed",
+      "amountMinor": 2500,
+      "syntheticInstructionsVisible": true,
+      "permissions": {
+        "attend": false,
+        "refund": false,
+        "receive": false
+      }
+    },
+    {
+      "actor": "worker",
+      "route": "/agenda",
+      "reservation": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+      "method": "yape",
+      "payment": "pending",
+      "attendance": "confirmed",
+      "amountMinor": 2500,
+      "syntheticInstructionsVisible": true,
+      "permissions": {
+        "attend": true,
+        "refund": false,
+        "receive": true
+      }
+    },
+    {
+      "actor": "worker",
+      "updatedPaidVisible": true,
+      "secondReceiptControlAbsent": true,
+      "attendanceNotStarted": true
+    },
+    {
+      "actor": "client",
+      "route": "/my-reservations",
+      "reservation": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+      "method": "yape",
+      "payment": "paid",
+      "attendance": "confirmed",
+      "amountMinor": 2500,
+      "syntheticInstructionsVisible": true,
+      "permissions": {
+        "attend": false,
+        "refund": false,
+        "receive": false
+      }
+    }
+  ],
+  "http": [
+    {
+      "actor": "client",
+      "operation": "direct-read-get_booking_catalog",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "direct-read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "read:care:payment-options",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "confirm-yape",
+      "status": 201
+    },
+    {
+      "actor": "client",
+      "operation": "read:care:read",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "direct-read-care",
+      "status": 200
+    },
+    {
+      "actor": "worker",
+      "operation": "direct-read-authority",
+      "status": 200
+    },
+    {
+      "actor": "worker",
+      "operation": "read:care:read",
+      "status": 200
+    },
+    {
+      "actor": "worker",
+      "operation": "direct-read-care",
+      "status": 200
+    },
+    {
+      "actor": "worker",
+      "operation": "receive-yape",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "read:care:read",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "direct-read-care",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "close-own-test-session",
+      "status": 204
+    },
+    {
+      "actor": "worker",
+      "operation": "close-own-test-session",
+      "status": 204
+    }
+  ],
+  "verification": {
+    "status": "passed",
+    "checkedAt": "2026-11-21T03:14:57.563934+00:00",
+    "reservationId": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+    "state": {
+      "id": "11ccc730-9194-4f8e-9007-1b2bd419718e",
+      "end": "2026-11-21T16:15:00+00:00",
+      "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+      "items": 1,
+      "start": "2026-11-21T16:00:00+00:00",
+      "state": "confirmed",
+      "amount": 25,
+      "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+      "method": "yape",
+      "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+      "payment": "paid",
+      "duration": 15,
+      "attendance": "confirmed",
+      "careEvents": [
+        {
+          "kind": "created",
+          "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+          "capacity": "client"
+        },
+        {
+          "kind": "receive",
+          "actor": "8ff39bfd-5242-4058-8875-b2d378500d91",
+          "capacity": "barber"
+        }
+      ],
+      "amountMinor": 2500,
+      "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+      "reservationEvents": [
+        {
+          "kind": "confirmed",
+          "actor": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+          "capacity": "client"
+        }
+      ]
+    },
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "all40PriorBusinessRowsUnchanged": true,
+    "all43PriorDetailsUnchanged": true,
+    "oldPaymentsAndCareUnchanged": true,
+    "ownersMembershipsAndOtherTenantsUnchanged": true,
+    "servicesSchedulesSettingsAndSchemaUnchanged": true,
+    "logicalInserts": 6,
+    "logicalUpdates": 1,
+    "deletedRows": 0,
+    "receiveEvents": 1,
+    "forbiddenCareEvents": 0,
+    "newSessionsRemaining": 0,
+    "authStableFieldsUnchanged": true,
+    "authHealth": 200,
+    "dbHealthyAndLocalVerifiedByReader": true,
+    "readOnly": "on"
+  },
+  "audit": {
+    "status": "passed",
+    "receipts": [
+      {
+        "kind": "receive",
+        "actor": "8ff39bfd-5242-4058-8875-b2d378500d91",
+        "method": "yape",
+        "capacity": "barber",
+        "amountMinor": 2500
+      }
+    ],
+    "confirmationCount": 1
+  },
+  "actualBusinessEffects": {
+    "commands": 2,
+    "inserts": 6,
+    "updates": 1,
+    "deletes": 0,
+    "description": "One reservation, item, care ledger, confirmed event, created event and receive event inserted; the new ledger updated pending to paid only."
+  },
+  "tests": {
+    "guardWithDoubles": {
+      "command": "node --test .artifacts/b51-run/gate.test.mjs",
+      "passed": 2,
+      "failed": 0
+    },
+    "nodeSyntaxChecks": "passed; verifier modules only",
+    "actualChromeJourney": true,
+    "actualPostgresReadOnlyChecks": true,
+    "productionCodeChanges": false,
+    "fullProductSuitesNotRepeated": "No product code changed; reused previous accredited evidence."
+  },
+  "incidents": [
+    {
+      "type": "resolved-environment-unavailable",
+      "detail": "Initial attempt did not issue business commands; user later opened Docker and explicitly authorized controlled service starts."
+    },
+    {
+      "type": "verifier-entrypoint",
+      "detail": "Historical reader CLI guard matched any preflight.mjs filename; distinct prepare.mjs entry point used and compatibility wrapper isolated it. Read-only verifier correction; no product changes."
+    },
+    {
+      "type": "historical-auth-drift",
+      "detail": "Full auth.users hash differed before test; cause not asserted. All historical business tables and auth.identities matched; current stable auth fields/credentials unchanged through the two authorized sessions."
+    }
+  ],
+  "restrictions": {
+    "realMoney": false,
+    "cloudUsed": false,
+    "androidChanged": false,
+    "emails": 0,
+    "newAccounts": 0,
+    "attendanceCommands": 0,
+    "otherB5BranchesExecuted": 0,
+    "productCodeChanged": false,
+    "sqlRlsEdgeChanged": false,
+    "configurationChanged": false,
+    "commitsPushOrDeploy": false
+  },
+  "remainingB5Branches": [
+    "create/update shop configuration Web",
+    "withdraw publication Web",
+    "service CRUD/activation Web",
+    "admin hours/closures Web",
+    "save/restore Yape instructions Web",
+    "no-show Web"
+  ],
+  "wholeB5Closed": false,
+  "spec005T012JointWebAndroidClosed": false,
+  "doNotRepeat": "Both authorized business commands have executed. Preserve the new reservation and audit; never rerun attempt-1/run.mjs."
+}

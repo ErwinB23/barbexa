@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "head": "0ccd33c",
+  "reviewedFiles": 115,
+  "secretFindings": [],
+  "invalidLocalLinks": [],
+  "credentialsFileIgnored": true,
+  "completed": 17,
+  "total": 34,
+  "manualTasksPending": [
+    "T013",
+    "T019"
+  ],
+  "diffCheckGlobal": 2,
+  "diffCheckExcludingOnlyActiveLog": 0,
+  "stagedFiles": [],
+  "extensionHooksPresent": false,
+  "scope": "Fuentes, pruebas y evidencias enumeradas del bloque; no equivale a auditoría de seguridad completa."
+}

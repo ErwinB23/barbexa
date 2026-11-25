@@ -1,0 +1,201 @@
+{
+  "block": "B3",
+  "status": "prepared-not-executed",
+  "checkedAt": "2026-11-20T20:48:49.621Z",
+  "scope": "LOCAL read-only; documentation only",
+  "local": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "databasePort": 54422,
+    "postgres": "17.11",
+    "databaseHealthy": true,
+    "transaction": "repeatable read",
+    "readOnly": "on",
+    "migrations": 17,
+    "counts": {
+      "care": 25,
+      "items": 41,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 61,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 38,
+      "invitationMail": 5,
+      "reservationEvents": 49
+    },
+    "sameBusinessAndAuthRowsAsB2": true,
+    "sameSchemaAsB2": true,
+    "noChangesDuringRead": true,
+    "protectedB2": {
+      "id": "c4e9b153-9275-4a9d-9f32-f009bdb087d9",
+      "state": "confirmed",
+      "method": "cash",
+      "payment": "paid",
+      "attendance": "completed",
+      "amountMinor": 2500
+    },
+    "policy": {
+      "step": 15,
+      "notice": 0,
+      "horizon": 30,
+      "version": 5,
+      "publication": "published",
+      "advanceCancel": 120
+    },
+    "rescheduleAdvanceMin": 120
+  },
+  "actors": {
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91",
+    "professional": "4c1860a5-64fa-441e-9ae1-9c0fb8f9e527",
+    "service": "0805ab4a-c879-4054-a2d9-1de5af150407",
+    "professionalActive": true,
+    "serviceActive": true,
+    "assignmentActive": true,
+    "serviceAmountMinor": 2500,
+    "durationMin": 15
+  },
+  "reusedEvidence": [
+    "docs/evaluacion/evidencias/004-reservas/cancellation.md",
+    "specs/005-atencion-pagos-manuales/real-tests.json",
+    "specs/010-reprogramacion-reservas/quickstart.md",
+    "specs/011-equipo-resumen-profesional/contracts/team-authority.md"
+  ],
+  "currentChecks": {
+    "command": "node --test tests/presentation/booking/cancellation.test.mjs tests/presentation/booking/reschedule.test.mjs tests/presentation/booking/care-control.test.mjs tests/integration/booking/reschedule.test.mjs tests/integration/booking/care.test.mjs",
+    "passed": 27,
+    "failed": 0,
+    "exitCode": 0,
+    "type": "existing local doubles and contracts, no real HTTP mutations",
+    "uiDiagnostic": {
+      "kind": "actual-components-with-local-doubles-no-browser-no-network",
+      "knownCareState": "completed",
+      "cases": [
+        {
+          "name": "agenda-reschedule",
+          "buttons": [
+            {
+              "kind": "Pressable",
+              "label": "Reprogramar cita",
+              "disabled": false
+            },
+            {
+              "kind": "Pressable",
+              "label": "Consultar historial de reprogramación",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "name": "agenda-cancel",
+          "buttons": [
+            {
+              "kind": "Pressable",
+              "label": "Cancelar cita",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "name": "client-reschedule",
+          "buttons": [
+            {
+              "kind": "Pressable",
+              "label": "Reprogramar cita",
+              "disabled": false
+            },
+            {
+              "kind": "Pressable",
+              "label": "Consultar historial de reprogramación",
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "name": "cancelled-reschedule",
+          "buttons": [
+            {
+              "kind": "Pressable",
+              "label": "Consultar historial de reprogramación",
+              "disabled": false
+            }
+          ]
+        }
+      ]
+    },
+    "noBrowserB3": true,
+    "noNewAuthSessions": true
+  },
+  "finding": {
+    "kind": "presentation-eligibility",
+    "demonstrated": "confirmed reservation state alone permits reschedule and staff cancel controls despite completed care; reproduced with actual components/local doubles",
+    "serverGuardsPresent": true,
+    "realServerDenialNotRetested": true,
+    "fixed": false,
+    "codeChangeRequiresAuthorization": true
+  },
+  "proposal": {
+    "detail": "docs/PLAN-FINALIZACION-WEB.md#b3--preparacion-de-cancelacion-reprogramacion-y-reembolso-sin-ejecutar",
+    "newReservations": 2,
+    "commands": {
+      "confirm": 2,
+      "receive": 1,
+      "reschedule": 2,
+      "cancel": 2,
+      "refund": 1
+    },
+    "expectedBusinessInserts": 16,
+    "expectedBusinessUpdates": 8,
+    "expectedBusinessDeletes": 0,
+    "expectedFinal": {
+      "reservations": 40,
+      "items": 43,
+      "care": 27,
+      "careEvents": 65,
+      "reservationEvents": 53,
+      "rescheduleEventsAdded": 2
+    },
+    "existingReservationsProtected": 38,
+    "existingItemsProtected": 41,
+    "paymentMethod": "cash, fictitious",
+    "moneyTransferred": false,
+    "authorized": false,
+    "executed": false
+  },
+  "pending": [
+    "Chrome cancellation client and administrator",
+    "Chrome rescheduling client and administrator with mandatory outside-deadline reason",
+    "Chrome refund with current owner-only authority",
+    "presentation eligibility fix and regressions",
+    "manual Yape receipt Web remains NOT accredited; separate authorization, not tested in B3",
+    "joint Android and spec acceptance gates remain open"
+  ],
+  "incident": "Initial SELECT used nonexistent services.price; transaction aborted without writes. Corrected reader only to verified price_amount.",
+  "noCloud": true,
+  "noServicesOperated": true,
+  "noProductionCodeChanged": true,
+  "noBusinessMutations": true,
+  "finalReadonlyVerification": {
+    "checkedAt": "2026-11-20T20:54:47.793Z",
+    "unchangedAllBusinessAndAuthTables": true,
+    "unchangedCatalog": true,
+    "unchangedHistory": true,
+    "counts": {
+      "care": 25,
+      "items": 41,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 61,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 38,
+      "invitationMail": 5,
+      "reservationEvents": 49
+    }
+  }
+}

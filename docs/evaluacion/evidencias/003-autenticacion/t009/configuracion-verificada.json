@@ -1,0 +1,25 @@
+{
+  "archiveCandidateCount": 131,
+  "exclusionChecks": 7,
+  "requiredFilesIncluded": 7,
+  "findings": [],
+  "variants": {
+    "development": {
+      "marker": true,
+      "cleartext": "true",
+      "scheme": "appbarberia",
+      "package": "com.erwin23.appbarberia",
+      "projectId": "d428c9e5-0852-43c3-974c-fae3bf286f3e"
+    },
+    "production": {
+      "marker": false,
+      "cleartext": "false",
+      "scheme": "appbarberia",
+      "package": "com.erwin23.appbarberia",
+      "projectId": "d428c9e5-0852-43c3-974c-fae3bf286f3e"
+    }
+  },
+  "archiveGenerated": false,
+  "buildExecuted": false,
+  "credentialsGenerated": false
+}

@@ -1,0 +1,72 @@
+{
+  "added": [
+    {
+      "path": "node_modules/@supabase/auth-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/@supabase/functions-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/@supabase/phoenix",
+      "version": "0.4.5"
+    },
+    {
+      "path": "node_modules/@supabase/postgrest-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/@supabase/realtime-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/@supabase/storage-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/@supabase/supabase-js",
+      "version": "2.119.0"
+    },
+    {
+      "path": "node_modules/expo-secure-store",
+      "version": "58.0.3"
+    },
+    {
+      "path": "node_modules/iceberg-js",
+      "version": "0.8.1"
+    },
+    {
+      "path": "node_modules/tslib",
+      "version": "2.8.1"
+    }
+  ],
+  "removed": [],
+  "changed": [
+    {
+      "path": "",
+      "beforeVersion": "0.1.0",
+      "afterVersion": "0.1.0",
+      "fields": [
+        "dependencies"
+      ]
+    }
+  ],
+  "packageFields": [
+    "dependencies"
+  ],
+  "rootDependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "expo": "~58.0.24",
+    "expo-constants": "~58.0.16",
+    "expo-linking": "~58.0.17",
+    "expo-router": "~58.0.31",
+    "expo-secure-store": "58.0.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "react-native-screens": "~4.30.1",
+    "react-native-web": "0.21.4"
+  }
+}

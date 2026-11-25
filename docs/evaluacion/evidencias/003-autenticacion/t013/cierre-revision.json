@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "type": "documentary-review-only",
+  "branch": "main",
+  "head": "0ccd33c",
+  "headPreserved": true,
+  "changedFiles": [
+    "docs/evaluacion/evidencias/003-autenticacion/t011/resultado.md",
+    "docs/evaluacion/evidencias/003-autenticacion/t013/manual.md",
+    "docs/evaluacion/evidencias/003-autenticacion/t013/resultado.md",
+    "ESTADO-DESARROLLO.md",
+    "docs/evaluacion/evidencias/003-autenticacion/informe.md",
+    "specs/003-autenticacion-navegacion/tasks.md"
+  ],
+  "unexpectedChanges": [],
+  "newEvidence": "docs/evaluacion/evidencias/003-autenticacion/t013/cierre-manual.md",
+  "activeLogContentPreserved": true,
+  "stagingPreserved": true,
+  "totalChecked": 13,
+  "t011Checked": true,
+  "t013Checked": true,
+  "t014Pending": true,
+  "reusedQualityExitCodes": [
+    {
+      "name": "types",
+      "exitCode": 0
+    },
+    {
+      "name": "core-types",
+      "exitCode": 0
+    },
+    {
+      "name": "lint",
+      "exitCode": 0
+    },
+    {
+      "name": "format",
+      "exitCode": 0
+    },
+    {
+      "name": "unit",
+      "exitCode": 0
+    },
+    {
+      "name": "integration-ui",
+      "exitCode": 0
+    },
+    {
+      "name": "architecture",
+      "exitCode": 0
+    },
+    {
+      "name": "final-types",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-lint",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-tests",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-format",
+      "exitCode": 0
+    }
+  ],
+  "testsExecutedNow": false,
+  "localLinkErrors": [],
+  "gitDiffGlobalExit": 2,
+  "gitDiffExcludingOnlyActiveLogExit": 0
+}

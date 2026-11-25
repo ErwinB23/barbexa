@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "project": "app-barberia-002-local",
+  "result": {
+    "checks": [
+      {
+        "label": "administrative-scope-0-A",
+        "ok": true,
+        "status": 200
+      },
+      {
+        "label": "administrative-scope-0-B",
+        "ok": true,
+        "status": 403
+      },
+      {
+        "label": "administrative-scope-1-B",
+        "ok": true,
+        "status": 200
+      },
+      {
+        "label": "administrative-scope-1-A",
+        "ok": true,
+        "status": 403
+      },
+      {
+        "label": "administrative-scope-2-A",
+        "ok": true,
+        "status": 403
+      },
+      {
+        "label": "administrative-scope-2-B",
+        "ok": true,
+        "status": 403
+      },
+      {
+        "label": "inactive-no-private-shop-A",
+        "ok": true,
+        "status": 200
+      },
+      {
+        "label": "inactive-no-private-shop-B",
+        "ok": true,
+        "status": 200
+      },
+      {
+        "label": "shared-roles-stay-contextual",
+        "ok": true,
+        "status": 200
+      },
+      {
+        "label": "real-sql-rls-inactive-isolated",
+        "ok": true
+      },
+      {
+        "label": "existing-data-preserved",
+        "ok": true
+      }
+    ],
+    "passed": 11,
+    "failed": 0,
+    "newUsersRemaining": 3,
+    "scope": "real local SQL and HTTP/JWT; UI manual not included"
+  }
+}

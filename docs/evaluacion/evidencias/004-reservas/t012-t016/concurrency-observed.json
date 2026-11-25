@@ -1,0 +1,21 @@
+{
+  "source": "Resultados observados en la salida de la única ejecución y comprobación complementaria; no generado por una repetición completa",
+  "project": "app-barberia-002-local",
+  "initialOperatorExit": 1,
+  "completeScenariosPassedBeforeIncorrectHttpAssertion": 14,
+  "conflictingPairs": 10,
+  "sameTenantPairs": 5,
+  "samePhysicalPersonAcrossTenantsPairs": 5,
+  "connectionsPerPair": 2,
+  "observedBarrierWaitersPerPair": 2,
+  "commitsPerConflictingPair": 1,
+  "rejectionsPerConflictingPair": 1,
+  "conflictSqlstate": "23505",
+  "additionalIdempotentPairPassed": true,
+  "publicationRaceExecuted": true,
+  "followupExit": 0,
+  "correctedFullOperatorRerun": false,
+  "accountsCreated": 5,
+  "reservationsObservedBeforeCleanup": 17,
+  "businessEdgeEndToEnd": false
+}

@@ -1,0 +1,782 @@
+{
+  "date": "2026-11-21",
+  "timezone": "America/Lima",
+  "status": "partial:21 executed, no-show temporal pending and withdrawn catalogue negative trace incomplete",
+  "counts": {
+    "approved": 20,
+    "executedPartial": 1,
+    "notExecuted": 1,
+    "executed": 21,
+    "total": 22
+  },
+  "commands": [
+    {
+      "id": "A1",
+      "command": "create-barbershop",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 201,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "A2",
+      "command": "configure-shop",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "A3",
+      "command": "renameBarbershop via PATCH",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C1",
+      "command": "upsert-service create",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C2",
+      "command": "upsert-service edit",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "P1",
+      "command": "set-professional",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "P2",
+      "command": "set-capabilities",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D1",
+      "command": "set-shop-hours initial",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D2",
+      "command": "set-barber-hours initial",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "B1",
+      "command": "set-publication published",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C3",
+      "command": "upsert-service inactive",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C4",
+      "command": "upsert-service active",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D3",
+      "command": "set-shop-hours temporary",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D4",
+      "command": "set-shop-hours restore",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D5",
+      "command": "set-exception",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D6",
+      "command": "withdraw-shop-closure",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "e4e96632-12c6-4d42-90b9-e5bfb5c667df"
+    },
+    {
+      "id": "B2",
+      "command": "set-publication withdrawn",
+      "actor": "U3",
+      "executed": true,
+      "status": "EJECUTADO — TRANSICIÓN APROBADA, EVIDENCIA NEGATIVA PARCIAL",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null,
+      "note": "HTTP200, SQL withdrawn y texto Web Retirada reales. El chequeo de ausencia del catálogo usó id en vez de barbershopId; no se conservó el body. No afirmar ausencia HTTP observada ni repetir la retirada/republicación sin autorización."
+    },
+    {
+      "id": "B3",
+      "command": "set-publication published",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "Y1",
+      "command": "care/configure temporary",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "23c0a909-b6e7-46eb-ab04-b7d727a780bf"
+    },
+    {
+      "id": "Y2",
+      "command": "care/configure restore",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "14cab2a4-29d9-44b4-a21d-23f372e5ebd8"
+    },
+    {
+      "id": "N1",
+      "command": "confirm cash pending",
+      "actor": "client",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 201,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "6f4f8eb5-f78c-4e7e-94d2-1d28d9a9c491"
+    },
+    {
+      "id": "N2",
+      "command": "care/no-show",
+      "actor": "U3 assigned professional",
+      "executed": false,
+      "status": "NO EJECUTADO — BLOQUEO TEMPORAL",
+      "http": null,
+      "postgres": false,
+      "chrome": false,
+      "requestId": null,
+      "note": "Server clock has not reached startsAt + contractual10-minute tolerance; no wait or replacement booking"
+    }
+  ],
+  "actorLabels": {
+    "owner": "U3 existing fictitious LOCAL account",
+    "client": "existing fictitious client"
+  },
+  "ids": {
+    "shop": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+    "service": "745c9dd5-e67a-41d6-a617-abf2bf2fb8e4",
+    "professional": "cc19236c-0b4a-41f7-b716-685f866e94e7",
+    "closure": "0796c14d-c4e0-463b-a73f-14fd1d9ba423",
+    "reservation": "cda64f3c-b27f-4501-84ee-5f1a8e5f5740"
+  },
+  "newShop": {
+    "name": "B5 Cierre Web LOCAL validado",
+    "originalName": "B5 Cierre Web LOCAL",
+    "owner": "U3",
+    "sameIdRenamed": true,
+    "duplicates": false,
+    "publication": "published",
+    "secondaryCount": 0,
+    "service": {
+      "priceMinor": 3000,
+      "currency": "PEN",
+      "durationMin": 30,
+      "active": true
+    },
+    "professional": {
+      "user": "U3",
+      "active": true,
+      "explicitMembership": true
+    },
+    "shopHours": "07:00–24:00 weekdays0..6",
+    "professionalHours": "08:00–23:45 weekdays0..6",
+    "recordsRetained": true
+  },
+  "closure": {
+    "id": "0796c14d-c4e0-463b-a73f-14fd1d9ba423",
+    "logicalWithdrawal": true,
+    "originalRetained": true,
+    "auditCount": 1,
+    "actor": "U3",
+    "reasonRequired": true,
+    "availabilityRecoveredRealRead200": true,
+    "idempotencyNotRepeated": true
+  },
+  "yape": {
+    "target": "005 aislada 0",
+    "temporaryAndRestoreHttp": [
+      200,
+      200
+    ],
+    "exactOriginalHashRestored": true,
+    "toleranceMin": 10,
+    "configuredEventsAdded": 2,
+    "receipts": 0
+  },
+  "reservation": {
+    "id": "cda64f3c-b27f-4501-84ee-5f1a8e5f5740",
+    "state": "confirmed",
+    "amount": 3000,
+    "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+    "endsAt": "2026-11-21T22:45:00+00:00",
+    "method": "cash",
+    "worker": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "payment": "pending",
+    "startsAt": "2026-11-21T22:15:00+00:00",
+    "attendance": "confirmed",
+    "careEvents": [
+      "created"
+    ],
+    "noShowEligibleAt": "2026-11-21T22:25:00+00:00",
+    "reservationEvents": [
+      "confirmed"
+    ],
+    "clientLabel": "existing fictitious client",
+    "workerLabel": "U3 assigned explicit professional",
+    "eligibleAtLima": "2026-11-21 17:25",
+    "startLima": "2026-11-21 17:15",
+    "endLima": "2026-11-21 17:45",
+    "notNoShowYet": true
+  },
+  "temporalPending": {
+    "command": "N2",
+    "reservationId": "cda64f3c-b27f-4501-84ee-5f1a8e5f5740",
+    "startsAt": "2026-11-21T22:15:00.000Z",
+    "eligibleAt": "2026-11-21T22:25:00.000Z",
+    "serverNow": "2026-11-21T22:02:08.377718+00:00",
+    "reason": "Server clock has not reached startsAt + contractual10-minute tolerance; no wait or replacement booking"
+  },
+  "integrity": {
+    "status": "passed",
+    "counts": {
+      "care": 29,
+      "items": 45,
+      "shops": 9,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 70,
+      "invitations": 8,
+      "memberships": 15,
+      "reservations": 42,
+      "invitationMail": 5,
+      "reservationEvents": 55
+    },
+    "history": 18,
+    "all41OriginalReservationsAndAllOtherBaselineRowsIntact": true,
+    "rowDeltasExact": true,
+    "rowDeltas": {
+      "public.barbershops": 1,
+      "public.services": 1,
+      "public.barbershop_memberships": 1,
+      "private.barbershop_ownership": 1,
+      "private.team_authority_events": 2,
+      "public.barbershop_booking_settings": 1,
+      "public.barber_profiles": 1,
+      "public.barber_services": 1,
+      "public.barbershop_hours": 7,
+      "public.barber_schedules": 7,
+      "public.schedule_exceptions": 1,
+      "private.care_events": 3,
+      "public.reservations": 1,
+      "public.reservation_items": 1,
+      "private.booking_care": 1,
+      "public.reservation_events": 1
+    },
+    "schemaHistoryAndEnvUnchanged": true,
+    "noUnexpectedBusinessRows": true,
+    "commandsExecuted": 21,
+    "commandN2Executed": false,
+    "ownNewSessionsRemaining": 0,
+    "data": {
+      "now": "2026-11-21T22:04:49.748659+00:00",
+      "name": "B5 Cierre Web LOCAL validado",
+      "hours": {
+        "shop": 7,
+        "professional": 7
+      },
+      "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "closure": {
+        "audit": 1,
+        "endsAt": "2026-11-22T17:00:00+00:00",
+        "retained": true,
+        "startsAt": "2026-11-22T16:00:00+00:00",
+        "withdrawn": true
+      },
+      "service": {
+        "price": 30,
+        "active": true,
+        "duration": 30
+      },
+      "memberships": 1,
+      "publication": "published",
+      "reservation": {
+        "id": "cda64f3c-b27f-4501-84ee-5f1a8e5f5740",
+        "state": "confirmed",
+        "amount": 3000,
+        "client": "aecfc300-c0ca-4005-bbda-d59c7ac2df69",
+        "endsAt": "2026-11-21T22:45:00+00:00",
+        "method": "cash",
+        "worker": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "payment": "pending",
+        "startsAt": "2026-11-21T22:15:00+00:00",
+        "attendance": "confirmed",
+        "careEvents": [
+          "created"
+        ],
+        "noShowEligibleAt": "2026-11-21T22:25:00+00:00",
+        "reservationEvents": [
+          "confirmed"
+        ]
+      },
+      "professional": {
+        "actor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "active": true
+      },
+      "yapeRestored": true,
+      "settingsVersion": 17,
+      "yapeConfiguredEvents": 2,
+      "ownNewSessionsRemaining": 0
+    }
+  },
+  "http": [
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "A1",
+      "status": 201
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "A2",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "A3",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "C1",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "C2",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "P1",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "P2",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D1",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D2",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "B1",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-get_booking_catalog",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "C3",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-get_booking_catalog",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "C4",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-get_booking_catalog",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D3",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D4",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D5",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "D6",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "B2",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "B3",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read:care:settings",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "Y1",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "Y2",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "read-list_booking_slots",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "read:care:payment-options",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "N1",
+      "status": 201
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read:care:read",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "client",
+      "operation": "close-own-session",
+      "status": 204
+    }
+  ],
+  "web": [
+    {
+      "stage": "published",
+      "catalogPrice": 3000,
+      "slotsAvailable": true
+    },
+    {
+      "stage": "closure-withdrawn",
+      "mandatoryReason": true,
+      "historyRetained": true,
+      "availabilityRecovered": true
+    },
+    {
+      "stage": "republication-read-reconciled",
+      "contractField": "barbershopId",
+      "visible": true,
+      "additionalBusinessWrites": 0
+    },
+    {
+      "stage": "new-booking-agenda",
+      "assignedProfessional": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "visible": true,
+      "paymentPending": true
+    }
+  ],
+  "incidents": [
+    {
+      "kind": "infrastructure",
+      "details": "Docker engine became unavailable after initial preflight; first launch stopped while importing read-only reader, before Chrome and before any write. User reopened Docker. Authorized one start of existing LOCAL Edge container and Metro8081/local-team-authority; other services untouched."
+    },
+    {
+      "kind": "verifier",
+      "stage": "after-A1",
+      "details": "createOnly intentionally hides context button; verifier wrongly required it. Corrected direct navigation to /context, two RED/GREEN regressions; creation never repeated."
+    },
+    {
+      "kind": "verifier",
+      "stage": "A3",
+      "details": "Name editor refreshes context/remounts; transient saved text disappears. PATCH200 and SQL already correct. Reconciled field and unique ID by new read-only Web+SQL visit; PATCH not repeated."
+    },
+    {
+      "kind": "verifier",
+      "stage": "after-B3",
+      "details": "Catalog contract field is barbershopId, not id. Corrected typed shape check with RED/GREEN regression, reread current published catalogue200. This proves final visibility, but cannot retroactively claim preserved negative HTTP trace at withdrawn state."
+    }
+  ],
+  "verifierTests": {
+    "passed": 7,
+    "failed": 0,
+    "redGreen": true,
+    "commands": [
+      "node --test .artifacts/b523-functional/gate.test.mjs .artifacts/b523-functional/resume.test.mjs .artifacts/b523-functional/rename-reconcile.test.mjs .artifacts/b523-functional/catalog-proof.test.mjs",
+      "node --check .artifacts/b523-functional/run.mjs",
+      "node --check .artifacts/b523-functional/browser.mjs",
+      "node --check .artifacts/b523-functional/final-read.mjs"
+    ],
+    "productionChanged": false
+  },
+  "services": {
+    "userOpenedDocker": true,
+    "startedOnly": [
+      "existing supabase_edge_runtime_app-barberia-002-local",
+      "Metro8081developmentLANlocal-team-authority"
+    ],
+    "envLocalUnchanged": true,
+    "otherContainersNotOperated": true,
+    "healthyServicesNotRestarted": true
+  },
+  "sessions": {
+    "ownSessionsClosedHttp204": 5,
+    "newOwnSessionsRemaining": 0,
+    "noCredentialsRecorded": true
+  },
+  "migration": {
+    "notReapplied": true,
+    "history": 18,
+    "noSchemaChanges": true
+  },
+  "matrix48": {
+    "verified": 38,
+    "implementedWithoutIntegralValidation": 2,
+    "notApplicable": 4,
+    "blocked": 3,
+    "partial": 1
+  },
+  "blockStatus": {
+    "B52": "18 commands executed; positive paths and persisted states accredited; negative catalogue visibility under withdrawn lacks preserved valid assertion, so formal integral closure held",
+    "B53": "Yape temporary/exact restore approved; N1 approved; N2 not executed at temporal check",
+    "B5": "OPEN"
+  },
+  "nextSafeStep": [
+    "After explicit continuation and fresh server clock/state reads, use the SAME reservation cda64f3c-b27f-4501-84ee-5f1a8e5f5740 for N2 only when still eligible. Never create a replacement booking.",
+    "Resolve how to accredit the withdrawn negative visibility subcriterion; do not repeat B2/B3 or add business commands without separate permission.",
+    "Do not rerun run.mjs from start;21 writes are persisted and must not repeat."
+  ],
+  "separatePending": [
+    "administrative SMTP",
+    "final property transfer",
+    "visual approval",
+    "Android acceptance",
+    "public deployment/Cloud"
+  ],
+  "changedProductFiles": [],
+  "changedEvidenceFiles": [
+    "docs/evaluacion/evidencias/004-reservas/b523-funcional.json",
+    "docs/evaluacion/evidencias/004-reservas/b523-funcional.md",
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "specs/005-atencion-pagos-manuales/tasks.md"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "project": "app-barberia-002-local",
+  "result": {
+    "ownedProfiles": 3,
+    "ownedMemberships": 4,
+    "revokedMembershipInactive": true,
+    "ownedAuthUsersConfirmed": 3,
+    "ownedShopsConfirmed": 2,
+    "unknownMembershipDependencies": 0,
+    "existingDataFingerprintPreserved": true,
+    "destinationPort": 54422
+  }
+}

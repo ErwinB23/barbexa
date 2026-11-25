@@ -1,0 +1,14 @@
+{
+  "project": "app-barberia-002-local",
+  "usersCreated": 3,
+  "shopsCreated": 2,
+  "initialMemberships": 2,
+  "initialProfessionals": 2,
+  "services": 4,
+  "pendingInvitations": 1,
+  "credentialFileIgnored": true,
+  "emailsSent": 0,
+  "manualDate": "2026-11-15",
+  "testDate": "2026-11-17",
+  "heldForManual": true
+}

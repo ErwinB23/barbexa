@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "project": "app-barberia-002-local",
+  "port": 54422,
+  "checks": {
+    "orphanProfiles": 0,
+    "orphanMemberships": 0,
+    "ownedAuthSessions": 0,
+    "ownedAuthIdentities": 0
+  },
+  "credentialsRemovedFromIgnoredState": true,
+  "credentialsFileSanitized": true
+}

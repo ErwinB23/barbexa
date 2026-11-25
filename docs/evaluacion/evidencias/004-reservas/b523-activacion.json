@@ -1,0 +1,364 @@
+{
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "scope": "B5.2/B5.3 LOCAL activation and conditional22-command trial",
+  "status": "stopped-after-activation-failure",
+  "phaseA": {
+    "target": {
+      "host": "127.0.0.1",
+      "port": 54422,
+      "project": "app-barberia-002-local",
+      "database": "postgres",
+      "oid": 5
+    },
+    "tcpVerified": true,
+    "dependencyCount": 6,
+    "migration": "supabase/migrations/20261121040559_administrative_closure_withdrawal.sql",
+    "migrationSha256": "4f4eb23290595ccef8e13a9b65a9a756ee8e21f63bd83f25c0e26edf8c044335",
+    "attempts": 1,
+    "clientExitCode": 3,
+    "error": "invalid command \\n",
+    "commitReturned": false,
+    "persisted": false,
+    "historyBefore": 17,
+    "historyAfter": 17,
+    "backup": {
+      "path": ".artifacts/b523-execution/before-20261121040559.local.dump",
+      "bytes": 622370,
+      "sha256": "d74833baacb97d8efea305cb870fc106b106682962e43bd6ffc7027a1d9d7e40",
+      "tocVerified": true,
+      "fullyDecodedWithoutRestore": true,
+      "restrictedAcl": true,
+      "sha256Rechecked": true,
+      "restoreExecuted": false
+    },
+    "diagnosis": {
+      "status": "demonstrated",
+      "cause": "String.replace replacement-string interprets dollar-apostrophe in serialized SQL regular expressions as a substitution token; corrupts migration-history INSERT",
+      "occurrencesInMigration": 6,
+      "approvedMigrationPrefixUnchanged": true,
+      "staticMinimalReproduction": true,
+      "callbackReplacementPreservesText": true,
+      "correctionApplied": false,
+      "databaseRetry": false
+    },
+    "integrity": {
+      "status": "passed",
+      "migrationNotApplied": true,
+      "transactionFullyRolledBack": true,
+      "counts": {
+        "care": 28,
+        "items": 44,
+        "shops": 8,
+        "users": 14,
+        "profiles": 13,
+        "careEvents": 67,
+        "invitations": 8,
+        "memberships": 14,
+        "reservations": 41,
+        "invitationMail": 5,
+        "reservationEvents": 54
+      },
+      "historyEntries": 17,
+      "allFingerprintsSchemaHistoryEnvIdentical": true,
+      "probe": {
+        "newRpc": 0,
+        "fixture": 0,
+        "newColumn": 0,
+        "openActivationTransactions": 0
+      },
+      "businessCommandsExecuted": 0,
+      "authSessionsCreated": 0
+    }
+  },
+  "phaseB": {
+    "started": false,
+    "executedCommands": 0,
+    "plannedCommands": 22,
+    "commands": [
+      {
+        "id": "A1",
+        "command": "create-barbershop",
+        "actor": "U3",
+        "effects": "new shop, owner membership, ownership, created authority event",
+        "http": 201,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "A2",
+        "command": "configure-shop",
+        "actor": "U3",
+        "effects": "new settings; contact/address/policies",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "A3",
+        "command": "renameBarbershop via PATCH",
+        "actor": "U3",
+        "effects": "same new shop name only",
+        "http": 200,
+        "availability": "requires Web integration",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "C1",
+        "command": "upsert-service create",
+        "actor": "U3",
+        "effects": "one new service S25/15min",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "C2",
+        "command": "upsert-service edit",
+        "actor": "U3",
+        "effects": "same service S30/30min",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "P1",
+        "command": "set-professional",
+        "actor": "U3",
+        "effects": "new active U3 professional in new tenant only",
+        "http": 200,
+        "availability": "existing setup",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "P2",
+        "command": "set-capabilities",
+        "actor": "U3",
+        "effects": "one new professional/service link",
+        "http": 200,
+        "availability": "existing setup",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D1",
+        "command": "set-shop-hours initial",
+        "actor": "U3",
+        "effects": "7 new shop intervals07:00–24:00",
+        "http": 200,
+        "availability": "existing setup",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D2",
+        "command": "set-barber-hours initial",
+        "actor": "U3",
+        "effects": "7 new professional intervals08:00–23:45",
+        "http": 200,
+        "availability": "existing setup",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "B1",
+        "command": "set-publication published",
+        "actor": "U3",
+        "effects": "new shop becomes commercially visible",
+        "http": 200,
+        "availability": "existing setup",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "C3",
+        "command": "upsert-service inactive",
+        "actor": "U3",
+        "effects": "new service absent from catalogue",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "C4",
+        "command": "upsert-service active",
+        "actor": "U3",
+        "effects": "same new service visible again",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D3",
+        "command": "set-shop-hours temporary",
+        "actor": "U3",
+        "effects": "replace only new7intervals with06:00–24:00",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D4",
+        "command": "set-shop-hours restore",
+        "actor": "U3",
+        "effects": "replace only new7intervals back07:00–24:00",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D5",
+        "command": "set-exception",
+        "actor": "U3",
+        "effects": "new shop closure tomorrow11:00–12:00, no reservations there",
+        "http": 200,
+        "availability": "existing; do not issue until removal is available",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "D6",
+        "command": "withdraw-shop-closure",
+        "actor": "U3",
+        "effects": "remove only D5; exact contract and possible audit effects require approval",
+        "http": 200,
+        "availability": "requires contract/Edge/SQL/Web implementation",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "B2",
+        "command": "set-publication withdrawn",
+        "actor": "U3",
+        "effects": "only new shop hidden; no reservation changes",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "B3",
+        "command": "set-publication published",
+        "actor": "U3",
+        "effects": "restore new shop published",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "Y1",
+        "command": "care/configure temporary",
+        "actor": "U3",
+        "effects": "only0050 instructions; tolerance10; configured event",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "Y2",
+        "command": "care/configure restore",
+        "actor": "U3",
+        "effects": "only0050 instructions exact restoration; configured event",
+        "http": 200,
+        "availability": "existing",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "N1",
+        "command": "confirm cash pending",
+        "actor": "client",
+        "effects": "one new booking/item/care/confirmed/created, S30/30min",
+        "http": 201,
+        "availability": "existing setup; slot must be available when executed",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      },
+      {
+        "id": "N2",
+        "command": "care/no-show",
+        "actor": "U3 assigned professional",
+        "effects": "only new care attendance; one no-show event",
+        "http": 200,
+        "availability": "existing; wait server time",
+        "status": "NO EJECUTADO",
+        "reason": "Phase A failed; Phase B gate not satisfied"
+      }
+    ]
+  },
+  "edge": {
+    "containerObservedRunning": true,
+    "localSourceUntouched": true,
+    "reloaded": false,
+    "newRpcConnected": false,
+    "realAuthenticatedEdgeReadNotExecuted": true,
+    "reason": "Required SQL activation failed; no new RPC persisted"
+  },
+  "chrome": {
+    "launched": false,
+    "reason": "Phase B gate failed",
+    "metroInitialHttp": 200
+  },
+  "temporaryValues": {
+    "yapeEdited": false,
+    "yapeRestorationNeeded": false,
+    "hoursEdited": false,
+    "closureCreated": false,
+    "closureWithdrawn": false
+  },
+  "noShow": {
+    "reservationCreated": false,
+    "commandExecuted": false,
+    "status": "NO EJECUTADO",
+    "initialServerClock": "2026-11-21T04:40:18.23225+00:00",
+    "temporalCaution": "At preflight23:40Lima professional planned interval ends23:45; future retry must choose actual valid slot and never force time or wait indefinitely"
+  },
+  "preservation": {
+    "status": "passed",
+    "migrationNotApplied": true,
+    "transactionFullyRolledBack": true,
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "historyEntries": 17,
+    "allFingerprintsSchemaHistoryEnvIdentical": true,
+    "probe": {
+      "newRpc": 0,
+      "fixture": 0,
+      "newColumn": 0,
+      "openActivationTransactions": 0
+    },
+    "businessCommandsExecuted": 0,
+    "authSessionsCreated": 0
+  },
+  "noNewAccountsSessionsEmails": true,
+  "cloudUsed": false,
+  "androidModified": false,
+  "servicesRestarted": false,
+  "productionCodeModified": false,
+  "preparedMigrationModified": false,
+  "gitWrites": false,
+  "nextRequiredAuthorization": "Authorize correcting only the execution verifier and its regression, rerun read-only preflight/backup validation, then ONE new activation attempt. Phase B remains conditional on successful activation and actual Edge validation; never replay previous writes (none occurred)."
+}

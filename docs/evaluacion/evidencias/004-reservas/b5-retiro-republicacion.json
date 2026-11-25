@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-21",
+  "timezone": "America/Lima",
+  "status": "stopped-after-withdrawal-before-republication",
+  "target": {
+    "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+    "name": "B5 Cierre Web LOCAL validado",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "version": 17,
+    "membership": true,
+    "publication": "published"
+  },
+  "preflight": {
+    "counts": {
+      "care": 29,
+      "items": 45,
+      "shops": 9,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 71,
+      "invitations": 8,
+      "memberships": 15,
+      "reservations": 42,
+      "invitationMail": 5,
+      "reservationEvents": 55
+    },
+    "history": 18,
+    "protectedRowsMatchPrior": true
+  },
+  "issued": {
+    "withdraw": {
+      "actor": "owner",
+      "shop": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+      "state": "withdrawn"
+    }
+  },
+  "transitions": [
+    {
+      "kind": "withdraw",
+      "http": 200,
+      "actor": "U3",
+      "before": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T22:53:25.338897+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "published",
+        "version": 17,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "after": {
+        "id": "f3c7f90f-cb85-4a88-86ce-ec27ec3ba8a6",
+        "now": "2026-11-21T22:53:34.939873+00:00",
+        "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "state": "withdrawn",
+        "version": 18,
+        "otherFieldsHash": "16e5f03be3f6c04bc7abae7c85cd22a777851e9a8b4d0192b93b74030e280291"
+      },
+      "verifiedPostgres": true
+    }
+  ],
+  "http": [
+    {
+      "actor": "owner",
+      "operation": "withdraw",
+      "status": 200,
+      "serverRequestId": "00c32245-6a18-4cbf-bbd8-bb43dbf282d7"
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 0,
+      "shopIds": []
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-list_booking_barbershops",
+      "status": 200,
+      "cache": "no-store",
+      "count": 6,
+      "shopIds": [
+        "00958628-be5d-4798-bb59-fd04845b72e9",
+        "4950d75f-e43b-459b-acf6-e138f9f051e1",
+        "6b55d223-2b0c-46c8-a8d6-01f15bd688a7",
+        "c62167dd-d508-4c2e-8eb4-795f8cd5a55e",
+        "d9d9ce56-b9a9-4ac1-8dfb-095e5ca388b7",
+        "dda8ee93-750b-4f53-949b-9f205eff6cb4"
+      ]
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "read-get_booking_catalog",
+      "status": 500,
+      "cache": "no-store",
+      "errorCode": "P0002"
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "client-withdrawn",
+      "operation": "close-own-session",
+      "status": 204
+    }
+  ],
+  "chrome": {
+    "ownerWithdrawnTextConfirmed": true,
+    "clientNewContext": true,
+    "httpCacheDisabled": true,
+    "negativeExploreAndBookingAssertionsReachedBeforeFailure": true,
+    "negativeWebAssertionsBasedOnExecutedFlow": true,
+    "publishedReappearanceNotExecuted": true,
+    "reservationCreation": false,
+    "note": "clientProof saves combined Web result only after all reads. No screenshot is claimed. Runtime reached get_booking_catalog only after Explore empty and Booking missing checks passed."
+  },
+  "failure": {
+    "operation": "read get_booking_catalog",
+    "actualHttp": 500,
+    "errorCode": "P0002",
+    "verifierExpectedHttp": 404,
+    "cause": "Verifier assumed Edge-style404 for a direct PostgREST RPC; documented P0* mapping is500.",
+    "productionDefectProven": false,
+    "source": "supabase/migrations/20261114220827_booking_catalog_visibility.sql",
+    "reference": "https://docs.postgrest.org/en/stable/references/errors.html",
+    "noWriteRetry": true,
+    "republishIssued": false,
+    "stopRequiredByUser": true
+  },
+  "integrity": {
+    "status": "passed",
+    "counts": {
+      "care": 29,
+      "items": 45,
+      "shops": 9,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 71,
+      "invitations": 8,
+      "memberships": 15,
+      "reservations": 42,
+      "invitationMail": 5,
+      "reservationEvents": 55
+    },
+    "history": 18,
+    "all42ReservationsAnd45ItemsUnchanged": true,
+    "allCarePaymentsServicesPricesHoursClosuresOwnersMembershipsAndOtherShopsUnchanged": true,
+    "onlyChangedRow": "target barbershop_booking_settings publication published→withdrawn and version17→18",
+    "insertedBusinessRows": 0,
+    "deletedBusinessRows": 0,
+    "schemaHistoryAndEnvUnchanged": true,
+    "withdrawHttp": 200,
+    "republishIssued": false,
+    "postcheck": {
+      "now": "2026-11-21T22:54:30.939348+00:00",
+      "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "version": 18,
+      "publication": "withdrawn",
+      "noShowAudits": 1,
+      "ownNewSessionsRemaining": 0
+    }
+  },
+  "audit": {
+    "existingMechanism": "barbershop_booking_settings.version",
+    "versionBefore": 17,
+    "versionAfter": 18,
+    "dedicatedPublicationEventsCreated": 0,
+    "requestId": "00c32245-6a18-4cbf-bbd8-bb43dbf282d7",
+    "actor": "U3",
+    "originalHistoryRetained": true,
+    "secondTransition": false
+  },
+  "currentState": {
+    "publication": "withdrawn",
+    "version": 18,
+    "requiresRepublishToRestore": true
+  },
+  "tests": {
+    "passed": 2,
+    "failed": 0,
+    "redGreen": true,
+    "command": "node --test .artifacts/b5-offer-final/offer-gate.test.mjs",
+    "syntaxPassed": [
+      "run.mjs",
+      "browser.mjs",
+      "final-read.mjs"
+    ],
+    "productTestsNotRepeated": true
+  },
+  "businessOperations": {
+    "authorized": 2,
+    "executed": 1,
+    "withdrawals": 1,
+    "republications": 0,
+    "reservationsCreated": 0,
+    "accountsCreated": 0,
+    "otherBusinessWrites": 0
+  },
+  "sessions": {
+    "closedHttp204": 2,
+    "newSessionsRemaining": 0
+  },
+  "restrictionsPreserved": {
+    "Cloud": true,
+    "Android": true,
+    "noMigrations": true,
+    "noProductChanges": true,
+    "noDataCleanup": true,
+    "noN2Replay": true,
+    "noServiceOperations": true,
+    "noGitWrites": true
+  },
+  "blockStatus": {
+    "B1": "previously accredited, not repeated",
+    "B2": "previously accredited, not repeated (reservation/payment/care block)",
+    "B3": "previously accredited, not repeated",
+    "B4": "previously accredited, not repeated",
+    "B51": "previously accredited, not repeated",
+    "B52": "open pending safe republication and remaining proof",
+    "B53": "functionally closed Web, unchanged",
+    "B5": "open"
+  },
+  "nextRequestedScope": "Correct only verifier direct RPC denial expectation and add regression; verify current withdrawn state by read; finish remaining client read proof; execute ONE republication via Chrome (already originally planned) and verify published/reappearance/slots/integrity. Do NOT withdraw again or repeat N2. Requires user continuation because explicit stop-on-error clause applied.",
+  "changedFiles": [
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "docs/evaluacion/evidencias/004-reservas/b5-retiro-republicacion.json",
+    "docs/evaluacion/evidencias/004-reservas/b5-retiro-republicacion.md"
+  ]
+}

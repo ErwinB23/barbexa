@@ -1,0 +1,281 @@
+{
+  "block": "B4",
+  "status": "functional-web-complete-agreed-scope",
+  "checkedAt": "2026-11-20T22:43:46.168Z",
+  "scope": "P1-P4 and E1-E2; 15 authorized business commands only",
+  "environment": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "postgresPort": 54422,
+    "realChrome": true,
+    "realGoTrueLocalSessions": true,
+    "serviceRoleNotUsedAsActor": true
+  },
+  "operations": [
+    {
+      "name": "personal-change",
+      "http": 200,
+      "bookingSettingsVersion": 5,
+      "verifiedAtServer": "2026-11-20T22:41:51.943138+00:00"
+    },
+    {
+      "name": "personal-restore",
+      "http": 200,
+      "bookingSettingsVersion": 5,
+      "verifiedAtServer": "2026-11-20T22:41:55.812429+00:00"
+    },
+    {
+      "name": "professional-change",
+      "http": 200,
+      "bookingSettingsVersion": 6,
+      "verifiedAtServer": "2026-11-20T22:42:03.679301+00:00"
+    },
+    {
+      "name": "professional-restore",
+      "http": 200,
+      "bookingSettingsVersion": 7,
+      "verifiedAtServer": "2026-11-20T22:42:07.684798+00:00"
+    },
+    {
+      "name": "hours-change",
+      "http": 200,
+      "bookingSettingsVersion": 8,
+      "verifiedAtServer": "2026-11-20T22:42:12.145518+00:00"
+    },
+    {
+      "name": "hours-restore",
+      "http": 200,
+      "bookingSettingsVersion": 9,
+      "verifiedAtServer": "2026-11-20T22:42:14.727238+00:00"
+    },
+    {
+      "name": "block-create",
+      "http": 200,
+      "bookingSettingsVersion": 10,
+      "verifiedAtServer": "2026-11-20T22:42:17.355466+00:00"
+    },
+    {
+      "name": "block-edit",
+      "http": 200,
+      "bookingSettingsVersion": 11,
+      "verifiedAtServer": "2026-11-20T22:42:18.296596+00:00"
+    },
+    {
+      "name": "block-remove",
+      "http": 200,
+      "bookingSettingsVersion": 12,
+      "verifiedAtServer": "2026-11-20T22:42:18.809832+00:00"
+    },
+    {
+      "name": "barber-invite",
+      "http": 200,
+      "bookingSettingsVersion": 13,
+      "verifiedAtServer": "2026-11-20T22:42:24.94078+00:00"
+    },
+    {
+      "name": "barber-accept",
+      "http": 200,
+      "bookingSettingsVersion": 13,
+      "verifiedAtServer": "2026-11-20T22:42:29.260242+00:00"
+    },
+    {
+      "name": "new-professional-create",
+      "http": 200,
+      "bookingSettingsVersion": 14,
+      "verifiedAtServer": "2026-11-20T22:42:33.491581+00:00"
+    },
+    {
+      "name": "new-professional-deactivate",
+      "http": 200,
+      "bookingSettingsVersion": 15,
+      "verifiedAtServer": "2026-11-20T22:42:33.983257+00:00"
+    },
+    {
+      "name": "new-professional-reactivate",
+      "http": 200,
+      "bookingSettingsVersion": 16,
+      "verifiedAtServer": "2026-11-20T22:42:34.634804+00:00"
+    },
+    {
+      "name": "new-professional-capability",
+      "http": 200,
+      "bookingSettingsVersion": 17,
+      "verifiedAtServer": "2026-11-20T22:42:35.140564+00:00"
+    }
+  ],
+  "chromeChecks": [
+    "personal-change-persisted-after-navigation",
+    "personal-restore-persisted-after-navigation",
+    "professional-change-persisted-after-navigation",
+    "professional-restore-persisted-after-navigation",
+    "hours-change-persisted-after-navigation",
+    "hours-restore-persisted-after-navigation",
+    "block-create-edit-remove-reflected-in-availability",
+    "U4-accepted-incoming-invitation-and-selected-barber-context",
+    "new-professional-active-capability-visible-and-U4-remains-barber"
+  ],
+  "originalValuesRestored": {
+    "personalNameAndPhoneNull": true,
+    "ownProfessionalName": true,
+    "weeklyIntervalsByValues": true,
+    "newTestBlockRemoved": true
+  },
+  "retainedNewRecords": {
+    "invitationId": "906dac8e-f13f-4904-b764-a3ff21fe0fe8",
+    "membershipId": "4c898fa4-4b1a-4270-ad8d-12a5ad87ad1e",
+    "professionalId": "4c3f0c8e-e449-4a10-9da1-418091aa99ae",
+    "capabilities": 1
+  },
+  "permissions": {
+    "newMemberRole": "barber/active",
+    "newProfessionalActive": true,
+    "otherShopOwnershipAndRolePreserved": true,
+    "ownerU3AndOtherOwnersUnchanged": true,
+    "noAdministrativePromotion": true,
+    "newProfessionalHasNoSchedulesOrBookings": true
+  },
+  "verification": {
+    "checkedAt": "2026-11-20T22:43:46.168Z",
+    "countsBefore": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 53
+    },
+    "countsAfter": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 53
+    },
+    "commands": 15,
+    "allResponsesHttp200": true,
+    "all40ReservationsAnd43DetailsIntact": true,
+    "allPreviousPaymentsAndAttendanceIntact": true,
+    "originalOwnersAndMembershipsIntact": true,
+    "u4OtherShopOwnershipAndRolePreserved": true,
+    "originalPersonalValuesRestored": true,
+    "originalProfessionalRowRestored": true,
+    "originalWeeklyHoursValuesRestored": true,
+    "sevenIntervalIdsMayHaveChanged": true,
+    "testBlockRemoved": true,
+    "oneAcceptedInvitationOneBarberMembershipOneActiveProfessionalOneCapability": true,
+    "bookingSettingsVersion": {
+      "before": 5,
+      "after": 17,
+      "allOtherFieldsUnchanged": true
+    },
+    "noNewAuthUsersOrPersonalProfiles": true,
+    "noNewAdminInvitationMailRows": true,
+    "allOtherBusinessRowsIntact": true,
+    "schemaHistoryEnvironmentUnchanged": true,
+    "sessionCheck": {
+      "u4OtherOwnerIntact": true,
+      "sessionsFromThisAttempt": 0,
+      "newProfessionalHasSchedules": 0,
+      "originalProfessionalHoursIdsChanged": 7
+    },
+    "ownSessionCloses": [
+      {
+        "actor": "client",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "worker",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "owner",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "u4",
+        "operation": "close-own-test-session",
+        "status": 204
+      }
+    ],
+    "authHealth": 200,
+    "databaseHealthy": true
+  },
+  "tests": {
+    "newVerifierGateTests": 3,
+    "passed": 3,
+    "syntaxCheckPassed": true,
+    "productDefectsFound": 0,
+    "productFilesChanged": 0,
+    "noProductRegressionNeededWithoutProductChange": true,
+    "previousSecurityConcurrencyAndReadonlyEvidenceReused": true
+  },
+  "businessEffects": {
+    "commands": 15,
+    "profilePatches": 2,
+    "professionalNameUpdates": 2,
+    "ownScheduleReplacements": 2,
+    "newOwnBlockCreateEditRemove": 3,
+    "internalBarberInviteAccept": 2,
+    "newProfessionalCreateDeactivateReactivateCapability": 4,
+    "bookingVersionBefore": 5,
+    "bookingVersionAfter": 17,
+    "noVersionReset": true,
+    "noNewAuthUsers": true,
+    "noNewPersonalProfiles": true,
+    "noReservationPaymentOrAttendanceWrites": true,
+    "newTeamRecords": 4
+  },
+  "sessions": [
+    {
+      "actor": "client",
+      "operation": "close-own-test-session",
+      "status": 204
+    },
+    {
+      "actor": "worker",
+      "operation": "close-own-test-session",
+      "status": 204
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-test-session",
+      "status": 204
+    },
+    {
+      "actor": "u4",
+      "operation": "close-own-test-session",
+      "status": 204
+    }
+  ],
+  "errors": [],
+  "filesModified": "Verification operators and documentation only; production code unchanged",
+  "pendingIndependent": [
+    "Administrative SMTP unknown still unverified; no resend or admin_invitation_mail modification",
+    "Final ownership transfer remains blocked by business decisions",
+    "Manual Yape receipt Web remains pending for B5",
+    "User visual acceptance and Android/joint specification gates remain separate",
+    "Residual offer/admin hours criteria in existing matrix not credited by B4 self-service tests",
+    "Historical first B3 capture-failure U3 session remains without token for selective self-revocation"
+  ],
+  "noCloud": true,
+  "noAndroid": true,
+  "noInfrastructureChanges": true,
+  "noEmail": true,
+  "noRealMoney": true,
+  "noMigrations": true,
+  "noB5": true
+}

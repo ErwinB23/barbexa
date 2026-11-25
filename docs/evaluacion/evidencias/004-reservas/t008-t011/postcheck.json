@@ -1,0 +1,256 @@
+{
+  "date": "2026-11-14",
+  "project": "app-barberia-002-local",
+  "port": 54422,
+  "sqlTests": 23,
+  "shops": 0,
+  "history": [
+    "20261112031854",
+    "20261113035717",
+    "20261113045240",
+    "20261113050232",
+    "20261113053907",
+    "20261114195018",
+    "20261114202045",
+    "20261114220827"
+  ],
+  "profiles": 2,
+  "authUsers": 2,
+  "functions": [
+    {
+      "name": "booking_actor",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_admin",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_catalog",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_command",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_invitation_json",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "booking_invitations",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_keys",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "booking_list",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "booking_preserve_reservations",
+      "owner": "postgres",
+      "schema": "private",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": true
+    },
+    {
+      "name": "cancel_booking_invitation",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "configure_booking_shop",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "get_booking_catalog",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "invite_booking_staff",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "list_booking_barbershops",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "list_own_staff_invitations",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "list_shop_staff_invitations",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "respond_booking_invitation",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "set_booking_capabilities",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "set_booking_exception",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "set_booking_hours",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "set_booking_professional",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "set_booking_publication",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    },
+    {
+      "name": "upsert_booking_service",
+      "owner": "postgres",
+      "schema": "public",
+      "searchPath": [
+        "search_path=\"\""
+      ],
+      "publicExecute": false,
+      "securityDefiner": false
+    }
+  ],
+  "memberships": 0,
+  "orphanProfiles": 0,
+  "newBusinessRows": 0,
+  "orphanAuthSessions": 0,
+  "reservationTableAbsent": true
+}

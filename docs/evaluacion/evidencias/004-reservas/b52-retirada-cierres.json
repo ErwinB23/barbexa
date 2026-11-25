@@ -1,0 +1,250 @@
+{
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "scope": "B5.2 administrative shop closure withdrawal implementation and isolated rehearsal; no main activation",
+  "status": "IMPLEMENTADA SIN VALIDACIÓN INTEGRAL",
+  "changedFiles": [
+    "src/features/barbershop-operation/domain/shop-closure.ts",
+    "src/features/barbershop-operation/application/shop-closures.ts",
+    "src/features/barbershop-operation/application/operation-application.ts",
+    "src/features/barbershop-operation/infrastructure/operation-http-adapter.ts",
+    "src/features/barbershop-operation/presentation/shop-closures-panel.web.tsx",
+    "src/features/barbershop-operation/presentation/operation-screen.tsx",
+    "src/composition/barbershop-operation-composition.ts",
+    "src/composition/operation-route.web.tsx",
+    "supabase/functions/_shared/barbershop-operation/domain/shop-closure.ts",
+    "supabase/functions/_shared/barbershop-operation/application/shop-closures.ts",
+    "supabase/functions/_shared/barbershop-operation/application/operation.ts",
+    "supabase/functions/_shared/barbershop-operation/infrastructure/postgres-operation-adapter.ts",
+    "supabase/functions/_shared/barbershop-operation/composition.ts",
+    "supabase/migrations/20261121040559_administrative_closure_withdrawal.sql",
+    "scripts/run-client-checks.mjs",
+    "tests/integration/booking/shop-closures.test.mjs",
+    "tests/integration/booking/shop-closures-sql.test.mjs",
+    "tests/presentation/booking/shop-closures.test.mjs",
+    "tests/server/barbershop-operation/shop-closures.test.ts",
+    "tests/presentation/workspace-navigation.test.mjs",
+    "specs/004-mvp-reservas/contracts/booking.md",
+    "specs/004-mvp-reservas/plan.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "docs/evaluacion/evidencias/004-reservas/b52-retirada-cierres.json",
+    "docs/evaluacion/evidencias/004-reservas/b52-retirada-cierres.md"
+  ],
+  "contract": {
+    "path": "specs/004-mvp-reservas/contracts/booking.md",
+    "state": "logical withdrawal reference to existing append-only team_authority_events",
+    "reason": "required, ECMAScript trim, public max2000 UTF16 code units",
+    "auditAction": "shop-closure-withdrawn",
+    "replay": "200 current withdrawn state, original audit unchanged, zero writes",
+    "permissions": "existing hours/editHours authority for owner/secondary",
+    "availability": "only withdrawn closures ignored; original scheduling and booking rules preserved"
+  },
+  "migration": {
+    "file": "supabase/migrations/20261121040559_administrative_closure_withdrawal.sql",
+    "sha256": "4f4eb23290595ccef8e13a9b65a9a756ee8e21f63bd83f25c0e26edf8c044335",
+    "appliedToMain": false,
+    "appliedToCloud": false,
+    "newTables": 0,
+    "newColumn": "schedule_exceptions.withdrawal_event_id",
+    "publicRpcs": [
+      "list_admin_booking_closures",
+      "withdraw_admin_booking_closure"
+    ],
+    "replacedExistingAlgorithms": [
+      "booking_preserve_reservations",
+      "reservation_available",
+      "self_schedule_command",
+      "reschedule_available"
+    ],
+    "security": "service_role-only RPC; verified actor supplied by Edge; no caller-selected role"
+  },
+  "isolation": {
+    "database": "b52_closures_927732ba3dad4ef2",
+    "oid": "124517",
+    "principalDatabase": "postgres",
+    "principalOid": 5,
+    "postgresVersion": "17.11",
+    "historicalMigrationsReplayed": 17,
+    "authRowsCopied": 0,
+    "syntheticUsers": 5,
+    "sameLocalEngineSeparateDatabase": true,
+    "separateEngine": false,
+    "temporaryDatabaseDropped": true,
+    "mainProbe": {
+      "newRpc": 0,
+      "newColumn": 0,
+      "temporaryDatabase": 0
+    }
+  },
+  "sql": {
+    "status": "passed",
+    "checks": [
+      "closed-ACL-no-direct-audit-or-row-writes",
+      "unknown-actor401-and-untrusted-role-ACL",
+      "client-and-professional403",
+      "foreign-missing-and-personal-block404",
+      "reason-whitespace-and-length-rejected",
+      "owner-logical-withdrawal-original-row-kept-one-audit",
+      "replay-new-actor-request-preserves-original-audit-no-writes",
+      "availability-and-reschedule-preserve-other-closures-blocks-booking-hours",
+      "atomic-booking-and-preservation-ignore-only-withdrawn-closure-rolled-back",
+      "secondary-operational-authority-success",
+      "current-authority-required-even-for-replay",
+      "past-closure-withdrawal-no-invented-time-prohibition",
+      "withdrawn-row-and-audit-immutable",
+      "two-real-connections-lock-wait-one-transition-one-audit",
+      "audit-before-after-reference-and-unique-closure",
+      "bounded-paginated-read-includes-history-excludes-personal-and-foreign-no-writes"
+    ],
+    "concurrency": {
+      "connections": 2,
+      "lockWaitObserved": true,
+      "firstReplayed": false,
+      "secondReplayed": true,
+      "transitionDelta": 1,
+      "auditDelta": 1
+    },
+    "fixtureBookingAndMembershipsProtected": true
+  },
+  "edge": {
+    "status": "passed",
+    "statuses": [
+      401,
+      403,
+      403,
+      404,
+      200,
+      200
+    ],
+    "realSql": true,
+    "edgeRequestResponse": true,
+    "authAndPostgrestTransport": "doubles",
+    "deployedEdge": false,
+    "auditDelta": 1,
+    "mainDatabaseUsed": false
+  },
+  "quality": {
+    "client": {
+      "command": "node scripts/run-client-checks.mjs",
+      "passed": 440,
+      "failed": 0,
+      "externalOperations": false
+    },
+    "server": {
+      "command": "npm.cmd run test:server (existing Deno2.9.8 on PATH)",
+      "passed": 72,
+      "failed": 0,
+      "externalOperations": false
+    },
+    "checks": [
+      {
+        "command": "npm.cmd run typecheck",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run lint",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run lint:server",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run architecture:check",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run typecheck:server-core",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run architecture:server",
+        "exitCode": 0
+      },
+      {
+        "command": "deno task --config supabase/functions/deno.json check",
+        "exitCode": 0
+      },
+      {
+        "command": "npm.cmd run format:check",
+        "exitCode": 0
+      },
+      {
+        "command": "prettier --check affected new test files",
+        "exitCode": 0
+      }
+    ],
+    "redGreen": "four client core cases initially RED; missing SQL RPC verified before isolated migration, then GREEN; supplemental tests added after implementation",
+    "incidents": [
+      {
+        "kind": "test-double",
+        "details": "Two existing workspace-navigation tests lacked application.refreshContext used by the previous name editor. Corrected only the fixture;21/21 targeted and440/440 final suite pass."
+      },
+      {
+        "kind": "read-only verifier",
+        "details": "Final integrity formatter called rows with a query result instead of a snapshot. No writes; corrected formatting and read-only rerun passed including all Auth fingerprints."
+      }
+    ]
+  },
+  "mainIntegrity": {
+    "status": "passed",
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "historyEntries": 17,
+    "allFingerprintsUnchanged": true,
+    "includingAuthUsers": true,
+    "schemaHistoryAndEnvUnchanged": true,
+    "schemaProbe": {
+      "newRpc": 0,
+      "newColumn": 0,
+      "temporaryDatabase": 0
+    }
+  },
+  "notExecuted": {
+    "businessCommandsOf22": 0,
+    "realBrowserWithdrawal": false,
+    "deployedEdgeWithRealGoTrue": false,
+    "mainMigration": false,
+    "cloudOperations": false,
+    "newMainUsersSessionsEmailsOrReservations": 0,
+    "mainServiceRestarts": 0,
+    "androidUiChanges": false,
+    "gitWrites": false
+  },
+  "remaining": [
+    "Specific authorization and reviewed procedure to apply migration ONLY to LOCAL principal; verify its schema and fixed RPC transport first.",
+    "Then authorize the separately documented22 synthetic business commands and Chrome acceptance; reconcile fresh baseline before first write.",
+    "Use withdraw-shop-closure with closureId/requestId/reason in command16, not old proposed remove-exception. Keep withdrawn original closure and one team_authority_event; no care_event.",
+    "No-show requires actual contractual wait; no clock/snapshot changes.",
+    "Public Cloud, Android, SMTP administrative unknown, transfer and academic gates remain separate."
+  ],
+  "futureExpectedCounts": {
+    "reservations": 42,
+    "items": 45,
+    "condition": "only after future authorized22-command trial; protected original41/44 preserved",
+    "closureRowsRetained": 1,
+    "closureWithdrawalTeamAuditEvents": 1,
+    "closureWithdrawalCareEvents": 0
+  },
+  "reproduction": {
+    "isolatedSetup": ".artifacts/b52-closures/isolate.mjs setup then apply (one-shot phase/DB identity guards)",
+    "sql": ".artifacts/b52-closures/sql-tests.mjs (sql-tests-passed; never blindly replay)",
+    "edge": ".artifacts/b52-closures/edge-isolated.ts (Deno allow-run=docker, allow-read=manifest only; no network permission)",
+    "mainRead": ".artifacts/b52-closures/final-integrity.mjs",
+    "note": "Local ignored operators retained. Current manifest is cleaned and cannot rerun mutations. New isolation requires reviewed fresh manifest; never target postgres. Schema-only Auth import, no personal data or credentials copied."
+  }
+}

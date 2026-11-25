@@ -1,0 +1,211 @@
+{
+  "recordedAtUtc": "2026-11-22T04:25:53.755Z",
+  "timezone": "America/Lima",
+  "project": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "webOrigin": "http://localhost:8081",
+  "effectiveBackend": "https://vuoncrtkkkquvddunrxx.supabase.co",
+  "effectiveProfile": "cloud-integration",
+  "metro": {
+    "pid": 33768,
+    "supervisorPid": 27228,
+    "starts": 1,
+    "watchEnabled": true,
+    "onlyPreviousMetroStopped": true,
+    "leftRunning": true
+  },
+  "existingCredentialMatchesInBrowser": true,
+  "localProfilePreservedBySha256": true,
+  "environmentFilesChanged": false,
+  "productFilesChanged": false,
+  "androidTouched": false,
+  "backendChanges": false,
+  "cloudAuthorityFlagActivated": false,
+  "cloudAuth": {
+    "at": "2026-11-22T04:25:32.761Z",
+    "target": "vuoncrtkkkquvddunrxx",
+    "configChanges": [
+      {
+        "name": "auth.additional_redirect_urls",
+        "remote": [
+          "http://localhost:8081/auth/callback",
+          "appbarberia://auth/callback",
+          "http://localhost:8081/auth/reset-password"
+        ]
+      },
+      {
+        "name": "auth.external.google.client_id",
+        "configured": true
+      },
+      {
+        "name": "auth.external.google.enabled",
+        "remote": true
+      },
+      {
+        "name": "auth.site_url",
+        "remote": "http://localhost:3000"
+      }
+    ],
+    "publicAuthSettings": {
+      "status": 200,
+      "googleEnabled": true,
+      "disableSignup": false,
+      "mailerAutoconfirm": false
+    },
+    "requiredRedirectsPresent": true,
+    "configurationWritten": false,
+    "realAuthOperationsExecuted": false,
+    "cloudCounts": {
+      "memberships": 0,
+      "migrations": 18,
+      "professionals": 0,
+      "profiles": 2,
+      "reservations": 0,
+      "services": 0,
+      "shops": 0,
+      "users": 2
+    }
+  },
+  "checks": [
+    {
+      "check": "types",
+      "exit": 0,
+      "summaries": []
+    },
+    {
+      "check": "core-types",
+      "exit": 0,
+      "summaries": []
+    },
+    {
+      "check": "auth-cloud-empty-regressions",
+      "exit": 0,
+      "summaries": [
+        "ℹ tests 87",
+        "ℹ pass 87",
+        "ℹ fail 0",
+        "ℹ skipped 0"
+      ]
+    },
+    {
+      "check": "architecture",
+      "exit": 0,
+      "summaries": []
+    }
+  ],
+  "browser": {
+    "context": "fresh-signed-out",
+    "status": "passed",
+    "pages": [
+      {
+        "requested": "/sign-in",
+        "path": "/sign-in",
+        "formCount": 1,
+        "bodyVisible": true,
+        "configurationError": false
+      },
+      {
+        "requested": "/sign-up",
+        "path": "/sign-up",
+        "formCount": 1,
+        "bodyVisible": true,
+        "configurationError": false
+      },
+      {
+        "requested": "/forgot-password",
+        "path": "/forgot-password",
+        "formCount": 1,
+        "bodyVisible": true,
+        "configurationError": false
+      },
+      {
+        "requested": "/",
+        "path": "/",
+        "formCount": 0,
+        "bodyVisible": true,
+        "configurationError": false
+      },
+      {
+        "requested": "/account",
+        "path": "/",
+        "formCount": 0,
+        "bodyVisible": true,
+        "configurationError": false
+      },
+      {
+        "requested": "/sign-in",
+        "path": "/sign-in",
+        "formCount": 1,
+        "bodyVisible": true,
+        "configurationError": false
+      }
+    ],
+    "runtime": {
+      "moduleFound": true,
+      "environment": "cloud-integration",
+      "backend": "https://vuoncrtkkkquvddunrxx.supabase.co",
+      "publicKeyMatchesExisting": true,
+      "localApiConfigured": false,
+      "googleButtonPresent": true,
+      "googleConfigurationPending": false
+    },
+    "apiRequests": [
+      {
+        "origin": "https://vuoncrtkkkquvddunrxx.supabase.co",
+        "path": "/auth/v1/settings",
+        "method": "GET"
+      },
+      {
+        "origin": "https://vuoncrtkkkquvddunrxx.supabase.co",
+        "path": "/auth/v1/settings",
+        "method": "OPTIONS"
+      }
+    ],
+    "apiRequestsAreExplicitDiagnosticProbe": true,
+    "localApiAttempts": [],
+    "blockedWrites": [],
+    "errors": [],
+    "probe": {
+      "kind": "explicit-read-only-browser-probe",
+      "url": "https://vuoncrtkkkquvddunrxx.supabase.co/auth/v1/settings",
+      "status": 200,
+      "googleEnabled": true,
+      "registrationAllowed": true,
+      "emailConfirmationRequired": true
+    },
+    "f5PublicPassed": true,
+    "privateWithoutSessionReturnedToPublicHome": true
+  },
+  "acceptance": {
+    "loginUi": true,
+    "registrationUi": true,
+    "recoveryUi": true,
+    "googleButtonConfigured": true,
+    "realLoginNotExecuted": true,
+    "realRegistrationNotExecuted": true,
+    "recoveryEmailNotRequested": true,
+    "oauthFlowNotStarted": true,
+    "authenticatedServicesNotQueried": true,
+    "emptyUiValidatedWithExistingDoubles": true,
+    "noNewCloudUsersOrBusinessData": true
+  },
+  "limitations": [
+    "Site URL remains http://localhost:3000; current client explicitly sets the approved localhost:8081 callback and recovery URLs.",
+    "Catalog and services behind authentication require the user to sign in with an existing Cloud account.",
+    "Empty state rendering and transport isolation passed existing automated tests; no authenticated business journey is claimed."
+  ],
+  "incidents": [
+    "Old Metro exited with its supervisor before the second Stop-Process; no new instance had started yet. One new Cloud Metro was started after checking both old processes were gone.",
+    "Browser verifier initially assumed the no-session destination was /sign-in and that Expo inlined environment literals in each factory. Diagnosis confirmed the existing public-home return and Expo58 virtual/env. Only the verifier was adjusted."
+  ],
+  "filesCreated": [
+    ".artifacts/cloud-phase-d/metro.mjs",
+    ".artifacts/cloud-phase-d/browser.mjs",
+    "docs/evaluacion/evidencias/004-reservas/cloud-phase-d.md",
+    "docs/evaluacion/evidencias/004-reservas/cloud-phase-d.json"
+  ],
+  "documentationUpdated": [
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md"
+  ]
+}

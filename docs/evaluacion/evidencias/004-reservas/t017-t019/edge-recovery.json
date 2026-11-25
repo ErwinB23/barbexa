@@ -1,0 +1,9 @@
+{
+  "project": "app-barberia-002-local",
+  "onlyExistingNewEdgeStarted": true,
+  "sameContainer": true,
+  "status": "running",
+  "anonymousHTTP": 401,
+  "noOtherContainerOperations": true,
+  "noDatabaseReset": true
+}

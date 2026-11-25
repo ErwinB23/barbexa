@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-14",
+  "project": "app-barberia-002-local",
+  "port": 54422,
+  "tables": [
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barber_profiles"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barber_schedules"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barber_services"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barbershop_booking_settings"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barbershop_hours"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barbershop_memberships"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "barbershops"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "profiles"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "schedule_exceptions"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "services"
+    },
+    {
+      "rls": true,
+      "owner": "postgres",
+      "table": "staff_invitations"
+    }
+  ],
+  "history": [
+    "20261112031854",
+    "20261113035717",
+    "20261113045240",
+    "20261113050232",
+    "20261113053907",
+    "20261114195018"
+  ],
+  "newRows": 0,
+  "existingRows": {
+    "shops": 0,
+    "profiles": 2,
+    "authUsers": 2,
+    "memberships": 0
+  },
+  "triggerFunction": {
+    "owner": "postgres",
+    "config": [
+      "search_path=\"\""
+    ],
+    "definer": true,
+    "publicExecute": false
+  },
+  "businessFingerprint": "66c49fbb310e7e8bfbc3a52865e2a347",
+  "oldContainerCount": 12,
+  "oldDefinitionsUnchanged": true,
+  "oldRuntimeChangesObserved": [
+    "/supabase_vector_barberia-app"
+  ],
+  "oldContainerOperationsExecuted": 0,
+  "existingDataPreserved": true
+}

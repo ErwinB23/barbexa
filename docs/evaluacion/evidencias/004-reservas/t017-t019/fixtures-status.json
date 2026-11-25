@@ -1,0 +1,12 @@
+{
+  "project": "app-barberia-002-local",
+  "shops": 2,
+  "users": 3,
+  "profiles": 3,
+  "services": 4,
+  "invitations": 1,
+  "memberships": 2,
+  "reservations": 3,
+  "professionals": 2,
+  "heldForManual": true
+}

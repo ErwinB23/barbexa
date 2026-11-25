@@ -4,6 +4,9 @@ description: "Tareas ejecutables para la fundación técnica de App Barbería"
 
 # Tasks: Fundación técnica de Expo, React Native y Clean Architecture
 
+**Estado vigente (24/11/2026):** 40/40 tareas acreditadas. Las notas de generación
+al final describen el momento inicial; no revierten las casillas/evidencias ejecutadas.
+
 **Input**: Documentos aprobados de `specs/001-fundacion-expo-clean/`.
 **Prerequisites**: [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md),
 [data-model.md](data-model.md), [contrato](contracts/foundation.md),
@@ -184,7 +187,7 @@ afectada antes de proponer ajuste; no modificar decisiones aprobadas silenciosam
 | FR-010 | T005, T007–T012, T020, T026, T032, T037 | SC-004 |
 | FR-011 | T006, T018–T019, T033, T036–T040 | SC-006 |
 
-## Notes
+## Notes — antecedente de generación, superado por las casillas y evidencias ejecutadas
 
 40 tareas: Setup 6, base común 7, US1 6, US2 9, US3 7, cierre 5. Ninguna ejecutada por este
 comando. Los archivos de evidencias aún no existen; se crearán al realizar cada comprobación.

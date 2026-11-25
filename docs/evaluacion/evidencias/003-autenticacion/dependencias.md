@@ -1,5 +1,14 @@
 # T002 — Dependencias y avisos npm
 
+**Actualización T005**: SDK2.119.0, SecureStore58.0.3 y parche autorizado Expo58.0.25
+instalados; [resultado actual](t005/patch-58.0.25/resultado.md). Check0/Doctor20 de20.
+Audit posterior ocho moderados/tres sin dev, frente a nueve/tres previos; sin cambios
+en rama ESLint del lock ni remediación acreditada. Web Chrome localhost comprobado;
+T005 cerrada tras confirmación manual del usuario: Hermes/URL/URLSearchParams y
+expo-crypto.getRandomValues true; sonda temporal retirada. expo-crypto58.0.8 instalado
+previamente por el usuario y autorizado conservarlo; no polyfill global. El resto de este
+documento conserva la línea base T002 anterior a esa instalación.
+
 13/11/2026, America/Lima. Consultas ejecutadas por Codex, sin instalación ni cambios de lock.
 
 ## Comandos y resultados

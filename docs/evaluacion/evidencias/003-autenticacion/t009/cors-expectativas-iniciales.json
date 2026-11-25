@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-14",
+  "target": "app-barberia-002-local",
+  "surface": "actual handlers via internal network",
+  "cases": [
+    {
+      "function": "ensure-profile",
+      "name": "allowed-preflight",
+      "status": 204,
+      "expected": 204,
+      "allowOrigin": "http://localhost:8081",
+      "code": null,
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "name": "denied-preflight",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "code": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "ensure-profile",
+      "name": "allowed-without-session",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    },
+    {
+      "function": "ensure-profile",
+      "name": "denied-post",
+      "status": 401,
+      "expected": 403,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    },
+    {
+      "function": "ensure-profile",
+      "name": "without-session-or-origin",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "name": "allowed-preflight",
+      "status": 204,
+      "expected": 204,
+      "allowOrigin": "http://localhost:8081",
+      "code": null,
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "name": "denied-preflight",
+      "status": 403,
+      "expected": 403,
+      "allowOrigin": null,
+      "code": "FORBIDDEN",
+      "passed": true
+    },
+    {
+      "function": "create-barbershop",
+      "name": "allowed-without-session",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "name": "denied-post",
+      "status": 401,
+      "expected": 403,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    },
+    {
+      "function": "create-barbershop",
+      "name": "without-session-or-origin",
+      "status": 401,
+      "expected": 401,
+      "allowOrigin": null,
+      "code": "UNAUTHORIZED_NO_AUTH_HEADER",
+      "passed": false
+    }
+  ],
+  "passed": 4,
+  "total": 10,
+  "credentialsUsed": false,
+  "usersCreated": 0
+}

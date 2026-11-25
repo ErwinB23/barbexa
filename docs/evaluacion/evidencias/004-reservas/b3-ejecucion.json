@@ -1,0 +1,516 @@
+{
+  "block": "B3",
+  "status": "functional-web-complete",
+  "checkedAt": "2026-11-20T22:17:01.580Z",
+  "environment": {
+    "project": "app-barberia-002-local",
+    "api": "http://127.0.0.1:54421",
+    "postgresPort": 54422
+  },
+  "productionFix": {
+    "scope": "Web presentation only",
+    "files": [
+      "src/features/reservations/presentation/booking-screen.tsx",
+      "src/features/reservations/presentation/care-control.tsx",
+      "src/features/reservations/presentation/my-reservations-screen.tsx",
+      "src/features/reservations/presentation/agenda-screen.tsx",
+      "src/features/reservations/presentation/reschedule-control.tsx"
+    ],
+    "rule": "Management mutations await verified eligible attendance; completed/in-service/no-show/cancelled suppressed; history retained; verified legacy absent ledger allowed",
+    "androidBehaviorPreserved": true,
+    "serverRulesChanged": false,
+    "chromeReadonlyB2Verified": true
+  },
+  "tests": {
+    "newPresentationRegressions": 8,
+    "redDefectCases": 4,
+    "affectedPresentationChecks": 38,
+    "typescript": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "architecture": "passed",
+    "verifierChecks": 4,
+    "authCaptureRedGreen": true,
+    "noConcurrencyOrIdempotencyBusinessReplay": true
+  },
+  "initialAttempt": {
+    "status": "stopped",
+    "issuedCommands": 0,
+    "error": "Auth capture classified OPTIONS preflight as JSON token response; actual source regression confirmed",
+    "ownerSessionNotRemotelyClosed": true
+  },
+  "continuation": {
+    "realChrome": true,
+    "realGoTrueSessions": true,
+    "webChecks": [
+      "protected-B2-completed-controls-absent-history-preserved-no-write",
+      "reschedule-A-history-visible",
+      "A-old-slot-released-after-reschedule",
+      "A-new-slot-released-after-cancellation",
+      "owner-refund-only-client-and-assigned-worker-denied-by-read-permissions",
+      "B-client-cancel-blocked-reschedule-query403-no-business-write"
+    ],
+    "operations": [
+      {
+        "name": "confirm-A",
+        "http": 201,
+        "reservationId": "12d4287b-7478-4d10-9708-4280bd7fc837",
+        "serverTime": "2026-11-20T22:05:14.343306+00:00",
+        "state": {
+          "reservation": "confirmed",
+          "attendance": "confirmed",
+          "payment": "pending",
+          "start": "2026-11-21T14:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "receive-A",
+        "http": 200,
+        "reservationId": "12d4287b-7478-4d10-9708-4280bd7fc837",
+        "serverTime": "2026-11-20T22:05:18.557469+00:00",
+        "state": {
+          "reservation": "confirmed",
+          "attendance": "confirmed",
+          "payment": "paid",
+          "start": "2026-11-21T14:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "reschedule-A",
+        "http": 201,
+        "reservationId": "12d4287b-7478-4d10-9708-4280bd7fc837",
+        "serverTime": "2026-11-20T22:05:21.211991+00:00",
+        "state": {
+          "reservation": "confirmed",
+          "attendance": "confirmed",
+          "payment": "paid",
+          "start": "2026-11-21T15:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "cancel-A",
+        "http": 200,
+        "reservationId": "12d4287b-7478-4d10-9708-4280bd7fc837",
+        "serverTime": "2026-11-20T22:05:21.854074+00:00",
+        "state": {
+          "reservation": "cancelled",
+          "attendance": "cancelled",
+          "payment": "paid",
+          "start": "2026-11-21T15:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "refund-A",
+        "http": 200,
+        "reservationId": "12d4287b-7478-4d10-9708-4280bd7fc837",
+        "serverTime": "2026-11-20T22:05:24.47581+00:00",
+        "state": {
+          "reservation": "cancelled",
+          "attendance": "cancelled",
+          "payment": "refunded",
+          "start": "2026-11-21T15:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "confirm-B",
+        "http": 201,
+        "reservationId": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e",
+        "serverTime": "2026-11-20T22:05:35.257106+00:00",
+        "state": {
+          "reservation": "confirmed",
+          "attendance": "confirmed",
+          "payment": "pending",
+          "start": "2026-11-20T23:00:00+00:00",
+          "amountMinor": 2500
+        }
+      },
+      {
+        "name": "reschedule-B",
+        "http": 201,
+        "reservationId": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e",
+        "serverTime": "2026-11-20T22:05:40.557324+00:00",
+        "state": {
+          "reservation": "confirmed",
+          "attendance": "confirmed",
+          "payment": "pending",
+          "start": "2026-11-20T23:15:00+00:00",
+          "amountMinor": 2500
+        }
+      }
+    ],
+    "temporalDenial": [
+      {
+        "actor": "client",
+        "operation": "read:reschedule-slots:",
+        "status": 403
+      }
+    ],
+    "permissions": {
+      "owner:c4e9b153-9275-4a9d-9f32-f009bdb087d9": {
+        "attend": false,
+        "refund": true,
+        "receive": true
+      },
+      "client:12d4287b-7478-4d10-9708-4280bd7fc837": {
+        "attend": false,
+        "refund": false,
+        "receive": false
+      },
+      "owner:12d4287b-7478-4d10-9708-4280bd7fc837": {
+        "attend": false,
+        "refund": true,
+        "receive": true
+      },
+      "worker:12d4287b-7478-4d10-9708-4280bd7fc837": {
+        "attend": true,
+        "refund": false,
+        "receive": true
+      },
+      "client:c47c8ee2-d7df-4ffe-8b6d-055355a3459e": {
+        "attend": false,
+        "refund": false,
+        "receive": false
+      },
+      "owner:c47c8ee2-d7df-4ffe-8b6d-055355a3459e": {
+        "attend": false,
+        "refund": true,
+        "receive": true
+      }
+    },
+    "stop": {
+      "stage": "admin-reschedule-B",
+      "error": "WEB_EVALUATION_FAILED",
+      "browserExceptionClass": "TypeError",
+      "lastCardAction": {
+        "actor": "owner",
+        "id": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e",
+        "label": "Consultar historial de reprogramación"
+      },
+      "exactTypeErrorCauseNotProven": true,
+      "noAutomaticRepairOrRetry": true,
+      "cancelBNotEmitted": true
+    },
+    "reservations": {
+      "A": "12d4287b-7478-4d10-9708-4280bd7fc837",
+      "B": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e"
+    },
+    "actualCommands": 7,
+    "businessInserts": 15,
+    "logicalUpdates": 6,
+    "deletes": 0,
+    "newSessionsClosed": [
+      {
+        "actor": "owner",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "client",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "worker",
+        "operation": "close-own-test-session",
+        "status": 204
+      }
+    ]
+  },
+  "verification": {
+    "checkedAt": "2026-11-20T22:06:49.573Z",
+    "countsBefore": {
+      "care": 25,
+      "items": 41,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 61,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 38,
+      "invitationMail": 5,
+      "reservationEvents": 49
+    },
+    "countsAfter": {
+      "care": 27,
+      "items": 43,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 65,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 40,
+      "invitationMail": 5,
+      "reservationEvents": 52
+    },
+    "all38OriginalReservationsAnd41ItemsAndDependenciesUnchanged": true,
+    "allUnrelatedBusinessTablesUnchanged": true,
+    "profilesMembershipsOtherTenantsUnchanged": true,
+    "schemaAndMigrationHistoryUnchanged": true,
+    "environmentFileUnchanged": true,
+    "originalB2": {
+      "state": "confirmed",
+      "amount": 2500,
+      "method": "cash",
+      "payment": "paid",
+      "attendance": "completed"
+    },
+    "states": {
+      "cases": [
+        {
+          "id": "12d4287b-7478-4d10-9708-4280bd7fc837",
+          "start": "2026-11-21T15:00:00+00:00",
+          "state": "cancelled",
+          "method": "cash",
+          "payment": "refunded",
+          "attendance": "cancelled",
+          "careEvents": [
+            "created",
+            "receive",
+            "refund"
+          ],
+          "amountMinor": 2500,
+          "cancelEvents": 1,
+          "rescheduleEvents": 1
+        },
+        {
+          "id": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e",
+          "start": "2026-11-20T23:15:00+00:00",
+          "state": "confirmed",
+          "method": "cash",
+          "payment": "pending",
+          "attendance": "confirmed",
+          "careEvents": [
+            "created"
+          ],
+          "amountMinor": 2500,
+          "cancelEvents": 0,
+          "rescheduleEvents": 1
+        }
+      ],
+      "remainingInitialOwnerSessionCount": 1
+    },
+    "actualBusinessCommands": 7,
+    "actualBusinessInserts": 15,
+    "logicalUpdates": 6,
+    "deletes": 0,
+    "authHealth": 200,
+    "databaseHealthy": true,
+    "newAttemptSessionsClosed": [
+      {
+        "actor": "owner",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "client",
+        "operation": "close-own-test-session",
+        "status": 204
+      },
+      {
+        "actor": "worker",
+        "operation": "close-own-test-session",
+        "status": 204
+      }
+    ],
+    "pending": "only cancel-B and remaining Web history/filter/release verification; no retry performed",
+    "writeDelta": {
+      "public.reservations": 2,
+      "public.reservation_items": 2,
+      "private.booking_care": 2,
+      "private.care_events": 4,
+      "public.reservation_events": 3,
+      "private.reschedule_events": 2
+    }
+  },
+  "pending": [
+    "Manual Yape receipt Web remains separately unaccredited; no Yape operation performed",
+    "Android and joint acceptance gates 004T027/010T008/005T012 remain separate",
+    "Initial failed-capture U3 session remains recorded; token unavailable for selective self-revocation, no global or unrelated session revocation performed"
+  ],
+  "noCloud": true,
+  "noAndroidChanges": true,
+  "noSQLRLSEdgeChanges": true,
+  "noInfrastructureChanges": true,
+  "noRealMoney": true,
+  "noEmail": true,
+  "noB4": true,
+  "finalCompletion": {
+    "authorization": "Only pending B cancellation, verifier correction, directed regressions and reads; no previous operation repeated",
+    "verifierCause": "Actual cardClick expression called querySelectorAll on a null card during Agenda refresh. Reproduced TypeError with original function; null-safe pending read and atomic click regression passed.",
+    "verifierOnlyChanged": true,
+    "regression": {
+      "originalSelectorRedThenGreen": true,
+      "directedVerifierTestsPassed": 8,
+      "productionTestsNotUnnecessarilyRepeated": true
+    },
+    "reservationId": "c47c8ee2-d7df-4ffe-8b6d-055355a3459e",
+    "httpCancellation": 200,
+    "oneBusinessRequest": true,
+    "state": {
+      "reservation": "cancelled",
+      "attendance": "cancelled",
+      "payment": "pending",
+      "method": "cash",
+      "amountMinor": 2500
+    },
+    "cancellationAudit": [
+      {
+        "kind": "cancelled",
+        "actor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "reason": "B3 LOCAL: cancelación administrativa final de la reserva B de prueba, sin atención iniciada ni reembolso",
+        "capacity": "administrator"
+      }
+    ],
+    "rescheduleAuditPreserved": [
+      {
+        "new": "2026-11-20T23:15:00+00:00",
+        "old": "2026-11-20T23:00:00+00:00",
+        "actor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+        "reason": "B3 LOCAL: reprogramación administrativa ficticia dentro del plazo restringido al cliente",
+        "capacity": "administrator"
+      }
+    ],
+    "webChecks": [
+      "B-admin-reschedule-history-visible-with-reason",
+      "B-cancelled-attendance-pending-payment-and-original-history-visible-cancel-reason-audited-in-SQL",
+      "B-cancelled-slot-available",
+      "B-original-reschedule-slot-unoccupied",
+      "B-cancelled-pending-admin-filter-includes",
+      "B-refunded-admin-filter-excludes",
+      "B-all-care-filters-restores"
+    ],
+    "http": [
+      {
+        "actor": "owner",
+        "operation": "read:care:read",
+        "status": 200
+      },
+      {
+        "operation": "read-care",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "read:reschedule-history:",
+        "status": 200
+      },
+      {
+        "operation": "read-reschedule-history",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "cancel-B",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "read:care:read",
+        "status": 200
+      },
+      {
+        "operation": "read-care",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "read:reschedule-history:",
+        "status": 200
+      },
+      {
+        "operation": "read-slots",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "read:care:read",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "read:care:read",
+        "status": 200
+      },
+      {
+        "actor": "owner",
+        "operation": "close-own-test-session",
+        "status": 204
+      }
+    ],
+    "businessEffects": {
+      "inserts": 1,
+      "logicalUpdates": 2,
+      "deletes": 0
+    },
+    "cumulativeB3Effects": {
+      "commands": 8,
+      "inserts": 16,
+      "logicalUpdates": 8,
+      "deletes": 0
+    },
+    "newSessionClosedHttp204": true,
+    "verification": {
+      "checkedAt": "2026-11-20T22:17:01.580Z",
+      "countsBefore": {
+        "care": 27,
+        "items": 43,
+        "shops": 8,
+        "users": 14,
+        "profiles": 13,
+        "careEvents": 65,
+        "invitations": 7,
+        "memberships": 13,
+        "reservations": 40,
+        "invitationMail": 5,
+        "reservationEvents": 52
+      },
+      "countsAfter": {
+        "care": 27,
+        "items": 43,
+        "shops": 8,
+        "users": 14,
+        "profiles": 13,
+        "careEvents": 65,
+        "invitations": 7,
+        "memberships": 13,
+        "reservations": 40,
+        "invitationMail": 5,
+        "reservationEvents": 53
+      },
+      "allOther39ReservationsAndCareUnchanged": true,
+      "all43DetailsUnchanged": true,
+      "all38BeforeB3AndB2Unchanged": true,
+      "scenarioAUnchanged": true,
+      "allOtherBusinessRowsUnchanged": true,
+      "schemaHistoryEnvironmentUnchanged": true,
+      "originalB2": {
+        "state": "confirmed",
+        "amount": 2500,
+        "method": "cash",
+        "payment": "paid",
+        "attendance": "completed"
+      },
+      "details": {
+        "cancelEvents": 1,
+        "refundEvents": 0,
+        "rescheduleEvents": 1,
+        "activeNewOwnSessions": 0,
+        "unclosedFirstAttemptSessions": 1
+      },
+      "authHealth": 200,
+      "databaseHealthy": true,
+      "oneNewCancellationEvent": true,
+      "oneBusinessCommand": true,
+      "oneInsertTwoLogicalUpdatesNoDeletes": true,
+      "newSessionClosed204": true,
+      "earlierSessionCannotBeSelectivelyClosedWithoutItsToken": true
+    }
+  }
+}

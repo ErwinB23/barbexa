@@ -11,7 +11,8 @@ el localizador de feature; `git branch --show-current` confirma `main` como rama
 Incorporar una base Expo a la raíz del Git existente mediante staging temporal, manifiestos
 SHA-256 y copia de archivos nuevos sin colisiones. Una feature técnica local demuestra contratos,
 composición e independencia del núcleo; dos vistas y recuperación de ruta desconocida permiten
-validar navegación y accesibilidad en Android. Este documento planifica; no implementa.
+validar navegación y accesibilidad en Android. Fundación ejecutada y acreditada en
+las 40 tareas; el diseño original se conserva como antecedente.
 
 ## Technical Context
 

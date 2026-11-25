@@ -4,7 +4,7 @@
 
 **Created**: 2026-11-11
 
-**Status**: Draft — solo especificación; backend y pruebas aún no implementados
+**Status**: Fundación implementada y verificada; 40/40 tareas acreditadas. Integración Cloud vigente descrita en docs/CODEX-HANDOFF.md.
 
 **Input**: Preparación reproducible de un backend nuevo con identidad, perfiles,
 barberías, membresías y aislamiento verificable. Decisión del responsable: primer

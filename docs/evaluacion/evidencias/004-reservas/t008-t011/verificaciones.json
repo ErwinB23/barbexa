@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-14",
+  "project": "app-barberia-002-local",
+  "commands": [
+    {
+      "command": "check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks (004 override)",
+      "exitCode": 0
+    },
+    {
+      "command": "DDL and booking-operation.test.sql in ROLLBACK before application",
+      "exitCode": 0,
+      "initialPassed": 19
+    },
+    {
+      "command": "supabase db push --dry-run --skip-vault; supabase db push --skip-vault",
+      "exitCode": 0,
+      "target": "127.0.0.1:54422",
+      "migrations": [
+        "20261114202045_booking_operations.sql",
+        "20261114220827_booking_catalog_visibility.sql"
+      ],
+      "note": "Each migration individually previewed/applied; second fixes a RED visibility regression"
+    },
+    {
+      "command": "booking-operation.test.sql via checked local docker psql -X -v ON_ERROR_STOP=1",
+      "exitCode": 0,
+      "passed": 23
+    },
+    {
+      "command": "BARBERIA_002_URL=http://127.0.0.1:54421 BARBERIA_002_PROJECT_ID=app-barberia-002-local node --test --test-concurrency=1 tests/integration/booking/operation.test.mjs",
+      "exitCode": 0,
+      "tapResults": 9,
+      "fixtureRuns": 1
+    },
+    {
+      "command": "Three actual PostgreSQL invitation race pairs inside the HTTP test operator",
+      "exitCode": 0,
+      "connectionsPerPair": 2,
+      "barrierWaitersPerPair": 2,
+      "committedPerPair": 1,
+      "rejectedPerPair": 1
+    },
+    {
+      "command": "deno test --no-config --no-npm --no-remote --no-prompt --coverage=.artifacts/004-operations/coverage tests/server/barbershop-operation",
+      "exitCode": 0,
+      "passed": 10
+    },
+    {
+      "command": "deno coverage .artifacts/004-operations/coverage --include=.*barbershop-operation.*(domain|application).*",
+      "exitCode": 0,
+      "coreLines": 100,
+      "coreFunctions": 100,
+      "coreBranches": 100,
+      "scope": "New module core only; adapter/presentation coverage partial, not device or SQL coverage"
+    },
+    {
+      "command": "npm run coverage:server",
+      "exitCode": 0,
+      "passed": 27,
+      "note": "17 existing server regressions plus10 new; threshold100 retained and suite extended"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run typecheck:server-core",
+      "exitCode": 0
+    },
+    {
+      "command": "deno check --config supabase/functions/deno.json --no-npm --no-remote supabase/functions/barbershop-operation/index.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check:server",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run architecture:server",
+      "exitCode": 0,
+      "modules": 24,
+      "core": 13,
+      "edges": 48
+    },
+    {
+      "command": "npm run architecture:check",
+      "exitCode": 0,
+      "modules": 78,
+      "core": 24,
+      "edges": 185
+    },
+    {
+      "command": "eslint affected server/core/integration files --max-warnings 0",
+      "exitCode": 0
+    },
+    {
+      "command": "prettier --check affected files",
+      "exitCode": 0
+    },
+    {
+      "command": "Final public API OPTIONS and invalid credential smoke after composition correction",
+      "exitCode": 0,
+      "statuses": [
+        204,
+        401
+      ]
+    },
+    {
+      "command": "Read-only final database/ACL/history/orphan check",
+      "exitCode": 0
+    }
+  ],
+  "initialFailures": [
+    {
+      "kind": "RED missing operations RPC",
+      "exitCode": 1,
+      "failed": 3,
+      "total": 3
+    },
+    {
+      "kind": "RED missing server modules",
+      "exitCode": 1
+    },
+    {
+      "kind": "Test spy compile errors TS2352",
+      "exitCode": 1,
+      "correction": "Explicit unknown assertion only in controlled test spies; no weakening of production ports"
+    },
+    {
+      "kind": "Public catalog dangling capability RED",
+      "exitCode": 1,
+      "correction": "New additive visibility migration; applied history left intact"
+    },
+    {
+      "kind": "Architecture cross module infrastructure imports",
+      "exitCode": 1,
+      "correction": "Public Auth002 composition factory injected through entrypoint; checker unchanged"
+    },
+    {
+      "kind": "Lint equality warning",
+      "exitCode": 1,
+      "correction": "Strict equality in test; format rerun"
+    }
+  ],
+  "notExecuted": [
+    "444 earlier SQL assertions",
+    "003 functional journeys",
+    "new Web/Android business screens",
+    "reservation motor or real reservation concurrency",
+    "Cloud",
+    "install/build",
+    "commit/push"
+  ]
+}

@@ -1,0 +1,438 @@
+{
+  "date": "2026-11-21",
+  "timezone": "America/Lima",
+  "status": "N2 approved; B2 current-state precondition not met; B5 open",
+  "commands": [
+    {
+      "id": "A1",
+      "command": "create-barbershop",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 201,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "A2",
+      "command": "configure-shop",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "A3",
+      "command": "renameBarbershop via PATCH",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C1",
+      "command": "upsert-service create",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C2",
+      "command": "upsert-service edit",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "P1",
+      "command": "set-professional",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "P2",
+      "command": "set-capabilities",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D1",
+      "command": "set-shop-hours initial",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D2",
+      "command": "set-barber-hours initial",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "B1",
+      "command": "set-publication published",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C3",
+      "command": "upsert-service inactive",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "C4",
+      "command": "upsert-service active",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D3",
+      "command": "set-shop-hours temporary",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D4",
+      "command": "set-shop-hours restore",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D5",
+      "command": "set-exception",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "D6",
+      "command": "withdraw-shop-closure",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "e4e96632-12c6-4d42-90b9-e5bfb5c667df"
+    },
+    {
+      "id": "B2",
+      "command": "set-publication withdrawn",
+      "actor": "U3",
+      "executed": true,
+      "status": "EJECUTADO — TRANSICIÓN CORRECTA; COMPROBACIÓN NEGATIVA PENDIENTE",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null,
+      "note": "Comprobación actual solo lectura: published tras B3; visible en Explorar/Reservar y listadoHTTP200. Ningún withdrawn en LOCAL. No repetir retirada/republicación en esta sesión; ausencia histórica no acreditable desde estado publicado actual."
+    },
+    {
+      "id": "B3",
+      "command": "set-publication published",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": null
+    },
+    {
+      "id": "Y1",
+      "command": "care/configure temporary",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "23c0a909-b6e7-46eb-ab04-b7d727a780bf"
+    },
+    {
+      "id": "Y2",
+      "command": "care/configure restore",
+      "actor": "U3",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "14cab2a4-29d9-44b4-a21d-23f372e5ebd8"
+    },
+    {
+      "id": "N1",
+      "command": "confirm cash pending",
+      "actor": "client",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 201,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "6f4f8eb5-f78c-4e7e-94d2-1d28d9a9c491"
+    },
+    {
+      "id": "N2",
+      "command": "care/no-show",
+      "actor": "U3 assigned professional",
+      "executed": true,
+      "status": "APROBADO",
+      "http": 200,
+      "postgres": true,
+      "chrome": true,
+      "requestId": "c07ed1d2-4ff6-41ff-99d5-9d25f2230c33",
+      "note": "Única inasistencia desde Chrome el21nov17:39Lima; precondiciones/reloj/autoridad comprobados; una auditoría."
+    }
+  ],
+  "totals": {
+    "planned": 22,
+    "executed": 22,
+    "fullyApproved": 21,
+    "executedWithPartialEvidence": 1,
+    "notExecuted": 0
+  },
+  "B2": {
+    "status": "BLOCKED_BY_CURRENT_REPUBLISHED_STATE",
+    "persistedPublication": "published",
+    "targetIncludedInCustomerHttpCatalogue": true,
+    "chromeExploreVisible": true,
+    "chromeBookingOffered": true,
+    "contractConsistentWithPublished": true,
+    "negativeWithdrawnCheckAccredited": false,
+    "withdrawnShopsAtPreflight": 0,
+    "reason": "B3 republished same shop after B2; current read-only state cannot reproduce historical withdrawn absence. No withdrawal or publication was invoked.",
+    "businessWrites": 0
+  },
+  "N2": {
+    "issued": true,
+    "verified": true,
+    "preconditions": {
+      "now": "2026-11-21T22:38:59.87655+00:00",
+      "state": "confirmed",
+      "events": [],
+      "method": "cash",
+      "payment": "pending",
+      "eligible": true,
+      "tolerance": 10,
+      "attendance": "confirmed",
+      "authorized": true,
+      "amountMinor": 3000,
+      "publication": "published"
+    },
+    "http": 200,
+    "finalState": {
+      "now": "2026-11-21T22:39:00.368794+00:00",
+      "state": "confirmed",
+      "events": [
+        {
+          "at": "2026-11-21T22:39:00.212364+00:00",
+          "id": "8dc94a00-fd81-4872-aa74-72a220e79cdd",
+          "actor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+          "capacity": "barber",
+          "requestId": "c07ed1d2-4ff6-41ff-99d5-9d25f2230c33"
+        }
+      ],
+      "method": "cash",
+      "payment": "pending",
+      "eligible": true,
+      "tolerance": 10,
+      "attendance": "no-show",
+      "authorized": true,
+      "amountMinor": 3000,
+      "publication": "published"
+    },
+    "webNoShowAndPendingVisible": true,
+    "reservationId": "cda64f3c-b27f-4501-84ee-5f1a8e5f5740",
+    "executionsThisTurn": 1,
+    "postedOnlyFromChrome": true,
+    "sessionActor": "existing fictitious U3",
+    "timeLima": "2026-11-21 17:39",
+    "audit": {
+      "at": "2026-11-21T22:39:00.212364+00:00",
+      "id": "8dc94a00-fd81-4872-aa74-72a220e79cdd",
+      "actor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "capacity": "barber",
+      "requestId": "c07ed1d2-4ff6-41ff-99d5-9d25f2230c33"
+    }
+  },
+  "http": [
+    {
+      "actor": "client",
+      "operation": "read-list_booking_barbershops",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "read-get_booking_catalog",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read-read-team-authority",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "read:care:read",
+      "status": 200
+    },
+    {
+      "actor": "owner",
+      "operation": "N2",
+      "status": 200
+    },
+    {
+      "actor": "client",
+      "operation": "close-own-session",
+      "status": 204
+    },
+    {
+      "actor": "owner",
+      "operation": "close-own-session",
+      "status": 204
+    }
+  ],
+  "integrity": {
+    "status": "passed",
+    "counts": {
+      "care": 29,
+      "items": 45,
+      "shops": 9,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 71,
+      "invitations": 8,
+      "memberships": 15,
+      "reservations": 42,
+      "invitationMail": 5,
+      "reservationEvents": 55
+    },
+    "history": 18,
+    "all42ReservationRowsIntact": true,
+    "original41AndTheirCarePaymentEventsIntact": true,
+    "allOtherBusinessRowsIntact": true,
+    "onlyN2CareRowUpdatedAndOneEventInserted": true,
+    "schemaHistoryEnvUnchanged": true,
+    "postSessionClose": {
+      "now": "2026-11-21T22:39:37.041398+00:00",
+      "state": "confirmed",
+      "method": "cash",
+      "payment": "pending",
+      "attendance": "no-show",
+      "auditActor": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "auditCount": 1,
+      "publication": "published",
+      "ownNewSessionsRemaining": 0
+    }
+  },
+  "sessionCleanup": {
+    "closedHttp204": 2,
+    "newOwnSessionsRemaining": 0
+  },
+  "tests": {
+    "command": "node --test .artifacts/b5-final/guard.test.mjs",
+    "passed": 1,
+    "failed": 0,
+    "syntaxCommands": [
+      "node --check .artifacts/b5-final/run.mjs",
+      "node --check .artifacts/b5-final/final-read.mjs"
+    ],
+    "doublesOnlyForGuard": true,
+    "realBrowserHttpAndPostgresForN2": true
+  },
+  "productChanges": [],
+  "schemaChanges": [],
+  "newAccounts": 0,
+  "newEmails": 0,
+  "realMoney": false,
+  "Cloud": false,
+  "Android": false,
+  "serviceOperations": false,
+  "gitWrites": false,
+  "scope": {
+    "B52": "OPEN: B2 negative visibility proof cannot be obtained from currently republished target without changing state; no such change authorized/executed",
+    "B53": "FUNCTIONALLY CLOSED WEB forY1/Y2/N1/N2 only; not academic005/Android",
+    "B5": "OPEN"
+  },
+  "matrix48": {
+    "verified": 39,
+    "implementedWithoutIntegralValidation": 1,
+    "notApplicable": 4,
+    "blocked": 3,
+    "partial": 1
+  },
+  "nextStep": "Do not repeat any existing command automatically. B2 requires valid historical evidence or a separately reviewed/authorized reversible state transition, because no shop is currently withdrawn.",
+  "changedFiles": [
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "specs/005-atencion-pagos-manuales/tasks.md",
+    "docs/evaluacion/evidencias/004-reservas/b5-ultimas-comprobaciones.json",
+    "docs/evaluacion/evidencias/004-reservas/b5-ultimas-comprobaciones.md"
+  ]
+}

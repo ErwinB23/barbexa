@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "records": [
+    {
+      "name": "types",
+      "command": "node \"node_modules/typescript/bin/tsc\" \"--noEmit\"",
+      "exitCode": 0
+    },
+    {
+      "name": "core-types",
+      "command": "node \"node_modules/typescript/bin/tsc\" \"-p\" \"tsconfig.core.json\" \"--noEmit\"",
+      "exitCode": 0
+    },
+    {
+      "name": "lint",
+      "command": "node \"node_modules/eslint/bin/eslint.js\" \"src\" \"scripts\" \"tests/architecture\" \"tests/presentation\" \"tests/integration\" \"--max-warnings\" \"0\"",
+      "exitCode": 0
+    },
+    {
+      "name": "format",
+      "command": "node \"node_modules/prettier/bin/prettier.cjs\" \"--check\" \"src/composition/registration-environment.ts\" \"src/composition/registration-runtime-provider.tsx\" \"src/features/authentication/application/auth-gateway.ts\" \"src/features/authentication/application/session-coordinator.ts\" \"src/features/authentication/presentation/auth-context.tsx\" \"src/features/authentication/presentation/use-registration.ts\" \"src/features/authentication/presentation/auth-messages.ts\" \"src/features/authentication/presentation/sign-up-screen.tsx\" \"src/features/authentication/presentation/confirm-email-screen.tsx\" \"src/app/(auth)\" \"src/app/auth\" \"src/app/_layout.tsx\" \"src/app/index.tsx\" \"src/features/foundation/presentation/welcome-screen.tsx\" \"scripts/local-auth-email-origin.mjs\" \"tests/presentation/registration.test.mjs\" \"tests/integration/authentication/runtime-environment.test.mjs\" \"tests/integration/authentication/registration-runtime.test.mjs\" \"tests/integration/authentication/local-auth-email-origin.test.mjs\" \"tests/unit/authentication/registration.test.ts\"",
+      "exitCode": 0
+    },
+    {
+      "name": "unit",
+      "command": "node \"scripts/run-unit-tests.mjs\"",
+      "exitCode": 0
+    },
+    {
+      "name": "integration-ui",
+      "command": "node \"--test\" \"tests/integration/authentication/composition.test.mjs\" \"tests/integration/authentication/development-transport.test.mjs\" \"tests/integration/authentication/local-auth-email-origin.test.mjs\" \"tests/integration/authentication/local-functions-cors.test.mjs\" \"tests/integration/authentication/registration-runtime.test.mjs\" \"tests/integration/authentication/registration.test.mjs\" \"tests/integration/authentication/router-anchor.test.mjs\" \"tests/integration/authentication/runtime-environment.test.mjs\" \"tests/integration/authentication/session-storage.test.mjs\" \"tests/presentation/auth-fields.test.mjs\" \"tests/presentation/registration.test.mjs\" \"tests/presentation/shared-ui.test.mjs\" \"tests/presentation/use-app-information.test.mjs\"",
+      "exitCode": 0
+    },
+    {
+      "name": "architecture",
+      "command": "node \"scripts/check-architecture.mjs\"",
+      "exitCode": 0
+    },
+    {
+      "name": "final-types",
+      "command": "node \"node_modules/typescript/bin/tsc\" \"--noEmit\"",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-lint",
+      "command": "node \"node_modules/eslint/bin/eslint.js\" \"src/features/authentication/presentation/sign-up-screen.tsx\" \"--max-warnings\" \"0\"",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-tests",
+      "command": "node \"--test\" \"tests/presentation/registration.test.mjs\" \"tests/integration/authentication/registration-runtime.test.mjs\"",
+      "exitCode": 0
+    },
+    {
+      "name": "final-ui-format",
+      "command": "node \"node_modules/prettier/bin/prettier.cjs\" \"--check\" \"src/features/authentication/presentation/sign-up-screen.tsx\"",
+      "exitCode": 0
+    }
+  ]
+}

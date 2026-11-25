@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "scope": "development packaging only, not functional device evidence",
+  "records": [
+    {
+      "platform": "web",
+      "status": 200,
+      "signInScreen": true,
+      "accountScreen": true,
+      "sessionNavigator": true,
+      "publicKeyPresent": true,
+      "newApk": false
+    },
+    {
+      "platform": "android",
+      "status": 200,
+      "signInScreen": true,
+      "accountScreen": true,
+      "sessionNavigator": true,
+      "publicKeyPresent": true,
+      "newApk": false
+    }
+  ]
+}

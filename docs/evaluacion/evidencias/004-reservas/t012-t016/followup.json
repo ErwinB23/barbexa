@@ -1,0 +1,15 @@
+{
+  "project": "app-barberia-002-local",
+  "additionalAccountsCreated": 0,
+  "sameAuthorizedDataset": true,
+  "pausedRPC": {
+    "http": 500,
+    "sqlstate": "P0002",
+    "message": "NOT_AVAILABLE"
+  },
+  "edgeHTTPMappingNotImplemented": true,
+  "headers": 17,
+  "badItems": 0,
+  "badEvents": 0,
+  "passed": true
+}

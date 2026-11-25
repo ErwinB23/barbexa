@@ -1,0 +1,161 @@
+{
+  "recordedAtUtc": "2026-11-22T03:56:19.647Z",
+  "timezone": "America/Lima",
+  "project": "vuoncrtkkkquvddunrxx",
+  "region": "sa-east-1",
+  "scope": "Fase C autorizada: migraciones 17/18 y solo barbershop-operation; sin activar autoridad ni cambiar frontend",
+  "cliVersion": "3.1.0",
+  "cliLinked": true,
+  "migrations": [
+    {
+      "version": "20261120010538",
+      "sha256": "6f581f7c0ea2b6e6dc9c518a6cdf7252ae9816dc7ca7a21f4a0e3ce44b1d1b42",
+      "attempts": 1,
+      "officialCommand": "migration up",
+      "historyAfter": 17,
+      "verified": true
+    },
+    {
+      "version": "20261121040559",
+      "sha256": "4f4eb23290595ccef8e13a9b65a9a756ee8e21f63bd83f25c0e26edf8c044335",
+      "attempts": 1,
+      "officialCommand": "migration up",
+      "historyAfter": 18,
+      "verified": true
+    }
+  ],
+  "finalHistory": 18,
+  "catalog": {
+    "tables": 24,
+    "functions": 98,
+    "rlsPolicies": 16,
+    "triggers": 8
+  },
+  "edgeFunctions": [
+    {
+      "name": "barbershop-operation",
+      "version": 3,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    },
+    {
+      "name": "create-barbershop",
+      "version": 2,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    },
+    {
+      "name": "ensure-profile",
+      "version": 2,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    },
+    {
+      "name": "reservation-command",
+      "version": 2,
+      "status": "ACTIVE",
+      "verifyJwt": true
+    }
+  ],
+  "downloadedRuntimeSource": {
+    "downloadedRuntimeFiles": 30,
+    "allDownloadedSourcesMatch": true,
+    "entrypointPresent": true,
+    "authorityModulePresent": true,
+    "closureModulePresent": true
+  },
+  "flags": {
+    "BARBERIA_ENABLE_TEAM_AUTHORITY": "absent; disabled; unchanged",
+    "BARBERIA_ENABLE_ADMIN_INVITATIONS": "absent; disabled; unchanged"
+  },
+  "automatedChecks": {
+    "serverTests": 72,
+    "authorityClosureAndMigrationRegressions": 71,
+    "failures": 0,
+    "typeScriptServerCore": "passed",
+    "denoCheckFourEntrypoints": "passed",
+    "flagOffComposition": "204 startup and 403 authority with doubles; no network",
+    "verifierRegressionAssertions": 7
+  },
+  "cloudHttpChecks": [
+    {
+      "name": "missing-authorization",
+      "status": 401,
+      "passed": true,
+      "errorCode": "UNAUTHENTICATED"
+    },
+    {
+      "name": "invalid-jwt",
+      "status": 401,
+      "passed": true,
+      "errorCode": "UNAUTHORIZED_INVALID_JWT_FORMAT"
+    },
+    {
+      "name": "allowed-origin-runtime-startup",
+      "status": 204,
+      "passed": true
+    },
+    {
+      "name": "forbidden-origin",
+      "status": 403,
+      "passed": true,
+      "errorCode": "FORBIDDEN"
+    },
+    {
+      "name": "privileged-rpc-anon-denied",
+      "status": 401,
+      "passed": true,
+      "errorCode": "42501"
+    },
+    {
+      "name": "auth-health-read-only",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "cloudCounts": {
+    "authorityEvents": 0,
+    "care": 0,
+    "identities": 3,
+    "items": 0,
+    "memberships": 0,
+    "owners": 0,
+    "profiles": 2,
+    "reservations": 0,
+    "shops": 0,
+    "storageBuckets": 0,
+    "storageObjects": 0,
+    "users": 2
+  },
+  "protectedTablesCompared": 58,
+  "protectedRowsUnchanged": true,
+  "backupOriginalsUnchanged": true,
+  "sqlAndProductSourceUnchanged": true,
+  "noBusinessWrites": true,
+  "noUserSessionsCreated": true,
+  "productionSecretMutationCommands": 0,
+  "customSecretNamesAndUpdatedDatesUnchanged": true,
+  "builtinSecretValueEqualityAcrossDeploy": "not independently fingerprinted; reserved variable timestamps are not proof of mutation",
+  "positiveCloudRoleChecks": "deferred; zero barbershops/memberships; no fixtures created",
+  "runtimeBusinessIdempotencyInCloud": "not tested; isolated Phase B evidence reused",
+  "frontendCloudSwitch": false,
+  "incidents": [
+    {
+      "component": "verifier",
+      "cause": "CLI --read-only rejects DO; read-only connection cannot execute service_role RPC",
+      "resolution": "No product or permission changes. Exact ACL and SQLSTATE 42501 checked; original migration not repeated."
+    },
+    {
+      "component": "verifier",
+      "cause": "JSON persistence omits undefined digest property",
+      "resolution": "Normalization tested with two assertions; no second deploy."
+    },
+    {
+      "component": "verifier",
+      "cause": "Reserved SUPABASE_* timestamps cannot demonstrate custom secret changes",
+      "resolution": "Only custom variable updated_at checked; no secret commands executed."
+    }
+  ],
+  "privateEvidenceDirectory": "C:\\Users\\PREDATOR\\AppData\\Local\\Barbexa\\backups\\cloud-phase-c-20261122012922-e0d17a03",
+  "recovery": "Original Phase A backups and old Edge source retained; no rollback or restore attempted."
+}

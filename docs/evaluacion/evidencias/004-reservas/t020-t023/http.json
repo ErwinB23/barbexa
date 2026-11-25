@@ -1,0 +1,23 @@
+{
+  "project": "app-barberia-002-local",
+  "checks": [
+    "administrator-own-tenant",
+    "projection-no-other-tenant-or-auth-data",
+    "foreign-administrator-denied",
+    "client-cannot-enter-staff-agenda",
+    "professional-state-date-filter",
+    "authorized-empty-agenda",
+    "anon-execute-denied",
+    "invalid-filter-rejected",
+    "forged-role-cannot-authorize",
+    "client-own-reservation-still-readable",
+    "existing-RLS-foreign-row-hidden",
+    "booking-count-unchanged"
+  ],
+  "scopeLimits": [
+    "barber-only assigned/unassigned",
+    "inactive membership",
+    "admin-A/barber-B",
+    "controlled revocation require separately approved fixtures"
+  ]
+}

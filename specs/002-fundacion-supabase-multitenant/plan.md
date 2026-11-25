@@ -2,8 +2,9 @@
 
 **Branch**: `main` | **Date**: 2026-11-11 | **Spec**: [spec.md](spec.md)
 
-**Identificador**: `002-fundacion-supabase-multitenant`. Plan propuesto; ninguna integración,
-migración, prueba de base de datos o creación de proyecto se ha ejecutado en esta fase.
+**Identificador**: `002-fundacion-supabase-multitenant`. Fundación ejecutada y acreditada
+(40/40 tareas). El plan original y sus ensayos se conservan; integración y activaciones
+posteriores vigentes se detallan en docs/CODEX-HANDOFF.md, sección 1.
 
 ## Summary
 

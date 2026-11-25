@@ -1,0 +1,27 @@
+{
+  "project": "app-barberia-002-local",
+  "dataWrites": 0,
+  "result": [
+    {
+      "method": "OPTIONS",
+      "origin": "http://localhost:8081",
+      "http": 204,
+      "cors": "http://localhost:8081",
+      "pass": true
+    },
+    {
+      "method": "POST",
+      "origin": "http://localhost:8081",
+      "http": 401,
+      "cors": "http://localhost:8081",
+      "pass": true
+    },
+    {
+      "method": "POST",
+      "origin": "https://not-approved.invalid",
+      "http": 403,
+      "cors": "http://localhost:8081",
+      "pass": true
+    }
+  ]
+}

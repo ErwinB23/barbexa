@@ -1,0 +1,51 @@
+{
+  "audit-total.json": {
+    "before": {
+      "info": 0,
+      "low": 0,
+      "moderate": 9,
+      "high": 0,
+      "critical": 0,
+      "total": 9
+    },
+    "after": {
+      "info": 0,
+      "low": 0,
+      "moderate": 8,
+      "high": 0,
+      "critical": 0,
+      "total": 8
+    },
+    "added": [],
+    "removed": [
+      "eslint-config-expo"
+    ],
+    "changed": [
+      "@typescript-eslint/eslint-plugin",
+      "@typescript-eslint/type-utils",
+      "@typescript-eslint/typescript-estree",
+      "@typescript-eslint/utils"
+    ]
+  },
+  "audit-produccion.json": {
+    "before": {
+      "info": 0,
+      "low": 0,
+      "moderate": 3,
+      "high": 0,
+      "critical": 0,
+      "total": 3
+    },
+    "after": {
+      "info": 0,
+      "low": 0,
+      "moderate": 3,
+      "high": 0,
+      "critical": 0,
+      "total": 3
+    },
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "project": "app-barberia-002-local",
+  "readOnly": true,
+  "readOnlyScope": "Commercial catalog/business data. Existing fictitious account signed in for measurement and signed out locally in finally; no accounts or bookings created.",
+  "samples": 5,
+  "baselineMs": [
+    40.99969999999996,
+    15.713000000000022,
+    15.515500000000031,
+    17.262200000000007,
+    6.528599999999983
+  ],
+  "cachedMs": [
+    1.985400000000027,
+    1.7942000000000462,
+    2.0773000000000366,
+    1.8564999999999827,
+    1.8845000000000027
+  ],
+  "baselineMedianMs": 15.713000000000022,
+  "cachedMedianMs": 1.8845000000000027,
+  "cacheHitAuthRequests": 5,
+  "cacheHitCatalogRequests": 0,
+  "scope": "Local Node HTTP read-only measurement, not browser/Hermes or k6 load benchmark"
+}

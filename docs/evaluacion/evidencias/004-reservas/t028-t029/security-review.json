@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-15",
+  "scope": "Only new/current auth, composition, cache, workflow and related evidence; not a repository-wide audit",
+  "files": 68,
+  "findings": [],
+  "valuesPrinted": false,
+  "activeLogExcluded": true
+}

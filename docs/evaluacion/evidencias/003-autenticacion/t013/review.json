@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-14",
+  "candidateFiles": 57,
+  "secretPatternFindings": [],
+  "scope": "T013 new/affected sources and evidence; active log excluded",
+  "localLinksInvalid": [],
+  "gitDiffGlobalExit": 2,
+  "gitDiffExcludingOnlyActiveLogExit": 0,
+  "activeLogShaUnchanged": true,
+  "branch": "main",
+  "head": "0ccd33c",
+  "stagedNames": []
+}

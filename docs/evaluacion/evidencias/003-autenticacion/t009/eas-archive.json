@@ -1,0 +1,13 @@
+{
+  "cli": "27.10.0",
+  "stage": "archive",
+  "files": 68,
+  "findings": [],
+  "requiredFilesIdentical": true,
+  "targetProject": "@erwin23/app-barberia",
+  "targetId": "d428c9e5-0852-43c3-974c-fae3bf286f3e",
+  "androidPackage": "com.erwin23.appbarberia",
+  "profile": "development",
+  "scheme": "appbarberia",
+  "buildStarted": false
+}

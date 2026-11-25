@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "project": "app-barberia-002-local",
+  "result": {
+    "newUsers": 3,
+    "newProfiles": 3,
+    "newShops": 2,
+    "newMemberships": 4,
+    "existingDataFingerprintPreserved": true,
+    "credentialsFile": ".artifacts/t027-context/credenciales-locales.txt",
+    "tokensWritten": false,
+    "emailsRequested": 0
+  }
+}

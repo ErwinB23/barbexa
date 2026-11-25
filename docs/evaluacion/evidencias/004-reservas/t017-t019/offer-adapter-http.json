@@ -1,0 +1,8 @@
+{
+  "project": "app-barberia-002-local",
+  "readOnly": true,
+  "ownManagement": true,
+  "pendingInvitationName": true,
+  "foreignAdminDenied": true,
+  "grantedMembershipBeforeAcceptance": false
+}

@@ -1,0 +1,11 @@
+{
+  "node": "v24.21.0",
+  "runtime": "Node; not Hermes or browser",
+  "URL": true,
+  "URLSearchParams": true,
+  "cryptoGetRandomValues": true,
+  "cryptoSubtle": true,
+  "supabaseImport": true,
+  "androidExecuted": false,
+  "webBrowserExecuted": false
+}

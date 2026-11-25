@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-14",
+  "executedBy": "Codex",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:54421/auth/v1/health",
+      "status": 200
+    },
+    {
+      "url": "http://192.168.0.33:54421/auth/v1/health",
+      "status": 200
+    },
+    {
+      "platform": "web",
+      "port": 8081,
+      "status": 200,
+      "html": true,
+      "hasSignup": false,
+      "hasError": false
+    },
+    {
+      "platform": "android-manifest",
+      "port": 8081,
+      "status": 200,
+      "devHttp": true,
+      "publicKeyAvailable": false,
+      "hostUri": "127.0.0.1:8081"
+    },
+    {
+      "port": 8082,
+      "reachable": false
+    },
+    {
+      "otherServiceIdsAndStartsPreserved": true,
+      "oldContainers": 12,
+      "activeLogUnchanged": true
+    }
+  ]
+}

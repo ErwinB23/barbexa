@@ -1,0 +1,275 @@
+{
+  "date": "2026-11-20",
+  "timezone": "America/Lima",
+  "status": "LOCAL migration activated and real Edge read verified; functional22 not executed",
+  "changedFiles": [
+    "scripts/local-closure-migration.mjs",
+    "tests/integration/tenant-foundation/closure-migration-cli.test.mjs",
+    "docs/PLAN-FINALIZACION-WEB.md",
+    "docs/CODEX-HANDOFF.md",
+    "ESTADO-DESARROLLO.md",
+    "specs/004-mvp-reservas/contracts/booking.md",
+    "specs/004-mvp-reservas/plan.md",
+    "specs/004-mvp-reservas/tasks.md",
+    "docs/evaluacion/evidencias/004-reservas/b523-activacion-reintento.json",
+    "docs/evaluacion/evidencias/004-reservas/b523-activacion-reintento.md"
+  ],
+  "localOperators": [
+    ".artifacts/b523-activate.mjs (old apply branch disabled)",
+    ".artifacts/b5-activation-cli.mjs (official CLI orchestrator)",
+    ".artifacts/b523-execution/edge-read.mjs (non-business-write real probe)"
+  ],
+  "defect": {
+    "oldCode": "source.replace(/commit;\\s*$/i, history + verification + commit)",
+    "cause": "replacement string interprets dollar-apostrophe in SQL regex and corrupts generated history statement",
+    "correction": "No SQL transformation/history construction. Official CLI db push --skip-vault with validated loopback URL, exact pending set and isolated process environment.",
+    "oldExecutionDisabled": true
+  },
+  "tests": {
+    "red": {
+      "passed": 0,
+      "failed": 5
+    },
+    "green": {
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "cases": [
+      "legacy unsafe apply path disabled",
+      "dollar replacement metacharacters preserved as raw approved bytes",
+      "only exact LOCAL endpoint/hash/history/files accepted",
+      "one-attempt guard; failed CLI or missing PostgreSQL proof cannot mark committed",
+      "implicit Cloud and PG environments stripped"
+    ],
+    "commands": [
+      "node --test tests/integration/tenant-foundation/closure-migration-cli.test.mjs",
+      "eslint scripts/local-closure-migration.mjs tests/integration/tenant-foundation/closure-migration-cli.test.mjs --max-warnings 0",
+      "prettier --check scripts/local-closure-migration.mjs tests/integration/tenant-foundation/closure-migration-cli.test.mjs",
+      "npm.cmd run typecheck",
+      "npm.cmd run architecture:check"
+    ],
+    "allExit0": true,
+    "existingBusinessSuitesNotRepeated": true
+  },
+  "activation": {
+    "project": "app-barberia-002-local",
+    "host": "127.0.0.1",
+    "port": 54422,
+    "api": "http://127.0.0.1:54421",
+    "tcpVerified": true,
+    "preflightCounts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    },
+    "preflightHistory": 17,
+    "preflightNoPartialRpcColumnOrTx": true,
+    "migration": "supabase/migrations/20261121040559_administrative_closure_withdrawal.sql",
+    "sha256": "4f4eb23290595ccef8e13a9b65a9a756ee8e21f63bd83f25c0e26edf8c044335",
+    "sourceUnchanged": true,
+    "cli": "3.1.0",
+    "dryRun": {
+      "exit": 0,
+      "stdout": "{\"upToDate\":false,\"dryRun\":true,\"migrations\":[\"20261121040559_administrative_closure_withdrawal.sql\"],\"seeds\":[],\"roles\":[],\"message\":\"Finished supabase db push.\",\"target\":{\"kind\":\"db-url\",\"host\":\"127.0.0.1\",\"port\":54422}}\n",
+      "stderr": "Target: custom Postgres (127.0.0.1:54422)\nDRY RUN: migrations will *not* be pushed to the database.\nWould push these migrations:\n • 20261121040559_administrative_closure_withdrawal.sql\nA new version of Supabase CLI is available: v3.2.0 (currently installed v3.1.0)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\n",
+      "error": null
+    },
+    "execution": {
+      "exit": 0,
+      "stdout": "{\"upToDate\":false,\"dryRun\":false,\"migrations\":[\"20261121040559_administrative_closure_withdrawal.sql\"],\"seeds\":[],\"roles\":[],\"message\":\"Finished supabase db push.\",\"target\":{\"kind\":\"db-url\",\"host\":\"127.0.0.1\",\"port\":54422}}\n",
+      "stderr": "Target: custom Postgres (127.0.0.1:54422)\nApplying migration 20261121040559_administrative_closure_withdrawal.sql...\nA new version of Supabase CLI is available: v3.2.0 (currently installed v3.1.0)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\n",
+      "error": null
+    },
+    "attempts": 1,
+    "historyManuallyWritten": false,
+    "postcheck": {
+      "counts": {
+        "care": 28,
+        "items": 44,
+        "shops": 8,
+        "users": 14,
+        "profiles": 13,
+        "careEvents": 67,
+        "invitations": 8,
+        "memberships": 14,
+        "reservations": 41,
+        "invitationMail": 5,
+        "reservationEvents": 54
+      },
+      "history": 18,
+      "probe": {
+        "anon": false,
+        "newRpc": 2,
+        "openTx": 0,
+        "service": true,
+        "withdrawn": 0,
+        "authenticated": false
+      },
+      "allRowsIntact": true,
+      "sourceUnchanged": true
+    },
+    "schema": {
+      "status": "passed",
+      "historyStatementsExactAfterCliSemicolonAndLineEndingNormalization": true,
+      "statements": 22,
+      "approvedRegexDollarsPreserved": 6,
+      "schemaObjectDelta": {
+        "tables": 0,
+        "functions": 6,
+        "policies": 0,
+        "triggers": 1,
+        "constraints": 3,
+        "indexes": 3
+      },
+      "rlsPoliciesUnchanged": true,
+      "expectedOnly": true
+    }
+  },
+  "backup": {
+    "path": ".artifacts/b523-execution/before-20261121040559.local.dump",
+    "bytes": 622370,
+    "sha256": "d74833baacb97d8efea305cb870fc106b106682962e43bd6ffc7027a1d9d7e40",
+    "tocVerified": true,
+    "fullyDecodedWithoutRestore": true,
+    "restrictedAcl": true,
+    "revalidated": true,
+    "restored": false,
+    "hashRechecked": true,
+    "tocAndDecodeRechecked": true,
+    "aclRechecked": true,
+    "overwritten": false
+  },
+  "edge": {
+    "status": "passed",
+    "realGoTrue": true,
+    "realEdge": true,
+    "realPostgrestAndPostgres": true,
+    "doubles": false,
+    "requests": [
+      {
+        "operation": "necessary-local-test-session",
+        "status": 200
+      },
+      {
+        "operation": "verified-local-identity",
+        "status": 200
+      },
+      {
+        "operation": "closure-read-without-session",
+        "status": 401
+      },
+      {
+        "operation": "closure-read-authorized-context",
+        "status": 200
+      },
+      {
+        "operation": "closure-read-outside-authorized-context",
+        "status": 403
+      },
+      {
+        "operation": "direct-privileged-read-rpc-denied-to-user",
+        "status": 403
+      },
+      {
+        "operation": "close-only-own-test-session",
+        "status": 204
+      }
+    ],
+    "withdrawalInvoked": false,
+    "businessWrites": 0,
+    "newUsers": 0,
+    "newEmails": 0,
+    "servicesReloaded": false,
+    "projectionMatchesPostgres": true,
+    "originalClosuresUnchanged": true,
+    "ownSessionClosed": true,
+    "allBusinessFingerprintsUnchanged": true,
+    "authCredentialsAndStableFieldsUnchanged": true,
+    "preexistingSessionsUnchanged": true,
+    "newSessionsRemaining": 0,
+    "counts": {
+      "care": 28,
+      "items": 44,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 67,
+      "invitations": 8,
+      "memberships": 14,
+      "reservations": 41,
+      "invitationMail": 5,
+      "reservationEvents": 54
+    }
+  },
+  "integrity": {
+    "reservations": 41,
+    "items": 44,
+    "care": 28,
+    "careEvents": 67,
+    "reservationEvents": 54,
+    "allBusinessFingerprintsUnchanged": true,
+    "previousClosuresUnchanged": true,
+    "profilesMembershipsOwnershipServicesPaymentsAttendanceUnchanged": true,
+    "authStableFieldsAndCredentialsUnchanged": true,
+    "normalAuthLastSignInTimestampsUpdated": true,
+    "historyBefore": 17,
+    "historyAfter": 18,
+    "previousHistoryRowsUnchanged": true,
+    "rlsPoliciesUnchanged": true,
+    "openActivationTransactions": 0,
+    "approvedMigrationBytesUnchanged": true,
+    "envUnchanged": true
+  },
+  "notExecuted": {
+    "functionalCommands": 0,
+    "barbershopsCreated": 0,
+    "reservationsCreated": 0,
+    "closuresCreatedOrWithdrawn": 0,
+    "yapeEdits": 0,
+    "noShow": 0,
+    "chromeFunctionalAcceptance": false,
+    "cloudChanges": false,
+    "androidChanges": false,
+    "extraMigrations": false,
+    "serviceRestarts": false,
+    "gitWrites": false
+  },
+  "readiness": {
+    "technicalLocalActivation": true,
+    "realEdgeRead": true,
+    "positiveWithdrawalAndChromeStillPending": true,
+    "functional22CanBePrepared": true,
+    "requiresSeparateUserAuthorization": true,
+    "revalidateBeforeBusiness": [
+      "fresh protected baseline",
+      "exact22 payloads and IDs",
+      "real server clock, availability and no-show tolerance"
+    ],
+    "B52": "open: authorized technical activation finished, functional22 pending",
+    "B53": "open: no functional commands executed",
+    "B5": "open"
+  },
+  "matrix48": {
+    "verified": 34,
+    "implementedWithoutIntegralValidation": 6,
+    "notApplicable": 4,
+    "blocked": 3,
+    "partial": 1
+  },
+  "remainingSeparate": [
+    "administrative SMTP unknown",
+    "property transfer final contract",
+    "visual approval",
+    "Android acceptance",
+    "public Cloud/deployment"
+  ]
+}

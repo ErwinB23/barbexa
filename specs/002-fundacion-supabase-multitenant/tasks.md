@@ -1,11 +1,14 @@
 # Tasks: Fundación Supabase y aislamiento multitenant
 
+**Estado vigente (24/11/2026):** 40/40 tareas acreditadas. Los párrafos finales sobre
+generación y evidencias futuras son antecedentes, no el estado actual del backend.
+
 **Input**: [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md),
 [data-model.md](data-model.md), [contratos](contracts/backend-foundation.md),
 [quickstart.md](quickstart.md) y [validation.md](validation.md).
 
 **Contexto**: Constitución 1.0.1; rama `main`, HEAD observado `e0141cb`.
-**Estado**: lista generada el 2026-11-11; **ninguna tarea ejecutada**. Las cuatro historias
+**Estado al generar (11/11; histórico)**: ninguna tarea ejecutada en aquel momento. Las cuatro historias
 son P1. Sus dependencias técnicas no permiten implementarlas todas simultáneamente.
 
 ## Formato, evidencia y límites
