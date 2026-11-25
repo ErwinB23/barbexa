@@ -4,8 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { createHmac, randomBytes } from 'node:crypto';
 import { Buffer } from 'node:buffer';
 import { assertLocalTarget, fixtureCredentials } from './fixtures.mjs';
-const docker =
-  'C:/Users/PREDATOR/AppData/Local/Programs/DockerDesktop/resources/bin/docker.exe';
+const docker = 'docker';
 const projectId = 'app-barberia-002-local',
   url = 'http://127.0.0.1:54421';
 const inspect = (names) => {
