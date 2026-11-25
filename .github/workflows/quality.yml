@@ -1,0 +1,58 @@
+name: Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      CI: '1'
+      EXPO_NO_DOTENV: '1'
+      EXPO_NO_TELEMETRY: '1'
+      # A fresh checkout supplies empty profiles; collect during check, no second test run.
+      DENO_COVERAGE_DIR: ${{ github.workspace }}/.artifacts/ci-server-coverage
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24.21.0
+      - uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
+        with:
+          deno-version: 2.9.8
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Types, architecture, lint, format and safe automated tests
+        run: npm run check
+      - name: Server coverage report and existing 100 percent gate
+        run: node scripts/report-server-coverage.mjs
+      - name: Validate OpenAPI and real contract examples
+        run: node scripts/validate-openapi.mjs
+      - name: Compile Web without workstation credentials or Cloud profile
+        run: node scripts/export-web-ci.mjs
+      - name: Prepare sanitized evidence
+        run: node scripts/prepare-ci-artifacts.mjs
+      - name: Upload safe aggregate evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: quality-evidence
+          path: ci-artifacts/*.json
+          if-no-files-found: error
+          include-hidden-files: false
+          retention-days: 7
+
+# No database, Auth fixture, Cloud deployment, secrets, credentials, cache or
+# raw evidence upload. Real SQL/HTTP and platform acceptance remain separate gates.
