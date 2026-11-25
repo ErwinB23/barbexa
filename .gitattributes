@@ -1,0 +1,17 @@
+# Prettier requires LF. Auto-detection keeps binary data out of text conversion.
+* text=auto eol=lf
+
+# Original evidence includes UTF-16 logs; preserve stored bytes and encoding.
+*.log binary !eol
+
+# Images and fonts used by BARBEXA must never undergo newline conversion.
+*.png binary !eol
+*.jpg binary !eol
+*.jpeg binary !eol
+*.gif binary !eol
+*.webp binary !eol
+*.ico binary !eol
+*.ttf binary !eol
+*.otf binary !eol
+*.woff binary !eol
+*.woff2 binary !eol
