@@ -12,3 +12,47 @@ supabase/.branches/
 .env
 .env.*
 !.env.example
+
+# Private credentials, signing material and workstation configuration.
+credentials.json
+credentials.*.json
+service-account*.json
+*.key
+*.pem
+*.p12
+*.pfx
+*.p8
+*.jks
+*.keystore
+*.mobileprovision
+.npmrc
+.netrc
+.pgpass
+.aws/
+.ssh/
+application_default_credentials.json
+.codex/
+.agents/
+.private/
+
+# Private captures/backups and regenerable evidence. Existing tracked files
+# require an explicitly approved index-only cleanup; these rules do not remove them.
+*.log
+*.har
+*.dump
+*.backup
+*.bak
+*.zip
+*.7z
+*.tar
+*.tar.gz
+backups/
+respaldos/
+*-data-only.sql
+*-real.json
+ci-artifacts/
+*.tmp
+*.temp
+*.swp
+.DS_Store
+Thumbs.db
