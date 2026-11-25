@@ -1,0 +1,168 @@
+{
+  "stage": "2C.7",
+  "status": "prepared_not_executed",
+  "target": {
+    "project": "app-barberia-002-local",
+    "host": "127.0.0.1",
+    "port": 54422,
+    "database": "postgres",
+    "postgresVersion": "17.11"
+  },
+  "revalidation": {
+    "history": 16,
+    "shops": 8,
+    "memberships": 13,
+    "proposedOwnerAssignments": 8,
+    "eligibleCandidates": true,
+    "secondaryResultCount": 1,
+    "missingSettings": 1,
+    "pendingBarberInvitationIntact": true,
+    "pendingInvitationSenderIsProposedOwner": true
+  },
+  "mapAliases": [
+    [
+      "MVP Local A",
+      "U1",
+      null
+    ],
+    [
+      "MVP Local B",
+      "U2",
+      null
+    ],
+    [
+      "005 aislada 0",
+      "U3",
+      null
+    ],
+    [
+      "005 aislada 1",
+      "U4",
+      null
+    ],
+    [
+      "Prueba aislada 0",
+      "U5",
+      null
+    ],
+    [
+      "Prueba aislada 1",
+      "U6",
+      null
+    ],
+    [
+      "011 Equipo aislado",
+      "U5",
+      "U6"
+    ],
+    [
+      "sjjss",
+      "U1",
+      null
+    ]
+  ],
+  "artifact": {
+    "sourceSha256": "6F581F7C0EA2B6E6DC9C518A6CDF7252AE9816DC7CA7A21F4A0E3CE44B1D1B42",
+    "migrationBodySha256": "1839c7edd6fba1a884c8abdcc36c68876e32a0cb9c95ff04338b4888e61a99c6",
+    "databaseExecuted": false,
+    "terminalAction": "ROLLBACK",
+    "proposedOwners": 8,
+    "newSettings": 1,
+    "authorityEvents": 8,
+    "historyRowsAdded": 1,
+    "sqlSha256": "6a29443cf1a2ad32a367bd4575d2161fba470ae3c23b1ac8256c889a6b0ccd44",
+    "statements": 86,
+    "actualProposalReviewed": false,
+    "executed": false
+  },
+  "checks": {
+    "offlinePassed": 18,
+    "offlineFailed": 0,
+    "newGeneratorTests": 9,
+    "staticMigrationRegressionTests": 9,
+    "typecheck": true,
+    "targetedLint": true,
+    "targetedFormat": true,
+    "clientArchitecture": true,
+    "serverArchitecture": true,
+    "operatorCanLockRequiredTables": true,
+    "locksActuallyAcquired": false
+  },
+  "preservation": {
+    "catalog": true,
+    "dataFingerprints22Tables": true,
+    "counts": true,
+    "history": true,
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "locks": {
+      "waitingLocks": 0,
+      "operationSessions": 0
+    }
+  },
+  "realSqlEvidence": {
+    "reused": "team-authority-2c4-result.json",
+    "passedCases": 75,
+    "realRaces": 2,
+    "knownReadOnly008Incident": true,
+    "exactNewCombinedTransitionExecuted": false,
+    "newIsolatedDatabaseCreated": false,
+    "postgresCompilationOfNewAssertions": false
+  },
+  "approval": {
+    "definitiveMap": false,
+    "mainExecution": false,
+    "commitModeImplemented": false,
+    "administrativeMigrationApplied": false,
+    "ownersAssigned": false,
+    "edgeOrWebActivated": false,
+    "finalOwnershipTransferStillBlocked": true
+  },
+  "futureMainWriteBudget": {
+    "migrationVersion": "20261120010538",
+    "privateTablesCreated": 4,
+    "newFunctions": 12,
+    "replacedFunctions": 12,
+    "triggersAdded": 3,
+    "policiesAdjusted": 3,
+    "ownershipRows": 8,
+    "authorityEvents": 8,
+    "bookingSettingsRows": 1,
+    "historyRows": 1,
+    "existingBusinessRowsUpdated": 0
+  },
+  "requirements": [
+    "Explicit definitive map approval and lock window",
+    "Authorized isolated exact SQL rehearsal with synthetic fixtures and controlled cleanup before main",
+    "Revalidate all snapshots and source/artifact hashes before executing",
+    "One transaction including history; one COMMIT only after later authorization",
+    "Stop on errors or ambiguous COMMIT; no retry or destructive automatic recovery",
+    "Cloud, Edge, client flags and business E2E remain separate"
+  ],
+  "privateArtifacts": ".artifacts/team-authority-2c7/",
+  "checkedAt": "2026-11-20T05:38:46.751Z"
+}

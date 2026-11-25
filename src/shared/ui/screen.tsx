@@ -3,18 +3,39 @@ import { ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { tokens } from './tokens';
+import { webPart } from './web-part';
+import { WebSurface } from './web-surface';
 
-// La composición raíz suministrará SafeAreaProvider cuando se implemente T014.
-export function Screen({ children }: { children: ReactNode }) {
-  return (
-    <SafeAreaView style={styles.safeArea}>
+export function Screen({
+  children,
+  width = 'content',
+  webSurface,
+  webLayout,
+}: {
+  children: ReactNode;
+  width?: 'form' | 'content' | 'wide';
+  webSurface?: 'public';
+  webLayout?: 'account';
+}) {
+  const screen = (
+    <SafeAreaView {...webPart('screen')} style={styles.safeArea}>
       <ScrollView
-        contentContainerStyle={styles.content}
+        {...webPart('scroll', webLayout)}
+        contentContainerStyle={[
+          styles.content,
+          width === 'form' && styles.form,
+          width === 'wide' && styles.wide,
+        ]}
         keyboardShouldPersistTaps="handled"
       >
         {children}
       </ScrollView>
     </SafeAreaView>
+  );
+  return webSurface ? (
+    <WebSurface kind={webSurface}>{screen}</WebSurface>
+  ) : (
+    screen
   );
 }
 
@@ -26,6 +47,9 @@ const styles = StyleSheet.create({
     maxWidth: tokens.size.contentMaxWidth,
     alignSelf: 'center',
     padding: tokens.space.xl,
+    paddingBottom: tokens.space.xxl,
     gap: tokens.space.lg,
   },
+  form: { maxWidth: tokens.size.formMaxWidth },
+  wide: { maxWidth: tokens.size.wideMaxWidth },
 });

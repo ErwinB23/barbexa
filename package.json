@@ -7,10 +7,14 @@
     "node": "^24.3.0"
   },
   "dependencies": {
-    "expo": "~58.0.24",
+    "@supabase/supabase-js": "2.119.0",
+    "expo": "58.0.25",
     "expo-constants": "~58.0.16",
+    "expo-crypto": "58.0.8",
+    "expo-dev-client": "~58.0.20",
     "expo-linking": "~58.0.17",
     "expo-router": "~58.0.31",
+    "expo-secure-store": "58.0.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-native": "0.88.1",
@@ -19,12 +23,14 @@
     "react-native-web": "0.21.4"
   },
   "devDependencies": {
+    "@apidevtools/swagger-parser": "13.1.0",
     "@types/node": "^24.0.0",
     "@types/react": "~19.3.0",
     "eslint": "^9.18.0",
     "eslint-config-expo": "~58.0.4",
     "prettier": "^3.8.3",
     "supabase": "3.1.0",
+    "swagger-ui-dist": "5.36.0",
     "typescript": "6.0.3"
   },
   "scripts": {
@@ -32,7 +38,8 @@
     "lint": "eslint src scripts tests/architecture tests/presentation tests/integration --max-warnings 0",
     "format:check": "prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json tsconfig.server.json tsconfig.server-core.json supabase/functions tests/architecture/check-server-architecture.test.mjs tests/architecture/server-fixtures tests/integration/tenant-foundation",
     "architecture:check": "node scripts/check-architecture.mjs",
-    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && node --test tests/presentation/use-app-information.test.mjs tests/presentation/shared-ui.test.mjs && npm run test:architecture:server && npm run test:backend:environment",
+    "test": "node --test tests/architecture/check-architecture.test.mjs && node scripts/run-unit-tests.mjs && npm run test:client && npm run test:architecture:server && npm run test:backend:environment",
+    "test:client": "node scripts/run-client-checks.mjs",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm run architecture:check && npm test && npm run check:server && npm run test:server",
     "start": "expo start --go --lan",
     "typecheck:server-core": "tsc -p tsconfig.server-core.json --noEmit",
@@ -42,6 +49,10 @@
     "test:server": "deno task --config supabase/functions/deno.json test",
     "coverage:server": "deno task --config supabase/functions/deno.json coverage",
     "lint:server": "eslint supabase/functions tests/server --max-warnings 0",
-    "test:backend:environment": "node --test tests/integration/tenant-foundation/environment.test.mjs"
+    "test:backend:environment": "node --test tests/integration/tenant-foundation/environment.test.mjs",
+    "coverage:client": "node scripts/run-unit-tests.mjs",
+    "docs:api": "node scripts/serve-api-docs.mjs",
+    "docs:api:build": "node scripts/build-openapi.mjs",
+    "docs:api:check": "node scripts/validate-openapi.mjs && node --test tests/integration/booking/openapi.test.mjs"
   }
 }

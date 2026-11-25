@@ -2,8 +2,9 @@
 
 **Branch**: `main` | **Date**: 2026-11-13 | **Spec**: [spec.md](spec.md)
 
-**Input**: 003 aprobada para planificación: cinco historias, 20 FR, seis SC; checklist 16/16.
-Solo diseño: no instalación, configuración Cloud, pruebas funcionales ni tareas ejecutadas.
+**Input**: Cinco historias, 20 FR y seis SC. Implementación integrada con Auth Cloud;
+aceptación manual Web confirmada el 24/11/2026. Las pruebas específicas y Android
+pendientes permanecen en tasks.md; no se sustituyen por la aceptación visual.
 
 ## Summary
 

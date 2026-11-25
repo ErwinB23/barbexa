@@ -7,11 +7,17 @@ import { StatusMessage } from '@/shared/ui/status-message';
 
 import { useAppInformation } from './use-app-information';
 
-export function TechnicalScreen({ onBack }: { onBack: () => void }) {
+export function TechnicalScreen({
+  onBack,
+  onGoogleCheck,
+}: {
+  onBack: () => void;
+  onGoogleCheck?: () => void;
+}) {
   const { estado, reintentar } = useAppInformation();
   const [sampleRecovered, setSampleRecovered] = useState(false);
   return (
-    <Screen>
+    <Screen webSurface="public">
       <AppText variant="title">Una base para crecer</AppText>
       {estado.estado === 'cargando' ? (
         <StatusMessage state="loading" message="Cargando información…" />
@@ -92,6 +98,12 @@ export function TechnicalScreen({ onBack }: { onBack: () => void }) {
         message="Contenido de muestra disponible."
         announce={false}
       />
+      {onGoogleCheck && (
+        <AppButton
+          label="Preparar prueba Google Cloud aislada"
+          onPress={onGoogleCheck}
+        />
+      )}
       <AppButton label="Volver al inicio" onPress={onBack} />
     </Screen>
   );

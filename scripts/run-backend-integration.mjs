@@ -2,14 +2,117 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import ts from 'typescript';
+import { spawnSync } from 'node:child_process';
 import {
   assertLocalTarget,
   createOwnedDirectory,
   removeOwnedDirectory,
   runChecked,
+  publicSettings,
 } from '../tests/integration/tenant-foundation/fixtures.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+export function bookingMode(args) {
+  if (!args.some((a) => a.startsWith('--booking'))) return null;
+  if (args.length !== 1) throw Error('UNSAFE_BOOKING_MODE');
+  if (args[0] === '--booking-schema') return 'schema';
+  if (args[0] === '--booking-concurrency') return 'concurrency';
+  throw Error('UNSAFE_BOOKING_MODE');
+}
+export function assertBookingEnvironment(settings, db) {
+  assertLocalTarget(settings);
+  if (
+    settings.projectId !== 'app-barberia-002-local' ||
+    db?.Name !== '/supabase_db_app-barberia-002-local' ||
+    !db.State?.Running ||
+    db.HostConfig?.PortBindings?.['5432/tcp']?.[0]?.HostPort !== '54422' ||
+    !db.Mounts?.some((m) => m.Name === 'supabase_db_app-barberia-002-local') ||
+    !db.NetworkSettings?.Networks?.['supabase_network_app-barberia-002-local']
+  )
+    throw Error('UNSAFE_BOOKING_TARGET');
+}
+export const bookingUserSettings = (input) => {
+  if (input.projectId !== 'app-barberia-002-local')
+    throw Error('UNSAFE_BOOKING_TARGET');
+  return publicSettings(input);
+};
+export function assertBookingSql(sql) {
+  // Fixed, reviewed SQL files only. Lexical guard excludes quoted bodies/comments.
+  const visible = sql
+    .replace(/\$([A-Za-z_][A-Za-z0-9_]*)?\$[\s\S]*?\$\1\$/g, ' ')
+    .replace(/'(?:''|[^'])*'/g, "''")
+    .replace(/--[^\n]*|\/\*[\s\S]*?\*\//g, ' ');
+  if (
+    !/^\s*begin\s*;/i.test(visible) ||
+    !/\brollback\s*;\s*$/i.test(visible) ||
+    (visible.match(/\bbegin\b/gi) ?? []).length !== 1 ||
+    (visible.match(/\brollback\b/gi) ?? []).length !== 1 ||
+    /\b(commit|abort)\b|\bend\s*(?:;|work\b|transaction\b)|\\(?!gset\b|if\b|else\b|endif\b)|\b(drop\s+database|truncate|alter\s+role)\b/i.test(
+      visible,
+    )
+  )
+    throw Error('UNSAFE_BOOKING_SQL');
+}
+function runBooking(mode) {
+  const settings = {
+    url: process.env.BARBERIA_002_URL,
+    projectId: process.env.BARBERIA_002_PROJECT_ID,
+  };
+  assertLocalTarget(settings);
+  const [db] = JSON.parse(
+    runChecked('docker', ['inspect', 'supabase_db_app-barberia-002-local']),
+  );
+  assertBookingEnvironment(settings, db);
+  if (mode === 'concurrency') {
+    const entry = path.join(root, 'tests/integration/booking/concurrency.mjs');
+    if (!fs.existsSync(entry)) throw Error('NOT_READY_BOOKING_CONCURRENCY');
+    runChecked(process.execPath, [entry], { cwd: root, timeout: 180000 });
+    console.log('Booking concurrency completed');
+    return;
+  }
+  for (const name of ['booking-schema.test.sql', 'booking-access.test.sql']) {
+    const sql = fs.readFileSync(
+      path.join(root, 'supabase/tests', name),
+      'utf8',
+    );
+    assertBookingSql(sql);
+    const r = spawnSync(
+      'docker',
+      [
+        'exec',
+        '-i',
+        db.Id,
+        'psql',
+        '-X',
+        '-U',
+        'postgres',
+        '-d',
+        'postgres',
+        '-Atq',
+        '-v',
+        'ON_ERROR_STOP=1',
+      ],
+      {
+        input: sql,
+        encoding: 'utf8',
+        timeout: 30000,
+        maxBuffer: 4 * 1024 * 1024,
+        shell: false,
+      },
+    );
+    // TAP diagnostics here contain only reviewed test labels; never dump database stderr.
+    for (const line of (r.stdout ?? '').split(/\r?\n/))
+      if (/^(?:not ok|ok|1\.\.|#)/.test(line)) console.log(line);
+    if (
+      r.error ||
+      r.status !== 0 ||
+      /^not ok\b/m.test(r.stdout ?? '') ||
+      !/^1\.\.\d+/m.test(r.stdout ?? '')
+    )
+      throw Error('BOOKING_SQL_FAILED');
+  }
+}
 
 export async function withCompiledClient(consume, projectRoot = root) {
   const entry = path.join(
@@ -52,6 +155,8 @@ export async function withCompiledClient(consume, projectRoot = root) {
 }
 
 function main() {
+  const booking = bookingMode(process.argv.slice(2));
+  if (booking) return runBooking(booking);
   // No request, fixture mutation or database connection is made by this preparation.
   assertLocalTarget({
     url: process.env.BARBERIA_002_URL,
@@ -110,6 +215,11 @@ if (
       'NOT_READY_BACKEND_SCENARIOS',
       'SUBPROCESS_FAILED',
       'SUBPROCESS_TIMEOUT',
+      'UNSAFE_BOOKING_MODE',
+      'UNSAFE_BOOKING_TARGET',
+      'UNSAFE_BOOKING_SQL',
+      'NOT_READY_BOOKING_CONCURRENCY',
+      'BOOKING_SQL_FAILED',
     ]);
     console.error(
       safeCodes.has(e.message) ? e.message : 'INTEGRATION_NOT_READY',

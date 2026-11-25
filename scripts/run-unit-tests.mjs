@@ -1,3 +1,5 @@
+import { reportCoverage } from './report-coverage.mjs';
+import { integration } from './client-test-files.mjs';
 import { spawnSync } from 'node:child_process';
 import * as fs from 'node:fs';
 import path from 'node:path';
@@ -36,9 +38,10 @@ function cleanOutput() {
   fs.rmSync(output, { recursive: true });
 }
 
-function execute(args) {
+function execute(args, env = process.env) {
   const result = spawnSync(process.execPath, args, {
     cwd: root,
+    env,
     stdio: 'inherit',
   });
   if (result.error) throw result.error;
@@ -112,20 +115,34 @@ function main() {
       'Núcleo incluido en cobertura:',
       JSON.stringify(core.map(relative)),
     );
-    return execute([
-      '--test',
-      '--experimental-test-coverage',
-      '--test-coverage-lines=100',
-      '--test-coverage-functions=100',
-      '--test-coverage-branches=90',
-      '--test-coverage-include=.test-build/src/features/**/domain/**/*.js',
-      '--test-coverage-include=.test-build/src/features/**/application/**/*.js',
-      '--test-coverage-exclude=**/*.test.js',
-      '--test-coverage-exclude=**/doubles/**',
-      '--import',
-      pathToFileURL(preload).href,
-      ...tests.map(emitted),
-    ]);
+    fs.mkdirSync(path.join(root, 'coverage/client'), { recursive: true });
+    const status = execute(
+      [
+        '--test',
+        '--test-reporter=spec',
+        '--test-reporter-destination=stdout',
+        '--test-reporter=lcov',
+        '--test-reporter-destination=coverage/client/lcov.info',
+        '--experimental-test-coverage',
+        '--test-coverage-lines=100',
+        '--test-coverage-functions=100',
+        '--test-coverage-branches=90',
+        '--test-coverage-include=.test-build/src/features/**/domain/**/*.js',
+        '--test-coverage-include=.test-build/src/features/**/application/**/*.js',
+        '--test-coverage-exclude=**/*.test.js',
+        '--test-coverage-exclude=**/doubles/**',
+        '--import',
+        pathToFileURL(preload).href,
+        ...tests.map(emitted),
+        ...integration,
+      ],
+      { ...process.env, BARBEXA_CORE_COVERAGE: '1' },
+    );
+    reportCoverage(
+      path.join(root, 'coverage/client/lcov.info'),
+      path.join(root, 'coverage/client'),
+    );
+    return status;
   } finally {
     cleanOutput();
   }

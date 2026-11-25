@@ -1,0 +1,478 @@
+{
+  "stage": "2C.5",
+  "status": "completed_after_authorized_retry",
+  "checkedAt": "2026-11-20T04:54:27.309Z",
+  "target": {
+    "project": "app-barberia-002-local",
+    "host": "127.0.0.1",
+    "port": 54422,
+    "database": "postgres"
+  },
+  "cliVersion": "3.1.0",
+  "initialAttempt": {
+    "status": "stopped_without_changes",
+    "version": "20261115030159",
+    "exit": 1,
+    "diagnostic": "MigrationInvalidVersionError: repository path fragment treated as version; implicit target announced 54322",
+    "historyBefore": 13,
+    "historyAfter": 13,
+    "recoveryNeeded": false,
+    "localEvidence": ".artifacts/authority-2c5/evidence-stopped-before-retry.json"
+  },
+  "causeAndCorrection": {
+    "argumentFailure": "The old cmd.exe /d /s /c command string did not preserve quoted Windows paths; reproduced without a database using an argv probe.",
+    "portFailure": "The implicit local selection announced default 54322, not the approved configured endpoint. The retry never relies on implicit selection.",
+    "correction": "Installed supabase.exe launched directly with shell:false and an argv array; --workdir is one argument. Same validated --remote=<loopback URL> used for identity query, migration list and each repair.",
+    "noPermanentConfigurationChanged": true,
+    "officialCliV3Reference": "https://supabase.com/changelog/supabase-cli-v3"
+  },
+  "preflight": {
+    "identity": {
+      "endpoint": {
+        "host": "127.0.0.1",
+        "port": 54422,
+        "database": "postgres"
+      },
+      "instanceSha256": "92286b99c3974b8ad59c0e86fd4d3bf6a9b32d32d7b911e27013a5e465d741ce",
+      "postgresVersion": "17.11",
+      "internalPort": 5432,
+      "readOnly": "on",
+      "dockerAndTcpSameInstance": true,
+      "targetAnnouncement": "Target: custom Postgres (127.0.0.1:54422)"
+    },
+    "migrationList": {
+      "command": [
+        "supabase.exe",
+        "migration",
+        "list",
+        "--remote=<LOCAL_DB_URL>",
+        "--workdir",
+        "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+        "--output-format",
+        "json"
+      ],
+      "target": {
+        "kind": "db-url",
+        "host": "127.0.0.1",
+        "port": 54422
+      },
+      "appliedVersions": [
+        "20261112031854",
+        "20261113035717",
+        "20261113045240",
+        "20261113050232",
+        "20261113053907",
+        "20261114195018",
+        "20261114202045",
+        "20261114220827",
+        "20261114224344",
+        "20261115171232",
+        "20261115203629",
+        "20261115210802",
+        "20261115230134"
+      ],
+      "missingApprovedVersions": [
+        "20261115030159",
+        "20261115033925",
+        "20261115151745"
+      ],
+      "administrativeMigrationAbsent": true
+    },
+    "priorBaselineUnchanged": true,
+    "sourceHashes": [
+      {
+        "version": "20261115030159",
+        "sha256": "AD976787836D8C4B46D4B7A357D82D4C221777235935D38AE26F13B719291C9F"
+      },
+      {
+        "version": "20261115033925",
+        "sha256": "7915F5FFF637AB9DE226242123B1B8C71855C28950AB94AFD3CD5C8CA1561204"
+      },
+      {
+        "version": "20261115151745",
+        "sha256": "2053C2A84B153C535AF7CF55B1AB23904AEA2A4E3DA4BAA2789EE4FB244B1B7E"
+      }
+    ],
+    "historicalAudit": "13 function contracts/bodies/ACL, care tables and constraints/indexes, trigger, reservation policies and dependencies match; repeated before and after each repair",
+    "argvRegressionTests": {
+      "passed": 5,
+      "failed": 0,
+      "command": "node --test .artifacts/authority-2c5-cli.test.mjs",
+      "realOldWrapperReproduction": true,
+      "noDatabaseOperations": true
+    }
+  },
+  "repairs": [
+    {
+      "version": "20261115030159",
+      "exit": 0,
+      "command": [
+        "supabase.exe",
+        "migration",
+        "repair",
+        "--remote=<LOCAL_DB_URL>",
+        "--workdir",
+        "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+        "--output-format",
+        "json",
+        "--status",
+        "applied",
+        "20261115030159"
+      ],
+      "stdout": "{\"versions\":[\"20261115030159\"],\"status\":\"applied\",\"repairAll\":false,\"message\":\"Migration history repaired\",\"target\":{\"kind\":\"db-url\",\"host\":\"127.0.0.1\",\"port\":54422}}\n",
+      "stderr": "Target: custom Postgres (127.0.0.1:54422)\nRepaired migration history: [20261115030159] => applied\nA new version of Supabase CLI is available: v3.2.0 (currently installed v3.1.0)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\n",
+      "beforeCount": 13,
+      "afterCount": 14,
+      "checks": {
+        "schema": true,
+        "data": true,
+        "counts": true,
+        "allEarlierHistoryRows": true,
+        "fullHistoricalAudit": true,
+        "administrativeMigrationAbsent": true
+      },
+      "list": {
+        "command": [
+          "supabase.exe",
+          "migration",
+          "list",
+          "--remote=<LOCAL_DB_URL>",
+          "--workdir",
+          "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+          "--output-format",
+          "json"
+        ],
+        "target": {
+          "kind": "db-url",
+          "host": "127.0.0.1",
+          "port": 54422
+        },
+        "appliedVersions": [
+          "20261112031854",
+          "20261113035717",
+          "20261113045240",
+          "20261113050232",
+          "20261113053907",
+          "20261114195018",
+          "20261114202045",
+          "20261114220827",
+          "20261114224344",
+          "20261115030159",
+          "20261115171232",
+          "20261115203629",
+          "20261115210802",
+          "20261115230134"
+        ],
+        "missingApprovedVersions": [
+          "20261115033925",
+          "20261115151745"
+        ],
+        "administrativeMigrationAbsent": true
+      },
+      "error": null
+    },
+    {
+      "version": "20261115033925",
+      "exit": 0,
+      "command": [
+        "supabase.exe",
+        "migration",
+        "repair",
+        "--remote=<LOCAL_DB_URL>",
+        "--workdir",
+        "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+        "--output-format",
+        "json",
+        "--status",
+        "applied",
+        "20261115033925"
+      ],
+      "stdout": "{\"versions\":[\"20261115033925\"],\"status\":\"applied\",\"repairAll\":false,\"message\":\"Migration history repaired\",\"target\":{\"kind\":\"db-url\",\"host\":\"127.0.0.1\",\"port\":54422}}\n",
+      "stderr": "Target: custom Postgres (127.0.0.1:54422)\nRepaired migration history: [20261115033925] => applied\nA new version of Supabase CLI is available: v3.2.0 (currently installed v3.1.0)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\n",
+      "beforeCount": 14,
+      "afterCount": 15,
+      "checks": {
+        "schema": true,
+        "data": true,
+        "counts": true,
+        "allEarlierHistoryRows": true,
+        "fullHistoricalAudit": true,
+        "administrativeMigrationAbsent": true
+      },
+      "list": {
+        "command": [
+          "supabase.exe",
+          "migration",
+          "list",
+          "--remote=<LOCAL_DB_URL>",
+          "--workdir",
+          "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+          "--output-format",
+          "json"
+        ],
+        "target": {
+          "kind": "db-url",
+          "host": "127.0.0.1",
+          "port": 54422
+        },
+        "appliedVersions": [
+          "20261112031854",
+          "20261113035717",
+          "20261113045240",
+          "20261113050232",
+          "20261113053907",
+          "20261114195018",
+          "20261114202045",
+          "20261114220827",
+          "20261114224344",
+          "20261115030159",
+          "20261115033925",
+          "20261115171232",
+          "20261115203629",
+          "20261115210802",
+          "20261115230134"
+        ],
+        "missingApprovedVersions": [
+          "20261115151745"
+        ],
+        "administrativeMigrationAbsent": true
+      },
+      "error": null
+    },
+    {
+      "version": "20261115151745",
+      "exit": 0,
+      "command": [
+        "supabase.exe",
+        "migration",
+        "repair",
+        "--remote=<LOCAL_DB_URL>",
+        "--workdir",
+        "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+        "--output-format",
+        "json",
+        "--status",
+        "applied",
+        "20261115151745"
+      ],
+      "stdout": "{\"versions\":[\"20261115151745\"],\"status\":\"applied\",\"repairAll\":false,\"message\":\"Migration history repaired\",\"target\":{\"kind\":\"db-url\",\"host\":\"127.0.0.1\",\"port\":54422}}\n",
+      "stderr": "Target: custom Postgres (127.0.0.1:54422)\nRepaired migration history: [20261115151745] => applied\nA new version of Supabase CLI is available: v3.2.0 (currently installed v3.1.0)\nWe recommend updating regularly for new features and bug fixes: https://supabase.com/docs/guides/cli/getting-started#updating-the-supabase-cli\n",
+      "beforeCount": 15,
+      "afterCount": 16,
+      "checks": {
+        "schema": true,
+        "data": true,
+        "counts": true,
+        "allEarlierHistoryRows": true,
+        "fullHistoricalAudit": true,
+        "administrativeMigrationAbsent": true
+      },
+      "list": {
+        "command": [
+          "supabase.exe",
+          "migration",
+          "list",
+          "--remote=<LOCAL_DB_URL>",
+          "--workdir",
+          "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+          "--output-format",
+          "json"
+        ],
+        "target": {
+          "kind": "db-url",
+          "host": "127.0.0.1",
+          "port": 54422
+        },
+        "appliedVersions": [
+          "20261112031854",
+          "20261113035717",
+          "20261113045240",
+          "20261113050232",
+          "20261113053907",
+          "20261114195018",
+          "20261114202045",
+          "20261114220827",
+          "20261114224344",
+          "20261115030159",
+          "20261115033925",
+          "20261115151745",
+          "20261115171232",
+          "20261115203629",
+          "20261115210802",
+          "20261115230134"
+        ],
+        "missingApprovedVersions": [],
+        "administrativeMigrationAbsent": true
+      },
+      "error": null
+    }
+  ],
+  "final": {
+    "passed": true,
+    "historyBefore": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ],
+    "historyAfter": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115030159",
+      "20261115033925",
+      "20261115151745",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ],
+    "counts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "schemaSizes": {
+      "tables": 20,
+      "functions": 80,
+      "policies": 16,
+      "triggers": 4,
+      "constraints": 132,
+      "indexes": 56
+    },
+    "catalogUnchanged": true,
+    "dataFingerprintsUnchanged": true,
+    "countsUnchanged": true,
+    "previousHistoryRowsUnchanged": true,
+    "newAuthorityAbsent": true,
+    "locks": {
+      "repairLocks": 0,
+      "waitingLocks": 0,
+      "repairSessions": 0
+    },
+    "list": {
+      "command": [
+        "supabase.exe",
+        "migration",
+        "list",
+        "--remote=<LOCAL_DB_URL>",
+        "--workdir",
+        "C:\\Users\\PREDATOR\\Desktop\\SEMETRE 2026 II\\Arquitectura de Software\\App-Barberia",
+        "--output-format",
+        "json"
+      ],
+      "target": {
+        "kind": "db-url",
+        "host": "127.0.0.1",
+        "port": 54422
+      },
+      "appliedVersions": [
+        "20261112031854",
+        "20261113035717",
+        "20261113045240",
+        "20261113050232",
+        "20261113053907",
+        "20261114195018",
+        "20261114202045",
+        "20261114220827",
+        "20261114224344",
+        "20261115030159",
+        "20261115033925",
+        "20261115151745",
+        "20261115171232",
+        "20261115203629",
+        "20261115210802",
+        "20261115230134"
+      ],
+      "missingApprovedVersions": [],
+      "administrativeMigrationAbsent": true
+    },
+    "checkedAt": "2026-11-20T04:54:27.309Z"
+  },
+  "integrity": {
+    "catalogSha256": {
+      "tables": "673e2d85304791b3afef198b962c24ee8c95a694286588ecb577c9f80526548e",
+      "functions": "44dfea6179ed80ea1cd5c4b79b47975987d1252e7e4c7b1c80ab3c62bf84ff88",
+      "policies": "1c94cf65f5eccc8d236a150a5c547787f4341fd8db38cdf4f3aa98eeccaac6c0",
+      "triggers": "31b8983be259b9d1b2f5c1a4586a194656c12a5329754717bb042c0f9b76a5d6",
+      "constraints": "f287fd381ba236389a42b24716569da2a4bfed3e0be3d548fccf9dbf64f8b4b5",
+      "indexes": "ca71fbd16415eb8a237b79f49e89b45bfe5c77ac6849848e57e8d831679caa71",
+      "dependencies": "1b739f416fa1529236ebd7d772c5e99d853ec3f0131f5adb8ba7c08ba2baccdb"
+    },
+    "aggregateTableSha256": {
+      "auth.users": "1474a89c640fe1b21bebe60e0c73f63747650fc8da93dcbb42843421bdcc539c",
+      "auth.identities": "b3885c9b4175cc20cbe668c4bafe992b4bef21085883d5b6a005dee0968d4664",
+      "public.profiles": "5be174629de965f181f2c1717d7afca6a616b57ccc0fe3be9fbdaeb709a72b7f",
+      "public.services": "da9dccb072c96808bbabbff16b701592d8db028c3869df46fc21a48810756846",
+      "public.barbershops": "194d7c7c37a86e9c9866ea169be454222327e4cef02fdfa33fb5c1ae8a576af6",
+      "private.care_events": "04b535fa69cef6b56efb71a3fa4cb33d0e8e7696c2340142388040dae702d93b",
+      "public.reservations": "fe4fcc8530d8cfa70b36a191e1bcfad953b16413b34844ea7b97bc31a4d9b221",
+      "private.booking_care": "3fdc32ccf13ff0b462e7d2b2c2d8186121075ed597b562c965632603807503da",
+      "private.care_settings": "eca0827e4723bfa260d2518dd5fb2c17eaf2e9b0adc58d5d83e61caa511af511",
+      "public.barber_profiles": "fdff8e86dbaf90a52e238495404065a790afeea290f377c99582af4df76dffb2",
+      "public.barber_services": "3643a6378b58bb280dce359289ad132e98fa9ead14aa8504307d68a4e020696f",
+      "public.barber_schedules": "51d7e44c92846142cb3d1506a636ac6c033d8c50b46772a4da729a2c3026a174",
+      "public.barbershop_hours": "82b3726c3c88c1f15a1171f9583e14c976e38ce1eba264305625729af6331f95",
+      "public.reservation_items": "a49549f75c789f1c9c5d30cfbced748f537f855acac4142c321553b1881bad03",
+      "public.staff_invitations": "19590ab5ef182ca0780131ca53cdb01eb7d6938c2075cb61b4a84ba0f5744094",
+      "private.reschedule_events": "32458f7f682165ebe7d9e9779eef0dcb3f9743735ba819eed3d142497baf4735",
+      "public.reservation_events": "202e02a33ec2fc79348d95286ab9acb700334539a4745a8541faf60d3b265b5f",
+      "public.schedule_exceptions": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "private.reschedule_settings": "072d60431f7afec5748a2c1d948a882dd110dab3a56c5023490518b0c2f598ed",
+      "private.admin_invitation_mail": "1e4f7fa5088e31d83f68fdd3599464ed709393b330ed419571dd808778945444",
+      "public.barbershop_memberships": "978bd2044487d748ff95254873e1f836e11be432359d6226559b0abd7fd25b95",
+      "public.barbershop_booking_settings": "10fca25a48b734d7fba028964dfdf15c1411ddb4b089aa497f78a3b0204dce8b"
+    },
+    "historyBackup": ".artifacts/authority-2c5-retry/history-before.json",
+    "historyAfter": ".artifacts/authority-2c5-retry/history-after.json",
+    "allOriginalHistoryRowsIdentical": true,
+    "allEarlierNewRowsIdenticalAtEachStep": true,
+    "businessSqlExecuted": false,
+    "administrativeMigrationApplied": false,
+    "ownersAssigned": false,
+    "automaticReversionPerformed": false
+  },
+  "incident008": {
+    "unchanged": true,
+    "sqlstate": "25006",
+    "description": "Pre-existing SELECT FOR SHARE under READ ONLY; normal read passed in 2C.4",
+    "independentOfHistoryRepair": true,
+    "byItselfBlocksAdministrativeActivation": false
+  },
+  "untouched": [
+    "Cloud new and old",
+    "business data",
+    "Auth configuration and identities",
+    "services and containers",
+    "protected serve log",
+    "historical migration source files",
+    "administrative migration source",
+    "Web and Android interfaces",
+    "Edge Functions",
+    "roles and memberships"
+  ],
+  "nextStep": "Prepare an explicit owner map for the eight existing shops; do not infer ownership. Mapping, regularization and administrative activation require separate authorization. Final transfer acceptance remains blocked pending the former owner role decision."
+}

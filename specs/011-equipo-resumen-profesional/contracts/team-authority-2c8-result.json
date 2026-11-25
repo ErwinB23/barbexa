@@ -1,0 +1,340 @@
+{
+  "stage": "2C.8",
+  "status": "isolated_rehearsal_passed_and_cleaned",
+  "target": {
+    "project": "app-barberia-002-local",
+    "host": "127.0.0.1",
+    "port": 54422,
+    "mainDatabase": "postgres",
+    "postgresVersion": "17.11",
+    "tcpAndDockerIdentityMatch": true
+  },
+  "isolation": {
+    "database": "barbexa_2c8_20261120_f4423fa3",
+    "oid": 118495,
+    "template": "template0",
+    "owner": "postgres",
+    "separateDatabase": true,
+    "authStructureOnly": true,
+    "authRowsCopied": 0,
+    "realBusinessRowsCopied": 0,
+    "authAclNote": "Auth schema restored without ownership/ACL/default privileges; only trial-local schema USAGE granted for SQL role/claims tests. No GoTrue service uses this database.",
+    "newServiceStarted": false,
+    "globalRolesChanged": false
+  },
+  "sources": {
+    "administrativeMigrationSha256": "6F581F7C0EA2B6E6DC9C518A6CDF7252AE9816DC7CA7A21F4A0E3CE44B1D1B42",
+    "originalPreparedSqlSha256": "6a29443cf1a2ad32a367bd4575d2161fba470ae3c23b1ac8256c889a6b0ccd44",
+    "originalFilesUnchanged": true,
+    "variantChanges": [
+      "Fresh synthetic names and baseline fingerprints/history hash",
+      "Database name and OID guards before any locks/writes",
+      "Result probe before terminal transaction statement",
+      "COMMIT terminal variant limited to trial database only"
+    ]
+  },
+  "syntheticFixtures": {
+    "users": 9,
+    "profiles": 9,
+    "shops": 8,
+    "memberships": 13,
+    "professionals": 6,
+    "services": 6,
+    "reservations": 37,
+    "care": 37,
+    "pendingBarberInvitations": 1,
+    "settingsBefore": 7,
+    "settingsAfterTransition": 8,
+    "passwordsCreated": false,
+    "authSessionsCreated": false,
+    "emailsSent": false,
+    "identifiers": "Reviewed map identifiers reused where required; Auth/profile contents entirely synthetic; separate client UUID newly generated"
+  },
+  "ownerMap": [
+    [
+      "MVP Local A",
+      "U1"
+    ],
+    [
+      "MVP Local B",
+      "U2"
+    ],
+    [
+      "005 aislada 0",
+      "U3"
+    ],
+    [
+      "005 aislada 1",
+      "U4"
+    ],
+    [
+      "Prueba aislada 0",
+      "U5"
+    ],
+    [
+      "Prueba aislada 1",
+      "U6"
+    ],
+    [
+      "011 Equipo aislado",
+      "U5"
+    ],
+    [
+      "sjjss",
+      "U1"
+    ]
+  ],
+  "rollback": {
+    "passed": true,
+    "inside": {
+      "events": 8,
+      "owners": 8,
+      "history": 17,
+      "settings": 8,
+      "ownerOther": "owner",
+      "memberships": 13,
+      "reservations": 37,
+      "secondary011": "secondary",
+      "professionals": 6
+    },
+    "revertedEverything": true
+  },
+  "inducedFailure": {
+    "expectedError": true,
+    "allPartialChangesRolledBack": true
+  },
+  "temporaryCommit": {
+    "passed": true,
+    "inside": {
+      "events": 8,
+      "owners": 8,
+      "history": 17,
+      "settings": 8,
+      "ownerOther": "owner",
+      "memberships": 13,
+      "reservations": 37,
+      "secondary011": "secondary",
+      "professionals": 6
+    },
+    "persistedInTrialOnly": true
+  },
+  "securityCases": [
+    {
+      "label": "secondary-cannot-remove-owner",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "owner-cannot-remove-self",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "secondary-cannot-initiate-transfer",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "definitive-transfer-still-blocked",
+      "passed": true,
+      "expectedCode": "23505",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "other-tenant-admin-denied",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "client-has-no-administration",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "authenticated-cannot-call-privileged-rpc",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "authenticated-cannot-read-private-ownership",
+      "passed": true,
+      "expectedCode": "42501",
+      "exit": 3,
+      "error": null
+    },
+    {
+      "label": "owner-roster-context-and-tenant-isolation",
+      "passed": true,
+      "expectedCode": null,
+      "exit": 0,
+      "error": null
+    },
+    {
+      "label": "secondary-roster-own-membership-only",
+      "passed": true,
+      "expectedCode": null,
+      "exit": 0,
+      "error": null
+    },
+    {
+      "label": "professional-retains-own-profile",
+      "passed": true,
+      "expectedCode": null,
+      "exit": 0,
+      "error": null
+    },
+    {
+      "label": "barber-capabilities-do-not-grant-administration",
+      "passed": true,
+      "expectedCode": null,
+      "exit": 0,
+      "error": null
+    },
+    {
+      "label": "second-secondary-allowed-third-rejected-by-database",
+      "passed": true,
+      "expectedCode": null,
+      "exit": 0,
+      "error": null
+    }
+  ],
+  "securityChangesRolledBack": true,
+  "trialAfterCommit": {
+    "history": 17,
+    "tables": 24,
+    "functions": 92,
+    "policies": 16,
+    "triggers": 7,
+    "owners": 8,
+    "authorityEvents": 8,
+    "ownerConflicts": 0,
+    "secondaryQuotaViolations": 0,
+    "secondary011": "U6",
+    "principalOther": "U6",
+    "pendingInvitationConserved": true
+  },
+  "preparationIncident": {
+    "actualFailure": "Expected nine unique map/invitation accounts but found eight; assertion stopped before seed writes.",
+    "correction": "Added independent synthetic client within the planned nine identities and asserted empty user/shop tables before seeding.",
+    "businessSqlCorrectionNeeded": false,
+    "preparedProcedureCorrectionNeeded": false
+  },
+  "cleanup": {
+    "databaseDeleted": true,
+    "nameAndOidVerified": true,
+    "force": false
+  },
+  "mainPreservation": {
+    "catalog": true,
+    "dataFingerprints22Tables": true,
+    "counts": true,
+    "fullHistoryRows": true,
+    "beforeCounts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "afterCounts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "beforeHistory": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115030159",
+      "20261115033925",
+      "20261115151745",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ],
+    "afterHistory": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115030159",
+      "20261115033925",
+      "20261115151745",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ],
+    "schemaSizes": {
+      "tables": 20,
+      "functions": 80,
+      "policies": 16,
+      "triggers": 4,
+      "constraints": 132,
+      "indexes": 56
+    },
+    "administrativeMigrationAbsent": true,
+    "ownersAssigned": false,
+    "webOrEdgeActivated": false
+  },
+  "limitations": [
+    "SQL roles and manually set claims, not JWT signature/HTTP/GoTrue/Google validation",
+    "SQL transition tested with synthetic fixtures; reviewed main map still needs final approval and explicit execution permission",
+    "Known 008 READ ONLY issue is unchanged; normal professional read passed",
+    "No new concurrent transition test; 2C.4 quota/revocation races remain reusable evidence"
+  ],
+  "recommendation": "SQL procedure is ready for explicit LOCAL-main authorization, subject to unchanged hashes, final map approval and fresh locked baseline checks. No automatic activation.",
+  "privateOperator": ".artifacts/authority-2c8-runner.mjs",
+  "privateEvidenceFolder": ".artifacts/team-authority-2c8/",
+  "checkedAt": "2026-11-20T05:55:55.971Z",
+  "postCleanupReadOnly": {
+    "waitingLocks": 0,
+    "operationSessions": 0,
+    "temporaryDatabaseExists": false,
+    "mainHealthy": true,
+    "mainHistory": 16,
+    "reservations": 37,
+    "catalogAndFingerprintsEqual": true,
+    "administrativeObjectsAbsent": true,
+    "checkedAt": "2026-11-20T05:58:25.018Z"
+  }
+}

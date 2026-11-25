@@ -1,0 +1,30 @@
+import type { Hours } from '../domain/types';
+import type { OwnSchedule, OwnScheduleBlock } from '../domain/self-schedule';
+export interface SelfScheduleContentProps {
+  hideWeeklyEditor?: boolean;
+  view: OwnSchedule | null;
+  hours: readonly Hours[];
+  weekday: string;
+  opens: string;
+  closes: string;
+  starts: string;
+  ends: string;
+  reason: string;
+  busy: boolean;
+  error: string | null;
+  saved: boolean;
+  onRead: () => void;
+  onWeekday: (v: string) => void;
+  onOpens: (v: string) => void;
+  onCloses: (v: string) => void;
+  onAdd: () => void;
+  onRemoveHour: (i: number) => void;
+  onSaveHours: () => void;
+  onStarts: (v: string) => void;
+  onEnds: (v: string) => void;
+  onReason: (v: string) => void;
+  onSaveBlock: () => void;
+  onSelectBlock: (v: OwnScheduleBlock) => void;
+  onNewBlock: () => void;
+  onRemoveBlock: (id: string) => void;
+}

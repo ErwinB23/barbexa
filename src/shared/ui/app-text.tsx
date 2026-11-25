@@ -1,6 +1,7 @@
 import { StyleSheet, Text, type TextProps } from 'react-native';
 
 import { tokens } from './tokens';
+import { webPart } from './web-part';
 
 type AppTextProps = Omit<
   TextProps,
@@ -21,7 +22,10 @@ export function AppText({
 }: AppTextProps) {
   return (
     <Text
-      accessibilityRole={variant === 'title' ? 'header' : undefined}
+      {...webPart('text', variant, tone)}
+      accessibilityRole={
+        ['title', 'heading', 'display'].includes(variant) ? 'header' : undefined
+      }
       {...props}
       allowFontScaling
       maxFontSizeMultiplier={0}

@@ -4,7 +4,7 @@
 
 **Created**: 2026-11-13
 
-**Status**: Aprobada para planificación por el responsable el 2026-11-13. Sin tareas ni implementación.
+**Status**: Implementada; interfaces y recorrido funcional manual Web aceptados el 24/11/2026 por el usuario. Gates específicos de seguridad, recuperación y aceptación Android pendientes según tasks.md. Google se desarrolla en 007.
 
 **Input**: Preparar acceso de usuarios reales a App Barbería, sesión segura y navegación
 pública/autenticada con contexto de barbería, reutilizando 001 y 002. Decisiones del

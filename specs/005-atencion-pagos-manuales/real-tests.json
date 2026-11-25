@@ -1,0 +1,348 @@
+{
+  "project": "app-barberia-002-local",
+  "checks": [
+    "race-receive-0",
+    "receive-idempotent-0",
+    "read-0",
+    "unique-receive-0",
+    "race-receive-1",
+    "receive-idempotent-1",
+    "read-1",
+    "unique-receive-1",
+    "race-receive-2",
+    "receive-idempotent-2",
+    "read-2",
+    "unique-receive-2",
+    "race-receive-3",
+    "receive-idempotent-3",
+    "read-3",
+    "unique-receive-3",
+    "race-receive-4",
+    "receive-idempotent-4",
+    "read-4",
+    "unique-receive-4",
+    "prepare-paid-5",
+    "prepare-cancelled-5",
+    "race-refund-5",
+    "read-5",
+    "unique-refund-5",
+    "prepare-paid-6",
+    "prepare-cancelled-6",
+    "race-refund-6",
+    "read-6",
+    "unique-refund-6",
+    "prepare-paid-7",
+    "prepare-cancelled-7",
+    "race-refund-7",
+    "read-7",
+    "unique-refund-7",
+    "prepare-paid-8",
+    "prepare-cancelled-8",
+    "race-refund-8",
+    "read-8",
+    "unique-refund-8",
+    "prepare-paid-9",
+    "prepare-cancelled-9",
+    "race-refund-9",
+    "read-9",
+    "unique-refund-9",
+    "cannot-complete-before-start-10",
+    "start-10",
+    "complete-10",
+    "read-10",
+    "completed-with-pending-10",
+    "receive-cash",
+    "cannot-complete-before-start-11",
+    "start-11",
+    "complete-11",
+    "read-11",
+    "completed-with-pending-11",
+    "receive-yape",
+    "no-show-before-10min",
+    "no-show-at-10min",
+    "client-cannot-receive",
+    "admin-A-cannot-read-B",
+    "admin-A-cannot-configure-B",
+    "unassigned-admin-cannot-start",
+    "start-before-time",
+    "missing-attestation",
+    "refund-without-paid-cancelled",
+    "rollback-no-payment-or-event",
+    "booking-idempotent",
+    "changed-method-conflicts",
+    "no-bypass-old-rpc",
+    "manual-two-untouched",
+    "original-data-intact",
+    "exact-replay-receive",
+    "changed-replay-receive",
+    "audit-preserved-receive",
+    "exact-replay-refund",
+    "changed-replay-refund",
+    "audit-preserved-refund",
+    "barber-B-cannot-admin-config",
+    "admin-A-cannot-admin-config-B",
+    "admin-A-remains-barber-B",
+    "same-JWT-revocation-rejects",
+    "same-JWT-cannot-charge-inactive",
+    "new-memberships-exactly-restored",
+    "admin-receive-Yape",
+    "cannot-refund-before-cancellation",
+    "cancel-new-only",
+    "refund-requires-reason",
+    "barber-cannot-refund",
+    "admin-full-refund-audited",
+    "all-original-rows-still-preserved"
+  ],
+  "races": [
+    {
+      "kind": "receive",
+      "index": 0,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "receive",
+      "index": 1,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "receive",
+      "index": 2,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        409,
+        200
+      ]
+    },
+    {
+      "kind": "receive",
+      "index": 3,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "receive",
+      "index": 4,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        409,
+        200
+      ]
+    },
+    {
+      "kind": "refund",
+      "index": 5,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "refund",
+      "index": 6,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "refund",
+      "index": 7,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        200,
+        409
+      ]
+    },
+    {
+      "kind": "refund",
+      "index": 8,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        409,
+        200
+      ]
+    },
+    {
+      "kind": "refund",
+      "index": 9,
+      "observedSqlWaiters": 2,
+      "concurrentRequests": 2,
+      "statuses": [
+        409,
+        200
+      ]
+    }
+  ],
+  "originalDataIntact": true,
+  "manualUntouched": true,
+  "completed": true,
+  "additionalCompleted": true,
+  "fixtureRecords": [
+    {
+      "id": "bf6715df-2d67-42f3-9dd1-f8e52c649d99",
+      "purpose": "race-receive",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "da9f205e-3d30-4463-a0bb-e6f72bd0e381",
+      "purpose": "race-receive",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "7646dc42-92fd-407a-a9fb-68cbc475486b",
+      "purpose": "race-receive",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "3f4e9c73-02e4-4142-a7a9-5ee8c70c8137",
+      "purpose": "race-receive",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "ebef2127-ef7c-4b69-b3fb-bd0f38b585f0",
+      "purpose": "race-receive",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "99801800-b414-473f-9a42-dd12d4921dbf",
+      "purpose": "race-refund",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "9c79ec4e-146d-4723-a77b-aa370d452d2c",
+      "purpose": "race-refund",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "61c51f22-eb6a-40fb-9673-527a01457e4c",
+      "purpose": "race-refund",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "6edb2f2e-4ab8-48d8-b94a-1402503af986",
+      "purpose": "race-refund",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "24fae111-18ef-4ba1-99f9-55087f2909b2",
+      "purpose": "race-refund",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "cdfe915e-6b40-48d7-8847-c236bdb8ed92",
+      "purpose": "cycle-cash",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "completed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "9fc0bd4c-1b04-4550-a24c-bbd2b7046c70",
+      "purpose": "cycle-yape",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "completed",
+        "payment": "paid"
+      }
+    },
+    {
+      "id": "ef97e6af-edb5-4504-aa6c-d671ff2e46b3",
+      "purpose": "no-show-limit",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "no-show",
+        "payment": "pending"
+      }
+    },
+    {
+      "id": "5b3e654a-3d9b-4024-905c-b9eaa00a6d97",
+      "purpose": "denied-rollback",
+      "state": {
+        "reservation": "cancelled",
+        "attendance": "cancelled",
+        "payment": "refunded"
+      }
+    },
+    {
+      "id": "81cff762-4a9d-455d-ad62-da455e9f5555",
+      "purpose": "manual-Web",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "pending"
+      }
+    },
+    {
+      "id": "b2aeb9e3-e883-4453-9f38-3dae5696abcd",
+      "purpose": "manual-Android",
+      "state": {
+        "reservation": "confirmed",
+        "attendance": "confirmed",
+        "payment": "pending"
+      }
+    }
+  ]
+}

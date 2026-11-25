@@ -1,9 +1,11 @@
 {
-  "compilerOptions": { "strict": true },
+  "compilerOptions": {
+    "strict": true
+  },
   "tasks": {
-    "check": "DENO_DIR=../../.artifacts/deno-cache deno check --no-npm --no-remote ensure-profile/index.ts create-barbershop/index.ts",
-    "test": "DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt ../../tests/server/tenant-foundation",
-    "coverage": "DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt --coverage=../../.artifacts/server-coverage ../../tests/server/tenant-foundation && DENO_DIR=../../.artifacts/deno-cache deno coverage --threshold=100 --include='.*(domain|application).*' --lcov ../../.artifacts/server-coverage"
+    "check": "DENO_DIR=../../.artifacts/deno-cache deno check --no-npm --no-remote ensure-profile/index.ts create-barbershop/index.ts barbershop-operation/index.ts reservation-command/index.ts",
+    "test": "DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt ../../tests/server/tenant-foundation ../../tests/server/barbershop-operation ../../tests/server/reservations",
+    "coverage": "DENO_DIR=../../.artifacts/deno-cache deno test --no-config --no-npm --no-remote --no-prompt --coverage=../../.artifacts/server-coverage ../../tests/server/tenant-foundation ../../tests/server/barbershop-operation ../../tests/server/reservations && node ../../scripts/report-server-coverage.mjs"
   },
   "nodeModulesDir": "none",
   "lock": false

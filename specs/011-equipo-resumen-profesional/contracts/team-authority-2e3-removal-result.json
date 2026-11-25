@@ -1,0 +1,254 @@
+{
+  "stage": "2E.3 removal only",
+  "status": "passed",
+  "checkedAt": "2026-11-20T19:01:04.728Z",
+  "target": {
+    "project": "app-barberia-002-local",
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91"
+  },
+  "invitationId": "42acf7f0-15f6-4cff-940d-2fc144e715cc",
+  "verifier": {
+    "helper": "scripts/team-authority-response-capture.mjs",
+    "tests": "tests/integration/booking/team-authority-response-capture.test.mjs",
+    "waitCaptureInitializedBeforeActions": true,
+    "responseStatusAndBodyRequired": true,
+    "successRecordedOnlyAfterHttpAndSql": true,
+    "browserErrorsCapturedWithoutSensitiveValues": true,
+    "noAutomaticRetry": true,
+    "originalMissingBindingDetectedByStaticCheck": true,
+    "correctedOperatorUnboundReferences": 0,
+    "localDoubleRegressionTests": 11,
+    "regressionsPassed": 11,
+    "lintExit": 0,
+    "formatExit": 0,
+    "typecheckExit": 0,
+    "architectureExit": 0,
+    "noApplicationOrServerChanges": true
+  },
+  "preconditions": {
+    "readOnly": true,
+    "ownerU3Verified": true,
+    "activeSecondaryCount": 1,
+    "candidateRole": "administrator",
+    "candidateStatus": "active",
+    "profileActive": true,
+    "priorRemovalEvents": 0,
+    "existingAcceptanceEvents": 1,
+    "invitationAccepted": true,
+    "protectedBaselineMatchedPreviousStop": true,
+    "shopReservations": 8,
+    "futureConfirmedReservations": 0,
+    "inService": 0
+  },
+  "execution": {
+    "realChromeAndGoTrue": true,
+    "serviceRoleNotUsedAsActor": true,
+    "route": "/staff?view=team",
+    "requiredChoice": "Conservar como barbero",
+    "reason": "Prueba LOCAL autorizada: restaurar función profesional tras aceptación administrativa",
+    "businessRequests": {
+      "invite": 0,
+      "accept": 0,
+      "remove": 1
+    },
+    "confirmedBusinessWrites": {
+      "remove": 1
+    },
+    "initialAcceptanceRepeated": false,
+    "replayRepeated": false,
+    "newInvitation": false,
+    "newMail": false,
+    "http": [
+      {
+        "name": "owner-context-verified",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 1
+      },
+      {
+        "name": "owner-before-removal",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 1
+      },
+      {
+        "name": "owner-remove",
+        "status": 200
+      },
+      {
+        "name": "owner-after-removal",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 0
+      },
+      {
+        "name": "candidate-context-verified",
+        "status": 200,
+        "capacity": "barber",
+        "secondaryCount": null
+      },
+      {
+        "name": "candidate-after-removal",
+        "status": 200,
+        "capacity": "barber",
+        "secondaryCount": null
+      },
+      {
+        "name": "candidate-professional-after-removal",
+        "status": 200
+      },
+      {
+        "name": "candidate-schedule-after-removal",
+        "status": 200
+      },
+      {
+        "name": "close-own-test-session-owner",
+        "status": 204
+      },
+      {
+        "name": "close-own-test-session-candidate",
+        "status": 204
+      }
+    ],
+    "web": [
+      "owner-quota-zero-after-removal",
+      "team-access-denied-after-removal",
+      "professional-profile-readable-after-removal"
+    ],
+    "errors": []
+  },
+  "membership": {
+    "id": "97435498-a79d-4253-82af-1d5a829da9f2",
+    "before": {
+      "role": "administrator",
+      "status": "active"
+    },
+    "after": {
+      "role": "barber",
+      "status": "active"
+    },
+    "sameRow": true,
+    "wholeMembershipTableRestoredToPreAcceptanceFingerprint": true,
+    "secondaryCountBefore": 1,
+    "secondaryCountAfter": 0,
+    "limit": 2
+  },
+  "permissions": {
+    "httpCapacityAfter": "barber",
+    "administrativeCapabilitiesConfirmedReadOnly": {
+      "refund": false,
+      "publish": false,
+      "editHours": false,
+      "manageTeam": false,
+      "editServices": false,
+      "confirmPayment": false,
+      "transferOwnership": false,
+      "manageReservations": false,
+      "manageAdministrators": false
+    },
+    "teamManagementDeniedInBrowser": true,
+    "professionalProfileHttp": 200,
+    "ownScheduleHttp": 200,
+    "professionalProfileReadInBrowser": true
+  },
+  "audit": {
+    "before": 9,
+    "after": 10,
+    "newRemovalEvents": 1,
+    "correctActorTargetAndDestination": true,
+    "acceptanceEventsUnchanged": true,
+    "priorAuditRowsIntact": true,
+    "invitationStatus": "accepted",
+    "deliveryStatus": "unknown",
+    "smtpVerified": false
+  },
+  "preservation": {
+    "checkedAt": "2026-11-20T19:01:04.728Z",
+    "readOnly": true,
+    "finalState": {
+      "role": "barber",
+      "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+      "status": "active",
+      "secondaries": 0
+    },
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "changedTables": [
+      "auth.users",
+      "private.team_authority_events",
+      "public.barbershop_memberships"
+    ],
+    "schemaAndHistoryUnchanged": true,
+    "allProfessionalAndPersonalProfilesUnchanged": true,
+    "reservationsItemsCareAndPaymentFingerprintsUnchanged": true,
+    "onlyTargetMembershipChanged": true,
+    "allInvitationsUnchanged": true,
+    "originalAuditRowsUnchanged": true,
+    "addedEvents": [
+      {
+        "action": "remove-secondary"
+      }
+    ],
+    "authorityEventsBefore": 9,
+    "authorityEventsAfter": 10,
+    "invitation": {
+      "status": "accepted",
+      "delivery": "unknown"
+    },
+    "ownershipAndTransferFingerprintsUnchanged": true,
+    "envLocalUnchanged": true,
+    "authHealthHttp": 200,
+    "databaseHealth": "healthy"
+  },
+  "scope": {
+    "cloudChanged": false,
+    "androidChanged": false,
+    "sqlRlsEdgeChanged": false,
+    "servicesRestarted": false,
+    "accountsOrPasswordsChanged": false,
+    "noBusinessWritesBeyondOneRetirement": true,
+    "normalTestLoginAndOwnSessionLogoutOnly": true
+  },
+  "closure": {
+    "administrativeTest2E3TechnicallyComplete": true,
+    "wholeStage2EClosed": false,
+    "specification011Closed": false,
+    "remaining": [
+      "SMTP delivery remains unknown and requires its own authorization/validation",
+      "Existing integral/manual acceptance and specification 011 gates remain open; do not repeat the completed invitation/acceptance/replay/removal cycle",
+      "Ownership transfer final acceptance and Cloud activation remain outside this scope"
+    ],
+    "priorEvidenceReused": [
+      "team-authority-2e3-retry-result.json",
+      "team-authority-2e3-existing-result.json",
+      "team-authority-2e3-web-replay-result.json"
+    ]
+  },
+  "privateEvidence": ".artifacts/team-authority-2e3/removal-only/"
+}

@@ -7,40 +7,88 @@ import { tokens } from '@/shared/ui/tokens';
 
 export function WelcomeScreen({
   onOpenTechnical,
+  onRegister,
+  onOpenSession,
+  sessionLabel = 'Iniciar sesión',
+  onBooking,
 }: {
   onOpenTechnical: () => void;
+  onRegister?: () => void;
+  onOpenSession?: () => void;
+  sessionLabel?: string;
+  onBooking?: () => void;
 }) {
   return (
     <Screen>
+      <View style={styles.brand}>
+        <View style={styles.mark}>
+          <AppText
+            variant="action"
+            tone="onAction"
+            style={tokens.typography.heading}
+          >
+            B
+          </AppText>
+        </View>
+        <AppText variant="action">App Barbería</AppText>
+      </View>
       <View style={styles.introduction}>
         <AppText variant="caption" tone="textSecondary">
-          TU ESTILO, TU MOMENTO
+          Tu barbería, a tu ritmo
         </AppText>
-        <AppText variant="title">App Barbería</AppText>
+        <AppText variant="display">Tu próximo corte empieza aquí.</AppText>
         <AppText tone="textSecondary">
-          Estamos preparando una nueva forma de conectar contigo y con tu
-          barbería.
+          Elige tus servicios, encuentra un horario y reserva con el profesional
+          que prefieras. Tus citas, siempre a mano.
         </AppText>
+        {onOpenSession && (
+          <AppButton label={sessionLabel} onPress={onOpenSession} />
+        )}
+        {onBooking && (
+          <AppButton label="Reservar una cita" onPress={onBooking} />
+        )}
+        {onRegister && (
+          <AppButton
+            label="Crear mi cuenta"
+            variant="secondary"
+            onPress={onRegister}
+          />
+        )}
       </View>
       <View style={styles.panel}>
-        <AppText variant="action">Un buen comienzo</AppText>
+        <AppText variant="heading">Todo listo antes de llegar</AppText>
         <AppText tone="textSecondary">
-          Conoce la base de esta primera versión. Las reservas estarán
-          disponibles en una próxima etapa.
+          Consulta el precio y la duración, elige una hora disponible y revisa
+          la confirmación en Mis reservas.
         </AppText>
-        <AppButton
-          label="Ver base técnica"
-          onPress={onOpenTechnical}
-          accessibilityHint="Abre la información de esta versión"
-        />
       </View>
+      <AppButton
+        variant="ghost"
+        label="Ver base técnica"
+        onPress={onOpenTechnical}
+        accessibilityHint="Abre la información de esta versión"
+      />
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
+  brand: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: tokens.space.md,
+    paddingTop: tokens.space.lg,
+  },
+  mark: {
+    width: 48,
+    height: 48,
+    borderRadius: tokens.radius.control,
+    backgroundColor: tokens.color.action,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   introduction: {
-    paddingTop: tokens.space.xxl,
+    paddingTop: tokens.space.xl,
     paddingBottom: tokens.space.xl,
     gap: tokens.space.lg,
   },

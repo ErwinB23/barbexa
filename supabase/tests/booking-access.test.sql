@@ -1,0 +1,84 @@
+begin;
+create extension if not exists pgtap with schema extensions;
+set local search_path=public,extensions,pg_catalog;
+select no_plan();
+select (count(*)=8) as ready from pg_tables where schemaname='public' and tablename in('barbershop_booking_settings','services','barber_profiles','barber_services','barbershop_hours','barber_schedules','schedule_exceptions','staff_invitations') \gset
+\if :ready
+-- SQL-only identities, random per run, no password/email or Auth API, all rolled back.
+create temporary table booking_fixture as select gen_random_uuid() admin_a,gen_random_uuid() shared,gen_random_uuid() inactive,gen_random_uuid() recipient,gen_random_uuid() a,gen_random_uuid() b,gen_random_uuid() pa,gen_random_uuid() pb,gen_random_uuid() sa,gen_random_uuid() sb;
+insert into auth.users(id) select admin_a from booking_fixture union all select shared from booking_fixture union all select inactive from booking_fixture union all select recipient from booking_fixture;
+insert into profiles(id,display_name) select id,'004 SQL fixture' from auth.users where id in(select admin_a from booking_fixture union all select shared from booking_fixture union all select inactive from booking_fixture union all select recipient from booking_fixture);
+insert into barbershops(id,name) select a,'004 A' from booking_fixture union all select b,'004 B' from booking_fixture;
+insert into barbershop_memberships(user_id,barbershop_id,role,status) select admin_a,a,'administrator','active' from booking_fixture union all select shared,a,'barber','active' from booking_fixture union all select shared,b,'administrator','active' from booking_fixture union all select inactive,a,'barber','inactive' from booking_fixture;
+insert into barbershop_booking_settings(barbershop_id) select a from booking_fixture union all select b from booking_fixture;
+insert into services(id,barbershop_id,name,price_amount,duration_min) select sa,a,'A service',25.50,30 from booking_fixture union all select sb,b,'B service',30,45 from booking_fixture;
+insert into barber_profiles(id,user_id,barbershop_id,professional_name,active) select pa,shared,a,'Professional A',true from booking_fixture union all select pb,shared,b,'Professional B',true from booking_fixture;
+insert into barber_services(barbershop_id,barber_id,service_id) select a,pa,sa from booking_fixture union all select b,pb,sb from booking_fixture;
+insert into barbershop_hours(barbershop_id,weekday,opens_min,closes_min) select a,1,540,1080 from booking_fixture union all select b,1,540,1080 from booking_fixture;
+insert into barber_schedules(barbershop_id,barber_id,weekday,opens_min,closes_min) select a,pa,1,600,1000 from booking_fixture union all select b,pb,1,600,1000 from booking_fixture;
+insert into schedule_exceptions(barbershop_id,starts_at,ends_at) select a,'2026-12-01T10:00:00Z'::timestamptz,'2026-12-01T11:00:00Z'::timestamptz from booking_fixture union all select b,'2026-12-01T10:00:00Z'::timestamptz,'2026-12-01T11:00:00Z'::timestamptz from booking_fixture;
+insert into staff_invitations(barbershop_id,recipient_user_id,inviter_user_id) select a,recipient,admin_a from booking_fixture;
+set constraints all immediate;
+create function pg_temp.booking_attempt(q text,expected text,label text) returns text language plpgsql security invoker as $fn$
+begin execute q;return extensions.is('00000',expected,label);exception when others then return extensions.is(sqlstate,expected,label);end;
+$fn$;
+select is((select cancellation_advance_min from barbershop_booking_settings where barbershop_id=(select a from booking_fixture)),120,'default cancellation 120');
+select pg_temp.booking_attempt(format('update services set price_amount=-1 where id=%L',(select sa from booking_fixture)),'23514','negative price rejected');
+select pg_temp.booking_attempt(format('update services set price_amount=''NaN'' where id=%L',(select sa from booking_fixture)),'23514','NaN price rejected');
+select pg_temp.booking_attempt(format('update services set duration_min=0 where id=%L',(select sa from booking_fixture)),'23514','zero duration rejected');
+select pg_temp.booking_attempt(format('insert into barber_services(barbershop_id,barber_id,service_id) values(%L,%L,%L)',a,pa,sb),'23503','mixed tenant capability rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('insert into barber_profiles(user_id,barbershop_id,professional_name) values(%L,%L,''foreign'')',admin_a,b),'23503','professional without tenant membership rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('insert into barbershop_hours(barbershop_id,weekday,opens_min,closes_min) values(%L,1,600,700)',a),'23P01','overlapping shop hours rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('insert into barber_schedules(barbershop_id,barber_id,weekday,opens_min,closes_min) values(%L,%L,1,620,650)',a,pa),'23P01','overlapping professional hours rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('insert into barber_schedules(barbershop_id,barber_id,weekday,opens_min,closes_min) values(%L,%L,2,600,650)',a,pa),'23514','professional hours require shop hours') from booking_fixture;
+select pg_temp.booking_attempt(format('delete from barbershop_hours where barbershop_id=%L',a),'23514','shop change cannot orphan professional hours') from booking_fixture;
+select pg_temp.booking_attempt(format('update barbershop_booking_settings set publication_state=''published'' where barbershop_id=%L',a),'23514','incomplete publication rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('insert into staff_invitations(barbershop_id,recipient_user_id,inviter_user_id) values(%L,%L,%L)',a,recipient,admin_a),'23505','pending invitation duplicate rejected') from booking_fixture;
+select pg_temp.booking_attempt(format('update staff_invitations set role=''administrator'' where barbershop_id=%L',a),'23514','invitation cannot promote administrator') from booking_fixture;
+-- Removing/replacing only transaction-local fixture rows, not existing records.
+update staff_invitations set status='rejected',responded_at=statement_timestamp() where barbershop_id=(select a from booking_fixture);
+insert into staff_invitations(barbershop_id,recipient_user_id,inviter_user_id) select a,recipient,admin_a from booking_fixture;
+select is((select count(*)::int from staff_invitations where barbershop_id=(select a from booking_fixture)),2,'new invite after rejection');
+grant select on booking_fixture to authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',(select admin_a from booking_fixture),'role','authenticated')::text,true);
+set local role authenticated;
+select is((select count(*)::int from barbershop_booking_settings where barbershop_id=(select b from booking_fixture)),0,'admin A denied barbershop_booking_settings B');
+select is((select count(*)::int from services where barbershop_id=(select b from booking_fixture)),0,'admin A denied services B');
+select is((select count(*)::int from barber_profiles where barbershop_id=(select b from booking_fixture)),0,'admin A denied barber_profiles B');
+select is((select count(*)::int from barber_services where barbershop_id=(select b from booking_fixture)),0,'admin A denied barber_services B');
+select is((select count(*)::int from barbershop_hours where barbershop_id=(select b from booking_fixture)),0,'admin A denied barbershop_hours B');
+select is((select count(*)::int from barber_schedules where barbershop_id=(select b from booking_fixture)),0,'admin A denied barber_schedules B');
+select is((select count(*)::int from schedule_exceptions where barbershop_id=(select b from booking_fixture)),0,'admin A denied schedule_exceptions B');
+select is((select count(*)::int from staff_invitations where barbershop_id=(select b from booking_fixture)),0,'admin A denied staff_invitations B');
+select is((select count(*)::int from barbershop_booking_settings where barbershop_id=(select a from booking_fixture)),1,'active member reads barbershop_booking_settings A');
+select is((select count(*)::int from services where barbershop_id=(select a from booking_fixture)),1,'active member reads services A');
+select is((select count(*)::int from barber_profiles where barbershop_id=(select a from booking_fixture)),1,'active member reads barber_profiles A');
+select is((select count(*)::int from barber_services where barbershop_id=(select a from booking_fixture)),1,'active member reads barber_services A');
+select is((select count(*)::int from barbershop_hours where barbershop_id=(select a from booking_fixture)),1,'active member reads barbershop_hours A');
+select is((select count(*)::int from barber_schedules where barbershop_id=(select a from booking_fixture)),1,'active member reads barber_schedules A');
+select is((select count(*)::int from schedule_exceptions where barbershop_id=(select a from booking_fixture)),1,'active member reads schedule_exceptions A');
+select pg_temp.booking_attempt('insert into services(barbershop_id,name,price_amount,duration_min) select a,''forged'',1,1 from booking_fixture','42501','client cannot mutate catalog');
+select pg_temp.booking_attempt('update barbershop_booking_settings set cancellation_advance_min=0','42501','admin has no direct privileged writes');
+select set_config('request.jwt.claims',json_build_object('sub',(select inactive from booking_fixture),'role','authenticated')::text,true);
+select is((select count(*)::int from barbershop_booking_settings where barbershop_id=(select a from booking_fixture)),0,'inactive denied barbershop_booking_settings');
+select is((select count(*)::int from services where barbershop_id=(select a from booking_fixture)),0,'inactive denied services');
+select is((select count(*)::int from barber_profiles where barbershop_id=(select a from booking_fixture)),0,'inactive denied barber_profiles');
+select is((select count(*)::int from barber_services where barbershop_id=(select a from booking_fixture)),0,'inactive denied barber_services');
+select is((select count(*)::int from barbershop_hours where barbershop_id=(select a from booking_fixture)),0,'inactive denied barbershop_hours');
+select is((select count(*)::int from barber_schedules where barbershop_id=(select a from booking_fixture)),0,'inactive denied barber_schedules');
+select is((select count(*)::int from schedule_exceptions where barbershop_id=(select a from booking_fixture)),0,'inactive denied schedule_exceptions');
+select is((select count(*)::int from staff_invitations where barbershop_id=(select a from booking_fixture)),0,'inactive denied staff_invitations');
+select set_config('request.jwt.claims',json_build_object('sub',(select recipient from booking_fixture),'role','authenticated')::text,true);
+select is((select count(*)::int from staff_invitations where status='pending'),1,'recipient can read own pending invitation');
+select is((select count(*)::int from services),0,'pending invite gives no private catalog access');
+select is((select count(*)::int from profiles where id in(select admin_a from booking_fixture union all select shared from booking_fixture)),0,'foreign profiles remain private');
+select set_config('request.jwt.claims',json_build_object('sub',(select shared from booking_fixture),'role','authenticated')::text,true);
+select is((select count(*)::int from services where barbershop_id in(select a from booking_fixture union all select b from booking_fixture)),2,'multi tenant member reads both authorized catalogs');
+select is((select role from barbershop_memberships where barbershop_id=(select a from booking_fixture)),'barber','A role remains barber');
+select is((select role from barbershop_memberships where barbershop_id=(select b from booking_fixture)),'administrator','B role remains administrator');
+reset role;
+\else
+select fail('booking schema required for access cases');
+\endif
+select * from finish();
+rollback;

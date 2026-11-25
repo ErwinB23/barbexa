@@ -1,0 +1,1012 @@
+{
+  "stage": "2C.2",
+  "date": "2026-11-19",
+  "target": "app-barberia-002-local:54422",
+  "readOnly": true,
+  "ddlExecuted": false,
+  "businessFunctionsExecuted": false,
+  "historyRepaired": false,
+  "teamAuthorityMigrationApplied": false,
+  "bodyComparison": [
+    {
+      "signature": "private.booking_agenda(uuid,date,uuid,text)",
+      "source": "20261115030159_booking_agenda.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.cancellation_before_limit(timestamptz,integer,timestamptz)",
+      "source": "20261115033925_booking_cancellation.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.care_cancel_guard()",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.care_command(uuid,jsonb)",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.care_json(public.reservations,uuid)",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.confirm_booking_paid(uuid,jsonb)",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.reservation_cancel(uuid,jsonb)",
+      "source": "20261115033925_booking_cancellation.sql",
+      "matches": true
+    },
+    {
+      "signature": "private.reservation_confirm(uuid,jsonb)",
+      "source": "20261114224344_booking_atomic.sql",
+      "matches": true
+    },
+    {
+      "signature": "public.cancel_booking(uuid,jsonb)",
+      "source": "20261115033925_booking_cancellation.sql",
+      "matches": true
+    },
+    {
+      "signature": "public.care_booking(uuid,jsonb)",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "public.confirm_booking_paid(uuid,jsonb)",
+      "source": "20261115151745_care_payments.sql",
+      "matches": true
+    },
+    {
+      "signature": "public.confirm_booking(uuid,jsonb)",
+      "source": "20261114224344_booking_atomic.sql",
+      "matches": true
+    },
+    {
+      "signature": "public.list_booking_agenda(uuid,date,uuid,text)",
+      "source": "20261115030159_booking_agenda.sql",
+      "matches": true
+    }
+  ],
+  "catalog": [
+    {
+      "section": "environment",
+      "version": "PostgreSQL 17.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+      "database": "postgres",
+      "readOnly": "on",
+      "defaultIsolation": "read committed"
+    },
+    {
+      "records": [
+        {
+          "name": "foundation_model",
+          "version": "20261112031854"
+        },
+        {
+          "name": "profile_access_and_provisioning",
+          "version": "20261113035717"
+        },
+        {
+          "name": "tenant_context_access",
+          "version": "20261113045240"
+        },
+        {
+          "name": "create_own_barbershop",
+          "version": "20261113050232"
+        },
+        {
+          "name": "membership_listing_access",
+          "version": "20261113053907"
+        },
+        {
+          "name": "booking_catalog",
+          "version": "20261114195018"
+        },
+        {
+          "name": "booking_operations",
+          "version": "20261114202045"
+        },
+        {
+          "name": "booking_catalog_visibility",
+          "version": "20261114220827"
+        },
+        {
+          "name": "booking_atomic",
+          "version": "20261114224344"
+        },
+        {
+          "name": "own_professional_profile",
+          "version": "20261115171232"
+        },
+        {
+          "name": "own_professional_schedule",
+          "version": "20261115203629"
+        },
+        {
+          "name": "booking_reschedule",
+          "version": "20261115210802"
+        },
+        {
+          "name": "team_professional_summary",
+          "version": "20261115230134"
+        }
+      ],
+      "section": "migration_history"
+    },
+    {
+      "objects": [
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "shop uuid, local_date date, professional uuid, filter_state text",
+          "closedAcl": true,
+          "signature": "private.booking_agenda(uuid,date,uuid,text)",
+          "bodySha256": "9574bb90727f06dcc1065e2a24befa2dbed3f235738d276ec71ab315d42f36fa",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "boolean",
+          "present": true,
+          "arguments": "starts timestamp with time zone, advance integer, at_time timestamp with time zone",
+          "closedAcl": true,
+          "signature": "private.cancellation_before_limit(timestamptz,integer,timestamptz)",
+          "bodySha256": "5d72d6bc0be2e84cfb4aefddbdc51203903616bff6c01417cbce5cb989c9aa80",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "trigger",
+          "present": true,
+          "arguments": "",
+          "closedAcl": true,
+          "signature": "private.care_cancel_guard()",
+          "bodySha256": "830dc633643e0059d681aa5c81ef51bcde38a7a11e66269f8a59da63b7e60904",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "actor uuid, d jsonb",
+          "closedAcl": true,
+          "signature": "private.care_command(uuid,jsonb)",
+          "bodySha256": "ac6f6ef23a2fb8454207a151561cde407dd6b43214ad3d1095a29b7e66d07270",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "r reservations, actor uuid",
+          "closedAcl": true,
+          "signature": "private.care_json(public.reservations,uuid)",
+          "bodySha256": "7fb45355d1f3c1f87a41969768aacf6a8f2dca1b796ed46354cdf4ad05f44d5b",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "actor uuid, d jsonb",
+          "closedAcl": true,
+          "signature": "private.confirm_booking_paid(uuid,jsonb)",
+          "bodySha256": "151f2b206c1350ea8172259138e09f6d10601055854f7b10a766ad5484433f5e",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "actor uuid, d jsonb",
+          "closedAcl": true,
+          "signature": "private.reservation_cancel(uuid,jsonb)",
+          "bodySha256": "a38218e5f308aef7003798d1e74d4b83f0ee26334a94a51d4fbc8b80ce0a46cb",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "actor uuid, d jsonb",
+          "closedAcl": true,
+          "signature": "private.reservation_confirm(uuid,jsonb)",
+          "bodySha256": "90b340f1d31481681487ada5c476688d382329701cf534d75bac6b77f314d9bc",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "p_actor_id uuid, p_data jsonb",
+          "closedAcl": true,
+          "signature": "public.cancel_booking(uuid,jsonb)",
+          "bodySha256": "ad5d6ddb5183a4c32340e6877878b8186a08629ca9c08d19d43f0ce968801a1d",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "p_actor_id uuid, p_data jsonb",
+          "closedAcl": true,
+          "signature": "public.care_booking(uuid,jsonb)",
+          "bodySha256": "9e2a655f99d280ec864d8d96cd297a7826d30d257f9dd541856514f2f3ec6d78",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "p_actor_id uuid, p_data jsonb",
+          "closedAcl": true,
+          "signature": "public.confirm_booking_paid(uuid,jsonb)",
+          "bodySha256": "2de03426246784a257814c6a63a71c068115bb94e32ac02065e292e9c452bafe",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "p_actor_id uuid, p_data jsonb",
+          "closedAcl": true,
+          "signature": "public.confirm_booking(uuid,jsonb)",
+          "bodySha256": "7e06ab34520dc9a269608ba147bc8338df6a477562ad3ad0adb0065df773047c",
+          "safeHeader": true
+        },
+        {
+          "owner": "postgres",
+          "result": "jsonb",
+          "present": true,
+          "arguments": "p_barbershop_id uuid, p_local_date date, p_barber_id uuid DEFAULT NULL::uuid, p_state text DEFAULT NULL::text",
+          "closedAcl": true,
+          "signature": "public.list_booking_agenda(uuid,date,uuid,text)",
+          "bodySha256": "6b211b2727058c896f133d2f312f816829f2b75c616721c78346770854037160",
+          "safeHeader": true
+        }
+      ],
+      "section": "function_contract"
+    },
+    {
+      "objects": [
+        {
+          "rls": true,
+          "name": "private.booking_care",
+          "owner": "postgres",
+          "columns": [
+            {
+              "name": "reservation_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "barbershop_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "attendance",
+              "type": "text",
+              "default": "'confirmed'::text",
+              "notNull": true
+            },
+            {
+              "name": "no_show_tolerance_min",
+              "type": "integer",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "method",
+              "type": "text",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "payment_status",
+              "type": "text",
+              "default": "'pending'::text",
+              "notNull": true
+            },
+            {
+              "name": "amount_minor",
+              "type": "bigint",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "yape_instructions_snapshot",
+              "type": "text",
+              "default": null,
+              "notNull": false
+            }
+          ],
+          "indexes": [
+            {
+              "ready": true,
+              "valid": true,
+              "unique": true,
+              "predicate": null,
+              "definition": "CREATE UNIQUE INDEX booking_care_pkey ON private.booking_care USING btree (reservation_id)"
+            },
+            {
+              "ready": true,
+              "valid": true,
+              "unique": false,
+              "predicate": null,
+              "definition": "CREATE INDEX booking_care_shop_idx ON private.booking_care USING btree (barbershop_id, reservation_id)"
+            }
+          ],
+          "present": true,
+          "closedAcl": true,
+          "columnAcl": true,
+          "constraints": [
+            {
+              "name": "booking_care_amount_minor_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((amount_minor >= 0))"
+            },
+            {
+              "name": "booking_care_attendance_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((attendance = ANY (ARRAY['confirmed'::text, 'in-service'::text, 'completed'::text, 'no-show'::text, 'cancelled'::text])))"
+            },
+            {
+              "name": "booking_care_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK (((method <> 'yape'::text) OR COALESCE((length(btrim(yape_instructions_snapshot)) > 0), false)))"
+            },
+            {
+              "name": "booking_care_method_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((method = ANY (ARRAY['cash'::text, 'yape'::text])))"
+            },
+            {
+              "name": "booking_care_no_show_tolerance_min_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK (((no_show_tolerance_min >= 0) AND (no_show_tolerance_min <= 1440)))"
+            },
+            {
+              "name": "booking_care_payment_status_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((payment_status = ANY (ARRAY['pending'::text, 'paid'::text, 'refunded'::text])))"
+            },
+            {
+              "name": "booking_care_pkey",
+              "type": "p",
+              "validated": true,
+              "definition": "PRIMARY KEY (reservation_id)"
+            },
+            {
+              "name": "booking_care_reservation_id_barbershop_id_fkey",
+              "type": "f",
+              "validated": true,
+              "definition": "FOREIGN KEY (reservation_id, barbershop_id) REFERENCES reservations(id, barbershop_id) ON DELETE RESTRICT"
+            }
+          ],
+          "policyCount": 0
+        },
+        {
+          "rls": true,
+          "name": "private.care_events",
+          "owner": "postgres",
+          "columns": [
+            {
+              "name": "id",
+              "type": "uuid",
+              "default": "gen_random_uuid()",
+              "notNull": true
+            },
+            {
+              "name": "reservation_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": false
+            },
+            {
+              "name": "barbershop_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "actor_user_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "request_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "fingerprint",
+              "type": "jsonb",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "kind",
+              "type": "text",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "capacity",
+              "type": "text",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "occurred_at",
+              "type": "timestamp with time zone",
+              "default": "clock_timestamp()",
+              "notNull": true
+            },
+            {
+              "name": "reason",
+              "type": "text",
+              "default": null,
+              "notNull": false
+            },
+            {
+              "name": "amount_minor",
+              "type": "bigint",
+              "default": null,
+              "notNull": false
+            },
+            {
+              "name": "method",
+              "type": "text",
+              "default": null,
+              "notNull": false
+            }
+          ],
+          "indexes": [
+            {
+              "ready": true,
+              "valid": true,
+              "unique": false,
+              "predicate": null,
+              "definition": "CREATE INDEX care_events_actor ON private.care_events USING btree (actor_user_id)"
+            },
+            {
+              "ready": true,
+              "valid": true,
+              "unique": true,
+              "predicate": null,
+              "definition": "CREATE UNIQUE INDEX care_events_actor_user_id_request_id_key ON private.care_events USING btree (actor_user_id, request_id)"
+            },
+            {
+              "ready": true,
+              "valid": true,
+              "unique": true,
+              "predicate": "(reservation_id IS NOT NULL)",
+              "definition": "CREATE UNIQUE INDEX care_events_once_per_transition ON private.care_events USING btree (reservation_id, kind) WHERE (reservation_id IS NOT NULL)"
+            },
+            {
+              "ready": true,
+              "valid": true,
+              "unique": true,
+              "predicate": null,
+              "definition": "CREATE UNIQUE INDEX care_events_pkey ON private.care_events USING btree (id)"
+            },
+            {
+              "ready": true,
+              "valid": true,
+              "unique": false,
+              "predicate": null,
+              "definition": "CREATE INDEX care_events_shop_time ON private.care_events USING btree (barbershop_id, occurred_at)"
+            }
+          ],
+          "present": true,
+          "closedAcl": true,
+          "columnAcl": true,
+          "constraints": [
+            {
+              "name": "care_events_actor_user_id_fkey",
+              "type": "f",
+              "validated": true,
+              "definition": "FOREIGN KEY (actor_user_id) REFERENCES profiles(id) ON DELETE RESTRICT"
+            },
+            {
+              "name": "care_events_actor_user_id_request_id_key",
+              "type": "u",
+              "validated": true,
+              "definition": "UNIQUE (actor_user_id, request_id)"
+            },
+            {
+              "name": "care_events_amount_minor_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((amount_minor >= 0))"
+            },
+            {
+              "name": "care_events_barbershop_id_fkey",
+              "type": "f",
+              "validated": true,
+              "definition": "FOREIGN KEY (barbershop_id) REFERENCES barbershops(id) ON DELETE RESTRICT"
+            },
+            {
+              "name": "care_events_capacity_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((capacity = ANY (ARRAY['client'::text, 'barber'::text, 'administrator'::text])))"
+            },
+            {
+              "name": "care_events_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK (((kind <> 'refund'::text) OR COALESCE((length(btrim(reason)) > 0), false)))"
+            },
+            {
+              "name": "care_events_kind_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((kind = ANY (ARRAY['configured'::text, 'created'::text, 'start'::text, 'complete'::text, 'no-show'::text, 'receive'::text, 'refund'::text])))"
+            },
+            {
+              "name": "care_events_method_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK ((method = ANY (ARRAY['cash'::text, 'yape'::text])))"
+            },
+            {
+              "name": "care_events_pkey",
+              "type": "p",
+              "validated": true,
+              "definition": "PRIMARY KEY (id)"
+            },
+            {
+              "name": "care_events_reservation_id_barbershop_id_fkey",
+              "type": "f",
+              "validated": true,
+              "definition": "FOREIGN KEY (reservation_id, barbershop_id) REFERENCES reservations(id, barbershop_id) ON DELETE RESTRICT"
+            }
+          ],
+          "policyCount": 0
+        },
+        {
+          "rls": true,
+          "name": "private.care_settings",
+          "owner": "postgres",
+          "columns": [
+            {
+              "name": "barbershop_id",
+              "type": "uuid",
+              "default": null,
+              "notNull": true
+            },
+            {
+              "name": "no_show_tolerance_min",
+              "type": "integer",
+              "default": "10",
+              "notNull": true
+            },
+            {
+              "name": "yape_instructions",
+              "type": "text",
+              "default": null,
+              "notNull": false
+            }
+          ],
+          "indexes": [
+            {
+              "ready": true,
+              "valid": true,
+              "unique": true,
+              "predicate": null,
+              "definition": "CREATE UNIQUE INDEX care_settings_pkey ON private.care_settings USING btree (barbershop_id)"
+            }
+          ],
+          "present": true,
+          "closedAcl": true,
+          "columnAcl": true,
+          "constraints": [
+            {
+              "name": "care_settings_barbershop_id_fkey",
+              "type": "f",
+              "validated": true,
+              "definition": "FOREIGN KEY (barbershop_id) REFERENCES barbershops(id) ON DELETE RESTRICT"
+            },
+            {
+              "name": "care_settings_no_show_tolerance_min_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK (((no_show_tolerance_min >= 0) AND (no_show_tolerance_min <= 1440)))"
+            },
+            {
+              "name": "care_settings_pkey",
+              "type": "p",
+              "validated": true,
+              "definition": "PRIMARY KEY (barbershop_id)"
+            },
+            {
+              "name": "care_settings_yape_instructions_check",
+              "type": "c",
+              "validated": true,
+              "definition": "CHECK (((yape_instructions IS NULL) OR ((length(btrim(yape_instructions)) >= 1) AND (length(btrim(yape_instructions)) <= 2000))))"
+            }
+          ],
+          "policyCount": 0
+        }
+      ],
+      "section": "private_tables"
+    },
+    {
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "barbershop_id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "client_user_id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "barber_id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "barber_user_id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "request_id",
+          "type": "uuid",
+          "notNull": true
+        },
+        {
+          "name": "fingerprint",
+          "type": "text",
+          "notNull": true
+        },
+        {
+          "name": "state",
+          "type": "text",
+          "notNull": true
+        },
+        {
+          "name": "starts_at",
+          "type": "timestamp with time zone",
+          "notNull": true
+        },
+        {
+          "name": "ends_at",
+          "type": "timestamp with time zone",
+          "notNull": true
+        },
+        {
+          "name": "occupied_until",
+          "type": "timestamp with time zone",
+          "notNull": true
+        },
+        {
+          "name": "occupied",
+          "type": "tstzrange",
+          "notNull": false
+        },
+        {
+          "name": "duration_min",
+          "type": "integer",
+          "notNull": true
+        },
+        {
+          "name": "buffer_min",
+          "type": "integer",
+          "notNull": true
+        },
+        {
+          "name": "total_amount",
+          "type": "numeric(12,2)",
+          "notNull": true
+        },
+        {
+          "name": "shop_name_snapshot",
+          "type": "text",
+          "notNull": true
+        },
+        {
+          "name": "barber_name_snapshot",
+          "type": "text",
+          "notNull": true
+        },
+        {
+          "name": "client_display_name_snapshot",
+          "type": "text",
+          "notNull": true
+        },
+        {
+          "name": "policy_snapshot",
+          "type": "jsonb",
+          "notNull": true
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "notNull": true
+        },
+        {
+          "name": "cancelled_at",
+          "type": "timestamp with time zone",
+          "notNull": false
+        }
+      ],
+      "section": "reservation_dependencies",
+      "policies": [
+        {
+          "cmd": "SELECT",
+          "qual": "(EXISTS ( SELECT 1\n   FROM reservations r\n  WHERE ((r.id = reservation_events.reservation_id) AND (r.barbershop_id = reservation_events.barbershop_id))))",
+          "roles": [
+            "authenticated"
+          ],
+          "tablename": "reservation_events",
+          "permissive": "PERMISSIVE",
+          "policyname": "reservation_events_read",
+          "schemaname": "public",
+          "with_check": null
+        },
+        {
+          "cmd": "SELECT",
+          "qual": "(EXISTS ( SELECT 1\n   FROM reservations r\n  WHERE ((r.id = reservation_items.reservation_id) AND (r.barbershop_id = reservation_items.barbershop_id))))",
+          "roles": [
+            "authenticated"
+          ],
+          "tablename": "reservation_items",
+          "permissive": "PERMISSIVE",
+          "policyname": "reservation_items_read",
+          "schemaname": "public",
+          "with_check": null
+        },
+        {
+          "cmd": "SELECT",
+          "qual": "private.reservation_visible(client_user_id, barbershop_id, barber_id)",
+          "roles": [
+            "authenticated"
+          ],
+          "tablename": "reservations",
+          "permissive": "PERMISSIVE",
+          "policyname": "reservation_read",
+          "schemaname": "public",
+          "with_check": null
+        }
+      ],
+      "constraints": [
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "FOREIGN KEY (actor_user_id) REFERENCES profiles(id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "CHECK ((capacity = ANY (ARRAY['client'::text, 'barber'::text, 'administrator'::text])))"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "CHECK (((kind <> 'cancelled'::text) OR (capacity = 'client'::text) OR COALESCE((length(btrim(reason)) > 0), false)))"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "CHECK ((kind = ANY (ARRAY['confirmed'::text, 'cancelled'::text])))"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "FOREIGN KEY (reservation_id, barbershop_id) REFERENCES reservations(id, barbershop_id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservation_events",
+          "validated": true,
+          "definition": "UNIQUE (reservation_id, kind)"
+        },
+        {
+          "table": "reservation_items",
+          "validated": true,
+          "definition": "CHECK ((duration_min > 0))"
+        },
+        {
+          "table": "reservation_items",
+          "validated": true,
+          "definition": "PRIMARY KEY (reservation_id, service_id)"
+        },
+        {
+          "table": "reservation_items",
+          "validated": true,
+          "definition": "CHECK (((price_snapshot >= (0)::numeric) AND (price_snapshot <> 'NaN'::numeric)))"
+        },
+        {
+          "table": "reservation_items",
+          "validated": true,
+          "definition": "FOREIGN KEY (reservation_id, barbershop_id) REFERENCES reservations(id, barbershop_id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservation_items",
+          "validated": true,
+          "definition": "FOREIGN KEY (service_id, barbershop_id) REFERENCES services(id, barbershop_id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "FOREIGN KEY (barber_id, barbershop_id, barber_user_id) REFERENCES barber_profiles(id, barbershop_id, user_id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "EXCLUDE USING gist (barber_user_id WITH =, occupied WITH &&) WHERE ((state = 'confirmed'::text))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "FOREIGN KEY (barbershop_id) REFERENCES barbershops(id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((buffer_min >= 0))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((isfinite(starts_at) AND isfinite(ends_at) AND isfinite(occupied_until) AND (ends_at = (starts_at + make_interval(mins => duration_min))) AND (occupied_until = (ends_at + make_interval(mins => buffer_min)))))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((((state = 'confirmed'::text) AND (cancelled_at IS NULL)) OR ((state = 'cancelled'::text) AND (cancelled_at IS NOT NULL))))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "UNIQUE (client_user_id, barbershop_id, request_id)"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "FOREIGN KEY (client_user_id) REFERENCES profiles(id) ON DELETE RESTRICT"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((duration_min > 0))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((length(fingerprint) = 64))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "UNIQUE (id, barbershop_id)"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((jsonb_typeof(policy_snapshot) = 'object'::text))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK ((state = ANY (ARRAY['confirmed'::text, 'cancelled'::text])))"
+        },
+        {
+          "table": "reservations",
+          "validated": true,
+          "definition": "CHECK (((total_amount >= (0)::numeric) AND (total_amount <> 'NaN'::numeric)))"
+        }
+      ],
+      "ordinaryWrites": [
+        {
+          "anon": false,
+          "table": "reservations",
+          "service": false,
+          "authenticated": false
+        },
+        {
+          "anon": false,
+          "table": "reservation_items",
+          "service": false,
+          "authenticated": false
+        },
+        {
+          "anon": false,
+          "table": "reservation_events",
+          "service": false,
+          "authenticated": false
+        }
+      ]
+    },
+    {
+      "objects": [
+        {
+          "name": "care_cancel_guard",
+          "enabled": "O",
+          "function": "private.care_cancel_guard()",
+          "definition": "CREATE TRIGGER care_cancel_guard BEFORE UPDATE OF state ON public.reservations FOR EACH ROW EXECUTE FUNCTION private.care_cancel_guard()"
+        }
+      ],
+      "section": "care_trigger"
+    },
+    {
+      "objects": [
+        {
+          "type": "n",
+          "required": "schema public",
+          "dependent": "function list_booking_agenda(uuid,date,uuid,text)"
+        },
+        {
+          "type": "n",
+          "required": "schema public",
+          "dependent": "function cancel_booking(uuid,jsonb)"
+        },
+        {
+          "type": "n",
+          "required": "function private.care_cancel_guard()",
+          "dependent": "trigger care_cancel_guard on table reservations"
+        },
+        {
+          "type": "n",
+          "required": "schema public",
+          "dependent": "function care_booking(uuid,jsonb)"
+        },
+        {
+          "type": "n",
+          "required": "schema public",
+          "dependent": "function confirm_booking_paid(uuid,jsonb)"
+        }
+      ],
+      "section": "catalog_dependencies"
+    },
+    {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "section": "counts",
+      "profiles": 13,
+      "careEvents": 57,
+      "memberships": 13,
+      "reservations": 37,
+      "reservationEvents": 48
+    }
+  ]
+}

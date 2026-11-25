@@ -4,7 +4,7 @@ import { Screen } from '@/shared/ui/screen';
 
 export function NotFoundScreen({ onGoHome }: { onGoHome: () => void }) {
   return (
-    <Screen>
+    <Screen webSurface="public">
       <AppText variant="caption" tone="textSecondary">
         APP BARBERÍA
       </AppText>

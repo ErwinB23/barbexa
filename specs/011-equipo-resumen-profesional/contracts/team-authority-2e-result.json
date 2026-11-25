@@ -1,0 +1,142 @@
+{
+  "stage": "2E",
+  "date": "2026-11-20",
+  "status": "partial_real_validation_web_fix_pending_manual_confirmation",
+  "target": {
+    "project": "app-barberia-002-local",
+    "database": "127.0.0.1:54422",
+    "api": "http://127.0.0.1:54421",
+    "web": "http://localhost:8081",
+    "profile": "local-team-authority",
+    "cloudAccessed": false,
+    "googleUsed": false
+  },
+  "services": {
+    "edgeStarts": 1,
+    "metroStarts": 1,
+    "otherServicesRestarted": false,
+    "edgeRunningAtEnd": true,
+    "authHealthyAtEnd": true,
+    "postgresHealthyAtEnd": true,
+    "metroStatusLocalhost": "packager-status:running",
+    "metroStatusLoopback": "packager-status:running",
+    "jwtVerificationPreserved": true,
+    "edgeDeployed": false
+  },
+  "realHttp": {
+    "mainChecksPassed": 16,
+    "additionalDiagnosticChecksPassed": 2,
+    "jwtSource": "Actual password login through Chrome form; token issued by GoTrue LOCAL",
+    "credentials": "Three existing fictional fixture accounts; values and tokens not stored in evidence",
+    "authorizedPreflight": 204,
+    "foreignOriginPreflight": 403,
+    "missingSession": 401,
+    "invalidNonJwtToken": 401,
+    "principalOwnCapabilities": { "status": 200, "capacity": "owner", "secondaryCount": 0 },
+    "principalForeignShop": 403,
+    "directPrivilegedRpcWithUserJwt": 403,
+    "professionalOwnCapabilities": { "status": 200, "capacity": "barber" },
+    "professionalOutgoingAdminInvitations": 403,
+    "clientWithoutMembership": 403,
+    "businessWritesExecuted": 0
+  },
+  "realChrome": {
+    "browser": "Installed Google Chrome, isolated incognito contexts, CDP, actual Metro application",
+    "mocksUsed": false,
+    "loginViaActualForm": true,
+    "accountsValidated": ["principal-MVP-A", "professional-005", "client-without-memberships"],
+    "passedMainWebAssertions": 6,
+    "passedAdditionalSecurityAssertion": 1,
+    "principal": ["Owner panel", "No secondaries and 0 of 2 quota", "Owner invitation control visible, never submitted"],
+    "professional": ["Professional workspace", "No exclusive administration controls", "Team route denied"],
+    "client": ["Profile and create-shop entry", "Explore route", "Own reservations route"],
+    "isolatedLocalSessionNamespaceVerified": true,
+    "unexpectedCloudOrBusinessWriteRequests": 0,
+    "fullPrincipalAdminPanelAcceptance": false,
+    "searchAndBookingFlowAccepted": false,
+    "reasonForPartialClientAcceptance": "Read-only routes checked; no booking submission and direct team route has a loading-state defect",
+    "userManualAcceptance": false
+  },
+  "defect": {
+    "id": "2E-WEB-01",
+    "route": "/staff?view=team",
+    "actor": "Authenticated client without active memberships",
+    "observed": "Cargando permisos persists, including a second observation six seconds later; full route expectation previously timed out after sixty seconds",
+    "administrativeControlsVisible": false,
+    "edgeAccessDenied": true,
+    "cause": "OperationRoute checks missing authority before permission denial; an empty context keeps authority idle, which is rendered as loading",
+    "proposedCorrection": "Handle missing selected membership/permission before authority loading, with Web regressions for the enabled isolated profile",
+    "correctionApplied": true,
+    "correctionStage": "2E.1",
+    "requiresSpecificAuthorization": false,
+    "fixVerifiedInAuthenticatedBrowser": false
+  },
+  "blocked": [
+    "Owner U5 view of the nonempty secondary roster in 011 remains outside the newly reported U6 acceptance",
+    "Manual confirmation of the client route guard correction remains pending",
+    "Administrative write tests remain outside authorization"
+  ],
+  "userReportedAcceptance2E2": {
+    "evidenceSource": "Explicit user confirmation in this chat; not tests rerun by Codex",
+    "environment": "Web, Supabase LOCAL, local-team-authority",
+    "u6Secondary011": {
+      "approved": true,
+      "observed": "Shown as secondary administrator, without exclusive owner controls"
+    },
+    "u6PrincipalPrueba1": {
+      "approved": true,
+      "observed": "Shown as principal administrator with corresponding tools"
+    },
+    "contextSwitch": { "approved": true, "observed": "Switching between both barbershops works correctly" },
+    "principalMvpAVisualApprovalPreviouslyReported": true,
+    "testsRepeatedThisUpdate": false,
+    "businessWritesTested": false,
+    "fullStageAccepted": false,
+    "androidAccepted": false
+  },
+  "preservation": {
+    "beforeAndAfter": { "migrations": 17, "owners": 8, "users": 14, "profiles": 13, "shops": 8, "memberships": 13, "reservations": 37, "items": 40, "care": 24, "careEvents": 57, "reservationEvents": 48, "invitations": 6, "invitationMail": 4 },
+    "allBusinessTableFingerprintsUnchanged": true,
+    "schemaCatalogUnchanged": true,
+    "migrationHistoryUnchanged": true,
+    "envLocalUnchanged": true,
+    "authIdentitiesUnchanged": true,
+    "authUsersFingerprintChangedAfterAuthorizedLogins": true,
+    "authAuditEntries": { "before": 507, "after": 516 },
+    "authSessions": { "before": 48, "after": 49 },
+    "authRefreshTokens": { "before": 51, "after": 52 },
+    "testLogins": 5,
+    "testSessionLocalLogouts": 4,
+    "remainingTestSession": "First verifier attempt ended before a cleanup handler existed; browser closed, token not retained; no global logout or administrative deletion attempted",
+    "protectedLogTouched": false,
+    "androidChanged": false,
+    "productionCodeChanged": false
+  },
+  "diagnosticLimitations": [
+    "Initial selector check lacked a wait; corrected only the ignored verifier and retained its first result",
+    "The main Web timeout is a real UI loading defect, not an HTTP authorization bypass",
+    "Successful tests are Codex-executed browser/HTTP checks, not user-reported acceptance",
+    "No repeat of the previously accredited 384 Node and 66 Deno tests in this stage"
+  ],
+  "followUp2E1": {
+    "scope": "Web route guard and frontend regression tests only; original 2E observations and Auth counts above remain historical",
+    "sourceFiles": ["src/composition/operation-route.web.tsx", "tests/presentation/workspace-navigation.test.mjs"],
+    "newRegressionTests": 8,
+    "targetedTestsPassed": 56,
+    "typecheckPassed": true,
+    "lintPassed": true,
+    "formatPassed": true,
+    "architecturePassed": true,
+    "activeMetroServesUpdatedWebBundle": true,
+    "metroRestarted": false,
+    "existingAuthenticatedRuntimeAvailable": false,
+    "reasonRealAuthenticatedRecheckNotExecuted": "Previous isolated Chrome closed, no reachable existing authenticated runtime; no tokens retained and no additional login performed",
+    "newAuthSessions": 0,
+    "businessCalls": 0,
+    "supabaseOperations": 0,
+    "backendOrAndroidChanged": false,
+    "manualConfirmationPending": true
+  },
+  "privateOperators": ".artifacts/team-authority-2e/",
+  "remainingTasks": ["HA-A02 HTTP coverage for missing roles and writes", "HA-A03 full Web/manual acceptance", "HA-A04 definitive transfer", "HA-A05 Cloud"]
+}

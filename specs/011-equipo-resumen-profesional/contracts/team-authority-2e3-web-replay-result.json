@@ -1,0 +1,195 @@
+{
+  "stage": "2E.3 Web correction and single replay",
+  "checkedAt": "2026-11-20T18:50:19.997Z",
+  "status": "partial_stopped_before_retirement_command",
+  "target": {
+    "project": "app-barberia-002-local",
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91"
+  },
+  "invitationId": "42acf7f0-15f6-4cff-940d-2fc144e715cc",
+  "diagnosis": {
+    "reproducedInChrome": true,
+    "businessWritesDuringDiagnosis": 0,
+    "authMembershipAndAuthorityReadsHttp": 200,
+    "wireDecoderAcceptedActualSecondaryResponse": true,
+    "capturedThrow": "operation-application.run rejects a completed result whose scope key no longer matches the original stamp",
+    "capturedCatch": "the catch invalidated current authority even for that obsolete scope",
+    "cause": "Late result for a previous client scope erased verified capabilities of the current scope",
+    "rootNotAuthEdgeOrServerDenial": true
+  },
+  "fix": {
+    "file": "src/features/barbershop-operation/application/operation-application.ts",
+    "change": "Only invalidate authority on FORBIDDEN/UNAUTHENTICATED when the failing operation still belongs to the current scope",
+    "staleResultStillRejected": true,
+    "sameScopeServerDenialStillInvalidates": true,
+    "noVisualChanges": true,
+    "noServerChanges": true,
+    "testsFile": "tests/integration/booking/team-authority-2d.test.mjs",
+    "newRegressions": 10,
+    "red": {
+      "existingPassed": 8,
+      "newFailed": 10
+    },
+    "green": {
+      "directedTestsPassed": 52,
+      "failed": 0
+    },
+    "typecheck": 0,
+    "lint": 0,
+    "format": 0,
+    "architecture": 0
+  },
+  "realExecution": {
+    "web": [
+      "fixed-secondary-panel-no-owner-controls",
+      "secondary-denied-team-management"
+    ],
+    "http": [
+      {
+        "name": "candidate-context-verified",
+        "status": 200,
+        "capacity": "secondary",
+        "secondaryCount": null
+      },
+      {
+        "name": "candidate-before-replay",
+        "status": 200,
+        "capacity": "secondary",
+        "secondaryCount": null
+      },
+      {
+        "name": "acceptance-replay",
+        "status": 200
+      },
+      {
+        "name": "owner-context-verified",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 1
+      },
+      {
+        "name": "owner-before-removal",
+        "status": 200,
+        "capacity": "owner",
+        "secondaryCount": 1
+      },
+      {
+        "name": "close-own-test-session-candidate",
+        "status": 204
+      },
+      {
+        "name": "close-own-test-session-owner",
+        "status": 204
+      }
+    ],
+    "realGoTrueSessions": true,
+    "ownerPanelQuotaAndRetirementOptionsReached": true,
+    "officialRetirementRoute": "/staff?view=team",
+    "barbershopAdminNecessaryForRetirement": false,
+    "replayRequests": 1,
+    "replayHttp": 200,
+    "replaySameResponseAccepted": true,
+    "replayAllDataFingerprintsAndHistoryRowsUnchanged": true,
+    "replaySecondaryCount": 1,
+    "initialAcceptanceNotRepeated": true,
+    "businessWrites": {
+      "invite": 0,
+      "accept": 0,
+      "remove": 0
+    }
+  },
+  "verifierIncident": {
+    "phase": "owner-removal",
+    "lastUiAction": "Confirmar retirada de administración",
+    "reportedError": [
+      {
+        "kind": "UNEXPECTED_ERROR"
+      }
+    ],
+    "staticCause": "waitCapture helper referenced but not declared in the adapted verifier",
+    "evidence": {
+      "callCount": 1,
+      "declarationCount": 0
+    },
+    "retirementCommandIssued": false,
+    "automaticRepair": false,
+    "retry": false
+  },
+  "finalState": {
+    "membership": {
+      "id": "97435498-a79d-4253-82af-1d5a829da9f2",
+      "role": "administrator",
+      "status": "active"
+    },
+    "secondaryCount": 1,
+    "ownerUnchanged": true,
+    "ownerVersion": 1,
+    "professionalActive": true,
+    "invitation": "accepted",
+    "delivery": "unknown",
+    "authorityEvents": 9
+  },
+  "preservation": {
+    "checkedAt": "2026-11-20T18:50:19.997Z",
+    "readOnly": true,
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "changedTables": [
+      "auth.users"
+    ],
+    "schemaAndHistoryUnchanged": true,
+    "allProfessionalAndPersonalProfilesUnchanged": true,
+    "reservationsItemsCareAndPaymentFingerprintsUnchanged": true,
+    "otherInvitationsUnchanged": true,
+    "originalAuditRowsUnchanged": true,
+    "addedEvents": [],
+    "authorityEventsBefore": 9,
+    "authorityEventsAfter": 9,
+    "invitation": {
+      "status": "accepted",
+      "delivery": "unknown"
+    },
+    "ownershipAndTransferFingerprintsUnchanged": true,
+    "envLocalUnchanged": true,
+    "authHealthHttp": 200,
+    "databaseHealth": "healthy",
+    "allMembershipFingerprintsUnchanged": true
+  },
+  "remaining": [
+    "Separately authorize correcting only the verifier and one owner retirement retaining barber; do not repeat acceptance or replay",
+    "Candidate remains administrator/active, one secondary slot occupied",
+    "Then verify administrative revocation, professional access and one retirement audit event",
+    "SMTP remains unverified; stage 2E and specification 011 remain open; U5/U6 manual approvals preserved"
+  ],
+  "privateEvidence": [
+    ".artifacts/team-authority-2e3/diagnose-web/",
+    ".artifacts/team-authority-2e3/diagnose-exceptions/",
+    ".artifacts/team-authority-2e3/complete-existing/"
+  ]
+}

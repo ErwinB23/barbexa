@@ -20,6 +20,7 @@ export interface TenantFoundationHttpOptions {
   getAccessToken: () => Promise<string | null>;
   fetcher?: typeof fetch;
   timeoutMs?: number;
+  developmentHttpOrigin?: string;
 }
 function publicCredential(key: string) {
   if (key.startsWith('sb_publishable_')) return true;
@@ -38,10 +39,24 @@ export function createTenantFoundationHttpAdapter({
   getAccessToken,
   fetcher = fetch,
   timeoutMs = 5000,
+  developmentHttpOrigin,
 }: TenantFoundationHttpOptions): TenantFoundationGateway &
   BarbershopGateway &
   MembershipGateway {
   const target = new URL(baseUrl);
+  const octets = target.hostname.split('.').map(Number);
+  const privateAddress =
+    octets.length === 4 &&
+    octets.every((n) => Number.isInteger(n) && n >= 0 && n <= 255) &&
+    (octets[0] === 10 ||
+      (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
+      (octets[0] === 192 && octets[1] === 168));
+  const developmentHttp =
+    typeof __DEV__ !== 'undefined' &&
+    __DEV__ &&
+    privateAddress &&
+    target.port === '54421' &&
+    target.origin === developmentHttpOrigin;
   if (
     !publicCredential(publicKey) ||
     target.username ||
@@ -52,7 +67,7 @@ export function createTenantFoundationHttpAdapter({
     !(
       target.protocol === 'https:' ||
       (target.protocol === 'http:' &&
-        ['127.0.0.1', '[::1]'].includes(target.hostname))
+        (['127.0.0.1', '[::1]'].includes(target.hostname) || developmentHttp))
     )
   )
     throw new FoundationError('INVALID_INPUT');

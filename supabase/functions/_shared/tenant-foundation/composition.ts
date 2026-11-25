@@ -42,3 +42,11 @@ export function createEnsureProfileService(
     log: (event) => console.info(JSON.stringify(event)),
   });
 }
+
+// Public composition boundary: reuse the verified Auth002 adapter without cross-module internals.
+export function createFoundationActorVerifier() {
+  const baseUrl = Deno.env.get('SUPABASE_URL'),
+    publicKey = Deno.env.get('SUPABASE_ANON_KEY');
+  if (!baseUrl || !publicKey) throw Error('SERVER_CONFIGURATION_MISSING');
+  return createAuthVerificationAdapter({ baseUrl, publicKey });
+}

@@ -1,0 +1,31 @@
+# Base exclusions (EAS uses this file instead of .gitignore).
+node_modules/
+.expo/
+.test-build/
+.artifacts/
+dist/
+build/
+coverage/
+expo-env.d.ts
+*.tsbuildinfo
+supabase/.temp/
+supabase/.branches/
+.env
+.env.*
+!.env.example
+# Development evidence, active logs and external skills never leave the workstation.
+docs/
+specs/
+.agents/
+.specify/
+.codex/
+.git
+supabase/
+tests/
+AGENTS.md
+ESTADO-DESARROLLO.md
+skills-lock.json
+*.log
+credentials.json
+*.jks
+*.keystore

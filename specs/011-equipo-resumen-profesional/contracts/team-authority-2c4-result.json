@@ -1,0 +1,762 @@
+{
+  "stage": "2C.4",
+  "sourceHash": "6F581F7C0EA2B6E6DC9C518A6CDF7252AE9816DC7CA7A21F4A0E3CE44B1D1B42",
+  "environment": "barbexa_2c4_20261120_625cac8c",
+  "environmentOid": 116452,
+  "isolation": {
+    "separateDatabase": true,
+    "template": "template0",
+    "sameLocalPostgresqlEngine": true,
+    "authStructureOnly": true,
+    "sourceRowsCopied": false,
+    "businessSchemaFromRepositoryMigrations": 17,
+    "globalRolesChanged": false,
+    "existingServicesChanged": false
+  },
+  "authenticationBoundary": {
+    "sqlRoles": [
+      "anon",
+      "authenticated",
+      "service_role"
+    ],
+    "identities": "synthetic only",
+    "claims": "SQL test claims for synthetic users; no JWT signature or GoTrue login tested",
+    "authDefaultPrivilegesWarning": "Auth foreign-owner ALTER DEFAULT PRIVILEGES rejected42501; structure and explicit ACLs present; no global role/default changes; not an Auth service test"
+  },
+  "sequentialPrepared": {
+    "passed": true,
+    "rollback": true,
+    "script": "supabase/tests/team-authority.prepared.sql",
+    "operatorBased": true
+  },
+  "cases": [
+    {
+      "label": "A1-create-owner-A",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A1-create-owner-B",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "invite-secondary1",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "invite-secondary2",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "invite-candidate3",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B4-pending-grants-no-membership",
+      "role": "authenticated",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B1-first-secondary",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B2-second-secondary",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B3-third-secondary-rejected",
+      "role": "service_role",
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B3-old-private-accept-cannot-bypass",
+      "role": "service_role",
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A3-secondary-cannot-change-owner",
+      "role": "authenticated",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A4-client-cannot-grant-membership",
+      "role": "authenticated",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A4-client-cannot-spoof-trusted-rpc-actor",
+      "role": "authenticated",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A5-owner-A-cannot-manage-B",
+      "role": "service_role",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "B5-secondary-cannot-invite-admin",
+      "role": "service_role",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-cannot-invite-worker",
+      "role": "service_role",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-cannot-publish",
+      "role": "service_role",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-services-price",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-shop-hours",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-team-list-denied",
+      "role": "authenticated",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-team-list-allowed",
+      "role": "authenticated",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "E-secondary-membership-RLS-own-only",
+      "role": "authenticated",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "E-owner-private-authority-table-denied",
+      "role": "authenticated",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-invites-worker",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-barber-accepts-worker",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A-owner-A-worker-in-B-invite",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A-owner-A-worker-in-B-accept",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "A5-same-account-separate-capacities",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-barber-cannot-manage-services",
+      "role": "service_role",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-creates-assigned-professional",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-professional-service-link",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-secondary-professional-hours",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-configures-shop",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-owner-publishes-shop",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "C-anon-business-RPC-denied",
+      "role": "anon",
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "E-paid-engine-synthetic-reservation",
+      "role": "service_role",
+      "expectedCode": null,
+      "actualCode": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "E-legacy-payment-free-confirmation-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "E-care-read-client-in-READ-ONLY",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-care-read-other-tenant-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "P0002",
+      "actualCode": "P0002",
+      "error": null
+    },
+    {
+      "label": "E-care-settings-READ-ONLY",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-admin-invitations-list-READ-ONLY",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-admin-invitation-get-READ-ONLY",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-unassigned-owner-cannot-attend",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "C-secondary-cash-confirmation",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-secondary-reschedules-paid-reservation",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-reschedule-preserves-id-professional-services-price-payment",
+      "passed": true,
+      "role": "operator-audit"
+    },
+    {
+      "label": "E-historical-accepted-no-stamp-no-new-grant-READ-ONLY",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-historical-other-recipient-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "P0002",
+      "actualCode": "P0002",
+      "error": null
+    },
+    {
+      "label": "E-historical-replay-leaves-all-members-owners-audit-unchanged",
+      "passed": true,
+      "role": "operator-audit"
+    },
+    {
+      "label": "B6-expired-pending-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "error": null
+    },
+    {
+      "label": "B-owner-cancels-pending",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "B-cancelled-cannot-be-reused",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "error": null
+    },
+    {
+      "label": "B-new-pending-after-cancel",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "B-pending-secondary-issuer-no-authority",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "B-future-booking-blocks-secondary-exit",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "error": null
+    },
+    {
+      "label": "B-secondary-cannot-remove-other-admin",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "B-owner-removes-secondary-keeps-professional",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "B-removal-idempotent",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "B-removed-admin-replay-cannot-repromote",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "B-retirement-preserves-paid-reservation-and-services",
+      "role": "operator-audit",
+      "passed": true
+    },
+    {
+      "label": "E-assigned-retired-professional-can-read-own-booking-RLS",
+      "role": "authenticated",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-unassigned-barber-sees-no-booking-RLS",
+      "role": "authenticated",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "E-other-tenant-owner-sees-no-booking-RLS",
+      "role": "authenticated",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "D-transfer-definitive-acceptance-blocked",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "23505",
+      "actualCode": "23505",
+      "error": null
+    },
+    {
+      "label": "D-new-invitation-for-remaining-slot",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-secondary-cancels-booking",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-secondary-refund-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "C-owner-refund-record-allowed-no-money-movement",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-client-cannot-record-receipt",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "C-owner-adds-barber-professional",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-barber-reads-own-professional",
+      "role": "service_role",
+      "passed": false,
+      "expectedCode": null,
+      "actualCode": "25006",
+      "error": "ERROR:  25006: cannot execute SELECT FOR SHARE in a read-only transaction\nCONTEXT:  SQL statement \"SELECT 1 from public.barbershop_booking_settings where barbershop_id = shop for share\"\nPL/pgSQL function private.self_professional_command(uuid,text,jsonb) line 29 at PERFORM\nSQL function \"get_own_booking_professional\" statement 1\nLOCATION:  PreventCommandIfReadOnly, utility.c:407"
+    },
+    {
+      "label": "C-barber-own-reader-normal-mode",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": null,
+      "actualCode": null,
+      "error": null
+    },
+    {
+      "label": "C-barber-cannot-self-invite-as-admin",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "C-barber-own-professional-other-tenant-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "E-revoked-secondary-historical-replay-denied",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    },
+    {
+      "label": "A-owner-cannot-remove-owner",
+      "role": "service_role",
+      "passed": true,
+      "expectedCode": "42501",
+      "actualCode": "42501",
+      "error": null
+    }
+  ],
+  "races": [
+    {
+      "label": "last_slot",
+      "passed": true,
+      "observedWait": true,
+      "independentConnections": 2,
+      "winnerExit": 0,
+      "loserCode": "23505",
+      "error": null
+    },
+    {
+      "label": "revocation",
+      "passed": true,
+      "observedWait": true,
+      "independentConnections": 2,
+      "winnerExit": 0,
+      "loserCode": "42501",
+      "error": null
+    }
+  ],
+  "quota": {
+    "loserEvents": 0,
+    "loserStatus": "pending",
+    "secondaries": 2,
+    "loserMembers": 0,
+    "winnerEvents": 1
+  },
+  "replay": {
+    "winnerIdempotent": true,
+    "loserStillConflict": true
+  },
+  "integrity": {
+    "locks": 0,
+    "revoked": true,
+    "sessions": 0,
+    "overQuota": 0,
+    "missingOwner": 0,
+    "noUnauthorizedWrite": true
+  },
+  "finalFixtureCounts": {
+    "shops": 2,
+    "users": 7,
+    "paidRows": 1,
+    "sessions": 0,
+    "memberships": 6,
+    "unvalidated": 0,
+    "reservations": 1,
+    "missingActiveOwner": 0
+  },
+  "issues": [
+    {
+      "scenario": "008 professional reader in READ ONLY",
+      "sqlstate": "25006",
+      "cause": "Existing private.self_professional_command takes SELECT FOR SHARE; READ WRITE required even for its read command",
+      "productionChanged": false,
+      "newHierarchyDefect": false,
+      "readOnlyScenarioStopped": true
+    }
+  ],
+  "cleanup": {
+    "databaseDeleted": true,
+    "forcedTermination": false
+  },
+  "mainPreservation": {
+    "catalog": true,
+    "data": true,
+    "counts": true,
+    "history": true,
+    "beforeCounts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "afterCounts": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 6,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 4,
+      "reservationEvents": 48
+    },
+    "beforeHistory": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ],
+    "afterHistory": [
+      "20261112031854",
+      "20261113035717",
+      "20261113045240",
+      "20261113050232",
+      "20261113053907",
+      "20261114195018",
+      "20261114202045",
+      "20261114220827",
+      "20261114224344",
+      "20261115171232",
+      "20261115203629",
+      "20261115210802",
+      "20261115230134"
+    ]
+  },
+  "productionMigrationApplied": false,
+  "historyRepaired": false,
+  "ownersRegularized": false,
+  "webActivated": false
+}

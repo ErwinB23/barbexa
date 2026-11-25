@@ -1,0 +1,15 @@
+begin;
+select '1..12';
+select case when to_regprocedure('public.cancel_booking(uuid,jsonb)') is not null then 'ok' else 'not ok' end || ' 1 - cancellation RPC exists';
+select case when to_regprocedure('private.reservation_cancel(uuid,jsonb)') is not null then 'ok' else 'not ok' end || ' 2 - private cancellation exists';
+select case when to_regprocedure('public.cancel_booking(uuid,jsonb)') is not null and not has_function_privilege('authenticated',to_regprocedure('public.cancel_booking(uuid,jsonb)'),'EXECUTE') then 'ok' else 'not ok' end || ' 3 - authenticated direct mutation denied';
+select case when to_regprocedure('public.cancel_booking(uuid,jsonb)') is not null and not has_function_privilege('anon',to_regprocedure('public.cancel_booking(uuid,jsonb)'),'EXECUTE') then 'ok' else 'not ok' end || ' 4 - anon direct mutation denied';
+select case when to_regprocedure('public.cancel_booking(uuid,jsonb)') is not null and has_function_privilege('service_role',to_regprocedure('public.cancel_booking(uuid,jsonb)'),'EXECUTE') then 'ok' else 'not ok' end || ' 5 - server can invoke authorized mutation';
+select case when not has_function_privilege('authenticated','private.reservation_cancel(uuid,jsonb)','EXECUTE') then 'ok' else 'not ok' end || ' 6 - authenticated private invocation denied';
+select case when not has_function_privilege('anon','private.reservation_cancel(uuid,jsonb)','EXECUTE') then 'ok' else 'not ok' end || ' 7 - anon private invocation denied';
+select case when exists(select 1 from pg_proc where oid='private.reservation_cancel(uuid,jsonb)'::regprocedure and prosecdef and array_to_string(proconfig,',') in('search_path=""','search_path=')) and exists(select 1 from pg_proc where oid='public.cancel_booking(uuid,jsonb)'::regprocedure and not prosecdef) then 'ok' else 'not ok' end || ' 8 - private definer closed search path public invoker';
+select case when private.cancellation_before_limit('2026-12-01 15:00Z',120,'2026-12-01 13:00Z') then 'ok' else 'not ok' end || ' 9 - inclusive 120 minute limit';
+select case when not private.cancellation_before_limit('2026-12-01 15:00Z',120,'2026-12-01 13:00:00.001Z') then 'ok' else 'not ok' end || ' 10 - after limit denied';
+select case when private.cancellation_before_limit('2026-12-01 15:00Z',30,'2026-12-01 14:30Z') then 'ok' else 'not ok' end || ' 11 - configured historical limit';
+select case when private.cancellation_before_limit('2026-12-01 15:00Z',0,'2026-12-01 15:00Z') then 'ok' else 'not ok' end || ' 12 - zero configured limit remains inclusive';
+rollback;

@@ -1,0 +1,163 @@
+{
+  "stage": "2E.3 existing invitation continuation",
+  "status": "stopped",
+  "target": {
+    "project": "app-barberia-002-local",
+    "shop": "4950d75f-e43b-459b-acf6-e138f9f051e1",
+    "owner": "74a05d0a-f21f-44f5-8de2-549ba4dba76f",
+    "worker": "8ff39bfd-5242-4058-8875-b2d378500d91"
+  },
+  "invitationId": "42acf7f0-15f6-4cff-940d-2fc144e715cc",
+  "stepsExecuted": [
+    "preconditions-and-fingerprints-approved",
+    "existing-pending-invitation-no-early-authority",
+    "accepted-same-membership"
+  ],
+  "httpExecuted": [
+    {
+      "name": "candidate-context-verified",
+      "status": 200,
+      "capacity": "barber",
+      "secondaryCount": null
+    },
+    {
+      "name": "candidate-before",
+      "status": 200,
+      "capacity": "barber",
+      "secondaryCount": null
+    },
+    {
+      "name": "candidate-accept",
+      "status": 200
+    },
+    {
+      "name": "candidate-after-accept",
+      "status": 200,
+      "capacity": "secondary",
+      "secondaryCount": null
+    },
+    {
+      "name": "close-own-test-session-candidate",
+      "status": 204
+    }
+  ],
+  "businessWrites": {
+    "invite": 0,
+    "accept": 1,
+    "remove": 0
+  },
+  "incident": {
+    "phase": "candidate-acceptance",
+    "error": [
+      {
+        "kind": "WEB_TIMEOUT_candidate"
+      }
+    ],
+    "lastSafeUi": {
+      "actor": "candidate",
+      "path": "/barbershop-admin",
+      "login": false,
+      "privateShell": true,
+      "changing": false,
+      "choosing": false,
+      "targetText": false,
+      "loadingPermissions": false,
+      "permissionError": true,
+      "denied": false,
+      "errorAlert": true
+    },
+    "rootCause": "Not demonstrated: browser permission-query error after direct authenticated authority read returned secondary"
+  },
+  "acceptance": {
+    "realChromeAndGoTrue": true,
+    "http": 200,
+    "sameMembership": true,
+    "role": "administrator",
+    "status": "active",
+    "capacity": "secondary",
+    "secondaryCount": 1,
+    "limit": 2,
+    "noManageAdministrators": true,
+    "noManageTeam": true,
+    "noTransferOwnership": true,
+    "editServices": true,
+    "professionalProfileIntact": true
+  },
+  "replay": "not_executed",
+  "ownerLogin": "not_executed",
+  "removal": "not_executed",
+  "preservation": {
+    "checkedAt": "2026-11-20T17:01:35.609Z",
+    "readOnly": true,
+    "countsBefore": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "countsAfter": {
+      "care": 24,
+      "items": 40,
+      "shops": 8,
+      "users": 14,
+      "profiles": 13,
+      "careEvents": 57,
+      "invitations": 7,
+      "memberships": 13,
+      "reservations": 37,
+      "invitationMail": 5,
+      "reservationEvents": 48
+    },
+    "changedTables": [
+      "auth.users",
+      "private.team_authority_events",
+      "public.barbershop_memberships",
+      "public.staff_invitations"
+    ],
+    "schemaAndHistoryUnchanged": true,
+    "allProfessionalAndPersonalProfilesUnchanged": true,
+    "reservationsItemsCareAndPaymentFingerprintsUnchanged": true,
+    "onlyTargetMembershipChanged": true,
+    "otherInvitationsUnchanged": true,
+    "originalAuditRowsUnchanged": true,
+    "addedEvents": [
+      {
+        "action": "accepted-administration"
+      }
+    ],
+    "authorityEventsBefore": 8,
+    "authorityEventsAfter": 9,
+    "invitation": {
+      "status": "accepted",
+      "delivery": "unknown"
+    },
+    "ownershipAndTransferFingerprintsUnchanged": true,
+    "envLocalUnchanged": true,
+    "authHealthHttp": 200,
+    "databaseHealth": "healthy"
+  },
+  "restrictions": {
+    "newInvitations": 0,
+    "resends": 0,
+    "smtpVerified": false,
+    "cloudChanged": false,
+    "androidChanged": false,
+    "infrastructureChanged": false,
+    "automaticRepairs": false
+  },
+  "remaining": [
+    "Diagnose browser permission-query error with separate authorization; do not assume root cause",
+    "Candidate remains administrator/active, 1 of 2 secondary slots occupied",
+    "One acceptance replay and owner removal retaining barber remain pending and require new authorization",
+    "Do not create invitation, resend unknown delivery, repeat acceptance UI or repair automatically",
+    "Stage 2E and specification 011 remain open; SMTP verification separate"
+  ],
+  "privateEvidence": ".artifacts/team-authority-2e3/continue-existing/"
+}
