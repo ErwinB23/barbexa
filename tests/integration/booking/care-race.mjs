@@ -1,6 +1,11 @@
 import { spawn } from 'node:child_process';
 // Two independent PostgREST requests must be observed waiting on PostgreSQL locks.
-export async function careRace(env, personId, send) {
+export async function careRace(
+  env,
+  personId,
+  send,
+  { includeRowLocks = false } = {},
+) {
   const child = spawn(
     'docker',
     [
@@ -40,7 +45,7 @@ export async function careRace(env, personId, send) {
     for (let i = 0; i < 100; i++) {
       observed = Number(
         env.sql(
-          "select count(*) from pg_stat_activity where wait_event='advisory' and query like '%care_booking%' and pid<>pg_backend_pid();",
+          `select count(*) from pg_stat_activity where ${includeRowLocks ? "wait_event_type='Lock'" : "wait_event='advisory'"} and query like '%care_booking%' and pid<>pg_backend_pid();`,
         ),
       );
       if (observed >= 2) break;
