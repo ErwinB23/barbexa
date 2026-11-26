@@ -34,6 +34,8 @@
     "typescript": "6.0.3"
   },
   "scripts": {
+    "test:carga": "node k6/load-cli.mjs",
+    "test:carga:mixta": "node k6/complementary-cli.mjs --execute=local-synthetic-lab",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.core.json --noEmit",
     "lint": "eslint src scripts tests/architecture tests/presentation tests/integration --max-warnings 0",
     "format:check": "prettier --check src scripts tsconfig.json tsconfig.core.json tsconfig.tests.json eslint.config.js .prettierrc.json tsconfig.server.json tsconfig.server-core.json supabase/functions tests/architecture/check-server-architecture.test.mjs tests/architecture/server-fixtures tests/integration/tenant-foundation",
