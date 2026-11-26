@@ -1,0 +1,124 @@
+{
+  "runId": "25de9aa7-54f6-40ff-aab6-f0b20b7454f8",
+  "startedAt": "2026-11-26T07:16:45.384Z",
+  "environment": "barbexa-k6-lab/127.0.0.1:54721",
+  "checks": [
+    {
+      "name": "EQ01-no-session-read",
+      "passed": true,
+      "status": 401
+    },
+    {
+      "name": "EQ01-no-session-receive",
+      "passed": true,
+      "status": 401
+    },
+    {
+      "name": "EQ01-other-client-read",
+      "passed": true,
+      "status": 404,
+      "expectedStatus": 404,
+      "code": "NOT_AVAILABLE"
+    },
+    {
+      "name": "EQ01-unassigned-barber-read",
+      "passed": true,
+      "status": 404,
+      "expectedStatus": 404,
+      "code": "NOT_AVAILABLE"
+    },
+    {
+      "name": "EQ01-unassigned-barber-receive",
+      "passed": true,
+      "status": 404,
+      "expectedStatus": 404,
+      "code": "NOT_AVAILABLE"
+    },
+    {
+      "name": "EQ01-foreign-admin-receive",
+      "passed": true,
+      "status": 404,
+      "expectedStatus": 404,
+      "code": "NOT_AVAILABLE"
+    },
+    {
+      "name": "EQ01-denials-no-mutation",
+      "passed": true
+    },
+    {
+      "name": "EQ01-administrator-cash-positive",
+      "passed": true
+    },
+    {
+      "name": "EQ03-distinct-authorized-actors-overlap",
+      "passed": true,
+      "observedSqlWaiters": 2,
+      "roles": [
+        "assigned-barber",
+        "administrator"
+      ]
+    },
+    {
+      "name": "EQ03-one-winner-one-event",
+      "passed": true,
+      "statuses": [
+        409,
+        200
+      ],
+      "receipts": 1
+    },
+    {
+      "name": "EQ10-real-policy-change-historical-unchanged",
+      "passed": true,
+      "previousPolicyMin": 120,
+      "currentPolicyMin": 60,
+      "historicalPolicyMin": 120,
+      "fullReservationAndItemsUnchanged": true,
+      "authorizedReadStatus": 200
+    },
+    {
+      "name": "EQ07-definite-mail-failure-after-real-commit",
+      "passed": true,
+      "persisted": true,
+      "delivery": "failed",
+      "provider": "controlled-definite-failure-no-external-mail"
+    },
+    {
+      "name": "EQ07-retry-without-duplicate",
+      "passed": true,
+      "providerCalls": 2,
+      "stableIdempotencyKey": true,
+      "invitations": 1,
+      "finalDelivery": "sent",
+      "externalDeliveryTested": false
+    },
+    {
+      "name": "EQ01-other-client-receive",
+      "passed": true,
+      "status": 404,
+      "code": "NOT_AVAILABLE"
+    },
+    {
+      "name": "EQ01-other-client-receive-no-mutation",
+      "passed": true
+    }
+  ],
+  "complete": true,
+  "existingRowsPreserved": true,
+  "protectedFilesUnchanged": true,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 104,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "health": 200,
+  "finishedAt": "2026-11-26T07:36:57.291Z",
+  "mailPersistence": {
+    "rows": 1,
+    "invitationId": "10afe5b7-0e08-462a-9331-2c585fdd846a",
+    "deliveryState": "sent"
+  }
+}

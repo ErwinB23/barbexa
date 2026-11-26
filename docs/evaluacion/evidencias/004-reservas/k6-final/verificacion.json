@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-11-26T06:06:47.237Z",
+  "newLoadExecuted": false,
+  "attempts": 7,
+  "approved": 5,
+  "unsuccessful": 2,
+  "independentThresholdChecksPassed": 186,
+  "rawFilesPreserved": 131,
+  "localLinksVerified": 38,
+  "brokenLinks": [],
+  "sensitivePatternsFound": [],
+  "stressMaxAccreditedVU": 1000,
+  "approvedRequestCount": 476964,
+  "charts": 6
+}

@@ -1,0 +1,25 @@
+COPIA SANITIZADA DE EVIDENCIA EXISTENTE; NO ES UNA EJECUCION NUEVA.
+
+ORIGINAL LOCAL: docs/evaluacion/evidencias/eq05/terminal-tests.log
+SHA256: ae67f664a138a134839ba79647124919ba3ac82ff25d67da8cdce1839711ddd6
+
+✔ an active or crashed unfinished observation is never restarted or silently continued (0.7782ms)
+✔ a completed observation is not repeated; an interrupted window needs an audited new run (0.2009ms)
+✔ a successor preserves every previous artifact, isolates credentials, and updates only the pointer (9.5789ms)
+✔ terminal progress includes completed, passed, failed, unknown and elapsed time without exposing a session (0.1987ms)
+✔ hour and ten-second schedule are immutable and contain exactly 360 non-overlapping intervals (0.5299ms)
+✔ unknown intervals never count as available; observed availability and full-window coverage are separate (0.8894ms)
+✔ no samples means no measured availability, never 100%; omissions are expanded as no-data (0.2038ms)
+✔ 99.5% and interruptions are evaluated without reducing thresholds or merging missing data into downtime (1.4251ms)
+✔ presentation shows distinct availability, coverage, missing intervals and elapsed progress (0.8888ms)
+✔ simulation is visibly marked and never changes supplied records (0.372ms)
+✔ TTY reuses its display; redirected output is readable and free of ANSI control codes (0.454ms)
+✔ display failure cannot interrupt or alter availability accounting (0.7832ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.0473

@@ -1,0 +1,360 @@
+{
+  "date": "2026-11-25",
+  "productCommit": "a758dfa",
+  "k6Version": "2.4.0",
+  "distribution": "Official GrafanaLabs.k6 Winget MSI; installer hash verified by Winget",
+  "dockerEngine": "29.9.3",
+  "initialHostSnapshot": {
+    "logicalProcessors": 24,
+    "ramGiB": 15.43,
+    "freeRamGiB": 1.67,
+    "cpuPercentPointObservation": 0,
+    "freeDiskGiB": 187.97
+  },
+  "preflight": {
+    "observedAtUtc": "2026-11-25T23:25:12.2713993Z",
+    "scope": "Read-only host readiness; no backend or load execution",
+    "resources": {
+      "logicalProcessors": 24,
+      "totalRamGiB": 15.43,
+      "freeRamGiB": 3.25,
+      "usedRamPercent": 78.92
+    },
+    "safetyPolicy": {
+      "loadProbe": "Repeat after backend startup; supervisor enforces the same remaining host margin",
+      "maximumUsedRamPercent": 80,
+      "startupProbe": "Before isolated backend startup",
+      "minimumFreeRamGiB": 4
+    },
+    "k6OnPath": true,
+    "k6Available": true,
+    "dockerClientAvailable": true,
+    "dockerEngineReady": true,
+    "hostReadiness": "blocked",
+    "blockers": [
+      "INSUFFICIENT_MEMORY_HEADROOM"
+    ],
+    "targetValidated": false,
+    "loadExecuted": false,
+    "note": "Host readiness is not authorization to run; an owned independent lab and synthetic fixtures must be verified separately."
+  },
+  "authorizedStop": {
+    "metroPort": 8081,
+    "habitualContainersStopped": 7,
+    "deletedContainers": 0,
+    "deletedVolumes": 0,
+    "otherStacksOperated": 2,
+    "mountInventoryPreserved": true,
+    "restoration": "k6/README.md"
+  },
+  "lab": {
+    "projectId": "barbexa-k6-lab",
+    "apiPort": 54721,
+    "databasePort": 54722,
+    "shadowPort": 54720,
+    "copiedMigrationsVerified": 26,
+    "servicesStarted": false,
+    "migrationsApplied": false,
+    "syntheticFixturesCreated": false,
+    "privateEnvCopied": false
+  },
+  "validation": {
+    "guardTestsPassed": 4,
+    "k6InspectConfigurationsPassed": 28,
+    "inspectRunRejectionExit": 107,
+    "runnerResourceRejectionExit": 1,
+    "actualBackendRequests": 0,
+    "sqlIntegrityChecksExecuted": false
+  },
+  "stages": [
+    {
+      "vus": 1,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 10,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 25,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 50,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 100,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 200,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 300,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 400,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 500,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 600,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 700,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 800,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 900,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1000,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1100,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1200,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1300,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1400,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1500,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1600,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1700,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1800,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 1900,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    },
+    {
+      "vus": 2000,
+      "executed": false,
+      "p50Ms": null,
+      "p95Ms": null,
+      "p99Ms": null,
+      "rps": null
+    }
+  ],
+  "maximumLoadValidated": null,
+  "eq03": "Historical limited SQL evidence only; no new load or payment race",
+  "eq04": "Not evaluated",
+  "eq06": "Not evaluated",
+  "blockers": [
+    "Insufficient host RAM; other two stacks must remain intact",
+    "Lab runtime, synthetic fixture provisioning, live HTTP and SQL validation pending"
+  ],
+  "publication": "No commit or push",
+  "memoryRecheck": {
+    "samples": [
+      {
+        "observedAtUtc": "2026-11-25T22:39:01.8353093Z",
+        "scope": "Read-only host readiness; no backend or load execution",
+        "resources": {
+          "logicalProcessors": 24,
+          "totalRamGiB": 15.43,
+          "freeRamGiB": 0.9,
+          "usedRamPercent": 94.14
+        },
+        "safetyPolicy": {
+          "maximumUsedRamPercent": 80,
+          "minimumFreeRamGiB": 4
+        },
+        "k6OnPath": true,
+        "k6Available": true,
+        "dockerClientAvailable": true,
+        "dockerEngineReady": true,
+        "hostReadiness": "blocked",
+        "blockers": [
+          "INSUFFICIENT_MEMORY_HEADROOM"
+        ],
+        "targetValidated": false,
+        "loadExecuted": false,
+        "note": "Host readiness is not authorization to run; an owned independent lab and synthetic fixtures must be verified separately."
+      },
+      {
+        "observedAtUtc": "2026-11-25T22:39:51.5042916Z",
+        "scope": "Read-only host readiness; no backend or load execution",
+        "resources": {
+          "logicalProcessors": 24,
+          "totalRamGiB": 15.43,
+          "freeRamGiB": 1.16,
+          "usedRamPercent": 92.5
+        },
+        "safetyPolicy": {
+          "minimumFreeRamGiB": 4,
+          "maximumUsedRamPercent": 80
+        },
+        "k6OnPath": true,
+        "k6Available": true,
+        "dockerClientAvailable": true,
+        "dockerEngineReady": true,
+        "hostReadiness": "blocked",
+        "blockers": [
+          "INSUFFICIENT_MEMORY_HEADROOM"
+        ],
+        "targetValidated": false,
+        "loadExecuted": false,
+        "note": "Host readiness is not authorization to run; an owned independent lab and synthetic fixtures must be verified separately."
+      }
+    ],
+    "cpuPercentPointObservation": 46,
+    "freeDiskGiB": 185.38,
+    "habitualDatabaseState": "exited",
+    "labContainersPresent": false,
+    "servicesStarted": false,
+    "loadExecuted": false,
+    "requestedNextProgression": [
+      1,
+      10,
+      25,
+      50,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000
+    ],
+    "progressionExecuted": false
+  },
+  "latestOptimizationEvidence": "k6-optimization.json"
+}

@@ -1,5 +1,40 @@
 # T029 — calidad consolidada
 
+## EQ-08: evidencia consolidada — 26/11/2026
+
+Ambos checkers actuales aprobados: cliente 298 módulos/55 núcleo/975 aristas;
+servidor 56/33/158. Listados 88 archivos de núcleo y 199 dependencias directas,
+cero prohibidas. Un caso existente de reserva por lado aprobado con dobles de
+puerto, sin servicios externos; Node con cero intentos de red, Deno con permisos
+de red/lectura/escritura/entorno denegados. Cobertura/regresión completa del 25/11
+reutilizada, con coincidencia de los 88 archivos actuales y el commit probado.
+No se recalculó cobertura con la selección ni se repitió `npm run check`.
+[Informe, criterio original, CSV/JSON y logs](../eq08/INFORME.md).
+EQ-08 permanece parcial integralmente por mapas/imágenes no completos; núcleo
+construido acreditado. Siguiente mínimo: EQ-09 Web de conflicto con Playwright,
+sin k6 ni nuevos módulos. No se ejecutó navegador en esta etapa.
+
+## Actualización de rendimiento — 26/11/2026
+
+**Cierre mixto:** auditados offline 25/50/100 VU ×600 s, 88.472 HTTP y 17.630
+aceptadas = reservas persistidas, cero errores e integridad/recuperación correctas.
+36 thresholds de los aprobados recalculados; dos fallidos preservados. EQ-04/EQ-06
+cumplidos en laboratorio: p95 consultas a 100 VU 4/8/7 ms. P95 HTTP global 3.660,71 ms
+y ausencia de percentiles propios de confirmación documentados como limitaciones.
+[Auditoría mixta y gráficas](k6-mixta-final/INFORME.md). No repetir k6.
+
+Auditadas las evidencias manuales de la campaña k6 sin ejecutar nuevas pruebas:
+cinco corridas aprobadas, dos Stress fallidos conservados;186thresholds recalculados,
+476.964HTTP en las aprobadas, errores0 y checks100%. Stress1000VU/60s ySpike1000/30s
+acreditados en lectura local. No actualiza cobertura de código ni afirma un nuevo
+`npm run check`; las evidencias de calidad/CI inferiores mantienen su fecha y alcance.
+
+[Informe](k6-final/INFORME.md), [resultados completos](k6-final/RESULTADOS.md) y
+[evaluación EQ-01–EQ-10](k6-final/REQUISITOS-CALIDAD.md). MVPcarga10VU cumplido;
+EQ-04/06 cerrados con la serie mixta independiente. La lectura hasta 1.000 VU
+mantiene su alcance propio; 2.000 siguen pospuestos como objetivo adicional.
+Sin producto, migraciones, thresholds, Cloud, Actions, commits o push.
+
 ## Cierre reproducible desde Git — 25/11/2026
 
 Estado ejecutado:9192d1a en un checkout independiente, sin configuración privada,
@@ -342,3 +377,92 @@ la ejecución remota, descargas de setup, npm ci remoto y upload se comprobarán
 al autorizar publicación/CI. El workflow no acredita SQL/HTTP reales, E2E desplegado,
 Android físico, k6 o CD. Esos gates permanecen separados; no se ejecutó ninguno.
 Referencia de exportación: https://docs.expo.dev/more/expo-cli/#exporting.
+
+## Consolidación de arquitectura, SOLID y patrones — 25/11/2026
+
+Base contrastada: `a758dfa`, sin cambios ejecutables. Se reutilizan las pruebas de
+[reproducibilidad](reproducibilidad.json) y la [CI exitosa](https://github.com/ErwinB23/barbexa/actions/runs/45696792837),
+sin repetir la auditoría integral. Comprobación estática nueva: ambos checkers exit0;
+cliente298 módulos/55 núcleo/975 aristas, servidor56/33/158. Son módulos de archivo,
+no298 funcionalidades. Evidencia local ignorada: `.artifacts/local-commits/consolidation-*-architecture.log`.
+
+### Arquitectura real y recorrido de reserva
+
+Estilo cliente-servidor, backend administrado y Clean Architecture modular en ambos
+lados. Seis funcionalidades cliente: `authentication`, `tenant-foundation`,
+`barbershop-operation`, `reservations`, `notifications`, `foundation`, en `src/features/`.
+Dominio define tipos/invariantes; aplicación coordina casos de uso y estado; infraestructura
+traduce HTTP/SDK/persistencia; presentación recoge entradas y renderiza. Composición
+inyecta concreciones. El flujo de llamadas hacia infraestructura no invierte la dependencia:
+infraestructura importa contratos de aplicación; aplicación depende de su dominio.
+Los checkers rechazan SDK/frameworks/globals de plataforma en núcleo, ciclos e inversiones;
+no prueban por sí solos comportamiento, seguridad dinámica ni escalabilidad.
+
+Rutas siguientes relativas a la raíz; los símbolos son los actuales, no clases hipotéticas.
+
+| Paso / responsabilidad | Archivo y símbolo real |
+| --- | --- |
+| Ruta y presentación Web | `src/composition/booking-route.tsx::BookingRoute`; `src/features/reservations/presentation/booking-content.web.tsx::BookingContentWeb`, invoca `app.confirm()` |
+| Estado, captura de selección, idempotencia y respuesta tardía | `src/features/reservations/application/booking-application.ts::createBookingApplication`, método `confirm`; retiene requestId si resultado incierto |
+| Caso de uso / puerto cliente | `src/features/reservations/application/request-reservation.ts::createRequestReservation` devuelve `SolicitarReserva`; `reservation-remote-gateway.ts::ReservaRemotaGateway`; `domain/reservation-input.ts::reservationInput` valida |
+| Adaptador cliente | `src/features/reservations/infrastructure/reservation-http-adapter.ts::createReservationHttpAdapter`, método `confirm`: verifica `/auth/v1/user` y POST `/functions/v1/reservation-command`, action `confirm` |
+| Composition Root cliente | `src/composition/auth-composition.ts::createAuthFoundation` compone sesión/contexto/caché; `src/composition/reservations-composition.ts::createReservations` conecta gateway, oferta y aplicación |
+| Entrada Edge y Composition Root servidor | `supabase/functions/reservation-command/index.ts`: `Deno.serve(createReservationService(createFoundationActorVerifier()))`; `_shared/reservations/composition.ts::createReservationService` |
+| HTTP y actor verificado | `supabase/functions/_shared/reservations/presentation/reservation-handler.ts::createReservationHandler`: valida acción/cuerpo, `verifyActor`, coordina y traduce errores a HTTP |
+| Caso de uso / puerto servidor | `_shared/reservations/application/confirm-reservation.ts::createConfirmReservation` devuelve `ConfirmarReserva`; `reservation-atomic-gateway.ts::ReservaAtomicaGateway`; validadores de dominio propios |
+| Adaptador servidor a REST/RPC | `_shared/reservations/infrastructure/postgres-reservation-adapter.ts::createPostgresReservationAdapter.confirm`: POST `/rest/v1/rpc/confirm_booking_paid` con medio de pago, o `confirm_booking` sin él; actor proviene de verificación, no del cuerpo del cliente |
+| Transacción SQL | `supabase/migrations/20261115151745_care_payments.sql::private.confirm_booking_paid` llama a `private.reservation_confirm` de `20261114224344_booking_atomic.sql`; reserva/items/evento/pago pendiente se confirman o revierten juntos |
+| Notificación transaccional | `20261122184214_web_notifications.sql::private.web_notice_reservation_event` y trigger `web_notice_reservation` sobre eventos; la recepción de dinero sigue siendo manual |
+
+Los prefijos `_shared/` de la tabla pertenecen a `supabase/functions/`.
+PostgREST ejecuta RPC y expone lecturas con RLS; no hay API Node propia. La cuenta
+verificada, membresía activa, tenant y asignación se revalidan en servidor/SQL.
+El identificador de barbería o el rol enviado por UI no concede autorización.
+
+### SOLID: ejemplos y límites
+
+| Principio | Referencia y aplicación | Beneficio / límite |
+| --- | --- | --- |
+| SRP | `request-reservation.ts::createRequestReservation` valida/delega; `reservation-handler.ts::createReservationHandler` maneja HTTP; `postgres-reservation-adapter.ts` traduce RPC | Se prueban responsabilidades por separado. El handler despacha varias acciones; SRP no equivale a una función por archivo |
+| OCP | Los dos casos de uso reciben `Pick<...Gateway,'confirm'>`; `fetcher` y reloj `now` de caché son inyectables | Sustituir transporte/reloj no exige cambiar el núcleo. Añadir acciones/reglas sí puede requerir modificar contratos/dispatch; no se declara OCP absoluto |
+| LSP | Adaptadores y dobles satisfacen `ReservaRemotaGateway`/`ReservaAtomicaGateway`; `tests/unit/reservations/confirmation.test.ts`, `tests/server/reservations/confirmation.test.ts`, `tests/integration/booking/reservation-adapter.test.mjs` | Sustitución estructural verificada en escenarios de éxito/error. TypeScript no demuestra equivalencia semántica universal; no hay una jerarquía de clases cuya herencia se certifique |
+| ISP | `Pick<ReservaRemotaGateway,'confirm'>` y `Pick<ReservaAtomicaGateway,'confirm'>` en `createRequestReservation`/`createConfirmReservation` | El consumidor de confirmación no exige cancelación ni listados. El adaptador concreto agrega varios puertos; la segregación está en el contrato consumido |
+| DIP | `application/reservation-remote-gateway.ts` y `application/reservation-atomic-gateway.ts`; inyección en las composiciones citadas | El núcleo usa contratos propios, sin Supabase/React/SQL. La raíz conoce concreciones deliberadamente; el checker limita dependencias estáticas, no prueba todos los efectos |
+
+### Patrones realmente presentes
+
+| Patrón / técnica | Referencia | Responsabilidad y alcance |
+| --- | --- | --- |
+| Adapter | `createReservationHttpAdapter`, `createPostgresReservationAdapter` | Convertir protocolos/DTO/errores externos a contratos propios |
+| Factory e inyección explícita | `createReservations`, `createReservationService` | Construir/conectar colaboradores; sin contenedor DI ni Service Locator |
+| Observer / suscripción | `booking-application.ts::subscribe`, conjunto `listeners`, `publish`, `dispose` | Notificar cambios de snapshot y retirar listeners; no es un bus distribuido |
+| Cache-aside y single-flight | `catalog-cache.ts::createCatalogCache.read` y `operation-http-adapter.ts::request` | Cargar al faltar/expirar, compartir promesa en curso; no autoridad de negocio |
+| Idempotencia transaccional | `private.reservation_confirm`, UNIQUE y fingerprint | Reintento con mismo requestId/contenido devuelve snapshot; no es Event Sourcing |
+
+SOLID son principios; cliente-servidor es un estilo; Clean Architecture es una
+organización de dependencias. No se atribuyen Singleton, microservicios, CQRS completo,
+Repository genérico, Event Sourcing ni caché distribuida por tener factories, RPC o eventos.
+
+### Diferencias con la propuesta C4 académica
+
+Contrastados C2, C3 y C4 vigentes en `ErwinB23/barberia_app-arquitSoft-02-Erwin`,
+`docs/04-modelo-c4/`, sin editarlos: C2 mantiene el recorrido correcto Edge→PostgREST→SQL,
+pero representa también Storage/mapas/reseñas/correo del alcance objetivo; su dibujo
+no acredita implementación completa. C3 abre solo móvil; hoy hay presentación Web
+específica y composición compartida, y la aceptación Web no sustituye Android físico.
+C4 propone clases `SolicitarReserva.ejecutar`, `ReservaHttpAdapter` y
+`PostgresReservaAdapter`: el código real usa factories/closures y método `confirm`.
+`SolicitudReserva.items`/`ResultadoReserva` ilustrativos corresponden hoy a
+`ReservationInput.serviceIds`/`BookingResult`, con `BusinessError` tipado y mapeo HTTP.
+Se añade coordinación de estado, fencing por contexto y reintento idempotente con
+requestId retenido, no una repetición ciega. No actualizar diagramas en esta etapa.
+
+### Estado de evidencia
+
+Implementado y comprobado en alcance local/CI: límites de dependencia, validadores,
+adaptadores con dobles y snapshots, contratos REST, gates de cobertura e idempotencia
+según evidencias SQL históricas. Validación parcial: LSP semántico, rendimiento bajo
+un conjunto acotado y correspondencia visual de diagramas. Pendientes: k6, capacidad
+productiva, pooling efectivo, Android físico integral, despliegue público/DNS/CDN/CD
+y evaluación de todos los atributos. Véanse [PostgreSQL](../002-fundacion/consultas.md)
+y [caché](cache.md). Sin nuevos tests completos, SQL, servicios, paquetes, commit o push.

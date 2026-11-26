@@ -1,0 +1,6 @@
+vu,attempt,approved,exit,interrupted,http,technical_errors,accepted,persisted,unacknowledged_persisted,recovered,integrity
+25,912980a8-0a3f-40b0-8775-80368ca8bd04,false,103,RESOURCE_SAFETY_LIMIT,24,0,4,4,0,true,true
+25,dd8f7bd1-42b8-4b6a-8693-106667fc4eef,false,108,COMPLEMENTARY_WRITES_OR_DURATION_NOT_VERIFIED,6239,1,1235,1241,6,true,true
+25,dfbeb172-8aa4-4575-844b-bff79e40f673,true,0,,16227,0,3236,3236,0,true,true
+50,9d4fabb9-59a7-4bd3-83b3-467d436e151d,true,0,,32359,0,6453,6453,0,true,true
+100,a85ed393-3969-44ce-a6d1-de7310918569,true,0,,39886,0,7941,7941,0,true,true

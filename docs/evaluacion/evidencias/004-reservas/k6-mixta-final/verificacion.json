@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-26T18:38:47.866Z",
+  "protectedFiles": 763,
+  "protectedHashesUnchanged": true,
+  "historicalReadingFilesVerified": 131,
+  "attempts": 5,
+  "approved": 3,
+  "notApproved": 2,
+  "thresholdsRecalculated": 60,
+  "approvedThresholdsPassed": 36,
+  "continuityVerified": true,
+  "persistedEqualsAcceptedForApproved": true,
+  "recordedRecoveryVerified": true,
+  "k6Executed": false,
+  "networkRequests": 0,
+  "databaseQueries": 0,
+  "productChanges": false
+}

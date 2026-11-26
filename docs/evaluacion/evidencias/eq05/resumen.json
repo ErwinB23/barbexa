@@ -1,0 +1,145 @@
+{
+  "runId": "8dd877ab-4d18-4213-928d-e9217e39f7da",
+  "start": "2026-11-26T20:27:14.784Z",
+  "end": "2026-11-26T21:27:14.798Z",
+  "elapsedMs": 3600003.1905,
+  "summary": {
+    "scheduledMs": 3600000,
+    "scheduledIntervals": 360,
+    "available": 360,
+    "unavailable": 0,
+    "noData": 0,
+    "observedMs": 3600000,
+    "availabilityPercent": 100,
+    "coveragePercent": 100,
+    "lowerBoundScheduledPercent": 100,
+    "objectiveMet": true,
+    "fullCoverage": true,
+    "interruptions": [],
+    "missingPeriods": []
+  },
+  "httpRequests": 2880,
+  "flow": {
+    "meanMs": 271.9252625000112,
+    "p50Ms": 267.8401000001468,
+    "p95Ms": 312.38639999972656,
+    "p99Ms": 346.69029999990016,
+    "maxMs": 371.90870000002906
+  },
+  "operations": [
+    {
+      "operation": "auth",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 51.31658833333536,
+      "p50Ms": 50.19009999977425,
+      "p95Ms": 58.44389999983832,
+      "p99Ms": 59.8792999999132,
+      "maxMs": 88.98000000009779
+    },
+    {
+      "operation": "catalog",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 13.089004722214433,
+      "p50Ms": 12.524100000038743,
+      "p95Ms": 16.125400000000127,
+      "p99Ms": 23.60939999995753,
+      "maxMs": 62.75900000007823
+    },
+    {
+      "operation": "slots",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 6.145056111098029,
+      "p50Ms": 5.979900000151247,
+      "p95Ms": 7.443500000052154,
+      "p99Ms": 8.599299999998038,
+      "maxMs": 13.528400000184774
+    },
+    {
+      "operation": "reservations",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 10.568812222223562,
+      "p50Ms": 10.37390000000596,
+      "p95Ms": 17.065500000026077,
+      "p99Ms": 18.103499999735504,
+      "maxMs": 18.541300000157207
+    },
+    {
+      "operation": "confirm",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 92.11083222222068,
+      "p50Ms": 90.77640000008978,
+      "p95Ms": 114.12250000005588,
+      "p99Ms": 125.32669999997597,
+      "maxMs": 136.07910000008997
+    },
+    {
+      "operation": "verify-persistence",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 3.865040833337534,
+      "p50Ms": 3.821599999908358,
+      "p95Ms": 5.085900000296533,
+      "p99Ms": 5.656100000021979,
+      "maxMs": 6.04480000003241
+    },
+    {
+      "operation": "cleanup-cancel",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 90.50058611111899,
+      "p50Ms": 89.3304999996908,
+      "p95Ms": 114.19900000002235,
+      "p99Ms": 123.77490000000034,
+      "maxMs": 162.27770000020973
+    },
+    {
+      "operation": "verify-cleanup",
+      "samples": 360,
+      "failed": 0,
+      "meanMs": 3.781354722223576,
+      "p50Ms": 3.6638999998103827,
+      "p95Ms": 4.964900000020862,
+      "p99Ms": 5.895400000270456,
+      "maxMs": 7.5219999999999345
+    }
+  ],
+  "resourceStats": {
+    "freeMiB": {
+      "samples": 361,
+      "min": 1598.23046875,
+      "mean": 2619.9730241516622,
+      "max": 3360.67578125
+    },
+    "ramPercent": {
+      "samples": 361,
+      "min": 78.73712302041385,
+      "mean": 83.42352375300322,
+      "max": 89.8880275539312
+    },
+    "cpu": {
+      "samples": 360,
+      "min": 1.8363543113045888,
+      "mean": 3.5138761022559803,
+      "max": 12.971542025148908
+    },
+    "pgSessions": {
+      "samples": 361,
+      "min": 18,
+      "max": 18,
+      "limit": 100
+    }
+  },
+  "integrity": {
+    "own": 361,
+    "active": 0,
+    "prior": 19110,
+    "total": 19471
+  },
+  "monthlyAccredited": false,
+  "partialExcluded": "0bcde763-0e44-41dd-ba75-798c943d0dd3"
+}

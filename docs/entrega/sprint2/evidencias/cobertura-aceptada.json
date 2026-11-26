@@ -1,0 +1,56 @@
+{
+  "evidenceDate": "2026-11-25",
+  "testedCommit": "9192d1a1e36937f6f4e835839a90b881dbebf332",
+  "originalSource": "docs/evaluacion/evidencias/004-reservas/reproducibilidad.json",
+  "originalSourceSha256": "5167e25900d917a968aef1a5937e04f487002cc6c83e01efd71a337664352bd8",
+  "coverage": {
+    "client": {
+      "scope": "client-domain-application",
+      "totals": {
+        "lines": {
+          "hit": 3808,
+          "total": 3808
+        },
+        "functions": {
+          "hit": 447,
+          "total": 447
+        },
+        "branches": {
+          "hit": 1725,
+          "total": 1852
+        }
+      },
+      "percentages": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 93.1425485961123
+      },
+      "files": 45
+    },
+    "server": {
+      "scope": "server-domain-application",
+      "totals": {
+        "lines": {
+          "hit": 1640,
+          "total": 1640
+        },
+        "functions": {
+          "hit": 99,
+          "total": 99
+        },
+        "branches": {
+          "hit": 1007,
+          "total": 1007
+        }
+      },
+      "percentages": {
+        "lines": 100,
+        "functions": 100,
+        "branches": 100
+      },
+      "files": 29
+    }
+  },
+  "newCoverageExecuted": false,
+  "note": "Accepted historical domain/application coverage; not a fresh product-wide measurement."
+}

@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-26T16:38:34.849Z",
+  "prepared": true,
+  "k6Executed": false,
+  "retry": "648620bd-10f3-4ba6-b5c3-711b024126f4",
+  "state": "ready",
+  "failedAttemptStillFailed": true,
+  "originalWorkAndFixturePreserved": true,
+  "preservedFiles": 716,
+  "allPreservedHashesMatch": true,
+  "attemptDirectories": 1,
+  "planTests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "expandedSuite": {
+    "passed": 33,
+    "failed": 1,
+    "limitation": "Pre-existing Windows owner lookup test; same lookup measured 2638ms vs 2000ms helper timeout, unchanged"
+  },
+  "profiles": [
+    {
+      "level": 25,
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "recoverySeconds": 120
+    },
+    {
+      "level": 50,
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "recoverySeconds": 120
+    },
+    {
+      "level": 100,
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "recoverySeconds": 120
+    }
+  ],
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 108,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "operatorLockPresent": false
+}

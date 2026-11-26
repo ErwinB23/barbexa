@@ -1,5 +1,41 @@
 # Matriz de los 16 criterios — evidencia real y brechas
 
+## Cierre prioritario Sprint 2 — 26/11/2026
+
+EQ-09 Web de conflicto ejecutado con Playwright móvil: 1 E2E aprobado, dos sesiones
+sintéticas, 201/409/201, servicios conservados y recuperación sin duplicados observados;
+SQL confirma dos reservas y ninguna fila rechazada. [Informe y límites](evidencias/eq09/INFORME.md).
+Esto aporta evidencia al criterio E2E Web/usabilidad; no acredita Android, ubicación
+denegada, participantes ni accesibilidad completa. No se repitió k6. EQ-05:
+[hora local auditada](evidencias/eq05/INFORME.md), 360 éxitos, cero fallos/sin datos,
+100 % de disponibilidad/cobertura y 361 propias canceladas. Mes publicado no
+evaluado; adaptación requiere aceptación docente. Parcial anterior conservado aparte.
+
+15 checks acotados de EQ01/03/07/10 aprobados; se reutilizan antecedentes SQL,
+CI y cobertura. Serie mixta EQ04/06 finalizada: 25/50/100 VU ×600 s, 88.472 HTTP,
+17.630 aceptadas = persistidas, cero errores e integridad/recuperación satisfactorias.
+EQ04/06 cumplidos en laboratorio; EQ02/08/09 parciales y EQ05 sin mes. Los diez EQ
+no están integralmente cerrados. [Informe mixto](evidencias/004-reservas/k6-mixta-final/INFORME.md).
+[Cinco entregables del docente, casos y pendientes exactos](evidencias/004-reservas/sprint2-closure/CIERRE-SPRINT2.md).
+No se declara Android, módulos pendientes,2.000VU,CD o despliegue público completos.
+Sin cambios del producto,Cloud,migraciones,Actions,commits o push.
+
+## Actualización de los criterios de rendimiento — 26/11/2026
+
+Se consolidaron offline siete intentos de la campaña k6 af768017:cinco aprobados
+y dos fallidos preservados. [Informe y gráficas](evidencias/004-reservas/k6-final/INFORME.md).
+Esta actualización no cierra automáticamente los16criterios ni altera sus definiciones.
+
+| Criterio | Evidencia actual | Límite / pendiente |
+| --- | --- | --- |
+| 8 Escalabilidad frontend/backend | Lectura hasta 1.000 VU separada; mixta 25/50/100 VU ×600 s, consultas p95 4/8/7 ms a 100, cero errores; EQ-04/EQ-06 cumplidos en laboratorio | Sin renderizado frontend, login masivo ni capacidad productiva. Global p95 3,66 s documentado, percentiles de confirmación ausentes y escalado no lineal |
+| 9 Escalabilidad BD | Mixta con 17.630 aceptadas = persistidas, cero violaciones, máximo 22/100 sesiones y cero locks muestreados. Lecturas y carreras históricas independientes conservadas | No demuestra escalado horizontal, otros volúmenes ni 1.000 escrituras; 2.000 VU pospuestos como meta adicional |
+| 13 Carga k6 | Cuatro tipos de lectura y suplemento académico conservados; serie mixta adicional auditada, 36 thresholds aprobados, tablas/CSV/JSON y cuatro gráficas adicionales | Acreditado en laboratorio para las lecturas y mezcla definidas. Dos intentos mixtos fallidos preservados. 2.000 VU no medidos; no requieren repetición para EQ-04/EQ-06 |
+
+[Matriz MVP y EQ-01–EQ-10 con pendientes mínimos](evidencias/004-reservas/k6-final/REQUISITOS-CALIDAD.md).
+Las actualizaciones fechadas siguientes conservan antecedentes; sus menciones a k6
+no ejecutado corresponden a esas fechas. No se generó carga nueva, commits o push.
+
 **Actualización24/11/2026:** interfaces y recorrido manual Web actual aceptados
 explícitamente por el usuario para cliente, barbero, administrador secundario y
 propietario que también atiende. Esto acredita aceptación funcional manual Web para

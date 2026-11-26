@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-26T17:11:10.213Z",
+  "k6Executed": false,
+  "sourceAttempt": "dd8f7bd1-42b8-4b6a-8693-106667fc4eef",
+  "retry": "b238ad29-0f82-400f-985f-230e5c45d82c",
+  "retryState": "ready",
+  "all727PreservedFilesUnchanged": true,
+  "old131CampaignFilesUnchanged": true,
+  "preservedBusinessSnapshots": 1345,
+  "oldResultsStillFailed": true,
+  "future50And100AssignmentsUnchanged": true,
+  "optionsThresholdsUnchanged": true,
+  "oneshotEffective": true,
+  "oldRuntimePreservedStopped": true,
+  "idempotencyReplayAfterOneshot": {
+    "status": 200,
+    "sameReservation": true
+  },
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 1349,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "targetedTests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "pendingFixtureCapacity": 600,
+  "operatorLockPresent": false
+}

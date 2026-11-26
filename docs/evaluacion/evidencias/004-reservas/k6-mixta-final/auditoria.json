@@ -1,0 +1,1191 @@
+{
+  "auditedAt": "2026-11-26T18:38:47.866Z",
+  "series": "71e00e3c-28eb-4262-80ce-7abe043c49ed",
+  "method": "Offline only; original saved evidence, no new requests or load.",
+  "originalCriteria": {
+    "path": "docs/01-analisis-de-sistema/08-escenarios-atributos-calidad.md",
+    "sha256": "d9c6e416e983a86d8d081ce4811ea493fcadd0f5bf1e950a56425628ac2fc1fe"
+  },
+  "attempts": [
+    {
+      "level": 25,
+      "id": "912980a8-0a3f-40b0-8775-80368ca8bd04",
+      "source": ".artifacts/k6/complementary/71e00e3c-28eb-4262-80ce-7abe043c49ed/25/912980a8-0a3f-40b0-8775-80368ca8bd04",
+      "approved": false,
+      "exit": 103,
+      "interrupted": "RESOURCE_SAFETY_LIMIT",
+      "recovered": true,
+      "forcedShutdown": false,
+      "finishedAt": "2026-11-26T16:17:08.073Z",
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "downSeconds": 60,
+      "recoverySeconds": 120,
+      "generatorWallSeconds": 27.739,
+      "metricSeconds": 24.5976729,
+      "durationVerified": false,
+      "maximumActiveVU": 1,
+      "httpCount": 24,
+      "rps": 0.9757020551322154,
+      "httpMs": {
+        "avg": 34.69824166666666,
+        "med": 13.14705,
+        "p(95)": 48.71180999999998,
+        "p(99)": 323.8453309999998,
+        "max": 405.6472
+      },
+      "wallMs": {
+        "avg": 34.875,
+        "med": 13.5,
+        "p(95)": 51.34999999999998,
+        "p(99)": 324.80999999999983,
+        "max": 406
+      },
+      "technicalErrorCount": 0,
+      "technicalErrorRate": 0,
+      "unexpectedCount": 0,
+      "checksPassed": 24,
+      "checksFailed": 0,
+      "acceptedConfirmations": 4,
+      "persistedReservations": 4,
+      "unacknowledgedPersisted": 0,
+      "globalBefore": 104,
+      "globalAfter": 108,
+      "ownedBefore": 100,
+      "ownedAfter": 104,
+      "integrityValid": true,
+      "integrity": {
+        "before": {
+          "overlaps": 0,
+          "reservations": 104,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "after": {
+          "overlaps": 0,
+          "reservations": 108,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "interrupted": "RESOURCE_SAFETY_LIMIT"
+      },
+      "expectedConflictsMetric": null,
+      "expectedConflictsInApproved": null,
+      "conflictsBasis": "Strict confirm contract requires HTTP 201; 409 fails. Approved checks=100%, so zero conflicts inferred; absent raw counter stays null.",
+      "steadyCount": 0,
+      "steadyRps": null,
+      "steadyConfirmShare": null,
+      "confirmationShare": 0.16666666666666666,
+      "operations": {
+        "catalog": {
+          "steadyAccepted": 0,
+          "steadyRps": null,
+          "wallMs": null
+        },
+        "slots": {
+          "steadyAccepted": 0,
+          "steadyRps": null,
+          "wallMs": null
+        },
+        "reservations": {
+          "steadyAccepted": 0,
+          "steadyRps": null,
+          "wallMs": null
+        },
+        "confirm": {
+          "steadyAccepted": 0,
+          "steadyRps": null,
+          "wallMs": null
+        }
+      },
+      "resources": {
+        "samples": 8,
+        "observedSeconds": 16.198,
+        "cpuHostPeakPercent": 13.10770673753322,
+        "cpuHostMeanPercent": 10.77819941106575,
+        "ramHostPeakPercent": 96.44367740981976,
+        "minimumFreeHostGiB": 0.5489540100097656,
+        "generatorPeakMiB": 76.5,
+        "generatorCpuPeakOneCorePercent": 3.0004800768122895,
+        "backendMemoryPeakMiB": 422.40000000000003,
+        "pgSessionsPeak": 12,
+        "pgMaxConnections": 100,
+        "pgLockWaitsPeak": 0,
+        "backend": {
+          "db": {
+            "cpuPeakOneCorePercent": 3.83,
+            "memoryPeakMiB": 115.7
+          },
+          "auth": {
+            "cpuPeakOneCorePercent": 0.47,
+            "memoryPeakMiB": 18.02
+          },
+          "rest": {
+            "cpuPeakOneCorePercent": 0.68,
+            "memoryPeakMiB": 38.02
+          },
+          "kong": {
+            "cpuPeakOneCorePercent": 12.35,
+            "memoryPeakMiB": 112.6
+          },
+          "edge_runtime": {
+            "cpuPeakOneCorePercent": 1.57,
+            "memoryPeakMiB": 113.8
+          },
+          "inbucket": {
+            "cpuPeakOneCorePercent": 4.38,
+            "memoryPeakMiB": 25
+          }
+        }
+      },
+      "thresholds": [
+        {
+          "metric": "technical_errors{phase:steady}",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:catalog}",
+          "expression": "p(95)<=3000",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{operation:confirm}",
+          "expression": "count>0",
+          "observed": 4,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:catalog}",
+          "expression": "count>0",
+          "observed": 0,
+          "passed": false
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:reservations}",
+          "expression": "count>0",
+          "observed": 0,
+          "passed": false
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:confirm}",
+          "expression": "count>0",
+          "observed": 0,
+          "passed": false
+        },
+        {
+          "metric": "checks",
+          "expression": "rate==1",
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:slots}",
+          "expression": "count>0",
+          "observed": 0,
+          "passed": false
+        },
+        {
+          "metric": "unexpected_results",
+          "expression": "rate==0",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:reservations}",
+          "expression": "p(95)<=3000",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:slots}",
+          "expression": "p(95)<=3000",
+          "observed": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "level": 25,
+      "id": "dd8f7bd1-42b8-4b6a-8693-106667fc4eef",
+      "source": ".artifacts/k6/complementary/71e00e3c-28eb-4262-80ce-7abe043c49ed/25/dd8f7bd1-42b8-4b6a-8693-106667fc4eef",
+      "approved": false,
+      "exit": 108,
+      "interrupted": "COMPLEMENTARY_WRITES_OR_DURATION_NOT_VERIFIED",
+      "recovered": true,
+      "forcedShutdown": false,
+      "finishedAt": "2026-11-26T16:47:59.687Z",
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "downSeconds": 60,
+      "recoverySeconds": 120,
+      "generatorWallSeconds": 345.889,
+      "metricSeconds": 343.1903743,
+      "durationVerified": false,
+      "maximumActiveVU": 25,
+      "httpCount": 6239,
+      "rps": 18.179414305327153,
+      "httpMs": {
+        "avg": 22.18993877223916,
+        "med": 15.8803,
+        "p(95)": 50.02718999999999,
+        "p(99)": 66.42961,
+        "max": 562.8841
+      },
+      "wallMs": {
+        "avg": 22.48036544318,
+        "med": 16,
+        "p(95)": 50,
+        "p(99)": 67,
+        "max": 563
+      },
+      "technicalErrorCount": 1,
+      "technicalErrorRate": 0.00016028209648982208,
+      "unexpectedCount": 1,
+      "checksPassed": 6238,
+      "checksFailed": 1,
+      "acceptedConfirmations": 1235,
+      "persistedReservations": 1241,
+      "unacknowledgedPersisted": 6,
+      "globalBefore": 108,
+      "globalAfter": 1349,
+      "ownedBefore": 104,
+      "ownedAfter": 1345,
+      "integrityValid": true,
+      "integrity": {
+        "before": {
+          "overlaps": 0,
+          "reservations": 108,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "after": {
+          "overlaps": 0,
+          "reservations": 1349,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "interrupted": null
+      },
+      "expectedConflictsMetric": null,
+      "expectedConflictsInApproved": null,
+      "conflictsBasis": "Strict confirm contract requires HTTP 201; 409 fails. Approved checks=100%, so zero conflicts inferred; absent raw counter stays null.",
+      "steadyCount": 5434,
+      "steadyRps": null,
+      "steadyConfirmShare": 0.19911667280088333,
+      "confirmationShare": 0.19794838916493027,
+      "operations": {
+        "catalog": {
+          "steadyAccepted": 2177,
+          "steadyRps": null,
+          "wallMs": {
+            "avg": 11.05190629306385,
+            "med": 10,
+            "p(95)": 17,
+            "p(99)": 25,
+            "max": 49
+          }
+        },
+        "slots": {
+          "steadyAccepted": 1087,
+          "steadyRps": null,
+          "wallMs": {
+            "avg": 25.032198712051517,
+            "med": 24,
+            "p(95)": 34,
+            "p(99)": 43.1400000000001,
+            "max": 65
+          }
+        },
+        "reservations": {
+          "steadyAccepted": 1088,
+          "steadyRps": null,
+          "wallMs": {
+            "avg": 17.097426470588236,
+            "med": 16,
+            "p(95)": 29.649999999999864,
+            "p(99)": 41,
+            "max": 52
+          }
+        },
+        "confirm": {
+          "steadyAccepted": 1082,
+          "steadyRps": null,
+          "wallMs": null
+        }
+      },
+      "resources": {
+        "samples": 97,
+        "observedSeconds": 343.638,
+        "cpuHostPeakPercent": 23.927842876796813,
+        "cpuHostMeanPercent": 12.301745731221729,
+        "ramHostPeakPercent": 85.01952708904757,
+        "minimumFreeHostGiB": 2.312225341796875,
+        "generatorPeakMiB": 76.3828125,
+        "generatorCpuPeakOneCorePercent": 13.152356902356901,
+        "backendMemoryPeakMiB": 843,
+        "pgSessionsPeak": 27,
+        "pgMaxConnections": 100,
+        "pgLockWaitsPeak": 0,
+        "backend": {
+          "db": {
+            "cpuPeakOneCorePercent": 34.27,
+            "memoryPeakMiB": 204.9
+          },
+          "auth": {
+            "cpuPeakOneCorePercent": 13.66,
+            "memoryPeakMiB": 23.35
+          },
+          "rest": {
+            "cpuPeakOneCorePercent": 12.34,
+            "memoryPeakMiB": 141.1
+          },
+          "kong": {
+            "cpuPeakOneCorePercent": 23.42,
+            "memoryPeakMiB": 189.9
+          },
+          "edge_runtime": {
+            "cpuPeakOneCorePercent": 95.63,
+            "memoryPeakMiB": 263.1
+          },
+          "inbucket": {
+            "cpuPeakOneCorePercent": 9.66,
+            "memoryPeakMiB": 31.5
+          }
+        }
+      },
+      "thresholds": [
+        {
+          "metric": "accepted_responses{phase:steady,operation:reservations}",
+          "expression": "count>0",
+          "observed": 1088,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:catalog}",
+          "expression": "p(95)<=3000",
+          "observed": 17,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{operation:confirm}",
+          "expression": "count>0",
+          "observed": 1235,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:slots}",
+          "expression": "count>0",
+          "observed": 1087,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:slots}",
+          "expression": "p(95)<=3000",
+          "observed": 34,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors{phase:steady}",
+          "expression": "rate<0.01",
+          "observed": 0.0001839926402943882,
+          "passed": true
+        },
+        {
+          "metric": "unexpected_results",
+          "expression": "rate==0",
+          "observed": 0.00016028209648982208,
+          "passed": false
+        },
+        {
+          "metric": "checks",
+          "expression": "rate==1",
+          "observed": 0.9998397179035102,
+          "passed": false
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:reservations}",
+          "expression": "p(95)<=3000",
+          "observed": 29.649999999999864,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:catalog}",
+          "expression": "count>0",
+          "observed": 2177,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors",
+          "expression": "rate<0.01",
+          "observed": 0.00016028209648982208,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:confirm}",
+          "expression": "count>0",
+          "observed": 1082,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "level": 25,
+      "id": "dfbeb172-8aa4-4575-844b-bff79e40f673",
+      "source": ".artifacts/k6/complementary/71e00e3c-28eb-4262-80ce-7abe043c49ed/25/dfbeb172-8aa4-4575-844b-bff79e40f673",
+      "approved": true,
+      "exit": 0,
+      "interrupted": null,
+      "recovered": true,
+      "forcedShutdown": false,
+      "finishedAt": "2026-11-26T17:28:14.156Z",
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "downSeconds": 60,
+      "recoverySeconds": 120,
+      "generatorWallSeconds": 781.584,
+      "metricSeconds": 780.1331604,
+      "durationVerified": true,
+      "maximumActiveVU": 25,
+      "httpCount": 16227,
+      "rps": 20.800295159456986,
+      "httpMs": {
+        "avg": 22.574388580760534,
+        "med": 6.2191,
+        "p(95)": 95.26158999999997,
+        "p(99)": 113.79546599999999,
+        "max": 351.3515
+      },
+      "wallMs": {
+        "avg": 22.605718863622357,
+        "med": 6,
+        "p(95)": 95,
+        "p(99)": 114,
+        "max": 351
+      },
+      "technicalErrorCount": 0,
+      "technicalErrorRate": 0,
+      "unexpectedCount": 0,
+      "checksPassed": 16227,
+      "checksFailed": 0,
+      "acceptedConfirmations": 3236,
+      "persistedReservations": 3236,
+      "unacknowledgedPersisted": 0,
+      "globalBefore": 1349,
+      "globalAfter": 4585,
+      "ownedBefore": 1345,
+      "ownedAfter": 4581,
+      "integrityValid": true,
+      "integrity": {
+        "before": {
+          "overlaps": 0,
+          "reservations": 1349,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "after": {
+          "overlaps": 0,
+          "reservations": 4585,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "interrupted": null
+      },
+      "expectedConflictsMetric": null,
+      "expectedConflictsInApproved": 0,
+      "conflictsBasis": "Strict confirm contract requires HTTP 201; 409 fails. Approved checks=100%, so zero conflicts inferred; absent raw counter stays null.",
+      "steadyCount": 14661,
+      "steadyRps": 24.435,
+      "steadyConfirmShare": 0.19978173385171544,
+      "confirmationShare": 0.19942071855549393,
+      "operations": {
+        "catalog": {
+          "steadyAccepted": 5868,
+          "steadyRps": 9.78,
+          "wallMs": {
+            "avg": 3.537661895023858,
+            "med": 3,
+            "p(95)": 5,
+            "p(99)": 6,
+            "max": 14
+          }
+        },
+        "slots": {
+          "steadyAccepted": 2930,
+          "steadyRps": 4.883333333333334,
+          "wallMs": {
+            "avg": 6.693174061433447,
+            "med": 6,
+            "p(95)": 9,
+            "p(99)": 10,
+            "max": 14
+          }
+        },
+        "reservations": {
+          "steadyAccepted": 2934,
+          "steadyRps": 4.89,
+          "wallMs": {
+            "avg": 8.711997273346967,
+            "med": 9,
+            "p(95)": 12,
+            "p(99)": 13,
+            "max": 19
+          }
+        },
+        "confirm": {
+          "steadyAccepted": 2929,
+          "steadyRps": 4.881666666666667,
+          "wallMs": null
+        }
+      },
+      "resources": {
+        "samples": 388,
+        "observedSeconds": 778.984,
+        "cpuHostPeakPercent": 21.17200328407225,
+        "cpuHostMeanPercent": 7.361027550270946,
+        "ramHostPeakPercent": 83.66506235273124,
+        "minimumFreeHostGiB": 2.5212860107421875,
+        "generatorPeakMiB": 78.640625,
+        "generatorCpuPeakOneCorePercent": 17.19609804902451,
+        "backendMemoryPeakMiB": 726.6000000000001,
+        "pgSessionsPeak": 21,
+        "pgMaxConnections": 100,
+        "pgLockWaitsPeak": 0,
+        "backend": {
+          "db": {
+            "cpuPeakOneCorePercent": 15.02,
+            "memoryPeakMiB": 183.2
+          },
+          "auth": {
+            "cpuPeakOneCorePercent": 2.82,
+            "memoryPeakMiB": 24.91
+          },
+          "rest": {
+            "cpuPeakOneCorePercent": 3.05,
+            "memoryPeakMiB": 139.7
+          },
+          "kong": {
+            "cpuPeakOneCorePercent": 2.94,
+            "memoryPeakMiB": 194.5
+          },
+          "edge_runtime": {
+            "cpuPeakOneCorePercent": 52.03,
+            "memoryPeakMiB": 172.6
+          },
+          "inbucket": {
+            "cpuPeakOneCorePercent": 2.73,
+            "memoryPeakMiB": 36.01
+          }
+        }
+      },
+      "thresholds": [
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:catalog}",
+          "expression": "p(95)<=3000",
+          "observed": 5,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{operation:confirm}",
+          "expression": "count>0",
+          "observed": 3236,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:reservations}",
+          "expression": "p(95)<=3000",
+          "observed": 12,
+          "passed": true
+        },
+        {
+          "metric": "unexpected_results",
+          "expression": "rate==0",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:confirm}",
+          "expression": "count>0",
+          "observed": 2929,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:reservations}",
+          "expression": "count>0",
+          "observed": 2934,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:catalog}",
+          "expression": "count>0",
+          "observed": 5868,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors{phase:steady}",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:slots}",
+          "expression": "count>0",
+          "observed": 2930,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:slots}",
+          "expression": "p(95)<=3000",
+          "observed": 9,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "checks",
+          "expression": "rate==1",
+          "observed": 1,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "level": 50,
+      "id": "9d4fabb9-59a7-4bd3-83b3-467d436e151d",
+      "source": ".artifacts/k6/complementary/71e00e3c-28eb-4262-80ce-7abe043c49ed/50/9d4fabb9-59a7-4bd3-83b3-467d436e151d",
+      "approved": true,
+      "exit": 0,
+      "interrupted": null,
+      "recovered": true,
+      "forcedShutdown": false,
+      "finishedAt": "2026-11-26T18:08:49.357Z",
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "downSeconds": 60,
+      "recoverySeconds": 120,
+      "generatorWallSeconds": 783.294,
+      "metricSeconds": 780.8962463,
+      "durationVerified": true,
+      "maximumActiveVU": 50,
+      "httpCount": 32359,
+      "rps": 41.43828345099832,
+      "httpMs": {
+        "avg": 22.887056948607796,
+        "med": 5.388,
+        "p(95)": 102.43531999999999,
+        "p(99)": 134.50821599999998,
+        "max": 196.492
+      },
+      "wallMs": {
+        "avg": 22.93034395376866,
+        "med": 5,
+        "p(95)": 103,
+        "p(99)": 134,
+        "max": 197
+      },
+      "technicalErrorCount": 0,
+      "technicalErrorRate": 0,
+      "unexpectedCount": 0,
+      "checksPassed": 32359,
+      "checksFailed": 0,
+      "acceptedConfirmations": 6453,
+      "persistedReservations": 6453,
+      "unacknowledgedPersisted": 0,
+      "globalBefore": 4585,
+      "globalAfter": 11038,
+      "ownedBefore": 4581,
+      "ownedAfter": 11034,
+      "integrityValid": true,
+      "integrity": {
+        "before": {
+          "overlaps": 0,
+          "reservations": 4585,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "after": {
+          "overlaps": 0,
+          "reservations": 11038,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "interrupted": null
+      },
+      "expectedConflictsMetric": null,
+      "expectedConflictsInApproved": 0,
+      "conflictsBasis": "Strict confirm contract requires HTTP 201; 409 fails. Approved checks=100%, so zero conflicts inferred; absent raw counter stays null.",
+      "steadyCount": 29314,
+      "steadyRps": 48.85666666666667,
+      "steadyConfirmShare": 0.19993859589274748,
+      "confirmationShare": 0.19941901789301275,
+      "operations": {
+        "catalog": {
+          "steadyAccepted": 11725,
+          "steadyRps": 19.541666666666668,
+          "wallMs": {
+            "avg": 3.136545842217484,
+            "med": 3,
+            "p(95)": 5,
+            "p(99)": 6,
+            "max": 14
+          }
+        },
+        "slots": {
+          "steadyAccepted": 5863,
+          "steadyRps": 9.771666666666667,
+          "wallMs": {
+            "avg": 6.412928534879755,
+            "med": 6,
+            "p(95)": 9,
+            "p(99)": 10,
+            "max": 14
+          }
+        },
+        "reservations": {
+          "steadyAccepted": 5865,
+          "steadyRps": 9.775,
+          "wallMs": {
+            "avg": 5.655583972719523,
+            "med": 6,
+            "p(95)": 8,
+            "p(99)": 9,
+            "max": 28
+          }
+        },
+        "confirm": {
+          "steadyAccepted": 5861,
+          "steadyRps": 9.768333333333333,
+          "wallMs": null
+        }
+      },
+      "resources": {
+        "samples": 389,
+        "observedSeconds": 780.747,
+        "cpuHostPeakPercent": 18.083362725367746,
+        "cpuHostMeanPercent": 10.64511246135113,
+        "ramHostPeakPercent": 85.97672764443645,
+        "minimumFreeHostGiB": 2.1644821166992188,
+        "generatorPeakMiB": 117.4296875,
+        "generatorCpuPeakOneCorePercent": 21.009711155378486,
+        "backendMemoryPeakMiB": 777.1899999999999,
+        "pgSessionsPeak": 22,
+        "pgMaxConnections": 100,
+        "pgLockWaitsPeak": 0,
+        "backend": {
+          "db": {
+            "cpuPeakOneCorePercent": 27.64,
+            "memoryPeakMiB": 213.9
+          },
+          "auth": {
+            "cpuPeakOneCorePercent": 3.67,
+            "memoryPeakMiB": 27.03
+          },
+          "rest": {
+            "cpuPeakOneCorePercent": 3.94,
+            "memoryPeakMiB": 140
+          },
+          "kong": {
+            "cpuPeakOneCorePercent": 5.81,
+            "memoryPeakMiB": 192
+          },
+          "edge_runtime": {
+            "cpuPeakOneCorePercent": 70.12,
+            "memoryPeakMiB": 192.4
+          },
+          "inbucket": {
+            "cpuPeakOneCorePercent": 3.79,
+            "memoryPeakMiB": 29.62
+          }
+        }
+      },
+      "thresholds": [
+        {
+          "metric": "technical_errors{phase:steady}",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:slots}",
+          "expression": "count>0",
+          "observed": 5863,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "unexpected_results",
+          "expression": "rate==0",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "checks",
+          "expression": "rate==1",
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:reservations}",
+          "expression": "count>0",
+          "observed": 5865,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:reservations}",
+          "expression": "p(95)<=3000",
+          "observed": 8,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:catalog}",
+          "expression": "p(95)<=3000",
+          "observed": 5,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{operation:confirm}",
+          "expression": "count>0",
+          "observed": 6453,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:catalog}",
+          "expression": "count>0",
+          "observed": 11725,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:confirm}",
+          "expression": "count>0",
+          "observed": 5861,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:slots}",
+          "expression": "p(95)<=3000",
+          "observed": 9,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "level": 100,
+      "id": "a85ed393-3969-44ce-a6d1-de7310918569",
+      "source": ".artifacts/k6/complementary/71e00e3c-28eb-4262-80ce-7abe043c49ed/100/a85ed393-3969-44ce-a6d1-de7310918569",
+      "approved": true,
+      "exit": 0,
+      "interrupted": null,
+      "recovered": true,
+      "forcedShutdown": false,
+      "finishedAt": "2026-11-26T18:24:03.133Z",
+      "warmSeconds": 60,
+      "rampSeconds": 60,
+      "steadySeconds": 600,
+      "downSeconds": 60,
+      "recoverySeconds": 120,
+      "generatorWallSeconds": 783.306,
+      "metricSeconds": 780.4782911,
+      "durationVerified": true,
+      "maximumActiveVU": 100,
+      "httpCount": 39886,
+      "rps": 51.10456044047681,
+      "httpMs": {
+        "avg": 658.2440494835258,
+        "med": 5.3301,
+        "p(95)": 3660.7096,
+        "p(99)": 3776.2419,
+        "max": 3858.7264
+      },
+      "wallMs": {
+        "avg": 658.2753848468134,
+        "med": 5,
+        "p(95)": 3661,
+        "p(99)": 3776,
+        "max": 3859
+      },
+      "technicalErrorCount": 0,
+      "technicalErrorRate": 0,
+      "unexpectedCount": 0,
+      "checksPassed": 39886,
+      "checksFailed": 0,
+      "acceptedConfirmations": 7941,
+      "persistedReservations": 7941,
+      "unacknowledgedPersisted": 0,
+      "globalBefore": 11038,
+      "globalAfter": 18979,
+      "ownedBefore": 11034,
+      "ownedAfter": 18975,
+      "integrityValid": true,
+      "integrity": {
+        "before": {
+          "overlaps": 0,
+          "reservations": 11038,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "after": {
+          "overlaps": 0,
+          "reservations": 18979,
+          "tenantMismatch": 0,
+          "duplicateReceipts": 0,
+          "duplicateRequests": 0,
+          "partialReservations": 0
+        },
+        "interrupted": null
+      },
+      "expectedConflictsMetric": null,
+      "expectedConflictsInApproved": 0,
+      "conflictsBasis": "Strict confirm contract requires HTTP 201; 409 fails. Approved checks=100%, so zero conflicts inferred; absent raw counter stays null.",
+      "steadyCount": 34819,
+      "steadyRps": 58.031666666666666,
+      "steadyConfirmShare": 0.20006318389385105,
+      "confirmationShare": 0.19909241337812766,
+      "operations": {
+        "catalog": {
+          "steadyAccepted": 13927,
+          "steadyRps": 23.211666666666666,
+          "wallMs": {
+            "avg": 2.970201766353127,
+            "med": 3,
+            "p(95)": 4,
+            "p(99)": 5,
+            "max": 13
+          }
+        },
+        "slots": {
+          "steadyAccepted": 6962,
+          "steadyRps": 11.603333333333333,
+          "wallMs": {
+            "avg": 6.257110025854639,
+            "med": 6,
+            "p(95)": 8,
+            "p(99)": 9,
+            "max": 14
+          }
+        },
+        "reservations": {
+          "steadyAccepted": 6964,
+          "steadyRps": 11.606666666666667,
+          "wallMs": {
+            "avg": 5.400344629523262,
+            "med": 5,
+            "p(95)": 7,
+            "p(99)": 8,
+            "max": 11
+          }
+        },
+        "confirm": {
+          "steadyAccepted": 6966,
+          "steadyRps": 11.61,
+          "wallMs": null
+        }
+      },
+      "resources": {
+        "samples": 389,
+        "observedSeconds": 780.74,
+        "cpuHostPeakPercent": 22.278740600747916,
+        "cpuHostMeanPercent": 10.64922270305792,
+        "ramHostPeakPercent": 85.91812907699965,
+        "minimumFreeHostGiB": 2.1735267639160156,
+        "generatorPeakMiB": 196.84375,
+        "generatorCpuPeakOneCorePercent": 22.644927536231883,
+        "backendMemoryPeakMiB": 857.88,
+        "pgSessionsPeak": 22,
+        "pgMaxConnections": 100,
+        "pgLockWaitsPeak": 0,
+        "backend": {
+          "db": {
+            "cpuPeakOneCorePercent": 31.81,
+            "memoryPeakMiB": 276
+          },
+          "auth": {
+            "cpuPeakOneCorePercent": 3.72,
+            "memoryPeakMiB": 27.07
+          },
+          "rest": {
+            "cpuPeakOneCorePercent": 5.97,
+            "memoryPeakMiB": 139.4
+          },
+          "kong": {
+            "cpuPeakOneCorePercent": 5.65,
+            "memoryPeakMiB": 194.9
+          },
+          "edge_runtime": {
+            "cpuPeakOneCorePercent": 72.16,
+            "memoryPeakMiB": 205
+          },
+          "inbucket": {
+            "cpuPeakOneCorePercent": 2.88,
+            "memoryPeakMiB": 29.65
+          }
+        }
+      },
+      "thresholds": [
+        {
+          "metric": "checks",
+          "expression": "rate==1",
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:confirm}",
+          "expression": "count>0",
+          "observed": 6966,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{operation:confirm}",
+          "expression": "count>0",
+          "observed": 7941,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:reservations}",
+          "expression": "count>0",
+          "observed": 6964,
+          "passed": true
+        },
+        {
+          "metric": "unexpected_results",
+          "expression": "rate==0",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:catalog}",
+          "expression": "count>0",
+          "observed": 13927,
+          "passed": true
+        },
+        {
+          "metric": "accepted_responses{phase:steady,operation:slots}",
+          "expression": "count>0",
+          "observed": 6962,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:reservations}",
+          "expression": "p(95)<=3000",
+          "observed": 7,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:slots}",
+          "expression": "p(95)<=3000",
+          "observed": 8,
+          "passed": true
+        },
+        {
+          "metric": "operation_wall_ms{phase:steady,operation:catalog}",
+          "expression": "p(95)<=3000",
+          "observed": 4,
+          "passed": true
+        },
+        {
+          "metric": "technical_errors{phase:steady}",
+          "expression": "rate<0.01",
+          "observed": 0,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "approvedLevels": [
+    25,
+    50,
+    100
+  ],
+  "totals": {
+    "approvedHttp": 88472,
+    "approvedAccepted": 17630,
+    "approvedPersisted": 17630,
+    "failedAccepted": 1239,
+    "failedPersisted": 1245,
+    "globalBeforeSeries": 104,
+    "globalAfterSeries": 18979
+  },
+  "confirmationLatency": {
+    "measuredPercentiles": null,
+    "reason": "Neither native summary nor custom export retains confirm-tagged Trends or raw request samples.",
+    "aggregateMeanBounds100VU": {
+      "method": "Aggregate-sum bounds only; remaining read durations bounded by 0 and global wall maximum. Not directly measured confirmation latency.",
+      "knownSteadyReadCount": 27853,
+      "unknownTransitionReadCount": 4092,
+      "minMs": 1302.4062460647274,
+      "maxMs": 3290.950258153885
+    }
+  },
+  "eq04": {
+    "status": "Cumplido en laboratorio y consultas definidas",
+    "level": 100,
+    "steadySeconds": 600,
+    "queryP95Ms": {
+      "catalog": 4,
+      "slots": 8,
+      "reservations": 7
+    },
+    "technicalErrors": 0
+  },
+  "eq06": {
+    "status": "Cumplido en laboratorio y mezcla definida",
+    "levels": [
+      25,
+      50,
+      100
+    ],
+    "steadySecondsEach": 600,
+    "technicalErrors": 0,
+    "integrityLosses": 0
+  },
+  "limitations": [
+    "API local, no Web rendering, Android, Internet or production guarantee.",
+    "Only two tenants and fixed dataset/service; data volume grows between stages.",
+    "Confirmation percentiles unavailable; global HTTP p95 at 100 VU exceeds 3 s, a documented writing-path limitation, not a failed original query criterion.",
+    "2000 VU deferred as additional academic target; 1000 VU accredited for read-only campaign only."
+  ]
+}

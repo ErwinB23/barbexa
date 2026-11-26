@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-26T19:40:55.421Z",
+  "originalContainerRestored": true,
+  "sameImageEnvironmentAndCommand": true,
+  "oneshot": true,
+  "temporaryContainerPreservedStopped": true,
+  "otherFiveServicesRunning": true,
+  "metro8081Closed": true,
+  "proxy54421Closed": true,
+  "protectedFilesUnchanged": 814,
+  "nativePlaywrightReportPresent": true,
+  "privateTracePresent": true,
+  "approvedReplayGuardPassed": true,
+  "k6Executed": false,
+  "eq05MonitorStarted": false
+}

@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-26T17:04:15.685Z",
+  "applied": true,
+  "oldPolicy": "per_worker",
+  "newPolicy": "oneshot",
+  "oldContainer": "27ed29f7a8876917921ee1bf7cb64e2f8e770bb4fa037730903b30751bc65775",
+  "oldContainerBackupName": "supabase_edge_runtime_barbexa-k6-lab_before_oneshot_2026-11-26T17-04-09-948Z",
+  "oldContainerStopped": true,
+  "newContainer": "52eec117639b095d71280c1e0cfb4547ab8ee0174c46d159c0d455d18decd302",
+  "image": "public.ecr.aws/supabase/edge-runtime:v1.78.1",
+  "sameImageDigest": true,
+  "sameVolumesAndBinds": true,
+  "sameEnvironment": true,
+  "sameBootstrap": true,
+  "workerCpuMemoryWallClockLimitsUnchanged": true,
+  "otherFiveServicesUnchanged": true,
+  "health": 200,
+  "invalidInputProbe": 400,
+  "businessRowsUnchanged": true,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 1349,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "k6Executed": false,
+  "coldWorkerStartupIncludedInFutureMeasurements": true
+}

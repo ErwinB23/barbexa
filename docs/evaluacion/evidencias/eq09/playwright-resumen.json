@@ -1,0 +1,27 @@
+{
+  "runner": "Playwright Test",
+  "version": "1.62.1",
+  "stats": {
+    "startTime": "2026-11-26T19:30:57.165Z",
+    "duration": 11051.325,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "test": "EQ-09: conflicto real, servicios conservados y recuperación sin duplicados",
+  "steps": [
+    "Sesiones independientes",
+    "Mismo horario libre",
+    "A confirma 201",
+    "B recibe 409 y conserva servicios",
+    "B elige otro horario con teclado",
+    "B confirma 201, recarga y no reenvía"
+  ],
+  "screenshots": [
+    "01-horario-inicial.png",
+    "02-conflicto-textual.png",
+    "03-reserva-recuperada.png"
+  ],
+  "privateNativeReport": ".artifacts/eq09/af6e6ba0-8bcc-499a-b16f-cb174ce49517/attempts/e39f88ab-d837-4103-91a1-76ce34100cb2/playwright-report/index.html"
+}

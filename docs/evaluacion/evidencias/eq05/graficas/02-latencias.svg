@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1050" height="670" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1050 670" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1050" height="670"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-670)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1050" height="670" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="34" y="606" width="6" height="27" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,39%); fill-rule: evenodd;"/>
+			<text x="52" y="612" style="font-family: Helvetica-Bold; font-size: 23px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1224) scale(1,-1)">Tiempo del flujo supervisado</text>
+			<text x="36" y="585" style="font-family: Helvetica; font-size: 12px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1170) scale(1,-1)">Autenticación, consultas, reserva, persistencia, cancelación y verificación; sin reintentos</text>
+			<path d="M 36,49 L 1014,49 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="36" y="29" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">BARBEXA | EQ-05 | Observación local de una hora, 26 nov. 2026</text>
+			<text x="768.35" y="29" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">No acredita disponibilidad mensual o servicio publicado</text>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 80,190 L 970,190 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,190 L 80,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 228.333333,190 L 228.333333,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 376.666667,190 L 376.666667,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 525,190 L 525,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 673.333333,190 L 673.333333,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 821.666667,190 L 821.666667,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 970,190 L 970,185 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,80,185)">
+							<text x="-2.7800000000000002" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,228.333333,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,376.666667,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,525,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">30</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,673.333333,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">40</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,821.666667,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">50</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,970,185)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">60</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 80,190 L 80,490 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,190 L 75,190 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,250 L 75,250 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,310 L 75,310 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,370 L 75,370 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,430 L 75,430 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,490 L 75,490 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,75,190)">
+							<text x="-5.5600000000000005" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,250)">
+							<text x="-16.68" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">200</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,310)">
+							<text x="-16.68" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">400</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,370)">
+							<text x="-16.68" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">600</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,430)">
+							<text x="-16.68" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">800</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,490)">
+							<text x="-22.240000000000002" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">1000</text>
+						</g>
+					</g>
+				</g>
+				<path d="M 80,250 L 970,250 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,310 L 970,310 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,370 L 970,370 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,430 L 970,430 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,490 L 970,490 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<polyline points="80 275.0042, 82.47222 284.8814, 84.94444 269.9635, 87.41667 277.0461, 89.88889 276.181, 92.36111 275.0972, 94.83333 280.0061, 97.30556 278.4266, 99.77778 268.7427, 102.25 268.1984, 104.7222 260.9016, 107.1944 262.1703, 109.6667 279.878, 112.1389 267.2862, 114.6111 267.961, 117.0833 263.4016, 119.5556 271.9661, 122.0278 270.0858, 124.5 271.7747, 126.9722 277.3761, 129.4444 278.2051, 131.9167 269.9828, 134.3889 277.7591, 136.8611 290.1217, 139.3333 277.2056, 141.8056 266.943, 144.2778 275.6935, 146.75 274.1156, 149.2222 270.3415, 151.6944 271.5407, 154.1667 275.1865, 156.6389 269.996, 159.1111 272.7756, 161.5833 269.1743, 164.0556 268.5014, 166.5278 264.5628, 169 266.0689, 171.4722 266.0042, 173.9444 270.0865, 176.4167 274.6069, 178.8889 279.9514, 181.3611 274.6927, 183.8333 281.3438, 186.3056 277.2352, 188.7778 275.6865, 191.25 277.9092, 193.7222 265.2471, 196.1944 271.4332, 198.6667 266.7936, 201.1389 277.9705, 203.6111 270.4785, 206.0833 275.9294, 208.5556 266.9, 211.0278 267.2377, 213.5 269.7263, 215.9722 276.1432, 218.4444 265.9194, 220.9167 270.783, 223.3889 268.353, 225.8611 273.6046, 228.3333 271.1898, 230.8056 267.3551, 233.2778 275.8687, 235.75 272.8898, 238.2222 266.7533, 240.6944 275.2892, 243.1667 264.9755, 245.6389 262.3451, 248.1111 269.2976, 250.5833 272.2817, 253.0556 272.34, 255.5278 270.6982, 258 265.9723, 260.4722 262.6926, 262.9444 265.9946, 265.4167 266.5547, 267.8889 272.5542, 270.3611 301.5726, 272.8333 285.0079, 275.3056 270.7913, 277.7778 286.343, 280.25 276.5878, 282.7222 282.714, 285.1944 266.4896, 287.6667 270.1061, 290.1389 273.1779, 292.6111 270.3383, 295.0833 280.6765, 297.5556 270.7097, 300.0278 277.6485, 302.5 265.9356, 304.9722 269.679, 307.4444 269.1243, 309.9167 268.3937, 312.3889 269.1167, 314.8611 274.3638, 317.3333 269.3348, 319.8056 278.3616, 322.2778 272.888, 324.75 262.969, 327.2222 269.1307, 329.6944 269.7729, 332.1667 270.8401, 334.6389 266.5471, 337.1111 266.5034, 339.5833 265.0933, 342.0556 263.0064, 344.5278 278.467, 347 273.4969, 349.4722 266.2589, 351.9444 274.8436, 354.4167 273.5216, 356.8889 269.5181, 359.3611 271.8042, 361.8333 272.4708, 364.3056 265.4636, 366.7778 259.7213, 369.25 269.4699, 371.7222 276.4287, 374.1944 269.5216, 376.6667 268.9275, 379.1389 279.1801, 381.6111 274.5846, 384.0833 279.7422, 386.5556 278.1267, 389.0278 271.9604, 391.5 274.1653, 393.9722 268.163, 396.4444 280.5845, 398.9167 280.2475, 401.3889 266.3995, 403.8611 278.7308, 406.3333 265.291, 408.8056 279.7233, 411.2778 273.952, 413.75 279.4395, 416.2222 274.3582, 418.6944 298.1611, 421.1667 282.875, 423.6389 289.9493, 426.1111 267.3486, 428.5833 268.617, 431.0556 270.8117, 433.5278 265.8842, 436 284.806, 438.4722 276.3468, 440.9444 259.2282, 443.4167 275.1292, 445.8889 261.4444, 448.3611 260.2539, 450.8333 265.7315, 453.3056 268.0506, 455.7778 264.8225, 458.25 265.7633, 460.7222 266.8992, 463.1944 268.0549, 465.6667 262.6826, 468.1389 266.0451, 470.6111 265.0713, 473.0833 267.3206, 475.5556 267.124, 478.0278 269.5156, 480.5 264.2102, 482.9722 261.8272, 485.4444 276.4873, 487.9167 264.4788, 490.3889 262.4033, 492.8611 268.797, 495.3333 266.9108, 497.8056 267.4544, 500.2778 279.6048, 502.75 266.4697, 505.2222 265.653, 507.6944 269.8214, 510.1667 277.8861, 512.6389 269.731, 515.1111 268.6859, 517.5833 275.7788, 520.0556 274.5544, 522.5278 261.7821, 525 277.737, 527.4722 277.6984, 529.9444 282.1306, 532.4167 270.7112, 534.8889 272.4965, 537.3611 276.6618, 539.8333 268.4264, 542.3056 270.0548, 544.7778 282.1028, 547.25 263.6094, 549.7222 266.3337, 552.1944 264.3588, 554.6667 262.5371, 557.1389 264.6043, 559.6111 267.7051, 562.0833 269.1512, 564.5556 271.2506, 567.0278 258.7537, 569.5 267.8692, 571.9722 268.2636, 574.4444 286.6594, 576.9167 269.4006, 579.3889 271.4358, 581.8611 276.7049, 584.3333 275.7356, 586.8056 275.0326, 589.2778 270.6317, 591.75 268.8701, 594.2222 268.5979, 596.6944 271.4409, 599.1667 276.8391, 601.6389 274.5613, 604.1111 272.8923, 606.5833 281.2666, 609.0556 271.4491, 611.5278 268.811, 614 282.805, 616.4722 274.0703, 618.9444 295.5214, 621.4167 280.5641, 623.8889 267.2895, 626.3611 268.6284, 628.8333 268.4299, 631.3056 271.4145, 633.7778 270.0897, 636.25 267.1666, 638.7222 272.3968, 641.1944 267.8312, 643.6667 275.8446, 646.1389 277.9585, 648.6111 266.1574, 651.0833 276.7291, 653.5556 272.3629, 656.0278 260.9859, 658.5 263.3451, 660.9722 264.9811, 663.4444 270.3553, 665.9167 268.8208, 668.3889 283.5531, 670.8611 271.5179, 673.3333 264.2191, 675.8056 262.3122, 678.2778 280.133, 680.75 280.8312, 683.2222 266.2539, 685.6944 277.9101, 688.1667 270.352, 690.6389 264.2834, 693.1111 269.2364, 695.5833 267.5715, 698.0556 263.2988, 700.5278 265.0266, 703 270.4598, 705.4722 262.5523, 707.9444 282.9664, 710.4167 275.0461, 712.8889 261.2753, 715.3611 261.881, 717.8333 266.1057, 720.3056 264.6185, 722.7778 275.3831, 725.25 280.0925, 727.7222 269.1104, 730.1944 265.399, 732.6667 266.5136, 735.1389 262.0223, 737.6111 260.6802, 740.0833 269.6098, 742.5556 267.2235, 745.0278 274.7373, 747.5 274.6987, 749.9722 270.6901, 752.4444 270.8729, 754.9167 278.0068, 757.3889 272.3383, 759.8611 275.2769, 762.3333 265.2957, 764.8056 266.782, 767.2778 285.648, 769.75 278.1073, 772.2222 267.9184, 774.6944 270.5639, 777.1667 269.8261, 779.6389 284.4854, 782.1111 272.5063, 784.5833 275.6576, 787.0556 263.3108, 789.5278 268.1803, 792 283.1891, 794.4722 273.174, 796.9444 280.3607, 799.4167 291.8185, 801.8889 274.1185, 804.3611 271.1965, 806.8333 268.3109, 809.3056 262.2068, 811.7778 271.5092, 814.25 268.3286, 816.7222 266.1037, 819.1944 294.0071, 821.6667 271.2058, 824.1389 281.7647, 826.6111 282.1326, 829.0833 289.2467, 831.5556 286.5141, 834.0278 268.0623, 836.5 294.3654, 838.9722 271.8949, 841.4444 270.6203, 843.9167 283.7444, 846.3889 273.2411, 848.8611 281.9006, 851.3333 267.6459, 853.8056 271.2648, 856.2778 274.1585, 858.75 271.2314, 861.2222 276.9632, 863.6944 277.0814, 866.1667 276.662, 868.6389 265.686, 871.1111 283.7159, 873.5833 262.4973, 876.0556 268.9044, 878.5278 275.6717, 881 271.8101, 883.4722 272.4668, 885.9444 265.0783, 888.4167 277.0377, 890.8889 269.1555, 893.3611 261.2974, 895.8333 263.2823, 898.3056 267.6871, 900.7778 259.7331, 903.25 277.3761, 905.7222 265.2756, 908.1944 264.2288, 910.6667 264.7036, 913.1389 267.9084, 915.6111 268.5852, 918.0833 261.3725, 920.5556 273.0165, 923.0278 261.2594, 925.5 273.2445, 927.9722 270.4078, 930.4444 276.9587, 932.9167 264.4786, 935.3889 268.478, 937.8611 275.0135, 940.3333 263.6849, 942.8056 264.1402, 945.2778 269.5131, 947.75 262.0337, 950.2222 263.5988, 952.6944 269.6415, 955.1667 264.3197, 957.6389 262.1991, 960.1111 272.9183, 962.5833 269.6215, 965.0556 263.4774, 967.5278 271.6814" style="stroke: rgb(14%,39%,67%); stroke-linecap: round; stroke-width: 1.8; fill: None; fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="80" y="505" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1010) scale(1,-1)">Flujo completo (ms)</text>
+			<text x="438.188" y="158" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,316) scale(1,-1)">Minutos desde el inicio programado</text>
+			<text x="80" y="126" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(14%,39%,67%); stroke:none;" transform="translate(0,252) scale(1,-1)">p50 = 267.84 ms | p95 = 312.39 ms | p99 = 346.69 ms</text>
+			<text x="80" y="98" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,196) scale(1,-1)">Límites previos: 10.000 ms por petición y 30.000 ms por flujo; el eje muestra tiempos reales.</text>
+			<text x="80" y="76" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,152) scale(1,-1)">Sin datos: sin latencia asignada. Puntos ausentes nunca se sustituyen por cero.</text>
+		</g>
+	</g>
+</svg>

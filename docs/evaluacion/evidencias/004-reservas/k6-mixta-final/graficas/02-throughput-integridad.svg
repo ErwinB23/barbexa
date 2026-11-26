@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1050" height="670" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1050 670" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1050" height="670"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-670)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1050" height="670" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="34" y="606" width="6" height="27" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,50%); fill-rule: evenodd;"/>
+			<text x="52" y="612" style="font-family: Helvetica-Bold; font-size: 23px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,1224) scale(1,-1)">Carga sostenida y reservas persistidas</text>
+			<text x="36" y="585" style="font-family: Helvetica; font-size: 12px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1170) scale(1,-1)">Las cifras HTTP incluyen todas las fases; las tasas estables usan exclusivamente sus 600 segundos</text>
+			<path d="M 36,49 L 1014,49 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="36" y="29" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">BARBEXA | Serie mixta 71e00e3c | Evidencia del 26 nov. 2026</text>
+			<text x="791.12" y="29" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,58) scale(1,-1)">API local; datos sintéticos; sin nuevas ejecuciones</text>
+			<path d="M 70,535 L 89,535 Z" style="stroke: rgb(14%,39%,67%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<text x="96" y="531" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1062) scale(1,-1)">HTTP total / s</text>
+			<path d="M 365,535 L 384,535 Z" style="stroke: rgb(3%,49%,50%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<text x="391" y="531" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1062) scale(1,-1)">HTTP estable / s</text>
+			<path d="M 660,535 L 679,535 Z" style="stroke: rgb(68%,39%,9%); stroke-linecap: butt; stroke-width: 2.5;"/>
+			<text x="686" y="531" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1062) scale(1,-1)">Confirmaciones estables / s</text>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 80,205 L 505,205 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,205 L 80,200 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 221.666667,205 L 221.666667,200 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 505,205 L 505,200 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,80,200)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">25</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,221.666667,200)">
+							<text x="-5.5600000000000005" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">50</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,505,200)">
+							<text x="-8.34" y="-10.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-20) scale(1,-1)">100</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 80,205 L 80,485 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 80,205 L 75,205 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,291.153846 L 75,291.153846 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,377.307692 L 75,377.307692 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 80,463.461538 L 75,463.461538 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,75,205)">
+							<text x="-5.5600000000000005" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,291.153846)">
+							<text x="-11.120000000000001" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,377.307692)">
+							<text x="-11.120000000000001" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">40</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,75,463.461538)">
+							<text x="-11.120000000000001" y="-4.0" style="font-family: Helvetica; font-size: 10px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,-8) scale(1,-1)">60</text>
+						</g>
+					</g>
+				</g>
+				<path d="M 80,291.153846 L 505,291.153846 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,377.307692 L 505,377.307692 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<path d="M 80,463.461538 L 505,463.461538 Z" style="stroke: rgb(86%,89%,92%); stroke-linecap: butt; stroke-width: 0.25;"/>
+				<g transform="">
+					<polyline points="80 294.6013, 221.6667 383.5034, 505 425.1427" style="stroke: rgb(14%,39%,67%); stroke-linecap: round; stroke-width: 2.1; fill: None; fill-rule: evenodd;"/>
+					<polyline points="80 310.2585, 221.6667 415.4595, 505 454.9826" style="stroke: rgb(3%,49%,50%); stroke-linecap: round; stroke-width: 2.1; fill: None; fill-rule: evenodd;"/>
+					<polyline points="80 226.0287, 221.6667 247.079, 505 255.0123" style="stroke: rgb(68%,39%,9%); stroke-linecap: round; stroke-width: 2.1; fill: None; fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<text x="248.797" y="171" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,342) scale(1,-1)">Usuarios virtuales</text>
+			<text x="80" y="501" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,1002) scale(1,-1)">Solicitudes o confirmaciones por segundo</text>
+			<text x="580" y="497" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,994) scale(1,-1)">Aceptadas = persistidas (cada nivel)</text>
+			<text x="580" y="430" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,860) scale(1,-1)">25 VU</text>
+			<rect x="648" y="422" width="125.39499999999998" height="27" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,50%); fill-rule: evenodd;"/>
+			<text x="780.395" y="430" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(3%,49%,50%); stroke:none;" transform="translate(0,860) scale(1,-1)">3.236</text>
+			<text x="580" y="354" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,708) scale(1,-1)">50 VU</text>
+			<rect x="648" y="346" width="250.05375000000004" height="27" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,50%); fill-rule: evenodd;"/>
+			<text x="905.05375" y="354" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(3%,49%,50%); stroke:none;" transform="translate(0,708) scale(1,-1)">6.453</text>
+			<text x="580" y="278" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(9%,16%,26%); stroke:none;" transform="translate(0,556) scale(1,-1)">100 VU</text>
+			<rect x="648" y="270" width="307.71375" height="27" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(3%,49%,50%); fill-rule: evenodd;"/>
+			<text x="962.71375" y="278" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(3%,49%,50%); stroke:none;" transform="translate(0,556) scale(1,-1)">7.941</text>
+			<text x="580" y="184" style="font-family: Helvetica-Bold; font-size: 15px;fill: rgb(3%,49%,50%); stroke:none;" transform="translate(0,368) scale(1,-1)">17.630 aceptadas y 17.630 persistidas</text>
+			<text x="80" y="127" style="font-family: Helvetica; font-size: 12px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,254) scale(1,-1)">50 -&gt; 100 VU: throughput estable 48,86 -&gt; 58,03 RPS (+18,78 %); escalado no lineal.</text>
+			<text x="80" y="100" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,200) scale(1,-1)">Cero errores técnicos, cero resultados inesperados y cero conflictos en los niveles aprobados.</text>
+			<text x="80" y="77" style="font-family: Helvetica; font-size: 11px;fill: rgb(30%,38%,47%); stroke:none;" transform="translate(0,154) scale(1,-1)">Los intentos no aprobados y sus 1.245 reservas persistidas se mantienen separados.</text>
+		</g>
+	</g>
+</svg>

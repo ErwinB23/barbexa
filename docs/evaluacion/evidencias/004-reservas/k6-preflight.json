@@ -1,0 +1,27 @@
+{
+    "observedAtUtc":  "2026-11-25T23:25:12.2713993Z",
+    "scope":  "Read-only host readiness; no backend or load execution",
+    "resources":  {
+                      "logicalProcessors":  24,
+                      "totalRamGiB":  15.43,
+                      "freeRamGiB":  3.25,
+                      "usedRamPercent":  78.92
+                  },
+    "safetyPolicy":  {
+                         "loadProbe":  "Repeat after backend startup; supervisor enforces the same remaining host margin",
+                         "maximumUsedRamPercent":  80,
+                         "startupProbe":  "Before isolated backend startup",
+                         "minimumFreeRamGiB":  4
+                     },
+    "k6OnPath":  true,
+    "k6Available":  true,
+    "dockerClientAvailable":  true,
+    "dockerEngineReady":  true,
+    "hostReadiness":  "blocked",
+    "blockers":  [
+                     "INSUFFICIENT_MEMORY_HEADROOM"
+                 ],
+    "targetValidated":  false,
+    "loadExecuted":  false,
+    "note":  "Host readiness is not authorization to run; an owned independent lab and synthetic fixtures must be verified separately."
+}

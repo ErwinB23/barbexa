@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-26T17:51:25.235Z",
+  "series": "71e00e3c-28eb-4262-80ce-7abe043c49ed",
+  "protectedFilesVerified": 871,
+  "protectedFilesChanged": 0,
+  "approved25Unchanged": true,
+  "approved25Recovered": true,
+  "nextLevel": 50,
+  "level50Measured": false,
+  "operatorLockPresent": false,
+  "preparedFixtureActors": 100,
+  "plannedWriteCases": 8000,
+  "fixtureValidation": "passed",
+  "businessDigestsAndOfferingValuesUnchanged": true,
+  "reservationsBefore": 4585,
+  "reservationsAfter": 4585,
+  "technicalSettingsVersions": [
+    {
+      "syntheticShopIndex": 0,
+      "before": 54,
+      "after": 67
+    },
+    {
+      "syntheticShopIndex": 1,
+      "before": 54,
+      "after": 67
+    }
+  ],
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 4585,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "automatedTests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "k6Executed": false,
+  "preparationOnly": true,
+  "continuationCommand": "npm run test:carga:mixta",
+  "note": "Authentication sessions renewed and technical settings versions incremented by existing setters. No new reservation, benchmark, Cloud operation or product change."
+}

@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-26T16:31:11.171Z",
+  "series": "71e00e3c-28eb-4262-80ce-7abe043c49ed",
+  "sourceAttempt": "912980a8-0a3f-40b0-8775-80368ca8bd04",
+  "retry": "648620bd-10f3-4ba6-b5c3-711b024126f4",
+  "prepared": true,
+  "k6Executed": false,
+  "businessWrites": 0,
+  "preservedReservations": 4,
+  "consumedIndices": [
+    320,
+    321,
+    322,
+    323
+  ],
+  "replacementSlots": {
+    "320": 480,
+    "321": 481,
+    "322": 482,
+    "323": 483
+  },
+  "remainingOriginal25AssignmentsUnchanged": 3996,
+  "level50AssignmentsUnchanged": true,
+  "level100AssignmentsUnchanged": true,
+  "realPlannedOverlaps": 0,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 108,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "preservedFiles": 716,
+  "allPreservedHashesMatch": true,
+  "originalFixtureUnchanged": true,
+  "resourcePolicyUnchanged": true,
+  "stableSecondsPerLevel": 600
+}

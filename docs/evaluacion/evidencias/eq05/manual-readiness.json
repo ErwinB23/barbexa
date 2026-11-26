@@ -1,0 +1,58 @@
+{
+  "verifiedAt": "2026-11-26T20:21:38.800Z",
+  "runId": "0bcde763-0e44-41dd-ba75-798c943d0dd3",
+  "controlledStop": true,
+  "partialSummary": {
+    "start": "2026-11-26T19:55:51.079Z",
+    "finish": "2026-11-26T20:17:04.658Z",
+    "elapsedMs": 1273565.5652,
+    "stopReason": "OPERATOR_STOP_FILE",
+    "scheduledMs": 3600000,
+    "scheduledIntervals": 360,
+    "available": 128,
+    "unavailable": 0,
+    "noData": 232,
+    "observedMs": 1280000,
+    "availabilityPercent": 100,
+    "coveragePercent": 35.55555555555556,
+    "lowerBoundScheduledPercent": 35.55555555555556,
+    "objectiveMet": true,
+    "fullCoverage": false,
+    "interruptions": [],
+    "missingPeriods": [
+      {
+        "startIndex": 128,
+        "endIndex": 359,
+        "estimatedMs": 2320000
+      }
+    ]
+  },
+  "ownReservationsCancelled": 129,
+  "priorDataPreserved": true,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 19110,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "originalArtifactsSha256": {
+    "intervals.jsonl": "c90a3cb3fb80f25a0ddd9cffef0751e30253e31021e48390226e0ae2a40cf84f",
+    "preflight-records.jsonl": "6a354f9117ede4c25f5723b1afd4ab3914da3a6738b66152c1e3732652417910",
+    "write-ledger.jsonl": "6363e02993b57374d1c0173279db04023a5c2fdb8c96e5f8036df06e204be3b5",
+    "resources.jsonl": "feed3e2d6dc77740a293717c20661622693a5cbf1aa7906c4208549ef98f2909",
+    "events.jsonl": "c9920fe0de1050130ac3bf0753d7648b2ee8207d9d945575f6a5c286777b8f37",
+    "progress.json": "f5449005344ca817fc0d9aabd463fdb86738c825c1fa0bcd859810ab4084f7ce",
+    "window-summary.json": "c4d159e145b6ef014df45b3d8b1734518c920001e415130b3e4b96afdcb38854",
+    "post-window-audit.json": "e00e104748324ddd8c7c0fb3c753efc58708ce4231a38f786701ab156fd8d2f5",
+    "protocolo-previo.json": "b07d697927bf1702fec77f77f0efb26252787bd38cb2ad60375d1017f5c06be4",
+    "active-source-hashes.json": "6f4a6f96db987bda476a6931cf5fda691aaa06bb63a0c6be5f65a46be7a4144c"
+  },
+  "newMeasurementStarted": false,
+  "command": "node tests/availability/eq05-manual.mjs",
+  "automatedPolicyTests": 8,
+  "manualLongObservationNotExecuted": true,
+  "cloudModified": false,
+  "commitsOrPush": false
+}

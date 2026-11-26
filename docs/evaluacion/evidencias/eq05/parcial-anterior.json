@@ -1,0 +1,27 @@
+{
+  "runId": "0bcde763-0e44-41dd-ba75-798c943d0dd3",
+  "start": "2026-11-26T19:55:51.079Z",
+  "finish": "2026-11-26T20:17:04.658Z",
+  "elapsedMs": 1273565.5652,
+  "stopReason": "OPERATOR_STOP_FILE",
+  "scheduledMs": 3600000,
+  "scheduledIntervals": 360,
+  "available": 128,
+  "unavailable": 0,
+  "noData": 232,
+  "observedMs": 1280000,
+  "availabilityPercent": 100,
+  "coveragePercent": 35.55555555555556,
+  "lowerBoundScheduledPercent": 35.55555555555556,
+  "objectiveMet": true,
+  "fullCoverage": false,
+  "interruptions": [],
+  "missingPeriods": [
+    {
+      "startIndex": 128,
+      "endIndex": 359,
+      "estimatedMs": 2320000
+    }
+  ],
+  "countsExcludedFromApprovedHour": true
+}

@@ -1,0 +1,137 @@
+{
+  "at": "2026-11-26T21:27:20.134Z",
+  "priorReservations": 19110,
+  "ownReservations": 361,
+  "preflightReservations": 1,
+  "measuredRequestsPlanned": 360,
+  "measuredPersisted": 360,
+  "activeOwnReservations": 0,
+  "allOwnReservationsCancelled": true,
+  "oneItemConfirmationCancellationAndCareEach": true,
+  "cleanupMode": "Logical cancellation; preserve auditable synthetic histories, no physical deletion.",
+  "lateCleanupOperations": [],
+  "priorTables": [
+    {
+      "table": "public.profiles",
+      "priorRows": 1015,
+      "priorRowsPreserved": true,
+      "newRows": 3
+    },
+    {
+      "table": "public.barbershops",
+      "priorRows": 8,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "public.barbershop_memberships",
+      "priorRows": 32,
+      "priorRowsPreserved": true,
+      "newRows": 2
+    },
+    {
+      "table": "public.barbershop_booking_settings",
+      "priorRows": 8,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "public.services",
+      "priorRows": 7,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "public.barber_profiles",
+      "priorRows": 25,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "public.barber_services",
+      "priorRows": 25,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "public.barbershop_hours",
+      "priorRows": 49,
+      "priorRowsPreserved": true,
+      "newRows": 7
+    },
+    {
+      "table": "public.barber_schedules",
+      "priorRows": 175,
+      "priorRowsPreserved": true,
+      "newRows": 7
+    },
+    {
+      "table": "public.reservations",
+      "priorRows": 19110,
+      "priorRowsPreserved": true,
+      "newRows": 361
+    },
+    {
+      "table": "public.reservation_items",
+      "priorRows": 19110,
+      "priorRowsPreserved": true,
+      "newRows": 361
+    },
+    {
+      "table": "public.reservation_events",
+      "priorRows": 19239,
+      "priorRowsPreserved": true,
+      "newRows": 722
+    },
+    {
+      "table": "public.staff_invitations",
+      "priorRows": 1,
+      "priorRowsPreserved": true,
+      "newRows": 0
+    },
+    {
+      "table": "private.booking_care",
+      "priorRows": 19110,
+      "priorRowsPreserved": true,
+      "newRows": 361
+    },
+    {
+      "table": "private.care_events",
+      "priorRows": 19113,
+      "priorRowsPreserved": true,
+      "newRows": 361
+    },
+    {
+      "table": "private.care_settings",
+      "priorRows": 1,
+      "priorRowsPreserved": true,
+      "newRows": 0
+    },
+    {
+      "table": "private.barbershop_ownership",
+      "priorRows": 8,
+      "priorRowsPreserved": true,
+      "newRows": 1
+    },
+    {
+      "table": "private.admin_invitation_mail",
+      "priorRows": 1,
+      "priorRowsPreserved": true,
+      "newRows": 0
+    }
+  ],
+  "protectedFiles": 814,
+  "historicalEvidenceFiles": 763,
+  "hashesUnchanged": true,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 19471,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "k6Executed": false,
+  "cloudModified": false,
+  "migrationsModified": false
+}

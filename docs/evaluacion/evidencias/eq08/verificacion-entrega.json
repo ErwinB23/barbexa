@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-26T18:51:00.084Z",
+  "coreFiles": 88,
+  "listedImports": 199,
+  "forbiddenImports": 0,
+  "clientAndServerSubstitutionCasesPassed": 2,
+  "coreClosureFilesEach": 5,
+  "preservedProductAndTestFiles": 814,
+  "priorMixedReadingAndProductHashesUnchanged": 763,
+  "historicalRegressionSourcesUnchanged": true,
+  "coverageReusedWithoutRerun": true,
+  "localLinksVerified": 13,
+  "eq08Status": "Parcial integral; núcleo construido acreditado",
+  "mapsImagesSubstitution": "Pending; not implemented",
+  "playwrightExecuted": false,
+  "k6Executed": false,
+  "cloudAccessed": false,
+  "commitsOrPush": false
+}

@@ -1,4 +1,263 @@
-# Estado vigente — App Barbería
+# Estado de desarrollo — App Barbería
+
+26 nov — Entrega Sprint2 preparada para revisión, no publicada. README raíz e
+índice central en `docs/entrega/sprint2/INDICE.md`: cinco entregables, arquitectura,
+18SDD, Swagger, pruebas/cobertura, informes y gráficas. Guía de sustentación y
+`PUBLICACION.md` con tres commits propuestos (instrumentación→harness→evidencias/docs).
+Git sigue main,23commits,a758dfa,índice sin staging. Inventario232 pendientes:
+229 propuestos y3QA locales;47/26/156 por grupo. Copias sanitizadas con SHA de fuente,
+originales preservados. Revisión de exposición sin secretos reales detectados en
+checkout/candidatos;5PDF revisados y rutas privadas ignoradas comprobadas.300logs
+históricos ya versionados y metadatos de autor/rutas locales siguen advertidos,
+sin reescribir historial. Esta revisión no es nueva auditoría de CVE o de todos
+los blobs históricos. SeisEQ cumplidos en alcance y cuatro parciales02/05/08/09;
+EQ05 una hora no acredita mes publicado, adaptación requiere aceptación docente;
+2.000VU son meta adicional pospuesta. Se reutilizó evidencia, sin repetir pruebas
+de carga/E2E/monitor/cobertura ni instalar/operar servicios. Sin staging,commits,push,
+producto,Cloud,migraciones ni cambios de Actions. Publicación espera autorización.
+
+26 nov — EQ-05 local una hora consolidado offline: run 8dd877ab, ejecutado
+manualmente de 15:27:14 a 16:27:14 Lima. 3.600,003 s, 360 éxitos, cero fallos/sin
+datos, disponibilidad/cobertura 100 % y 2.880 HTTP. Flujo: media271,93/p50 267,84/
+p95 312,39/p99 346,69 ms. SQL guardado conciliado: 360 medidas +1 preflight, todas
+canceladas, cero activas; 19.471 globales, 19.110 anteriores preservadas y cero
+violaciones. 18 tablas, 814 archivos y763 hashes históricos verificados. Intento
+parcial anterior (128 éxitos/232sin datos) conservado y excluido, sin sumar ventanas.
+Informe MD/HTML/PDF, tablas, seis CSV, JSON y3 gráficas PNG/SVG/PDF en
+`docs/evaluacion/evidencias/eq05/INFORME.md`; 34 archivos originales con SHA256.
+Monitor mejorado solo en presentación dinámica: barra/tiempo/disponibilidad/conteos/
+historial;12 tests aprobados y demo simulada <1s, sin nueva observación. AST del
+monitor idéntico al medido al excluir solo display; política byte a byte intacta.
+EQ-05 parcial integral: hora local acreditada, mes publicado no evaluado y adaptación
+pendiente de aceptación docente. Seis EQ cumplidos en alcance definido, cuatro
+parciales (02/05/08/09). Cinco entregables y pendientes mínimos:
+`docs/evaluacion/evidencias/eq05/SITUACION-SPRINT2.md`. No repetir hora/k6 ni desarrollar
+módulos para aparentar cierre integral;2.000 VU pospuestos como meta adicional.
+Sin nueva SQL/HTTP/producto/Cloud/migraciones/Actions/commits/push. Los bloques
+siguientes son antecedentes; las referencias a tareas pendientes corresponden a su fecha.
+
+26 nov — EQ-09 Web ejecutado con Playwright 1.62.1/Chromium 151, pantalla 390×844,
+dos clientes sintéticos: A confirma 201; B recibe conflicto real 409, conserva servicio,
+consulta/elige otro horario con teclado y confirma 201; sin reenvío observado tras
+conflicto/recarga. 1 E2E aprobado, 0 fallos finales, 0 retries. SQL concilia dos
+reservas y ninguna para UUID rechazado; global 18.981, cero violaciones; filas
+previas de 18 tablas preservadas, 814 archivos y 763 hashes históricos sin cambios.
+Informe/JSON/HTML y tres capturas en `docs/evaluacion/evidencias/eq09/INFORME.md`;
+reporte Playwright nativo/trace con sesiones siguen privados. Metro/proxy temporales
+cerrados; Edge original oneshot restaurado tras CORS local temporal, sin reiniciar
+otros cinco servicios. EQ-09 integral parcial: Android/ubicación/participantes y
+accesibilidad completa pendientes. Error 6,73:1/aria-live polite; foco BODY y aviso
+fuera del encuadre inicial, etiqueta Efectivo visualmente tenue, documentados sin UI.
+Solo propuesta EQ-05 de una hora preparada (60 sondeos, límites propuestos 10s/30s,
+datos dedicados/cancelación lógica), monitor no implementado ni iniciado; ≥99,5 %
+mensual sigue sin evaluar. Sin k6/Cloud/migraciones/Actions/commits/push.
+
+26 nov — EQ-08 consolidado exclusivamente en alcance construido: checkers cliente
+298 módulos/55 núcleo/975 aristas y servidor 56/33/158 aprobados. 88 archivos de
+núcleo y 199 dependencias listadas, cero prohibidas. SolicitarReserva y ConfirmarReserva
+ejecutados con dobles existentes: un caso aprobado por lado, Node con cero intentos
+de red y Deno sin permisos de red/lectura/escritura/entorno. Cobertura completa del
+25/11 reutilizada: cliente 100/100/93,1425 %, servidor 100/100/100 %; los 88 archivos
+coinciden con el commit probado 9192d1a. 814 archivos preservados por SHA-256.
+Informe, criterio original, CSV/JSON y logs separados en
+`docs/evaluacion/evidencias/eq08/INFORME.md`. EQ-08 sigue parcial integralmente por
+la sustitución de proveedor de mapas/imágenes no completos; no desarrollados.
+Siguiente mínimo EQ-09: Playwright Web móvil, conflicto local real, mensaje/servicios
+conservados, nuevo horario sin reenvío ni duplicados y evidencia sanitizada.
+No se inició ese recorrido; Android, ubicación y participantes siguen pendientes.
+Sin funcionalidades/Cloud/migraciones/Actions/k6/commits/push ni suite completa repetida.
+
+26 nov — Serie mixta 71e00e3c concluida y auditada offline: 25/50/100 VU,
+600 s estables por nivel; 88.472 HTTP y 17.630 confirmaciones aceptadas = reservas
+persistidas, cero errores/violaciones y recuperación registrada. 36 thresholds de
+aprobados recalculados; dos intentos fallidos y sus 1.245 reservas conservados.
+EQ-04/EQ-06 cumplidos en laboratorio según criterios originales de consultas:
+a 100 VU, p95 completos 4/8/7 ms. P95 HTTP global 3.660,71 ms documentado como
+limitación de la mezcla; percentiles exclusivos de confirmación no exportados,
+sin inventarlos. 763 archivos protegidos conservan SHA-256; sin k6/SQL/red nuevos.
+Tablas, CSV, JSON, cuatro gráficas PNG/SVG/PDF e informe en
+`docs/evaluacion/evidencias/004-reservas/k6-mixta-final/INFORME.md`.
+Lectura hasta 1.000 VU independiente; 2.000 pospuestos como meta adicional.
+Siguiente mínimo: consolidar evidencia cliente/servidor e importaciones de EQ-08
+en el núcleo construido; integral parcial por mapas/imágenes pendientes, sin
+desarrollarlos. No repetir carga. Sin producto/Cloud/migraciones/Actions/commits/push.
+Los bloques inferiores documentan antecedentes y no ordenan reejecutar 25/50/100.
+
+26 nov — Mixta de 25 VU acreditada, dfbeb172: 16.227 HTTP, 3.236 confirmaciones,
+cero errores y 600 s estables. Preparación de 50 interrumpida en configure-shop
+por ECONNABORTED antes de Kong; corregido solo el aprovisionador con reintentos
+acotados e idempotentes y Connection: close. Prepare-only de 50 completado sin k6:
+4.585 reservas, cero violaciones, sin nuevas reservas ni cambios en detalles/pagos.
+25 sigue aprobado. `npm run test:carga:mixta` continúa con 50 y 100. Ver
+`docs/evaluacion/evidencias/004-reservas/sprint2-closure/APROVISIONAMIENTO-50.md`.
+Oneshot, thresholds, 600 s y guardas intactos; sin cambios de producto, Cloud,
+migraciones, Actions, commits ni push. EQ-04/EQ-06 aún requieren 50/100 mixtos.
+
+26nov — Mixto dd8f7bd1 diagnosticado:500confirm porWorkerAlreadyRetired local.
+SQL1.241nuevasvs1.235aceptadas:6duranteaborto,conservadas sin inflaréxitos;1.349
+totales/SQL0,replay200 sin duplicado. Conautorización, soloEdge lab pasa aoneshot,
+anteriorconservadodetenido;otros5intactos. Reintento b238ad29 listo con turnos
+consumidos omitidos,50/100/600s yprotecciones intactos. Fixturecap600preparada
+soloen2shops;mediciónincluyearranqueworkers. npm run test:carga:mixta manual.
+Ver004/sprint2-closure/MIXTA-DD8F7BD1.md. Sin k6/producto/Cloud/migraciones/
+Actions/commits/push. Aúnnohaynivelmixto acreditado; no relajar fallosdeconfirmación.
+
+26nov — Reintento mixto25 preparado con autorización: se conservan intento
+912980a8 y4 reservas; nuevos IDs/turnos solo en4casos, otros3.996 y50/100 intactos.
+Baseline108/SQL0;716 hashes protegidos sin cambios. Comando manual único:
+npm run test:carga:mixta.600s estables por nivel; guardas/thresholds intactos.
+7 pruebas específicas pasan; suite ampliada33/34: test auxiliar de consulta de
+puertoWindows excede timeout(2638/2000ms), sin cambios al supervisor ni al test.
+Ver004/sprint2-closure/REANUDACION-MIXTA.md. No se ejecutó k6 ni se tocaron
+producto/Cloud/migraciones/Actions; sin commits/push. Serie aún sin nivel acreditado.
+
+26nov — Cierre prioritario Sprint2:15 comprobaciones acotadas aprobadas en lab
+aislado. EQ01 negativos/positivo efectivo; EQ03 pago barbero/admin distintos,
+dos waiters409/200 y un evento; EQ07 fallo de correo controlado con persistencia
+real, reintento/mismo UUID sin duplicado; EQ10 cambio real120→60/histórico120
+con cabecera/items intactos. Datos anteriores y producto preservados; sin defectos
+productivos modificados. Serie mixta independiente71e00e3c preparada:100 sesiones,
+20 profesionales,100 reservas iniciales, tres contratos200 y SQL0violaciones.
+Comando manual npm run test:carga:mixta:25/50/100VU600s estables,80%consultas
+incluyendo reservas propias/20%confirmaciones. NO ejecutada; no repetir lecturas.
+31 tests del harness aprobados; perfiles inspeccionados sin VU/HTTP. EQ01/03/07/10
+cerrados en conjunto definido; EQ02/04/06/08/09parciales, EQ05mes no evaluado.
+EQ08solo núcleo construido acreditado: protocolo original incluye mapas/imágenes.
+Cinco entregables disponibles, evidencia de atributos aún incompleta integralmente;
+sin afirmar cierre formal de diezEQ. Ver004/sprint2-closure/CIERRE-SPRINT2.md.
+1.000VUlectura conservados;2.000sinacreditar. Sin Cloud/producto/migraciones/Actions/
+commits/push. Siguiente paso: responsable ejecuta serie mixta y se audita evidencia.
+
+26nov — Cierre documental k6: cinco corridas aprobadas y dos Stress fallidos
+auditados sin nueva carga. Smoke, Load, Load académico, Stress 1.000 VU/60 s
+y Spike 1.000 VU/30 s acreditados en lectura. 476.964 HTTP, cero errores,
+186 thresholds, recuperación e integridad satisfactorias. Stress a 1.000 VU:
+643,57 RPS, p95/p99 HTTP 789,45/903,27 ms; RPS máximo 757,28 a 800 VU.
+131 archivos crudos/puntero con SHA intactos; seis gráficas PNG/SVG/PDF,
+tablas/CSV/JSON e informe en 004/k6-final/INFORME.md. MVP carga 10 VU cumplido;
+EQ-04/06 parciales por consulta de reservas y confirmaciones no medidas.
+EQ-03: falta carrera entre barbero y admin distintos; no otra batería de reservas.
+EQ-05: mes no evaluado. Matriz EQ-01–10 y pendientes mínimos en REQUISITOS-CALIDAD.md.
+No repetir lecturas aprobadas ni declarar 1.000 escrituras, 2.000 VU, Android
+integral o CD. Sin cambios funcionales, Cloud, migraciones, commits o push.
+
+26nov — Laboratorio optimizado con autorización: Kong512→4096/unworker, sintaxis
+y persistencia tras reinicio soloKong verificadas; descriptores1048576 sin cambios.
+SupervisorWindows usa stopAPIloopback/PID y esperaexportación10s (crítico2,5s),
+fallbackforzado y evidenciaexplícita si faltasummary; noaprueba interrupciones.
+27tests sin k6 aprobados; cierre probado con Node real.6servicios/salud200/SQL0,
+43archivoscampaña y puntero/26migraciones conservados. Guía y reporte004/
+k6-lab-optimization.md actualizados. No cargaejecutada: exportaciónk6real y nueva
+capacidad pendientes del Stressmanual del responsable. Sin producto/Cloud/Actions/
+migraciones/commits/push; protecciones críticas conservadas.
+
+26nov — Diagnóstico segundo Stress: gateway Kong agota512conexiones/worker
+al acercarse a500VU (warnings en ambos intentos). Segundo registra16EOF y termina
+por RAMhost>=90% sostenida16,093s, no por primerEOF. Sin resúmenes finales del
+segundo: no acreditar500 ni inventar métricas. Máximo formallectura400VU/60s,
+SQLactual0violaciones,6servicios vivos,sinOOM/reinicio.43archivos campaña y puntero
+SHA intactos. Corrección del diagnóstico anterior que había omitidowarnings:
+004/k6-stress-bottleneck.md. Propuestas de plantillaKong4096/margenhost/supervisor
+ordenado documentadas, ninguna aplicada. Sin carga, cambios de infraestructura,
+producto, umbrales, Cloud, migraciones, commits ni push.
+
+25nov — EOF Stress investigado: origen de transporte no atribuible con certeza;
+sin saturación sostenida/errores DB/OOM/reinicio observados. Tramos100–400VU60s
+aprobados;458solo rampa. Intento original108 preservado. Tras autorización expresa,
+solo Stressread tolera EOF como técnico (<1% total), sin reintento/éxito/check ficticio;
+checks100% sobre respuestas recibidas y guardas restantes intactos. Eventos porEOF
+y metodología stress-eof-v1 registradas en próximas corridas.16 tests y5 inspecciones
+estáticas sin carga aprobados;36 archivos de campaña/puntero preservados. Ver reporte
+004/k6-stress-eof-analysis.md. No se ejecutó Stress ni ninguna otra carga en esta etapa.
+
+25nov — Rendimiento reorganizado en Smoke/Load/Stress/Spike: campaña nueva sin
+aprobaciones heredadas y archivo SHA256 de32 evidencias preliminares, conservando
+originales. Laboratorio íntegro y sin procesos residuales; bloqueo Ctrl+C archivado.
+Métricas por tramo, capacidad Stress solo por tramos completos y Spike condicionado.
+Suplemento formal25/50x10min disponible: Load25/50x1min no acredita EQ06 por sí solo.
+14 tests/5 inspecciones estáticas aprobados sin generar carga. Guía k6 vigente;
+nueva campaña aún no ejecutada. Sin Cloud, producto, migraciones, Actions ni commits.
+
+25nov — k6 simplificado: comandos npm test:carga con nivel/completo; preparación
+automática y reutilización verificada de1/10/25VU sin repetir. Salida nativa de k6
+heredada y exportación JSON conservada. Estimaciones RAM pasan a advertencias;
+guardas críticas/sostenidas documentadas en MANUAL-POWERSHELL.md, thresholds intactos.
+11 pruebas unitarias y verificaciones estáticas aprobadas. Ninguna carga ni humo ni
+comando k6 ejecutado en esta etapa. Progreso visual se verificará manualmente.
+Sin producto, Cloud, migraciones, Actions, commits/push; resultados históricos intactos.
+
+25nov — k6 manual: backend existente reutilizado sin reinicios,6 servicios y26
+migraciones verificadas. Aprovisionador reanudable probado ampliando2→10 clientes:
+12 usuarios Auth incluyendo2 propietarios,2 barberías/servicios/profesionales,
+sesiones reales y marcador privado. Catálogo/slots/validación Edge/aislamiento
+lectura aprobados; SQL0 reservas/violaciones. Política adaptativa separa preparación
+serial de carga y conserva abortos; calibración real del generador pendiente del
+humo manual. Objetivo inmediato1000VU,2000 académico pendiente.8 tests/18 inspecciones
+sin carga aprobados. Guía y funciones PowerShell5 verificadas; el supervisor rechaza
+el humo por RAM actual~1,78GiB frente a~3GiB requeridos. Cerrar Codex/liberar memoria,
+cargar k6/manual.ps1 y seguir MANUAL-POWERSHELL.md. Sin intensidad, Cloud, producto,
+migraciones originales, staging/commit/push/costos. Ver004/k6-manual-readiness.json.
+
+25nov — Laboratorio k6 optimizado sin carga:18 contenedores adicionales detenidos
+con autorización y ausencia de transacciones abiertas; total25 conservados con
+montajes/IDs verificables. Docker activo. RAM3,30GiB inicial,3,40 inmediata y
+2,90–3,62GiB posteriores: mínimo4GiB aún bloquea backend/humo. VmmemWSL bajó
+2211→1163MiB, sin alterar WSL/globales. Cuatro tests y28 inspecciones sin HTTP
+aprobadas. Niveles200..2000 de100 en100; datos SharedArray compactos y guardas
+de progresión/recuperación. Restauración modo plan valida25 contenedores originales.
+k6/MANUAL-POWERSHELL.md reúne comandos reales condicionados a preparar fixtures
+y marcador todavía pendientes por no disponer de backend. No es ejecución manual
+integral acreditada. Evidencia004/k6-optimization.json. Sin producto, Cloud, cambios
+de migraciones originales, commits/push ni costos. Lo siguiente conserva antecedentes.
+
+25nov17:39 Lima — Nueva revisión de RAM solicitada: dos preflights exit2,
+0,90GiB/94,14% y1,16GiB/92,50% ocupada. k6 y Docker disponibles; solo bloqueo RAM.
+CPU puntual46%, disco libre185,38GiB. Base habitual sigue exited; no contenedores
+barbexa-k6-lab. No se inició/operó ningún servicio ni carga en esta reanudación.
+Protecciones4GiB libres/<80% conservadas. Nueva progresión solicitada para cuando
+existan recursos: humo,10,25,50,100 y luego200,300,...,2.000VU; aún no ejecutada.
+Los scripts aún deben alinear sus niveles posteriores a100 con esta progresión
+antes de ejecutarla. Evidencias actuales004/k6-preflight.json y004/k6-validation.json.
+
+25nov — Reanudación k6: k6 2.4.0 oficial instalado/verificado; Docker29.9.3 operativo.
+Detención explícitamente autorizada Metro8081 y7 contenedores habituales realizada,
+con inventario/montajes conservados y comandos de restauración en k6/README.md.
+Las otras dos pilas intactas, Engine activo. No eliminación de datos/volúmenes.
+RAM final1,65GiB libre/89,31%ocupada: preflight sigue bloqueado solo por memoria.
+Preparado laboratorio de archivos barbexa-k6-lab54721/54722,26 migraciones idénticas;
+no arrancado, sin fixtures/sesiones/marcador/medición SQL. Scripts HTTP/supervisor/
+integridad implementados en k6/,3 tests de guardas y13 inspecciones k6 aprobados;
+rechazo seguro107 sin tráfico y supervisor1 por recursos. Ninguna carga real ni VU
+comprobado; EQ-04/06 pendientes, EQ-03 conserva solo antecedentes. Ver004/k6-validation.json
+y004/entrega-tecnica.md. Fixtures y validación HTTP/SQL requieren backend aislado vivo.
+Sin Cloud, producto, migraciones, Actions, commits o push. Estado habitual queda detenido
+para restauración posterior registrada; no detener otras pilas sin autorización nueva.
+
+25nov — k6: revisión y preflight reales, ejecución de carga BLOQUEADA antes de humo.
+Equipo24hilos/15,43GiB RAM,2,84GiB libres/81,58%ocupada; k6 no disponible, Docker Engine
+sin responder. scripts/k6-preflight.ps1 exit2 (solo lectura) y evidencia004/k6-preflight.json.
+Plan/matriz A–G y límites en004/entrega-tecnica.md; objetivos EQ100VU/10min,p95<=3s,
+errores<1%, y MVP10VU/1min,p95<=2s/errorfuncional0 conservados y separados.
+No hubo target aislado, datos sintéticos, carga, nuevas consultas SQL ni medición de
+integridad. No se alcanzó2.000VU; ningún máximo ni capacidad del backend acreditados.
+No iniciar carga hasta margen RAM/preflight y laboratorio independiente verificados.
+Sin servicios iniciados, instalaciones, Cloud, migraciones, datos, commits/push/costos.
+Cambios documentales de consolidación anteriores conservados; no declararlos publicados.
+
+25nov — Consolidación documental de arquitectura/SOLID/patrones, PostgreSQL y caché
+terminada sobre a758dfa. Ver evidencias004/calidad.md,004/cache.md y002/consultas.md:
+símbolos reales de reserva hasta RPC/SQL, diferencias C2–C4, tablas con límites y medidas
+históricas (20.000 membresías; lookup literal0,043ms frente a exploratorio139,660ms;
+caché mediana15,713→1,8845ms,5 muestras/condición). Pooler local enabled=false:
+configuración no acredita pooling/capacidad Cloud. Checkers actuales exit0 cliente298/55/975
+y servidor56/33/158. No nuevas mediciones, SQL, datos, Cloud, migraciones o tests completos.
+Publicación previa confirmada:main/origin/main,a758dfa,23 commits privados; CI45696792837
+success con quality-evidence. README académico vinculado por e74590b, historial independiente.
+Warning runtime Node20 de acciones sigue mantenimiento pendiente. Solo documentos locales
+modificados en esta etapa, sin staging/commit/push. Detenerse; siguiente etapa será
+preparar k6 progresivo con alcance/entorno controlados; no ejecutarlo todavía.
+
+Los bloques siguientes conservan antecedentes de cada verificación.
 
 25nov — Cierre de reproducibilidad aprobado desde checkout Git independiente de
 9192d1a, sin node_modules, .artifacts, reportes ni .env privados previos. npm ci exit0:

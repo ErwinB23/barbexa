@@ -1,0 +1,31 @@
+{
+  "documentedAt": "2026-11-26T20:27:10.230Z",
+  "runId": "8dd877ab-4d18-4213-928d-e9217e39f7da",
+  "protocol": {
+    "version": 1,
+    "durationMs": 3600000,
+    "intervalMs": 10000,
+    "count": 360,
+    "requestTimeoutMs": 10000,
+    "flowTimeoutMs": 30000,
+    "lateToleranceMs": 1000,
+    "targetPercent": 99.5,
+    "automaticRetries": 0
+  },
+  "environment": "barbexa-k6-lab/127.0.0.1:54721",
+  "measuredFlow": [
+    "real-password-auth",
+    "catalog",
+    "slots",
+    "own-reservations",
+    "confirm",
+    "read-persisted",
+    "cancel-own-reservation",
+    "read-cancelled"
+  ],
+  "cleanup": "Logical cancellation only of reservations linked to this run; preserve audit history and prior data.",
+  "target": ">=99.5% estimated observed-window availability",
+  "originalMonthlyScenarioChanged": false,
+  "academicAdaptationRequiresTeacherAcceptance": true,
+  "windowStarted": false
+}

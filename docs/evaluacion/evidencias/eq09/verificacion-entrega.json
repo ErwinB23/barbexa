@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-26T19:41:41.156Z",
+  "finalE2ePassed": 1,
+  "finalE2eFailed": 0,
+  "reservationsPersisted": 2,
+  "conflictRows": 0,
+  "previousDataAndEvidencePreserved": true,
+  "localDocumentLinksVerified": 12,
+  "screenshotsVerified": 3,
+  "restoredOriginalEdge": true,
+  "temporaryWebStopped": true,
+  "obviousJwtScan": "no matches in textual deliverables",
+  "eq09Status": "Parcial integral; recorrido funcional Web acreditado",
+  "focusAndVisualContrastFindingsDocumented": true,
+  "eq05ProposalOnly": true,
+  "eq05MeasurementStarted": false,
+  "k6Executed": false
+}

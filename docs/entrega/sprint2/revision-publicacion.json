@@ -1,0 +1,59 @@
+{
+  "reviewedAt": "2026-11-26T21:59:55.944Z",
+  "mode": "PREPARATION_ONLY_NO_STAGING_COMMITS_PUSH",
+  "git": {
+    "branch": "main",
+    "commits": 23,
+    "head": "a758dfacceb0323ce11454be7041b1b1daad4a69",
+    "originMainCached": "a758dfacceb0323ce11454be7041b1b1daad4a69",
+    "origin": "https://github.com/ErwinB23/barbexa.git",
+    "networkRemoteRechecked": false,
+    "stagedFiles": 0,
+    "indexUnchanged": true
+  },
+  "pending": {
+    "total": 232,
+    "proposedPublish": 229,
+    "localOnlyQa": 3,
+    "groups": {
+      "1-instrumentacion-k6": 47,
+      "2-harness-calidad": 26,
+      "3-documentacion-evidencias": 156
+    }
+  },
+  "scope": {
+    "candidateFiles": 1773,
+    "textFiles": 1701,
+    "binaryFiles": 70,
+    "pdfsTextAndMetadataReviewed": 5,
+    "pendingOriginalsPreserved": 219,
+    "continuityFilesIntentionallyUpdated": [
+      "ESTADO-DESARROLLO.md",
+      "docs/CODEX-HANDOFF.md"
+    ],
+    "secretFindingsHighConfidence": [],
+    "lowConfidenceMatchesReviewed": {
+      "initialSensitiveAssignments": 28,
+      "credentialLikeUrlsInNegativeFixtures": 10,
+      "newFakeTestValues": 2
+    },
+    "privatePathExclusionProofs": 9,
+    "entryPointRelativeLinks": 99,
+    "mainEntryPointLinksMissing": [],
+    "historicalTrackedIgnoredLogs": 300,
+    "filesWithKnownWorkstationMetadata": 94,
+    "realLoadE2EOrAvailabilityExecuted": false,
+    "dependenciesChangedByThisPreparation": false
+  },
+  "caveats": [
+    "History author identity and historical workstation paths remain as previously disclosed; no history rewrite.",
+    "Historical tracked logs are not removed by .gitignore. No new ignored raw logs proposed.",
+    "Raw Playwright traces/native reports and synthetic credentials stay local, even with fake users.",
+    "This is scoped exposure review of checkout and pending package, not a new dependency-CVE or complete historical-blob audit.",
+    "Local copies of original reports retain private-custody references; central index uses publishable aggregates."
+  ],
+  "publicationAuthorizedNow": false,
+  "originalsOverwritten": false,
+  "k6Executed": false,
+  "cloudModified": false
+}

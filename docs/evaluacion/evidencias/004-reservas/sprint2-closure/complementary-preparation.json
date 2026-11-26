@@ -1,0 +1,21 @@
+{
+  "series": "71e00e3c-28eb-4262-80ce-7abe043c49ed",
+  "at": "2026-11-26T07:35:52.207Z",
+  "preparedOnly": true,
+  "k6Executed": false,
+  "syntheticShops": 2,
+  "syntheticProfessionals": 20,
+  "realSessions": 100,
+  "seedReservations": 100,
+  "catalogStatus": 200,
+  "slotsStatus": 200,
+  "ownReservationsStatus": 200,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 104,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  }
+}

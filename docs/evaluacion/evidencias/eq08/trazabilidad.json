@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "side": "client",
+      "entry": "src/features/reservations/application/request-reservation.ts",
+      "port": "ReservaRemotaGateway",
+      "test": "tests/unit/reservations/confirmation.test.ts",
+      "coreDependencyClosure": [
+        "src/features/reservations/application/request-reservation.ts",
+        "src/features/reservations/application/reservation-remote-gateway.ts",
+        "src/features/reservations/domain/types.ts",
+        "src/features/reservations/domain/values.ts",
+        "src/features/reservations/domain/reservation-input.ts"
+      ],
+      "externalModules": 0
+    },
+    {
+      "side": "server",
+      "entry": "supabase/functions/_shared/reservations/application/confirm-reservation.ts",
+      "port": "ReservaAtomicaGateway",
+      "test": "tests/server/reservations/confirmation.test.ts",
+      "coreDependencyClosure": [
+        "supabase/functions/_shared/reservations/application/confirm-reservation.ts",
+        "supabase/functions/_shared/reservations/application/reservation-atomic-gateway.ts",
+        "supabase/functions/_shared/reservations/domain/types.ts",
+        "supabase/functions/_shared/reservations/domain/values.ts",
+        "supabase/functions/_shared/reservations/domain/reservation-input.ts"
+      ],
+      "externalModules": 0
+    }
+  ]
+}

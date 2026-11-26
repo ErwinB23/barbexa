@@ -1,0 +1,152 @@
+{
+  "campaign": "af768017-0ecc-48b5-b6fe-af5aa287cd5d",
+  "attempt": "28edec30-d34e-438b-9c67-02a9fa7b91ec",
+  "observedPolicy": "strict-every-request",
+  "newAuthorizedPolicy": "stress-eof-v1",
+  "generatorExit": 108,
+  "supervisorInterruption": null,
+  "recovered": true,
+  "integrity": {
+    "before": {
+      "overlaps": 0,
+      "reservations": 0,
+      "tenantMismatch": 0,
+      "duplicateReceipts": 0,
+      "duplicateRequests": 0,
+      "partialReservations": 0
+    },
+    "after": {
+      "overlaps": 0,
+      "reservations": 0,
+      "tenantMismatch": 0,
+      "duplicateReceipts": 0,
+      "duplicateRequests": 0,
+      "partialReservations": 0
+    }
+  },
+  "requests": 70033,
+  "errors": 1,
+  "technicalErrorPercent": 0.0014278982765267801,
+  "httpP95Ms": 9.174899999999992,
+  "maxActiveVU": 458,
+  "segments": [
+    {
+      "name": "stress-100",
+      "level": 100,
+      "start": 0,
+      "end": 60,
+      "seconds": 60,
+      "completed": true,
+      "passed": true,
+      "requests": 6000,
+      "rps": 100,
+      "avgMs": 5.120873183333325,
+      "p50Ms": 3.8483,
+      "p95Ms": 6.878175000000001,
+      "p99Ms": 92.6356710000003,
+      "technicalErrorRate": 0,
+      "unexpectedRate": 0,
+      "catalogWallP95Ms": 3,
+      "slotsWallP95Ms": 8
+    },
+    {
+      "name": "stress-200",
+      "level": 200,
+      "start": 70,
+      "end": 130,
+      "seconds": 60,
+      "completed": true,
+      "passed": true,
+      "requests": 11979,
+      "rps": 199.65,
+      "avgMs": 4.0966431171216335,
+      "p50Ms": 4.1655,
+      "p95Ms": 8.246040000000002,
+      "p99Ms": 11.215347999999999,
+      "technicalErrorRate": 0,
+      "unexpectedRate": 0,
+      "catalogWallP95Ms": 4,
+      "slotsWallP95Ms": 9
+    },
+    {
+      "name": "stress-300",
+      "level": 300,
+      "start": 140,
+      "end": 200,
+      "seconds": 60,
+      "completed": true,
+      "passed": true,
+      "requests": 17945,
+      "rps": 299.0833333333333,
+      "avgMs": 4.469408487043736,
+      "p50Ms": 4.2971,
+      "p95Ms": 9.557459999999997,
+      "p99Ms": 13.162048,
+      "technicalErrorRate": 0,
+      "unexpectedRate": 0,
+      "catalogWallP95Ms": 5,
+      "slotsWallP95Ms": 11
+    },
+    {
+      "name": "stress-400",
+      "level": 400,
+      "start": 210,
+      "end": 270,
+      "seconds": 60,
+      "completed": true,
+      "passed": true,
+      "requests": 23932,
+      "rps": 398.8666666666667,
+      "avgMs": 4.532698608557556,
+      "p50Ms": 4.391,
+      "p95Ms": 9.211995,
+      "p99Ms": 13.924987999999994,
+      "technicalErrorRate": 0,
+      "unexpectedRate": 0,
+      "catalogWallP95Ms": 4,
+      "slotsWallP95Ms": 11
+    }
+  ],
+  "maxAccreditedStressVU": 400,
+  "notAccredited": [
+    458,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "resources": {
+    "samples": 137,
+    "hostCpuPeakPercent": 21.340733710229852,
+    "hostRamPeakPercent": 85.50650565200607,
+    "hostFreeMinGiB": 2.2370338439941406,
+    "generatorPeakMiB": 588.1328125,
+    "observedConnectionsMax": 21,
+    "maxConnections": 100,
+    "lockWaitsMax": 0
+  },
+  "logs": {
+    "windowUTC": [
+      "2026-11-26T04:28:45Z",
+      "2026-11-26T04:29:20Z"
+    ],
+    "kong200": 7063,
+    "kong499": 20,
+    "kong5xx": 0,
+    "postgresLogCollector": false,
+    "postgresAuthPostgrestLinesInWindow": 0,
+    "dockerEventsRetainedInWindow": 0,
+    "restartsOrOOMObserved": false
+  },
+  "cause": "Not conclusively attributable: no original per-request client EOF timestamp/error_code or correlation ID persisted. No sustained saturation observed. Kong499 burst is consistent with client cancellation around abort, not proof of initial EOF origin.",
+  "newLoadExecuted": false,
+  "validation": {
+    "unitTestsPassed": 16,
+    "staticProfileInspectionsPassed": 5,
+    "campaignFilesHashVerified": 36,
+    "campaignPointerUnchanged": true,
+    "loadExecuted": false
+  }
+}

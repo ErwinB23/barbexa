@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-25",
+  "productCommit": "a758dfa",
+  "authorization": "Temporary safe shutdown of both remaining local stacks; isolated backend and smoke only; intensive tests reserved for manual execution",
+  "resources": {
+    "hostTotalGiB": 15.43,
+    "initialFreeGiB": 3.3,
+    "immediatelyAfterStopFreeGiB": 3.4,
+    "subsequentFreeGiBObservations": [
+      3.21,
+      2.9,
+      3.54,
+      3.62
+    ],
+    "immediateNetHostFreeGiBChange": 0.1,
+    "note": "Host memory fluctuates with external processes; net host change is not a controlled measure of container memory released",
+    "vmmemWorkingSetMiBBefore": 2211,
+    "vmmemWorkingSetMiBAfter": 1163,
+    "vmmemWorkingSetMiBReduction": 1048,
+    "observedTopProcessGroupsWorkingSetMiB": {
+      "brave": 3377,
+      "ChatGPT": 1100.5,
+      "codex": 273.4
+    },
+    "workingSetNote": "Point observations, not private committed RAM; sums may include shared pages"
+  },
+  "stoppedThisStage": {
+    "app-barberia-002-repro-20261113": 7,
+    "barberia-app": 11,
+    "activeOtherClientQueriesBefore": 0,
+    "openClientTransactionsBefore": 0,
+    "waitingLocksBefore": 0,
+    "preparedTransactionsBefore": 0,
+    "all18OriginalIdsAndMountsPreserved": true,
+    "removedContainersImagesNetworksVolumes": 0,
+    "dockerEngineKeptRunning": true,
+    "dockerEngineVersion": "29.9.3",
+    "totalOriginalContainersLeftStopped": 25,
+    "restorationPlanValidatedInWindowsPowerShell5": true,
+    "actualRestorationExecuted": false
+  },
+  "lab": {
+    "projectId": "barbexa-k6-lab",
+    "apiPort": 54721,
+    "dbPort": 54722,
+    "inspectorPort": 54728,
+    "minimumServices": [
+      "PostgreSQL",
+      "Auth",
+      "PostgREST",
+      "Edge Runtime",
+      "Kong",
+      "local Mailpit for Auth"
+    ],
+    "excludedAuxiliaries": [
+      "Studio",
+      "postgres-meta",
+      "Analytics",
+      "Vector",
+      "Realtime",
+      "Storage",
+      "imgproxy",
+      "Supavisor"
+    ],
+    "runtimeContainersCreated": 0,
+    "migrationsApplied": false,
+    "fixturesSessionsAndMarkerPrepared": false,
+    "smokeExecuted": false,
+    "intensiveLoadExecuted": false,
+    "remainingBlocker": "Host free memory below unchanged 4 GiB minimum; live fixture provisioning and smoke remain unvalidated"
+  },
+  "validation": {
+    "guardTestsPassed": 4,
+    "staticK6ConfigurationsPassed": 28,
+    "progression": "1,10,25,50,100,200,300,...,2000; previous successful recovered run required",
+    "sharedDataOptimization": "Separate SharedArrays for actors, tenants, writes and conflict cases; no complete dataset deserialization per iteration",
+    "bodyPolicy": "Discard by default, explicitly retain bodies for every request whose business payload must be checked",
+    "runtimeMemoryImprovementMeasured": false,
+    "backendRequestsExecuted": 0,
+    "sqlLabIntegrityExecuted": false,
+    "startSafetyRejectionObserved": true,
+    "smokeLatencyP50P95P99Ms": null,
+    "rps": null,
+    "maximumValidatedVU": null
+  },
+  "manualProcedure": {
+    "file": "k6/MANUAL-POWERSHELL.md",
+    "readyForEndToEndUnattendedExecution": false,
+    "reason": "Backend, real synthetic Auth fixtures and safety marker must be provisioned and smoke-tested first",
+    "nextAction": "Owner can voluntarily free additional application memory; repeat guarded preflight before and after lab startup, then finish live fixtures and smoke",
+    "wslGlobalSettingsModified": false,
+    "wslShutdownExecuted": false
+  },
+  "commitsPushCloudProductAndOriginalMigrationsModified": false,
+  "finalPreflight": {
+    "observedAtUtc": "2026-11-25T23:25:12.2713993Z",
+    "scope": "Read-only host readiness; no backend or load execution",
+    "resources": {
+      "logicalProcessors": 24,
+      "totalRamGiB": 15.43,
+      "freeRamGiB": 3.25,
+      "usedRamPercent": 78.92
+    },
+    "safetyPolicy": {
+      "loadProbe": "Repeat after backend startup; supervisor enforces the same remaining host margin",
+      "maximumUsedRamPercent": 80,
+      "startupProbe": "Before isolated backend startup",
+      "minimumFreeRamGiB": 4
+    },
+    "k6OnPath": true,
+    "k6Available": true,
+    "dockerClientAvailable": true,
+    "dockerEngineReady": true,
+    "hostReadiness": "blocked",
+    "blockers": [
+      "INSUFFICIENT_MEMORY_HEADROOM"
+    ],
+    "targetValidated": false,
+    "loadExecuted": false,
+    "note": "Host readiness is not authorization to run; an owned independent lab and synthetic fixtures must be verified separately."
+  }
+}

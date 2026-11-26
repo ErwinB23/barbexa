@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-26T18:39:24.369Z",
+  "offline": true,
+  "localDocumentLinksVerified": 19,
+  "generatedJsonParsed": true,
+  "csvFilesVerified": 6,
+  "pdfPagesExpected": 4,
+  "chartsExpected": 4,
+  "originalReadingFilesUnchanged": 131,
+  "protectedFilesUnchanged": 763,
+  "mixedApprovedHttp": 88472,
+  "approvedAcceptedAndPersisted": 17630,
+  "missingConfirmationPercentilesKeptNull": true,
+  "obviousJwtScan": "no matches in generated textual evidence",
+  "k6Executed": false
+}

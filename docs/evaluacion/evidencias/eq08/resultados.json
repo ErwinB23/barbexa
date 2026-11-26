@@ -1,0 +1,182 @@
+{
+  "at": "2026-11-26T18:46:18.885Z",
+  "status": "Parcial integral; acreditado en núcleo construido de reservas",
+  "originalScenario": "EQ-08. Mantenibilidad: reglas y adaptadores independientes",
+  "originalCriteriaSha256": "d9c6e416e983a86d8d081ce4811ea493fcadd0f5bf1e950a56425628ac2fc1fe",
+  "architecture": {
+    "client": {
+      "modules": 298,
+      "core": 55,
+      "edges": 975,
+      "exit": 0
+    },
+    "server": {
+      "modules": 56,
+      "core": 33,
+      "edges": 158,
+      "exit": 0
+    },
+    "listedCoreFiles": 88,
+    "listedDependencies": 199,
+    "prohibited": 0
+  },
+  "targetedTests": {
+    "client": {
+      "selected": 1,
+      "passed": 1,
+      "failed": 0,
+      "networkAttempts": 0
+    },
+    "server": {
+      "selected": 1,
+      "passed": 1,
+      "failed": 0,
+      "otherTestsFiltered": 5,
+      "networkPermission": "denied",
+      "readWriteEnvPermissions": "denied"
+    }
+  },
+  "fullRegressionReuse": {
+    "source": "../004-reservas/reproducibilidad.json",
+    "date": "2026-11-25",
+    "testedCommit": "9192d1a1e36937f6f4e835839a90b881dbebf332",
+    "coreFilesMatchHistoricalCommit": true,
+    "tests": {
+      "clientCoreAndIntegration": 493,
+      "presentationAndIntegration": 652,
+      "clientArchitecture": 38,
+      "serverArchitecture": 45,
+      "environment": 18,
+      "deno": 96,
+      "failed": 0,
+      "skipped": 0,
+      "overlap": "Node core/integration and presentation/integration overlap; do not sum"
+    },
+    "coverage": {
+      "client": {
+        "scope": "client-domain-application",
+        "totals": {
+          "lines": {
+            "hit": 3808,
+            "total": 3808
+          },
+          "functions": {
+            "hit": 447,
+            "total": 447
+          },
+          "branches": {
+            "hit": 1725,
+            "total": 1852
+          }
+        },
+        "percentages": {
+          "lines": 100,
+          "functions": 100,
+          "branches": 93.1425485961123
+        },
+        "files": 45
+      },
+      "server": {
+        "scope": "server-domain-application",
+        "totals": {
+          "lines": {
+            "hit": 1640,
+            "total": 1640
+          },
+          "functions": {
+            "hit": 99,
+            "total": 99
+          },
+          "branches": {
+            "hit": 1007,
+            "total": 1007
+          }
+        },
+        "percentages": {
+          "lines": 100,
+          "functions": 100,
+          "branches": 100
+        },
+        "files": 29
+      }
+    },
+    "newCoverageRun": false
+  },
+  "preservation": {
+    "files": 814,
+    "unchanged": true
+  },
+  "pendingOriginalCondition": "Sustituir un adaptador de mapas o imágenes y comprobar sus reglas: módulos no completos; no se implementan ni se acredita esa condición.",
+  "commands": [
+    {
+      "name": "architecture-client",
+      "executable": "node.exe",
+      "args": [
+        "scripts/check-architecture.mjs"
+      ],
+      "exit": 0,
+      "log": "architecture-client.log"
+    },
+    {
+      "name": "architecture-server",
+      "executable": "node.exe",
+      "args": [
+        "scripts/check-server-architecture.mjs"
+      ],
+      "exit": 0,
+      "log": "architecture-server.log"
+    },
+    {
+      "name": "client-compile",
+      "executable": "node.exe",
+      "args": [
+        "node_modules/typescript/bin/tsc",
+        "-p",
+        "<run>\\client-tsconfig.json",
+        "--pretty",
+        "false"
+      ],
+      "exit": 0,
+      "log": "client-compile.log"
+    },
+    {
+      "name": "client-substitution",
+      "executable": "node.exe",
+      "args": [
+        "--require",
+        "<run>\\deny-network.cjs",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=^request use case forwards only validated values and preserves dependency error safety$",
+        "<run>\\client-build\\tests\\unit\\reservations\\confirmation.test.js"
+      ],
+      "exit": 0,
+      "log": "client-substitution.log"
+    },
+    {
+      "name": "server-substitution",
+      "executable": "deno",
+      "args": [
+        "test",
+        "--no-config",
+        "--no-lock",
+        "--no-npm",
+        "--no-remote",
+        "--no-prompt",
+        "--deny-net",
+        "--deny-read",
+        "--deny-write",
+        "--deny-env",
+        "--filter=reservation application actor closed values and dependency failure are safe",
+        "tests/server/reservations/confirmation.test.ts"
+      ],
+      "exit": 0,
+      "log": "server-substitution.log"
+    }
+  ],
+  "privateRunDirectory": ".artifacts/eq08/2026-11-26T18-46-11.448Z-1d352dab-a519-4ac7-957f-449c77f24b1c",
+  "k6Executed": false,
+  "backendStarted": false,
+  "cloudAccessed": false,
+  "productModified": false
+}

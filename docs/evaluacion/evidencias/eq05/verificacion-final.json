@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-11-26T21:42:18.032Z",
+  "originalFilesPreserved": 34,
+  "criteriaPolicyAndManualPolicyByteIdentical": true,
+  "monitorEvaluationAstIdenticalExcludingDisplay": true,
+  "normalizedLogicSha256": "275cf162ad2855794e69578b69a3c2f3ab300b000369de8d9ccb5a976c613b23",
+  "rows": 360,
+  "httpSamples": 2880,
+  "originalSqlAuditReused": true,
+  "csvAndGraphsPresent": true,
+  "localReportLinksValid": true,
+  "sensitiveContentCheckPassed": true,
+  "newRealObservationExecuted": false,
+  "k6Executed": false,
+  "cloudModified": false,
+  "commitsOrPush": false
+}

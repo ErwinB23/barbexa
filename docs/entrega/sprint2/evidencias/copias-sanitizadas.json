@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-11-26T21:59:55.154Z",
+  "copies": [
+    {
+      "source": "docs/evaluacion/evidencias/eq05/terminal-tests.log",
+      "sourceSha256": "ae67f664a138a134839ba79647124919ba3ac82ff25d67da8cdce1839711ddd6",
+      "destination": "evidencias/monitor-tests.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/eq08/architecture-client.log",
+      "sourceSha256": "8c68b3781b7a66d30460e38b4ff6ee121d6357135425bb3abc974f70ed92d537",
+      "destination": "evidencias/arquitectura-sustitucion.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/eq08/architecture-server.log",
+      "sourceSha256": "3741dd2c04237e14e5a55c4f6e997750fb21a489ababa7f04680cca372ca02c5",
+      "destination": "evidencias/arquitectura-sustitucion.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/eq08/client-compile.log",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination": "evidencias/arquitectura-sustitucion.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/eq08/client-substitution.log",
+      "sourceSha256": "20cb4e859220b38f8c0095951523023d6c0a3e080e0ba06e12206a902478b8a6",
+      "destination": "evidencias/arquitectura-sustitucion.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/eq08/server-substitution.log",
+      "sourceSha256": "b76f341059390af7f944e63057af8e231415bc40e54fb32fc536317ea9765f36",
+      "destination": "evidencias/arquitectura-sustitucion.txt",
+      "changes": "Only ANSI controls and workstation root/profile prefixes removed; outcomes retained. No tests rerun."
+    },
+    {
+      "source": "docs/evaluacion/evidencias/004-reservas/reproducibilidad.json",
+      "sourceSha256": "5167e25900d917a968aef1a5937e04f487002cc6c83e01efd71a337664352bd8",
+      "destination": "evidencias/cobertura-aceptada.json",
+      "changes": "Projection of accepted coverage, date, scope and tested commit only; no metrics changed."
+    }
+  ],
+  "originalsOverwritten": false
+}

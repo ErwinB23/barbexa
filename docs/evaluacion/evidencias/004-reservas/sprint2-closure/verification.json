@@ -1,0 +1,229 @@
+{
+  "at": "2026-11-26T07:51:36.978Z",
+  "existingRowsPreserved": true,
+  "protectedFilesUnchanged": true,
+  "protectedFiles": 699,
+  "rawEvidenceUnchanged": true,
+  "rawEvidenceFiles": 131,
+  "localCases": 15,
+  "localCasesPassed": true,
+  "harnessTests": 31,
+  "harnessTestsPassed": true,
+  "profiles": [
+    {
+      "level": 25,
+      "inspectedWithoutExecution": true,
+      "stages": [
+        {
+          "duration": "1m0s",
+          "target": 1
+        },
+        {
+          "duration": "1m0s",
+          "target": 25
+        },
+        {
+          "duration": "10m0s",
+          "target": 25
+        },
+        {
+          "duration": "1m0s",
+          "target": 0
+        }
+      ],
+      "thresholds": {
+        "accepted_responses{operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:catalog}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:reservations}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:slots}": [
+          "count>0"
+        ],
+        "checks": [
+          "rate==1"
+        ],
+        "operation_wall_ms{phase:steady,operation:catalog}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:reservations}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:slots}": [
+          "p(95)<=3000"
+        ],
+        "technical_errors": [
+          {
+            "threshold": "rate<0.01",
+            "abortOnFail": true,
+            "delayAbortEval": "30s"
+          }
+        ],
+        "technical_errors{phase:steady}": [
+          "rate<0.01"
+        ],
+        "unexpected_results": [
+          "rate==0"
+        ]
+      }
+    },
+    {
+      "level": 50,
+      "inspectedWithoutExecution": true,
+      "stages": [
+        {
+          "duration": "1m0s",
+          "target": 1
+        },
+        {
+          "duration": "1m0s",
+          "target": 50
+        },
+        {
+          "duration": "10m0s",
+          "target": 50
+        },
+        {
+          "duration": "1m0s",
+          "target": 0
+        }
+      ],
+      "thresholds": {
+        "accepted_responses{operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:catalog}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:reservations}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:slots}": [
+          "count>0"
+        ],
+        "checks": [
+          "rate==1"
+        ],
+        "operation_wall_ms{phase:steady,operation:catalog}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:reservations}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:slots}": [
+          "p(95)<=3000"
+        ],
+        "technical_errors": [
+          {
+            "threshold": "rate<0.01",
+            "abortOnFail": true,
+            "delayAbortEval": "30s"
+          }
+        ],
+        "technical_errors{phase:steady}": [
+          "rate<0.01"
+        ],
+        "unexpected_results": [
+          "rate==0"
+        ]
+      }
+    },
+    {
+      "level": 100,
+      "inspectedWithoutExecution": true,
+      "stages": [
+        {
+          "duration": "1m0s",
+          "target": 1
+        },
+        {
+          "duration": "1m0s",
+          "target": 100
+        },
+        {
+          "duration": "10m0s",
+          "target": 100
+        },
+        {
+          "duration": "1m0s",
+          "target": 0
+        }
+      ],
+      "thresholds": {
+        "accepted_responses{operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:catalog}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:confirm}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:reservations}": [
+          "count>0"
+        ],
+        "accepted_responses{phase:steady,operation:slots}": [
+          "count>0"
+        ],
+        "checks": [
+          "rate==1"
+        ],
+        "operation_wall_ms{phase:steady,operation:catalog}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:reservations}": [
+          "p(95)<=3000"
+        ],
+        "operation_wall_ms{phase:steady,operation:slots}": [
+          "p(95)<=3000"
+        ],
+        "technical_errors": [
+          {
+            "threshold": "rate<0.01",
+            "abortOnFail": true,
+            "delayAbortEval": "30s"
+          }
+        ],
+        "technical_errors{phase:steady}": [
+          "rate<0.01"
+        ],
+        "unexpected_results": [
+          "rate==0"
+        ]
+      }
+    }
+  ],
+  "series": "71e00e3c-28eb-4262-80ce-7abe043c49ed",
+  "measuredComplementaryLevels": [],
+  "operatorLockPresent": false,
+  "integrity": {
+    "overlaps": 0,
+    "reservations": 104,
+    "tenantMismatch": 0,
+    "duplicateReceipts": 0,
+    "duplicateRequests": 0,
+    "partialReservations": 0
+  },
+  "health": 200,
+  "localLinkErrors": [],
+  "sourceSha256": {
+    "k6/quality-closure.mjs": "d358e70e711f48d32bfc8f873b9d5b5044c45d809627934d11bedf686b540db7",
+    "k6/complementary-cli.mjs": "65510025ebd39f2204a441c49b6d9899381726c2d5ed6f00cef8560148c624c0",
+    "k6/lib/complementary.mjs": "cf7de813d012b113eab94ef6b0238ce85cd194415f10daeb37c6f63e4b2d06d9",
+    "k6/complementary.test.mjs": "1f8db6e2dbb31afe64eaadd40ebbe1989d1a36318e392c16d68cf383dc5ff140",
+    "k6/run-lab.mjs": "a57bfa3fce70e5f7dc9e5d368e7964df3eaeb48f039c6bef60de6b9ccfb68e90",
+    "k6/scripts/booking-api.js": "2c9e59c973f329daeb79e771533452fa221a0d84a6621f0984c183638d68a60d",
+    "tests/integration/booking/care-race.mjs": "56795ff7398f1eaf131fc67d7901211c95b1068a451e71b9d6a3ab8ca8468da5"
+  },
+  "passed": true
+}
