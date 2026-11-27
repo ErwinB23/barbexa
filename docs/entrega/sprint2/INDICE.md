@@ -1,8 +1,10 @@
 # Sprint 2 — índice central de entrega
 
-26/11/2026, America/Lima. Entrada para evaluación del proyecto funcional privado
+26/11/2026, America/Lima. Entrada para evaluación del proyecto funcional público
 BARBEXA. Código y primera versión Web disponibles; la validación integral de los
 diez EQ conserva limitaciones explícitas. No se modificaron criterios para aprobar.
+
+**Guía principal de sustentación:** [ocho actividades en su orden académico](https://github.com/ErwinB23/barberia_app-arquitSoft-02-Erwin#sprint2-indice). Este índice conserva el acceso técnico a los cinco entregables. Versión evaluada y publicada: `e139522`; [última CI acreditada](https://github.com/ErwinB23/barbexa/actions/runs/45903177680), aprobada en 9 min 36 s. Código público no implica despliegue público.
 
 ## 1. Código fuente organizado según arquitectura
 
@@ -90,7 +92,7 @@ Fuente de estado: [matriz EQ-01–EQ-10](../../evaluacion/evidencias/004-reserva
 Lecturas hasta 1.000 VU y mezcla hasta 100 VU son series independientes. El p95
 HTTP global de la mezcla a 100 VU fue 3,66 s; los p95 de consultas fueron 4/8/7 ms.
 No se oculta esa diferencia ni se inventan percentiles de confirmación ausentes.
-Los **2.000 VU** siguen como meta adicional pospuesta, ajena al cierre de EQ-04/EQ-06.
+Los **2.000 VU** siguen como requisito académico pendiente, ajena al cierre de EQ-04/EQ-06.
 
 EQ-05: 360 éxitos, cero fallos/sin datos, disponibilidad y cobertura 100 % en una
 hora local. El intento parcial anterior permanece separado. Adaptación frente
@@ -98,14 +100,14 @@ al mes publicado original pendiente de aceptación docente, sin extrapolación.
 
 ## Entrega, revisión y sustentación
 
-- [Plan de publicación y commits propuestos](PUBLICACION.md).
+- [Registro histórico del plan de publicación](PUBLICACION.md).
 - [Guía de sustentación](GUIA-SUSTENTACION.md).
-- [Inventario de archivos pendientes y selección](archivos-publicacion.csv).
-- [Resultado de revisión del paquete](revision-publicacion.json).
+- [Inventario histórico de la selección publicada](archivos-publicacion.csv).
+- [Revisión histórica del paquete](revision-publicacion.json).
 - [Trazabilidad de copias sanitizadas](evidencias/copias-sanitizadas.json).
 - [Situación actual y pendientes estrictos](../../evaluacion/evidencias/eq05/SITUACION-SPRINT2.md).
 
 Las rutas `.artifacts/`, traces, reportes nativos y logs privados mencionados por
 informes históricos son referencias de custodia local, no archivos para GitHub.
 El índice enlaza resultados agregados publicables y copias sanitizadas. Los
-originales se preservan sin sobrescrituras. No se ha publicado esta actualización.
+originales se preservan sin sobrescrituras. La entrega evaluada se publicó en `e139522`; los ajustes documentales posteriores se revisan por separado. Los registros de preparación conservan su carácter histórico.

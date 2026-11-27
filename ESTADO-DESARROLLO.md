@@ -1,5 +1,21 @@
 # Estado de desarrollo — App Barbería
 
+26 nov — Ajuste documental final autorizado: ambos repositorios públicos. Entrega
+publicada y versión evaluada e139522; última CI45903177680 aprobada en9 min36 s.
+README académico: navegación de ocho actividades más entregables/preparación/cierre,
+Sprint1 byte-idéntico y cuatro imágenes principales preservadas. README funcional
+mantiene estructura de producto y requisitos, sin estado temporal de contenedores
+ni total permanente de commits. Índice y guía apuntan al recorrido académico.
+Prueba breve existente elegida: caso Deno de validación/actor/conflicto de reservas,
+con red/entorno/lectura/escritura denegados; monitor como complemento, no evaluación.
+Gráficas exclusivas publicadas: Stress y Spike; Smoke/Load conservan tablas/tramos,
+sin inventar gráficos. SeisEQ acreditados en alcance;02/05/08/09 parciales.
+2.000 VU son requisito académico pendiente, independiente de EQ04/EQ06 evaluados;
+adaptación EQ05 una hora sigue pendiente docente. Solo README/índice/guía/estado/
+handoff editados; evidencia histórica intacta. Ajustes aún sin commits ni push;
+esperar autorización expresa en ambos repositorios. No iniciar Docker ni repetir
+evaluaciones; los bloques inferiores son antecedentes fechados.
+
 26 nov — Entrega Sprint2 preparada para revisión, no publicada. README raíz e
 índice central en `docs/entrega/sprint2/INDICE.md`: cinco entregables, arquitectura,
 18SDD, Swagger, pruebas/cobertura, informes y gráficas. Guía de sustentación y

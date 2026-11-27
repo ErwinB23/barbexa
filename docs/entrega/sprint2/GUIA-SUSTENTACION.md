@@ -1,6 +1,6 @@
 # Sprint 2 — guía breve de sustentación
 
-Duración orientativa: 10–12 minutos. Abrir previamente el [índice central](INDICE.md),
+Duración orientativa: 10–12 minutos. Recorrido principal: [las ocho actividades del README académico](https://github.com/ErwinB23/barberia_app-arquitSoft-02-Erwin#sprint2-indice), en su orden original. Repositorios públicos; versión evaluada `e139522`, [CI aprobada en 9 min 36 s](https://github.com/ErwinB23/barbexa/actions/runs/45903177680). La tabla siguiente es un apoyo de tiempos, no un orden académico alternativo. Abrir previamente el [índice central](INDICE.md),
 Swagger y los PDF/capturas; no ejecutar carga, Playwright ni otra hora en directo.
 No mostrar `.env`, manifiestos, sesiones, consola con tokens o traces nativos.
 
@@ -12,11 +12,22 @@ No mostrar `.env`, manifiestos, sesiones, consola con tokens o traces nativos.
 | 4–5 | Primera versión Web o [capturas E2E](../../evaluacion/evidencias/eq09/INFORME.md) | Reserva, conflicto textual, servicios conservados y recuperación; no simular aprobación Android |
 | 5–6 | Swagger, [OpenAPI JSON](../../api/openapi.json) | Contratos reales y visor de consulta. No pulsar una operación mutante ni mostrar credenciales |
 | 6–7 | [Cobertura](evidencias/cobertura-aceptada.json), [EQ-08](../../evaluacion/evidencias/eq08/resultados.json) | Cliente 100/100/93,14 % y servidor 100/100/100 %, limitado al núcleo. Pruebas sin red demuestran sustitución de adaptadores |
-| 7–9 | [Lecturas PDF](../../evaluacion/evidencias/004-reservas/k6-final/graficas/graficas-k6.pdf), [mixta PDF](../../evaluacion/evidencias/004-reservas/k6-mixta-final/graficas/graficas-mixtas.pdf) | Kong 512→4096 resolvió el límite observado; lectura hasta 1.000 VU. Mezcla 25/50/100 ×600 s, 17.630 aceptadas = persistidas. Explicar p95 HTTP global3,66 s frente a consultas4/8/7 ms, sin atribuir 1.000 escrituras |
+| 7–9 | [Lecturas PDF](../../evaluacion/evidencias/004-reservas/k6-final/graficas/graficas-k6.pdf), [mixta PDF](../../evaluacion/evidencias/004-reservas/k6-mixta-final/graficas/graficas-mixtas.pdf) | Kong 512→4096 resolvió el límite observado; lectura hasta 1.000 VU. Mezcla 25/50/100 × 600 s, 17.630 aceptadas = persistidas. Explicar p95 HTTP global3,66 s frente a consultas 4/8/7 ms, sin atribuir 1.000 escrituras |
 | 9–10 | [EQ-05 PDF](../../evaluacion/evidencias/eq05/INFORME.pdf) | 360 sondeos, 100 % disponibilidad/cobertura, cero faltantes, 361 propias canceladas. Es una hora local; no demuestra un mes publicado |
-| 10–12 | [Matriz EQ](../../evaluacion/evidencias/004-reservas/k6-final/REQUISITOS-CALIDAD.md) y Actions | Seis cumplidos en su alcance, cuatro parciales. Señalar adaptación docente, módulos/Android/participantes pendientes y 2.000 VU adicionales pospuestos |
+| 10–12 | [Matriz EQ](../../evaluacion/evidencias/004-reservas/k6-final/REQUISITOS-CALIDAD.md) y Actions | Seis cumplidos en su alcance, cuatro parciales. Señalar adaptación docente, módulos/Android/participantes pendientes y 2.000 VU como requisito académico pendiente |
 
 ## Preparación segura
+
+Web: `npm run start -- --web --port 8081`, con backend habitual autorizado disponible y origen `http://localhost:8081`. Metro no inicia el backend.
+
+Prueba breve de reservas (un caso existente, sin red ni base de datos):
+
+```powershell
+deno test --no-config --no-check --deny-net --deny-env --deny-read --deny-write --filter "reservation application actor closed values and dependency failure are safe" tests/server/reservations/confirmation.test.ts
+```
+
+Rechaza entradas inválidas y actores ausentes y conserva conflictos usando un adaptador doble; no demuestra integridad SQL concurrente. El test del monitor sigue como complemento: `node --test tests/availability/eq05-policy.test.mjs`.
+
 
 Si las dependencias ya están instaladas, el responsable puede abrir el visor con
 `npm run docs:api` (127.0.0.1:8082); alternativo
@@ -39,9 +50,9 @@ Auth/HTTP/SQL. No usar sus fallos ficticios como resultados reales de EQ-05.
 - **¿Los diez EQ están completos?** Seis tienen evidencia suficiente para su alcance;
   cuatro son parciales, con condiciones originales explícitas. No se cambiaron los requisitos.
 - **¿100 % disponible significa todo el mes?** No. Fue una hora local muestreada
-  cada10 s, con cobertura100 %. La adaptación debe ser aceptada por la docente.
+  cada 10 s, con cobertura100 %. La adaptación debe ser aceptada por la docente.
 - **¿1.000 VU acredita 1.000 reservas simultáneas?** No: esa serie es de lectura;
-  la mezcla con confirmaciones se acreditó hasta100 VU. 2.000 VU no se acreditaron.
+  la mezcla con confirmaciones se acreditó hasta 100 VU. 2.000 VU siguen pendientes como requisito académico, independiente de EQ-04/EQ-06.
 - **¿Cómo se confirma Yape?** Un actor autorizado verifica y registra manualmente
   la recepción; el código remitido por el cliente no acredita dinero recibido automáticamente.
 - **¿CI despliega el producto?** No: verifica calidad y compila Web sin credenciales.
